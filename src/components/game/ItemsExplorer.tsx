@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Search } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { GameItem } from "@/lib/types";
 import ItemIcon from "./ItemIcon";
+import ItemModal from "./ItemModal";
 
 const PAGE_SIZE = 48;
 
@@ -16,10 +17,25 @@ export default function ItemsExplorer() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
   const [page, setPage] = useState(1);
+  const [selected, setSelected] = useState<GameItem | null>(null);
 
   useEffect(() => {
-    import("@/data/items.json").then((mod) => setItems((mod.default as { items: GameItem[] }).items));
+    import("@/data/items.json").then((mod) => {
+      const list = (mod.default as { items: GameItem[] }).items;
+      setItems(list);
+      // Shareable deep link: /items?item=<slug>
+      const slug = new URLSearchParams(window.location.search).get("item");
+      if (slug) setSelected(list.find((i) => i.slug === slug) ?? null);
+    });
   }, []);
+
+  const select = (item: GameItem | null) => {
+    setSelected(item);
+    const url = new URL(window.location.href);
+    if (item) url.searchParams.set("item", item.slug);
+    else url.searchParams.delete("item");
+    window.history.replaceState(null, "", url.toString());
+  };
 
   useEffect(() => {
     setPage(1);
@@ -77,7 +93,11 @@ export default function ItemsExplorer() {
 
       <div className="grid gap-2 sm:grid-cols-2">
         {visible.map((i) => (
-          <div key={i.id} className="flex items-start gap-3 rounded-xl border border-line bg-surface p-3">
+          <button
+            key={i.id}
+            onClick={() => select(i)}
+            className="flex items-start gap-3 rounded-xl border border-line bg-surface p-3 text-left transition-colors hover:border-accent/60"
+          >
             <div className="shrink-0 rounded-lg bg-surface-2 p-1.5">
               <ItemIcon icon={i.icon} size={36} />
             </div>
@@ -88,9 +108,11 @@ export default function ItemsExplorer() {
               </p>
               <p className="text-xs leading-snug text-ink-dim">{i.description}</p>
             </div>
-          </div>
+          </button>
         ))}
       </div>
+
+      {selected && <ItemModal item={selected} onClose={() => select(null)} />}
 
       {pageCount > 1 && (
         <div className="flex items-center justify-center gap-3">

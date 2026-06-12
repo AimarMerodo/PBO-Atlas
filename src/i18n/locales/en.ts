@@ -125,6 +125,8 @@ export const en = {
   "mounts.allTypes": "All types",
   "cosmetics.title": "Cosmetic bundles",
   "cosmetics.includes": "Includes",
+  "item.teaches": "Teaches",
+  "item.evolves": "Used to evolve",
   "class.physical": "Physical",
   "class.special": "Special",
   "class.status": "Status",

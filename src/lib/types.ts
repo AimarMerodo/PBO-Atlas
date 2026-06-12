@@ -116,6 +116,10 @@ export interface GameItem {
   category: string;
   description: string;
   icon: AtlasIcon | null;
+  /** For TM/HM/TR items: the move they teach. */
+  teaches?: { name: string; type: string | null } | null;
+  /** Pokemon that evolve using this item. */
+  evolves?: { slug: string; name: string }[] | null;
 }
 
 export interface Mount {

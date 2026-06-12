@@ -120,11 +120,29 @@ function findIcon(name) {
 const itemsEs = parseNameMap(await read("i18n", "items_es.csv"));
 const itemsPt = parseNameMap(await read("i18n", "items_pt.csv"));
 const itemsZh = parseNameMap(await read("i18n", "items_zh.csv"));
+
+// Reverse index: evolution triggers "use <Item>" -> pokemon that evolve with it.
+const evolvesByItem = {};
+{
+  const pokedex = JSON.parse(await readFile(path.join(ROOT, "src", "data", "pokedex.json"), "utf8"));
+  for (const entry of Object.values(pokedex)) {
+    for (const stage of entry.evolutionLine ?? []) {
+      const m = stage.trigger?.match(/use ([^,]+)/i);
+      if (!m) continue;
+      const key = m[1].trim().toLowerCase();
+      evolvesByItem[key] ??= new Map();
+      evolvesByItem[key].set(stage.slug, stage.name);
+    }
+  }
+}
+
 const items = [];
 for (const r of parseCsv(await read("item", "items.csv"))) {
   const [name, category, description, id] = r;
   if (!name || !id) continue;
   const slug = slugify(name);
+  const teachesName = machineMove[name.trim()] ?? null;
+  const evolves = evolvesByItem[name.trim().toLowerCase()];
   items.push({
     id: Number(id),
     slug,
@@ -135,6 +153,8 @@ for (const r of parseCsv(await read("item", "items.csv"))) {
     category: category || "Misc",
     description: description || "",
     icon: findIcon(name) ?? (category === "Machines" ? machineIcon(name) : null),
+    teaches: teachesName ? { name: teachesName, type: moveType[teachesName.toLowerCase()] ?? null } : null,
+    evolves: evolves ? [...evolves].map(([s, n]) => ({ slug: s, name: n })) : null,
   });
 }
 items.sort((a, b) => a.name.localeCompare(b.name));

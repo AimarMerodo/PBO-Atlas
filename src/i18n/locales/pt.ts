@@ -124,6 +124,8 @@ export const pt: Record<DictKey, string> = {
   "mounts.allTypes": "Todos os tipos",
   "cosmetics.title": "Pacotes de cosméticos",
   "cosmetics.includes": "Inclui",
+  "item.teaches": "Ensina",
+  "item.evolves": "Usado para evoluir",
   "class.physical": "Físico",
   "class.special": "Especial",
   "class.status": "Status",

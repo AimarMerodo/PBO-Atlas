@@ -124,6 +124,8 @@ export const zh: Record<DictKey, string> = {
   "mounts.allTypes": "全部类型",
   "cosmetics.title": "时装礼包",
   "cosmetics.includes": "包含",
+  "item.teaches": "可教授",
+  "item.evolves": "用于进化",
   "class.physical": "物理",
   "class.special": "特殊",
   "class.status": "变化",
