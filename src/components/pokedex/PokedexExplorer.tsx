@@ -18,6 +18,7 @@ export interface PokedexCard {
   id: number;
   types: string[];
   sprite: string | null;
+  artwork: string | null;
   caught: boolean;
 }
 
@@ -112,27 +113,42 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
       {filtered.length === 0 ? (
         <p className="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">{t("pokedex.noResults")}</p>
       ) : (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {visible.map((p) => (
-            <Link
-              key={p.slug}
-              href={`/pokedex/${p.slug}`}
-              className="group flex flex-col items-center rounded-xl border border-line bg-surface p-3 transition-colors hover:border-accent/60"
-            >
-              <span className="self-end text-[10px] text-ink-dim">#{p.id}</span>
-              {p.sprite ? (
-                <Image src={p.sprite} alt={p.name} width={72} height={72} unoptimized className="transition-transform group-hover:scale-110" />
-              ) : (
-                <div className="h-[72px] w-[72px]" />
-              )}
-              <span className="mt-1 text-center text-sm font-medium leading-tight">{p.name}</span>
-              <span className="mt-1.5 flex gap-1">
-                {p.types.map((tp) => (
-                  <TypeBadge key={tp} type={tp} />
-                ))}
-              </span>
-            </Link>
-          ))}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {visible.map((p) => {
+            const tint = TYPE_COLORS[p.types[0]] ?? "#9099a1";
+            return (
+              <Link
+                key={p.slug}
+                href={`/pokedex/${p.slug}`}
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-accent/60"
+              >
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-32 opacity-25 transition-opacity group-hover:opacity-40"
+                  style={{ background: `radial-gradient(circle at 50% 0%, ${tint}, transparent 70%)` }}
+                />
+                <span className="self-end font-mono text-xs text-ink-dim">#{String(p.id).padStart(3, "0")}</span>
+                {p.artwork || p.sprite ? (
+                  <Image
+                    src={(p.artwork ?? p.sprite) as string}
+                    alt={p.name}
+                    width={130}
+                    height={130}
+                    unoptimized
+                    className="relative drop-shadow-lg transition-transform duration-200 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="h-[130px] w-[130px]" />
+                )}
+                <span className="mt-3 text-center text-base font-semibold leading-tight">{p.name}</span>
+                <span className="mt-2 flex gap-1.5">
+                  {p.types.map((tp) => (
+                    <TypeBadge key={tp} type={tp} />
+                  ))}
+                </span>
+              </Link>
+            );
+          })}
         </div>
       )}
 

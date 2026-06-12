@@ -15,6 +15,7 @@ export default function PokedexPage() {
     id: p.id,
     types: p.types,
     sprite: p.sprite,
+    artwork: p.artwork,
     caught: getEncounters(p.slug).length > 0,
   }));
 
