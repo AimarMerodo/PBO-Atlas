@@ -91,23 +91,18 @@ export default function ItemsExplorer() {
         </span>
       </div>
 
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {visible.map((i) => (
           <button
             key={i.id}
             onClick={() => select(i)}
-            className="flex items-start gap-3 rounded-xl border border-line bg-surface p-3 text-left transition-colors hover:border-accent/60"
+            className="group flex flex-col items-center rounded-xl border border-line bg-surface p-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
           >
-            <div className="shrink-0 rounded-lg bg-zinc-300/80 p-1.5">
-              <ItemIcon icon={i.icon} size={36} />
+            <div className="rounded-xl bg-zinc-300/80 p-2.5 transition-transform group-hover:scale-105">
+              <ItemIcon icon={i.icon} size={56} />
             </div>
-            <div className="min-w-0">
-              <p className="flex flex-wrap items-baseline gap-x-2">
-                <span className="font-semibold">{localName(i)}</span>
-                <span className="text-[10px] uppercase tracking-wide text-ink-dim">{i.category}</span>
-              </p>
-              <p className="text-xs leading-snug text-ink-dim">{i.description}</p>
-            </div>
+            <p className="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">{localName(i)}</p>
+            <p className="mt-1 line-clamp-1 text-[9px] uppercase tracking-wide text-ink-dim">{i.category}</p>
           </button>
         ))}
       </div>

@@ -3,13 +3,15 @@
 // Mount gallery, lazy-loaded and filterable by type.
 
 import { useEffect, useState } from "react";
-import { Search, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Search, Sparkles } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { slugifyName } from "@/lib/slug";
 import type { DictKey } from "@/i18n/dictionaries";
 import type { Mount } from "@/lib/types";
 import ItemIcon from "./ItemIcon";
 import GameModal from "./GameModal";
+
+const PAGE_SIZE = 48;
 
 type MountGroup = "land" | "surf" | "others";
 
@@ -28,7 +30,12 @@ export default function MountsExplorer() {
   const [group, setGroup] = useState<MountGroup | null>(null);
   const [query, setQuery] = useState("");
   const [onlyShiny, setOnlyShiny] = useState(false);
+  const [page, setPage] = useState(1);
   const [selected, setSelected] = useState<Mount | null>(null);
+
+  useEffect(() => {
+    setPage(1);
+  }, [query, group, onlyShiny]);
 
   useEffect(() => {
     import("@/data/mounts.json").then((mod) => {
@@ -56,6 +63,10 @@ export default function MountsExplorer() {
     if (onlyShiny && !/shiny/i.test(m.name)) return false;
     return true;
   });
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const current = Math.min(page, pageCount);
+  const visible = filtered.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
 
   return (
     <div className="space-y-5">
@@ -99,25 +110,47 @@ export default function MountsExplorer() {
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-        {filtered.map((m) => (
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        {visible.map((m) => (
           <button
             key={m.name}
             onClick={() => select(m)}
-            className="flex items-center gap-3 rounded-xl border border-line bg-surface p-3 text-left transition-colors hover:border-accent/60"
+            className="group flex flex-col items-center rounded-xl border border-line bg-surface p-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
           >
-            <div className="shrink-0 rounded-lg bg-zinc-300/80 p-1.5">
-              <ItemIcon icon={m.icon} size={36} />
+            <div className="rounded-xl bg-zinc-300/80 p-2.5 transition-transform group-hover:scale-105">
+              <ItemIcon icon={m.icon} size={56} />
             </div>
-            <div className="min-w-0">
-              <p className="truncate text-sm font-semibold">{m.name}</p>
-              <p className="text-[10px] uppercase tracking-wide text-ink-dim">
-                {t(GROUPS.find((g) => g.key === groupOf(m.type))!.label)}
-              </p>
-            </div>
+            <p className="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">{m.name}</p>
+            <p className="mt-1 text-[9px] uppercase tracking-wide text-ink-dim">
+              {t(GROUPS.find((g) => g.key === groupOf(m.type))!.label)}
+            </p>
           </button>
         ))}
       </div>
+
+      {pageCount > 1 && (
+        <div className="flex items-center justify-center gap-3">
+          <button
+            onClick={() => setPage(Math.max(1, current - 1))}
+            disabled={current === 1}
+            aria-label={t("pagination.prev")}
+            className="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+          <span className="text-sm text-ink-dim tabular-nums">
+            {current} {t("pagination.of")} {pageCount}
+          </span>
+          <button
+            onClick={() => setPage(Math.min(pageCount, current + 1))}
+            disabled={current === pageCount}
+            aria-label={t("pagination.next")}
+            className="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+        </div>
+      )}
 
       {selected && (
         <GameModal
