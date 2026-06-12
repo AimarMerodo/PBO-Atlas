@@ -1,0 +1,202 @@
+[
+ {
+  "name": "Adamant",
+  "es": "Firme",
+  "pt": "Adamant",
+  "zh": "固执",
+  "up": "attack",
+  "down": "special-attack"
+ },
+ {
+  "name": "Bashful",
+  "es": "T�mida",
+  "pt": "Bashful",
+  "zh": "害羞",
+  "up": null,
+  "down": null
+ },
+ {
+  "name": "Bold",
+  "es": "Osada",
+  "pt": "Bold",
+  "zh": "大胆",
+  "up": "defense",
+  "down": "attack"
+ },
+ {
+  "name": "Brave",
+  "es": "Audaz",
+  "pt": "Brave",
+  "zh": "勇敢",
+  "up": "attack",
+  "down": "speed"
+ },
+ {
+  "name": "Calm",
+  "es": "Serena",
+  "pt": "Calm",
+  "zh": "温和",
+  "up": "special-defense",
+  "down": "attack"
+ },
+ {
+  "name": "Careful",
+  "es": "Cauta",
+  "pt": "Careful",
+  "zh": "慎重",
+  "up": "special-defense",
+  "down": "special-attack"
+ },
+ {
+  "name": "Docile",
+  "es": "D�cil",
+  "pt": "Docile",
+  "zh": "坦率",
+  "up": null,
+  "down": null
+ },
+ {
+  "name": "Gentle",
+  "es": "Amable",
+  "pt": "Gentle",
+  "zh": "温顺",
+  "up": "special-defense",
+  "down": "defense"
+ },
+ {
+  "name": "Hardy",
+  "es": "Fuerte",
+  "pt": "Hardy",
+  "zh": "勤奋",
+  "up": null,
+  "down": null
+ },
+ {
+  "name": "Hasty",
+  "es": "Activa",
+  "pt": "Hasty",
+  "zh": "急躁",
+  "up": "speed",
+  "down": "defense"
+ },
+ {
+  "name": "Impish",
+  "es": "Agitada",
+  "pt": "Impish",
+  "zh": "淘气",
+  "up": "defense",
+  "down": "special-attack"
+ },
+ {
+  "name": "Jolly",
+  "es": "Alegre",
+  "pt": "Jolly",
+  "zh": "爽朗",
+  "up": "speed",
+  "down": "special-attack"
+ },
+ {
+  "name": "Lax",
+  "es": "Floja",
+  "pt": "Lax",
+  "zh": "乐天",
+  "up": "defense",
+  "down": "special-defense"
+ },
+ {
+  "name": "Lonely",
+  "es": "Hura�a",
+  "pt": "Lonely",
+  "zh": "怕寂寞",
+  "up": "attack",
+  "down": "defense"
+ },
+ {
+  "name": "Mild",
+  "es": "Afable",
+  "pt": "Mild",
+  "zh": "慢吞吞",
+  "up": "special-attack",
+  "down": "defense"
+ },
+ {
+  "name": "Modest",
+  "es": "Modesta",
+  "pt": "Modest",
+  "zh": "内敛",
+  "up": "special-attack",
+  "down": "attack"
+ },
+ {
+  "name": "Naive",
+  "es": "Ingenua",
+  "pt": "Naive",
+  "zh": "天真",
+  "up": "speed",
+  "down": "special-defense"
+ },
+ {
+  "name": "Naughty",
+  "es": "P�cara",
+  "pt": "Naughty",
+  "zh": "顽皮",
+  "up": "attack",
+  "down": "special-defense"
+ },
+ {
+  "name": "Quiet",
+  "es": "Mansa",
+  "pt": "Quiet",
+  "zh": "冷静",
+  "up": "special-attack",
+  "down": "speed"
+ },
+ {
+  "name": "Quirky",
+  "es": "Rara",
+  "pt": "Quirky",
+  "zh": "浮躁",
+  "up": null,
+  "down": null
+ },
+ {
+  "name": "Rash",
+  "es": "Alocada",
+  "pt": "Rash",
+  "zh": "马虎",
+  "up": "special-attack",
+  "down": "special-defense"
+ },
+ {
+  "name": "Relaxed",
+  "es": "Pl�cida",
+  "pt": "Relaxed",
+  "zh": "悠闲",
+  "up": "defense",
+  "down": "speed"
+ },
+ {
+  "name": "Sassy",
+  "es": "Grosera",
+  "pt": "Sassy",
+  "zh": "自大",
+  "up": "special-defense",
+  "down": "speed"
+ },
+ {
+  "name": "Serious",
+  "es": "Seria",
+  "pt": "Serious",
+  "zh": "认真",
+  "up": null,
+  "down": null
+ },
+ {
+  "name": "Timid",
+  "es": "Miedosa",
+  "pt": "Timid",
+  "zh": "胆小",
+  "up": "speed",
+  "down": "attack"
+ }
+]

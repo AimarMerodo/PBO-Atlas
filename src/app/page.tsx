@@ -13,7 +13,15 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
-      <section className="rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 px-6 py-12 text-center">
+      <section
+        className="rounded-2xl border border-line px-6 py-14 text-center"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(12,16,24,0.45), rgba(12,16,24,0.88)), url(/art/6.png), url(/art/0.png)",
+          backgroundSize: "cover, cover, cover",
+          backgroundPosition: "center, center bottom, center",
+        }}
+      >
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
           <T k="home.heroTitle" />
         </h1>

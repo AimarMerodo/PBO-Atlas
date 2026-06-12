@@ -7,8 +7,6 @@ import { MapPin, Search } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
 import type { SearchIndex } from "@/lib/types";
 
-const SPRITE = (id: number) =>
-  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
 export default function SearchDialog() {
   const t = useT();
@@ -93,7 +91,7 @@ export default function SearchDialog() {
                       onClick={() => go(`/pokedex/${p.slug}`)}
                       className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2"
                     >
-                      <Image src={SPRITE(p.id)} alt="" width={32} height={32} unoptimized />
+                      {p.sprite ? <Image src={p.sprite} alt="" width={32} height={32} unoptimized /> : <span className="w-8" />}
                       <span className="text-sm">{p.name}</span>
                       <span className="ml-auto text-xs text-ink-dim">#{p.id}</span>
                     </button>

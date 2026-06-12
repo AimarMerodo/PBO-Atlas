@@ -1,0 +1,123 @@
+// Build natures, items (+icon atlas coords), mounts and cosmetics JSONs from
+// the extracted game data (scripts/extract-game-data.ps1 must run first).
+// Usage: node scripts/build-game-extras.mjs
+
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseCsv, parseNameMap } from "./lib/csv.mjs";
+import { slugify } from "./lib/normalize.mjs";
+
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const GAME = path.join(ROOT, "scripts", ".cache", "game");
+const DATA = path.join(ROOT, "src", "data");
+
+const read = (...p) => readFile(path.join(GAME, ...p), "utf8");
+
+// --- Natures ---
+const natureEs = parseNameMap(await read("nature", "nature_es.csv"));
+const naturePt = parseNameMap(await read("nature", "nature_pt.csv"));
+const natureZh = parseNameMap(await read("nature", "nature_zh.csv"));
+const STAT = { ATK: "attack", DEF: "defense", SP_ATK: "special-attack", SP_DEF: "special-defense", SPEED: "speed", SP: "special-defense", NONE: null };
+const natures = parseCsv(await read("nature", "nature_list.csv"))
+  .filter((r) => r[0])
+  .map(([name, up, down]) => ({
+    name,
+    es: natureEs[name] ?? name,
+    pt: naturePt[name] ?? name,
+    zh: natureZh[name] ?? name,
+    up: STAT[up?.trim()] ?? null,
+    down: STAT[down?.trim()] ?? null,
+  }));
+await writeFile(path.join(DATA, "natures.json"), JSON.stringify(natures, null, 1), "utf8");
+console.log(`natures: ${natures.length}`);
+
+// --- Item icon atlases (libGDX multi-page format) -> coords ---
+const icons = {};
+function parseAtlas(text) {
+  let page = null;
+  let pageW = 0;
+  let pageH = 0;
+  let current = null;
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.trim()) {
+      page = null; // blank line precedes the next page header
+      continue;
+    }
+    if (line.trim().endsWith(".png")) {
+      page = line.trim();
+      current = null;
+    } else if (line.startsWith("size:") && page && !current) {
+      [pageW, pageH] = line.split(":")[1].split(",").map((n) => Number(n.trim()));
+    } else if (!line.startsWith(" ") && !line.includes(":")) {
+      current = line.trim();
+    } else if (current && line.trim().startsWith("xy:")) {
+      const [x, y] = line.split(":")[1].split(",").map((n) => Number(n.trim()));
+      icons[current] ??= { page, x, y, pageW, pageH };
+    } else if (current && line.trim().startsWith("size:") && icons[current] && icons[current].w === undefined) {
+      const [w, h] = line.split(":")[1].split(",").map((n) => Number(n.trim()));
+      if (icons[current].page === page) {
+        icons[current].w = w;
+        icons[current].h = h;
+      }
+    }
+  }
+}
+for (const atlas of ["item_pack.atlas", "donator_pack.atlas"]) {
+  parseAtlas(await readFile(path.join(GAME, atlas), "utf8"));
+}
+console.log(`atlas icons: ${Object.keys(icons).length}`);
+
+// --- Items ---
+const itemsEs = parseNameMap(await read("i18n", "items_es.csv"));
+const itemsPt = parseNameMap(await read("i18n", "items_pt.csv"));
+const itemsZh = parseNameMap(await read("i18n", "items_zh.csv"));
+const items = [];
+for (const r of parseCsv(await read("item", "items.csv"))) {
+  const [name, category, description, id] = r;
+  if (!name || !id) continue;
+  const slug = slugify(name);
+  items.push({
+    id: Number(id),
+    slug,
+    name,
+    es: itemsEs[name] ?? null,
+    pt: itemsPt[name] ?? null,
+    zh: itemsZh[name] ?? null,
+    category: category || "Misc",
+    description: description || "",
+    icon: icons[slug] ?? null,
+  });
+}
+items.sort((a, b) => a.name.localeCompare(b.name));
+const withIcon = items.filter((i) => i.icon).length;
+await writeFile(path.join(DATA, "items.json"), JSON.stringify({ items }), "utf8");
+console.log(`items: ${items.length} (${withIcon} with icon)`);
+
+// --- Mounts ---
+const mounts = parseCsv(await read("item", "mounts.csv"))
+  .filter((r) => r[0])
+  .map(([name, type]) => ({ name, type: type?.trim() ?? "", icon: icons[slugify(name)] ?? null }));
+await writeFile(path.join(DATA, "mounts.json"), JSON.stringify(mounts, null, 1), "utf8");
+console.log(`mounts: ${mounts.length} (${mounts.filter((m) => m.icon).length} with icon)`);
+
+// --- Cosmetic bundles ---
+const bundleDir = path.join(GAME, "bundles");
+const bundles = [];
+for (const file of (await readdir(bundleDir)).sort()) {
+  if (!file.endsWith(".json")) continue;
+  try {
+    const data = JSON.parse(await readFile(path.join(bundleDir, file), "utf8"));
+    const name = file
+      .replace(/\.json$/, "")
+      .replace(/_/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+    const entries = Array.isArray(data) ? data : [data];
+    const itemNames = entries.flatMap((e) => (e.items ?? []).map((i) => i.name)).filter(Boolean);
+    if (itemNames.length) bundles.push({ slug: slugify(name), name, items: itemNames });
+  } catch {
+    console.warn(`skipping unparsable bundle: ${file}`);
+  }
+}
+await writeFile(path.join(DATA, "cosmetics.json"), JSON.stringify(bundles, null, 1), "utf8");
+console.log(`cosmetic bundles: ${bundles.length}`);

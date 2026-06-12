@@ -42,7 +42,10 @@ export default async function LocationPage({
   if (!loc || !meta || !regionSpawns) notFound();
 
   const pokedex = getPokedex();
-  const spawns = loc.spawns.map((s) => ({ ...s, spriteUrl: pokedex[s.pokemon]?.sprite ?? null }));
+  const spawns = loc.spawns.map((s) => ({
+    ...s,
+    spriteUrl: pokedex[s.pokemon]?.spritePbo ?? pokedex[s.pokemon]?.sprite ?? null,
+  }));
 
   return (
     <div className="space-y-6">

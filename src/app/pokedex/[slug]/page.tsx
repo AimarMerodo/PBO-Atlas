@@ -68,7 +68,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="space-y-8">
       <div className="flex flex-col gap-6 sm:flex-row">
-        <PokemonArtwork name={pokemon.name} artwork={pokemon.artwork} artworkShiny={pokemon.artworkShiny ?? null} />
+        <PokemonArtwork
+          name={pokemon.name}
+          artwork={pokemon.artwork}
+          artworkShiny={pokemon.artworkShiny ?? null}
+          spritePbo={pokemon.spritePbo}
+          spritePboShiny={pokemon.spritePboShiny}
+        />
         <div className="flex-1 space-y-4">
           <div>
             <p className="text-sm text-ink-dim">#{pokemon.id}</p>
@@ -78,6 +84,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 <TypeBadge key={tp} type={tp} />
               ))}
             </div>
+            {pokemon.flavor && <p className="mt-3 max-w-xl text-sm italic text-ink-dim">{pokemon.flavor}</p>}
           </div>
           <dl className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-4">
             <div>
@@ -92,6 +99,18 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
               <div>
                 <dt className="text-ink-dim"><T k="pokemon.generation" /></dt>
                 <dd className="font-medium">{pokemon.generation}</dd>
+              </div>
+            )}
+            {pokemon.evYield && pokemon.evYield.length > 0 && (
+              <div>
+                <dt className="text-ink-dim"><T k="pokemon.evYield" /></dt>
+                <dd className="flex flex-wrap gap-1 font-medium">
+                  {pokemon.evYield.map((ev) => (
+                    <span key={ev.stat} className="rounded-full bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent-soft">
+                      +{ev.amount} <T k={`stat.${ev.stat}`} />
+                    </span>
+                  ))}
+                </dd>
               </div>
             )}
           </dl>

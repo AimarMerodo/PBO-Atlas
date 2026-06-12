@@ -31,6 +31,7 @@ const pokemon = Object.values(pokedex)
     name: p.name,
     id: p.id,
     types: p.types,
+    sprite: p.spritePbo ?? p.sprite ?? null,
     caught: caughtSlugs.has(p.slug),
   }));
 

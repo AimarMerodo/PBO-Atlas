@@ -77,7 +77,57 @@ export interface PokedexEntry {
   spriteShiny?: string | null;
   artwork: string | null;
   artworkShiny?: string | null;
+  /** In-game PBO sprites (extracted from the client, used with permission). */
+  spritePbo?: string | null;
+  spritePboShiny?: string | null;
+  /** Official in-game EV yield. */
+  evYield?: EvYield[] | null;
+  /** Pokedex flavor text (English). */
+  flavor?: string | null;
   evolutionLine?: EvolutionStage[];
+}
+
+export interface Nature {
+  name: string;
+  es: string;
+  pt: string;
+  zh: string;
+  up: StatName | null;
+  down: StatName | null;
+}
+
+export interface AtlasIcon {
+  page: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  pageW: number;
+  pageH: number;
+}
+
+export interface GameItem {
+  id: number;
+  slug: string;
+  name: string;
+  es: string | null;
+  pt: string | null;
+  zh: string | null;
+  category: string;
+  description: string;
+  icon: AtlasIcon | null;
+}
+
+export interface Mount {
+  name: string;
+  type: string;
+  icon: AtlasIcon | null;
+}
+
+export interface CosmeticBundle {
+  slug: string;
+  name: string;
+  items: string[];
 }
 
 export type Pokedex = Record<string, PokedexEntry>;
@@ -112,13 +162,18 @@ export interface RegionMapData {
 export interface MoveInfo {
   en: string;
   es: string;
-  /** Simplified Chinese name (official, when available). */
   zh?: string | null;
+  pt?: string | null;
+  descEn?: string;
+  descEs?: string | null;
+  descZh?: string | null;
   type: string;
   class: "physical" | "special" | "status";
   power: number | null;
   accuracy: number | null;
   pp: number | null;
+  /** In-game machine code like "TM27" or "HM02". */
+  tm?: string | null;
 }
 
 export interface Learnset {
@@ -130,6 +185,6 @@ export interface Learnset {
 }
 
 export interface SearchIndex {
-  pokemon: { slug: string; name: string; id: number; types: string[]; caught: boolean }[];
+  pokemon: { slug: string; name: string; id: number; types: string[]; sprite: string | null; caught: boolean }[];
   locations: { id: string; name: string; region: string }[];
 }

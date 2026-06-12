@@ -43,7 +43,7 @@ export default async function RegionPage({ params }: { params: Promise<{ region:
           topSpawns: l.spawns.slice(0, 3).map((s) => ({
             slug: s.pokemon,
             name: s.displayName,
-            spriteUrl: pokedex[s.pokemon]?.sprite ?? null,
+            spriteUrl: pokedex[s.pokemon]?.spritePbo ?? pokedex[s.pokemon]?.sprite ?? null,
           })),
         },
       ])

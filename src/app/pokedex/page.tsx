@@ -22,7 +22,7 @@ export default function PokedexPage() {
       bst: Object.values(p.stats).reduce((a, b) => a + b, 0),
       regions: [...new Set(encounters.map((e) => e.region))],
       rarities: [...new Set(encounters.map((e) => e.rarity))],
-      evs: [...new Set(encounters.flatMap((e) => e.evs.map((ev) => ev.stat)))],
+      evs: (p.evYield ?? []).map((ev) => ev.stat),
     };
   });
 

@@ -1,122 +1,113 @@
-// Build src/data/moves.json: learnsets per pokemon (level / machine / egg /
-// tutor) from PokeAPI, preferring the Scarlet/Violet version group (PBO uses
-// Gen 9 mechanics) with fallback to the latest group the pokemon appears in.
-//
-// The per-pokemon move lists are parsed from the already-cached pokemon
-// payloads; only unique move details (type, power...) hit the network.
-//
+// Build src/data/moves.json from the GAME's own data (devs granted asset use):
+//   - learnsets: scripts/.cache/game/pokedex/pokemondata.json (exact in-game)
+//   - move details: scripts/.cache/game/pokedex/showdown/gen9moves.json
+//   - localized names/descriptions: pokedex/translated_moves.csv (PBO official)
+//   - TM numbers: machines/gen_9_tm_map.csv, HMs: machines/hm_map.csv
+// Run scripts/extract-game-data.ps1 first to populate scripts/.cache/game.
 // Usage: node scripts/build-moves.mjs
 
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchText } from "./lib/http.mjs";
+import { parseCsv } from "./lib/csv.mjs";
+import { showdownCandidates } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+const GAME = path.join(ROOT, "scripts", ".cache", "game");
 const POKEDEX_FILE = path.join(ROOT, "src", "data", "pokedex.json");
 const OUT_FILE = path.join(ROOT, "src", "data", "moves.json");
-const API = "https://pokeapi.co/api/v2";
 
-// Newest first; the first group with any level-up data wins.
-const VERSION_GROUPS = [
-  "scarlet-violet",
-  "legends-arceus",
-  "brilliant-diamond-and-shining-pearl",
-  "sword-shield",
-  "ultra-sun-ultra-moon",
-  "sun-moon",
-  "omega-ruby-alpha-sapphire",
-  "x-y",
-];
+const moveId = (displayName) => displayName.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-async function fetchJson(url) {
-  return JSON.parse(await fetchText(url, { subdir: "pokeapi", delayMs: 300 }));
-}
-
-async function fetchPokemon(slug) {
-  try {
-    return await fetchJson(`${API}/pokemon/${slug}`);
-  } catch (err) {
-    if (err.status !== 404) throw err;
-    const sp = await fetchJson(`${API}/pokemon-species/${slug}`);
-    const variety = sp.varieties.find((v) => v.is_default) ?? sp.varieties[0];
-    return await fetchJson(variety.pokemon.url);
-  }
-}
-
-/** Extract { vg, level: [[slug, lvl]...], machine: [], egg: [], tutor: [] } */
-function extractLearnset(pokemon) {
-  for (const vg of VERSION_GROUPS) {
-    const buckets = { level: [], machine: [], egg: [], tutor: [] };
-    let any = false;
-    for (const m of pokemon.moves) {
-      for (const d of m.version_group_details) {
-        if (d.version_group.name !== vg) continue;
-        any = true;
-        const method = d.move_learn_method.name;
-        if (method === "level-up") buckets.level.push([m.move.name, d.level_learned_at]);
-        else if (method === "machine") buckets.machine.push(m.move.name);
-        else if (method === "egg") buckets.egg.push(m.move.name);
-        else if (method === "tutor") buckets.tutor.push(m.move.name);
-      }
-    }
-    if (any && buckets.level.length) {
-      buckets.level.sort((a, b) => a[1] - b[1]);
-      for (const k of ["machine", "egg", "tutor"]) buckets[k] = [...new Set(buckets[k])].sort();
-      // Dedupe level moves keeping the lowest level occurrence.
-      const seen = new Set();
-      buckets.level = buckets.level.filter(([slug]) => !seen.has(slug) && seen.add(slug));
-      return { vg, ...buckets };
-    }
-  }
-  return null;
-}
-
+// --- Load sources ---
+const gameData = JSON.parse(await readFile(path.join(GAME, "pokedex", "pokemondata.json"), "utf8"));
+const showdownMoves = JSON.parse(await readFile(path.join(GAME, "pokedex", "showdown", "gen9moves.json"), "utf8"));
 const pokedex = JSON.parse(await readFile(POKEDEX_FILE, "utf8"));
-const slugs = Object.keys(pokedex);
-console.log(`${slugs.length} pokedex entries`);
 
-const learnsets = {};
-const moveSlugs = new Set();
-let done = 0;
-for (const slug of slugs) {
-  try {
-    const pokemon = await fetchPokemon(slug);
-    const ls = extractLearnset(pokemon);
-    if (ls) {
-      learnsets[slug] = ls;
-      for (const [s] of ls.level) moveSlugs.add(s);
-      for (const k of ["machine", "egg", "tutor"]) for (const s of ls[k]) moveSlugs.add(s);
-    }
-  } catch (err) {
-    console.warn(`learnset failed for ${slug}: ${err.message}`);
-  }
-  if (++done % 100 === 0) process.stdout.write(`\r${done}/${slugs.length} learnsets   `);
+// translated_moves.csv: ID,Name,Desc(Short),Name(zh),Desc(zh),Name(es),Desc(es),Name(de),Name(pt)
+const translated = {};
+for (const r of parseCsv(await readFile(path.join(GAME, "pokedex", "translated_moves.csv"), "utf8")).slice(1)) {
+  translated[r[0]] = { en: r[1], descEn: r[2], zh: r[3], descZh: r[4], es: r[5], descEs: r[6], pt: r[8] };
 }
-console.log(`\n${Object.keys(learnsets).length} learnsets, ${moveSlugs.size} unique moves`);
+
+// TM/HM numbers by move id
+const tmByMove = {};
+for (const [num, name] of parseCsv(await readFile(path.join(GAME, "machines", "gen_9_tm_map.csv"), "utf8"))) {
+  if (name) tmByMove[moveId(name)] = `TM${String(num).padStart(2, "0")}`;
+}
+for (const [num, name] of parseCsv(await readFile(path.join(GAME, "machines", "hm_map.csv"), "utf8"))) {
+  if (name) tmByMove[moveId(name)] = `HM${String(num).padStart(2, "0")}`;
+}
+
+// Index game entries by showdownId
+const byShowdownId = new Map(gameData.map((p) => [p.showdownId, p]));
 
 const moves = {};
-done = 0;
-for (const slug of moveSlugs) {
-  try {
-    const m = await fetchJson(`${API}/move/${slug}`);
-    const localized = (lang) => m.names.find((n) => n.language.name === lang)?.name;
-    moves[slug] = {
-      en: localized("en") ?? slug,
-      es: localized("es") ?? localized("en") ?? slug,
-      zh: localized("zh-hans") ?? null,
-      type: m.type.name,
-      class: m.damage_class?.name ?? "status",
-      power: m.power,
-      accuracy: m.accuracy,
-      pp: m.pp,
-    };
-  } catch (err) {
-    console.warn(`move failed: ${slug}: ${err.message}`);
+const learnsets = {};
+const warnings = new Set();
+
+function registerMove(displayName) {
+  const id = moveId(displayName);
+  if (moves[id]) return id;
+  const sd = showdownMoves[id];
+  const tr = translated[id];
+  if (!sd && !tr) warnings.add(`no data for move "${displayName}"`);
+  moves[id] = {
+    en: sd?.name ?? tr?.en ?? displayName,
+    es: tr?.es || sd?.name || displayName,
+    zh: tr?.zh || null,
+    pt: tr?.pt || null,
+    descEn: tr?.descEn || sd?.shortDesc || sd?.desc || "",
+    descEs: tr?.descEs || null,
+    descZh: tr?.descZh || null,
+    type: (sd?.type ?? "normal").toLowerCase(),
+    class: (sd?.category ?? "status").toLowerCase(),
+    power: sd?.basePower || null,
+    accuracy: typeof sd?.accuracy === "number" ? sd.accuracy : null,
+    pp: sd?.pp ?? null,
+    tm: tmByMove[id] ?? null,
+  };
+  return id;
+}
+
+let matched = 0;
+for (const [slug, entry] of Object.entries(pokedex)) {
+  let game = null;
+  for (const cand of showdownCandidates(slug)) {
+    game = byShowdownId.get(cand);
+    if (game) break;
   }
-  if (++done % 100 === 0) process.stdout.write(`\r${done}/${moveSlugs.size} moves   `);
+  if (!game) continue;
+  matched++;
+
+  const level = [];
+  for (const [lvl, names] of Object.entries(game.levelUpMoves ?? {})) {
+    for (const n of names) level.push([registerMove(n), Number(lvl)]);
+  }
+  level.sort((a, b) => a[1] - b[1]);
+  for (const n of game.evoMoves ?? []) level.push([registerMove(n), 0]);
+
+  const machine = [
+    ...Object.values(game.tmMovesByMachineType ?? {}).flat(),
+    ...(game.hmMoves ?? []),
+  ].map(registerMove);
+
+  learnsets[slug] = {
+    vg: "pbo",
+    level,
+    machine: [...new Set(machine)].sort((a, b) => moves[a].en.localeCompare(moves[b].en)),
+    egg: [...new Set((game.eggMoves ?? []).map(registerMove))].sort(),
+    tutor: [...new Set((game.tutorMoves ?? []).map(registerMove))].sort(),
+  };
 }
 
 await writeFile(OUT_FILE, JSON.stringify({ moves, learnsets }), "utf8");
 const mb = (Buffer.byteLength(JSON.stringify({ moves, learnsets })) / 1024 / 1024).toFixed(1);
-console.log(`\nWrote ${Object.keys(moves).length} moves + ${Object.keys(learnsets).length} learnsets (${mb} MB) -> ${path.relative(ROOT, OUT_FILE)}`);
+console.log(
+  `Matched ${matched}/${Object.keys(pokedex).length} pokedex entries to game data; ` +
+    `${Object.keys(moves).length} moves (${mb} MB) -> ${path.relative(ROOT, OUT_FILE)}`
+);
+if (warnings.size) {
+  console.log(`${warnings.size} warnings:`);
+  for (const w of [...warnings].slice(0, 20)) console.log(`  - ${w}`);
+}

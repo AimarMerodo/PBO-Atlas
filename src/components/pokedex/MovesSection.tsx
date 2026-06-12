@@ -3,7 +3,7 @@
 // Learnset tables with level / TM / egg / tutor tabs and a Gen 9 disclaimer.
 
 import { useState } from "react";
-import { TriangleAlert } from "lucide-react";
+import { Database } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { DictKey } from "@/i18n/dictionaries";
 import type { Learnset, MoveInfo } from "@/lib/types";
@@ -41,9 +41,9 @@ export default function MovesSection({
 
   return (
     <div className="space-y-3">
-      <div className="flex items-start gap-2.5 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-sm text-amber-200/90">
-        <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" aria-hidden />
-        <p>{t("moves.disclaimer")}</p>
+      <div className="flex items-start gap-2.5 rounded-xl border border-line bg-surface px-4 py-2.5 text-xs text-ink-dim">
+        <Database className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-soft" aria-hidden />
+        <p>{t("moves.source")}</p>
       </div>
 
       <div className="flex flex-wrap gap-1.5">
@@ -70,6 +70,7 @@ export default function MovesSection({
           <thead className="bg-surface-2 text-left text-xs uppercase text-ink-dim">
             <tr>
               {tab === "level" && <th className="px-4 py-2.5">{t("moves.levelCol")}</th>}
+              {tab === "machine" && <th className="px-4 py-2.5">TM</th>}
               <th className="px-4 py-2.5">{t("moves.name")}</th>
               <th className="px-4 py-2.5">{t("moves.type")}</th>
               <th className="px-4 py-2.5">{t("moves.class")}</th>
@@ -82,13 +83,21 @@ export default function MovesSection({
             {rows.map(({ slug, level }) => {
               const move = moves[slug];
               if (!move) return null;
+              const name =
+                lang === "es" ? move.es : lang === "zh" ? move.zh || move.en : lang === "pt" ? move.pt || move.en : move.en;
+              const desc =
+                (lang === "es" ? move.descEs : lang === "zh" ? move.descZh : null) || move.descEn || "";
               return (
                 <tr key={slug} className="border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2">
                   {tab === "level" && (
                     <td className="px-4 py-1.5 font-mono text-ink-dim">{level === 0 ? "—" : level}</td>
                   )}
-                  <td className="px-4 py-1.5 font-medium">
-                    {lang === "es" ? move.es : lang === "zh" ? move.zh || move.en : move.en}
+                  {tab === "machine" && (
+                    <td className="px-4 py-1.5 font-mono text-xs text-ink-dim">{move.tm ?? "—"}</td>
+                  )}
+                  <td className="max-w-72 px-4 py-1.5">
+                    <span className="font-medium">{name}</span>
+                    {desc && <span className="block text-xs leading-snug text-ink-dim">{desc}</span>}
                   </td>
                   <td className="px-4 py-1.5">
                     <TypeBadge type={move.type} />

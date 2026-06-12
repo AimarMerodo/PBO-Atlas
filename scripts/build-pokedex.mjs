@@ -3,14 +3,66 @@
 // Usage: node scripts/build-pokedex.mjs
 
 import { readFile, readdir, mkdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchText } from "./lib/http.mjs";
+import { parseCsv } from "./lib/csv.mjs";
+import { showdownCandidates, dashless } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SPAWNS_DIR = path.join(ROOT, "src", "data", "spawns");
 const OUT_FILE = path.join(ROOT, "src", "data", "pokedex.json");
+const GAME = path.join(ROOT, "scripts", ".cache", "game");
 const API = "https://pokeapi.co/api/v2";
+
+// --- Game-sourced data (extract-game-data.ps1) ---
+async function loadGameFile(rel, parser) {
+  try {
+    return parser(await readFile(path.join(GAME, ...rel), "utf8"));
+  } catch {
+    console.warn(`game data missing: ${rel.join("/")} (run scripts/extract-game-data.ps1)`);
+    return null;
+  }
+}
+
+const EV_STATS = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"];
+const evYieldByName = new Map();
+const evCsv = await loadGameFile(["pokedex", "ev_yield.csv"], parseCsv);
+if (evCsv) {
+  for (const r of evCsv.slice(1)) {
+    const evs = EV_STATS.map((stat, i) => ({ stat, amount: Number(r[i + 2]) })).filter((e) => e.amount > 0);
+    evYieldByName.set(dashless(r[1].toLowerCase().replace(/[^a-z0-9-]/g, "")), evs);
+  }
+}
+
+const flavorByName = new Map();
+const flavorCsv = await loadGameFile(["pokedex", "pokemon_flavor.csv"], parseCsv);
+if (flavorCsv) {
+  for (const [name, text] of flavorCsv.slice(1)) {
+    if (name) flavorByName.set(dashless(name), text);
+  }
+}
+
+// In-game ability texts (Showdown-style desc, keyed by dashless id)
+const abilityGameText = (await loadGameFile(["pokedex", "abilities_text.json"], JSON.parse)) ?? {};
+
+/** First game-data value matching any showdown candidate of a PokeAPI slug. */
+function gameLookup(map, slug) {
+  for (const cand of showdownCandidates(slug)) {
+    const v = map.get(cand);
+    if (v !== undefined) return v;
+  }
+  return null;
+}
+
+function pboSprite(slug, shiny) {
+  for (const cand of showdownCandidates(slug)) {
+    const rel = `sprites/pbo/${shiny ? "front-shiny" : "front"}/${cand}.png`;
+    if (existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
+  }
+  return null;
+}
 
 async function fetchJson(url) {
   return JSON.parse(await fetchText(url, { subdir: "pokeapi", delayMs: 300 }));
@@ -86,6 +138,10 @@ async function buildEntry(slug) {
       spriteShiny: pokemon.sprites.front_shiny ?? null,
       artwork: pokemon.sprites.other?.["official-artwork"]?.front_default ?? pokemon.sprites.front_default,
       artworkShiny: pokemon.sprites.other?.["official-artwork"]?.front_shiny ?? pokemon.sprites.front_shiny ?? null,
+      spritePbo: pboSprite(slug, false),
+      spritePboShiny: pboSprite(slug, true),
+      evYield: gameLookup(evYieldByName, slug),
+      flavor: gameLookup(flavorByName, slug),
       evolutionChainUrl: species.evolution_chain?.url ?? null,
     },
   };
@@ -204,14 +260,16 @@ for (const slug of abilitySlugs) {
     // Latest flavor text per language (entries are roughly version-ordered).
     const flavor = (lang) => a.flavor_text_entries.filter((f) => f.language.name === lang).at(-1)?.flavor_text;
     const effectEntry = a.effect_entries.find((e) => e.language.name === "en");
+    // Prefer the GAME's own ability text (exact in-game wording).
+    const game = abilityGameText[dashless(slug)];
     abilities[slug] = {
       en: name("en") ?? titleCase(slug),
       es: name("es") ?? name("en") ?? titleCase(slug),
       zh: name("zh-hans") ?? null,
-      textEn: (flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
+      textEn: (game?.shortDesc ?? flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
       textEs: (flavor("es") ?? flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
-      // Detailed mechanical description (matches the in-game ability text).
-      detail: (effectEntry?.effect ?? "").replace(/\s+/g, " ").trim(),
+      // Detailed mechanical description: in-game text, fallback PokeAPI effect.
+      detail: (game?.desc ?? game?.shortDesc ?? effectEntry?.effect ?? "").replace(/\s+/g, " ").trim(),
       detailEs: detailEsOverlay[slug] ?? null,
       detailZh: detailZhOverlay[slug] ?? null,
       detailPt: detailPtOverlay[slug] ?? null,
