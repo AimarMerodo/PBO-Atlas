@@ -24,6 +24,9 @@ export default function Header() {
           <Link href="/pokedex" className="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
             <T k="nav.pokedex" />
           </Link>
+          <Link href="/feedback" className="hidden sm:block rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
+            <T k="nav.feedback" />
+          </Link>
         </nav>
         <div className="ml-auto flex items-center gap-3">
           <SearchDialog />

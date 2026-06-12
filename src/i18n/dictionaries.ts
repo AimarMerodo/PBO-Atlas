@@ -88,6 +88,21 @@ const es = {
   "search.hint": "Pulsa Ctrl+K para buscar desde cualquier página",
   "footer.disclaimer":
     "PBO Atlas es una herramienta de fans, no afiliada a Pokemon Blaze Online ni a Nintendo. Datos del foro oficial de PBO y de PokeAPI.",
+  "nav.feedback": "Contacto",
+  "banner.text": "¿Has visto algún dato mal o tienes una sugerencia? Escríbeme:",
+  "banner.link": "Más info",
+  "feedback.title": "Contacto y sugerencias",
+  "feedback.subtitle":
+    "¿Algún spawn que no cuadra, un pokemon que falta, o una idea para mejorar la web? Escríbeme por cualquiera de estas vías:",
+  "feedback.discordTitle": "Discord",
+  "feedback.discordHint": "Mándame mensaje directo",
+  "feedback.ingameTitle": "En el juego (PBO)",
+  "feedback.ingameHint": "Háblame dentro del juego",
+  "feedback.copy": "Copiar",
+  "feedback.copied": "¡Copiado!",
+  "feedback.reportTitle": "¿Qué incluir en un reporte?",
+  "feedback.reportBody":
+    "Dime la página o el pokemon/ruta donde lo viste y qué está mal. Los datos de spawns vienen del foro oficial de PBO, así que si el juego cambió algo recientemente puede tardar en reflejarse.",
 };
 
 const en: Record<keyof typeof es, string> = {
@@ -178,6 +193,21 @@ const en: Record<keyof typeof es, string> = {
   "search.hint": "Press Ctrl+K to search from any page",
   "footer.disclaimer":
     "PBO Atlas is a fan tool, not affiliated with Pokemon Blaze Online or Nintendo. Data from the official PBO forum and PokeAPI.",
+  "nav.feedback": "Feedback",
+  "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
+  "banner.link": "More info",
+  "feedback.title": "Feedback & suggestions",
+  "feedback.subtitle":
+    "A spawn that looks wrong, a missing pokemon, or an idea to improve the site? Reach me through either of these:",
+  "feedback.discordTitle": "Discord",
+  "feedback.discordHint": "Send me a direct message",
+  "feedback.ingameTitle": "In-game (PBO)",
+  "feedback.ingameHint": "Message me in the game",
+  "feedback.copy": "Copy",
+  "feedback.copied": "Copied!",
+  "feedback.reportTitle": "What to include in a report?",
+  "feedback.reportBody":
+    "Tell me the page or the pokemon/route where you saw it and what looks wrong. Spawn data comes from the official PBO forum, so recent in-game changes may take a while to show up here.",
 };
 
 export type DictKey = keyof typeof es;

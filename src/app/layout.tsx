@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import Header from "@/components/layout/Header";
+import FeedbackBanner from "@/components/layout/FeedbackBanner";
 import T from "@/components/layout/T";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <LanguageProvider>
           <Header />
           <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
+          <FeedbackBanner />
           <footer className="border-t border-line py-6">
             <p className="mx-auto max-w-6xl px-4 text-xs text-ink-dim">
               <T k="footer.disclaimer" />
