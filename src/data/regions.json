@@ -1,0 +1,6 @@
+[
+  { "id": "sinnoh", "name": "Sinnoh", "order": 1, "description": { "es": "La primera región de PBO", "en": "PBO's first region" } },
+  { "id": "jvaloh", "name": "Jvaloh", "order": 2, "description": { "es": "Región 100% personalizada y exclusiva de PBO", "en": "Fully custom region exclusive to PBO" } },
+  { "id": "hoenn", "name": "Hoenn", "order": 3, "description": { "es": "Tierra de trópicos y mar", "en": "Land of tropics and sea" } },
+  { "id": "kanto", "name": "Kanto", "order": 4, "description": { "es": "La región clásica, la más reciente en PBO", "en": "The classic region, newest in PBO" } }
+]
