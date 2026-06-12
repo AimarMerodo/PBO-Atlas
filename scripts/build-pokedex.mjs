@@ -104,6 +104,16 @@ const allSpecies = await fetchJson(`${API}/pokemon-species?limit=2000`);
 for (const sp of allSpecies.results) slugs.add(sp.name);
 console.log(`${slugs.size} total species incl. full national dex`);
 
+// 1c. Add alternate forms (Mega, regional, Therian, Origin, Calyrex riders...)
+// minus battle-/cosmetic-only noise.
+const FORM_NOISE =
+  /-(gmax|totem|eternamax|cosplay|starter|low-power-mode|drive-mode|aquatic-mode|glide-mode|limited-build|sprinting-build|swimming-build|gliding-build)\b/;
+const allPokemon = await fetchJson(`${API}/pokemon?limit=3000`);
+for (const p of allPokemon.results) {
+  if (!FORM_NOISE.test(p.name)) slugs.add(p.name);
+}
+console.log(`${slugs.size} total incl. alternate forms`);
+
 // 2. Fetch entries; queue grows as evolution-line members are discovered.
 const pokedex = {};
 const failures = [];
@@ -140,6 +150,16 @@ while (queue.length) {
   delete entry.evolutionChainUrl;
 }
 console.log();
+
+// 2b. Evolution lines PokeAPI doesn't connect (separate chains per species).
+const CHAIN_OVERRIDES = {
+  meltan: [{ slug: "meltan" }, { slug: "melmetal", trigger: "special" }],
+};
+for (const [slug, line] of Object.entries(CHAIN_OVERRIDES)) {
+  for (const member of line) {
+    if (pokedex[member.slug]) pokedex[member.slug].evolutionLine = line.map((m) => ({ ...m }));
+  }
+}
 
 // 3. Decorate evolution lines with display names; mark catchable members.
 for (const entry of Object.values(pokedex)) {
