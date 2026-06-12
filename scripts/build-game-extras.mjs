@@ -63,10 +63,58 @@ function parseAtlas(text) {
     }
   }
 }
-for (const atlas of ["item_pack.atlas", "donator_pack.atlas"]) {
+for (const atlas of ["item_pack.atlas", "donator_pack.atlas", "item_icons_4x.atlas"]) {
   parseAtlas(await readFile(path.join(GAME, atlas), "utf8"));
 }
 console.log(`atlas icons: ${Object.keys(icons).length}`);
+
+// Machine items ("Gen7 TM01", "TM27", "TR05", "HM02") get the typed disc
+// icon (tr-<type>) of the move they teach.
+const moveType = {};
+{
+  const movesData = JSON.parse(await readFile(path.join(ROOT, "src", "data", "moves.json"), "utf8"));
+  for (const m of Object.values(movesData.moves)) moveType[m.en.toLowerCase()] = m.type;
+}
+const machineMove = {};
+const loadTmMap = async (file, prefix) => {
+  try {
+    for (const [num, name] of parseCsv(await read("machines", file))) {
+      if (name) machineMove[`${prefix}${String(Number(num)).padStart(2, "0")}`] = name;
+    }
+  } catch {
+    /* map not extracted */
+  }
+};
+await loadTmMap("gen7_tm_map.csv", "Gen7 TM");
+await loadTmMap("gen_8_tm_map.csv", "TM");
+await loadTmMap("gen_8_tr_map.csv", "TR");
+await loadTmMap("hm_map.csv", "HM");
+try {
+  for (const [num, name] of parseCsv(await read("machines", "gen_9_tm_map.csv"))) {
+    if (name) machineMove[`Gen9 TM${String(Number(num)).padStart(3, "0")}`] = name;
+  }
+} catch {
+  /* ignore */
+}
+
+function machineIcon(itemName) {
+  const move = machineMove[itemName.trim()];
+  const type = move ? moveType[move.toLowerCase()] : null;
+  return (type && icons[`tr-${type}`]) || icons["broken-tm-disk"] || null;
+}
+
+/** Atlas region names keep punctuation: "wailmer-surf-mount-(shiny)". */
+function findIcon(name) {
+  const base = name.trim();
+  const noParens = base.replace(/\s*\([^)]*\)\s*/g, " ").trim();
+  const noBlueprint = noParens.replace(/\s+Blueprint$/i, "");
+  const noFirstWord = noBlueprint.split(/\s+/).slice(1).join(" ");
+  const dash = (s) => s.toLowerCase().trim().replace(/\s+/g, "-");
+  const candidates = [dash(base), slugify(base), dash(noParens), slugify(noParens), dash(noBlueprint)];
+  if (noFirstWord.split(/\s+/).length >= 2) candidates.push(dash(noFirstWord));
+  for (const c of candidates) if (c && icons[c]) return icons[c];
+  return null;
+}
 
 // --- Items ---
 const itemsEs = parseNameMap(await read("i18n", "items_es.csv"));
@@ -86,7 +134,7 @@ for (const r of parseCsv(await read("item", "items.csv"))) {
     zh: itemsZh[name] ?? null,
     category: category || "Misc",
     description: description || "",
-    icon: icons[slug] ?? null,
+    icon: findIcon(name) ?? (category === "Machines" ? machineIcon(name) : null),
   });
 }
 items.sort((a, b) => a.name.localeCompare(b.name));
@@ -97,7 +145,7 @@ console.log(`items: ${items.length} (${withIcon} with icon)`);
 // --- Mounts ---
 const mounts = parseCsv(await read("item", "mounts.csv"))
   .filter((r) => r[0])
-  .map(([name, type]) => ({ name, type: type?.trim() ?? "", icon: icons[slugify(name)] ?? null }));
+  .map(([name, type]) => ({ name, type: type?.trim() ?? "", icon: findIcon(name) }));
 await writeFile(path.join(DATA, "mounts.json"), JSON.stringify(mounts, null, 1), "utf8");
 console.log(`mounts: ${mounts.length} (${mounts.filter((m) => m.icon).length} with icon)`);
 
