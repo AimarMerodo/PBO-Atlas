@@ -180,14 +180,17 @@ console.log(`Wrote ${Object.keys(pokedex).length} entries -> ${path.relative(ROO
 // referenced by any entry -> src/data/abilities.json
 // Spanish translations of the detailed effect texts are maintained in
 // scripts/lib/ability-details.es.json (PokeAPI only has them in English).
-let detailEsOverlay = {};
-try {
-  detailEsOverlay = JSON.parse(
-    await readFile(path.join(ROOT, "scripts", "lib", "ability-details.es.json"), "utf8")
-  );
-} catch {
-  console.warn("No ability-details.es.json overlay found; Spanish details will fall back to English.");
+async function loadOverlay(lang) {
+  try {
+    return JSON.parse(await readFile(path.join(ROOT, "scripts", "lib", `ability-details.${lang}.json`), "utf8"));
+  } catch {
+    console.warn(`No ability-details.${lang}.json overlay found; ${lang} details will fall back to English.`);
+    return {};
+  }
 }
+const detailEsOverlay = await loadOverlay("es");
+const detailZhOverlay = await loadOverlay("zh");
+const detailPtOverlay = await loadOverlay("pt");
 
 const abilitySlugs = new Set();
 for (const entry of Object.values(pokedex)) for (const a of entry.abilities) abilitySlugs.add(a.slug);
@@ -204,11 +207,14 @@ for (const slug of abilitySlugs) {
     abilities[slug] = {
       en: name("en") ?? titleCase(slug),
       es: name("es") ?? name("en") ?? titleCase(slug),
+      zh: name("zh-hans") ?? null,
       textEn: (flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
       textEs: (flavor("es") ?? flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
       // Detailed mechanical description (matches the in-game ability text).
       detail: (effectEntry?.effect ?? "").replace(/\s+/g, " ").trim(),
       detailEs: detailEsOverlay[slug] ?? null,
+      detailZh: detailZhOverlay[slug] ?? null,
+      detailPt: detailPtOverlay[slug] ?? null,
     };
   } catch (err) {
     console.warn(`ability failed: ${slug}: ${err.message}`);

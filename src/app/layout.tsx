@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     template: "%s | PBO Atlas",
   },
   description:
-    "Mapas, spawns y pokedex de Pokemon Blaze Online. Encuentra dónde capturar cualquier pokemon en Sinnoh, Jvaloh, Hoenn y Kanto.",
+    "Pokemon Blaze Online maps, spawns and pokedex. Find where to catch any pokemon in Sinnoh, Jvaloh, Hoenn and Kanto.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className="min-h-screen flex flex-col antialiased">
         <LanguageProvider>
           <Header />

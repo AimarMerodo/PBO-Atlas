@@ -87,7 +87,9 @@ export default function MovesSection({
                   {tab === "level" && (
                     <td className="px-4 py-1.5 font-mono text-ink-dim">{level === 0 ? "—" : level}</td>
                   )}
-                  <td className="px-4 py-1.5 font-medium">{move[lang]}</td>
+                  <td className="px-4 py-1.5 font-medium">
+                    {lang === "es" ? move.es : lang === "zh" ? move.zh || move.en : move.en}
+                  </td>
                   <td className="px-4 py-1.5">
                     <TypeBadge type={move.type} />
                   </td>

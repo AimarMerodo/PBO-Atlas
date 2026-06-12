@@ -6,7 +6,7 @@ import T from "@/components/layout/T";
 
 export const metadata: Metadata = {
   title: "Feedback",
-  description: "Reporta datos erróneos o envía sugerencias para PBO Atlas.",
+  description: "Report wrong data or send suggestions for PBO Atlas.",
 };
 
 export default function FeedbackPage() {

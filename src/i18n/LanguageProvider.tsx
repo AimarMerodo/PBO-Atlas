@@ -13,12 +13,14 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 const STORAGE_KEY = "pbo-lang";
 
+const VALID_LANGS: Lang[] = ["en", "es", "zh", "pt"];
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("es");
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "es" || stored === "en") setLangState(stored);
+    if (stored && VALID_LANGS.includes(stored as Lang)) setLangState(stored as Lang);
   }, []);
 
   const setLang = (next: Lang) => {

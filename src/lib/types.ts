@@ -50,12 +50,16 @@ export interface AbilityRef {
 export interface AbilityInfo {
   en: string;
   es: string;
+  /** Simplified Chinese name (official, when available). */
+  zh?: string | null;
   textEn: string;
   textEs: string;
   /** Detailed mechanical description (English). */
   detail?: string;
-  /** Spanish translation of the detailed description. */
+  /** Translations of the detailed description. */
   detailEs?: string | null;
+  detailZh?: string | null;
+  detailPt?: string | null;
 }
 
 export interface PokedexEntry {
@@ -108,6 +112,8 @@ export interface RegionMapData {
 export interface MoveInfo {
   en: string;
   es: string;
+  /** Simplified Chinese name (official, when available). */
+  zh?: string | null;
   type: string;
   class: "physical" | "special" | "status";
   power: number | null;

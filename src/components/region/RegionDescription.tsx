@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/i18n/LanguageProvider";
 
-export default function RegionDescription({ description }: { description: { es: string; en: string } }) {
+export default function RegionDescription({ description }: { description: Record<string, string> }) {
   const { lang } = useLanguage();
-  return <>{description[lang]}</>;
+  return <>{description[lang] ?? description.en}</>;
 }

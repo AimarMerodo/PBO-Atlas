@@ -4,7 +4,20 @@
 
 import { Eye, EyeOff } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import type { Lang } from "@/i18n/dictionaries";
 import type { AbilityInfo, AbilityRef } from "@/lib/types";
+
+function abilityName(a: AbilityInfo, lang: Lang): string {
+  if (lang === "es") return a.es;
+  if (lang === "zh") return a.zh || a.en;
+  return a.en; // en + pt (no official Portuguese ability names)
+}
+
+function abilityText(a: AbilityInfo, lang: Lang): string {
+  const detail =
+    lang === "es" ? a.detailEs : lang === "zh" ? a.detailZh : lang === "pt" ? a.detailPt : a.detail;
+  return detail || a.detail || a.textEn;
+}
 
 export default function AbilityList({ abilities }: { abilities: (AbilityRef & AbilityInfo)[] }) {
   const { lang, t } = useLanguage();
@@ -24,16 +37,14 @@ export default function AbilityList({ abilities }: { abilities: (AbilityRef & Ab
             ) : (
               <Eye className="h-4 w-4 text-ink-dim" aria-hidden />
             )}
-            <span className="font-semibold">{lang === "es" ? a.es : a.en}</span>
+            <span className="font-semibold">{abilityName(a, lang)}</span>
             {a.hidden && (
               <span className="rounded-full border border-amber-400/50 bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-300">
                 {t("ability.hidden")}
               </span>
             )}
           </div>
-          <p className="mt-1.5 text-sm leading-relaxed text-ink-dim">
-            {lang === "es" ? a.detailEs || a.detail || a.textEs : a.detail || a.textEn}
-          </p>
+          <p className="mt-1.5 text-sm leading-relaxed text-ink-dim">{abilityText(a, lang)}</p>
         </div>
       ))}
     </div>

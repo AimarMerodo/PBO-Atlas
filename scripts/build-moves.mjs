@@ -104,6 +104,7 @@ for (const slug of moveSlugs) {
     moves[slug] = {
       en: localized("en") ?? slug,
       es: localized("es") ?? localized("en") ?? slug,
+      zh: localized("zh-hans") ?? null,
       type: m.type.name,
       class: m.damage_class?.name ?? "status",
       power: m.power,

@@ -5,7 +5,7 @@ import T from "@/components/layout/T";
 
 export const metadata: Metadata = {
   title: "Pokédex",
-  description: "Pokédex completa de Pokemon Blaze Online con localizaciones de captura.",
+  description: "Complete Pokemon Blaze Online pokedex with catch locations.",
 };
 
 export default function PokedexPage() {
