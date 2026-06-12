@@ -4,17 +4,33 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { slugifyName } from "@/lib/slug";
 import type { Mount } from "@/lib/types";
 import ItemIcon from "./ItemIcon";
+import GameModal from "./GameModal";
 
 export default function MountsExplorer() {
   const { t } = useLanguage();
   const [mounts, setMounts] = useState<Mount[] | null>(null);
   const [type, setType] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Mount | null>(null);
 
   useEffect(() => {
-    import("@/data/mounts.json").then((mod) => setMounts(mod.default as Mount[]));
+    import("@/data/mounts.json").then((mod) => {
+      const list = mod.default as Mount[];
+      setMounts(list);
+      const slug = new URLSearchParams(window.location.search).get("mount");
+      if (slug) setSelected(list.find((m) => slugifyName(m.name) === slug) ?? null);
+    });
   }, []);
+
+  const select = (mount: Mount | null) => {
+    setSelected(mount);
+    const url = new URL(window.location.href);
+    if (mount) url.searchParams.set("mount", slugifyName(mount.name));
+    else url.searchParams.delete("mount");
+    window.history.replaceState(null, "", url.toString());
+  };
 
   const types = useMemo(() => (mounts ? [...new Set(mounts.map((m) => m.type).filter(Boolean))].sort() : []), [mounts]);
 
@@ -44,17 +60,30 @@ export default function MountsExplorer() {
 
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
         {filtered.map((m) => (
-          <div key={m.name} className="flex items-center gap-3 rounded-xl border border-line bg-surface p-3">
-            <div className="shrink-0 rounded-lg bg-surface-2 p-1.5">
+          <button
+            key={m.name}
+            onClick={() => select(m)}
+            className="flex items-center gap-3 rounded-xl border border-line bg-surface p-3 text-left transition-colors hover:border-accent/60"
+          >
+            <div className="shrink-0 rounded-lg bg-zinc-300/80 p-1.5">
               <ItemIcon icon={m.icon} size={36} />
             </div>
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold">{m.name}</p>
               <p className="text-[10px] uppercase tracking-wide text-ink-dim">{m.type.replace(/_/g, " ")}</p>
             </div>
-          </div>
+          </button>
         ))}
       </div>
+
+      {selected && (
+        <GameModal
+          title={selected.name}
+          badge={selected.type.replace(/_/g, " ")}
+          icon={selected.icon}
+          onClose={() => select(null)}
+        />
+      )}
     </div>
   );
 }

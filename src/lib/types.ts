@@ -131,7 +131,8 @@ export interface Mount {
 export interface CosmeticBundle {
   slug: string;
   name: string;
-  items: string[];
+  icon: AtlasIcon | null;
+  items: { name: string; icon: AtlasIcon | null }[];
 }
 
 export type Pokedex = Record<string, PokedexEntry>;

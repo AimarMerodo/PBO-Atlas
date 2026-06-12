@@ -181,8 +181,16 @@ for (const file of (await readdir(bundleDir)).sort()) {
       .replace(/_/g, " ")
       .replace(/\b\w/g, (c) => c.toUpperCase());
     const entries = Array.isArray(data) ? data : [data];
-    const itemNames = entries.flatMap((e) => (e.items ?? []).map((i) => i.name)).filter(Boolean);
-    if (itemNames.length) bundles.push({ slug: slugify(name), name, items: itemNames });
+    const itemNames = [...new Set(entries.flatMap((e) => (e.items ?? []).map((i) => i.name)).filter(Boolean))];
+    if (itemNames.length) {
+      const pieces = itemNames.map((n) => ({ name: n, icon: findIcon(n) }));
+      bundles.push({
+        slug: slugify(name),
+        name,
+        icon: findIcon(name) ?? findIcon(`${name.replace(/ Bundle$/i, "")} Costume Bundle`) ?? pieces.find((p) => p.icon)?.icon ?? null,
+        items: pieces,
+      });
+    }
   } catch {
     console.warn(`skipping unparsable bundle: ${file}`);
   }

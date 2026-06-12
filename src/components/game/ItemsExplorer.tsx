@@ -98,7 +98,7 @@ export default function ItemsExplorer() {
             onClick={() => select(i)}
             className="flex items-start gap-3 rounded-xl border border-line bg-surface p-3 text-left transition-colors hover:border-accent/60"
           >
-            <div className="shrink-0 rounded-lg bg-surface-2 p-1.5">
+            <div className="shrink-0 rounded-lg bg-zinc-300/80 p-1.5">
               <ItemIcon icon={i.icon} size={36} />
             </div>
             <div className="min-w-0">
