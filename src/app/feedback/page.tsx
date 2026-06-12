@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Gamepad2, Info, MessageCircle } from "lucide-react";
-import { CONTACT } from "@/lib/contact";
+import { CONTACT, GAME_URL } from "@/lib/contact";
 import CopyButton from "@/components/layout/CopyButton";
 import T from "@/components/layout/T";
 
@@ -44,6 +44,14 @@ export default function FeedbackPage() {
           </p>
           <code className="rounded-lg bg-surface-2 px-4 py-2 text-lg font-semibold">{CONTACT.ingame}</code>
           <CopyButton value={CONTACT.ingame} />
+          <a
+            href={GAME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-accent-soft hover:underline"
+          >
+            pokemonblazeonline.com
+          </a>
         </div>
       </div>
 

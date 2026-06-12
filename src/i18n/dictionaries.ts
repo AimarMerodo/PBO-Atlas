@@ -6,13 +6,13 @@ const es = {
   "nav.regions": "Regiones",
   "nav.pokedex": "Pokédex",
   "nav.search": "Buscar",
-  "home.heroTitle": "Encuentra cualquier pokemon en PBO",
+  "home.heroTitle": "Encuentra cualquier pokemon en Pokemon Blaze Online",
   "home.heroSubtitle":
     "Explora las regiones, mira qué pokemon salen en cada ruta y descubre dónde capturar al que te falta.",
   "home.regions": "Regiones",
   "home.openPokedex": "Abrir Pokédex",
   "home.locations": "localizaciones",
-  "home.dataFrom": "Datos extraídos del foro oficial de PBO",
+  "home.dataFrom": "Datos extraídos del foro oficial de Pokemon Blaze Online",
   "region.locations": "Localizaciones",
   "region.filterPlaceholder": "Filtrar localizaciones...",
   "region.noMap": "Mapa interactivo próximamente — usa la lista de localizaciones.",
@@ -22,7 +22,7 @@ const es = {
   "location.spawnsTitle": "Spawns en",
   "location.searchPlaceholder": "Buscar pokemon...",
   "location.noResults": "Ningún spawn coincide con los filtros.",
-  "location.source": "Fuente: foro oficial de PBO",
+  "location.source": "Fuente: foro oficial de Pokemon Blaze Online",
   "spawn.pokemon": "Pokemon",
   "spawn.rarity": "Rareza",
   "spawn.time": "Hora",
@@ -71,7 +71,7 @@ const es = {
   "pokemon.evolutionLine": "Línea evolutiva",
   "pokemon.whereToCatch": "Dónde conseguirlo",
   "pokemon.notCatchable":
-    "No aparece en estado salvaje en PBO, pero puede conseguirse por otros medios (cofres, eventos, evolución...).",
+    "No aparece en estado salvaje en Pokemon Blaze Online, pero puede conseguirse por otros medios (cofres, eventos, evolución...).",
   "pokemon.tryEvolving": "Consíguelo evolucionando a",
   "pokemon.location": "Localización",
   "pokemon.region": "Región",
@@ -96,7 +96,7 @@ const es = {
   "moves.pp": "PP",
   "moves.none": "Sin datos de movimientos para este pokemon.",
   "moves.disclaimer":
-    "Datos de Gen 9 (Escarlata/Púrpura) vía PokeAPI. En PBO puede haber diferencias: es posible que falten movimientos o que alguno no esté disponible en el juego. Ante la duda, verifica en la pokedex dentro del juego.",
+    "Lista orientativa basada en los juegos oficiales de la 9ª generación. En Pokemon Blaze Online puede haber diferencias: es posible que falten movimientos o que alguno no esté disponible. Ante la duda, verifica en la pokedex dentro del juego.",
   "class.physical": "Físico",
   "class.special": "Especial",
   "class.status": "Estado",
@@ -111,23 +111,24 @@ const es = {
   "search.locations": "Localizaciones",
   "search.noResults": "Sin resultados",
   "search.hint": "Pulsa Ctrl+K para buscar desde cualquier página",
-  "footer.disclaimer":
-    "PBO Atlas es una herramienta de fans, no afiliada a Pokemon Blaze Online ni a Nintendo. Datos del foro oficial de PBO y de PokeAPI.",
+  "footer.pre": "PBO Atlas es una herramienta de fans, no afiliada a",
+  "footer.post": "ni a Nintendo. Datos del foro oficial del juego.",
   "nav.feedback": "Contacto",
   "banner.text": "¿Has visto algún dato mal o tienes una sugerencia? Escríbeme:",
+  "banner.ingame": "En el juego",
   "banner.link": "Más info",
   "feedback.title": "Contacto y sugerencias",
   "feedback.subtitle":
     "¿Algún spawn que no cuadra, un pokemon que falta, o una idea para mejorar la web? Escríbeme por cualquiera de estas vías:",
   "feedback.discordTitle": "Discord",
   "feedback.discordHint": "Mándame mensaje directo",
-  "feedback.ingameTitle": "En el juego (PBO)",
+  "feedback.ingameTitle": "En el juego (Pokemon Blaze Online)",
   "feedback.ingameHint": "Háblame dentro del juego",
   "feedback.copy": "Copiar",
   "feedback.copied": "¡Copiado!",
   "feedback.reportTitle": "¿Qué incluir en un reporte?",
   "feedback.reportBody":
-    "Dime la página o el pokemon/ruta donde lo viste y qué está mal. Los datos de spawns vienen del foro oficial de PBO, así que si el juego cambió algo recientemente puede tardar en reflejarse.",
+    "Dime la página o el pokemon/ruta donde lo viste y qué está mal. Los datos de spawns vienen del foro oficial de Pokemon Blaze Online, así que si el juego cambió algo recientemente puede tardar en reflejarse.",
 };
 
 const en: Record<keyof typeof es, string> = {
@@ -136,13 +137,13 @@ const en: Record<keyof typeof es, string> = {
   "nav.regions": "Regions",
   "nav.pokedex": "Pokédex",
   "nav.search": "Search",
-  "home.heroTitle": "Find any pokemon in PBO",
+  "home.heroTitle": "Find any pokemon in Pokemon Blaze Online",
   "home.heroSubtitle":
     "Explore the regions, see which pokemon spawn on every route, and find out where to catch the one you're missing.",
   "home.regions": "Regions",
   "home.openPokedex": "Open Pokédex",
   "home.locations": "locations",
-  "home.dataFrom": "Data extracted from the official PBO forum",
+  "home.dataFrom": "Data extracted from the official Pokemon Blaze Online forum",
   "region.locations": "Locations",
   "region.filterPlaceholder": "Filter locations...",
   "region.noMap": "Interactive map coming soon — use the location list.",
@@ -152,7 +153,7 @@ const en: Record<keyof typeof es, string> = {
   "location.spawnsTitle": "Spawns in",
   "location.searchPlaceholder": "Search pokemon...",
   "location.noResults": "No spawns match the filters.",
-  "location.source": "Source: official PBO forum",
+  "location.source": "Source: official Pokemon Blaze Online forum",
   "spawn.pokemon": "Pokemon",
   "spawn.rarity": "Rarity",
   "spawn.time": "Time",
@@ -201,7 +202,7 @@ const en: Record<keyof typeof es, string> = {
   "pokemon.evolutionLine": "Evolution line",
   "pokemon.whereToCatch": "Where to catch",
   "pokemon.notCatchable":
-    "Not found in the wild in PBO, but it may be obtainable through other means (chests, events, evolution...).",
+    "Not found in the wild in Pokemon Blaze Online, but it may be obtainable through other means (chests, events, evolution...).",
   "pokemon.tryEvolving": "Get it by evolving",
   "pokemon.location": "Location",
   "pokemon.region": "Region",
@@ -226,7 +227,7 @@ const en: Record<keyof typeof es, string> = {
   "moves.pp": "PP",
   "moves.none": "No move data for this pokemon.",
   "moves.disclaimer":
-    "Gen 9 (Scarlet/Violet) data via PokeAPI. PBO may differ: some moves could be missing or unavailable in the game. When in doubt, check the in-game pokedex.",
+    "Reference list based on the official generation 9 games. Pokemon Blaze Online may differ: some moves could be missing or unavailable. When in doubt, check the in-game pokedex.",
   "class.physical": "Physical",
   "class.special": "Special",
   "class.status": "Status",
@@ -241,23 +242,24 @@ const en: Record<keyof typeof es, string> = {
   "search.locations": "Locations",
   "search.noResults": "No results",
   "search.hint": "Press Ctrl+K to search from any page",
-  "footer.disclaimer":
-    "PBO Atlas is a fan tool, not affiliated with Pokemon Blaze Online or Nintendo. Data from the official PBO forum and PokeAPI.",
+  "footer.pre": "PBO Atlas is a fan tool, not affiliated with",
+  "footer.post": "or Nintendo. Data from the game's official forum.",
   "nav.feedback": "Feedback",
   "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
+  "banner.ingame": "In-game",
   "banner.link": "More info",
   "feedback.title": "Feedback & suggestions",
   "feedback.subtitle":
     "A spawn that looks wrong, a missing pokemon, or an idea to improve the site? Reach me through either of these:",
   "feedback.discordTitle": "Discord",
   "feedback.discordHint": "Send me a direct message",
-  "feedback.ingameTitle": "In-game (PBO)",
+  "feedback.ingameTitle": "In-game (Pokemon Blaze Online)",
   "feedback.ingameHint": "Message me in the game",
   "feedback.copy": "Copy",
   "feedback.copied": "Copied!",
   "feedback.reportTitle": "What to include in a report?",
   "feedback.reportBody":
-    "Tell me the page or the pokemon/route where you saw it and what looks wrong. Spawn data comes from the official PBO forum, so recent in-game changes may take a while to show up here.",
+    "Tell me the page or the pokemon/route where you saw it and what looks wrong. Spawn data comes from the official Pokemon Blaze Online forum, so recent in-game changes may take a while to show up here.",
 };
 
 export type DictKey = keyof typeof es;

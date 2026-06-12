@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     .map((e) => e.locationName)
     .slice(0, 6);
   return {
-    title: `${pokemon.name} — PBO`,
+    title: pokemon.name,
     description: places.length
       ? `Where to catch ${pokemon.name} in Pokemon Blaze Online: ${places.join(", ")}`
       : `${pokemon.name} in Pokemon Blaze Online`,

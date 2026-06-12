@@ -20,7 +20,7 @@ export default function FeedbackBanner() {
         </span>
         <span className="inline-flex items-center gap-1.5">
           <Gamepad2 className="h-3.5 w-3.5 text-accent-soft" aria-hidden />
-          PBO <code className="rounded bg-surface-2 px-1.5 py-0.5 text-ink">{CONTACT.ingame}</code>
+          {t("banner.ingame")} <code className="rounded bg-surface-2 px-1.5 py-0.5 text-ink">{CONTACT.ingame}</code>
         </span>
         <Link href="/feedback" className="font-medium text-accent-soft hover:underline">
           {t("banner.link")}
