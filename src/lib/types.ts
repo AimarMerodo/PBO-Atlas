@@ -52,8 +52,10 @@ export interface AbilityInfo {
   es: string;
   textEn: string;
   textEs: string;
-  /** Detailed mechanical description (English only). */
+  /** Detailed mechanical description (English). */
   detail?: string;
+  /** Spanish translation of the detailed description. */
+  detailEs?: string | null;
 }
 
 export interface PokedexEntry {

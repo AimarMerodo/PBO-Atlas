@@ -31,10 +31,9 @@ export default function AbilityList({ abilities }: { abilities: (AbilityRef & Ab
               </span>
             )}
           </div>
-          <p className="mt-1.5 text-sm text-ink-dim">{lang === "es" ? a.textEs : a.textEn}</p>
-          {a.detail && a.detail !== (lang === "es" ? a.textEs : a.textEn) && (
-            <p className="mt-2 border-t border-line/60 pt-2 text-xs leading-relaxed text-ink-dim/80">{a.detail}</p>
-          )}
+          <p className="mt-1.5 text-sm leading-relaxed text-ink-dim">
+            {lang === "es" ? a.detailEs || a.detail || a.textEs : a.detail || a.textEn}
+          </p>
         </div>
       ))}
     </div>
