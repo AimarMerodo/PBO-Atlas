@@ -38,7 +38,7 @@ export default function PokemonArtwork({
   }, [shiny]);
 
   return (
-    <div className="relative flex min-h-64 shrink-0 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-64">
+    <div className="relative flex min-h-72 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-72">
       {artworkShiny && (
         <button
           onClick={() => setShiny(!shiny)}
@@ -60,7 +60,7 @@ export default function PokemonArtwork({
           src={aniUrl}
           alt={shiny ? `${name} shiny` : name}
           onError={() => setAniFailed(true)}
-          className="max-h-48 w-auto"
+          className="max-h-40 w-auto scale-[1.75] [image-rendering:pixelated]"
         />
       ) : src ? (
         <Image src={src} alt={shiny ? `${name} shiny` : name} width={200} height={200} priority unoptimized />
