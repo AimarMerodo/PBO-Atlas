@@ -1,0 +1,25 @@
+<header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
+    <a routerLink="/" class="flex items-center gap-2 font-bold tracking-tight">
+      <span
+        aria-hidden="true"
+        class="inline-block h-5 w-5 rounded-full border-2 border-ink"
+        style="background: linear-gradient(to bottom, var(--accent) 45%, #fff 45%, #fff 55%, #f4f4f5 55%)"
+      ></span>
+      <span>PBO <span class="text-accent-soft">Atlas</span></span>
+    </a>
+    <nav class="flex items-center gap-1 text-sm text-ink-dim">
+      <a routerLink="/" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
+        {{ i18n.t("nav.regions") }}
+      </a>
+      <a routerLink="/pokedex" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
+        {{ i18n.t("nav.pokedex") }}
+      </a>
+      <app-nav-more />
+    </nav>
+    <div class="ml-auto flex items-center gap-3">
+      <app-search-dialog />
+      <app-language-toggle />
+    </div>
+  </div>
+</header>

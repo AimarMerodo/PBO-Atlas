@@ -1,0 +1,43 @@
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+  (click)="closed.emit()"
+>
+  <div
+    class="max-h-[85vh] w-full max-w-md overflow-y-auto rounded-2xl border border-line bg-surface p-6 shadow-2xl"
+    (click)="$event.stopPropagation()"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="title()"
+  >
+    <div class="flex items-start justify-between">
+      <div>
+        <h2 class="text-xl font-bold leading-tight">{{ title() }}</h2>
+        @if (subtitle()) {
+          <p class="text-sm text-ink-dim">{{ subtitle() }}</p>
+        }
+        @if (badge()) {
+          <span
+            class="mt-1 inline-block rounded-full border border-line bg-surface-2 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-ink-dim"
+          >
+            {{ badge() }}
+          </span>
+        }
+      </div>
+      <button
+        (click)="closed.emit()"
+        aria-label="Close"
+        class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"
+      >
+        <svg lucideX class="h-4 w-4"></svg>
+      </button>
+    </div>
+
+    <div class="mt-4 flex justify-center rounded-xl border border-line bg-zinc-300/90 p-6">
+      <div class="[image-rendering:pixelated]">
+        <app-item-icon [icon]="icon()" [size]="160" />
+      </div>
+    </div>
+
+    <ng-content />
+  </div>
+</div>

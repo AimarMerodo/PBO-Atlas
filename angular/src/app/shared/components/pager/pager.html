@@ -1,0 +1,44 @@
+@if (pageCount() > 1) {
+  <div class="flex flex-wrap items-center justify-center gap-1.5">
+    <button
+      (click)="go(current() - 1)"
+      [disabled]="current() === 1"
+      [attr.aria-label]="i18n.t('pagination.prev')"
+      class="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+    >
+      <svg lucideChevronLeft class="h-4 w-4"></svg>
+    </button>
+
+    @if (numbered()) {
+      @for (p of pages(); track $index) {
+        @if (p === "...") {
+          <span class="px-1.5 text-sm text-ink-dim">…</span>
+        } @else {
+          <button
+            (click)="go(p)"
+            [attr.aria-current]="p === current() ? 'page' : null"
+            [class]="
+              'min-w-9 rounded-lg border px-2.5 py-1.5 text-sm tabular-nums transition-colors ' +
+              (p === current()
+                ? 'border-accent bg-accent font-semibold text-white'
+                : 'border-line bg-surface text-ink-dim hover:text-ink')
+            "
+          >
+            {{ p }}
+          </button>
+        }
+      }
+    } @else {
+      <span class="text-sm text-ink-dim tabular-nums">{{ current() }} {{ i18n.t("pagination.of") }} {{ pageCount() }}</span>
+    }
+
+    <button
+      (click)="go(current() + 1)"
+      [disabled]="current() === pageCount()"
+      [attr.aria-label]="i18n.t('pagination.next')"
+      class="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+    >
+      <svg lucideChevronRight class="h-4 w-4"></svg>
+    </button>
+  </div>
+}
