@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getAllPokemonSorted, getEncounters } from "@/lib/data";
+import { getAllPokemonSorted } from "@/lib/data";
 import PokedexExplorer from "@/components/pokedex/PokedexExplorer";
 import T from "@/components/layout/T";
 
@@ -16,7 +16,6 @@ export default function PokedexPage() {
     types: p.types,
     sprite: p.sprite,
     artwork: p.artwork,
-    caught: getEncounters(p.slug).length > 0,
   }));
 
   return (

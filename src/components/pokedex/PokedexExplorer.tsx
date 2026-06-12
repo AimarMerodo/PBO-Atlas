@@ -19,25 +19,22 @@ export interface PokedexCard {
   types: string[];
   sprite: string | null;
   artwork: string | null;
-  caught: boolean;
 }
 
 export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] }) {
   const t = useT();
   const [query, setQuery] = useState("");
   const [type, setType] = useState<string | null>(null);
-  const [onlyCatchable, setOnlyCatchable] = useState(false);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     setPage(1);
-  }, [query, type, onlyCatchable]);
+  }, [query, type]);
 
   const q = query.trim().toLowerCase();
   const filtered = pokemon.filter((p) => {
     if (q && !p.name.toLowerCase().includes(q) && String(p.id) !== q) return false;
     if (type && !p.types.includes(type)) return false;
-    if (onlyCatchable && !p.caught) return false;
     return true;
   });
 
@@ -96,15 +93,6 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
             </option>
           ))}
         </select>
-        <label className="flex cursor-pointer items-center gap-2 text-sm text-ink-dim">
-          <input
-            type="checkbox"
-            checked={onlyCatchable}
-            onChange={(e) => setOnlyCatchable(e.target.checked)}
-            className="accent-[var(--accent)]"
-          />
-          {t("pokedex.onlyCatchable")}
-        </label>
         <span className="ml-auto text-xs text-ink-dim">
           {filtered.length} {t("pokedex.results")}
         </span>
