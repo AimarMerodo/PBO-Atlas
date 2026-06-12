@@ -5,6 +5,8 @@ import fs from "node:fs";
 import path from "node:path";
 import regions from "@/data/regions.json";
 import type {
+  AbilityInfo,
+  AbilityRef,
   Encounter,
   Learnset,
   MoveInfo,
@@ -116,6 +118,20 @@ export function getLearnset(slug: string): { learnset: Learnset; moves: Record<s
   learnset.egg.forEach(add);
   learnset.tutor.forEach(add);
   return { learnset, moves };
+}
+
+let abilitiesCache: Record<string, AbilityInfo> | null = null;
+
+/** Ability details (localized name + description) for a pokemon's abilities. */
+export function getAbilityDetails(refs: AbilityRef[]): (AbilityRef & AbilityInfo)[] {
+  if (!abilitiesCache) {
+    const file = path.join(DATA_DIR, "abilities.json");
+    if (!fs.existsSync(file)) return [];
+    abilitiesCache = JSON.parse(fs.readFileSync(file, "utf8")) as Record<string, AbilityInfo>;
+  }
+  return refs
+    .filter((r) => abilitiesCache![r.slug])
+    .map((r) => ({ ...r, ...abilitiesCache![r.slug] }));
 }
 
 export function getRegionMap(regionId: string): RegionMapData | null {

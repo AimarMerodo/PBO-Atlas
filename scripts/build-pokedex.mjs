@@ -78,7 +78,7 @@ async function buildEntry(slug) {
       name: titleCase(slug),
       types: pokemon.types.map((t) => t.type.name),
       stats,
-      abilities: pokemon.abilities.map((a) => a.ability.name),
+      abilities: pokemon.abilities.map((a) => ({ slug: a.ability.name, hidden: a.is_hidden })),
       heightM: pokemon.height / 10,
       weightKg: pokemon.weight / 10,
       generation: genMatch ? ROMAN[genMatch[1]] ?? null : null,
@@ -175,6 +175,35 @@ for (const entry of Object.values(pokedex)) {
 await mkdir(path.dirname(OUT_FILE), { recursive: true });
 await writeFile(OUT_FILE, JSON.stringify(pokedex, null, 1), "utf8");
 console.log(`Wrote ${Object.keys(pokedex).length} entries -> ${path.relative(ROOT, OUT_FILE)}`);
+
+// 4. Ability dictionary: localized names + descriptions for every ability
+// referenced by any entry -> src/data/abilities.json
+const abilitySlugs = new Set();
+for (const entry of Object.values(pokedex)) for (const a of entry.abilities) abilitySlugs.add(a.slug);
+
+const abilities = {};
+let aDone = 0;
+for (const slug of abilitySlugs) {
+  try {
+    const a = await fetchJson(`${API}/ability/${slug}`);
+    const name = (lang) => a.names.find((n) => n.language.name === lang)?.name;
+    // Latest flavor text per language (entries are roughly version-ordered).
+    const flavor = (lang) => a.flavor_text_entries.filter((f) => f.language.name === lang).at(-1)?.flavor_text;
+    const effect = a.effect_entries.find((e) => e.language.name === "en")?.short_effect;
+    abilities[slug] = {
+      en: name("en") ?? titleCase(slug),
+      es: name("es") ?? name("en") ?? titleCase(slug),
+      textEn: (flavor("en") ?? effect ?? "").replace(/\s+/g, " "),
+      textEs: (flavor("es") ?? flavor("en") ?? effect ?? "").replace(/\s+/g, " "),
+    };
+  } catch (err) {
+    console.warn(`ability failed: ${slug}: ${err.message}`);
+  }
+  if (++aDone % 50 === 0) process.stdout.write(`\r${aDone}/${abilitySlugs.size} abilities   `);
+}
+const ABILITIES_FILE = path.join(ROOT, "src", "data", "abilities.json");
+await writeFile(ABILITIES_FILE, JSON.stringify(abilities), "utf8");
+console.log(`\nWrote ${Object.keys(abilities).length} abilities -> ${path.relative(ROOT, ABILITIES_FILE)}`);
 
 if (failures.length) {
   console.log(`\n${failures.length} FAILURES — add forum-name -> PokeAPI-slug mappings to scripts/lib/slug-overrides.mjs:`);

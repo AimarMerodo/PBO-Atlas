@@ -2,13 +2,14 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllPokemonSorted, getEncounters, getLearnset, getPokedex, getPokemon } from "@/lib/data";
+import { getAbilityDetails, getAllPokemonSorted, getEncounters, getLearnset, getPokedex, getPokemon } from "@/lib/data";
 import { defenseProfile } from "@/lib/type-chart";
 import TypeBadge from "@/components/pokedex/TypeBadge";
 import StatBars from "@/components/pokedex/StatBars";
 import EvolutionLine from "@/components/pokedex/EvolutionLine";
 import CatchLocations from "@/components/pokedex/CatchLocations";
 import PokemonArtwork from "@/components/pokedex/PokemonArtwork";
+import AbilityList from "@/components/pokedex/AbilityList";
 import TypeEffectiveness from "@/components/pokedex/TypeEffectiveness";
 import MovesSection from "@/components/pokedex/MovesSection";
 import T from "@/components/layout/T";
@@ -34,13 +35,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-function titleCase(slug: string) {
-  return slug
-    .split("-")
-    .map((w) => w[0].toUpperCase() + w.slice(1))
-    .join(" ");
-}
-
 export default async function PokemonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const pokemon = getPokemon(slug);
@@ -57,6 +51,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       : [];
 
   const learnsetData = getLearnset(slug);
+  const abilities = getAbilityDetails(pokemon.abilities);
 
   return (
     <div className="space-y-8">
@@ -87,10 +82,6 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
                 <dd className="font-medium">{pokemon.generation}</dd>
               </div>
             )}
-            <div>
-              <dt className="text-ink-dim"><T k="pokemon.abilities" /></dt>
-              <dd className="font-medium">{pokemon.abilities.map(titleCase).join(", ")}</dd>
-            </div>
           </dl>
           <div>
             <h2 className="mb-2 text-sm font-bold uppercase text-ink-dim"><T k="pokemon.stats" /></h2>
@@ -98,6 +89,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </div>
+
+      {abilities.length > 0 && (
+        <section>
+          <h2 className="mb-3 text-lg font-bold"><T k="pokemon.abilities" /></h2>
+          <AbilityList abilities={abilities} />
+        </section>
+      )}
 
       <section>
         <h2 className="mb-3 text-lg font-bold"><T k="pokemon.defenses" /></h2>

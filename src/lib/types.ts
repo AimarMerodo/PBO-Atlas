@@ -42,6 +42,18 @@ export interface EvolutionStage {
   trigger?: string;
 }
 
+export interface AbilityRef {
+  slug: string;
+  hidden: boolean;
+}
+
+export interface AbilityInfo {
+  en: string;
+  es: string;
+  textEn: string;
+  textEs: string;
+}
+
 export interface PokedexEntry {
   id: number;
   speciesId: number;
@@ -49,7 +61,7 @@ export interface PokedexEntry {
   name: string;
   types: string[];
   stats: Record<StatName, number>;
-  abilities: string[];
+  abilities: AbilityRef[];
   heightM: number;
   weightKg: number;
   generation: number | null;
