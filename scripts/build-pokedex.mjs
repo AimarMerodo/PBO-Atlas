@@ -189,12 +189,15 @@ for (const slug of abilitySlugs) {
     const name = (lang) => a.names.find((n) => n.language.name === lang)?.name;
     // Latest flavor text per language (entries are roughly version-ordered).
     const flavor = (lang) => a.flavor_text_entries.filter((f) => f.language.name === lang).at(-1)?.flavor_text;
-    const effect = a.effect_entries.find((e) => e.language.name === "en")?.short_effect;
+    const effectEntry = a.effect_entries.find((e) => e.language.name === "en");
     abilities[slug] = {
       en: name("en") ?? titleCase(slug),
       es: name("es") ?? name("en") ?? titleCase(slug),
-      textEn: (flavor("en") ?? effect ?? "").replace(/\s+/g, " "),
-      textEs: (flavor("es") ?? flavor("en") ?? effect ?? "").replace(/\s+/g, " "),
+      textEn: (flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
+      textEs: (flavor("es") ?? flavor("en") ?? effectEntry?.short_effect ?? "").replace(/\s+/g, " "),
+      // Detailed mechanical description (matches the in-game ability text);
+      // only available in English.
+      detail: (effectEntry?.effect ?? "").replace(/\s+/g, " ").trim(),
     };
   } catch (err) {
     console.warn(`ability failed: ${slug}: ${err.message}`);
