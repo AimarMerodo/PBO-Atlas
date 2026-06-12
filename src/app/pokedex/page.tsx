@@ -19,8 +19,8 @@ export default function PokedexPage() {
   }));
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-extrabold tracking-tight">
+    <div className="space-y-8">
+      <h1 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
         <T k="pokedex.title" />
       </h1>
       <PokedexExplorer pokemon={pokemon} />

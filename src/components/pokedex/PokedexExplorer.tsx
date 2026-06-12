@@ -117,11 +117,11 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
             className="w-full rounded-2xl border border-line bg-surface py-3.5 pl-12 pr-4 text-lg shadow-lg outline-none transition-colors placeholder:text-ink-dim focus:border-accent/70 focus:ring-2 focus:ring-accent/20"
           />
         </div>
-        <div className="mx-auto flex w-full max-w-2xl items-center gap-3">
+        <div className="flex items-center justify-center gap-3">
           <select
             value={type ?? ""}
             onChange={(e) => setType(e.target.value || null)}
-            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm capitalize outline-none"
+            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm capitalize text-ink outline-none transition-colors hover:border-accent/40"
           >
             <option value="">{t("pokedex.allTypes")}</option>
             {Object.keys(TYPE_COLORS).map((tp) => (
@@ -130,7 +130,7 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
               </option>
             ))}
           </select>
-          <span className="ml-auto text-xs text-ink-dim">
+          <span className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
             {filtered.length} {t("pokedex.results")}
           </span>
         </div>
