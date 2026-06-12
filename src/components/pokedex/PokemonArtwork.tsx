@@ -1,8 +1,9 @@
 "use client";
 
-// Pokemon artwork with a normal/shiny toggle.
+// Pokemon artwork with a normal/shiny toggle and the animated battle sprite
+// (same Showdown-style animation the game uses).
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
@@ -22,11 +23,22 @@ export default function PokemonArtwork({
 }) {
   const t = useT();
   const [shiny, setShiny] = useState(false);
+  const [aniFailed, setAniFailed] = useState(false);
   const src = shiny && artworkShiny ? artworkShiny : artwork;
   const gameSprite = shiny && spritePboShiny ? spritePboShiny : spritePbo;
 
+  // Showdown id derived from the in-game sprite filename (same naming).
+  const showdownId = spritePbo?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null;
+  const aniUrl = showdownId
+    ? `https://play.pokemonshowdown.com/sprites/ani${shiny ? "-shiny" : ""}/${showdownId}.gif`
+    : null;
+
+  useEffect(() => {
+    setAniFailed(false);
+  }, [shiny]);
+
   return (
-    <div className="relative flex shrink-0 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-64">
+    <div className="relative flex min-h-64 shrink-0 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-64">
       {artworkShiny && (
         <button
           onClick={() => setShiny(!shiny)}
@@ -42,17 +54,20 @@ export default function PokemonArtwork({
           Shiny
         </button>
       )}
-      {src && <Image src={src} alt={shiny ? `${name} shiny` : name} width={200} height={200} priority unoptimized />}
-      {gameSprite && (
-        <Image
-          src={gameSprite}
-          alt={`${name} in-game`}
-          width={64}
-          height={64}
-          unoptimized
-          className="absolute bottom-2 left-2 [image-rendering:pixelated]"
-          title="In-game sprite"
+      {aniUrl && !aniFailed ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={aniUrl}
+          alt={shiny ? `${name} shiny` : name}
+          onError={() => setAniFailed(true)}
+          className="max-h-48 w-auto"
         />
+      ) : src ? (
+        <Image src={src} alt={shiny ? `${name} shiny` : name} width={200} height={200} priority unoptimized />
+      ) : (
+        gameSprite && (
+          <Image src={gameSprite} alt={name} width={120} height={120} unoptimized className="[image-rendering:pixelated]" />
+        )
       )}
     </div>
   );
