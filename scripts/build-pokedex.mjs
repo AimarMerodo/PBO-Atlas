@@ -83,7 +83,9 @@ async function buildEntry(slug) {
       weightKg: pokemon.weight / 10,
       generation: genMatch ? ROMAN[genMatch[1]] ?? null : null,
       sprite: pokemon.sprites.front_default,
+      spriteShiny: pokemon.sprites.front_shiny ?? null,
       artwork: pokemon.sprites.other?.["official-artwork"]?.front_default ?? pokemon.sprites.front_default,
+      artworkShiny: pokemon.sprites.other?.["official-artwork"]?.front_shiny ?? pokemon.sprites.front_shiny ?? null,
       evolutionChainUrl: species.evolution_chain?.url ?? null,
     },
   };

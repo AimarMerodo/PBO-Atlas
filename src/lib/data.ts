@@ -4,7 +4,16 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import regions from "@/data/regions.json";
-import type { Encounter, Pokedex, PokedexEntry, RegionMapData, RegionSpawns, SpawnLocation } from "@/lib/types";
+import type {
+  Encounter,
+  Learnset,
+  MoveInfo,
+  Pokedex,
+  PokedexEntry,
+  RegionMapData,
+  RegionSpawns,
+  SpawnLocation,
+} from "@/lib/types";
 
 const DATA_DIR = path.join(process.cwd(), "src", "data");
 
@@ -80,6 +89,33 @@ export function getEncounters(slug: string): Encounter[] {
     }
   }
   return encounterIndex.get(slug) ?? [];
+}
+
+interface MovesFile {
+  moves: Record<string, MoveInfo>;
+  learnsets: Record<string, Learnset>;
+}
+
+let movesCache: MovesFile | null = null;
+
+/** Learnset for one pokemon plus the details of just the moves it uses. */
+export function getLearnset(slug: string): { learnset: Learnset; moves: Record<string, MoveInfo> } | null {
+  if (!movesCache) {
+    const file = path.join(DATA_DIR, "moves.json");
+    if (!fs.existsSync(file)) return null;
+    movesCache = JSON.parse(fs.readFileSync(file, "utf8")) as MovesFile;
+  }
+  const learnset = movesCache.learnsets[slug];
+  if (!learnset) return null;
+  const moves: Record<string, MoveInfo> = {};
+  const add = (s: string) => {
+    if (movesCache!.moves[s]) moves[s] = movesCache!.moves[s];
+  };
+  learnset.level.forEach(([s]) => add(s));
+  learnset.machine.forEach(add);
+  learnset.egg.forEach(add);
+  learnset.tutor.forEach(add);
+  return { learnset, moves };
 }
 
 export function getRegionMap(regionId: string): RegionMapData | null {

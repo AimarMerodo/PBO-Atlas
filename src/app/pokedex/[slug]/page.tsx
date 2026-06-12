@@ -1,13 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllPokemonSorted, getEncounters, getPokedex, getPokemon } from "@/lib/data";
+import { getAllPokemonSorted, getEncounters, getLearnset, getPokedex, getPokemon } from "@/lib/data";
+import { defenseProfile } from "@/lib/type-chart";
 import TypeBadge from "@/components/pokedex/TypeBadge";
 import StatBars from "@/components/pokedex/StatBars";
 import EvolutionLine from "@/components/pokedex/EvolutionLine";
 import CatchLocations from "@/components/pokedex/CatchLocations";
+import PokemonArtwork from "@/components/pokedex/PokemonArtwork";
+import TypeEffectiveness from "@/components/pokedex/TypeEffectiveness";
+import MovesSection from "@/components/pokedex/MovesSection";
 import T from "@/components/layout/T";
 
 export const dynamicParams = false;
@@ -53,12 +56,12 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
       ? pokemon.evolutionLine.filter((m) => m.slug !== slug && getEncounters(m.slug).length > 0)
       : [];
 
+  const learnsetData = getLearnset(slug);
+
   return (
     <div className="space-y-8">
       <div className="flex flex-col gap-6 sm:flex-row">
-        <div className="flex shrink-0 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-64">
-          {pokemon.artwork && <Image src={pokemon.artwork} alt={pokemon.name} width={200} height={200} priority unoptimized />}
-        </div>
+        <PokemonArtwork name={pokemon.name} artwork={pokemon.artwork} artworkShiny={pokemon.artworkShiny ?? null} />
         <div className="flex-1 space-y-4">
           <div>
             <p className="text-sm text-ink-dim">#{pokemon.id}</p>
@@ -96,6 +99,11 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
 
+      <section>
+        <h2 className="mb-3 text-lg font-bold"><T k="pokemon.defenses" /></h2>
+        <TypeEffectiveness profile={defenseProfile(pokemon.types)} />
+      </section>
+
       {pokemon.evolutionLine && pokemon.evolutionLine.length > 1 && (
         <section>
           <h2 className="mb-3 text-lg font-bold"><T k="pokemon.evolutionLine" /></h2>
@@ -107,6 +115,13 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <h2 className="mb-3 text-lg font-bold"><T k="pokemon.whereToCatch" /></h2>
         <CatchLocations encounters={encounters} catchableAncestors={catchableAncestors} />
       </section>
+
+      {learnsetData && (
+        <section>
+          <h2 className="mb-3 text-lg font-bold"><T k="pokemon.moves" /></h2>
+          <MovesSection learnset={learnsetData.learnset} moves={learnsetData.moves} />
+        </section>
+      )}
 
       <p className="text-xs text-ink-dim">
         <Link href="/pokedex" className="inline-flex items-center gap-1 hover:text-ink underline">

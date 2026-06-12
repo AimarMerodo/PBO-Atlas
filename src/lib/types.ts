@@ -54,7 +54,9 @@ export interface PokedexEntry {
   weightKg: number;
   generation: number | null;
   sprite: string | null;
+  spriteShiny?: string | null;
   artwork: string | null;
+  artworkShiny?: string | null;
   evolutionLine?: EvolutionStage[];
 }
 
@@ -85,6 +87,24 @@ export interface RegionMapData {
   imageWidth: number;
   imageHeight: number;
   markers: MapMarker[];
+}
+
+export interface MoveInfo {
+  en: string;
+  es: string;
+  type: string;
+  class: "physical" | "special" | "status";
+  power: number | null;
+  accuracy: number | null;
+  pp: number | null;
+}
+
+export interface Learnset {
+  vg: string;
+  level: [string, number][];
+  machine: string[];
+  egg: string[];
+  tutor: string[];
 }
 
 export interface SearchIndex {
