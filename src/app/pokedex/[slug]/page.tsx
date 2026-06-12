@@ -53,6 +53,18 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
   const learnsetData = getLearnset(slug);
   const abilities = getAbilityDetails(pokemon.abilities);
 
+  const evoStages = (pokemon.evolutionLine ?? []).map((m) => {
+    const entry = pokedex[m.slug];
+    return {
+      slug: m.slug,
+      name: m.name,
+      trigger: m.trigger,
+      id: entry?.id ?? null,
+      artwork: entry?.artwork ?? null,
+      types: entry?.types ?? [],
+    };
+  });
+
   return (
     <div className="space-y-8">
       <div className="flex flex-col gap-6 sm:flex-row">
@@ -102,10 +114,10 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <TypeEffectiveness profile={defenseProfile(pokemon.types)} />
       </section>
 
-      {pokemon.evolutionLine && pokemon.evolutionLine.length > 1 && (
+      {evoStages.length > 1 && (
         <section>
           <h2 className="mb-3 text-lg font-bold"><T k="pokemon.evolutionLine" /></h2>
-          <EvolutionLine line={pokemon.evolutionLine} current={slug} pokedex={pokedex} />
+          <EvolutionLine stages={evoStages} current={slug} />
         </section>
       )}
 
