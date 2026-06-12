@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { ChevronLeft, ChevronRight, FilterX, Search } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
 import { TYPE_COLORS } from "@/lib/colors";
 import TypeBadge from "./TypeBadge";
@@ -67,6 +67,18 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
   const generations = [...new Set(pokemon.map((p) => p.generation).filter((g): g is number => g !== null))].sort(
     (a, b) => a - b
   );
+
+  const hasActiveFilters = Boolean(query || type || region || rarity || gen || ev || sort !== "number");
+
+  const clearFilters = () => {
+    setQuery("");
+    setType(null);
+    setRegion(null);
+    setRarity(null);
+    setGen(null);
+    setEv(null);
+    setSort("number");
+  };
 
   const q = query.trim().toLowerCase();
   const filtered = pokemon.filter((p) => {
@@ -200,6 +212,15 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
           <span className="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
             {filtered.length} {t("pokedex.results")}
           </span>
+          {hasActiveFilters && (
+            <button
+              onClick={clearFilters}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-accent/50 bg-accent/10 px-2.5 py-1.5 text-sm text-accent-soft transition-colors hover:bg-accent/20"
+            >
+              <FilterX className="h-4 w-4" aria-hidden />
+              {t("pokedex.clearFilters")}
+            </button>
+          )}
         </div>
       </div>
 
