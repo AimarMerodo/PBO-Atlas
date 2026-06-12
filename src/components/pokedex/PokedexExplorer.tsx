@@ -5,12 +5,27 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Search } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
 import { TYPE_COLORS } from "@/lib/colors";
 import TypeBadge from "./TypeBadge";
 
-const PAGE_SIZE = 60;
+const PAGE_SIZE = 30;
+
+/** Page numbers to render: first, last, and a window around the current. */
+function pageList(current: number, total: number): (number | "...")[] {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const pages = new Set([1, total, current - 1, current, current + 1]);
+  const sorted = [...pages].filter((p) => p >= 1 && p <= total).sort((a, b) => a - b);
+  const out: (number | "...")[] = [];
+  let prev = 0;
+  for (const p of sorted) {
+    if (p - prev > 1) out.push("...");
+    out.push(p);
+    prev = p;
+  }
+  return out;
+}
 
 export interface PokedexCard {
   slug: string;
@@ -49,23 +64,40 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
 
   const pager =
     pageCount > 1 ? (
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex flex-wrap items-center justify-center gap-1.5">
         <button
           onClick={() => goTo(current - 1)}
           disabled={current === 1}
           aria-label={t("pagination.prev")}
-          className="rounded-lg border border-line bg-surface p-1.5 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+          className="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
-        <span className="text-sm text-ink-dim tabular-nums">
-          {current} {t("pagination.of")} {pageCount}
-        </span>
+        {pageList(current, pageCount).map((p, i) =>
+          p === "..." ? (
+            <span key={`gap-${i}`} className="px-1.5 text-sm text-ink-dim">
+              …
+            </span>
+          ) : (
+            <button
+              key={p}
+              onClick={() => goTo(p)}
+              aria-current={p === current ? "page" : undefined}
+              className={`min-w-9 rounded-lg border px-2.5 py-1.5 text-sm tabular-nums transition-colors ${
+                p === current
+                  ? "border-accent bg-accent font-semibold text-white"
+                  : "border-line bg-surface text-ink-dim hover:text-ink"
+              }`}
+            >
+              {p}
+            </button>
+          )
+        )}
         <button
           onClick={() => goTo(current + 1)}
           disabled={current === pageCount}
           aria-label={t("pagination.next")}
-          className="rounded-lg border border-line bg-surface p-1.5 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+          className="rounded-lg border border-line bg-surface p-2 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
         >
           <ChevronRight className="h-4 w-4" />
         </button>
@@ -74,28 +106,34 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-center gap-3">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("pokedex.searchPlaceholder")}
-          className="w-full sm:w-72 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
-        />
-        <select
-          value={type ?? ""}
-          onChange={(e) => setType(e.target.value || null)}
-          className="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm outline-none"
-        >
-          <option value="">{t("pokedex.allTypes")}</option>
-          {Object.keys(TYPE_COLORS).map((tp) => (
-            <option key={tp} value={tp}>
-              {tp}
-            </option>
-          ))}
-        </select>
-        <span className="ml-auto text-xs text-ink-dim">
-          {filtered.length} {t("pokedex.results")}
-        </span>
+      <div className="space-y-3">
+        <div className="relative mx-auto w-full max-w-2xl">
+          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-dim" aria-hidden />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={t("pokedex.searchPlaceholder")}
+            autoFocus
+            className="w-full rounded-2xl border border-line bg-surface py-3.5 pl-12 pr-4 text-lg shadow-lg outline-none transition-colors placeholder:text-ink-dim focus:border-accent/70 focus:ring-2 focus:ring-accent/20"
+          />
+        </div>
+        <div className="mx-auto flex w-full max-w-2xl items-center gap-3">
+          <select
+            value={type ?? ""}
+            onChange={(e) => setType(e.target.value || null)}
+            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-sm capitalize outline-none"
+          >
+            <option value="">{t("pokedex.allTypes")}</option>
+            {Object.keys(TYPE_COLORS).map((tp) => (
+              <option key={tp} value={tp}>
+                {tp}
+              </option>
+            ))}
+          </select>
+          <span className="ml-auto text-xs text-ink-dim">
+            {filtered.length} {t("pokedex.results")}
+          </span>
+        </div>
       </div>
 
       {filtered.length === 0 ? (
