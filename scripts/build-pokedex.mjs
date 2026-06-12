@@ -98,6 +98,12 @@ for (const file of await readdir(SPAWNS_DIR)) {
 }
 console.log(`${slugs.size} unique species in spawn data`);
 
+// 1b. Add every national-dex species so the pokedex is complete even for
+// pokemon without wild spawns (chests, events, trades, not yet in PBO).
+const allSpecies = await fetchJson(`${API}/pokemon-species?limit=2000`);
+for (const sp of allSpecies.results) slugs.add(sp.name);
+console.log(`${slugs.size} total species incl. full national dex`);
+
 // 2. Fetch entries; queue grows as evolution-line members are discovered.
 const pokedex = {};
 const failures = [];
