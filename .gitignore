@@ -17,8 +17,11 @@ next-env.d.ts
 # scraper cache
 /scripts/.cache/
 
-# claude-flow runtime state
+# claude tooling (local only)
 /.claude-flow/
+/.claude/
+/CLAUDE.md
+/.mcp.json
 
 # local env
 .env*
