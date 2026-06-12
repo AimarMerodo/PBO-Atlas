@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getAllPokemonSorted } from "@/lib/data";
+import { getAllPokemonSorted, getEncounters } from "@/lib/data";
 import PokedexExplorer from "@/components/pokedex/PokedexExplorer";
 import T from "@/components/layout/T";
 
@@ -9,14 +9,22 @@ export const metadata: Metadata = {
 };
 
 export default function PokedexPage() {
-  const pokemon = getAllPokemonSorted().map((p) => ({
-    slug: p.slug,
-    name: p.name,
-    id: p.id,
-    types: p.types,
-    sprite: p.sprite,
-    artwork: p.artwork,
-  }));
+  const pokemon = getAllPokemonSorted().map((p) => {
+    const encounters = getEncounters(p.slug);
+    return {
+      slug: p.slug,
+      name: p.name,
+      id: p.id,
+      types: p.types,
+      sprite: p.sprite,
+      artwork: p.artwork,
+      generation: p.generation,
+      bst: Object.values(p.stats).reduce((a, b) => a + b, 0),
+      regions: [...new Set(encounters.map((e) => e.region))],
+      rarities: [...new Set(encounters.map((e) => e.rarity))],
+      evs: [...new Set(encounters.flatMap((e) => e.evs.map((ev) => ev.stat)))],
+    };
+  });
 
   return (
     <div className="space-y-8">

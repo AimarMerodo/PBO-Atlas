@@ -69,6 +69,7 @@ export interface Encounter {
   time: SpawnTime;
   method: SpawnMethod;
   level: { min: number; max: number } | null;
+  evs: EvYield[];
 }
 
 export interface MapMarker {

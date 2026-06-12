@@ -72,6 +72,7 @@ export function getEncounters(slug: string): Encounter[] {
             time: spawn.time,
             method: spawn.method,
             level: spawn.level,
+            evs: spawn.evs,
           });
           encounterIndex.set(spawn.pokemon, list);
         }
