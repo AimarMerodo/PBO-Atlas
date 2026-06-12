@@ -1,0 +1,596 @@
+{
+  "region": "jvaloh",
+  "image": "/maps/jvaloh.png",
+  "imageWidth": 750,
+  "imageHeight": 450,
+  "markers": [
+    {
+      "locationId": "route-sereny",
+      "x": 51.2,
+      "y": 84.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-1",
+      "x": 52,
+      "y": 88.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "rockshore-city",
+      "x": 56,
+      "y": 85.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-2",
+      "x": 60.7,
+      "y": 85.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "boulder-cavern-1f",
+      "x": 65,
+      "y": 82.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "patthar-village",
+      "x": 67.2,
+      "y": 83.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "oozy-forest",
+      "x": 49.6,
+      "y": 83.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "boulder-cavern-2f",
+      "x": 62.8,
+      "y": 71.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-3-cliffs",
+      "x": 60.5,
+      "y": 69.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-3",
+      "x": 57.5,
+      "y": 68.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "bijli-city",
+      "x": 57.3,
+      "y": 63.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-4",
+      "x": 60.4,
+      "y": 63.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-4-shores",
+      "x": 65.7,
+      "y": 61.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "lehar-town",
+      "x": 71.2,
+      "y": 60.7,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-3-cliffside",
+      "x": 63.5,
+      "y": 74.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "lehar-town-shores",
+      "x": 69.7,
+      "y": 57.3,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-5-a-b-c",
+      "x": 69.6,
+      "y": 48.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-5-lakefront",
+      "x": 67.2,
+      "y": 44.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "grayroot-town-northern-pass",
+      "x": 63.7,
+      "y": 47.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "nuzbar-forest",
+      "x": 72.3,
+      "y": 44.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "nuzbar-village",
+      "x": 77.3,
+      "y": 42.2,
+      "kind": "city"
+    },
+    {
+      "locationId": "boulder-cavern-b1f",
+      "x": 66.8,
+      "y": 80,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "boulder-cavern-b2f",
+      "x": 66.4,
+      "y": 79.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "underground-cavern",
+      "x": 66.3,
+      "y": 78.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-6",
+      "x": 60.9,
+      "y": 43.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-6-highway-pass",
+      "x": 58.3,
+      "y": 47.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "scorched-desert",
+      "x": 52,
+      "y": 45.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "sunshire-town",
+      "x": 25.7,
+      "y": 73.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "cresemun-beach",
+      "x": 19.8,
+      "y": 73.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "amberwick-pass",
+      "x": 16.5,
+      "y": 72.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "amberwick-town",
+      "x": 16.5,
+      "y": 69.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "mt-inferno",
+      "x": 22.5,
+      "y": 69.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-inferno-peak",
+      "x": 19.9,
+      "y": 69.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "oozy-forest-northern-pass",
+      "x": 50.9,
+      "y": 80,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "oozy-forest-faunas",
+      "x": 50.9,
+      "y": 75.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "inferno-moonshire-pass",
+      "x": 18.3,
+      "y": 49.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-7-a",
+      "x": 67.2,
+      "y": 36.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-7-b",
+      "x": 65.9,
+      "y": 28.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "drenched-forest",
+      "x": 62.7,
+      "y": 28.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-7-c",
+      "x": 57.9,
+      "y": 28.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-8-a",
+      "x": 52.5,
+      "y": 23.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-8-b",
+      "x": 53.7,
+      "y": 19.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "glacier-cave-a",
+      "x": 56.1,
+      "y": 14.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "glacier-cave-b",
+      "x": 53.5,
+      "y": 14.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "glacier-cave-c",
+      "x": 56.1,
+      "y": 13.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "glacier-cave-d",
+      "x": 53.5,
+      "y": 13.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "barfi-pass",
+      "x": 58.4,
+      "y": 12.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "ochra-cliffs",
+      "x": 71.3,
+      "y": 21.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "ochra-park-a",
+      "x": 71.6,
+      "y": 24.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "ochra-park-b",
+      "x": 73.3,
+      "y": 25.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-9-a",
+      "x": 75.5,
+      "y": 30,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-9-b",
+      "x": 76.5,
+      "y": 28,
+      "kind": "route"
+    },
+    {
+      "locationId": "matti-village",
+      "x": 78.9,
+      "y": 25.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "matti-cliffs",
+      "x": 82.2,
+      "y": 25.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-10",
+      "x": 83.1,
+      "y": 24.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "goldburn-city",
+      "x": 86.4,
+      "y": 24.7,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-11-a",
+      "x": 68.8,
+      "y": 28.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-11-b",
+      "x": 70.4,
+      "y": 29.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-11-c",
+      "x": 71.5,
+      "y": 30.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-12-a",
+      "x": 67.2,
+      "y": 25.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-12-b",
+      "x": 67.2,
+      "y": 22.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "jannat-village",
+      "x": 65.1,
+      "y": 22,
+      "kind": "city"
+    },
+    {
+      "locationId": "goldburn-city-shores",
+      "x": 88,
+      "y": 24.7,
+      "kind": "city"
+    },
+    {
+      "locationId": "old-power-plant",
+      "x": 66.6,
+      "y": 77.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-power-plant-stairs-1f",
+      "x": 66,
+      "y": 78.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-power-plant-stairs-b1f",
+      "x": 64.6,
+      "y": 78.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-power-plant-restricted-area",
+      "x": 64,
+      "y": 77.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-power-plant-generator-room",
+      "x": 64.6,
+      "y": 76.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-power-plant-room-3",
+      "x": 66,
+      "y": 76.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-219-south-west",
+      "x": 30,
+      "y": 92.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-13-b",
+      "x": 66.9,
+      "y": 12.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-13-c",
+      "x": 68.3,
+      "y": 15.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-13-d",
+      "x": 69.6,
+      "y": 14.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-villa-1",
+      "x": 72.7,
+      "y": 14.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "gym-5",
+      "x": 48.1,
+      "y": 45.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-1",
+      "x": 72.8,
+      "y": 16.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-2",
+      "x": 73.9,
+      "y": 17.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-3",
+      "x": 74.9,
+      "y": 15.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-4",
+      "x": 76.1,
+      "y": 13.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-5",
+      "x": 77.5,
+      "y": 14.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-6",
+      "x": 77.5,
+      "y": 17.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "champions-road-7",
+      "x": 78.4,
+      "y": 17.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "gym-7",
+      "x": 63.7,
+      "y": 12.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "cavity-cavern-1-a",
+      "x": 81.9,
+      "y": 26.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-2-a",
+      "x": 81.1,
+      "y": 26.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-2-b",
+      "x": 80.3,
+      "y": 26.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-3-a",
+      "x": 79.7,
+      "y": 26,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-2-c",
+      "x": 79.7,
+      "y": 25.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-2-d",
+      "x": 80.3,
+      "y": 24.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-2-e",
+      "x": 81.1,
+      "y": 24.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cavity-cavern-1-b",
+      "x": 81.9,
+      "y": 24.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-1",
+      "x": 87.6,
+      "y": 25.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-2",
+      "x": 86.7,
+      "y": 26,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-3",
+      "x": 85.8,
+      "y": 25.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-4",
+      "x": 85.4,
+      "y": 24.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-5",
+      "x": 85.8,
+      "y": 23.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-6",
+      "x": 86.7,
+      "y": 23.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "dragon-tower-floor-7",
+      "x": 87.6,
+      "y": 23.8,
+      "kind": "dungeon"
+    }
+  ]
+}

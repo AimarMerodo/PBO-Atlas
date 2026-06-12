@@ -1,0 +1,680 @@
+{
+  "region": "hoenn",
+  "image": "/maps/hoenn.png",
+  "imageWidth": 750,
+  "imageHeight": 450,
+  "markers": [
+    {
+      "locationId": "route-101",
+      "x": 19.2,
+      "y": 68,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-102",
+      "x": 14.1,
+      "y": 63.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "petalburg-city",
+      "x": 8.9,
+      "y": 63.1,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-104",
+      "x": 5.9,
+      "y": 63.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "petalburg-woods",
+      "x": 5.9,
+      "y": 57.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-104-north",
+      "x": 5.9,
+      "y": 52.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-116",
+      "x": 13.2,
+      "y": 40.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-115",
+      "x": 5.6,
+      "y": 32,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-107",
+      "x": 20,
+      "y": 90.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-108",
+      "x": 26.3,
+      "y": 90.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-109",
+      "x": 32.9,
+      "y": 83.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "slateport-city",
+      "x": 32.9,
+      "y": 71.3,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-103",
+      "x": 24.4,
+      "y": 56.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-110",
+      "x": 32.5,
+      "y": 56.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-117",
+      "x": 26.1,
+      "y": 46.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "meteor-falls-1f-1r",
+      "x": 7.7,
+      "y": 24.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "meteor-falls-1f-2r",
+      "x": 7.4,
+      "y": 24.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "meteor-falls-b1f-1r",
+      "x": 4.8,
+      "y": 24.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "meteor-falls-b1f-2r",
+      "x": 4.6,
+      "y": 24.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-114",
+      "x": 9.2,
+      "y": 17.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-113",
+      "x": 24.9,
+      "y": 13.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-111-south",
+      "x": 32.5,
+      "y": 39.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-111-desert",
+      "x": 36.8,
+      "y": 17.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-112-north",
+      "x": 31.2,
+      "y": 28.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-112",
+      "x": 26.4,
+      "y": 30.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "fiery-path",
+      "x": 29.3,
+      "y": 29.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "jagged-pass",
+      "x": 25.2,
+      "y": 25.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-118",
+      "x": 40.4,
+      "y": 46.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-119-south",
+      "x": 42.4,
+      "y": 41.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-119-north",
+      "x": 42.5,
+      "y": 14,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-120",
+      "x": 49.6,
+      "y": 22.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-121",
+      "x": 56.9,
+      "y": 30,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-122",
+      "x": 59.5,
+      "y": 41.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-123",
+      "x": 50.3,
+      "y": 46.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "lilycove-city",
+      "x": 68.6,
+      "y": 29.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-124",
+      "x": 76.4,
+      "y": 30.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "mossdeep-city",
+      "x": 59.2,
+      "y": 37.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-125",
+      "x": 86.3,
+      "y": 30,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-126",
+      "x": 72.8,
+      "y": 48.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-127",
+      "x": 89.6,
+      "y": 49.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-128",
+      "x": 89.6,
+      "y": 62.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-129",
+      "x": 87.5,
+      "y": 68.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-130",
+      "x": 80,
+      "y": 68.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-131",
+      "x": 69.8,
+      "y": 68.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-132",
+      "x": 57.3,
+      "y": 68.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-133",
+      "x": 50.3,
+      "y": 68.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-134",
+      "x": 39.7,
+      "y": 68.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "pacifidlog-town",
+      "x": 63.2,
+      "y": 68.9,
+      "kind": "city"
+    },
+    {
+      "locationId": "sootopolis-city",
+      "x": 76.4,
+      "y": 51.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "ever-grande-city",
+      "x": 96.3,
+      "y": 59.6,
+      "kind": "city"
+    },
+    {
+      "locationId": "hoenn-safari-zone",
+      "x": 66,
+      "y": 29.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-safari-desert-biome",
+      "x": 70.6,
+      "y": 29.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-safari-grass-biome",
+      "x": 68.6,
+      "y": 30.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-safari-water-biome",
+      "x": 68.6,
+      "y": 28.5,
+      "kind": "route"
+    },
+    {
+      "locationId": "rusturf-tunnel",
+      "x": 18.9,
+      "y": 41.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-106",
+      "x": 13.4,
+      "y": 91.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-105",
+      "x": 11.5,
+      "y": 92.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "dewford-town",
+      "x": 11.5,
+      "y": 90,
+      "kind": "city"
+    },
+    {
+      "locationId": "granite-cave-1f",
+      "x": 9.3,
+      "y": 91.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "granite-cave-b1f",
+      "x": 6.5,
+      "y": 90.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "granite-cave-b2f",
+      "x": 9.1,
+      "y": 91.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-107-underwater",
+      "x": 17.4,
+      "y": 90.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "new-mauville",
+      "x": 35.3,
+      "y": 52.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-1f",
+      "x": 59.2,
+      "y": 37.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-2f",
+      "x": 60.5,
+      "y": 37.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-3f",
+      "x": 59.5,
+      "y": 37.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-4f",
+      "x": 59.2,
+      "y": 39.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-exterior",
+      "x": 57.9,
+      "y": 37.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-pyre-summit",
+      "x": 59.3,
+      "y": 36.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-124-underwater",
+      "x": 57.3,
+      "y": 38.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "abandoned-ship-route-124",
+      "x": 57.3,
+      "y": 36.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-126-underwater",
+      "x": 73.1,
+      "y": 46.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-128-underwater",
+      "x": 92.1,
+      "y": 63.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "abandoned-ship-route-128",
+      "x": 91.9,
+      "y": 63.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafloor-cavern-entrance",
+      "x": 91.3,
+      "y": 64.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-1",
+      "x": 90.6,
+      "y": 64.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-2",
+      "x": 89.9,
+      "y": 64.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-3",
+      "x": 89.6,
+      "y": 63.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-4",
+      "x": 89.6,
+      "y": 62.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-5",
+      "x": 89.9,
+      "y": 62.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-6",
+      "x": 90.6,
+      "y": 61.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-7",
+      "x": 91.3,
+      "y": 61.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "seafloor-cavern-room-8",
+      "x": 91.9,
+      "y": 62.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-129-underwater",
+      "x": 87.1,
+      "y": 69.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-130-underwater",
+      "x": 77.9,
+      "y": 70.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "abandoned-ship-route-130",
+      "x": 77.9,
+      "y": 68,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-134-underwater",
+      "x": 38.8,
+      "y": 69.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-134-underwater-tunnel",
+      "x": 37.3,
+      "y": 69.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "abandoned-ship-bf-route-134",
+      "x": 37.3,
+      "y": 67.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "abandoned-ship-1f-route-134",
+      "x": 38.8,
+      "y": 67.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "cave-of-origin-entrance",
+      "x": 72.8,
+      "y": 48,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-1f",
+      "x": 73,
+      "y": 46,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-b1f",
+      "x": 70.4,
+      "y": 45.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-b2f",
+      "x": 70.4,
+      "y": 47.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-b3f",
+      "x": 72.8,
+      "y": 49.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-b4f",
+      "x": 71.7,
+      "y": 51.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cave-of-origin-hidden-passage",
+      "x": 70.6,
+      "y": 50.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "hoenn-victory-road-entrance",
+      "x": 96,
+      "y": 53.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-victory-road-b1f",
+      "x": 95.1,
+      "y": 54.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-victory-road-1f",
+      "x": 93.2,
+      "y": 54.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "hoenn-victory-road-2f",
+      "x": 95.3,
+      "y": 55.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "shoal-cave-entrance-low-tide",
+      "x": 89.9,
+      "y": 33.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "shoal-cave-inner-room-low-tide",
+      "x": 90.9,
+      "y": 35.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "shoal-cave-stairs-room-low-tide",
+      "x": 89.1,
+      "y": 37.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "shoal-cave-lower-room-low-tide",
+      "x": 89.6,
+      "y": 34.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "shoal-cave-ice-room-low-tide",
+      "x": 89.3,
+      "y": 35.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "shoal-cave-inner-room-high-tide",
+      "x": 89.3,
+      "y": 35.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "sky-pillar-1f",
+      "x": 69.2,
+      "y": 70,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "sky-pillar-2f",
+      "x": 67.9,
+      "y": 70,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "sky-pillar-3f",
+      "x": 67.2,
+      "y": 68.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "sky-pillar-4f",
+      "x": 67.9,
+      "y": 67.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "sky-pillar-5f",
+      "x": 69.2,
+      "y": 67.8,
+      "kind": "dungeon"
+    }
+  ]
+}

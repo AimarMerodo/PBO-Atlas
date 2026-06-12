@@ -1,0 +1,386 @@
+{
+  "region": "sinnoh",
+  "image": "/maps/sinnoh.png",
+  "imageWidth": 750,
+  "imageHeight": 450,
+  "markers": [
+    {
+      "locationId": "twinleaf-town",
+      "x": 24.8,
+      "y": 93.1,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-201",
+      "x": 24.7,
+      "y": 87.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "lake-verity",
+      "x": 20.9,
+      "y": 83.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-219",
+      "x": 30,
+      "y": 92.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-202",
+      "x": 29.9,
+      "y": 83.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-203",
+      "x": 32.3,
+      "y": 74.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-204",
+      "x": 29.7,
+      "y": 70.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "oreburgh-gate",
+      "x": 34.3,
+      "y": 74.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "ravaged-path",
+      "x": 29.7,
+      "y": 68.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-205",
+      "x": 32.4,
+      "y": 57.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "valley-windworks",
+      "x": 36,
+      "y": 63.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "eterna-forest",
+      "x": 32.9,
+      "y": 47.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-205-eterna",
+      "x": 35.1,
+      "y": 51.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-206",
+      "x": 39.5,
+      "y": 62,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-207",
+      "x": 42,
+      "y": 71.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-1f1",
+      "x": 45.8,
+      "y": 71.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-208",
+      "x": 47.2,
+      "y": 71.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-209",
+      "x": 59.3,
+      "y": 70.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-210-east",
+      "x": 59.5,
+      "y": 55.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-215",
+      "x": 63.7,
+      "y": 55.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-214",
+      "x": 71.3,
+      "y": 64.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "valor-lakefront",
+      "x": 71.6,
+      "y": 74.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "lake-valor",
+      "x": 69.3,
+      "y": 76,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-213",
+      "x": 70,
+      "y": 83.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-213-east",
+      "x": 66.8,
+      "y": 87.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "pastoria-city",
+      "x": 62.9,
+      "y": 86,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-212-south",
+      "x": 56.1,
+      "y": 87.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-212-north",
+      "x": 52.1,
+      "y": 80.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-210-north",
+      "x": 59.3,
+      "y": 50.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-210",
+      "x": 56.4,
+      "y": 46.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-211-east",
+      "x": 48.8,
+      "y": 46.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-upper-1f1",
+      "x": 46.9,
+      "y": 46.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-211-west",
+      "x": 44.9,
+      "y": 46.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-218",
+      "x": 23.5,
+      "y": 75.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "canalave-city",
+      "x": 19.7,
+      "y": 72.4,
+      "kind": "city"
+    },
+    {
+      "locationId": "mt-coronet-upper-b1f",
+      "x": 46.9,
+      "y": 38.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-upper-1f-2",
+      "x": 46.9,
+      "y": 30.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-216",
+      "x": 42.1,
+      "y": 30.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-217",
+      "x": 39.6,
+      "y": 20.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "acuity-lakefront",
+      "x": 39.5,
+      "y": 11.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "lake-acuity",
+      "x": 40.3,
+      "y": 6.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-2f",
+      "x": 44.5,
+      "y": 72.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-2f-north",
+      "x": 43.2,
+      "y": 71.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-2f-west",
+      "x": 44.5,
+      "y": 69.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-3f",
+      "x": 44.4,
+      "y": 63.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-peak",
+      "x": 47.3,
+      "y": 56.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "mt-coronet-1f-2",
+      "x": 46.9,
+      "y": 49.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-4f1",
+      "x": 45.3,
+      "y": 59.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-4f3",
+      "x": 42.7,
+      "y": 59.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-5f",
+      "x": 45.3,
+      "y": 55.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-coronet-6f",
+      "x": 47.2,
+      "y": 54.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-222",
+      "x": 76,
+      "y": 79.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "sunyshore-city",
+      "x": 82.8,
+      "y": 77.8,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-223",
+      "x": 81.1,
+      "y": 62.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "iron-island-b1f",
+      "x": 26.5,
+      "y": 42.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "iron-island-b1f-l",
+      "x": 25.6,
+      "y": 43.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "iron-island-b1f-r",
+      "x": 24.1,
+      "y": 43.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "iron-island-b2f-r",
+      "x": 24.1,
+      "y": 41.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "iron-island-b2f-l",
+      "x": 25.6,
+      "y": 41.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "victory-road-1f",
+      "x": 82.4,
+      "y": 55.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "victory-road-b1f",
+      "x": 81.1,
+      "y": 56.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "victory-road-2f",
+      "x": 79.8,
+      "y": 55.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "spring-valley",
+      "x": 81.1,
+      "y": 53.8,
+      "kind": "route"
+    }
+  ]
+}

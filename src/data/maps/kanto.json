@@ -1,0 +1,428 @@
+{
+  "region": "kanto",
+  "image": "/maps/kanto.png",
+  "imageWidth": 750,
+  "imageHeight": 450,
+  "markers": [
+    {
+      "locationId": "pallet-town",
+      "x": 21.2,
+      "y": 62.4,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-1-kanto",
+      "x": 21.3,
+      "y": 54.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "viridian-city",
+      "x": 21.2,
+      "y": 46.4,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-22-kanto",
+      "x": 15.2,
+      "y": 47.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-2-south-kanto",
+      "x": 21.1,
+      "y": 40.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "viridian-forest",
+      "x": 21.1,
+      "y": 33.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-2-north-kanto",
+      "x": 22.6,
+      "y": 24.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-3-kanto",
+      "x": 29.1,
+      "y": 17.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-moon-b1f",
+      "x": 42.7,
+      "y": 8.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-moon-1f",
+      "x": 38.6,
+      "y": 9.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-moon-b2f",
+      "x": 48,
+      "y": 9.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-moon-1",
+      "x": 36.7,
+      "y": 10.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "mt-moon-2",
+      "x": 36.7,
+      "y": 8.5,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-4-kanto",
+      "x": 52.3,
+      "y": 16.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "cerulean-city",
+      "x": 58.8,
+      "y": 16.7,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-24-kanto",
+      "x": 57.3,
+      "y": 8.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-25-kanto",
+      "x": 62.3,
+      "y": 2.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-5-kanto",
+      "x": 57.3,
+      "y": 25.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-6-kanto",
+      "x": 57.3,
+      "y": 46,
+      "kind": "route"
+    },
+    {
+      "locationId": "vermilion-city",
+      "x": 57.5,
+      "y": 56.2,
+      "kind": "city"
+    },
+    {
+      "locationId": "route-11-kanto",
+      "x": 68.5,
+      "y": 57.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "digletts-cave-top-exit",
+      "x": 21.3,
+      "y": 25.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "digletts-cave-b1f",
+      "x": 20,
+      "y": 24.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "digletts-cave-bottom-exit",
+      "x": 21.3,
+      "y": 22.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-9-kanto",
+      "x": 63.7,
+      "y": 17.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "rock-tunnel-1f",
+      "x": 75.7,
+      "y": 26.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "rock-tunnel-b1f",
+      "x": 28,
+      "y": 14.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-2f",
+      "x": 80,
+      "y": 66.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-3f",
+      "x": 79.4,
+      "y": 67.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-4f",
+      "x": 78.1,
+      "y": 67.8,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-5f",
+      "x": 77.4,
+      "y": 66.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-6f",
+      "x": 78.1,
+      "y": 65.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-tower-7f",
+      "x": 79.4,
+      "y": 65.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "route-12-kanto",
+      "x": 75.7,
+      "y": 47.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-8-kanto",
+      "x": 51.6,
+      "y": 32.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-7-kanto",
+      "x": 70.8,
+      "y": 32.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-16-kanto",
+      "x": 38.9,
+      "y": 32.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-17-kanto",
+      "x": 35.3,
+      "y": 34.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-18-kanto",
+      "x": 47.3,
+      "y": 77.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-13-kanto",
+      "x": 69.7,
+      "y": 69.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-14-kanto",
+      "x": 65.3,
+      "y": 72.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-15-kanto",
+      "x": 59.7,
+      "y": 78,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-10-north-kanto",
+      "x": 75.6,
+      "y": 14.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-19-kanto",
+      "x": 54.7,
+      "y": 84.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-20-kanto",
+      "x": 29.5,
+      "y": 88.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafoam-islands-1f",
+      "x": 42.6,
+      "y": 89.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafoam-islands-b1f",
+      "x": 41.7,
+      "y": 90.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafoam-islands-b2f",
+      "x": 40.2,
+      "y": 89.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafoam-islands-b3f",
+      "x": 40.2,
+      "y": 88.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "seafoam-islands-b4f",
+      "x": 41.7,
+      "y": 87.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "cinnabar-island",
+      "x": 20.7,
+      "y": 89.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "pokemon-mansion-1f",
+      "x": 19.4,
+      "y": 12.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "pokemon-mansion-2f",
+      "x": 18.1,
+      "y": 13.5,
+      "kind": "route"
+    },
+    {
+      "locationId": "pokemon-mansion-3f",
+      "x": 16.8,
+      "y": 12.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "pokemon-mansion-b1f",
+      "x": 18.1,
+      "y": 10.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-21-kanto",
+      "x": 20.9,
+      "y": 76.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "victory-road-1f-kanto",
+      "x": 11.3,
+      "y": 38.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "victory-road-2f-kanto",
+      "x": 11.5,
+      "y": 30.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "victory-road-3f-kanto",
+      "x": 11.3,
+      "y": 20.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "safari-entrance",
+      "x": 54.8,
+      "y": 73.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "safari-east",
+      "x": 57.9,
+      "y": 72.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "safari-north",
+      "x": 53.9,
+      "y": 69.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "safari-west",
+      "x": 50.9,
+      "y": 72.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "cerulean-cave-1f",
+      "x": 57.5,
+      "y": 18,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cerulean-cave-2f",
+      "x": 56.2,
+      "y": 16.7,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "cerulean-cave-b1f",
+      "x": 57.5,
+      "y": 15.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "fennel-valley-valley",
+      "x": 27.1,
+      "y": 15.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "fennel-cave",
+      "x": 25.6,
+      "y": 15.2,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "fennel-cave-labyrinth",
+      "x": 25.6,
+      "y": 13.6,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "fennel-cave-labyrinth-2f",
+      "x": 27.1,
+      "y": 13.2,
+      "kind": "dungeon"
+    }
+  ]
+}
