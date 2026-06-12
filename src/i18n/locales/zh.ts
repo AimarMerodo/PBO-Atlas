@@ -122,6 +122,8 @@ export const zh: Record<DictKey, string> = {
   "items.allCategories": "全部分类",
   "mounts.title": "坐骑",
   "mounts.allTypes": "全部类型",
+  "mounts.searchPlaceholder": "搜索坐骑...",
+  "mounts.onlyShiny": "仅闪光",
   "mounts.land": "陆地坐骑",
   "mounts.surf": "冲浪坐骑",
   "mounts.others": "其他",

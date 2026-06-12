@@ -125,6 +125,8 @@ export const es: Record<DictKey, string> = {
   "items.allCategories": "Todas las categorías",
   "mounts.title": "Monturas",
   "mounts.allTypes": "Todos los tipos",
+  "mounts.searchPlaceholder": "Buscar monturas...",
+  "mounts.onlyShiny": "Solo shiny",
   "mounts.land": "Montura terrestre",
   "mounts.surf": "Montura de surf",
   "mounts.others": "Otras",

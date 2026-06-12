@@ -122,6 +122,8 @@ export const pt: Record<DictKey, string> = {
   "items.allCategories": "Todas as categorias",
   "mounts.title": "Montarias",
   "mounts.allTypes": "Todos os tipos",
+  "mounts.searchPlaceholder": "Buscar montarias...",
+  "mounts.onlyShiny": "Apenas shiny",
   "mounts.land": "Montaria terrestre",
   "mounts.surf": "Montaria de surf",
   "mounts.others": "Outras",

@@ -123,6 +123,8 @@ export const en = {
   "items.allCategories": "All categories",
   "mounts.title": "Mounts",
   "mounts.allTypes": "All types",
+  "mounts.searchPlaceholder": "Search mounts...",
+  "mounts.onlyShiny": "Only shiny",
   "mounts.land": "Land mount",
   "mounts.surf": "Surf mount",
   "mounts.others": "Others",
