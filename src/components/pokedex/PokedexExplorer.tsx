@@ -2,12 +2,15 @@
 
 // Pokedex grid with name/number search, type filter and catchable toggle.
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useT } from "@/i18n/LanguageProvider";
 import { TYPE_COLORS } from "@/lib/colors";
 import TypeBadge from "./TypeBadge";
+
+const PAGE_SIZE = 60;
 
 export interface PokedexCard {
   slug: string;
@@ -23,6 +26,11 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
   const [query, setQuery] = useState("");
   const [type, setType] = useState<string | null>(null);
   const [onlyCatchable, setOnlyCatchable] = useState(false);
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    setPage(1);
+  }, [query, type, onlyCatchable]);
 
   const q = query.trim().toLowerCase();
   const filtered = pokemon.filter((p) => {
@@ -31,6 +39,40 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
     if (onlyCatchable && !p.caught) return false;
     return true;
   });
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const current = Math.min(page, pageCount);
+  const visible = filtered.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
+
+  const goTo = (p: number) => {
+    setPage(p);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const pager =
+    pageCount > 1 ? (
+      <div className="flex items-center justify-center gap-3">
+        <button
+          onClick={() => goTo(current - 1)}
+          disabled={current === 1}
+          aria-label={t("pagination.prev")}
+          className="rounded-lg border border-line bg-surface p-1.5 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </button>
+        <span className="text-sm text-ink-dim tabular-nums">
+          {current} {t("pagination.of")} {pageCount}
+        </span>
+        <button
+          onClick={() => goTo(current + 1)}
+          disabled={current === pageCount}
+          aria-label={t("pagination.next")}
+          className="rounded-lg border border-line bg-surface p-1.5 text-ink-dim transition-colors enabled:hover:text-ink disabled:opacity-40"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </button>
+      </div>
+    ) : null;
 
   return (
     <div className="space-y-5">
@@ -71,7 +113,7 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
         <p className="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">{t("pokedex.noResults")}</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {filtered.map((p) => (
+          {visible.map((p) => (
             <Link
               key={p.slug}
               href={`/pokedex/${p.slug}`}
@@ -93,6 +135,8 @@ export default function PokedexExplorer({ pokemon }: { pokemon: PokedexCard[] })
           ))}
         </div>
       )}
+
+      {pager}
     </div>
   );
 }
