@@ -11,8 +11,8 @@ import { parseCsv } from "./lib/csv.mjs";
 import { showdownCandidates, dashless } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SPAWNS_DIR = path.join(ROOT, "src", "data", "spawns");
-const OUT_FILE = path.join(ROOT, "src", "data", "pokedex.json");
+const SPAWNS_DIR = path.join(ROOT, "data", "spawns");
+const OUT_FILE = path.join(ROOT, "data", "pokedex.json");
 const GAME = path.join(ROOT, "scripts", ".cache", "game");
 const API = "https://pokeapi.co/api/v2";
 
@@ -279,12 +279,12 @@ for (const slug of abilitySlugs) {
   }
   if (++aDone % 50 === 0) process.stdout.write(`\r${aDone}/${abilitySlugs.size} abilities   `);
 }
-const ABILITIES_FILE = path.join(ROOT, "src", "data", "abilities.json");
+const ABILITIES_FILE = path.join(ROOT, "data", "abilities.json");
 await writeFile(ABILITIES_FILE, JSON.stringify(abilities), "utf8");
 console.log(`\nWrote ${Object.keys(abilities).length} abilities -> ${path.relative(ROOT, ABILITIES_FILE)}`);
 
 if (failures.length) {
-  console.log(`\n${failures.length} FAILURES — add forum-name -> PokeAPI-slug mappings to scripts/lib/slug-overrides.mjs:`);
+  console.log(`\n${failures.length} FAILURES â€” add forum-name -> PokeAPI-slug mappings to scripts/lib/slug-overrides.mjs:`);
   for (const f of failures) console.log(`  - ${f.slug}: ${f.error}`);
   process.exitCode = 1;
 }

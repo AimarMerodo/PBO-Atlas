@@ -7,9 +7,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SPAWNS_DIR = path.join(ROOT, "src", "data", "spawns");
-const POKEDEX_FILE = path.join(ROOT, "src", "data", "pokedex.json");
-const OUT_FILE = path.join(ROOT, "src", "data", "search-index.json");
+const SPAWNS_DIR = path.join(ROOT, "data", "spawns");
+const POKEDEX_FILE = path.join(ROOT, "data", "pokedex.json");
+const OUT_FILE = path.join(ROOT, "data", "search-index.json");
 
 const pokedex = JSON.parse(await readFile(POKEDEX_FILE, "utf8"));
 

@@ -1,30 +1,45 @@
 {
-  "name": "pboapp",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pbo-atlas",
+  "version": "0.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
     "scrape": "node scripts/scrape-spawns.mjs all",
     "pokedex": "node scripts/build-pokedex.mjs",
+    "moves": "node scripts/build-moves.mjs",
+    "extras": "node scripts/build-game-extras.mjs",
+    "maps": "node scripts/build-maps.mjs",
     "search-index": "node scripts/build-search-index.mjs",
-    "data": "npm run scrape && npm run pokedex && npm run search-index"
+    "page-data": "node scripts/build-page-data.mjs",
+    "data": "npm run scrape && npm run pokedex && npm run moves && npm run extras && npm run maps && npm run search-index && npm run page-data"
   },
+  "private": true,
+  "packageManager": "npm@10.9.3",
   "dependencies": {
-    "lucide-react": "^1.18.0",
-    "next": "^15.3.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "server-only": "^0.0.1"
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/platform-server": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "@angular/ssr": "^21.2.12",
+    "@lucide/angular": "^1.18.0",
+    "@tailwindcss/postcss": "^4.3.1",
+    "postcss": "^8.5.15",
+    "rxjs": "~7.8.0",
+    "tailwindcss": "^4.3.1",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
+    "@angular/build": "^21.2.12",
+    "@angular/cli": "^21.2.12",
+    "@angular/compiler-cli": "^21.2.0",
+    "@types/node": "^20.17.19",
     "cheerio": "^1.0.0",
-    "tailwindcss": "^4.1.8",
-    "typescript": "^5.8.3"
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
   }
 }

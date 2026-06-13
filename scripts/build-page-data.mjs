@@ -8,7 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SRC = path.join(ROOT, "src", "data");
+const SRC = path.join(ROOT, "data");
 const OUT = path.join(ROOT, "public", "data");
 
 const readJson = async (...p) => JSON.parse(await readFile(path.join(SRC, ...p), "utf8"));

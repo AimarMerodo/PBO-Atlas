@@ -14,8 +14,8 @@ import { showdownCandidates } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const GAME = path.join(ROOT, "scripts", ".cache", "game");
-const POKEDEX_FILE = path.join(ROOT, "src", "data", "pokedex.json");
-const OUT_FILE = path.join(ROOT, "src", "data", "moves.json");
+const POKEDEX_FILE = path.join(ROOT, "data", "pokedex.json");
+const OUT_FILE = path.join(ROOT, "data", "moves.json");
 
 const moveId = (displayName) => displayName.toLowerCase().replace(/[^a-z0-9]/g, "");
 

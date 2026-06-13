@@ -14,8 +14,8 @@ import { slugify } from "./lib/normalize.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CSV_FILE = path.join(ROOT, "scripts", ".cache", "maps.csv");
-const SPAWNS_DIR = path.join(ROOT, "src", "data", "spawns");
-const OUT_DIR = path.join(ROOT, "src", "data", "maps");
+const SPAWNS_DIR = path.join(ROOT, "data", "spawns");
+const OUT_DIR = path.join(ROOT, "data", "maps");
 
 const IMAGE_W = 750;
 const IMAGE_H = 450;
@@ -50,7 +50,7 @@ function candidateSlugs(name) {
   const direct = ALIASES[slugify(name)];
   if (direct) push(direct);
   push(name.replace(/\s*\([^)]*\)\s*$/, "")); // drop trailing parenthetical
-  push(name.split(/\s+[-–]\s+|:/)[0]); // before " - " or ":"
+  push(name.split(/\s+[-â€“]\s+|:/)[0]); // before " - " or ":"
 
   // Progressively drop trailing floor/room-ish tokens: "1F", "B2F", "2-A",
   // "Floor", "Room", bare numbers/letters, "1F 2R"...
@@ -82,7 +82,7 @@ try {
   process.exit(1);
 }
 
-// Rows: id,name,music,?,x,y,visible,region — name may contain commas, so
+// Rows: id,name,music,?,x,y,visible,region â€” name may contain commas, so
 // take fixed fields from both ends.
 const byRegion = {};
 for (const line of csv.trim().split(/\r?\n/)) {

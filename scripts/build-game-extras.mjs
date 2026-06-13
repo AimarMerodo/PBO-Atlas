@@ -10,7 +10,7 @@ import { slugify } from "./lib/normalize.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const GAME = path.join(ROOT, "scripts", ".cache", "game");
-const DATA = path.join(ROOT, "src", "data");
+const DATA = path.join(ROOT, "data");
 
 const read = (...p) => readFile(path.join(GAME, ...p), "utf8");
 
@@ -72,7 +72,7 @@ console.log(`atlas icons: ${Object.keys(icons).length}`);
 // icon (tr-<type>) of the move they teach.
 const moveType = {};
 {
-  const movesData = JSON.parse(await readFile(path.join(ROOT, "src", "data", "moves.json"), "utf8"));
+  const movesData = JSON.parse(await readFile(path.join(ROOT, "data", "moves.json"), "utf8"));
   for (const m of Object.values(movesData.moves)) moveType[m.en.toLowerCase()] = m.type;
 }
 const machineMove = {};
@@ -124,7 +124,7 @@ const itemsZh = parseNameMap(await read("i18n", "items_zh.csv"));
 // Reverse index: evolution triggers "use <Item>" -> pokemon that evolve with it.
 const evolvesByItem = {};
 {
-  const pokedex = JSON.parse(await readFile(path.join(ROOT, "src", "data", "pokedex.json"), "utf8"));
+  const pokedex = JSON.parse(await readFile(path.join(ROOT, "data", "pokedex.json"), "utf8"));
   for (const entry of Object.values(pokedex)) {
     for (const stage of entry.evolutionLine ?? []) {
       const m = stage.trigger?.match(/use ([^,]+)/i);

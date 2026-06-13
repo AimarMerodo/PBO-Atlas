@@ -8,7 +8,7 @@ import { fetchThreadPages, collectOpPosts, extractLocationTables } from "./lib/x
 import { parseRarity, parseTime, parseMethod, parseLevel, parseEvs, slugify, pokemonSlug } from "./lib/normalize.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT_DIR = path.join(ROOT, "src", "data", "spawns");
+const OUT_DIR = path.join(ROOT, "data", "spawns");
 
 const REGIONS = {
   sinnoh: {
