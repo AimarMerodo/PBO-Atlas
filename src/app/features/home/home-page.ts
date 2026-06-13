@@ -34,7 +34,7 @@ const SECTIONS: SectionCard[] = [
   { route: "/pokedex", title: "nav.pokedex", desc: "home.pokedexDesc", count: (s) => s.pokemon, countLabel: "home.count.pokemon", tint: "#f87171", bento: "lg:col-span-2 lg:row-span-2", featured: true, peek: SPRITE("charizard") },
   { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "lg:col-span-2", peek: SPRITE("delibird") },
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: SPRITE("arcanine") },
-  { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.gif", peekClass: "-bottom-2 -right-1 h-36 w-36" },
+  { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.gif", peekClass: "-bottom-3 -right-4 h-32 w-32" },
   { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-2", cover: "/maps/sinnoh.png" },
   { route: "/natures", title: "nav.natures", desc: "home.naturesDesc", count: (s) => s.natures, countLabel: "home.count.natures", tint: "#2dd4bf", bento: "lg:col-span-2", peek: SPRITE("leafeon") },
 ];
