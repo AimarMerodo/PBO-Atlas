@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource } from "@angular/core";
 import { NgTemplateOutlet } from "@angular/common";
 import { RouterLink } from "@angular/router";
-import { LucideBookOpen, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideScale, LucideShirt } from "@lucide/angular";
+import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideScale, LucideShirt, LucideTrendingUp } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -43,7 +43,7 @@ const SECTIONS: SectionCard[] = [
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale, LucideMapPin, LucidePawPrint],
+  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale, LucideMapPin, LucidePawPrint, LucideCompass, LucideTrendingUp],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })

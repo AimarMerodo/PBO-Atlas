@@ -1,4 +1,4 @@
-<div class="space-y-12">
+<div class="space-y-16">
   <!-- Full-bleed day→night time-lapse hero: pixel-art mountains (ansimuz, CC0)
        behind a CSS-animated sky, sun/moon and stars. The animated scene is in
        its own clipped wrapper so the search dropdown can overflow the hero. -->
@@ -68,7 +68,19 @@
   </section>
 
   <section>
-    <h2 class="mb-5 text-xl font-bold">{{ i18n.t("home.explore") }}</h2>
+    <div class="mb-6 flex items-center gap-3.5" style="--acc: #f87171">
+      <span
+        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl"
+        style="background: color-mix(in srgb, var(--acc) 16%, transparent); color: var(--acc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 35%, transparent)"
+      >
+        <svg lucideCompass class="h-5 w-5" aria-hidden="true"></svg>
+      </span>
+      <h2 class="text-2xl font-extrabold tracking-tight sm:text-3xl">{{ i18n.t("home.explore") }}</h2>
+      <span
+        class="ml-1 hidden h-px flex-1 sm:block"
+        style="background: linear-gradient(to right, color-mix(in srgb, var(--acc) 55%, transparent), transparent)"
+      ></span>
+    </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[156px]">
       @for (s of sections; track s.route) {
         <a
@@ -147,7 +159,19 @@
   <!-- Regions showcase: immersive map cards, first region featured wide -->
   @if (heroRegion(); as hero) {
     <section>
-      <h2 class="mb-5 text-xl font-bold">{{ i18n.t("home.regions") }}</h2>
+      <div class="mb-6 flex items-center gap-3.5" style="--acc: #34d399">
+        <span
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-xl"
+          style="background: color-mix(in srgb, var(--acc) 16%, transparent); color: var(--acc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 35%, transparent)"
+        >
+          <svg lucideMap class="h-5 w-5" aria-hidden="true"></svg>
+        </span>
+        <h2 class="text-2xl font-extrabold tracking-tight sm:text-3xl">{{ i18n.t("home.regions") }}</h2>
+        <span
+          class="ml-1 hidden h-px flex-1 sm:block"
+          style="background: linear-gradient(to right, color-mix(in srgb, var(--acc) 55%, transparent), transparent)"
+        ></span>
+      </div>
       <div class="space-y-4">
         <ng-container *ngTemplateOutlet="regionCard; context: { $implicit: hero, featured: true }" />
         <div class="grid gap-4 sm:grid-cols-3">
@@ -162,7 +186,19 @@
   <!-- Animated headline numbers -->
   @if (statItems().length) {
     <section>
-      <h2 class="mb-5 text-xl font-bold">{{ i18n.t("home.statsTitle") }}</h2>
+      <div class="mb-6 flex items-center gap-3.5" style="--acc: #2dd4bf">
+        <span
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-xl"
+          style="background: color-mix(in srgb, var(--acc) 16%, transparent); color: var(--acc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 35%, transparent)"
+        >
+          <svg lucideTrendingUp class="h-5 w-5" aria-hidden="true"></svg>
+        </span>
+        <h2 class="text-2xl font-extrabold tracking-tight sm:text-3xl">{{ i18n.t("home.statsTitle") }}</h2>
+        <span
+          class="ml-1 hidden h-px flex-1 sm:block"
+          style="background: linear-gradient(to right, color-mix(in srgb, var(--acc) 55%, transparent), transparent)"
+        ></span>
+      </div>
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         @for (st of statItems(); track st.label) {
           <div class="rounded-2xl border border-line bg-surface p-5 text-center">
