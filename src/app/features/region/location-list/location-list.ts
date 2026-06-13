@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LanguageService } from "@core/i18n/language.service";
 
@@ -19,10 +19,4 @@ export class LocationListComponent {
   readonly locations = input.required<LocationSummary[]>();
 
   protected readonly i18n = inject(LanguageService);
-  protected readonly query = signal("");
-
-  protected readonly filtered = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    return this.locations().filter((l) => l.name.toLowerCase().includes(q));
-  });
 }
