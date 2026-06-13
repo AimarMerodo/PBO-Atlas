@@ -15,6 +15,8 @@
       }
       <a
         [routerLink]="['/pokedex', stage.slug]"
+        (mouseenter)="preload(stage.slug)"
+        (focus)="preload(stage.slug)"
         [class]="
           'group flex w-40 flex-col items-center rounded-2xl border p-4 transition-all hover:-translate-y-0.5 ' +
           (stage.slug === current() ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-accent/60')

@@ -29,6 +29,7 @@
           @for (p of pokemonResults(); track p.slug) {
             <button
               (click)="go('/pokedex/' + p.slug)"
+              (mouseenter)="preload(p.slug)"
               class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2"
             >
               @if (p.sprite) {

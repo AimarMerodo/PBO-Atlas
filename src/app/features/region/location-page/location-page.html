@@ -1,5 +1,5 @@
-@if (page.value(); as p) {
-  <div class="space-y-6">
+@if (view(); as p) {
+  <div class="space-y-6 transition-opacity duration-200" [class.opacity-60]="page.isLoading()">
     <div>
       <nav class="text-sm text-ink-dim">
         <a [routerLink]="['/region', p.region]" class="hover:text-ink transition-colors">{{ p.regionName }}</a>

@@ -75,6 +75,8 @@
         @for (p of visible(); track p.slug) {
           <a
             [routerLink]="['/pokedex', p.slug]"
+            (mouseenter)="preload(p.slug)"
+            (focus)="preload(p.slug)"
             class="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-accent/60"
           >
             <div

@@ -4,6 +4,7 @@ import { RouterLink } from "@angular/router";
 import { LucideArrowLeft } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
+import { keepPrevious } from "@core/utils/keep-previous";
 import type { DictKey } from "@core/i18n/dictionaries";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 import { AbilityList } from "@features/pokedex/components/ability-list/ability-list";
@@ -44,6 +45,9 @@ export class PokemonPageComponent {
     params: () => this.slug(),
     loader: ({ params }) => this.data.pokemon(params),
   });
+
+  /** Keeps the previous pokemon visible while the next one loads (no flash). */
+  protected readonly view = keepPrevious(() => this.page.value());
 
   constructor() {
     effect(() => {

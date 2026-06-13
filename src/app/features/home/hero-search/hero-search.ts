@@ -66,6 +66,11 @@ export class HeroSearch {
     if (loc) this.go("/region/" + loc.region + "/" + loc.id);
   }
 
+  /** Warm the cache on hover so picking a result navigates instantly. */
+  protected preload(slug: string): void {
+    void this.data.pokemon(slug);
+  }
+
   protected go(href: string): void {
     this.open.set(false);
     this.query.set("");

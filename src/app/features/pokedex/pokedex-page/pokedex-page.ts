@@ -29,6 +29,11 @@ export class PokedexPageComponent {
 
   protected readonly list = resource({ loader: () => this.data.pokedexList() });
 
+  /** Warm the cache on hover so clicking a card navigates instantly. */
+  protected preload(slug: string): void {
+    void this.data.pokemon(slug);
+  }
+
   protected readonly query = signal("");
   protected readonly type = signal<string | null>(null);
   protected readonly region = signal<string | null>(null);

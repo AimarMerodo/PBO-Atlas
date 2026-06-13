@@ -3,6 +3,7 @@ import { Meta, Title } from "@angular/platform-browser";
 import { RouterLink } from "@angular/router";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
+import { keepPrevious } from "@core/utils/keep-previous";
 import { SpawnTableComponent } from "@features/region/spawn-table/spawn-table";
 
 @Component({
@@ -25,6 +26,9 @@ export class LocationPageComponent {
     params: () => this.key(),
     loader: ({ params }) => this.data.location(params.region, params.location),
   });
+
+  /** Keeps the previous location visible while the next one loads (no flash). */
+  protected readonly view = keepPrevious(() => this.page.value());
 
   constructor() {
     effect(() => {

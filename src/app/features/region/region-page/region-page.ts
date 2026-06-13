@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, effect, inject, input, resource } f
 import { Title } from "@angular/platform-browser";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
+import { keepPrevious } from "@core/utils/keep-previous";
 import { LocationListComponent } from "@features/region/location-list/location-list";
 import { RegionMapComponent } from "@features/region/region-map/region-map";
 
@@ -22,6 +23,9 @@ export class RegionPageComponent {
     params: () => this.region(),
     loader: ({ params }) => this.data.region(params),
   });
+
+  /** Keeps the previous region visible while the next one loads (no flash). */
+  protected readonly view = keepPrevious(() => this.page.value());
 
   constructor() {
     effect(() => {

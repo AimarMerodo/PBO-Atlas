@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LucideArrowRight } from "@lucide/angular";
+import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { EvoStage } from "@core/models/types";
@@ -18,6 +19,12 @@ export class EvolutionLine {
   readonly current = input.required<string>();
 
   private readonly i18n = inject(LanguageService);
+  private readonly data = inject(DataService);
+
+  /** Warm the cache on hover so clicking an evolution navigates instantly. */
+  protected preload(slug: string): void {
+    void this.data.pokemon(slug);
+  }
 
   /** Localize PokeAPI-derived trigger strings like "level 16", "use Thunder Stone, day". */
   protected triggerLabel(trigger: string): string {
