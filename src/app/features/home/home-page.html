@@ -135,9 +135,6 @@
                 @case ("/cosmetics") {
                   <svg lucideShirt class="h-6 w-6" aria-hidden="true"></svg>
                 }
-                @case ("/natures") {
-                  <svg lucideScale class="h-6 w-6" aria-hidden="true"></svg>
-                }
               }
             </div>
             <div class="flex flex-wrap items-baseline gap-x-2">
@@ -198,7 +195,7 @@
           style="background: linear-gradient(to right, color-mix(in srgb, var(--acc) 55%, transparent), transparent)"
         ></span>
       </div>
-      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         @for (st of statItems(); track st.label) {
           <div class="rounded-2xl border border-line bg-surface p-5 text-center">
             <p class="text-3xl font-extrabold tabular-nums text-accent-soft">

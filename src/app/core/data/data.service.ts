@@ -6,7 +6,6 @@ import type {
   HomePayload,
   LocationPage,
   Mount,
-  Nature,
   PokedexCard,
   PokemonPage,
   RegionPage,
@@ -30,7 +29,6 @@ export class DataService {
   pokemon = (slug: string) => this.getJson<PokemonPage>(`pokemon/${slug}.json`);
   pokedexList = () => this.getJson<PokedexCard[]>("lists/pokedex.json");
   searchIndex = () => this.getJson<SearchIndex>("lists/search.json");
-  natures = () => this.getJson<Nature[]>("lists/natures.json");
   items = () => this.getJson<{ items: GameItem[] }>("lists/items.json");
   mounts = () => this.getJson<Mount[]>("lists/mounts.json");
   cosmetics = () => this.getJson<CosmeticBundle[]>("lists/cosmetics.json");

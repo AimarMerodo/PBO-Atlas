@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource } from "@angular/core";
 import { NgTemplateOutlet } from "@angular/common";
 import { RouterLink } from "@angular/router";
-import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideScale, LucideShirt, LucideTrendingUp } from "@lucide/angular";
+import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideShirt, LucideTrendingUp } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -37,13 +37,12 @@ const SECTIONS: SectionCard[] = [
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: "/mount-avatar.gif", peekClass: "-bottom-3 -right-3 h-32 w-32" },
   { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.gif", peekClass: "-bottom-3 -right-4 h-32 w-32" },
   { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-2", cover: "/maps/sinnoh.png" },
-  { route: "/natures", title: "nav.natures", desc: "home.naturesDesc", count: (s) => s.natures, countLabel: "home.count.natures", tint: "#2dd4bf", bento: "lg:col-span-2", peek: SPRITE("leafeon") },
 ];
 
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale, LucideMapPin, LucidePawPrint, LucideCompass, LucideTrendingUp],
+  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideMapPin, LucidePawPrint, LucideCompass, LucideTrendingUp],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })
@@ -71,7 +70,6 @@ export class HomePage {
       { value: s.items, label: "home.count.items" as DictKey },
       { value: s.mounts, label: "home.count.mounts" as DictKey },
       { value: s.cosmetics, label: "home.count.bundles" as DictKey },
-      { value: s.natures, label: "home.count.natures" as DictKey },
     ];
   });
 

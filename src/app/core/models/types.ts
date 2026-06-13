@@ -51,7 +51,6 @@ export interface HomePayload {
     items: number;
     mounts: number;
     cosmetics: number;
-    natures: number;
   };
 }
 
@@ -195,15 +194,6 @@ export interface PokedexCard {
 export interface SearchIndex {
   pokemon: { slug: string; name: string; id: number; types: string[]; sprite: string | null; caught: boolean }[];
   locations: { id: string; name: string; region: string }[];
-}
-
-export interface Nature {
-  name: string;
-  es: string;
-  pt: string;
-  zh: string;
-  up: StatName | null;
-  down: StatName | null;
 }
 
 export interface AtlasIcon {
