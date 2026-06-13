@@ -216,14 +216,14 @@
 <ng-template #regionCard let-r let-featured="featured">
   <a
     [routerLink]="['/region', r.id]"
-    class="group relative block overflow-hidden rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 will-change-transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
+    class="group relative block overflow-hidden rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
   >
     <img
       [src]="'/maps/' + r.id + '.png'"
       [alt]="r.name"
       loading="lazy"
       [class]="
-        'w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 ' +
+        'w-full object-cover backface-hidden transition-transform duration-[1200ms] ease-out will-change-transform group-hover:scale-110 ' +
         (featured ? 'h-60 sm:h-80' : 'aspect-[5/3]')
       "
     />
@@ -242,13 +242,13 @@
       </div>
       <div class="flex flex-wrap gap-2">
         <span
-          class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur"
+          class="inline-flex items-center gap-1.5 rounded-full bg-black/35 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15"
         >
           <svg lucideMapPin class="h-3.5 w-3.5" aria-hidden="true"></svg>
           {{ r.locations }} {{ i18n.t("home.locations") }}
         </span>
         <span
-          class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur"
+          class="inline-flex items-center gap-1.5 rounded-full bg-black/35 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15"
         >
           <svg lucidePawPrint class="h-3.5 w-3.5" aria-hidden="true"></svg>
           {{ r.species }} {{ i18n.t("region.species") }}
