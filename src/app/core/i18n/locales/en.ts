@@ -138,7 +138,6 @@ export const en = {
   "moves.none": "No move data for this pokemon.",
   "moves.disclaimer":
     "Reference list based on the official generation 9 games. Pokemon Blaze Online may differ: some moves could be missing or unavailable. When in doubt, check the in-game pokedex.",
-  "moves.source": "Learnsets extracted directly from the game files — this is what each pokemon learns in Pokemon Blaze Online.",
   "pokemon.evYield": "EV yield",
   "nav.more": "More",
   "nav.natures": "Natures",

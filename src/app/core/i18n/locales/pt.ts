@@ -137,7 +137,6 @@ export const pt: Record<DictKey, string> = {
   "moves.pp": "PP",
   "moves.none": "Sem dados de movimentos para este Pokémon.",
   "moves.disclaimer": "Lista de referência baseada nos jogos oficiais da geração 9. Pokemon Blaze Online pode ser diferente: alguns movimentos podem estar ausentes ou indisponíveis. Em caso de dúvida, consulte a Pokédex do jogo.",
-  "moves.source": "Movimentos extraídos diretamente dos arquivos do jogo — é isto que cada Pokémon aprende em Pokemon Blaze Online.",
   "pokemon.evYield": "EVs concedidos",
   "nav.more": "Mais",
   "nav.natures": "Naturezas",

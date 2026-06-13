@@ -137,7 +137,6 @@ export const zh: Record<DictKey, string> = {
   "moves.pp": "PP",
   "moves.none": "该宝可梦暂无招式数据。",
   "moves.disclaimer": "参考列表基于第九世代官方游戏。Pokemon Blaze Online 可能有所不同：部分招式可能缺失或不可用。如有疑问，请查看游戏内图鉴。",
-  "moves.source": "招式表直接提取自游戏文件——这就是宝可梦在 Pokemon Blaze Online 中实际学会的招式。",
   "pokemon.evYield": "努力值收益",
   "nav.more": "更多",
   "nav.natures": "性格",

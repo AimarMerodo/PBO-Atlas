@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from "@angular/core";
-import { LucideDatabase } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { Learnset, MoveInfo } from "@core/models/types";
@@ -29,7 +28,7 @@ interface MoveRow {
 @Component({
   selector: "app-moves-section",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideDatabase, TypeBadge],
+  imports: [TypeBadge],
   templateUrl: "./moves-section.html",
 })
 export class MovesSection {
