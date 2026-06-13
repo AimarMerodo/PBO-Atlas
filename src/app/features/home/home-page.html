@@ -1,14 +1,32 @@
 <div class="space-y-12">
-  <!-- Cinematic hero: layered parallax art (sky + mountains) with an accent glow -->
-  <section class="relative isolate -mt-2 overflow-hidden rounded-3xl border border-line">
-    <div class="absolute inset-0 -z-30 bg-cover bg-center" style="background-image: url(/art/0.png)"></div>
-    <div class="absolute inset-x-0 bottom-0 -z-20 h-4/5 bg-cover bg-bottom" style="background-image: url(/art/6.png)"></div>
-    <div
-      class="absolute left-1/2 top-1/3 -z-20 h-56 w-[42rem] max-w-[90%] -translate-x-1/2 rounded-full bg-accent/30 blur-3xl"
-    ></div>
-    <div class="absolute inset-0 -z-10" style="background: linear-gradient(rgba(12, 16, 24, 0.3), rgba(12, 16, 24, 0.85))"></div>
+  <!-- Full-bleed day→night time-lapse hero: pixel-art mountains (ansimuz, CC0)
+       behind a CSS-animated sky, sun/moon and stars. -->
+  <section class="hero-band relative isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] overflow-hidden border-b border-line">
+    <div class="sky"></div>
+    <div class="stars">
+      @for (s of stars; track $index) {
+        <span
+          [style.left.%]="s.left"
+          [style.top.%]="s.top"
+          [style.width.px]="s.size"
+          [style.height.px]="s.size"
+          [style.--tw]="s.tw + 's'"
+          [style.--td]="s.delay + 's'"
+        ></span>
+      }
+    </div>
+    <div class="sun2"></div>
+    <div class="moon"></div>
+    <div class="px-scene">
+      <div class="px-layer px-far"></div>
+      <div class="px-layer px-mid"></div>
+      <div class="px-layer px-trees"></div>
+      <div class="px-layer px-fg"></div>
+    </div>
+    <div class="dc-tint"></div>
+    <div class="hero-scrim"></div>
 
-    <div class="relative px-6 py-20 text-center sm:py-28">
+    <div class="relative z-10 px-6 py-20 text-center sm:py-28">
       <span
         class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-ink backdrop-blur"
       >
@@ -20,10 +38,10 @@
         PBO Atlas
       </span>
 
-      <h1 class="mx-auto mt-5 max-w-2xl text-3xl font-extrabold tracking-tight sm:text-5xl">
+      <h1 class="mx-auto mt-5 max-w-2xl text-3xl font-extrabold tracking-tight drop-shadow-lg sm:text-5xl">
         {{ i18n.t("home.heroTitle") }}
       </h1>
-      <p class="mx-auto mt-4 max-w-xl text-ink-dim sm:text-lg">{{ i18n.t("home.heroSubtitle") }}</p>
+      <p class="mx-auto mt-4 max-w-xl text-ink drop-shadow sm:text-lg">{{ i18n.t("home.heroSubtitle") }}</p>
 
       <button
         (click)="search.open()"

@@ -31,6 +31,7 @@ const SECTIONS: SectionCard[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, LucideSearch, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
   templateUrl: "./home-page.html",
+  styleUrl: "./home-page.css",
 })
 export class HomePage {
   protected readonly i18n = inject(LanguageService);
@@ -40,4 +41,14 @@ export class HomePage {
   private readonly home = resource({ loader: () => this.data.home() });
   protected readonly stats = computed(() => this.home.value()?.stats ?? null);
   protected readonly sections = SECTIONS;
+
+  // Deterministic star field for the day-cycle hero (kept in the upper sky);
+  // deterministic so the prerendered HTML matches the client (no hydration drift).
+  protected readonly stars = Array.from({ length: 70 }, (_, i) => ({
+    left: (i * 38 + 3) % 100,
+    top: (i * 53 + 7) % 55,
+    size: 1 + (i % 3) * 0.6,
+    tw: 2 + (i % 5),
+    delay: ((i * 17) % 50) / 10,
+  }));
 }
