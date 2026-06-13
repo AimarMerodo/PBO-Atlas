@@ -7,7 +7,7 @@ import { GAME_NAME, GAME_URL } from "@core/contact";
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <footer class="border-t border-line py-6">
-      <p class="mx-auto max-w-6xl px-4 text-xs text-ink-dim">
+      <p class="mx-auto max-w-6xl px-4 text-center text-xs text-ink-dim">
         {{ i18n.t("footer.pre") }}
         <a
           [href]="gameUrl"
