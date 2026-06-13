@@ -11,6 +11,7 @@ export const en = {
   "home.openPokedex": "Open Pokédex",
   "home.locations": "locations",
   "home.dataFrom": "Data extracted from the official Pokemon Blaze Online forum",
+  "home.statsTitle": "By the numbers",
   "home.explore": "Explore",
   "home.regionsDesc": "Interactive maps of every region with all their spawns",
   "home.pokedexDesc": "Stats, moves, abilities and where to catch every pokemon",

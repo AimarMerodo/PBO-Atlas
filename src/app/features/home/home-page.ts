@@ -5,6 +5,7 @@ import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { HomePayload } from "@core/models/types";
+import { CountUp } from "@shared/count-up";
 import { HeroSearch } from "@features/home/hero-search/hero-search";
 
 interface SectionCard {
@@ -29,7 +30,7 @@ const SECTIONS: SectionCard[] = [
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, HeroSearch, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
+  imports: [RouterLink, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })
@@ -39,7 +40,22 @@ export class HomePage {
 
   private readonly home = resource({ loader: () => this.data.home() });
   protected readonly stats = computed(() => this.home.value()?.stats ?? null);
+  protected readonly regions = computed(() => this.home.value()?.regions ?? null);
   protected readonly sections = SECTIONS;
+
+  /** Headline numbers for the animated stats band. */
+  protected readonly statItems = computed(() => {
+    const s = this.stats();
+    if (!s) return [];
+    return [
+      { value: s.pokemon, label: "home.count.pokemon" as DictKey },
+      { value: s.locations, label: "home.locations" as DictKey },
+      { value: s.items, label: "home.count.items" as DictKey },
+      { value: s.mounts, label: "home.count.mounts" as DictKey },
+      { value: s.cosmetics, label: "home.count.bundles" as DictKey },
+      { value: s.natures, label: "home.count.natures" as DictKey },
+    ];
+  });
 
   // Deterministic star field for the day-cycle hero (kept in the upper sky);
   // deterministic so the prerendered HTML matches the client (no hydration drift).

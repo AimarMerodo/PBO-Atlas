@@ -13,6 +13,7 @@ export const es: Record<DictKey, string> = {
   "home.openPokedex": "Abrir Pokédex",
   "home.locations": "localizaciones",
   "home.dataFrom": "Datos extraídos del foro oficial de Pokemon Blaze Online",
+  "home.statsTitle": "En cifras",
   "home.explore": "Explora",
   "home.regionsDesc": "Mapas interactivos de cada región con todos sus spawns",
   "home.pokedexDesc": "Stats, movimientos, habilidades y dónde capturar cada pokemon",

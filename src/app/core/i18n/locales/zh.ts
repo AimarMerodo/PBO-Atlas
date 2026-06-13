@@ -12,6 +12,7 @@ export const zh: Record<DictKey, string> = {
   "home.openPokedex": "打开图鉴",
   "home.locations": "个地点",
   "home.dataFrom": "数据提取自 Pokemon Blaze Online 官方论坛",
+  "home.statsTitle": "数据一览",
   "home.explore": "探索",
   "home.regionsDesc": "每个地区的互动地图，包含全部出现点",
   "home.pokedexDesc": "种族值、招式、特性以及每只宝可梦的捕捉地点",
