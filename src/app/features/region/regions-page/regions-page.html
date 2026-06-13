@@ -1,25 +1,80 @@
-<div class="space-y-6">
-  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("home.regions") }}</h1>
+<div class="space-y-8">
+  <!-- Page header: green map icon + title + aggregate totals -->
+  <header style="--acc: #34d399">
+    <div class="flex items-center gap-3.5">
+      <span
+        class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl"
+        style="background: color-mix(in srgb, var(--acc) 16%, transparent); color: var(--acc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 35%, transparent)"
+      >
+        <svg lucideMap class="h-6 w-6" aria-hidden="true"></svg>
+      </span>
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ i18n.t("home.regions") }}</h1>
+        @if (totals(); as t) {
+          <p class="mt-1 text-sm text-ink-dim">
+            {{ t.regions }} {{ i18n.t("home.count.regions") }} · {{ t.locations }} {{ i18n.t("home.locations") }} ·
+            {{ t.species }} {{ i18n.t("region.species") }}
+          </p>
+        }
+      </div>
+    </div>
+  </header>
 
   @if (regions(); as regionCards) {
-    <div class="grid gap-4 sm:grid-cols-2">
-      @for (card of regionCards; track card.id) {
+    <div class="grid gap-5 lg:grid-cols-2">
+      @for (r of regionCards; track r.id; let i = $index) {
         <a
-          [routerLink]="['/region', card.id]"
-          class="group rounded-xl border border-line bg-surface p-5 transition-colors hover:border-accent/60"
+          [routerLink]="['/region', r.id]"
+          class="group relative block rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
         >
-          <div class="flex items-baseline justify-between">
-            <h2 class="text-lg font-bold group-hover:text-accent-soft transition-colors">{{ card.name }}</h2>
-            <span class="text-xs text-ink-dim">
-              {{ card.locations }} {{ i18n.t("home.locations") }} · {{ card.species }} {{ i18n.t("region.species") }}
-            </span>
+          <img
+            [src]="'/maps/' + r.id + '.png'"
+            [alt]="r.name"
+            loading="lazy"
+            class="aspect-[5/3] w-full rounded-2xl object-cover transition-[filter] duration-500 ease-out group-hover:brightness-110"
+          />
+          <div class="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/90 via-black/40 to-black/5"></div>
+
+          <!-- editorial index number -->
+          <span
+            class="pointer-events-none absolute right-5 top-2 select-none font-mono text-6xl font-black leading-none text-white/10"
+            aria-hidden="true"
+            >{{ pad(i + 1) }}</span
+          >
+
+          <div class="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+            <h2 class="text-2xl font-extrabold tracking-tight text-white drop-shadow-md sm:text-3xl">{{ r.name }}</h2>
+            <p class="mt-1 line-clamp-2 max-w-prose text-sm text-white/75 drop-shadow">{{ i18n.pick(r.description) }}</p>
+            <div class="mt-3.5 flex flex-wrap items-center gap-2">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-black/35 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15"
+              >
+                <svg lucideMapPin class="h-3.5 w-3.5" aria-hidden="true"></svg>
+                {{ r.locations }} {{ i18n.t("home.locations") }}
+              </span>
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-black/35 px-3 py-1 text-xs font-semibold text-white ring-1 ring-white/15"
+              >
+                <svg lucidePawPrint class="h-3.5 w-3.5" aria-hidden="true"></svg>
+                {{ r.species }} {{ i18n.t("region.species") }}
+              </span>
+              <span
+                class="ml-auto grid h-8 w-8 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/15 transition-colors duration-300 group-hover:bg-accent group-hover:text-white group-hover:ring-accent"
+                aria-hidden="true"
+              >
+                <svg lucideArrowRight class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"></svg>
+              </span>
+            </div>
           </div>
-          <p class="mt-1 text-sm text-ink-dim">{{ i18n.pick(card.description) }}</p>
         </a>
       }
     </div>
-    <p class="mt-4 text-xs text-ink-dim">{{ i18n.t("home.dataFrom") }}</p>
+    <p class="text-center text-xs text-ink-dim">{{ i18n.t("home.dataFrom") }}</p>
   } @else {
-    <p class="py-10 text-center text-sm text-ink-dim">...</p>
+    <div class="grid gap-5 lg:grid-cols-2">
+      @for (s of skeleton; track s) {
+        <div class="aspect-[5/3] animate-pulse rounded-2xl bg-surface ring-1 ring-inset ring-line"></div>
+      }
+    </div>
   }
 </div>
