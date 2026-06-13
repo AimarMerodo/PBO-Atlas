@@ -98,7 +98,7 @@
               loading="lazy"
               [class]="
                 'pointer-events-none absolute object-contain opacity-80 drop-shadow-xl transition-transform duration-300 group-hover:scale-110 [image-rendering:pixelated] ' +
-                (s.featured ? '-right-6 -bottom-8 h-[24rem] w-[24rem]' : '-bottom-3 -right-3 h-24 w-24')
+                (s.featured ? '-right-6 -bottom-8 h-[24rem] w-[24rem]' : (s.peekClass ?? '-bottom-3 -right-3 h-24 w-24'))
               "
             />
           }
