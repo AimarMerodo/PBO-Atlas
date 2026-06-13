@@ -10,23 +10,25 @@ import {
   viewChild,
 } from "@angular/core";
 import { Router } from "@angular/router";
-import { LucideMapPin, LucideSearch } from "@lucide/angular";
+import { LucideMapPin } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { DataService } from "@core/data/data.service";
 import type { SearchIndex } from "@core/models/types";
+import { SearchDialogService } from "./search-dialog.service";
 
+/** Global search overlay. Rendered at the app root (see SearchDialogService). */
 @Component({
   selector: "app-search-dialog",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin, LucideSearch],
+  imports: [LucideMapPin],
   templateUrl: "./search-dialog.html",
 })
 export class SearchDialog {
   protected readonly i18n = inject(LanguageService);
+  protected readonly dialog = inject(SearchDialogService);
   private readonly data = inject(DataService);
   private readonly router = inject(Router);
 
-  protected readonly open = signal(false);
   protected readonly query = signal("");
   protected readonly index = signal<SearchIndex | null>(null);
 
@@ -34,7 +36,11 @@ export class SearchDialog {
 
   constructor() {
     effect(() => {
-      if (this.open()) this.input()?.nativeElement.focus();
+      if (this.dialog.isOpen()) {
+        this.query.set("");
+        if (!this.index()) void this.data.searchIndex().then((index) => this.index.set(index));
+        this.input()?.nativeElement.focus();
+      }
     });
   }
 
@@ -56,23 +62,13 @@ export class SearchDialog {
   onKeydown(event: KeyboardEvent): void {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
-      this.openDialog();
+      this.dialog.open();
     }
-    if (event.key === "Escape") this.close();
-  }
-
-  protected openDialog(): void {
-    this.open.set(true);
-    if (!this.index()) void this.data.searchIndex().then((index) => this.index.set(index));
-  }
-
-  protected close(): void {
-    this.open.set(false);
-    this.query.set("");
+    if (event.key === "Escape") this.dialog.close();
   }
 
   protected go(href: string): void {
-    this.close();
+    this.dialog.close();
     void this.router.navigateByUrl(href);
   }
 }

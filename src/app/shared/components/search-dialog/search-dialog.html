@@ -1,16 +1,7 @@
-<button
-  (click)="openDialog()"
-  class="flex items-center gap-2 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm text-ink-dim hover:text-ink transition-colors"
->
-  <svg lucideSearch class="h-4 w-4" aria-hidden="true"></svg>
-  <span class="hidden sm:inline">{{ i18n.t("nav.search") }}</span>
-  <kbd class="hidden md:inline rounded bg-surface-2 px-1.5 py-0.5 text-[10px] text-ink-dim">Ctrl K</kbd>
-</button>
-
-@if (open()) {
+@if (dialog.isOpen()) {
   <div
     class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center pt-[12vh] px-4"
-    (click)="close()"
+    (click)="dialog.close()"
   >
     <div
       class="w-full max-w-lg rounded-xl border border-line bg-surface shadow-2xl overflow-hidden"
