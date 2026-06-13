@@ -58,7 +58,7 @@
             <div class="rounded-xl bg-zinc-300/80 p-2.5 transition-transform group-hover:scale-105">
               <app-item-icon [icon]="m.icon" [size]="56" />
             </div>
-            <p class="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">{{ m.name }}</p>
+            <p class="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">{{ localName(m) }}</p>
             <p class="mt-1 text-[9px] uppercase tracking-wide text-ink-dim">{{ groupLabel(m.type) }}</p>
           </button>
         }
@@ -67,7 +67,7 @@
       <app-pager [current]="current()" [pageCount]="pageCount()" [numbered]="false" (pageChange)="page.set($event)" />
 
       @if (selected(); as sel) {
-        <app-game-modal [title]="sel.name" [badge]="groupLabel(sel.type)" [icon]="sel.icon" (closed)="select(null)" />
+        <app-game-modal [title]="localName(sel)" [badge]="groupLabel(sel.type)" [icon]="sel.icon" (closed)="select(null)" />
       }
     </div>
   } @else {

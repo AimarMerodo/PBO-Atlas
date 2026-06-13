@@ -6,6 +6,10 @@ export const routes: Routes = [
     loadComponent: () => import("@features/home/home-page").then((m) => m.HomePage),
   },
   {
+    path: "regions",
+    loadComponent: () => import("@features/region/regions-page/regions-page").then((m) => m.RegionsPageComponent),
+  },
+  {
     path: "region/:region",
     loadComponent: () => import("@features/region/region-page/region-page").then((m) => m.RegionPageComponent),
   },

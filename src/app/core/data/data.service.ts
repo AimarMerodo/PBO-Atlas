@@ -3,7 +3,7 @@ import { DATA_LOADER } from "./data-loader";
 import type {
   CosmeticBundle,
   GameItem,
-  HomeRegionCard,
+  HomePayload,
   LocationPage,
   Mount,
   Nature,
@@ -24,7 +24,7 @@ export class DataService {
     return this.cache.get(path) as Promise<T>;
   }
 
-  homeCards = () => this.getJson<HomeRegionCard[]>("lists/home.json");
+  home = () => this.getJson<HomePayload>("lists/home.json");
   region = (id: string) => this.getJson<RegionPage>(`regions/${id}.json`);
   location = (region: string, id: string) => this.getJson<LocationPage>(`locations/${region}/${id}.json`);
   pokemon = (slug: string) => this.getJson<PokemonPage>(`pokemon/${slug}.json`);

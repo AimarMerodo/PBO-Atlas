@@ -1,6 +1,9 @@
 [
  {
   "name": "Running Shoes",
+  "es": "Zapatillas de Correr",
+  "pt": "Tênis de corrida",
+  "zh": "跑鞋",
   "type": "SHOES",
   "icon": {
    "page": "item_pack7.png",
@@ -14,6 +17,9 @@
  },
  {
   "name": "Bicycle",
+  "es": "Bicicleta",
+  "pt": "Bicicleta",
+  "zh": "自行车",
   "type": "BIKE",
   "icon": {
    "page": "item_pack13.png",
@@ -27,6 +33,9 @@
  },
  {
   "name": "Flying Nimbus",
+  "es": "Nimbus volador",
+  "pt": "Nimbus voador",
+  "zh": "筋斗云",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -40,6 +49,9 @@
  },
  {
   "name": "Storm Nimbus",
+  "es": "Nimbo de tormenta",
+  "pt": "Tempestade Nimbus",
+  "zh": "风暴云",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -53,6 +65,9 @@
  },
  {
   "name": "Corviknight Mount",
+  "es": "Montura Corviknight",
+  "pt": "Monte Corviknight",
+  "zh": "钢铠鸦坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -66,6 +81,9 @@
  },
  {
   "name": "Corviknight Mount (Shiny)",
+  "es": "Montura Corviknight Variocolor",
+  "pt": "Montagem Corviknight (Brilhante)",
+  "zh": "钢铠鸦坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -79,6 +97,9 @@
  },
  {
   "name": "Umbreon Mount",
+  "es": "Montura Umbreon",
+  "pt": "Montagem de umbreon",
+  "zh": "月伊布坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -92,6 +113,9 @@
  },
  {
   "name": "Umbreon Mount (Shiny)",
+  "es": "Montura Umbreon Variocolor",
+  "pt": "Montagem Umbreon (Brilhante)",
+  "zh": "月伊布坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -105,6 +129,9 @@
  },
  {
   "name": "Togekiss Mount",
+  "es": "Montura Togekiss",
+  "pt": "Monte Togekiss",
+  "zh": "波克基斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -118,6 +145,9 @@
  },
  {
   "name": "Charizard Mount",
+  "es": "Montura Charizard",
+  "pt": "Montagem do Charizard",
+  "zh": "喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -131,6 +161,9 @@
  },
  {
   "name": "Charizard Mount (Shiny)",
+  "es": "Montura Charizard Variocolor",
+  "pt": "Montagem de Charizard (Shiny)",
+  "zh": "喷火龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -144,6 +177,9 @@
  },
  {
   "name": "Mega Charizard-X Mount",
+  "es": "Montura Mega Charizard-X",
+  "pt": "Montagem do Mega Charizard-X",
+  "zh": "超级喷火龙X坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -157,6 +193,9 @@
  },
  {
   "name": "Mega Charizard-X Mount (Shiny)",
+  "es": "Montura Mega Charizard-X Variocolor",
+  "pt": "Montagem do Mega Charizard-X (Shiny)",
+  "zh": "超级喷火龙X坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -170,6 +209,9 @@
  },
  {
   "name": "Scooby-Doo Mount",
+  "es": "Montura Scooby-Doo",
+  "pt": "Montagem Scooby-Doo",
+  "zh": "史努比狗狗坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -183,6 +225,9 @@
  },
  {
   "name": "Pika-Surf Mount",
+  "es": "Montura Pika-Surf",
+  "pt": "Suporte para Pika-Surf",
+  "zh": "皮卡冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -196,6 +241,9 @@
  },
  {
   "name": "Shadow-Charizard Mount",
+  "es": "Montura Charizard Sombra",
+  "pt": "Montaria do Caracol-Sombra",
+  "zh": "暗影喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -209,6 +257,9 @@
  },
  {
   "name": "Dragonite Mount",
+  "es": "Montura Dragonite",
+  "pt": "Montagem de dragonita",
+  "zh": "快龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -222,6 +273,9 @@
  },
  {
   "name": "Dragonite Mount (Shiny)",
+  "es": "Montura Dragonite Variocolor",
+  "pt": "Montagem de Dragonita (Brilhante)",
+  "zh": "快龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -235,6 +289,9 @@
  },
  {
   "name": "Centiskorch Mount",
+  "es": "Montura Centiskorch",
+  "pt": "Montagem do Centiskorch",
+  "zh": "焚焰蚣坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -248,6 +305,9 @@
  },
  {
   "name": "Centiskorch Mount (Shiny)",
+  "es": "Montura Centiskorch Variocolor",
+  "pt": "Montagem do Centiskorch (brilhante)",
+  "zh": "焚焰蚣坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -261,6 +321,9 @@
  },
  {
   "name": "Kangaskhan Mount",
+  "es": "Montura Kangaskhan",
+  "pt": "Monte Kangaskhan",
+  "zh": "袋兽坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -274,6 +337,9 @@
  },
  {
   "name": "Flygon Mount",
+  "es": "Montura Flygon",
+  "pt": "Montagem de Flygon",
+  "zh": "沙漠蜻蜓坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -287,6 +353,9 @@
  },
  {
   "name": "Gyarados Surf Mount",
+  "es": "Montura de Surf Gyarados",
+  "pt": "Gyarados Surf Mount",
+  "zh": "暴鲤龙水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -300,6 +369,9 @@
  },
  {
   "name": "Wailmer Surf Mount",
+  "es": "Montura de Surf Wailmer",
+  "pt": "Wailmer Surf Mount",
+  "zh": "吼吼鲸水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -313,6 +385,9 @@
  },
  {
   "name": "Victreebel Mount",
+  "es": "Montura Victreebel",
+  "pt": "Monte Victreebel",
+  "zh": "大食花坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -326,6 +401,9 @@
  },
  {
   "name": "Dragapult Mount",
+  "es": "Montura Dragapult",
+  "pt": "Montagem de dragapulta",
+  "zh": "多龙巴鲁托坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -339,6 +417,9 @@
  },
  {
   "name": "Tyranitar Mount",
+  "es": "Montura Tyranitar",
+  "pt": "Montagem de Tyranitar",
+  "zh": "班基拉斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -352,6 +433,9 @@
  },
  {
   "name": "Shaymin-Sky Mount",
+  "es": "Montura Shaymin Cielo",
+  "pt": "Montagem de Shaymin-Sky",
+  "zh": "谢米-天空形态坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -365,6 +449,9 @@
  },
  {
   "name": "Luxray Mount",
+  "es": "Montura Luxray",
+  "pt": "Montagem em Luxray",
+  "zh": "伦琴猫坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -378,6 +465,9 @@
  },
  {
   "name": "Kangaskhan Mount (Shiny)",
+  "es": "Montura Kangaskhan Variocolor",
+  "pt": "Monte Kangaskhan (Brilhante)",
+  "zh": "袋兽坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -391,6 +481,9 @@
  },
  {
   "name": "Flygon Mount (Shiny)",
+  "es": "Montura Flygon Variocolor",
+  "pt": "Montagem Flygon (Brilhante)",
+  "zh": "沙漠蜻蜓坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -404,6 +497,9 @@
  },
  {
   "name": "Gyarados Surf Mount (Shiny)",
+  "es": "Montura de Surf Gyarados Variocolor",
+  "pt": "Gyarados Surf Mount (Shiny)",
+  "zh": "暴鲤龙水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -417,6 +513,9 @@
  },
  {
   "name": "Wailmer Surf Mount (Shiny)",
+  "es": "Montura de Surf Wailmer Variocolor",
+  "pt": "Wailmer Surf Mount (Brilhante)",
+  "zh": "吼吼鲸水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -430,6 +529,9 @@
  },
  {
   "name": "Victreebel Mount (Shiny)",
+  "es": "Montura Victreebel Variocolor",
+  "pt": "Montagem Victreebel (Brilhante)",
+  "zh": "大食花坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -443,6 +545,9 @@
  },
  {
   "name": "Dragapult Mount (Shiny)",
+  "es": "Montura Dragapult Variocolor",
+  "pt": "Montagem de Dragapulta (Brilhante)",
+  "zh": "多龙巴鲁托坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -456,6 +561,9 @@
  },
  {
   "name": "Tyranitar Mount (Shiny)",
+  "es": "Montura Tyranitar Variocolor",
+  "pt": "Montagem de Tyranitar (Brilhante)",
+  "zh": "班基拉斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -469,6 +577,9 @@
  },
  {
   "name": "Shaymin-Sky Mount (Shiny)",
+  "es": "Montura Shaymin Cielo Variocolor",
+  "pt": "Montagem de Shaymin-Sky (Brilhante)",
+  "zh": "谢米-天空形态坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -482,6 +593,9 @@
  },
  {
   "name": "Luxray Mount (Shiny)",
+  "es": "Montura Luxray Variocolor",
+  "pt": "Suporte Luxray (brilhante)",
+  "zh": "伦琴猫坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -495,6 +609,9 @@
  },
  {
   "name": "Gogoat Mount",
+  "es": "Montura Gogoat",
+  "pt": "Monte Gogoat",
+  "zh": "坐骑山羊坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -508,6 +625,9 @@
  },
  {
   "name": "Gogoat Mount (Shiny)",
+  "es": "Montura Gogoat Variocolor",
+  "pt": "Montagem de Gogoat (Brilhante)",
+  "zh": "山羊坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -521,6 +641,9 @@
  },
  {
   "name": "Gastrodon-East Surf Mount",
+  "es": "Montura de Surf Gastrodon Este",
+  "pt": "Gastrodon-East Surf Mount",
+  "zh": "海兔兽-东海形态水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -534,6 +657,9 @@
  },
  {
   "name": "Gastrodon-East Surf Mount (Shiny)",
+  "es": "Montura de Surf Gastrodon Este Variocolor",
+  "pt": "Gastrodon-East Surf Mount (Brilhante)",
+  "zh": "海兔兽-东海形态水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -547,6 +673,9 @@
  },
  {
   "name": "Gastrodon-West Surf Mount",
+  "es": "Montura de Surf Gastrodon Oeste",
+  "pt": "Gastrodon-West Surf Mount",
+  "zh": "海兔兽-西海形态水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -560,6 +689,9 @@
  },
  {
   "name": "Gastrodon-West Surf Mount (Shiny)",
+  "es": "Montura de Surf Gastrodon Oeste Variocolor",
+  "pt": "Gastrodon-West Surf Mount (Brilhante)",
+  "zh": "海兔兽-西海形态水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -573,6 +705,9 @@
  },
  {
   "name": "Machamp Mount",
+  "es": "Montura Machamp",
+  "pt": "Montagem do Machamp",
+  "zh": "怪力坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -586,6 +721,9 @@
  },
  {
   "name": "Arcanine Mount",
+  "es": "Montura Arcanine",
+  "pt": "Montagem de Arcanina",
+  "zh": "风速狗坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -599,6 +737,9 @@
  },
  {
   "name": "Machamp Mount (Shiny)",
+  "es": "Montura Machamp Variocolor",
+  "pt": "Montagem Machamp (Brilhante)",
+  "zh": "怪力坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -612,6 +753,9 @@
  },
  {
   "name": "Arcanine Mount (Shiny)",
+  "es": "Montura Arcanine Variocolor",
+  "pt": "Montagem de Arcanina (Brilhante)",
+  "zh": "风速狗坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -625,6 +769,9 @@
  },
  {
   "name": "Dragonite Mount (Shadow)",
+  "es": "Montura Dragonite Sombra",
+  "pt": "Montaria Dragonita (Sombra)",
+  "zh": "暗影快龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -638,6 +785,9 @@
  },
  {
   "name": "Arcanine Mount (Shadow)",
+  "es": "Montura Arcanine Sombra",
+  "pt": "Montaria Arcanina (Sombra)",
+  "zh": "暗影风速狗坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -651,6 +801,9 @@
  },
  {
   "name": "Squirtle Squad Mount",
+  "es": "Montura Escuadrón Squirtle",
+  "pt": "Montagem de esquilo para esquadrão",
+  "zh": "杰尼龟军团坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -664,6 +817,9 @@
  },
  {
   "name": "Ozaru Mount",
+  "es": "Montura Ozaru",
+  "pt": "Monte Ozaru",
+  "zh": "猩猩坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -677,6 +833,9 @@
  },
  {
   "name": "Super Ozaru Mount",
+  "es": "Montura Super Ozaru",
+  "pt": "Montagem Super Ozaru",
+  "zh": "超级猩猩坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -690,6 +849,9 @@
  },
  {
   "name": "Shenron Mount",
+  "es": "Montura Shenron",
+  "pt": "Montagem Shenron",
+  "zh": "神龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -703,6 +865,9 @@
  },
  {
   "name": "Salamence Mount",
+  "es": "Montura Salamence",
+  "pt": "Monte Salamence",
+  "zh": "暴飞龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -716,6 +881,9 @@
  },
  {
   "name": "Alolan Exeggutor Mount",
+  "es": "Montura Exeggutor Alola",
+  "pt": "Montagem de Exeggutor de Alola",
+  "zh": "阿罗拉椰蛋树坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -729,6 +897,9 @@
  },
  {
   "name": "Salamence Mount (Shiny)",
+  "es": "Montura Salamence (Brillante)",
+  "pt": "Montagem de Salamence (Brilhante)",
+  "zh": "暴飞龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -742,6 +913,9 @@
  },
  {
   "name": "Suicune Mount",
+  "es": "Montura Suicune",
+  "pt": "Monte Suicune",
+  "zh": "水君坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -755,6 +929,9 @@
  },
  {
   "name": "Suicune Mount (Shiny)",
+  "es": "Montura Suicune (Brillante)",
+  "pt": "Montagem de Suicune (Shiny)",
+  "zh": "水君坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -768,6 +945,9 @@
  },
  {
   "name": "Flygon Mount (Shadow)",
+  "es": "Montura Flygon (Sombra)",
+  "pt": "Montagem Flygon (Sombra)",
+  "zh": "暗影沙漠蜻蜓坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -781,6 +961,9 @@
  },
  {
   "name": "Porygon2 Mount",
+  "es": "Montura Porygon2",
+  "pt": "Montagem Porygon2",
+  "zh": "多边兽2坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -794,6 +977,9 @@
  },
  {
   "name": "Porygon2 Mount (Shiny)",
+  "es": "Montura Porygon2 (Brillante)",
+  "pt": "Montagem Porygon2 (Brilhante)",
+  "zh": "多边兽2坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -807,6 +993,9 @@
  },
  {
   "name": "Gyarados Surf Mount (Shadow)",
+  "es": "Montura Gyarados Surf (Sombra)",
+  "pt": "Gyarados Surf Mount (Sombra)",
+  "zh": "暗影暴鲤龙水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -820,6 +1009,9 @@
  },
  {
   "name": "Sharpedo-Mega Surf Mount",
+  "es": "Montura Sharpedo-Mega Surf",
+  "pt": "Suporte para surfe Sharpedo-Mega",
+  "zh": "超级巨牙鲨水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -833,6 +1025,9 @@
  },
  {
   "name": "Sharpedo-Mega Surf Mount (Shiny)",
+  "es": "Montura Sharpedo-Mega Surf (Brillante)",
+  "pt": "Suporte para surfe Sharpedo-Mega (brilhante)",
+  "zh": "超级巨牙鲨水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -846,6 +1041,9 @@
  },
  {
   "name": "Umbreon Mount (Moonlight)",
+  "es": "Montura Umbreon (Luz de Luna)",
+  "pt": "Montagem Umbreon (Moonlight)",
+  "zh": "月伊布坐骑（月光形态）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -859,6 +1057,9 @@
  },
  {
   "name": "Tyranitar Mount (Shadow)",
+  "es": "Montura Tyranitar (Sombra)",
+  "pt": "Montagem de Tyranitar (Sombra)",
+  "zh": "暗影班基拉斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -872,6 +1073,9 @@
  },
  {
   "name": "Swanna Surf Mount",
+  "es": "Montura Swanna Surf",
+  "pt": "Suporte para surfe Swanna",
+  "zh": "舞天鹅水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -885,6 +1089,9 @@
  },
  {
   "name": "Autumn Leafeon Mount",
+  "es": "Montura Leafeon Otoñal",
+  "pt": "Montagem de folhas de outono",
+  "zh": "秋季叶伊布坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -898,6 +1105,9 @@
  },
  {
   "name": "Venusaur Mount",
+  "es": "Montura Venusaur",
+  "pt": "Montagem do Venusaur",
+  "zh": "妙蛙花坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -911,6 +1121,9 @@
  },
  {
   "name": "Mega Venusaur Mount",
+  "es": "Montura Mega Venusaur",
+  "pt": "Montagem do Mega Venusaur",
+  "zh": "超级妙蛙花坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -924,6 +1137,9 @@
  },
  {
   "name": "Venusaur Mount (Shiny)",
+  "es": "Montura Venusaur (Brillante)",
+  "pt": "Montagem do Venusaur (Brilhante)",
+  "zh": "妙蛙花坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -937,6 +1153,9 @@
  },
  {
   "name": "Mega Venusaur Mount (Shiny)",
+  "es": "Montura Mega Venusaur (Brillante)",
+  "pt": "Montagem do Mega Venusaur (Brilhante)",
+  "zh": "超级妙蛙花坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -950,6 +1169,9 @@
  },
  {
   "name": "Metagross Mount",
+  "es": "Montura Metagross",
+  "pt": "Montagem Metagross",
+  "zh": "巨金怪坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -963,6 +1185,9 @@
  },
  {
   "name": "Metagross Mount (Shiny)",
+  "es": "Montura Metagross (Brillante)",
+  "pt": "Montagem Metagross (Brilhante)",
+  "zh": "巨金怪坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -976,6 +1201,9 @@
  },
  {
   "name": "Zapdos Mount",
+  "es": "Montura Zapdos",
+  "pt": "Montagem de Zapdos",
+  "zh": "闪电鸟坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -989,6 +1217,9 @@
  },
  {
   "name": "Moltres Mount",
+  "es": "Montura Moltres",
+  "pt": "Monte Moltres",
+  "zh": "火焰鸟坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1002,6 +1233,9 @@
  },
  {
   "name": "Articuno Mount",
+  "es": "Montura Articuno",
+  "pt": "Montagem Articuno",
+  "zh": "急冻鸟坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1015,6 +1249,9 @@
  },
  {
   "name": "Zapdos Mount (Shiny)",
+  "es": "Montura Zapdos (Brillante)",
+  "pt": "Montagem de Zapdos (Brilhante)",
+  "zh": "闪电鸟坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1028,6 +1265,9 @@
  },
  {
   "name": "Moltres Mount (Shiny)",
+  "es": "Montura Moltres (Brillante)",
+  "pt": "Montagem de Moltres (Brilhante)",
+  "zh": "火焰鸟坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1041,6 +1281,9 @@
  },
  {
   "name": "Articuno Mount (Shiny)",
+  "es": "Montura Articuno (Brillante)",
+  "pt": "Montagem de Articuno (Brilhante)",
+  "zh": "急冻鸟坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1054,6 +1297,9 @@
  },
  {
   "name": "Dark Metagross Mount",
+  "es": "Montura Dark Metagross",
+  "pt": "Montagem do Dark Metagross",
+  "zh": "暗黑巨金怪坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1067,6 +1313,9 @@
  },
  {
   "name": "Salamence Mount (Shadow)",
+  "es": "Montura Salamence (Sombra)",
+  "pt": "Monte Salamence (Sombra)",
+  "zh": "暗影暴飞龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1080,6 +1329,9 @@
  },
  {
   "name": "Sawsbuck Mount",
+  "es": "Montura Sawsbuck",
+  "pt": "Montagem de serra",
+  "zh": "萌芽鹿坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1093,6 +1345,9 @@
  },
  {
   "name": "Sawsbuck Mount (Shiny)",
+  "es": "Montura Sawsbuck (Variocolor)",
+  "pt": "Montagem Sawsbuck (brilhante)",
+  "zh": "萌芽鹿坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1106,6 +1361,9 @@
  },
  {
   "name": "Infected Absol Mount (Halloween 2021)",
+  "es": "Montura Absol infectada (Halloween 2021)",
+  "pt": "Montagem Absol Infectada (Halloween 2021)",
+  "zh": "被感染的阿勃梭鲁坐骑（2021万圣节）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1119,6 +1377,9 @@
  },
  {
   "name": "Ghostly Umbreon Mount (Halloween 2021)",
+  "es": "Montura Umbreon fantasmal (Halloween 2021)",
+  "pt": "Montagem do Umbreon Fantasma (Halloween 2021)",
+  "zh": "幽灵月伊布坐骑（2021万圣）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1132,6 +1393,9 @@
  },
  {
   "name": "Zombie Charizard Mount (Halloween 2021)",
+  "es": "Montura Charizard zombi (Halloween 2021)",
+  "pt": "Montagem do Charizard Zumbi (Halloween 2021)",
+  "zh": "僵尸喷火龙坐骑（2021万圣）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1145,6 +1409,9 @@
  },
  {
   "name": "Mutated Houndoom Mount (Halloween 2021)",
+  "es": "Montura Houndoom mutado (Halloween 2021)",
+  "pt": "Montagem de Houndoom mutante (Halloween 2021)",
+  "zh": "突变黑鲁加坐骑（2021万圣）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1158,6 +1425,9 @@
  },
  {
   "name": "Devil Garchomp Mount (Halloween 2021)",
+  "es": "Montura Garchomp diablo (Halloween 2021)",
+  "pt": "Montagem Devil Garchomp (Halloween 2021)",
+  "zh": "魔鬼烈咬陆鲨坐骑（2021万圣）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1171,6 +1441,9 @@
  },
  {
   "name": "Sleigh Mount (Christmas 2021)",
+  "es": "Montura Trineo (Navidad 2021)",
+  "pt": "Sleigh Mount (Natal de 2021)",
+  "zh": "雪橇坐骑（2021圣诞限定）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1184,6 +1457,9 @@
  },
  {
   "name": "Mega-Altaria Mount (Christmas 2021)",
+  "es": "Montura Mega-Altaria (Navidad 2021)",
+  "pt": "Monte Mega-Altaria (Natal de 2021)",
+  "zh": "超级七夕青鸟坐骑（2021圣诞）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1197,6 +1473,9 @@
  },
  {
   "name": "Regice Mount",
+  "es": "Montura Regice",
+  "pt": "Regice Mount",
+  "zh": "雷吉艾斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1210,6 +1489,9 @@
  },
  {
   "name": "Galarian-Rapidash Mount",
+  "es": "Montura Galarian-Rapidash",
+  "pt": "Montagem Galariana-Rapidash",
+  "zh": "伽勒尔烈焰马坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1223,6 +1505,9 @@
  },
  {
   "name": "Chansey Mount",
+  "es": "Montura Chansey",
+  "pt": "Monte Chansey",
+  "zh": "吉利蛋坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1236,6 +1521,9 @@
  },
  {
   "name": "Vivilion Mount",
+  "es": "Monte Vivilion",
+  "pt": "Monte Vivilion",
+  "zh": "彩粉蝶坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1249,6 +1537,9 @@
  },
  {
   "name": "Radioactive Gyarados Surf Mount",
+  "es": "Montura de surf Gyarados Radiactivo",
+  "pt": "Gyarados Radioativos Surf Mount",
+  "zh": "辐射暴鲤龙冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1262,6 +1553,9 @@
  },
  {
   "name": "Evil Chansey Mount",
+  "es": "Montura Chansey Malvada",
+  "pt": "Montagem de chansey do mal",
+  "zh": "恶魔吉利蛋坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1275,6 +1569,9 @@
  },
  {
   "name": "Pelipper Mount",
+  "es": "Montura Pelipper",
+  "pt": "Montagem do Pelipper",
+  "zh": "大嘴鸥坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1288,6 +1585,9 @@
  },
  {
   "name": "Pelipper Mount (Shiny)",
+  "es": "Montura Pelipper (Variocolor)",
+  "pt": "Montagem do Pelipper (Shiny)",
+  "zh": "大嘴鸥坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1301,6 +1601,9 @@
  },
  {
   "name": "Lapras Surf Mount",
+  "es": "Montura de surf Lapras",
+  "pt": "Lapras Surf Mount",
+  "zh": "拉普拉斯冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1314,6 +1617,9 @@
  },
  {
   "name": "Lapras Surf Mount (Shiny)",
+  "es": "Montura de surf Lapras (Variocolor)",
+  "pt": "Suporte para surfe Lapras (brilhante)",
+  "zh": "拉普拉斯冲浪坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1327,6 +1633,9 @@
  },
  {
   "name": "Ursaluna Mount",
+  "es": "Montura Ursaluna",
+  "pt": "Monte Ursaluna",
+  "zh": "月月熊坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1340,6 +1649,9 @@
  },
  {
   "name": "Ursaluna Mount (Shiny)",
+  "es": "Montura Ursaluna (Variocolor)",
+  "pt": "Monte Ursaluna (Brilhante)",
+  "zh": "月月熊坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1353,6 +1665,9 @@
  },
  {
   "name": "Champion Hisuian-Braviary Mount",
+  "es": "Montura Braviary de Hisui (Campeón)",
+  "pt": "Campeão Hisuian - Monte do Braviário",
+  "zh": "冠军洗翠勇士雄鹰坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1366,6 +1681,9 @@
  },
  {
   "name": "Suicune Mount (Shadow)",
+  "es": "Montura Suicune (Sombra)",
+  "pt": "Montagem de Suicune (Sombra)",
+  "zh": "水君坐骑（暗黑）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1379,6 +1697,9 @@
  },
  {
   "name": "Hisuian-Braviary Mount",
+  "es": "Montura Braviary de Hisui",
+  "pt": "Monte Hisuian-Braviário",
+  "zh": "洗翠勇士雄鹰坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1392,6 +1713,9 @@
  },
  {
   "name": "Summer Venusaur Mount",
+  "es": "Montura Venusaur de verano",
+  "pt": "Montagem de verão do Venusaur",
+  "zh": "夏日妙蛙花坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1405,6 +1729,9 @@
  },
  {
   "name": "Dubwool Mount",
+  "es": "Montura Dubwool",
+  "pt": "Monte Dubwool",
+  "zh": "毛毛角羊坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1418,6 +1745,9 @@
  },
  {
   "name": "Tauros Mount",
+  "es": "Montura Tauros",
+  "pt": "Monte Tauros",
+  "zh": "肯泰罗坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1431,6 +1761,9 @@
  },
  {
   "name": "Gengar Mount (Halloween 2022)",
+  "es": "Montura Gengar (Halloween 2022)",
+  "pt": "Montagem de Gengar (Halloween 2022)",
+  "zh": "耿鬼坐骑(2022年万圣节)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1444,6 +1777,9 @@
  },
  {
   "name": "Hydreigon Mount (Halloween 2022)",
+  "es": "Montura Hydreigon (Halloween 2022)",
+  "pt": "Montagem de Hydreigon (Halloween 2022)",
+  "zh": "三首恶龙坐骑(2022年万圣节)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1457,6 +1793,9 @@
  },
  {
   "name": "Giratina Mount",
+  "es": "Montura Giratina",
+  "pt": "Monte Giratina",
+  "zh": "骑拉帝纳坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1470,6 +1809,9 @@
  },
  {
   "name": "Hisuian Zoroark Mount",
+  "es": "Montura Zoroark de Hisui",
+  "pt": "Monte Hisuian Zoroark",
+  "zh": "Hisuian索罗亚克坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1483,6 +1825,9 @@
  },
  {
   "name": "Hisuian Samurott Surf Mount",
+  "es": "Montura de surf Samurott de Hisui",
+  "pt": "Monte de surfe Hisuian Samurott",
+  "zh": "Hisuian大剑鬼冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1496,6 +1841,9 @@
  },
  {
   "name": "Yveltal Mount",
+  "es": "Montura Yveltal",
+  "pt": "Montagem Yveltal",
+  "zh": "伊裴尔塔尔坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1509,6 +1857,9 @@
  },
  {
   "name": "Drapion Mount",
+  "es": "Montura Drapion",
+  "pt": "Montagem de drapions",
+  "zh": "龙王蝎坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1522,6 +1873,9 @@
  },
  {
   "name": "Gyarados Mount (Halloween 2022)",
+  "es": "Montura Gyarados (Halloween 2022)",
+  "pt": "Montagem de Gyarados (Halloween 2022)",
+  "zh": "暴鲤龙坐骑（万圣节2022）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1535,6 +1889,9 @@
  },
  {
   "name": "Glaceon Mount",
+  "es": "Montura Glaceon",
+  "pt": "Monte Glaceon",
+  "zh": "冰伊布坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1548,6 +1905,9 @@
  },
  {
   "name": "Darmanitan Mount",
+  "es": "Montura Darmanitan",
+  "pt": "Monte Darmanitan",
+  "zh": "达摩狒狒坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1561,6 +1921,9 @@
  },
  {
   "name": "Carnival Copperajah Mount",
+  "es": "Montura Copperajah Carnaval",
+  "pt": "Carnaval Copperajah Mount",
+  "zh": "节日庆典大王铜象坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1574,6 +1937,9 @@
  },
  {
   "name": "Koraidon Mount",
+  "es": "Montura Koraidon",
+  "pt": "Monte Koraidon",
+  "zh": "故勒顿坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1587,6 +1953,9 @@
  },
  {
   "name": "Miraidon Mount",
+  "es": "Montura Miraidon",
+  "pt": "Monte Miraidon",
+  "zh": "密勒顿坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1600,6 +1969,9 @@
  },
  {
   "name": "Wailord Surf Mount",
+  "es": "Montura de surf Wailord",
+  "pt": "Montagem para surfe Wailord",
+  "zh": "吼鲸王冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1613,6 +1985,9 @@
  },
  {
   "name": "Chien-Pao Mount",
+  "es": "Montura Chien-Pao",
+  "pt": "Monte Chien-Pao",
+  "zh": "古剑豹坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1626,6 +2001,9 @@
  },
  {
   "name": "Shadow Lugia Mount",
+  "es": "Montura Shadow Lugia",
+  "pt": "Montagem do Lugia Sombrio",
+  "zh": "暗黑洛奇亚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1639,6 +2017,9 @@
  },
  {
   "name": "Diggersby Mount",
+  "es": "Montura Diggersby",
+  "pt": "Monte Diggersby",
+  "zh": "掘地兔坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1652,6 +2033,9 @@
  },
  {
   "name": "Pidgeot Mount",
+  "es": "Montura Pidgeot",
+  "pt": "Monte Pidgeot",
+  "zh": "大比鸟坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1665,6 +2049,9 @@
  },
  {
   "name": "Easter Lopunny Mount",
+  "es": "Montura Lopunny (Pascua)",
+  "pt": "Montagem do Lopunny de Páscoa",
+  "zh": "复活节长耳兔坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1678,6 +2065,9 @@
  },
  {
   "name": "Mega-Blaziken Mount",
+  "es": "Montura Mega-Blaziken",
+  "pt": "Montagem de Mega-Blaziken",
+  "zh": "超级火焰鸡坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1691,6 +2081,9 @@
  },
  {
   "name": "Honchkrow Mount",
+  "es": "Montura Honchkrow",
+  "pt": "Monte Honchkrow",
+  "zh": "乌鸦头头坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1704,6 +2097,9 @@
  },
  {
   "name": "Houndstone Mount",
+  "es": "Montura Houndstone",
+  "pt": "Houndstone Mount",
+  "zh": "墓扬犬坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1717,6 +2113,9 @@
  },
  {
   "name": "Rhyhorn Racer Mount",
+  "es": "Montura Rhyhorn Racer",
+  "pt": "Montagem do Rhyhorn Racer",
+  "zh": "独角犀牛赛车坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1730,6 +2129,9 @@
  },
  {
   "name": "Skarmory Mount",
+  "es": "Montura Skarmory",
+  "pt": "Montagem de Skarmory",
+  "zh": "盔甲鸟坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1743,6 +2145,9 @@
  },
  {
   "name": "Christmas Mamoswine Mount",
+  "es": "Montura Mamoswine (Navidad)",
+  "pt": "Monte Mamoswine de Natal",
+  "zh": "圣诞象牙猪坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1756,6 +2161,9 @@
  },
  {
   "name": "Blastoise Surf Mount",
+  "es": "Montura de surf Blastoise",
+  "pt": "Montagem de surfe do Blastoise",
+  "zh": "水箭龟冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1769,6 +2177,9 @@
  },
  {
   "name": "Darkrai Mount",
+  "es": "Montura Darkrai",
+  "pt": "Montagem Darkrai",
+  "zh": "达克莱伊坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1782,6 +2193,9 @@
  },
  {
   "name": "Incinerated Ho-Oh Mount",
+  "es": "Montura Ho-Oh Incinerado",
+  "pt": "Monte Ho-Oh incinerado",
+  "zh": "灰烬凤王坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1795,6 +2209,9 @@
  },
  {
   "name": "Zekrom Mount",
+  "es": "Monte Zekrom",
+  "pt": "Monte Zekrom",
+  "zh": "捷克罗姆坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1808,6 +2225,9 @@
  },
  {
   "name": "Phantom Milotic Mount",
+  "es": "Montura Phantom Milotic",
+  "pt": "Montagem do Phantom Milotic",
+  "zh": "幻影美纳斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1821,6 +2241,9 @@
  },
  {
   "name": "Delta Charizard Mount",
+  "es": "Montura Delta Charizard",
+  "pt": "Montagem Delta Charizard",
+  "zh": "德尔塔喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1834,6 +2257,9 @@
  },
  {
   "name": "Delta Charizard Mount (Shiny)",
+  "es": "Montura Delta Charizard (Variocolor)",
+  "pt": "Montagem Delta Charizard (Brilhante)",
+  "zh": "德尔塔喷火龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -1847,6 +2273,9 @@
  },
  {
   "name": "Twilight Noivern Mount",
+  "es": "Monte Noivern Crepuscular",
+  "pt": "Monte Twilight Noivern",
+  "zh": "暮光音波龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1860,6 +2289,9 @@
  },
  {
   "name": "Purple Broom Mount",
+  "es": "Montura Escoba Púrpura",
+  "pt": "Montagem de vassoura roxa",
+  "zh": "紫色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1873,6 +2305,9 @@
  },
  {
   "name": "White Broom Mount",
+  "es": "Montura Escoba Blanca",
+  "pt": "Suporte para vassoura branca",
+  "zh": "白色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1886,6 +2321,9 @@
  },
  {
   "name": "Green Broom Mount",
+  "es": "Montura Escoba Verde",
+  "pt": "Monte Green Broom",
+  "zh": "绿色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -1899,6 +2337,9 @@
  },
  {
   "name": "Pink Broom Mount",
+  "es": "Montura Escoba Rosa",
+  "pt": "Montagem de vassoura rosa",
+  "zh": "粉色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1912,6 +2353,9 @@
  },
  {
   "name": "Orange Broom Mount",
+  "es": "Montura Escoba Naranja",
+  "pt": "Montagem de vassoura laranja",
+  "zh": "橙色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -1925,6 +2369,9 @@
  },
  {
   "name": "Red Broom Mount",
+  "es": "Montura Escoba Roja",
+  "pt": "Montagem de vassoura vermelha",
+  "zh": "红色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1938,6 +2385,9 @@
  },
  {
   "name": "Yellow Broom Mount",
+  "es": "Montura Escoba Amarilla",
+  "pt": "Montagem de vassoura amarela",
+  "zh": "黄色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -1951,6 +2401,9 @@
  },
  {
   "name": "Blue Broom Mount",
+  "es": "Montura Escoba Azul",
+  "pt": "Montagem de vassoura azul",
+  "zh": "蓝色扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -1964,6 +2417,9 @@
  },
  {
   "name": "Rainbow Broom Mount",
+  "es": "Montura Escoba Arcoíris",
+  "pt": "Montagem da vassoura Rainbow",
+  "zh": "彩虹扫帚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1977,6 +2433,9 @@
  },
  {
   "name": "Starlight Noctowl Mount",
+  "es": "Montura Noctowl Luz Estelar",
+  "pt": "Montagem Starlight Noctowl",
+  "zh": "星光猫头夜鹰坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -1990,6 +2449,9 @@
  },
  {
   "name": "Gargoyle Togekiss Mount",
+  "es": "Montura Togekiss Gárgola",
+  "pt": "Montagem de gárgula Togekiss",
+  "zh": "石像鬼波克基斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2003,6 +2465,9 @@
  },
  {
   "name": "Shadow Mewtwo Mount",
+  "es": "Montura Mewtwo Sombra",
+  "pt": "Montagem do Shadow Mewtwo",
+  "zh": "暗影超梦坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2016,6 +2481,9 @@
  },
  {
   "name": "Zekrom Mount (Shiny)",
+  "es": "Montura Zekrom Variocolor",
+  "pt": "Montagem Zekrom (Brilhante)",
+  "zh": "捷克罗姆坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -2029,6 +2497,9 @@
  },
  {
   "name": "Reaper Latias Mount",
+  "es": "Montura Latias Parca",
+  "pt": "Montagem de Latias Reaper",
+  "zh": "灵界拉帝亚斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2042,6 +2513,9 @@
  },
  {
   "name": "Moonlight Salamence Mount",
+  "es": "Montura Salamence Luz de Luna",
+  "pt": "Monte Salamence ao Luar",
+  "zh": "月光暴飞龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2055,6 +2529,9 @@
  },
  {
   "name": "Mega Delta Charizard Mount",
+  "es": "Montura Mega Charizard Delta",
+  "pt": "Montagem do Mega Delta Charizard",
+  "zh": "MegaDelta喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2068,6 +2545,9 @@
  },
  {
   "name": "Mega Delta Charizard Mount (Shiny)",
+  "es": "Montura Mega Charizard Delta Variocolor",
+  "pt": "Montagem Mega Delta Charizard (Brilhante)",
+  "zh": "MegaDelta喷火龙坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2081,6 +2561,9 @@
  },
  {
   "name": "Mega Delta Milotic Mount",
+  "es": "Montura Mega Milotic Delta",
+  "pt": "Montagem do Mega Delta Milotic",
+  "zh": "MegaDelta美纳斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2094,6 +2577,9 @@
  },
  {
   "name": "Mega Delta Milotic Mount (Shiny)",
+  "es": "Montura Mega Milotic Delta Variocolor",
+  "pt": "Mega Delta Milotic Mount (Shiny)",
+  "zh": "MegaDelta美纳斯坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2107,6 +2593,9 @@
  },
  {
   "name": "Wyrdeer Mount",
+  "es": "Montura Wyrdeer",
+  "pt": "Monte Wyrdeer",
+  "zh": "诡角鹿坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -2120,6 +2609,9 @@
  },
  {
   "name": "Christmas Wyrdeer Mount",
+  "es": "Montura Navideña Wyrdeer",
+  "pt": "Montagem de Wyrdeer de Natal",
+  "zh": "圣诞诡角鹿坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2133,6 +2625,9 @@
  },
  {
   "name": "Froslass Mount",
+  "es": "Montura Froslass",
+  "pt": "Monte Froslass",
+  "zh": "雪妖女坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2146,6 +2641,9 @@
  },
  {
   "name": "Froslass Mount (Shiny)",
+  "es": "Montura Froslass Variocolor",
+  "pt": "Montagem Froslass (Brilhante)",
+  "zh": "雪妖女坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2159,6 +2657,9 @@
  },
  {
   "name": "Kyurem White Mount (Overdrive)",
+  "es": "Montura Kyurem Blanco (Overdrive)",
+  "pt": "Kyurem White Mount (Overdrive)",
+  "zh": "焰白酋雷姆(超频驱动模式)坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2172,6 +2673,9 @@
  },
  {
   "name": "Kyurem White Mount (Shiny Overdrive)",
+  "es": "Montura Kyurem Blanco Variocolor (Overdrive)",
+  "pt": "Kyurem White Mount (Shiny Overdrive)",
+  "zh": "焰白酋雷姆(闪光超频驱动模式)坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2185,6 +2689,9 @@
  },
  {
   "name": "Drampa Mount",
+  "es": "Montura Drampa",
+  "pt": "Monte Drampa",
+  "zh": "老翁龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2198,6 +2705,9 @@
  },
  {
   "name": "Drampa Mount (Shiny)",
+  "es": "Montura Drampa Variocolor",
+  "pt": "Montagem Drampa (brilhante)",
+  "zh": "老翁龙坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2211,6 +2721,9 @@
  },
  {
   "name": "Mega-Glalie Mount",
+  "es": "Montura Mega-Glalie",
+  "pt": "Montagem de Mega-Glalie",
+  "zh": "超级冰鬼护坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2224,6 +2737,9 @@
  },
  {
   "name": "Mega-Glalie Mount (Shiny)",
+  "es": "Montura Mega-Glalie Variocolor",
+  "pt": "Montagem de Mega-Glalie (Shiny)",
+  "zh": "超级冰鬼护坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2237,6 +2753,9 @@
  },
  {
   "name": "Furfrou Heart Mount",
+  "es": "Montura Corazón Furfrou",
+  "pt": "Montagem do coração de Furfrou",
+  "zh": "多丽米亚之心坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2250,6 +2769,9 @@
  },
  {
   "name": "Furfrou Heart Mount (Shiny)",
+  "es": "Montura Corazón Furfrou (Variocolor)",
+  "pt": "Montagem de coração Furfrou (brilhante)",
+  "zh": "多丽米亚之心坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2263,6 +2785,9 @@
  },
  {
   "name": "Palafin Surf Mount",
+  "es": "Montura Surf Palafin",
+  "pt": "Palafin Surf Mount",
+  "zh": "海豚侠冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2276,6 +2801,9 @@
  },
  {
   "name": "Palafin Surf Mount (Shiny)",
+  "es": "Montura de Surf Palafin (Variocolor)",
+  "pt": "Suporte para surfe Palafin (brilhante)",
+  "zh": "海豚侠冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2289,6 +2817,9 @@
  },
  {
   "name": "Serperior Mount",
+  "es": "Montura Serperior",
+  "pt": "Montagem do sargento",
+  "zh": "君主蛇坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2302,6 +2833,9 @@
  },
  {
   "name": "Serperior Mount (Shiny)",
+  "es": "Montura Serperior (Variocolor)",
+  "pt": "Montagem do sérperior (brilhante)",
+  "zh": "君主蛇坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2315,6 +2849,9 @@
  },
  {
   "name": "Groudon Mount",
+  "es": "Montura Groudon",
+  "pt": "Montagem em Groudon",
+  "zh": "固拉多坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2328,6 +2865,9 @@
  },
  {
   "name": "Groudon Mount (Shiny)",
+  "es": "Montura Groudon (Variocolor)",
+  "pt": "Montagem do Groudon (Brilhante)",
+  "zh": "固拉多坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2341,6 +2881,9 @@
  },
  {
   "name": "Primal Groudon Mount",
+  "es": "Montura Primal Groudon",
+  "pt": "Montagem do Groudon Primal",
+  "zh": "原始固拉多坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2354,6 +2897,9 @@
  },
  {
   "name": "Primal Groudon Mount (Shiny)",
+  "es": "Montura Primal Groudon (Variocolor)",
+  "pt": "Montagem do Groudon Primal (Brilhante)",
+  "zh": "原始固拉多坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2367,6 +2913,9 @@
  },
  {
   "name": "Blissey Mount",
+  "es": "Montura Blissey",
+  "pt": "Monte Blissey",
+  "zh": "幸福蛋坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2380,6 +2929,9 @@
  },
  {
   "name": "Blissey Mount (Shiny)",
+  "es": "Montura Blissey (Variocolor)",
+  "pt": "Montagem Blissey (Shiny)",
+  "zh": "幸福蛋坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2393,6 +2945,9 @@
  },
  {
   "name": "Mega-Swampert Mount",
+  "es": "Montura Mega-Swampert",
+  "pt": "Montagem do Mega-Swampert",
+  "zh": "超级巨沼怪坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2406,6 +2961,9 @@
  },
  {
   "name": "Mega-Swampert Mount (Shiny)",
+  "es": "Montura Mega-Swampert (Variocolor)",
+  "pt": "Montagem Mega-Swampert (brilhante)",
+  "zh": "超级巨沼怪坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2419,6 +2977,9 @@
  },
  {
   "name": "Mega-Swampert Surf Mount",
+  "es": "Montura de Surf Mega-Swampert",
+  "pt": "Mega-Swampert Surf Mount",
+  "zh": "超级巨沼怪冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2432,6 +2993,9 @@
  },
  {
   "name": "Mega-Swampert Surf Mount (Shiny)",
+  "es": "Montura de Surf Mega-Swampert (Variocolor)",
+  "pt": "Mega-Swampert Surf Mount (Brilhante)",
+  "zh": "超级巨沼怪冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2445,6 +3009,9 @@
  },
  {
   "name": "Mega-Sceptile Mount",
+  "es": "Montura Mega-Sceptile",
+  "pt": "Montagem do Mega-Sceptile",
+  "zh": "超级蜥蜴王坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2458,6 +3025,9 @@
  },
  {
   "name": "Mega-Sceptile Mount (Shiny)",
+  "es": "Montura Mega-Sceptile (Variocolor)",
+  "pt": "Montagem de mega-espeto (brilhante)",
+  "zh": "超级蜥蜴王坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2471,6 +3041,9 @@
  },
  {
   "name": "Kyogre Surf Mount",
+  "es": "Montura Surf Kyogre",
+  "pt": "Kyogre Surf Mount",
+  "zh": "盖欧卡冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2484,6 +3057,9 @@
  },
  {
   "name": "Kyogre Surf Mount (Shiny)",
+  "es": "Montura Surf Kyogre (Variocolor)",
+  "pt": "Kyogre Surf Mount (Brilhante)",
+  "zh": "盖欧卡冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2497,6 +3073,9 @@
  },
  {
   "name": "Mega-Banette Mount",
+  "es": "Montura Mega-Banette",
+  "pt": "Montagem de Mega-Banette",
+  "zh": "超级诅咒娃娃坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2510,6 +3089,9 @@
  },
  {
   "name": "Mega-Banette Mount (Shiny)",
+  "es": "Montura Mega-Banette (Variocolor)",
+  "pt": "Suporte para Mega-Banette (brilhante)",
+  "zh": "超级诅咒娃娃坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2523,6 +3105,9 @@
  },
  {
   "name": "Mega-Rayquaza Mount",
+  "es": "Montura Mega-Rayquaza",
+  "pt": "Montagem de Mega-Rayquaza",
+  "zh": "超级烈空坐坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2536,6 +3121,9 @@
  },
  {
   "name": "Mega-Rayquaza Mount (Shiny)",
+  "es": "Montura Mega-Rayquaza (Variocolor)",
+  "pt": "Montagem Mega-Rayquaza (Brilhante)",
+  "zh": "超级烈空坐坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2549,6 +3137,9 @@
  },
  {
   "name": "Mega-Rayquaza Mount (Red Shiny Variant)",
+  "es": "Montura Mega-Rayquaza (Variante Roja Variocolor)",
+  "pt": "Montagem Mega-Rayquaza (variante Red Shiny)",
+  "zh": "超级烈空坐坐骑(红色闪光变种)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2562,6 +3153,9 @@
  },
  {
   "name": "Primal Kyogre Surf Mount",
+  "es": "Montura Surf Kyogre Primigenio",
+  "pt": "Kyogre Primal Montagem para surfe",
+  "zh": "原始盖欧卡冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2575,6 +3169,9 @@
  },
  {
   "name": "Primal Kyogre Surf Mount (Shiny)",
+  "es": "Montura Surf Kyogre Primigenio (Variocolor)",
+  "pt": "Kyogre Primal Montagem para Surfe (Brilhante)",
+  "zh": "原始盖欧卡冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -2588,6 +3185,9 @@
  },
  {
   "name": "Alolan-Ninetales Mount (Untradable)",
+  "es": "Montura Alolan Ninetales (Intratable)",
+  "pt": "Montagem de Alolan-Ninetales (não comercializável)",
+  "zh": "阿罗拉九尾坐骑(不可交易)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2601,6 +3201,9 @@
  },
  {
   "name": "Alolan-Ninetales Mount (Shiny Untradable)",
+  "es": "Montura Alolan Ninetales (Variocolor Intratable)",
+  "pt": "Montagem de Alolan-Ninetales (Brilhante e não comercializável)",
+  "zh": "阿罗拉九尾坐骑(闪光不可交易)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2614,6 +3217,9 @@
  },
  {
   "name": "Alolan-Ninetales Mount",
+  "es": "Montura Alolan Ninetales",
+  "pt": "Montagem de Alolan-Ninetales",
+  "zh": "阿罗拉九尾坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2627,6 +3233,9 @@
  },
  {
   "name": "Alolan-Ninetales Mount (Shiny)",
+  "es": "Montura Alolan Ninetales (Variocolor)",
+  "pt": "Montagem Alolan-Ninetales (Brilhante)",
+  "zh": "阿罗拉九尾坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2640,6 +3249,9 @@
  },
  {
   "name": "Ninetales Mount (Untradable)",
+  "es": "Montura Ninetales (Intratable)",
+  "pt": "Monte Ninetales (intraduzível)",
+  "zh": "九尾坐骑(不可交易)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2653,6 +3265,9 @@
  },
  {
   "name": "Ninetales Mount (Shiny Untradable)",
+  "es": "Montura Ninetales (Variocolor Intratable)",
+  "pt": "Montaria Ninetales (Brilhante, não comercializável)",
+  "zh": "九尾坐骑(闪光不可交易)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2666,6 +3281,9 @@
  },
  {
   "name": "Ninetales Mount",
+  "es": "Montura Ninetales",
+  "pt": "Monte Ninetales",
+  "zh": "九尾坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2679,6 +3297,9 @@
  },
  {
   "name": "Ninetales Mount (Shiny)",
+  "es": "Montura Ninetales (Variocolor)",
+  "pt": "Montagem Ninetales (Brilhante)",
+  "zh": "九尾坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2692,6 +3313,9 @@
  },
  {
   "name": "Latias Mount",
+  "es": "Montura Latias",
+  "pt": "Montagem de Latias",
+  "zh": "拉帝亚斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2705,6 +3329,9 @@
  },
  {
   "name": "Latios Mount",
+  "es": "Montura Latios",
+  "pt": "Montagem de Latios",
+  "zh": "拉帝欧斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2718,6 +3345,9 @@
  },
  {
   "name": "Latios Mount (Shiny)",
+  "es": "Montura Latios (Variocolor)",
+  "pt": "Montagem Latios (Brilhante)",
+  "zh": "拉帝欧斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2731,6 +3361,9 @@
  },
  {
   "name": "Latias Mount (Shiny)",
+  "es": "Montura Latias (Variocolor)",
+  "pt": "Montagem Latias (Brilhante)",
+  "zh": "拉帝亚斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2744,6 +3377,9 @@
  },
  {
   "name": "Dracozolt Mount",
+  "es": "Montura Dracozolt",
+  "pt": "Monte Dracozolt",
+  "zh": "雷鸟龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2757,6 +3393,9 @@
  },
  {
   "name": "Dracozolt Mount (Shiny)",
+  "es": "Montura Dracozolt (Variocolor)",
+  "pt": "Montagem Dracozolt (Brilhante)",
+  "zh": "雷鸟龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2770,6 +3409,9 @@
  },
  {
   "name": "Celebi Mount",
+  "es": "Montura Celebi",
+  "pt": "Monte Celebi",
+  "zh": "时拉比坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2783,6 +3425,9 @@
  },
  {
   "name": "Celebi Mount (Shiny)",
+  "es": "Montura Celebi (Variocolor)",
+  "pt": "Montagem Celebi (Brilhante)",
+  "zh": "时拉比坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2796,6 +3441,9 @@
  },
  {
   "name": "Azumarill Surf Mount",
+  "es": "Montura Surf Azumarill",
+  "pt": "Suporte para surfe Azumarill",
+  "zh": "玛力露丽水上坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2809,6 +3457,9 @@
  },
  {
   "name": "Azumarill Surf Mount (Shiny)",
+  "es": "Montura Surf Azumarill (Variocolor)",
+  "pt": "Suporte para surfe Azumarill (brilhante)",
+  "zh": "玛力露丽水上坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -2822,6 +3473,9 @@
  },
  {
   "name": "Hydrapple Mount",
+  "es": "Montura Hydrapple",
+  "pt": "Montagem do Hydrapple",
+  "zh": "蜜集大蛇坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2835,6 +3489,9 @@
  },
  {
   "name": "Hydrapple Mount (Shiny)",
+  "es": "Montura Hydrapple (Variocolor)",
+  "pt": "Montagem de Hydrapple (brilhante)",
+  "zh": "蜜集大蛇坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -2848,6 +3505,9 @@
  },
  {
   "name": "G-Max Corviknight Mount",
+  "es": "Montura G-Max Corviknight",
+  "pt": "Montagem do G-Max Corviknight",
+  "zh": "超极巨钢铠鸦坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2861,6 +3521,9 @@
  },
  {
   "name": "G-Max Corviknight Mount (Shiny)",
+  "es": "Montura G-Max Corviknight (Variocolor)",
+  "pt": "G-Max Corviknight Mount (Brilhante)",
+  "zh": "超极巨钢铠鸦坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2874,6 +3537,9 @@
  },
  {
   "name": "Dragonair Mount",
+  "es": "Montura Dragonair",
+  "pt": "Montagem Dragonair",
+  "zh": "哈克龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2887,6 +3553,9 @@
  },
  {
   "name": "Dragonair Mount (Shiny)",
+  "es": "Montura Dragonair (Variocolor)",
+  "pt": "Montagem Dragonair (Brilhante)",
+  "zh": "哈克龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -2900,6 +3569,9 @@
  },
  {
   "name": "Oinkologne Mount",
+  "es": "Montura Oinkologne",
+  "pt": "Monte Oinkologne",
+  "zh": "飘香豚坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2913,6 +3585,9 @@
  },
  {
   "name": "Oinkologne Mount (Shiny)",
+  "es": "Montura Oinkologne (Variocolor)",
+  "pt": "Montagem de Oinkologne (Shiny)",
+  "zh": "飘香豚坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2926,6 +3601,9 @@
  },
  {
   "name": "Manaphy Mount",
+  "es": "Montura Manaphy",
+  "pt": "Montagem de Manaphy",
+  "zh": "玛纳霏坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2939,6 +3617,9 @@
  },
  {
   "name": "Manaphy Mount (Shiny)",
+  "es": "Montura Manaphy (Variocolor)",
+  "pt": "Montagem Manaphy (Shiny)",
+  "zh": "玛纳霏坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -2952,6 +3633,9 @@
  },
  {
   "name": "Summer Lapras Mount",
+  "es": "Montura Lapras de Verano",
+  "pt": "Monte Lapras de Verão",
+  "zh": "夏日拉普拉斯坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -2965,6 +3649,9 @@
  },
  {
   "name": "Summer Lapras Mount (Shiny)",
+  "es": "Montura Lapras de Verano (Variocolor)",
+  "pt": "Montagem de lapras de verão (brilhante)",
+  "zh": "夏日拉普拉斯坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -2978,6 +3665,9 @@
  },
  {
   "name": "Summer Milotic Mount (Shiny)",
+  "es": "Montura Milotic de Verano (Variocolor)",
+  "pt": "Montagem Milotic Summer (brilhante)",
+  "zh": "夏日美纳斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -2991,6 +3681,9 @@
  },
  {
   "name": "Summer Milotic Mount",
+  "es": "Montura Milotic de Verano",
+  "pt": "Montagem do Milotic Summer",
+  "zh": "夏日美纳斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3004,6 +3697,9 @@
  },
  {
   "name": "Saddle Rapidash Mount",
+  "es": "Montura Rapidash Ensillada",
+  "pt": "Suporte para sela Rapidash",
+  "zh": "烈焰马坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3017,6 +3713,9 @@
  },
  {
   "name": "Saddle Rapidash Mount (Shiny)",
+  "es": "Montura Rapidash Ensillada (Variocolor)",
+  "pt": "Suporte de sela Rapidash (brilhante)",
+  "zh": "烈焰马坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3030,6 +3729,9 @@
  },
  {
   "name": "Crystal Onix Mount (Shiny)",
+  "es": "Montura Onix de Cristal (Variocolor)",
+  "pt": "Montagem Crystal Onix (brilhante)",
+  "zh": "水晶大岩蛇坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3043,6 +3745,9 @@
  },
  {
   "name": "Crystal Onix Mount",
+  "es": "Montura Onix de Cristal",
+  "pt": "Montagem Crystal Onix",
+  "zh": "水晶大岩蛇坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3056,6 +3761,9 @@
  },
  {
   "name": "Scyther Mount (Shiny)",
+  "es": "Montura Scyther (Variocolor)",
+  "pt": "Montagem Scyther (Brilhante)",
+  "zh": "飞天螳螂坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3069,6 +3777,9 @@
  },
  {
   "name": "Scyther Mount",
+  "es": "Montura Scyther",
+  "pt": "Montagem do Scyther",
+  "zh": "飞天螳螂坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3082,6 +3793,9 @@
  },
  {
   "name": "Christmas Arcanine Mount (Shiny)",
+  "es": "Montura Arcanine Navideña (Variocolor)",
+  "pt": "Montagem de Arcanina de Natal (Brilhante)",
+  "zh": "圣诞风速狗坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3095,6 +3809,9 @@
  },
  {
   "name": "Christmas Arcanine Mount",
+  "es": "Montura Arcanine Navideña",
+  "pt": "Montagem de arcaninos de Natal",
+  "zh": "圣诞风速狗坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3108,6 +3825,9 @@
  },
  {
   "name": "Rainbow Ho-Oh Mount",
+  "es": "Montura Ho-Oh Arcoíris",
+  "pt": "Montagem Rainbow Ho-Oh",
+  "zh": "彩虹色凤王坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3121,6 +3841,9 @@
  },
  {
   "name": "Bulbasaur-Surf Mount (Shiny)",
+  "es": "Montura Bulbasaur Surf (Variocolor)",
+  "pt": "Bulbasaur-Surf Mount (Shiny)",
+  "zh": "妙蛙种子冲浪板坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3134,6 +3857,9 @@
  },
  {
   "name": "Bulbasaur-Surf Mount",
+  "es": "Montura Bulbasaur Surf",
+  "pt": "Bulbasaur-Surf Mount",
+  "zh": "妙蛙种子冲浪板坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3147,6 +3873,9 @@
  },
  {
   "name": "Charmander-Surf Mount (Shiny)",
+  "es": "Montura Charmander Surf (Variocolor)",
+  "pt": "Charmander-Surf Mount (Brilhante)",
+  "zh": "小火龙冲浪板坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3160,6 +3889,9 @@
  },
  {
   "name": "Charmander-Surf Mount",
+  "es": "Montura Charmander Surf",
+  "pt": "Charmander-Surf Mount",
+  "zh": "小火龙冲浪板坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3173,6 +3905,9 @@
  },
  {
   "name": "Dratini-Surf Mount (Shiny)",
+  "es": "Montura Dratini Surf (Variocolor)",
+  "pt": "Dratini-Surf Mount (Brilhante)",
+  "zh": "迷你龙冲浪板坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3186,6 +3921,9 @@
  },
  {
   "name": "Dratini-Surf Mount",
+  "es": "Montura Dratini Surf",
+  "pt": "Dratini-Surf Mount",
+  "zh": "迷你龙冲浪板坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3199,6 +3937,9 @@
  },
  {
   "name": "Squirtle-Surf Mount (Shiny)",
+  "es": "Montura Squirtle Surf (Variocolor)",
+  "pt": "Squirtle-Surf Mount (Brilhante)",
+  "zh": "杰尼龟冲浪板坐骑（闪光）",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3212,6 +3953,9 @@
  },
  {
   "name": "Squirtle-Surf Mount",
+  "es": "Montura Squirtle Surf",
+  "pt": "Squirtle-Surf Mount",
+  "zh": "杰尼龟冲浪板坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3225,6 +3969,9 @@
  },
  {
   "name": "Heatran Mount (Shiny)",
+  "es": "Montura Heatran (Variocolor)",
+  "pt": "Montagem Heatran (Brilhante)",
+  "zh": "席多蓝恩坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3238,6 +3985,9 @@
  },
  {
   "name": "Heatran Mount",
+  "es": "Montura Heatran",
+  "pt": "Montagem Heatran",
+  "zh": "席多蓝恩坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3251,6 +4001,9 @@
  },
  {
   "name": "Summer Latios Mount",
+  "es": "Montura Latios de Verano",
+  "pt": "Montagem do Latios de Verão",
+  "zh": "夏日拉帝欧斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3264,6 +4017,9 @@
  },
  {
   "name": "Summer Latios Mount (Shiny)",
+  "es": "Montura Latios de Verano (Variocolor)",
+  "pt": "Montagem de Latios de Verão (Brilhante)",
+  "zh": "夏日拉帝欧斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3277,6 +4033,9 @@
  },
  {
   "name": "Summer Latias Mount",
+  "es": "Montura Latias de Verano",
+  "pt": "Montagem de Latias de Verão",
+  "zh": "夏日拉帝亚斯坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3290,6 +4049,9 @@
  },
  {
   "name": "Summer Latias Mount (Shiny)",
+  "es": "Montura Latias de Verano (Variocolor)",
+  "pt": "Montagem de Latias de Verão (brilhante)",
+  "zh": "夏日拉帝亚斯坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3303,6 +4065,9 @@
  },
  {
   "name": "Summer Latios Mount (Orange Variant)",
+  "es": "Montura Latios de Verano (Variante Naranja)",
+  "pt": "Montagem do Latios de Verão (variante laranja)",
+  "zh": "夏日拉帝亚斯坐骑（橙色变种）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3316,6 +4081,9 @@
  },
  {
   "name": "Summer Charizard Mount",
+  "es": "Montura Charizard de Verano",
+  "pt": "Montagem de verão do Charizard",
+  "zh": "夏日喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3329,6 +4097,9 @@
  },
  {
   "name": "Summer Charizard Mount (Shiny)",
+  "es": "Montura Charizard de Verano (Variocolor)",
+  "pt": "Montagem de verão do Charizard (Shiny)",
+  "zh": "夏日喷火龙坐骑（闪光）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3342,6 +4113,9 @@
  },
  {
   "name": "Summer Steelix Mount (Shiny)",
+  "es": "Montura Summer Steelix (Brillante)",
+  "pt": "Suporte Steelix Summer (brilhante)",
+  "zh": "夏日大钢蛇坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3355,6 +4129,9 @@
  },
  {
   "name": "Summer Steelix Mount",
+  "es": "Montura Steelix de verano",
+  "pt": "Suporte Steelix Summer",
+  "zh": "夏日大钢蛇坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3368,6 +4145,9 @@
  },
  {
   "name": "Summer Sharpedo-Surf Mount (Shiny)",
+  "es": "Montura Summer Sharpedo-Surf (Brillante)",
+  "pt": "Suporte para surfista de verão Sharpedo-Surf (brilhante)",
+  "zh": "夏日巨牙鲨冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3381,6 +4161,9 @@
  },
  {
   "name": "Summer Sharpedo-Surf Mount",
+  "es": "Montura Sharpedo-Surf de verano",
+  "pt": "Suporte para surfe de verão Sharpedo-Surf Mount",
+  "zh": "夏日巨牙鲨冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3394,6 +4177,9 @@
  },
  {
   "name": "Summer Scizor Mount (Shiny)",
+  "es": "Montura Scizor de verano (Brillante)",
+  "pt": "Montagem do Scizor de Verão (Brilhante)",
+  "zh": "夏日巨钳螳螂(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3407,6 +4193,9 @@
  },
  {
   "name": "Summer Scizor Mount",
+  "es": "Montura Scizor de verano",
+  "pt": "Montagem do Scizor de Verão",
+  "zh": "夏日巨钳螳螂",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -3420,6 +4209,9 @@
  },
  {
   "name": "Arctovish Surf Mount (Shiny)",
+  "es": "Arctovish Surf Mount (Brillante)",
+  "pt": "Suporte para surfe Arctovish (brilhante)",
+  "zh": "鳃鱼海兽冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3433,6 +4225,9 @@
  },
  {
   "name": "Arctovish Surf Mount",
+  "es": "Montura Arctovish",
+  "pt": "Montagem de surfe Arctovish",
+  "zh": "鳃鱼海兽冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3446,6 +4241,9 @@
  },
  {
   "name": "Chien-Pao Mount (Shiny)",
+  "es": "Monte Chien-Pao (Brillante)",
+  "pt": "Monte Chien-Pao (brilhante)",
+  "zh": "古剑豹坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -3459,6 +4257,9 @@
  },
  {
   "name": "Darkrai Mount (Shiny)",
+  "es": "Montura Darkrai (Brillante)",
+  "pt": "Montagem Darkrai (Brilhante)",
+  "zh": "达克菜伊坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3472,6 +4273,9 @@
  },
  {
   "name": "Invictus Island Darkrai Mount",
+  "es": "Montura Darkrai de la Isla Invictus",
+  "pt": "Montagem de Darkrai na Ilha Invictus",
+  "zh": "InvictusIsland达克菜伊坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3485,6 +4289,9 @@
  },
  {
   "name": "Invictus Island Darkrai Mount (Shiny)",
+  "es": "Montura Darkrai de la Isla Invictus (Brillante)",
+  "pt": "Montagem Darkrai da Ilha Invictus (Brilhante)",
+  "zh": "InvictusIsland达克菜伊坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3498,6 +4305,9 @@
  },
  {
   "name": "Iron Moth Mount (Shiny)",
+  "es": "Montura de polilla de hierro (brillante)",
+  "pt": "Montagem de traça de ferro (brilhante)",
+  "zh": "铁毒蛾坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3511,6 +4321,9 @@
  },
  {
   "name": "Iron Moth Mount",
+  "es": "Montura Iron Moth",
+  "pt": "Montagem de traça de ferro",
+  "zh": "铁毒蛾坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3524,6 +4337,9 @@
  },
  {
   "name": "Majora Gengar Mount",
+  "es": "Montura Majora Gengar",
+  "pt": "Monte Majora Gengar",
+  "zh": "Majora耿鬼坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3537,6 +4353,9 @@
  },
  {
   "name": "Majora Gengar Mount (Shiny)",
+  "es": "Montura Majora Gengar (Brillante)",
+  "pt": "Montagem Majora Gengar (Brilhante)",
+  "zh": "Majora耿鬼坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3550,6 +4369,9 @@
  },
  {
   "name": "Lunala Mount (Shiny)",
+  "es": "Montura Lunala (Brillante)",
+  "pt": "Montagem Lunala (brilhante)",
+  "zh": "露奈雅拉坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3563,6 +4385,9 @@
  },
  {
   "name": "Lunala Mount",
+  "es": "Monte Lunala",
+  "pt": "Monte Lunala",
+  "zh": "露奈雅拉坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3576,6 +4401,9 @@
  },
  {
   "name": "Spectrier Mount",
+  "es": "Montaje Spectrier",
+  "pt": "Montagem Spectrier",
+  "zh": "灵幽马坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3589,6 +4417,9 @@
  },
  {
   "name": "Spectrier Mount (Shiny)",
+  "es": "Soporte Spectrier (Brillante)",
+  "pt": "Suporte para espectador (brilhante)",
+  "zh": "灵幽马坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3602,6 +4433,9 @@
  },
  {
   "name": "Spectrier Mount (Purple)",
+  "es": "Montura Spectrier (Morada)",
+  "pt": "Montagem Spectrier (roxo)",
+  "zh": "灵幽马坐骑(紫色)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3615,6 +4449,9 @@
  },
  {
   "name": "Spectrier Mount (Green)",
+  "es": "Montura Spectrier (Verde)",
+  "pt": "Suporte para espectador (verde)",
+  "zh": "灵幽马坐骑(绿色)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3628,6 +4465,9 @@
  },
  {
   "name": "Spectrier Mount (Red)",
+  "es": "Montura Spectrier (Roja)",
+  "pt": "Suporte Spectrier (vermelho)",
+  "zh": "灵幽马坐骑(红色)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3641,6 +4481,9 @@
  },
  {
   "name": "Mega Manectric Mount",
+  "es": "Montura Mega Manectric",
+  "pt": "Montagem do Mega Manectric",
+  "zh": "超级雷电兽坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3654,6 +4497,9 @@
  },
  {
   "name": "Mega Manectric Mount (Shiny)",
+  "es": "Montura Mega Manectric (Brillante)",
+  "pt": "Mega Manectric Mount (Shiny)",
+  "zh": "超级雷电兽坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3667,6 +4513,9 @@
  },
  {
   "name": "Galaxy Mega Charizard Mount (Shiny)",
+  "es": "Montura Galaxy Mega Charizard (Brillante)",
+  "pt": "Montagem Galaxy Mega Charizard (Brilhante)",
+  "zh": "银河Mega喷火龙坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3680,6 +4529,9 @@
  },
  {
   "name": "Galaxy Mega Charizard Mount",
+  "es": "Montura Galaxy Mega Charizard",
+  "pt": "Montagem do Galaxy Mega Charizard",
+  "zh": "银河Mega喷火龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3693,6 +4545,9 @@
  },
  {
   "name": "Delta Darmanitan Mount",
+  "es": "Montura Delta Darmanitan",
+  "pt": "Montagem do Delta Darmanitan",
+  "zh": "德尔塔达摩狒狒坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3706,6 +4561,9 @@
  },
  {
   "name": "Delta Darmanitan Mount (Shiny)",
+  "es": "Montura Delta Darmanitan (Brillante)",
+  "pt": "Montagem Delta Darmanitan (Brilhante)",
+  "zh": "德尔塔达摩狒狒坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3719,6 +4577,9 @@
  },
  {
   "name": "Necrofang Aerodactyl Mount",
+  "es": "Montura Necrofang Aerodactyl",
+  "pt": "Montagem de Aerodáctilo Necrofang",
+  "zh": "死灵之牙化石翼龙坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3732,6 +4593,9 @@
  },
  {
   "name": "Necrofang Aerodactyl Mount (Shiny)",
+  "es": "Montura Necrofang Aerodactyl (Brillante)",
+  "pt": "Montagem de Aerodáctilo Necrofang (Brilhante)",
+  "zh": "死灵之牙化石翼龙坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3745,6 +4609,9 @@
  },
  {
   "name": "Necrofang Aerodactyl Mount (Emerald)",
+  "es": "Montura Necrofang Aerodactyl (Esmeralda)",
+  "pt": "Montagem de Aerodáctilo Necrofang (Esmeralda)",
+  "zh": "死灵之牙化石翼龙坐骑(翡翠色)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3758,6 +4625,9 @@
  },
  {
   "name": "Necrofang Aerodactyl Mount (Gold)",
+  "es": "Montura Necrofang Aerodactyl (Oro)",
+  "pt": "Montagem de Aerodáctilo Necrofang (Ouro)",
+  "zh": "死灵之牙化石翼龙坐骑(金色)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3771,6 +4641,9 @@
  },
  {
   "name": "Delta Volcarona Mount",
+  "es": "Monte Delta Volcarona",
+  "pt": "Monte Delta Volcarona",
+  "zh": "Delta火神蛾坐骑火神蛾坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3784,6 +4657,9 @@
  },
  {
   "name": "Delta Volcarona Mount (Shiny)",
+  "es": "Montura Delta Volcarona (Variocolor)",
+  "pt": "Suporte Delta Volcarona (brilhante)",
+  "zh": "Delta火神蛾坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -3797,6 +4673,9 @@
  },
  {
   "name": "Hoopa Unbound Mount",
+  "es": "Montura Hoopa Desatado",
+  "pt": "Montagem Hoopa Unbound",
+  "zh": "胡帕解放形态坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3810,6 +4689,9 @@
  },
  {
   "name": "Hoopa Unbound Mount (Shiny)",
+  "es": "Montura Hoopa Desatado (Variocolor)",
+  "pt": "Montagem Hoopa Unbound (Brilhante)",
+  "zh": "胡帕解放形态坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3823,6 +4705,9 @@
  },
  {
   "name": "Ho-Oh Mount (Halloween 2024)",
+  "es": "Montura Ho-Oh (Halloween 2024)",
+  "pt": "Ho-Oh Mount (Halloween 2024)",
+  "zh": "凤王坐骑（2024年万圣节）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3836,6 +4721,9 @@
  },
  {
   "name": "Shadow Mega-Mewtwo-Y Mount (Shiny)",
+  "es": "Montura Mega-Mewtwo-Y Sombra (Variocolor)",
+  "pt": "Montagem Shadow Mega-Mewtwo-Y (Brilhante)",
+  "zh": "暗影Mega超梦Y坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3849,6 +4737,9 @@
  },
  {
   "name": "Shadow Mega-Mewtwo-Y Mount",
+  "es": "Montura Mega-Mewtwo-Y Sombra",
+  "pt": "Montagem Shadow Mega-Mewtwo-Y",
+  "zh": "暗影Mega超梦Y坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3862,6 +4753,9 @@
  },
  {
   "name": "Shadow Mega-Mewtwo-X Mount",
+  "es": "Montura Mega-Mewtwo-X Sombra",
+  "pt": "Montagem Shadow Mega-Mewtwo-X",
+  "zh": "暗影Mega超梦X坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3875,6 +4769,9 @@
  },
  {
   "name": "Shadow Mega-Mewtwo-X Mount (Shiny)",
+  "es": "Montura Mega-Mewtwo-X Sombra (Variocolor)",
+  "pt": "Montagem Shadow Mega-Mewtwo-X (brilhante)",
+  "zh": "暗影Mega超梦X坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3888,6 +4785,9 @@
  },
  {
   "name": "Mega Delta Blastoise Mount (Shiny)",
+  "es": "Montura Mega Delta Blastoise (Variocolor)",
+  "pt": "Mega Delta Blastoise Mount (Shiny)",
+  "zh": "MegaDelta水箭龟冲浪坐骑(闪光)",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3901,6 +4801,9 @@
  },
  {
   "name": "Mega Delta Blastoise Mount",
+  "es": "Montura Mega Delta Blastoise",
+  "pt": "Montagem do Mega Delta Blastoise",
+  "zh": "MegaDelta水箭龟冲浪坐骑",
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -3914,6 +4817,9 @@
  },
  {
   "name": "Roaring Moon Mount",
+  "es": "Montura Luna Rugiente",
+  "pt": "Monte Roaring Moon",
+  "zh": "轰鸣月坐骑",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3927,6 +4833,9 @@
  },
  {
   "name": "Roaring Moon Mount (Shiny)",
+  "es": "Montura Luna Rugiente (Variocolor)",
+  "pt": "Monte Roaring Moon (Brilhante)",
+  "zh": "轰鸣月坐骑(闪光)",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -3940,6 +4849,9 @@
  },
  {
   "name": "Halloween Kingdra Surf Mount (2024)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3953,6 +4865,9 @@
  },
  {
   "name": "Halloween Kingdra Surf Mount (2024) (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3966,6 +4881,9 @@
  },
  {
   "name": "Halloween Tyrantrum Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3979,6 +4897,9 @@
  },
  {
   "name": "Halloween Tyrantrum Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -3992,6 +4913,9 @@
  },
  {
   "name": "Delta Venusaur Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4005,6 +4929,9 @@
  },
  {
   "name": "Delta Venusaur Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4018,6 +4945,9 @@
  },
  {
   "name": "Cobalion Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4031,6 +4961,9 @@
  },
  {
   "name": "Cobalion Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4044,6 +4977,9 @@
  },
  {
   "name": "Virizion Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4057,6 +4993,9 @@
  },
  {
   "name": "Virizion Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4070,6 +5009,9 @@
  },
  {
   "name": "Wooloo Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4083,6 +5025,9 @@
  },
  {
   "name": "Wooloo Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4096,6 +5041,9 @@
  },
  {
   "name": "Terrakion Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4109,6 +5057,9 @@
  },
  {
   "name": "Terrakion Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4122,6 +5073,9 @@
  },
  {
   "name": "Christmas Talonflame Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4135,6 +5089,9 @@
  },
  {
   "name": "Christmas Talonflame Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4148,6 +5105,9 @@
  },
  {
   "name": "Christmas Mamoswine Mount (2024)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4161,6 +5121,9 @@
  },
  {
   "name": "Kyurem Black Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4174,6 +5137,9 @@
  },
  {
   "name": "Christmas Weavile Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4187,6 +5153,9 @@
  },
  {
   "name": "Christmas Hydreigon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4200,6 +5169,9 @@
  },
  {
   "name": "Christmas Hydreigon Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4213,6 +5185,9 @@
  },
  {
   "name": "Tycoon Mount (Eevesenpai)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4226,6 +5201,9 @@
  },
  {
   "name": "Christmas Weavile Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4239,6 +5217,9 @@
  },
  {
   "name": "Christmas Mamoswine Mount (2024) (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4252,6 +5233,9 @@
  },
  {
   "name": "Tycoon Mount (Moundlily)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4265,6 +5249,9 @@
  },
  {
   "name": "Kyurem Black Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4278,6 +5265,9 @@
  },
  {
   "name": "Tycoon Mount (Ahritales)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4291,6 +5281,9 @@
  },
  {
   "name": "Christmas Dragonite Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4304,6 +5297,9 @@
  },
  {
   "name": "Christmas Dragonite Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4317,6 +5313,9 @@
  },
  {
   "name": "Christmas Torkoal Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4330,6 +5329,9 @@
  },
  {
   "name": "Christmas Torkoal Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4343,6 +5345,9 @@
  },
  {
   "name": "Mabosstiff Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -4356,6 +5361,9 @@
  },
  {
   "name": "Mabosstiff Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4369,6 +5377,9 @@
  },
  {
   "name": "Tapu Lele Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4382,6 +5393,9 @@
  },
  {
   "name": "Tapu Lele Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4395,6 +5409,9 @@
  },
  {
   "name": "Diancie Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4408,6 +5425,9 @@
  },
  {
   "name": "Diancie Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4421,6 +5441,9 @@
  },
  {
   "name": "Tapu Fini Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4434,6 +5457,9 @@
  },
  {
   "name": "Tapu Fini Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4447,6 +5473,9 @@
  },
  {
   "name": "Tapu Koko Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4460,6 +5489,9 @@
  },
  {
   "name": "Tapu Koko Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4473,6 +5505,9 @@
  },
  {
   "name": "Easter Exeggcute Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4486,6 +5521,9 @@
  },
  {
   "name": "Easter Exeggcute Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4499,6 +5537,9 @@
  },
  {
   "name": "Ditto Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4512,6 +5553,9 @@
  },
  {
   "name": "Ditto Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4525,6 +5569,9 @@
  },
  {
   "name": "Tapu Bulu Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4538,6 +5585,9 @@
  },
  {
   "name": "Tapu Bulu Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4551,6 +5601,9 @@
  },
  {
   "name": "Mega Diancie Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -4564,6 +5617,9 @@
  },
  {
   "name": "Mega Diancie Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -4577,6 +5633,9 @@
  },
  {
   "name": "Easter Diggersby Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4590,6 +5649,9 @@
  },
  {
   "name": "Easter Diggersby Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4603,6 +5665,9 @@
  },
  {
   "name": "Volcanion Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4616,6 +5681,9 @@
  },
  {
   "name": "Volcanion Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -4629,6 +5697,9 @@
  },
  {
   "name": "Shadow Volcanion Mount (Red)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4642,6 +5713,9 @@
  },
  {
   "name": "Shadow Volcanion Mount (Blue)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4655,6 +5729,9 @@
  },
  {
   "name": "Goodra Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4668,6 +5745,9 @@
  },
  {
   "name": "Goodra Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4681,6 +5761,9 @@
  },
  {
   "name": "Hydrangea Shaymin-Sky Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4694,6 +5777,9 @@
  },
  {
   "name": "Ginkgo Shaymin-Sky Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4707,6 +5793,9 @@
  },
  {
   "name": "Sakura Shaymin-Sky Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4720,6 +5809,9 @@
  },
  {
   "name": "Easter Togekiss Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4733,6 +5825,9 @@
  },
  {
   "name": "Easter Genesect Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4746,6 +5841,9 @@
  },
  {
   "name": "Easter Genesect Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4759,6 +5857,9 @@
  },
  {
   "name": "Easter Togekiss Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4772,6 +5873,9 @@
  },
  {
   "name": "Sakura Shaymin-Sky Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4785,6 +5889,9 @@
  },
  {
   "name": "Ginkgo Shaymin-Sky Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -4798,6 +5905,9 @@
  },
  {
   "name": "Hydrangea Shaymin-Sky Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4811,6 +5921,9 @@
  },
  {
   "name": "Stormtrooper Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4824,6 +5937,9 @@
  },
  {
   "name": "Stormtrooper Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4837,6 +5953,9 @@
  },
  {
   "name": "Caramel Flapple Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4850,6 +5969,9 @@
  },
  {
   "name": "Caramel Flapple Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -4863,6 +5985,9 @@
  },
  {
   "name": "Kanto Starter Squad Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4876,6 +6001,9 @@
  },
  {
   "name": "Kanto Starter Squad Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4889,6 +6017,9 @@
  },
  {
   "name": "Regidrago Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4902,6 +6033,9 @@
  },
  {
   "name": "Regidrago Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4915,6 +6049,9 @@
  },
  {
   "name": "Kanto Starter (1st Evolution) Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4928,6 +6065,9 @@
  },
  {
   "name": "Kanto Starter (1st Evolution) Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4941,6 +6081,9 @@
  },
  {
   "name": "Kanto Starter (2nd Evolution) Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4954,6 +6097,9 @@
  },
  {
   "name": "Kanto Starter (2nd Evolution) Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -4967,6 +6113,9 @@
  },
  {
   "name": "Shadow Articuno Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4980,6 +6129,9 @@
  },
  {
   "name": "Shadow Zapdos Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -4993,6 +6145,9 @@
  },
  {
   "name": "Shadow Moltres Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5006,6 +6161,9 @@
  },
  {
   "name": "Shadow Zapdos Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5019,6 +6177,9 @@
  },
  {
   "name": "Shadow Articuno Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5032,6 +6193,9 @@
  },
  {
   "name": "Shadow Moltres Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5045,6 +6209,9 @@
  },
  {
   "name": "Mega Blastoise Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5058,6 +6225,9 @@
  },
  {
   "name": "Mega Blastoise Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5071,6 +6241,9 @@
  },
  {
   "name": "Mega Beedrill Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5084,6 +6257,9 @@
  },
  {
   "name": "Mega Beedrill Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5097,6 +6273,9 @@
  },
  {
   "name": "Beedrill Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5110,6 +6289,9 @@
  },
  {
   "name": "Beedrill Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5123,6 +6305,9 @@
  },
  {
   "name": "Pidgeot Mount V2",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5136,6 +6321,9 @@
  },
  {
   "name": "Pidgeot Mount V2 (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5149,6 +6337,9 @@
  },
  {
   "name": "Mega Charizard-Y Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5162,6 +6353,9 @@
  },
  {
   "name": "Mega Charizard-Y Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5175,6 +6369,9 @@
  },
  {
   "name": "Furious Regidrago Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5188,6 +6385,9 @@
  },
  {
   "name": "Pikachu Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5201,6 +6401,9 @@
  },
  {
   "name": "Pikachu Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5214,6 +6417,9 @@
  },
  {
   "name": "Raichu Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5227,6 +6433,9 @@
  },
  {
   "name": "Raichu Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5240,6 +6449,9 @@
  },
  {
   "name": "Weezing Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5253,6 +6465,9 @@
  },
  {
   "name": "Weezing Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5266,6 +6481,9 @@
  },
  {
   "name": "Arbok Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5279,6 +6497,9 @@
  },
  {
   "name": "Arbok Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5292,6 +6513,9 @@
  },
  {
   "name": "Terastallized Jolteon Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5305,6 +6529,9 @@
  },
  {
   "name": "Terastallized Jolteon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5318,6 +6545,9 @@
  },
  {
   "name": "Summer Skeledirge Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5331,6 +6561,9 @@
  },
  {
   "name": "Summer Skeledirge Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5344,6 +6577,9 @@
  },
  {
   "name": "Gholdengo Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5357,6 +6593,9 @@
  },
  {
   "name": "Gholdengo Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5370,6 +6609,9 @@
  },
  {
   "name": "Summer Garchomp Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5383,6 +6625,9 @@
  },
  {
   "name": "Summer Garchomp Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5396,6 +6641,9 @@
  },
  {
   "name": "Crawdaunt Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5409,6 +6657,9 @@
  },
  {
   "name": "Crawdaunt Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5422,6 +6673,9 @@
  },
  {
   "name": "Mega Slowbro Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5435,6 +6689,9 @@
  },
  {
   "name": "Mega Slowbro Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5448,6 +6705,9 @@
  },
  {
   "name": "Summer Cloyster Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5461,6 +6721,9 @@
  },
  {
   "name": "Summer Cloyster Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5474,6 +6737,9 @@
  },
  {
   "name": "Ho-Oh Mount (Summer 2026)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5487,6 +6753,9 @@
  },
  {
   "name": "Reshiram Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5500,6 +6769,9 @@
  },
  {
   "name": "Reshiram Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -5513,6 +6785,9 @@
  },
  {
   "name": "Tycoon Mount (Caterpieza)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5526,6 +6801,9 @@
  },
  {
   "name": "Undead Rapidash Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5539,6 +6817,9 @@
  },
  {
   "name": "Undead Rapidash Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -5552,6 +6833,9 @@
  },
  {
   "name": "Candy Golem Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5565,6 +6849,9 @@
  },
  {
   "name": "Candy Golem Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5578,6 +6865,9 @@
  },
  {
   "name": "Hellfire Typhlosion Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5591,6 +6881,9 @@
  },
  {
   "name": "Hellfire Typhlosion Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5604,6 +6897,9 @@
  },
  {
   "name": "Chandelure Spider Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5617,6 +6913,9 @@
  },
  {
   "name": "Chandelure Spider Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -5630,6 +6929,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5643,6 +6945,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Green)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5656,6 +6961,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Blue)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5669,6 +6977,9 @@
  },
  {
   "name": "Halloween Skarmory Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5682,6 +6993,9 @@
  },
  {
   "name": "Halloween Skarmory Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5695,6 +7009,9 @@
  },
  {
   "name": "Halloween Darkrai Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5708,6 +7025,9 @@
  },
  {
   "name": "Halloween Darkrai Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5721,6 +7041,9 @@
  },
  {
   "name": "Mew Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5734,6 +7057,9 @@
  },
  {
   "name": "Mew Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5747,6 +7073,9 @@
  },
  {
   "name": "Galaxy Mew Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5760,6 +7089,9 @@
  },
  {
   "name": "Halloween Ninetales Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5773,6 +7105,9 @@
  },
  {
   "name": "Halloween Ninetales Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5786,6 +7121,9 @@
  },
  {
   "name": "Necrozma-Dusk Mane Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5799,6 +7137,9 @@
  },
  {
   "name": "Necrozma-Dusk Mane Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5812,6 +7153,9 @@
  },
  {
   "name": "Kaiju Gengar Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5825,6 +7169,9 @@
  },
  {
   "name": "Kaiju Gengar Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5838,6 +7185,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Pink)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5851,6 +7201,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Yellow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5864,6 +7217,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Violet)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5877,6 +7233,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Lavender)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5890,6 +7249,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Cyan)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5903,6 +7265,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Rainbow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5916,6 +7281,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (Red)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5929,6 +7297,9 @@
  },
  {
   "name": "Ghost Rider Bike Mount (White)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -5942,6 +7313,9 @@
  },
  {
   "name": "Mecha-Hydreigon Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5955,6 +7329,9 @@
  },
  {
   "name": "Mecha-Hydreigon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -5968,6 +7345,9 @@
  },
  {
   "name": "Interdimensional Hoopa Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5981,6 +7361,9 @@
  },
  {
   "name": "Interdimensional Hoopa Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -5994,6 +7377,9 @@
  },
  {
   "name": "Yellow Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6007,6 +7393,9 @@
  },
  {
   "name": "Vermillion Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6020,6 +7409,9 @@
  },
  {
   "name": "Glacier Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6033,6 +7425,9 @@
  },
  {
   "name": "Blue Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6046,6 +7441,9 @@
  },
  {
   "name": "Green Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6059,6 +7457,9 @@
  },
  {
   "name": "Violet Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6072,6 +7473,9 @@
  },
  {
   "name": "Turquoise Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6085,6 +7489,9 @@
  },
  {
   "name": "Rainbow Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6098,6 +7505,9 @@
  },
  {
   "name": "Red Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6111,6 +7521,9 @@
  },
  {
   "name": "Pink Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6124,6 +7537,9 @@
  },
  {
   "name": "Orange Lollipop Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6137,6 +7553,9 @@
  },
  {
   "name": "Orange Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6150,6 +7569,9 @@
  },
  {
   "name": "Rainbow Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6163,6 +7585,9 @@
  },
  {
   "name": "Salmon Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6176,6 +7601,9 @@
  },
  {
   "name": "Azure Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6189,6 +7617,9 @@
  },
  {
   "name": "Purple Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6202,6 +7633,9 @@
  },
  {
   "name": "Pink Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6215,6 +7649,9 @@
  },
  {
   "name": "White Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6228,6 +7665,9 @@
  },
  {
   "name": "Red Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6241,6 +7681,9 @@
  },
  {
   "name": "Green Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6254,6 +7697,9 @@
  },
  {
   "name": "Blue Cauldron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6267,6 +7713,9 @@
  },
  {
   "name": "Pumpkin Jellicent Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6280,6 +7729,9 @@
  },
  {
   "name": "Pumpkin Jellicent Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6293,6 +7745,9 @@
  },
  {
   "name": "Mega-Gyarados Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6306,6 +7761,9 @@
  },
  {
   "name": "Mega-Gyarados Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6319,6 +7777,9 @@
  },
  {
   "name": "Mantine Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6332,6 +7793,9 @@
  },
  {
   "name": "Mantine Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6345,6 +7809,9 @@
  },
  {
   "name": "Ho-Oh Mount (Halloween 2025)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6358,6 +7825,9 @@
  },
  {
   "name": "Christmas Snorlax Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6371,6 +7841,9 @@
  },
  {
   "name": "Christmas Snorlax Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6384,6 +7857,9 @@
  },
  {
   "name": "Glastrier Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6397,6 +7873,9 @@
  },
  {
   "name": "Glastrier Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6410,6 +7889,9 @@
  },
  {
   "name": "Christmas Celebi Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6423,6 +7905,9 @@
  },
  {
   "name": "Christmas Celebi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6436,6 +7921,9 @@
  },
  {
   "name": "Dewgong Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -6449,6 +7937,9 @@
  },
  {
   "name": "Dewgong Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -6462,6 +7953,9 @@
  },
  {
   "name": "Kaisel Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6475,6 +7969,9 @@
  },
  {
   "name": "Kaisel Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6488,6 +7985,9 @@
  },
  {
   "name": "Avalugg Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6501,6 +8001,9 @@
  },
  {
   "name": "Avalugg Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6514,6 +8017,9 @@
  },
  {
   "name": "Sawsbuck-Winter Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6527,6 +8033,9 @@
  },
  {
   "name": "Sawsbuck-Winter Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6540,6 +8049,9 @@
  },
  {
   "name": "Caped Nidoking Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6553,6 +8065,9 @@
  },
  {
   "name": "Caped Nidoking Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6566,6 +8081,9 @@
  },
  {
   "name": "Sled Mount (Red)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6579,6 +8097,9 @@
  },
  {
   "name": "Sled Mount (White)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6592,6 +8113,9 @@
  },
  {
   "name": "Sled Mount (Blue)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6605,6 +8129,9 @@
  },
  {
   "name": "Sled Mount (Green)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6618,6 +8145,9 @@
  },
  {
   "name": "Sled Mount (Gold)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6631,6 +8161,9 @@
  },
  {
   "name": "Sled Mount (Purple)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6644,6 +8177,9 @@
  },
  {
   "name": "Sled Mount (Cyan)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6657,6 +8193,9 @@
  },
  {
   "name": "Sled Mount (Pink)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6670,6 +8209,9 @@
  },
  {
   "name": "Sled Mount (Navy)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6683,6 +8225,9 @@
  },
  {
   "name": "Sled Mount (Rainbow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6696,6 +8241,9 @@
  },
  {
   "name": "Sled Mount (Teal)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6709,6 +8257,9 @@
  },
  {
   "name": "Sled Mount (Shadow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6722,6 +8273,9 @@
  },
  {
   "name": "Glacial Flygon Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6735,6 +8289,9 @@
  },
  {
   "name": "Glacial Flygon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6748,6 +8305,9 @@
  },
  {
   "name": "Giratina Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -6761,6 +8321,9 @@
  },
  {
   "name": "Yveltal Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6774,6 +8337,9 @@
  },
  {
   "name": "Koraidon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6787,6 +8353,9 @@
  },
  {
   "name": "Magikarp Surfboard Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6800,6 +8369,9 @@
  },
  {
   "name": "Magikarp Surfboard Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6813,6 +8385,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -6826,6 +8401,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -6839,6 +8417,9 @@
  },
  {
   "name": "Valentine Sylveon Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6852,6 +8433,9 @@
  },
  {
   "name": "Valentine Sylveon Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6865,6 +8449,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6878,6 +8465,9 @@
  },
  {
   "name": "Luvdisc Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6891,6 +8481,9 @@
  },
  {
   "name": "Butterfree Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6904,6 +8497,9 @@
  },
  {
   "name": "Butterfree Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -6917,6 +8513,9 @@
  },
  {
   "name": "Sakura Lapras Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6930,6 +8529,9 @@
  },
  {
   "name": "Sakura Lapras Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -6943,6 +8545,9 @@
  },
  {
   "name": "Mega-Heracross Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6956,6 +8561,9 @@
  },
  {
   "name": "Mega-Heracross Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -6969,6 +8577,9 @@
  },
  {
   "name": "Tycoon Mount (Lionnyy)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -6982,6 +8593,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Galaxy)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -6995,6 +8609,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Aurora)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7008,6 +8625,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Void Star)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7021,6 +8641,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Chrome)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7034,6 +8657,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Golden)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7047,6 +8673,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Shadow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7060,6 +8689,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Frozen Crystal)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7073,6 +8705,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Candy Stripe)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7086,6 +8721,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Sunset)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7099,6 +8737,9 @@
  },
  {
   "name": "Luvdisc Surf Mount (Neon Cyan)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7112,6 +8753,9 @@
  },
  {
   "name": "Valentine Togekiss Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7125,6 +8769,9 @@
  },
  {
   "name": "Valentine Togekiss Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7138,6 +8785,9 @@
  },
  {
   "name": "Cresselia Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7151,6 +8801,9 @@
  },
  {
   "name": "Cresselia Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7164,6 +8817,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Cosmic)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7177,6 +8833,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Prismatic)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7190,6 +8849,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Royal)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7203,6 +8865,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Necrotic)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7216,6 +8881,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Spectral)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7229,6 +8897,9 @@
  },
  {
   "name": "Enamorus-Incarnate Mount (Bloodmoon)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7242,6 +8913,9 @@
  },
  {
   "name": "Happy Horse Mount (CNY 2025)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7255,6 +8929,9 @@
  },
  {
   "name": "Sad Horse Mount (CNY 2025)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7268,6 +8945,9 @@
  },
  {
   "name": "Meganium Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7281,6 +8961,9 @@
  },
  {
   "name": "Meganium Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7294,6 +8977,9 @@
  },
  {
   "name": "Larvesta Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7307,6 +8993,9 @@
  },
  {
   "name": "Larvesta Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7320,6 +9009,9 @@
  },
  {
   "name": "Tycoon Mount (Redamancy)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7333,6 +9025,9 @@
  },
  {
   "name": "Choco Dragonite Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7346,6 +9041,9 @@
  },
  {
   "name": "Choco Dragonite Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7359,6 +9057,9 @@
  },
  {
   "name": "Tycoon Mount Gongxifacai",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7372,6 +9073,9 @@
  },
  {
   "name": "Easter-Noivern Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7385,6 +9089,9 @@
  },
  {
   "name": "Easter-Noivern Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7398,6 +9105,9 @@
  },
  {
   "name": "Wyrmrot Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7411,6 +9121,9 @@
  },
  {
   "name": "Wyrmrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7424,6 +9137,9 @@
  },
  {
   "name": "Sakura Ribombee Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7437,6 +9153,9 @@
  },
  {
   "name": "Sakura Ribombee Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7450,6 +9169,9 @@
  },
  {
   "name": "Easter-Altaria Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7463,6 +9185,9 @@
  },
  {
   "name": "Xerneas Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7476,6 +9201,9 @@
  },
  {
   "name": "Xerneas Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7489,6 +9217,9 @@
  },
  {
   "name": "Easter-Altaria Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7502,6 +9233,9 @@
  },
  {
   "name": "Easter-Charizard Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7515,6 +9249,9 @@
  },
  {
   "name": "Easter-Charizard Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7528,6 +9265,9 @@
  },
  {
   "name": "Cottonee Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7541,6 +9281,9 @@
  },
  {
   "name": "Cottonee Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7554,6 +9297,9 @@
  },
  {
   "name": "Lilypad Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7567,6 +9313,9 @@
  },
  {
   "name": "Lilypad Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7580,6 +9329,9 @@
  },
  {
   "name": "Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7593,6 +9345,9 @@
  },
  {
   "name": "Blue Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7606,6 +9361,9 @@
  },
  {
   "name": "Red Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7619,6 +9377,9 @@
  },
  {
   "name": "Green Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7632,6 +9393,9 @@
  },
  {
   "name": "Aqua Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7645,6 +9409,9 @@
  },
  {
   "name": "Purple Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7658,6 +9425,9 @@
  },
  {
   "name": "Pink Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7671,6 +9441,9 @@
  },
  {
   "name": "Golden Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7684,6 +9457,9 @@
  },
  {
   "name": "Shiny Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7697,6 +9473,9 @@
  },
  {
   "name": "Rainbow Carrot Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7710,6 +9489,9 @@
  },
  {
   "name": "Easter-Noivern Mount (Prismatic)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7723,6 +9505,9 @@
  },
  {
   "name": "Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7736,6 +9521,9 @@
  },
  {
   "name": "Red Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7749,6 +9537,9 @@
  },
  {
   "name": "Blue Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7762,6 +9553,9 @@
  },
  {
   "name": "Yellow Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7775,6 +9569,9 @@
  },
  {
   "name": "Orange Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7788,6 +9585,9 @@
  },
  {
   "name": "Pink Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7801,6 +9601,9 @@
  },
  {
   "name": "Light Blue Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -7814,6 +9617,9 @@
  },
  {
   "name": "Purple Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7827,6 +9633,9 @@
  },
  {
   "name": "Black Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7840,6 +9649,9 @@
  },
  {
   "name": "White Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack6.png",
@@ -7853,6 +9665,9 @@
  },
  {
   "name": "Frozen Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -7866,6 +9681,9 @@
  },
  {
   "name": "Prismatic Yoshi Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7879,6 +9697,9 @@
  },
  {
   "name": "Shadow Xerneas Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7892,6 +9713,9 @@
  },
  {
   "name": "Orca-Kyogre Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7905,6 +9729,9 @@
  },
  {
   "name": "Orca-Kyogre Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -7918,6 +9745,9 @@
  },
  {
   "name": "Bulbasaur Bike Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7931,6 +9761,9 @@
  },
  {
   "name": "Bulbasaur Bike Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7944,6 +9777,9 @@
  },
  {
   "name": "Charmander Bike Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7957,6 +9793,9 @@
  },
  {
   "name": "Charmander Bike Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -7970,6 +9809,9 @@
  },
  {
   "name": "Squirtle Bike Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7983,6 +9825,9 @@
  },
  {
   "name": "Squirtle Bike Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack5.png",
@@ -7996,6 +9841,9 @@
  },
  {
   "name": "Mecha Naganadel Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -8009,6 +9857,9 @@
  },
  {
   "name": "Mecha Naganadel Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -8022,6 +9873,9 @@
  },
  {
   "name": "Dhelmise Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -8035,6 +9889,9 @@
  },
  {
   "name": "Dhelmise Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack2.png",
@@ -8048,6 +9905,9 @@
  },
  {
   "name": "Mining Cart Mount (Silver)",
+  "es": "Carro Minero Plateado (Montura)",
+  "pt": "Carrinho de Mineração Prateado (Montaria)",
+  "zh": "银色矿车（坐骑）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -8061,6 +9921,9 @@
  },
  {
   "name": "Mining Cart Mount (Gold)",
+  "es": "Carro Minero Dorado (Montura)",
+  "pt": "Carrinho de Mineração Dourado (Montaria)",
+  "zh": "金色矿车（坐骑）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -8074,6 +9937,9 @@
  },
  {
   "name": "Mining Cart Mount (Rainbow)",
+  "es": "Carro Minero Arcoíris (Montura)",
+  "pt": "Carrinho de Mineração Arco-íris (Montaria)",
+  "zh": "彩虹矿车（坐骑）",
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack4.png",
@@ -8087,6 +9953,9 @@
  },
  {
   "name": "Jetski Surf Mount (Black)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -8100,6 +9969,9 @@
  },
  {
   "name": "Jetski Surf Mount (Rainbow)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -8113,6 +9985,9 @@
  },
  {
   "name": "Jetski Surf Mount (White)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -8126,6 +10001,9 @@
  },
  {
   "name": "Kabutops Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -8139,6 +10017,9 @@
  },
  {
   "name": "Kabutops Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": {
    "page": "item_pack3.png",
@@ -8152,6 +10033,9 @@
  },
  {
   "name": "Aggron Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -8165,6 +10049,9 @@
  },
  {
   "name": "Aggron Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "LAND_POKEMON",
   "icon": {
    "page": "item_pack.png",
@@ -8178,11 +10065,17 @@
  },
  {
   "name": "Floatzel Surf Mount",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": null
  },
  {
   "name": "Floatzel Surf Mount (Shiny)",
+  "es": null,
+  "pt": null,
+  "zh": null,
   "type": "SURF_POKEMON",
   "icon": null
  }

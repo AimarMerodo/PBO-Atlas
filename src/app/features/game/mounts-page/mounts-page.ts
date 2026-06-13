@@ -55,7 +55,7 @@ export class MountsPageComponent {
     const onlyShiny = this.onlyShiny();
     return mounts.filter((m) => {
       if (group && groupOf(m.type) !== group) return false;
-      if (q && !m.name.toLowerCase().includes(q)) return false;
+      if (q && !m.name.toLowerCase().includes(q) && !this.localName(m).toLowerCase().includes(q)) return false;
       if (onlyShiny && !/shiny/i.test(m.name)) return false;
       return true;
     });
@@ -79,6 +79,10 @@ export class MountsPageComponent {
         this.selected.set(mounts.find((m) => slugifyName(m.name) === this.initialSlug) ?? null);
       }
     });
+  }
+
+  protected localName(m: Mount): string {
+    return this.i18n.pick({ en: m.name, es: m.es, zh: m.zh, pt: m.pt });
   }
 
   protected groupLabel(type: string): string {

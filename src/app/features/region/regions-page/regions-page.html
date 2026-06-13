@@ -1,0 +1,25 @@
+<div class="space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("home.regions") }}</h1>
+
+  @if (regions(); as regionCards) {
+    <div class="grid gap-4 sm:grid-cols-2">
+      @for (card of regionCards; track card.id) {
+        <a
+          [routerLink]="['/region', card.id]"
+          class="group rounded-xl border border-line bg-surface p-5 transition-colors hover:border-accent/60"
+        >
+          <div class="flex items-baseline justify-between">
+            <h2 class="text-lg font-bold group-hover:text-accent-soft transition-colors">{{ card.name }}</h2>
+            <span class="text-xs text-ink-dim">
+              {{ card.locations }} {{ i18n.t("home.locations") }} · {{ card.species }} {{ i18n.t("region.species") }}
+            </span>
+          </div>
+          <p class="mt-1 text-sm text-ink-dim">{{ i18n.pick(card.description) }}</p>
+        </a>
+      }
+    </div>
+    <p class="mt-4 text-xs text-ink-dim">{{ i18n.t("home.dataFrom") }}</p>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">...</p>
+  }
+</div>

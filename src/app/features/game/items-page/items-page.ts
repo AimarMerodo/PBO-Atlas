@@ -5,6 +5,7 @@ import { LucideSearch } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { GameItem } from "@core/models/types";
+import { itemCategoryKey } from "@core/utils/item-category";
 import { ItemIcon } from "@shared/components/item-icon/item-icon";
 import { Pager } from "@shared/components/pager/pager";
 import { ItemModal } from "@features/game/item-modal/item-modal";
@@ -74,6 +75,11 @@ export class ItemsPageComponent {
 
   protected localName(i: GameItem): string {
     return this.i18n.pick({ en: i.name, es: i.es, zh: i.zh, pt: i.pt });
+  }
+
+  protected categoryLabel(category: string): string {
+    const key = itemCategoryKey(category);
+    return key ? this.i18n.t(key) : category;
   }
 
   protected onQuery(value: string): void {

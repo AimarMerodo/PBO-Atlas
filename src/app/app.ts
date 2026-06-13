@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ApplicationRef, ChangeDetectionStrategy, Component, PLATFORM_ID, inject } from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
 import { RouterOutlet } from "@angular/router";
 import { Header } from "@layout/header/header";
 import { FeedbackBanner } from "@layout/feedback-banner/feedback-banner";
@@ -22,4 +23,15 @@ import { SearchDialog } from "@shared/components/search-dialog/search-dialog";
     <app-search-dialog />
   `,
 })
-export class App {}
+export class App {
+  constructor() {
+    // Reveal the app once hydration applied the saved language (see index.html);
+    // the timeout is a failsafe so the page never stays hidden.
+    const appRef = inject(ApplicationRef);
+    if (isPlatformBrowser(inject(PLATFORM_ID))) {
+      Promise.race([appRef.whenStable(), new Promise((resolve) => setTimeout(resolve, 2500))]).then(() =>
+        document.documentElement.classList.remove("lang-pending"),
+      );
+    }
+  }
+}

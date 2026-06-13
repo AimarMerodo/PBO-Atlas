@@ -138,14 +138,22 @@ for (const r of regions) {
 console.log(`locations: ${regions.reduce((n, r) => n + spawnsByRegion[r.id].locations.length, 0)} files + 4 region files`);
 
 // --- lists ---
-await write(
-  "lists/home.json",
-  regions.map((r) => {
-    const species = new Set();
-    spawnsByRegion[r.id].locations.forEach((l) => l.spawns.forEach((s) => species.add(s.pokemon)));
-    return { ...r, locations: spawnsByRegion[r.id].locations.length, species: species.size };
-  })
-);
+const homeRegions = regions.map((r) => {
+  const species = new Set();
+  spawnsByRegion[r.id].locations.forEach((l) => l.spawns.forEach((s) => species.add(s.pokemon)));
+  return { ...r, locations: spawnsByRegion[r.id].locations.length, species: species.size };
+});
+await write("lists/home.json", {
+  regions: homeRegions,
+  stats: {
+    pokemon: Object.keys(pokedex).length,
+    locations: homeRegions.reduce((n, r) => n + r.locations, 0),
+    items: (await readJson("items.json")).items.length,
+    mounts: (await readJson("mounts.json")).length,
+    cosmetics: (await readJson("cosmetics.json")).length,
+    natures: natures.length,
+  },
+});
 await write(
   "lists/pokedex.json",
   Object.values(pokedex)

@@ -5,6 +5,9 @@ import { LANGS } from "@core/i18n/dictionaries";
 @Component({
   selector: "app-language-toggle",
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // The active language comes from localStorage (browser-only), so the
+  // prerendered HTML (always EN) never matches; skip hydration to re-render.
+  host: { ngSkipHydration: "true" },
   template: `
     <div class="flex rounded-lg border border-line overflow-hidden text-xs font-semibold">
       @for (l of langs; track l.code) {

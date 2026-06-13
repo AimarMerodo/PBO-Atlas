@@ -18,7 +18,7 @@
           </p>
           <div class="mt-2 flex flex-wrap gap-1.5">
             @for (item of b.items.slice(0, 8); track $index) {
-              <div class="rounded-lg bg-zinc-300/80 p-1" [title]="item.name">
+              <div class="rounded-lg bg-zinc-300/80 p-1" [title]="pieceName(item)">
                 <app-item-icon [icon]="item.icon" [size]="28" />
               </div>
             }
@@ -42,7 +42,7 @@
             <div class="rounded-lg bg-zinc-300/80 p-1">
               <app-item-icon [icon]="item.icon" [size]="30" />
             </div>
-            {{ item.name }}
+            {{ pieceName(item) }}
           </li>
         }
       </ul>

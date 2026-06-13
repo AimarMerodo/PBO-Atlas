@@ -5,7 +5,7 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { parseCsv, parseNameMap } from "./lib/csv.mjs";
+import { parseCsv, parseLocalizedMap, parseNameMap } from "./lib/csv.mjs";
 import { slugify } from "./lib/normalize.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -71,9 +71,13 @@ console.log(`atlas icons: ${Object.keys(icons).length}`);
 // Machine items ("Gen7 TM01", "TM27", "TR05", "HM02") get the typed disc
 // icon (tr-<type>) of the move they teach.
 const moveType = {};
+const moveNames = {};
 {
   const movesData = JSON.parse(await readFile(path.join(ROOT, "data", "moves.json"), "utf8"));
-  for (const m of Object.values(movesData.moves)) moveType[m.en.toLowerCase()] = m.type;
+  for (const m of Object.values(movesData.moves)) {
+    moveType[m.en.toLowerCase()] = m.type;
+    moveNames[m.en.toLowerCase()] = { es: m.es ?? null, zh: m.zh ?? null, pt: m.pt ?? null };
+  }
 }
 const machineMove = {};
 const loadTmMap = async (file, prefix) => {
@@ -117,9 +121,26 @@ function findIcon(name) {
 }
 
 // --- Items ---
-const itemsEs = parseNameMap(await read("i18n", "items_es.csv"));
-const itemsPt = parseNameMap(await read("i18n", "items_pt.csv"));
-const itemsZh = parseNameMap(await read("i18n", "items_zh.csv"));
+// Game i18n CSVs carry both the translated name and the translated description.
+const itemsEs = parseLocalizedMap(await read("i18n", "items_es.csv"));
+const itemsPt = parseLocalizedMap(await read("i18n", "items_pt.csv"));
+const itemsZh = parseLocalizedMap(await read("i18n", "items_zh.csv"));
+
+// items.csv category casing is inconsistent ("Hold items"/"Hold Items"...);
+// normalize so the category filter has no duplicates.
+const CATEGORIES = [
+  "Medicine",
+  "Battle items",
+  "Hold items",
+  "Selling items",
+  "General items",
+  "Berries",
+  "Pokeballs",
+  "Machines",
+  "Spawn item",
+  "Customisation",
+];
+const canonicalCategory = Object.fromEntries(CATEGORIES.map((c) => [c.toLowerCase(), c]));
 
 // Reverse index: evolution triggers "use <Item>" -> pokemon that evolve with it.
 const evolvesByItem = {};
@@ -138,22 +159,36 @@ const evolvesByItem = {};
 
 const items = [];
 for (const r of parseCsv(await read("item", "items.csv"))) {
-  const [name, category, description, id] = r;
+  const [name, rawCategory, description, id] = r;
   if (!name || !id) continue;
   const slug = slugify(name);
-  const teachesName = machineMove[name.trim()] ?? null;
-  const evolves = evolvesByItem[name.trim().toLowerCase()];
+  const category = canonicalCategory[(rawCategory || "Misc").trim().toLowerCase()] ?? (rawCategory || "Misc");
+  const key = name.trim();
+  const teachesName = machineMove[key] ?? null;
+  const teachesLocal = teachesName ? moveNames[teachesName.toLowerCase()] : null;
+  const evolves = evolvesByItem[key.toLowerCase()];
   items.push({
     id: Number(id),
     slug,
     name,
-    es: itemsEs[name] ?? null,
-    pt: itemsPt[name] ?? null,
-    zh: itemsZh[name] ?? null,
-    category: category || "Misc",
+    es: itemsEs[key]?.name ?? null,
+    pt: itemsPt[key]?.name ?? null,
+    zh: itemsZh[key]?.name ?? null,
+    category,
     description: description || "",
+    descEs: itemsEs[key]?.desc ?? null,
+    descPt: itemsPt[key]?.desc ?? null,
+    descZh: itemsZh[key]?.desc ?? null,
     icon: findIcon(name) ?? (category === "Machines" ? machineIcon(name) : null),
-    teaches: teachesName ? { name: teachesName, type: moveType[teachesName.toLowerCase()] ?? null } : null,
+    teaches: teachesName
+      ? {
+          name: teachesName,
+          es: teachesLocal?.es ?? null,
+          zh: teachesLocal?.zh ?? null,
+          pt: teachesLocal?.pt ?? null,
+          type: moveType[teachesName.toLowerCase()] ?? null,
+        }
+      : null,
     evolves: evolves ? [...evolves].map(([s, n]) => ({ slug: s, name: n })) : null,
   });
 }
@@ -165,9 +200,17 @@ console.log(`items: ${items.length} (${withIcon} with icon)`);
 // --- Mounts ---
 const mounts = parseCsv(await read("item", "mounts.csv"))
   .filter((r) => r[0])
-  .map(([name, type]) => ({ name, type: type?.trim() ?? "", icon: findIcon(name) }));
+  .map(([name, type]) => ({
+    name,
+    es: itemsEs[name.trim()]?.name ?? null,
+    pt: itemsPt[name.trim()]?.name ?? null,
+    zh: itemsZh[name.trim()]?.name ?? null,
+    type: type?.trim() ?? "",
+    icon: findIcon(name),
+  }));
 await writeFile(path.join(DATA, "mounts.json"), JSON.stringify(mounts, null, 1), "utf8");
-console.log(`mounts: ${mounts.length} (${mounts.filter((m) => m.icon).length} with icon)`);
+const mountsLocalized = mounts.filter((m) => m.zh).length;
+console.log(`mounts: ${mounts.length} (${mounts.filter((m) => m.icon).length} with icon, ${mountsLocalized} localized)`);
 
 // --- Cosmetic bundles ---
 const bundleDir = path.join(GAME, "bundles");
@@ -183,7 +226,13 @@ for (const file of (await readdir(bundleDir)).sort()) {
     const entries = Array.isArray(data) ? data : [data];
     const itemNames = [...new Set(entries.flatMap((e) => (e.items ?? []).map((i) => i.name)).filter(Boolean))];
     if (itemNames.length) {
-      const pieces = itemNames.map((n) => ({ name: n, icon: findIcon(n) }));
+      const pieces = itemNames.map((n) => ({
+        name: n,
+        es: itemsEs[n.trim()]?.name ?? null,
+        pt: itemsPt[n.trim()]?.name ?? null,
+        zh: itemsZh[n.trim()]?.name ?? null,
+        icon: findIcon(n),
+      }));
       bundles.push({
         slug: slugify(name),
         name,

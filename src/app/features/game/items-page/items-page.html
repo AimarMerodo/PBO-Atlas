@@ -24,7 +24,7 @@
         >
           <option value="">{{ i18n.t("items.allCategories") }}</option>
           @for (c of categories(); track c) {
-            <option [value]="c">{{ c }}</option>
+            <option [value]="c">{{ categoryLabel(c) }}</option>
           }
         </select>
         <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
@@ -44,7 +44,7 @@
             <p class="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">
               {{ localName(i) }}
             </p>
-            <p class="mt-1 line-clamp-1 text-[9px] uppercase tracking-wide text-ink-dim">{{ i.category }}</p>
+            <p class="mt-1 line-clamp-1 text-[9px] uppercase tracking-wide text-ink-dim">{{ categoryLabel(i.category) }}</p>
           </button>
         }
       </div>

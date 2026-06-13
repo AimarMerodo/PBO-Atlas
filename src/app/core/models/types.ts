@@ -43,6 +43,18 @@ export interface HomeRegionCard extends RegionMeta {
   species: number;
 }
 
+export interface HomePayload {
+  regions: HomeRegionCard[];
+  stats: {
+    pokemon: number;
+    locations: number;
+    items: number;
+    mounts: number;
+    cosmetics: number;
+    natures: number;
+  };
+}
+
 export interface MapMarker {
   locationId: string;
   x: number;
@@ -211,13 +223,19 @@ export interface GameItem {
   zh: string | null;
   category: string;
   description: string;
+  descEs: string | null;
+  descPt: string | null;
+  descZh: string | null;
   icon: AtlasIcon | null;
-  teaches?: { name: string; type: string | null } | null;
+  teaches?: { name: string; es: string | null; zh: string | null; pt: string | null; type: string | null } | null;
   evolves?: { slug: string; name: string }[] | null;
 }
 
 export interface Mount {
   name: string;
+  es: string | null;
+  pt: string | null;
+  zh: string | null;
   type: string;
   icon: AtlasIcon | null;
 }
@@ -226,7 +244,7 @@ export interface CosmeticBundle {
   slug: string;
   name: string;
   icon: AtlasIcon | null;
-  items: { name: string; icon: AtlasIcon | null }[];
+  items: { name: string; es: string | null; pt: string | null; zh: string | null; icon: AtlasIcon | null }[];
 }
 
 export interface RoutesManifest {

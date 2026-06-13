@@ -49,3 +49,12 @@ export function parseNameMap(text) {
   }
   return map;
 }
+
+/** Parse an "English Name,Translated Name,Description" mapping CSV (with header). */
+export function parseLocalizedMap(text) {
+  const map = {};
+  for (const [en, translated, desc] of parseCsv(text).slice(1)) {
+    if (en && translated) map[en.trim()] = { name: translated.trim(), desc: desc?.trim() || null };
+  }
+  return map;
+}

@@ -47,6 +47,10 @@ export class CosmeticsPageComponent {
     return name.replace(/ Bundle| Costume/g, "");
   }
 
+  protected pieceName(piece: CosmeticBundle["items"][number]): string {
+    return this.i18n.pick({ en: piece.name, es: piece.es, zh: piece.zh, pt: piece.pt });
+  }
+
   protected select(bundle: CosmeticBundle | null): void {
     this.selected.set(bundle);
     replaceQueryParam("bundle", bundle?.slug ?? null);

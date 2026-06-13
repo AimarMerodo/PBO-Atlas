@@ -1,18 +1,17 @@
 <app-game-modal
   [title]="localName()"
-  [subtitle]="localName() !== item().name ? item().name : null"
-  [badge]="item().category"
+  [badge]="categoryLabel()"
   [icon]="item().icon"
   (closed)="closed.emit()"
 >
-  @if (item().description) {
-    <p class="mt-4 text-sm leading-relaxed text-ink-dim">{{ item().description }}</p>
+  @if (localDescription()) {
+    <p class="mt-4 text-sm leading-relaxed text-ink-dim">{{ localDescription() }}</p>
   }
 
   @if (item().teaches; as teaches) {
     <p class="mt-3 flex items-center gap-2 text-sm">
       <span class="text-ink-dim">{{ i18n.t("item.teaches") }}:</span>
-      <span class="font-semibold">{{ teaches.name }}</span>
+      <span class="font-semibold">{{ teachesName() }}</span>
       @if (teaches.type; as type) {
         <app-type-badge [type]="type" />
       }
