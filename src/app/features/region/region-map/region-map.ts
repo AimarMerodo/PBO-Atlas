@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from "@angular/core";
 import { RouterLink } from "@angular/router";
-import { LucideArrowRight } from "@lucide/angular";
+import { LucideArrowRight, LucideSearch, LucideX } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { MapMarker, MarkerPreview, RegionMapData } from "@core/models/types";
 
@@ -14,7 +14,7 @@ const KIND_STYLES: Record<string, string> = {
 @Component({
   selector: "app-region-map",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LucideArrowRight],
+  imports: [RouterLink, LucideArrowRight, LucideSearch, LucideX],
   templateUrl: "./region-map.html",
 })
 export class RegionMapComponent {
@@ -24,6 +24,23 @@ export class RegionMapComponent {
 
   protected readonly i18n = inject(LanguageService);
   protected readonly active = signal<string | null>(null);
+  protected readonly query = signal("");
+
+  private readonly normalizedQuery = computed(() => this.query().trim().toLowerCase());
+  protected readonly isSearching = computed(() => this.normalizedQuery().length > 0);
+
+  /** Markers paired with their preview, filtered by the search query. When a
+   *  query is active only matching markers are kept (flagged `match`). */
+  protected readonly visibleMarkers = computed(() => {
+    const items = this.map()
+      .markers.map((marker) => ({ marker, preview: this.previews()[marker.locationId] }))
+      .filter((x): x is { marker: MapMarker; preview: MarkerPreview } => !!x.preview);
+    const q = this.normalizedQuery();
+    if (!q) return items.map((x) => ({ ...x, match: false }));
+    return items.filter((x) => x.preview.name.toLowerCase().includes(q)).map((x) => ({ ...x, match: true }));
+  });
+
+  protected readonly noResults = computed(() => this.isSearching() && this.visibleMarkers().length === 0);
 
   protected readonly activePreview = computed(() => {
     const id = this.active();
@@ -35,15 +52,35 @@ export class RegionMapComponent {
     return id ? (this.map().markers.find((m) => m.locationId === id) ?? null) : null;
   });
 
+  /** Update the query; when it narrows to a single location, open its popover. */
+  protected onSearch(value: string): void {
+    this.query.set(value);
+    const matches = this.visibleMarkers();
+    this.active.set(this.normalizedQuery() && matches.length === 1 ? matches[0].marker.locationId : null);
+  }
+
   protected toggle(event: Event, locationId: string): void {
     event.stopPropagation();
     this.active.update((current) => (current === locationId ? null : locationId));
   }
 
-  protected markerClass(m: MapMarker): string {
+  protected markerClass(m: MapMarker, match: boolean): string {
     const kind = KIND_STYLES[m.kind] ?? KIND_STYLES["route"];
-    const activeRing = this.active() === m.locationId ? "scale-125 ring-2 ring-accent-soft" : "";
-    return `block border-2 border-white bg-accent shadow-lg transition-transform group-hover:scale-125 ${kind} ${activeRing}`;
+    const active = this.active() === m.locationId;
+    const emphasis = match
+      ? "scale-[1.6] ring-2 ring-accent-soft"
+      : active
+        ? "scale-125 ring-2 ring-accent-soft"
+        : "group-hover:scale-125";
+    return `relative block border-2 border-white bg-accent shadow-lg transition-transform ${kind} ${emphasis}`;
+  }
+
+  protected labelClass(match: boolean): string {
+    const base =
+      "pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded px-2 py-0.5 text-xs transition-opacity";
+    return match
+      ? `${base} bg-accent font-semibold text-white opacity-100 shadow-lg`
+      : `${base} bg-black/85 text-white opacity-0 group-hover:opacity-100`;
   }
 
   /** Clamp the popover horizontally so it never overflows the map edges. */

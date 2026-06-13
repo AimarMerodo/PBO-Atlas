@@ -1,29 +1,77 @@
-<div class="space-y-2">
-  <p class="text-xs text-ink-dim">{{ i18n.t("region.mapHint") }}</p>
+<div class="space-y-3">
+  <!-- Location search: filters the markers on the map and highlights matches -->
+  <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+    <div class="relative w-full max-w-xs">
+      <svg
+        lucideSearch
+        class="pointer-events-none absolute left-3 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-ink-dim"
+        aria-hidden="true"
+      ></svg>
+      <input
+        [value]="query()"
+        (input)="onSearch($any($event.target).value)"
+        [placeholder]="i18n.t('region.filterPlaceholder')"
+        autocomplete="off"
+        class="w-full rounded-lg border border-line bg-surface py-2 pl-9 pr-9 text-sm text-ink outline-none transition-colors placeholder:text-ink-dim focus:border-accent/60"
+      />
+      @if (query()) {
+        <button
+          type="button"
+          (click)="onSearch('')"
+          class="absolute right-2 top-1/2 z-10 grid h-6 w-6 -translate-y-1/2 place-items-center rounded text-ink-dim transition-colors hover:bg-surface-2 hover:text-ink"
+          aria-label="Clear"
+        >
+          <svg lucideX class="h-4 w-4" aria-hidden="true"></svg>
+        </button>
+      }
+    </div>
+    @if (isSearching()) {
+      <p class="text-xs font-medium text-ink-dim">
+        {{ visibleMarkers().length }} {{ i18n.t("region.locations") }}
+      </p>
+    } @else {
+      <p class="text-xs text-ink-dim">{{ i18n.t("region.mapHint") }}</p>
+    }
+  </div>
+
   <div
     class="relative w-full overflow-hidden rounded-xl border border-line"
     [style.aspectRatio]="map().imageWidth + ' / ' + map().imageHeight"
     (click)="active.set(null)"
   >
     <img [src]="map().image" [alt]="region() + ' map'" class="absolute inset-0 h-full w-full object-cover" />
-    @for (m of map().markers; track m.locationId) {
-      @if (previews()[m.locationId]; as preview) {
-        <button
-          type="button"
-          (click)="toggle($event, m.locationId)"
-          class="group absolute -translate-x-1/2 -translate-y-1/2"
-          [style.left.%]="m.x"
-          [style.top.%]="m.y"
-          [attr.aria-label]="preview.name"
-        >
-          <span [class]="markerClass(m)"></span>
+
+    <!-- Dim the map while searching so the matches stand out -->
+    @if (isSearching()) {
+      <div class="pointer-events-none absolute inset-0 bg-bg/65"></div>
+    }
+
+    @for (item of visibleMarkers(); track item.marker.locationId) {
+      <button
+        type="button"
+        (click)="toggle($event, item.marker.locationId)"
+        class="group absolute z-[5] -translate-x-1/2 -translate-y-1/2"
+        [style.left.%]="item.marker.x"
+        [style.top.%]="item.marker.y"
+        [attr.aria-label]="item.preview.name"
+      >
+        @if (item.match) {
           <span
-            class="pointer-events-none absolute left-1/2 top-full z-10 mt-1 -translate-x-1/2 whitespace-nowrap rounded bg-black/85 px-2 py-0.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100"
-          >
-            {{ preview.name }}
-          </span>
-        </button>
-      }
+            class="pointer-events-none absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-accent/60"
+            aria-hidden="true"
+          ></span>
+        }
+        <span [class]="markerClass(item.marker, item.match)"></span>
+        <span [class]="labelClass(item.match)">{{ item.preview.name }}</span>
+      </button>
+    }
+
+    @if (noResults()) {
+      <div
+        class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-surface/95 px-4 py-2 text-sm text-ink-dim shadow-xl ring-1 ring-line"
+      >
+        {{ i18n.t("search.noResults") }}
+      </div>
     }
 
     @if (activePreview(); as preview) {
@@ -46,7 +94,7 @@
           </div>
           <a
             [routerLink]="['/region', region(), preview.locationId]"
-            class="mt-2 inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-1 text-xs font-semibold text-white hover:bg-accent-soft transition-colors"
+            class="mt-2 inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-1 text-xs font-semibold text-white transition-colors hover:bg-accent-soft"
           >
             {{ i18n.t("region.viewAll") }} <svg lucideArrowRight class="h-3 w-3" aria-hidden="true"></svg>
           </a>
