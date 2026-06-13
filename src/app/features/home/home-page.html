@@ -216,7 +216,7 @@
 <ng-template #regionCard let-r let-featured="featured">
   <a
     [routerLink]="['/region', r.id]"
-    class="group relative block overflow-hidden rounded-2xl border border-line bg-surface shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-xl hover:shadow-black/40"
+    class="group relative block overflow-hidden rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 will-change-transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
   >
     <img
       [src]="'/maps/' + r.id + '.png'"
