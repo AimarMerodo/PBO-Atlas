@@ -216,18 +216,18 @@
 <ng-template #regionCard let-r let-featured="featured">
   <a
     [routerLink]="['/region', r.id]"
-    class="group relative block overflow-hidden rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
+    class="group relative block rounded-2xl bg-surface shadow-lg shadow-black/20 ring-1 ring-inset ring-line transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 hover:ring-accent/60"
   >
     <img
       [src]="'/maps/' + r.id + '.png'"
       [alt]="r.name"
       loading="lazy"
       [class]="
-        'w-full object-cover transition-[filter] duration-500 ease-out group-hover:brightness-110 ' +
+        'w-full rounded-2xl object-cover transition-[filter] duration-500 ease-out group-hover:brightness-110 ' +
         (featured ? 'h-60 sm:h-80' : 'aspect-[5/3]')
       "
     />
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+    <div class="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
     <div class="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-5">
       <div>
         <h3
