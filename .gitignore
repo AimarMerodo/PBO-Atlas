@@ -25,3 +25,6 @@ npm-debug.log*
 
 # leftover locked dir from the migration (empty)
 /angular/
+
+# legacy next residue
+/.next/
