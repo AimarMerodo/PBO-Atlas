@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource } from "@angular/core";
 import { RouterLink } from "@angular/router";
-import { LucideBookOpen, LucideFlaskConical, LucideMap, LucideRabbit, LucideScale, LucideSearch, LucideShirt } from "@lucide/angular";
+import { LucideBookOpen, LucideFlaskConical, LucideMap, LucideRabbit, LucideScale, LucideShirt } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { HomePayload } from "@core/models/types";
-import { SearchDialogService } from "@shared/components/search-dialog/search-dialog.service";
+import { HeroSearch } from "@features/home/hero-search/hero-search";
 
 interface SectionCard {
   route: string;
@@ -29,13 +29,12 @@ const SECTIONS: SectionCard[] = [
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LucideSearch, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
+  imports: [RouterLink, HeroSearch, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })
 export class HomePage {
   protected readonly i18n = inject(LanguageService);
-  protected readonly search = inject(SearchDialogService);
   private readonly data = inject(DataService);
 
   private readonly home = resource({ loader: () => this.data.home() });

@@ -1,30 +1,33 @@
 <div class="space-y-12">
   <!-- Full-bleed day→night time-lapse hero: pixel-art mountains (ansimuz, CC0)
-       behind a CSS-animated sky, sun/moon and stars. -->
-  <section class="hero-band relative isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] overflow-hidden border-b border-line">
-    <div class="sky"></div>
-    <div class="stars">
-      @for (s of stars; track $index) {
-        <span
-          [style.left.%]="s.left"
-          [style.top.%]="s.top"
-          [style.width.px]="s.size"
-          [style.height.px]="s.size"
-          [style.--tw]="s.tw + 's'"
-          [style.--td]="s.delay + 's'"
-        ></span>
-      }
+       behind a CSS-animated sky, sun/moon and stars. The animated scene is in
+       its own clipped wrapper so the search dropdown can overflow the hero. -->
+  <section class="hero-band relative isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] border-b border-line">
+    <div class="hero-bg absolute inset-0 overflow-hidden">
+      <div class="sky"></div>
+      <div class="stars">
+        @for (s of stars; track $index) {
+          <span
+            [style.left.%]="s.left"
+            [style.top.%]="s.top"
+            [style.width.px]="s.size"
+            [style.height.px]="s.size"
+            [style.--tw]="s.tw + 's'"
+            [style.--td]="s.delay + 's'"
+          ></span>
+        }
+      </div>
+      <div class="sun2"></div>
+      <div class="moon"></div>
+      <div class="px-scene">
+        <div class="px-layer px-far"></div>
+        <div class="px-layer px-mid"></div>
+        <div class="px-layer px-trees"></div>
+        <div class="px-layer px-fg"></div>
+      </div>
+      <div class="dc-tint"></div>
+      <div class="hero-scrim"></div>
     </div>
-    <div class="sun2"></div>
-    <div class="moon"></div>
-    <div class="px-scene">
-      <div class="px-layer px-far"></div>
-      <div class="px-layer px-mid"></div>
-      <div class="px-layer px-trees"></div>
-      <div class="px-layer px-fg"></div>
-    </div>
-    <div class="dc-tint"></div>
-    <div class="hero-scrim"></div>
 
     <div class="relative z-10 px-6 py-20 text-center sm:py-28">
       <span
@@ -43,14 +46,9 @@
       </h1>
       <p class="mx-auto mt-4 max-w-xl text-ink drop-shadow sm:text-lg">{{ i18n.t("home.heroSubtitle") }}</p>
 
-      <button
-        (click)="search.open()"
-        class="mx-auto mt-7 flex w-full max-w-md items-center gap-2.5 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm backdrop-blur transition-colors hover:bg-white/15"
-      >
-        <svg lucideSearch class="h-4 w-4 text-ink-dim" aria-hidden="true"></svg>
-        <span class="flex-1 text-left text-ink-dim">{{ i18n.t("search.placeholder") }}</span>
-        <kbd class="hidden rounded bg-white/10 px-1.5 py-0.5 text-[10px] text-ink-dim sm:inline">Ctrl K</kbd>
-      </button>
+      <div class="mt-7">
+        <app-hero-search />
+      </div>
 
       <div class="mt-6 flex flex-wrap justify-center gap-3">
         <a
