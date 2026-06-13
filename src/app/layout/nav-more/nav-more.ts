@@ -5,11 +5,8 @@ import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 
 const LINKS: { href: string; label: DictKey }[] = [
-  { href: "/items", label: "nav.items" },
-  { href: "/natures", label: "nav.natures" },
   { href: "/mounts", label: "nav.mounts" },
   { href: "/cosmetics", label: "nav.cosmetics" },
-  { href: "/feedback", label: "nav.feedback" },
 ];
 
 @Component({
