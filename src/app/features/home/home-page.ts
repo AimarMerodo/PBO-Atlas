@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource } from "@angular/core";
+import { NgTemplateOutlet } from "@angular/common";
 import { RouterLink } from "@angular/router";
-import { LucideBookOpen, LucideFlaskConical, LucideMap, LucideRabbit, LucideScale, LucideShirt } from "@lucide/angular";
+import { LucideBookOpen, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideScale, LucideShirt } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -42,7 +43,7 @@ const SECTIONS: SectionCard[] = [
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale],
+  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideScale, LucideMapPin, LucidePawPrint],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })
@@ -54,6 +55,11 @@ export class HomePage {
   protected readonly stats = computed(() => this.home.value()?.stats ?? null);
   protected readonly regions = computed(() => this.home.value()?.regions ?? null);
   protected readonly sections = SECTIONS;
+
+  // The first region is shown as a wide cinematic hero card; the rest sit in a
+  // 3-column strip below, each showing its full 5:3 map.
+  protected readonly heroRegion = computed(() => this.regions()?.[0] ?? null);
+  protected readonly restRegions = computed(() => this.regions()?.slice(1) ?? []);
 
   /** Headline numbers for the animated stats band. */
   protected readonly statItems = computed(() => {

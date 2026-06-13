@@ -144,31 +144,17 @@
     <p class="mt-5 text-xs text-ink-dim">{{ i18n.t("home.dataFrom") }}</p>
   </section>
 
-  <!-- Regions showcase with the real in-game maps -->
-  @if (regions(); as regionCards) {
+  <!-- Regions showcase: immersive map cards, first region featured wide -->
+  @if (heroRegion(); as hero) {
     <section>
       <h2 class="mb-5 text-xl font-bold">{{ i18n.t("home.regions") }}</h2>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        @for (r of regionCards; track r.id) {
-          <a
-            [routerLink]="['/region', r.id]"
-            class="group relative overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-accent/60"
-          >
-            <img
-              [src]="'/maps/' + r.id + '.png'"
-              [alt]="r.name"
-              loading="lazy"
-              class="aspect-[5/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 p-4">
-              <h3 class="font-bold text-white group-hover:text-accent-soft">{{ r.name }}</h3>
-              <p class="mt-0.5 text-xs text-white/70">
-                {{ r.locations }} {{ i18n.t("home.locations") }} · {{ r.species }} {{ i18n.t("region.species") }}
-              </p>
-            </div>
-          </a>
-        }
+      <div class="space-y-4">
+        <ng-container *ngTemplateOutlet="regionCard; context: { $implicit: hero, featured: true }" />
+        <div class="grid gap-4 sm:grid-cols-3">
+          @for (r of restRegions(); track r.id) {
+            <ng-container *ngTemplateOutlet="regionCard; context: { $implicit: r, featured: false }" />
+          }
+        </div>
       </div>
     </section>
   }
@@ -190,3 +176,49 @@
     </section>
   }
 </div>
+
+<!-- Reusable immersive region card. `featured` makes it a wide cinematic hero. -->
+<ng-template #regionCard let-r let-featured="featured">
+  <a
+    [routerLink]="['/region', r.id]"
+    class="group relative block overflow-hidden rounded-2xl border border-line bg-surface shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-xl hover:shadow-black/40"
+  >
+    <img
+      [src]="'/maps/' + r.id + '.png'"
+      [alt]="r.name"
+      loading="lazy"
+      [class]="
+        'w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 ' +
+        (featured ? 'h-60 sm:h-80' : 'aspect-[5/3]')
+      "
+    />
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-5">
+      <div>
+        <h3
+          [class]="
+            'font-extrabold tracking-tight text-white drop-shadow-md transition-colors group-hover:text-accent-soft ' +
+            (featured ? 'text-2xl sm:text-3xl' : 'text-lg')
+          "
+        >
+          {{ r.name }}
+        </h3>
+        <p class="mt-0.5 line-clamp-1 text-sm text-white/75 drop-shadow">{{ i18n.pick(r.description) }}</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur"
+        >
+          <svg lucideMapPin class="h-3.5 w-3.5" aria-hidden="true"></svg>
+          {{ r.locations }} {{ i18n.t("home.locations") }}
+        </span>
+        <span
+          class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-white ring-1 ring-white/15 backdrop-blur"
+        >
+          <svg lucidePawPrint class="h-3.5 w-3.5" aria-hidden="true"></svg>
+          {{ r.species }} {{ i18n.t("region.species") }}
+        </span>
+      </div>
+    </div>
+  </a>
+</ng-template>
