@@ -60,7 +60,7 @@
     },
     {
       "locationId": "route-205",
-      "x": 32.4,
+      "x": 33.7,
       "y": 57.1,
       "kind": "route"
     },
@@ -72,7 +72,7 @@
     },
     {
       "locationId": "eterna-forest",
-      "x": 32.9,
+      "x": 34.2,
       "y": 47.3,
       "kind": "dungeon"
     },
@@ -84,7 +84,7 @@
     },
     {
       "locationId": "route-206",
-      "x": 39.5,
+      "x": 40.8,
       "y": 62,
       "kind": "route"
     },
@@ -108,7 +108,7 @@
     },
     {
       "locationId": "route-209",
-      "x": 59.3,
+      "x": 60.6,
       "y": 70.4,
       "kind": "route"
     },
@@ -156,7 +156,7 @@
     },
     {
       "locationId": "pastoria-city",
-      "x": 62.9,
+      "x": 64.2,
       "y": 86,
       "kind": "city"
     },
@@ -336,26 +336,26 @@
     },
     {
       "locationId": "iron-island-b1f-l",
-      "x": 25.6,
-      "y": 43.6,
+      "x": 26,
+      "y": 43.4,
       "kind": "dungeon"
     },
     {
       "locationId": "iron-island-b1f-r",
-      "x": 24.1,
-      "y": 43.2,
+      "x": 24.9,
+      "y": 43.7,
       "kind": "dungeon"
     },
     {
       "locationId": "iron-island-b2f-r",
-      "x": 24.1,
-      "y": 41.6,
+      "x": 24,
+      "y": 43,
       "kind": "dungeon"
     },
     {
       "locationId": "iron-island-b2f-l",
-      "x": 25.6,
-      "y": 41.2,
+      "x": 24,
+      "y": 41.8,
       "kind": "dungeon"
     },
     {
@@ -380,6 +380,198 @@
       "locationId": "spring-valley",
       "x": 81.1,
       "y": 53.8,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-225",
+      "x": 64.1,
+      "y": 26.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "survival-area",
+      "x": 67.1,
+      "y": 22.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-226",
+      "x": 71.3,
+      "y": 22.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-227",
+      "x": 73.9,
+      "y": 19.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "stark-mountain",
+      "x": 75,
+      "y": 8.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "stark-mountain-entrance",
+      "x": 73.1,
+      "y": 9.5,
+      "kind": "route"
+    },
+    {
+      "locationId": "stark-mountain-inside",
+      "x": 73.1,
+      "y": 7.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-228",
+      "x": 76.4,
+      "y": 26,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-229",
+      "x": 78.3,
+      "y": 34.2,
+      "kind": "route"
+    },
+    {
+      "locationId": "steel-cavern-1f",
+      "x": 24.9,
+      "y": 41.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "steel-cavern",
+      "x": 26,
+      "y": 41.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "fuego-ironworks",
+      "x": 31.1,
+      "y": 57.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "route-230",
+      "x": 71.3,
+      "y": 34.4,
+      "kind": "route"
+    },
+    {
+      "locationId": "resort-area",
+      "x": 78.7,
+      "y": 38.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-2f",
+      "x": 34,
+      "y": 48,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-abandoned-room-5",
+      "x": 33.4,
+      "y": 48.5,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-abandoned-room-4",
+      "x": 32.7,
+      "y": 48.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-abandoned-room-3",
+      "x": 32,
+      "y": 48.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-abandoned-room-2",
+      "x": 31.7,
+      "y": 47.7,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-dining-area",
+      "x": 31.7,
+      "y": 46.9,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-1f",
+      "x": 32,
+      "y": 46.3,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-1f-east",
+      "x": 32.7,
+      "y": 46,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-1f-west",
+      "x": 33.4,
+      "y": 46.1,
+      "kind": "route"
+    },
+    {
+      "locationId": "old-chateau-abandoned-room-1",
+      "x": 34,
+      "y": 46.6,
+      "kind": "route"
+    },
+    {
+      "locationId": "wayward-cave-1f",
+      "x": 38.9,
+      "y": 63.1,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "wayward-cave-2f",
+      "x": 38.9,
+      "y": 60.9,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "lost-tower-1",
+      "x": 60,
+      "y": 71.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "lost-tower-2",
+      "x": 58.7,
+      "y": 71.5,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "lost-tower-3",
+      "x": 58,
+      "y": 70.4,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "lost-tower-4",
+      "x": 58.7,
+      "y": 69.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "lost-tower-5",
+      "x": 60,
+      "y": 69.3,
+      "kind": "dungeon"
+    },
+    {
+      "locationId": "great-marsh",
+      "x": 61.6,
+      "y": 86,
       "kind": "route"
     }
   ]

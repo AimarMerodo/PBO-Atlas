@@ -15265,6 +15265,6670 @@
           }
         }
       ]
+    },
+    {
+      "id": "route-225",
+      "name": "Route 225",
+      "spawns": [
+        {
+          "pokemon": "purugly",
+          "displayName": "Purugly",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Purugly",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "spinda",
+          "displayName": "Spinda",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinda",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "lopunny",
+          "displayName": "Lopunny",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Lopunny",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "skuntank",
+          "displayName": "Skuntank",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Skuntank",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "swablu",
+          "displayName": "Swablu",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Swablu",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "altaria",
+          "displayName": "Altaria",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Altaria",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "snorlax",
+          "displayName": "Snorlax",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Snorlax",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "whiscash",
+          "displayName": "Whiscash",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Whiscash",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "bruxish",
+          "displayName": "Bruxish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Bruxish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "qwilfish",
+          "displayName": "Qwilfish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Qwilfish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "survival-area",
+      "name": "Survival Area",
+      "spawns": [
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "whiscash",
+          "displayName": "Whiscash",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Whiscash",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "bruxish",
+          "displayName": "Bruxish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Bruxish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "qwilfish",
+          "displayName": "Qwilfish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Qwilfish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "route-226",
+      "name": "Route 226",
+      "spawns": [
+        {
+          "pokemon": "purugly",
+          "displayName": "Purugly",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Purugly",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "spinda",
+          "displayName": "Spinda",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinda",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "lopunny",
+          "displayName": "Lopunny",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Lopunny",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "skuntank",
+          "displayName": "Skuntank",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Skuntank",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "swablu",
+          "displayName": "Swablu",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Swablu",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "altaria",
+          "displayName": "Altaria",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Altaria",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "snorlax",
+          "displayName": "Snorlax",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Snorlax",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "whiscash",
+          "displayName": "Whiscash",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Whiscash",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "bruxish",
+          "displayName": "Bruxish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Bruxish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "qwilfish",
+          "displayName": "Qwilfish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Qwilfish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "route-227",
+      "name": "Route 227",
+      "spawns": [
+        {
+          "pokemon": "spinda",
+          "displayName": "Spinda",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinda",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "lunatone",
+          "displayName": "Lunatone",
+          "rarity": "common",
+          "time": "night",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Lunatone",
+            "rarity": "Common",
+            "time": "Night",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "solrock",
+          "displayName": "Solrock",
+          "rarity": "common",
+          "time": "day",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Solrock",
+            "rarity": "Common",
+            "time": "Day",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "numel",
+          "displayName": "Numel",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Numel",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "camerupt",
+          "displayName": "Camerupt",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Camerupt",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "torkoal",
+          "displayName": "Torkoal",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Torkoal",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "trapinch",
+          "displayName": "Trapinch",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Trapinch",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "relicanth",
+          "displayName": "Relicanth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Relicanth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 BASE_HP, 1 DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "relicanth",
+          "displayName": "Relicanth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Relicanth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 BASE_HP, 1 DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stark-mountain",
+      "name": "Stark Mountain",
+      "spawns": [
+        {
+          "pokemon": "golbat",
+          "displayName": "Golbat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golbat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "graveler",
+          "displayName": "Graveler",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Graveler",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "numel",
+          "displayName": "Numel",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Numel",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "camerupt",
+          "displayName": "Camerupt",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Camerupt",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "torkoal",
+          "displayName": "Torkoal",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Torkoal",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "heatmor",
+          "displayName": "Heatmor",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Heatmor",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SP_ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stark-mountain-entrance",
+      "name": "Stark Mountain: Entrance",
+      "spawns": [
+        {
+          "pokemon": "golbat",
+          "displayName": "Golbat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golbat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "graveler",
+          "displayName": "Graveler",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Graveler",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "numel",
+          "displayName": "Numel",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Numel",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "camerupt",
+          "displayName": "Camerupt",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Camerupt",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "torkoal",
+          "displayName": "Torkoal",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Torkoal",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "heatmor",
+          "displayName": "Heatmor",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Heatmor",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SP_ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stark-mountain-inside",
+      "name": "Stark Mountain Inside",
+      "spawns": [
+        {
+          "pokemon": "golbat",
+          "displayName": "Golbat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golbat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "graveler",
+          "displayName": "Graveler",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Graveler",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "slugma",
+          "displayName": "Slugma",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Slugma",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "onix",
+          "displayName": "Onix",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Onix",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "torkoal",
+          "displayName": "Torkoal",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Torkoal",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "heatmor",
+          "displayName": "Heatmor",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Heatmor",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "larvitar",
+          "displayName": "Larvitar",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 58,
+            "max": 60
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Larvitar",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "58 60",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "route-228",
+      "name": "Route 228",
+      "spawns": [
+        {
+          "pokemon": "sandslash",
+          "displayName": "Sandslash",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Sandslash",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "sandshrew",
+          "displayName": "Sandshrew",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Sandshrew",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "cacnea",
+          "displayName": "Cacnea",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Cacnea",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "cacturne",
+          "displayName": "Cacturne",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Cacturne",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "whismur",
+          "displayName": "Whismur",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Whismur",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "aron",
+          "displayName": "Aron",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Aron",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "hippopotas",
+          "displayName": "Hippopotas",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Hippopotas",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "relicanth",
+          "displayName": "Relicanth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Relicanth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 BASE_HP, 1 DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "poliwhirl",
+          "displayName": "Poliwhirl",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwhirl",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "relicanth",
+          "displayName": "Relicanth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Relicanth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 BASE_HP, 1 DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "route-229",
+      "name": "Route 229",
+      "spawns": [
+        {
+          "pokemon": "tropius",
+          "displayName": "Tropius",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Tropius",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "nincada",
+          "displayName": "Nincada",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Nincada",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "combee",
+          "displayName": "Combee",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Combee",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "vespiquen",
+          "displayName": "Vespiquen",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Vespiquen",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_DEF, 1 DEF"
+          }
+        },
+        {
+          "pokemon": "venomoth",
+          "displayName": "Venomoth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            },
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Venomoth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK, 1 SPEED"
+          }
+        },
+        {
+          "pokemon": "fletchling",
+          "displayName": "Fletchling",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Fletchling",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "octillery",
+          "displayName": "Octillery",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Octillery",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "frillish",
+          "displayName": "Frillish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Frillish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "tentacruel",
+          "displayName": "Tentacruel",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Tentacruel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "wailord",
+          "displayName": "Wailord",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Wailord",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "steel-cavern-1f",
+      "name": "Steel Cavern 1F",
+      "spawns": [
+        {
+          "pokemon": "stunfisk",
+          "displayName": "Stunfisk",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Stunfisk",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "makuhita",
+          "displayName": "Makuhita",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Makuhita",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "hariyama",
+          "displayName": "Hariyama",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Hariyama",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "nosepass",
+          "displayName": "Nosepass",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Nosepass",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "geodude-alola",
+          "displayName": "Geodude-Alola",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Geodude-Alola",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "tyrogue",
+          "displayName": "Tyrogue",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Tyrogue",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "riolu",
+          "displayName": "Riolu",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Riolu",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "steel-cavern",
+      "name": "Steel Cavern",
+      "spawns": [
+        {
+          "pokemon": "stunfisk",
+          "displayName": "Stunfisk",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Stunfisk",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "makuhita",
+          "displayName": "Makuhita",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Makuhita",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "hariyama",
+          "displayName": "Hariyama",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Hariyama",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "nosepass",
+          "displayName": "Nosepass",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Nosepass",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "geodude-alola",
+          "displayName": "Geodude-Alola",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Geodude-Alola",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "tyrogue",
+          "displayName": "Tyrogue",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Tyrogue",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fuego-ironworks",
+      "name": "Fuego Ironworks",
+      "spawns": [
+        {
+          "pokemon": "luxio",
+          "displayName": "Luxio",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Luxio",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "buizel",
+          "displayName": "Buizel",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Buizel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "ponyta",
+          "displayName": "Ponyta",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Ponyta",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "togedemaru",
+          "displayName": "Togedemaru",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Togedemaru",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "pichu",
+          "displayName": "Pichu",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Pichu",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "pikachu-rock-star",
+          "displayName": "Pikachu-Rock-Star",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [],
+          "raw": {
+            "pokemon": "Pikachu-Rock-Star",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": ""
+          }
+        },
+        {
+          "pokemon": "pikachu-pop-star",
+          "displayName": "Pikachu-Pop-Star",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [],
+          "raw": {
+            "pokemon": "Pikachu-Pop-Star",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": ""
+          }
+        },
+        {
+          "pokemon": "pikachu-phd",
+          "displayName": "Pikachu-PhD",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [],
+          "raw": {
+            "pokemon": "Pikachu-PhD",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": ""
+          }
+        },
+        {
+          "pokemon": "pikachu-libre",
+          "displayName": "Pikachu-Libre",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [],
+          "raw": {
+            "pokemon": "Pikachu-Libre",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": ""
+          }
+        },
+        {
+          "pokemon": "pikachu-belle",
+          "displayName": "Pikachu-Belle",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [],
+          "raw": {
+            "pokemon": "Pikachu-Belle",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": ""
+          }
+        },
+        {
+          "pokemon": "magby",
+          "displayName": "Magby",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 29,
+            "max": 31
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Magby",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "29 31",
+            "ev": "1 SPEED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "route-230",
+      "name": "Route 230",
+      "spawns": [
+        {
+          "pokemon": "tropius",
+          "displayName": "Tropius",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Tropius",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "nincada",
+          "displayName": "Nincada",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Nincada",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "combee",
+          "displayName": "Combee",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Combee",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "vespiquen",
+          "displayName": "Vespiquen",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Vespiquen",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_DEF, 1 DEF"
+          }
+        },
+        {
+          "pokemon": "venomoth",
+          "displayName": "Venomoth",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            },
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Venomoth",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SP_ATK, 1 SPEED"
+          }
+        },
+        {
+          "pokemon": "fletchling",
+          "displayName": "Fletchling",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Fletchling",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "octillery",
+          "displayName": "Octillery",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Octillery",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "frillish",
+          "displayName": "Frillish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Frillish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "horsea",
+          "displayName": "Horsea",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Horsea",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "tentacruel",
+          "displayName": "Tentacruel",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Tentacruel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "wailord",
+          "displayName": "Wailord",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Wailord",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "horsea",
+          "displayName": "Horsea",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Horsea",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 SP_ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resort-area",
+      "name": "Resort Area",
+      "spawns": [
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "octillery",
+          "displayName": "Octillery",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Octillery",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 ATK, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "frillish",
+          "displayName": "Frillish",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Frillish",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "56 58",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "golduck",
+          "displayName": "Golduck",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golduck",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "tentacruel",
+          "displayName": "Tentacruel",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Tentacruel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "2 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "luvdisc",
+          "displayName": "Luvdisc",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 56,
+            "max": 58
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Luvdisc",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Surfing",
+            "level": "56 58",
+            "ev": "1 SPEED"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-2f",
+      "name": "Old Chateau 2F",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-abandoned-room-5",
+      "name": "Old Chateau Abandoned Room #5",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-abandoned-room-4",
+      "name": "Old Chateau Abandoned Room #4",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-abandoned-room-3",
+      "name": "Old Chateau Abandoned Room #3",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-abandoned-room-2",
+      "name": "Old Chateau Abandoned Room #2",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-dining-area",
+      "name": "Old Chateau Dining Area",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-1f",
+      "name": "Old Chateau 1F",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-1f-east",
+      "name": "Old Chateau 1F: East",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-1f-west",
+      "name": "Old Chateau 1F: West",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "old-chateau-abandoned-room-1",
+      "name": "Old Chateau Abandoned Room #1",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 16,
+            "max": 18
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "16 18",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wayward-cave-1f",
+      "name": "Wayward Cave 1F",
+      "spawns": [
+        {
+          "pokemon": "golbat",
+          "displayName": "Golbat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 41,
+            "max": 43
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golbat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "41 43",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "floatzel",
+          "displayName": "Floatzel",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 41,
+            "max": 43
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Floatzel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "41 43",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "chimecho",
+          "displayName": "Chimecho",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 41,
+            "max": 43
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Chimecho",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "41 43",
+            "ev": "1 SP_DEF, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "graveler-alola",
+          "displayName": "Graveler-Alola",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 41,
+            "max": 43
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Graveler-Alola",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "41 43",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "rhyhorn",
+          "displayName": "Rhyhorn",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 41,
+            "max": 43
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Rhyhorn",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "41 43",
+            "ev": "1 DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wayward-cave-2f",
+      "name": "Wayward Cave 2F",
+      "spawns": [
+        {
+          "pokemon": "golbat",
+          "displayName": "Golbat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Golbat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "floatzel",
+          "displayName": "Floatzel",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Floatzel",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "2 SPEED"
+          }
+        },
+        {
+          "pokemon": "chimecho",
+          "displayName": "Chimecho",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            },
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Chimecho",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "1 SP_DEF, 1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "graveler-alola",
+          "displayName": "Graveler-Alola",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Graveler-Alola",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "2 DEF"
+          }
+        },
+        {
+          "pokemon": "rhydon",
+          "displayName": "Rhydon",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Rhydon",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "2 ATK"
+          }
+        },
+        {
+          "pokemon": "gible",
+          "displayName": "Gible",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 43,
+            "max": 45
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gible",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "43 45",
+            "ev": "1 ATK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lost-tower-1",
+      "name": "Lost Tower #1",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "murkrow",
+          "displayName": "Murkrow",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Murkrow",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lost-tower-2",
+      "name": "Lost Tower #2",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "murkrow",
+          "displayName": "Murkrow",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Murkrow",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lost-tower-3",
+      "name": "Lost Tower #3",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "murkrow",
+          "displayName": "Murkrow",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Murkrow",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lost-tower-4",
+      "name": "Lost Tower #4",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "murkrow",
+          "displayName": "Murkrow",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Murkrow",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lost-tower-5",
+      "name": "Lost Tower #5",
+      "spawns": [
+        {
+          "pokemon": "spinarak",
+          "displayName": "Spinarak",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Spinarak",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "shuppet",
+          "displayName": "Shuppet",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shuppet",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "misdreavus",
+          "displayName": "Misdreavus",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Misdreavus",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "gastly",
+          "displayName": "Gastly",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Gastly",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "murkrow",
+          "displayName": "Murkrow",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Murkrow",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "duskull",
+          "displayName": "Duskull",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 24,
+            "max": 26
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Duskull",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "24 26",
+            "ev": "1 SP_DEF"
+          }
+        }
+      ]
+    },
+    {
+      "id": "great-marsh",
+      "name": "Great Marsh",
+      "spawns": [
+        {
+          "pokemon": "wormadam-trash",
+          "displayName": "Wormadam-Trash",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            },
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Wormadam-Trash",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SP_DEF, 1 DEF"
+          }
+        },
+        {
+          "pokemon": "patrat",
+          "displayName": "Patrat",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Patrat",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "surskit",
+          "displayName": "Surskit",
+          "rarity": "common",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Surskit",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "electrike",
+          "displayName": "Electrike",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Electrike",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "bonsly",
+          "displayName": "Bonsly",
+          "rarity": "uncommon",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Bonsly",
+            "rarity": "Uncommon",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "shroomish",
+          "displayName": "Shroomish",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Shroomish",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "oddish",
+          "displayName": "Oddish",
+          "rarity": "rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Oddish",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "yanma",
+          "displayName": "Yanma",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Yanma",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "skorupi",
+          "displayName": "Skorupi",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Skorupi",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 DEF"
+          }
+        },
+        {
+          "pokemon": "chimchar",
+          "displayName": "Chimchar",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Chimchar",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "turtwig",
+          "displayName": "Turtwig",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "walking",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Turtwig",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Walking",
+            "level": "4 12",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "poliwag",
+          "displayName": "Poliwag",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Poliwag",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "goldeen",
+          "displayName": "Goldeen",
+          "rarity": "common",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Goldeen",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Fishing",
+            "level": "4 12",
+            "ev": "1 ATK"
+          }
+        },
+        {
+          "pokemon": "magikarp",
+          "displayName": "Magikarp",
+          "rarity": "rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "speed",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Magikarp",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "4 12",
+            "ev": "1 SPEED"
+          }
+        },
+        {
+          "pokemon": "lapras",
+          "displayName": "Lapras",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 2
+            }
+          ],
+          "raw": {
+            "pokemon": "Lapras",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "4 12",
+            "ev": "2 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "piplup",
+          "displayName": "Piplup",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "fishing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Piplup",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Fishing",
+            "level": "4 12",
+            "ev": "1 SP_ATK"
+          }
+        },
+        {
+          "pokemon": "tentacool",
+          "displayName": "Tentacool",
+          "rarity": "common",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Tentacool",
+            "rarity": "Common",
+            "time": "All",
+            "method": "Surfing",
+            "level": "4 12",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "lotad",
+          "displayName": "Lotad",
+          "rarity": "rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-defense",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Lotad",
+            "rarity": "Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "4 12",
+            "ev": "1 SP_DEF"
+          }
+        },
+        {
+          "pokemon": "wailmer",
+          "displayName": "Wailmer",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Wailmer",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "4 12",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "slowpoke",
+          "displayName": "Slowpoke",
+          "rarity": "very-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "hp",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Slowpoke",
+            "rarity": "Very Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "4 12",
+            "ev": "1 BASE_HP"
+          }
+        },
+        {
+          "pokemon": "piplup",
+          "displayName": "Piplup",
+          "rarity": "ultra-rare",
+          "time": "all",
+          "method": "surfing",
+          "level": {
+            "min": 4,
+            "max": 12
+          },
+          "evs": [
+            {
+              "stat": "special-attack",
+              "amount": 1
+            }
+          ],
+          "raw": {
+            "pokemon": "Piplup",
+            "rarity": "Ultra Rare",
+            "time": "All",
+            "method": "Surfing",
+            "level": "4 12",
+            "ev": "1 SP_ATK"
+          }
+        }
+      ]
     }
   ]
 }
