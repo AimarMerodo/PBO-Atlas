@@ -98,7 +98,7 @@
               loading="lazy"
               [class]="
                 'pointer-events-none absolute object-contain opacity-80 drop-shadow-xl transition-transform duration-300 group-hover:scale-110 [image-rendering:pixelated] ' +
-                (s.featured ? '-right-4 -bottom-4 h-72 w-72' : '-bottom-3 -right-3 h-24 w-24')
+                (s.featured ? '-right-6 -bottom-8 h-[24rem] w-[24rem]' : '-bottom-3 -right-3 h-24 w-24')
               "
             />
           }
@@ -135,7 +135,7 @@
               }
             </div>
             @if (s.featured) {
-              <p class="mt-1 max-w-[62%] text-sm text-ink-dim">{{ i18n.t(s.desc) }}</p>
+              <p class="mt-1 max-w-[50%] text-sm text-ink-dim">{{ i18n.t(s.desc) }}</p>
             }
           </div>
         </a>
