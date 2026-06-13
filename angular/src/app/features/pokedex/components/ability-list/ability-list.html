@@ -1,0 +1,26 @@
+<div class="grid gap-3 sm:grid-cols-2">
+  @for (a of abilities(); track a.slug) {
+    <div
+      [class]="
+        'rounded-xl border p-4 ' + (a.hidden ? 'border-amber-400/40 bg-amber-400/5' : 'border-line bg-surface')
+      "
+    >
+      <div class="flex items-center gap-2">
+        @if (a.hidden) {
+          <svg lucideEyeOff class="h-4 w-4 text-amber-400" aria-hidden="true"></svg>
+        } @else {
+          <svg lucideEye class="h-4 w-4 text-ink-dim" aria-hidden="true"></svg>
+        }
+        <span class="font-semibold">{{ name(a) }}</span>
+        @if (a.hidden) {
+          <span
+            class="rounded-full border border-amber-400/50 bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-300"
+          >
+            {{ i18n.t("ability.hidden") }}
+          </span>
+        }
+      </div>
+      <p class="mt-1.5 text-sm leading-relaxed text-ink-dim">{{ text(a) }}</p>
+    </div>
+  }
+</div>

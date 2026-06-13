@@ -1,0 +1,51 @@
+<div class="space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("cosmetics.title") }}</h1>
+
+  @if (bundles(); as list) {
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      @for (b of list; track b.slug) {
+        <button
+          (click)="select(b)"
+          class="rounded-xl border border-line bg-surface p-4 text-left transition-colors hover:border-accent/60"
+        >
+          <p class="flex items-center gap-2 font-semibold">
+            @if (b.icon) {
+              <app-item-icon [icon]="b.icon" [size]="24" />
+            } @else {
+              <svg lucideShirt class="h-4 w-4 text-accent-soft" aria-hidden="true"></svg>
+            }
+            {{ prettyName(b.name) }}
+          </p>
+          <div class="mt-2 flex flex-wrap gap-1.5">
+            @for (item of b.items.slice(0, 8); track $index) {
+              <div class="rounded-lg bg-zinc-300/80 p-1" [title]="item.name">
+                <app-item-icon [icon]="item.icon" [size]="28" />
+              </div>
+            }
+            @if (b.items.length > 8) {
+              <span class="self-center text-xs text-ink-dim">+{{ b.items.length - 8 }}</span>
+            }
+          </div>
+        </button>
+      }
+    </div>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">...</p>
+  }
+
+  @if (selected(); as sel) {
+    <app-game-modal [title]="prettyName(sel.name)" [icon]="sel.icon" (closed)="select(null)">
+      <p class="mt-4 text-xs uppercase tracking-wide text-ink-dim">{{ i18n.t("cosmetics.includes") }}</p>
+      <ul class="mt-2 space-y-1.5">
+        @for (item of sel.items; track $index) {
+          <li class="flex items-center gap-2.5 text-sm">
+            <div class="rounded-lg bg-zinc-300/80 p-1">
+              <app-item-icon [icon]="item.icon" [size]="30" />
+            </div>
+            {{ item.name }}
+          </li>
+        }
+      </ul>
+    </app-game-modal>
+  }
+</div>

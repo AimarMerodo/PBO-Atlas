@@ -1,0 +1,78 @@
+<div class="space-y-4">
+  <div class="flex flex-wrap items-center gap-2">
+    <input
+      #searchInput
+      [value]="query()"
+      (input)="query.set(searchInput.value)"
+      [placeholder]="i18n.t('location.searchPlaceholder')"
+      class="w-full sm:w-64 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+    />
+    <div class="flex flex-wrap gap-1.5">
+      @for (r of rarities(); track r) {
+        <button type="button" [class]="chipClass(rarity() === r)" (click)="rarity.set(rarity() === r ? null : r)">
+          {{ label("rarity", r) }}
+        </button>
+      }
+    </div>
+    @if (times().length > 1) {
+      <div class="flex gap-1.5">
+        @for (tm of times(); track tm) {
+          <button type="button" [class]="chipClass(time() === tm)" (click)="time.set(time() === tm ? null : tm)">
+            {{ label("time", tm) }}
+          </button>
+        }
+      </div>
+    }
+    @if (methods().length > 1) {
+      <div class="flex gap-1.5">
+        @for (m of methods(); track m) {
+          <button type="button" [class]="chipClass(method() === m)" (click)="method.set(method() === m ? null : m)">
+            {{ label("method", m) }}
+          </button>
+        }
+      </div>
+    }
+  </div>
+
+  @if (sorted().length === 0) {
+    <p class="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">
+      {{ i18n.t("location.noResults") }}
+    </p>
+  } @else {
+    <div class="overflow-x-auto rounded-xl border border-line">
+      <table class="w-full text-sm">
+        <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
+          <tr>
+            <th class="px-4 py-2.5" colspan="2">{{ i18n.t("spawn.pokemon") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.rarity") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.time") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.method") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.level") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.evs") }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (s of sorted(); track s.pokemon + "-" + s.method + "-" + $index) {
+            <tr class="border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2">
+              <td class="w-12 py-1.5 pl-3">
+                @if (s.spriteUrl; as sprite) {
+                  <img [src]="sprite" alt="" width="40" height="40" />
+                }
+              </td>
+              <td class="px-2 py-1.5">
+                <a [routerLink]="['/pokedex', s.pokemon]" class="font-medium hover:text-accent-soft transition-colors">
+                  {{ s.displayName }}
+                </a>
+              </td>
+              <td class="px-4 py-1.5"><app-rarity-badge [rarity]="s.rarity" /></td>
+              <td class="px-4 py-1.5"><app-time-icon [time]="s.time" /></td>
+              <td class="px-4 py-1.5"><app-method-icon [method]="s.method" [note]="s.methodNote" /></td>
+              <td class="px-4 py-1.5 whitespace-nowrap text-ink-dim">{{ levelLabel(s) }}</td>
+              <td class="px-4 py-1.5 whitespace-nowrap text-ink-dim">{{ evsLabel(s) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

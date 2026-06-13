@@ -1,0 +1,20 @@
+<div class="space-y-1.5">
+  @for (stat of statNames; track stat) {
+    <div class="flex items-center gap-3 text-sm">
+      <span class="w-20 shrink-0 text-ink-dim">{{ label(stat) }}</span>
+      <span class="w-9 shrink-0 text-right font-mono font-semibold">{{ value(stat) }}</span>
+      <div class="h-2 flex-1 overflow-hidden rounded-full bg-surface-2">
+        <div
+          class="h-full rounded-full"
+          [style.width.%]="width(value(stat))"
+          [style.backgroundColor]="color(value(stat))"
+        ></div>
+      </div>
+    </div>
+  }
+  <div class="flex items-center gap-3 pt-1 text-sm font-semibold">
+    <span class="w-20 shrink-0 text-ink-dim">Total</span>
+    <span class="w-9 shrink-0 text-right font-mono">{{ total() }}</span>
+    <div class="flex-1"></div>
+  </div>
+</div>

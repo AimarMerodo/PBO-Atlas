@@ -1,0 +1,61 @@
+<div class="space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("items.title") }}</h1>
+
+  @if (items()) {
+    <div class="space-y-5">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <div class="relative w-full max-w-md">
+          <svg
+            lucideSearch
+            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+            aria-hidden="true"
+          ></svg>
+          <input
+            [value]="query()"
+            (input)="onQuery($any($event.target).value)"
+            [placeholder]="i18n.t('items.searchPlaceholder')"
+            class="w-full rounded-xl border border-line bg-surface py-2 pl-10 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+          />
+        </div>
+        <select
+          [value]="category() ?? ''"
+          (change)="onCategory($any($event.target).value)"
+          class="rounded-lg border border-line bg-surface px-2.5 py-2 text-sm text-ink outline-none"
+        >
+          <option value="">{{ i18n.t("items.allCategories") }}</option>
+          @for (c of categories(); track c) {
+            <option [value]="c">{{ c }}</option>
+          }
+        </select>
+        <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+          {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        @for (i of visible(); track i.id) {
+          <button
+            (click)="select(i)"
+            class="group flex flex-col items-center rounded-xl border border-line bg-surface p-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
+          >
+            <div class="rounded-xl bg-zinc-300/80 p-2.5 transition-transform group-hover:scale-105">
+              <app-item-icon [icon]="i.icon" [size]="56" />
+            </div>
+            <p class="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">
+              {{ localName(i) }}
+            </p>
+            <p class="mt-1 line-clamp-1 text-[9px] uppercase tracking-wide text-ink-dim">{{ i.category }}</p>
+          </button>
+        }
+      </div>
+
+      @if (selected(); as sel) {
+        <app-item-modal [item]="sel" (closed)="select(null)" />
+      }
+
+      <app-pager [current]="current()" [pageCount]="pageCount()" [numbered]="false" (pageChange)="page.set($event)" />
+    </div>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">...</p>
+  }
+</div>

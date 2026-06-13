@@ -1,0 +1,73 @@
+<div class="space-y-3">
+  <div class="flex items-start gap-2.5 rounded-xl border border-line bg-surface px-4 py-2.5 text-xs text-ink-dim">
+    <svg lucideDatabase class="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+    <p>{{ i18n.t("moves.source") }}</p>
+  </div>
+
+  <div class="flex flex-wrap gap-1.5">
+    @for (t of available(); track t.key) {
+      <button
+        (click)="select(t.key)"
+        [class]="
+          'rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ' +
+          (tab() === t.key
+            ? 'border-accent bg-accent/20 text-accent-soft'
+            : 'border-line bg-surface text-ink-dim hover:text-ink')
+        "
+      >
+        {{ i18n.t(t.label) }}
+        <span class="ml-1.5 text-xs opacity-70">{{ count(t.key) }}</span>
+      </button>
+    }
+  </div>
+
+  <div class="overflow-x-auto rounded-xl border border-line">
+    <table class="w-full text-sm">
+      <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
+        <tr>
+          @if (tab() === "level") {
+            <th class="px-4 py-2.5">{{ i18n.t("moves.levelCol") }}</th>
+          }
+          @if (tab() === "machine") {
+            <th class="px-4 py-2.5">TM</th>
+          }
+          <th class="px-4 py-2.5">{{ i18n.t("moves.name") }}</th>
+          <th class="px-4 py-2.5">{{ i18n.t("moves.type") }}</th>
+          <th class="px-4 py-2.5">{{ i18n.t("moves.class") }}</th>
+          <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.power") }}</th>
+          <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.accuracy") }}</th>
+          <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.pp") }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of rows(); track row.slug) {
+          <tr class="border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2">
+            @if (tab() === "level") {
+              <td class="px-4 py-1.5 font-mono text-ink-dim">{{ row.level === 0 ? "—" : row.level }}</td>
+            }
+            @if (tab() === "machine") {
+              <td class="px-4 py-1.5 font-mono text-xs text-ink-dim">{{ row.move.tm ?? "—" }}</td>
+            }
+            <td class="max-w-72 px-4 py-1.5">
+              <span class="font-medium">{{ moveName(row.move) }}</span>
+              @if (moveDesc(row.move)) {
+                <span class="block text-xs leading-snug text-ink-dim">{{ moveDesc(row.move) }}</span>
+              }
+            </td>
+            <td class="px-4 py-1.5">
+              <app-type-badge [type]="row.move.type" />
+            </td>
+            <td class="px-4 py-1.5">
+              <span class="text-xs font-semibold" [style.color]="classColor(row.move.class)">
+                {{ classLabel(row.move.class) }}
+              </span>
+            </td>
+            <td class="px-4 py-1.5 text-right font-mono text-ink-dim">{{ row.move.power ?? "—" }}</td>
+            <td class="px-4 py-1.5 text-right font-mono text-ink-dim">{{ row.move.accuracy ?? "—" }}</td>
+            <td class="px-4 py-1.5 text-right font-mono text-ink-dim">{{ row.move.pp ?? "—" }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

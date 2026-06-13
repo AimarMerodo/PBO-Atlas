@@ -1,0 +1,21 @@
+@if (page.value(); as p) {
+  <div class="space-y-8">
+    <div>
+      <h1 class="text-2xl font-extrabold tracking-tight">{{ p.meta.name }}</h1>
+      <p class="text-sm text-ink-dim">{{ p.locations.length }} {{ i18n.t("home.locations") }}</p>
+    </div>
+
+    @if (p.map; as map) {
+      <app-region-map [map]="map" [region]="region()" [previews]="p.previews ?? {}" />
+    } @else {
+      <p class="rounded-lg border border-dashed border-line bg-surface px-4 py-3 text-sm text-ink-dim">
+        {{ i18n.t("region.noMap") }}
+      </p>
+    }
+
+    <section>
+      <h2 class="mb-4 text-lg font-bold">{{ i18n.t("region.locations") }}</h2>
+      <app-location-list [region]="region()" [locations]="p.locations" />
+    </section>
+  </div>
+}

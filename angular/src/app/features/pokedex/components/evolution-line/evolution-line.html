@@ -1,0 +1,48 @@
+<div class="flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+  @for (stage of stages(); track stage.slug; let i = $index) {
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      @if (i > 0) {
+        <div class="flex flex-col items-center gap-1.5 px-1">
+          <svg lucideArrowRight class="h-6 w-6 text-ink-dim" aria-hidden="true"></svg>
+          @if (stage.trigger) {
+            <span
+              class="max-w-36 rounded-full border border-accent/50 bg-accent/10 px-3 py-1 text-center text-xs font-semibold leading-tight text-accent-soft"
+            >
+              {{ triggerLabel(stage.trigger) }}
+            </span>
+          }
+        </div>
+      }
+      <a
+        [routerLink]="['/pokedex', stage.slug]"
+        [class]="
+          'group flex w-40 flex-col items-center rounded-2xl border p-4 transition-all hover:-translate-y-0.5 ' +
+          (stage.slug === current() ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-accent/60')
+        "
+      >
+        @if (stage.id !== null) {
+          <span class="self-end font-mono text-[10px] text-ink-dim">#{{ dexNo(stage.id) }}</span>
+        }
+        @if (stage.artwork) {
+          <img
+            [src]="stage.artwork"
+            [alt]="stage.name"
+            width="110"
+            height="110"
+            class="drop-shadow-md transition-transform duration-200 group-hover:scale-110"
+          />
+        } @else {
+          <div class="h-[110px] w-[110px]"></div>
+        }
+        <span class="mt-2 text-center text-sm font-semibold leading-tight">{{ stage.name }}</span>
+        @if (stage.types.length > 0) {
+          <span class="mt-1.5 flex gap-1">
+            @for (tp of stage.types; track tp) {
+              <app-type-badge [type]="tp" />
+            }
+          </span>
+        }
+      </a>
+    </div>
+  }
+</div>

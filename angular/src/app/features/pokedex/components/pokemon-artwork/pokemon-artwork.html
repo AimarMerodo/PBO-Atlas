@@ -1,0 +1,32 @@
+<div
+  class="relative flex min-h-72 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-72"
+>
+  @if (artworkShiny()) {
+    <button
+      (click)="toggleShiny()"
+      [attr.aria-pressed]="shiny()"
+      [title]="i18n.t('pokemon.shiny')"
+      [class]="
+        'absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ' +
+        (shiny()
+          ? 'border-amber-400/60 bg-amber-400/15 text-amber-300'
+          : 'border-line bg-surface text-ink-dim hover:text-ink')
+      "
+    >
+      <svg lucideSparkles class="h-3.5 w-3.5" aria-hidden="true"></svg>
+      Shiny
+    </button>
+  }
+  @if (aniUrl() && !aniFailed()) {
+    <img
+      [src]="aniUrl()"
+      [alt]="shiny() ? name() + ' shiny' : name()"
+      (error)="aniFailed.set(true)"
+      class="max-h-40 w-auto scale-[1.75] [image-rendering:pixelated]"
+    />
+  } @else if (src()) {
+    <img [src]="src()" [alt]="shiny() ? name() + ' shiny' : name()" width="200" height="200" />
+  } @else if (gameSprite()) {
+    <img [src]="gameSprite()" [alt]="name()" width="120" height="120" class="[image-rendering:pixelated]" />
+  }
+</div>

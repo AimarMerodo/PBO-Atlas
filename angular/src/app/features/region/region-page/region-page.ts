@@ -1,30 +1,32 @@
-import { ChangeDetectionStrategy, Component, inject, input, resource } from "@angular/core";
-import { RouterLink } from "@angular/router";
+import { ChangeDetectionStrategy, Component, effect, inject, input, resource } from "@angular/core";
+import { Title } from "@angular/platform-browser";
 import { DataService } from "@core/data/data.service";
+import { LanguageService } from "@core/i18n/language.service";
+import { LocationListComponent } from "@features/region/location-list/location-list";
+import { RegionMapComponent } from "@features/region/region-map/region-map";
 
 @Component({
   selector: "app-region-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink],
-  template: `
-    <!-- STUB: replaced in Fase 3 (block A) with map + location list -->
-    @if (page.value(); as p) {
-      <h1 class="text-2xl font-bold">{{ p.meta.name }}</h1>
-      <ul class="mt-4 grid gap-1 sm:grid-cols-3">
-        @for (l of p.locations; track l.id) {
-          <li>
-            <a [routerLink]="['/region', region(), l.id]" class="text-sm text-accent-soft hover:underline">{{ l.name }}</a>
-          </li>
-        }
-      </ul>
-    }
-  `,
+  imports: [RegionMapComponent, LocationListComponent],
+  templateUrl: "./region-page.html",
 })
 export class RegionPageComponent {
   readonly region = input.required<string>();
+
+  protected readonly i18n = inject(LanguageService);
   private readonly data = inject(DataService);
+  private readonly title = inject(Title);
+
   protected readonly page = resource({
     params: () => this.region(),
     loader: ({ params }) => this.data.region(params),
   });
+
+  constructor() {
+    effect(() => {
+      const p = this.page.value();
+      if (p) this.title.setTitle(`${p.meta.name} — Spawns | PBO Atlas`);
+    });
+  }
 }

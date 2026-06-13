@@ -1,0 +1,110 @@
+<div class="space-y-8">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">{{ i18n.t("pokedex.title") }}</h1>
+
+  <div class="space-y-5">
+    <div class="space-y-3">
+      <div class="relative mx-auto w-full max-w-2xl">
+        <svg
+          lucideSearch
+          class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-dim"
+          aria-hidden="true"
+        ></svg>
+        <input
+          [value]="query()"
+          (input)="setQuery($any($event.target).value)"
+          [placeholder]="i18n.t('pokedex.searchPlaceholder')"
+          autofocus
+          class="w-full rounded-2xl border border-line bg-surface py-3.5 pl-12 pr-4 text-lg shadow-lg outline-none transition-colors placeholder:text-ink-dim focus:border-accent/70 focus:ring-2 focus:ring-accent/20"
+        />
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <select [value]="type() ?? ''" (change)="setType($any($event.target).value)" [class]="selectClass">
+          <option value="">{{ i18n.t("pokedex.allTypes") }}</option>
+          @for (tp of typeOptions; track tp) {
+            <option [value]="tp" class="capitalize">{{ tp }}</option>
+          }
+        </select>
+        <select [value]="region() ?? ''" (change)="setRegion($any($event.target).value)" [class]="selectClass">
+          <option value="">{{ i18n.t("pokedex.allRegions") }}</option>
+          @for (r of regionOptions; track r.value) {
+            <option [value]="r.value">{{ r.label }}</option>
+          }
+        </select>
+        <select [value]="rarity() ?? ''" (change)="setRarity($any($event.target).value)" [class]="selectClass">
+          <option value="">{{ i18n.t("pokedex.allRarities") }}</option>
+          @for (r of rarityOptions; track r) {
+            <option [value]="r">{{ tKey("rarity." + r) }}</option>
+          }
+        </select>
+        <select [value]="gen() ?? ''" (change)="setGen($any($event.target).value)" [class]="selectClass">
+          <option value="">{{ i18n.t("pokedex.allGens") }}</option>
+          @for (g of generations(); track g) {
+            <option [value]="g">{{ i18n.t("pokedex.gen") }} {{ g }}</option>
+          }
+        </select>
+        <select [value]="ev() ?? ''" (change)="setEv($any($event.target).value)" [class]="selectClass">
+          <option value="">{{ i18n.t("pokedex.anyEv") }}</option>
+          @for (s of evStats; track s) {
+            <option [value]="s">EV: {{ tKey("stat." + s) }}</option>
+          }
+        </select>
+        <select [value]="sort()" (change)="setSort($any($event.target).value)" [class]="selectClass">
+          <option value="number">{{ i18n.t("pokedex.sortNumber") }}</option>
+          <option value="name">{{ i18n.t("pokedex.sortName") }}</option>
+          <option value="stats">{{ i18n.t("pokedex.sortStats") }}</option>
+        </select>
+        <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+          {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+        </span>
+        @if (hasActiveFilters()) {
+          <button
+            (click)="clearFilters()"
+            class="inline-flex items-center gap-1.5 rounded-lg border border-accent/50 bg-accent/10 px-2.5 py-1.5 text-sm text-accent-soft transition-colors hover:bg-accent/20"
+          >
+            <svg lucideFilterX class="h-4 w-4" aria-hidden="true"></svg>
+            {{ i18n.t("pokedex.clearFilters") }}
+          </button>
+        }
+      </div>
+    </div>
+
+    @if (filtered().length === 0) {
+      <p class="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">{{ i18n.t("pokedex.noResults") }}</p>
+    } @else {
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        @for (p of visible(); track p.slug) {
+          <a
+            [routerLink]="['/pokedex', p.slug]"
+            class="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-accent/60"
+          >
+            <div
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-x-0 top-0 h-32 opacity-25 transition-opacity group-hover:opacity-40"
+              [style.background]="'radial-gradient(circle at 50% 0%, ' + tint(p) + ', transparent 70%)'"
+            ></div>
+            <span class="self-end font-mono text-xs text-ink-dim">#{{ dexNo(p.id) }}</span>
+            @if (p.artwork || p.sprite) {
+              <img
+                [src]="p.artwork ?? p.sprite"
+                [alt]="p.name"
+                width="130"
+                height="130"
+                class="relative drop-shadow-lg transition-transform duration-200 group-hover:scale-110"
+              />
+            } @else {
+              <div class="h-[130px] w-[130px]"></div>
+            }
+            <span class="mt-3 text-center text-base font-semibold leading-tight">{{ p.name }}</span>
+            <span class="mt-2 flex gap-1.5">
+              @for (tp of p.types; track tp) {
+                <app-type-badge [type]="tp" />
+              }
+            </span>
+          </a>
+        }
+      </div>
+    }
+
+    <app-pager [current]="current()" [pageCount]="pageCount()" (pageChange)="goTo($event)" />
+  </div>
+</div>

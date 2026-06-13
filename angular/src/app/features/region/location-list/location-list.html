@@ -1,0 +1,20 @@
+<div class="space-y-4">
+  <input
+    #filterInput
+    [value]="query()"
+    (input)="query.set(filterInput.value)"
+    [placeholder]="i18n.t('region.filterPlaceholder')"
+    class="w-full sm:w-72 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+  />
+  <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+    @for (l of filtered(); track l.id) {
+      <a
+        [routerLink]="['/region', region(), l.id]"
+        class="flex items-center justify-between rounded-lg border border-line bg-surface px-4 py-3 transition-colors hover:border-accent/60"
+      >
+        <span class="text-sm font-medium">{{ l.name }}</span>
+        <span class="text-xs text-ink-dim whitespace-nowrap">{{ l.speciesCount }} {{ i18n.t("region.species") }}</span>
+      </a>
+    }
+  </div>
+</div>

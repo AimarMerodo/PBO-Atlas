@@ -1,0 +1,51 @@
+<div class="space-y-10">
+  <section
+    class="rounded-2xl border border-line px-6 py-14 text-center"
+    style="
+      background-image:
+        linear-gradient(rgba(12, 16, 24, 0.45), rgba(12, 16, 24, 0.88)),
+        url(/art/6.png),
+        url(/art/0.png);
+      background-size: cover, cover, cover;
+      background-position:
+        center,
+        center bottom,
+        center;
+    "
+  >
+    <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ i18n.t("home.heroTitle") }}</h1>
+    <p class="mx-auto mt-3 max-w-xl text-ink-dim">{{ i18n.t("home.heroSubtitle") }}</p>
+    <div class="mt-6 flex justify-center gap-3">
+      <a
+        routerLink="/pokedex"
+        class="rounded-lg bg-accent px-5 py-2.5 font-semibold text-white hover:bg-accent-soft transition-colors"
+      >
+        {{ i18n.t("home.openPokedex") }}
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-ink-dim">{{ i18n.t("search.hint") }}</p>
+  </section>
+
+  <section>
+    <h2 class="mb-4 text-xl font-bold">{{ i18n.t("home.regions") }}</h2>
+    @if (cards.value(); as regionCards) {
+      <div class="grid gap-4 sm:grid-cols-2">
+        @for (card of regionCards; track card.id) {
+          <a
+            [routerLink]="['/region', card.id]"
+            class="group rounded-xl border border-line bg-surface p-5 transition-colors hover:border-accent/60"
+          >
+            <div class="flex items-baseline justify-between">
+              <h3 class="text-lg font-bold group-hover:text-accent-soft transition-colors">{{ card.name }}</h3>
+              <span class="text-xs text-ink-dim">
+                {{ card.locations }} {{ i18n.t("home.locations") }} · {{ card.species }} {{ i18n.t("region.species") }}
+              </span>
+            </div>
+            <p class="mt-1 text-sm text-ink-dim">{{ i18n.pick(card.description) }}</p>
+          </a>
+        }
+      </div>
+    }
+    <p class="mt-4 text-xs text-ink-dim">{{ i18n.t("home.dataFrom") }}</p>
+  </section>
+</div>

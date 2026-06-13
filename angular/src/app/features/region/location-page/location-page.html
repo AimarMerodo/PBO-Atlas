@@ -1,0 +1,19 @@
+@if (page.value(); as p) {
+  <div class="space-y-6">
+    <div>
+      <nav class="text-sm text-ink-dim">
+        <a [routerLink]="['/region', p.region]" class="hover:text-ink transition-colors">{{ p.regionName }}</a>
+        / <span class="text-ink">{{ p.name }}</span>
+      </nav>
+      <h1 class="mt-1 text-2xl font-extrabold tracking-tight">{{ i18n.t("location.spawnsTitle") }} {{ p.name }}</h1>
+    </div>
+
+    <app-spawn-table [spawns]="p.spawns" />
+
+    <p class="text-xs text-ink-dim">
+      <a [href]="p.sourceUrl" target="_blank" rel="noopener noreferrer" class="hover:text-ink underline">
+        {{ i18n.t("location.source") }}
+      </a>
+    </p>
+  </div>
+}

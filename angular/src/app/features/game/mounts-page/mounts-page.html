@@ -1,0 +1,76 @@
+<div class="space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("mounts.title") }}</h1>
+
+  @if (mounts()) {
+    <div class="space-y-5">
+      <div class="relative mx-auto w-full max-w-md">
+        <svg
+          lucideSearch
+          class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+          aria-hidden="true"
+        ></svg>
+        <input
+          [value]="query()"
+          (input)="onQuery($any($event.target).value)"
+          [placeholder]="i18n.t('mounts.searchPlaceholder')"
+          class="w-full rounded-xl border border-line bg-surface py-2 pl-10 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+        />
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-1.5">
+        @for (g of groups; track g.key) {
+          <button
+            (click)="toggleGroup(g.key)"
+            [class]="
+              'rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ' +
+              (group() === g.key
+                ? 'border-accent bg-accent/20 text-accent-soft'
+                : 'border-line bg-surface text-ink-dim hover:text-ink')
+            "
+          >
+            {{ i18n.t(g.label) }}
+          </button>
+        }
+        <button
+          (click)="toggleShiny()"
+          [attr.aria-pressed]="onlyShiny()"
+          [class]="
+            'inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ' +
+            (onlyShiny()
+              ? 'border-amber-400/60 bg-amber-400/15 text-amber-300'
+              : 'border-line bg-surface text-ink-dim hover:text-ink')
+          "
+        >
+          <svg lucideSparkles class="h-3.5 w-3.5" aria-hidden="true"></svg>
+          {{ i18n.t("mounts.onlyShiny") }}
+        </button>
+        <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+          {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        @for (m of visible(); track m.name) {
+          <button
+            (click)="select(m)"
+            class="group flex flex-col items-center rounded-xl border border-line bg-surface p-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
+          >
+            <div class="rounded-xl bg-zinc-300/80 p-2.5 transition-transform group-hover:scale-105">
+              <app-item-icon [icon]="m.icon" [size]="56" />
+            </div>
+            <p class="mt-2 line-clamp-2 text-center text-xs font-semibold leading-tight sm:text-sm">{{ m.name }}</p>
+            <p class="mt-1 text-[9px] uppercase tracking-wide text-ink-dim">{{ groupLabel(m.type) }}</p>
+          </button>
+        }
+      </div>
+
+      <app-pager [current]="current()" [pageCount]="pageCount()" [numbered]="false" (pageChange)="page.set($event)" />
+
+      @if (selected(); as sel) {
+        <app-game-modal [title]="sel.name" [badge]="groupLabel(sel.type)" [icon]="sel.icon" (closed)="select(null)" />
+      }
+    </div>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">...</p>
+  }
+</div>
