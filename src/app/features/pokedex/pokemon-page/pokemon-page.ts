@@ -6,6 +6,7 @@ import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import { keepPrevious } from "@core/utils/keep-previous";
 import type { DictKey } from "@core/i18n/dictionaries";
+import type { PokedexEntry } from "@core/models/types";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 import { AbilityList } from "@features/pokedex/components/ability-list/ability-list";
 import { CatchLocations } from "@features/pokedex/components/catch-locations/catch-locations";
@@ -66,5 +67,10 @@ export class PokemonPageComponent {
 
   protected tKey(key: string): string {
     return this.i18n.t(key as DictKey);
+  }
+
+  /** Localized Pokedex description (en from the game, es/zh from PokeAPI; pt falls back to en). */
+  protected flavorText(entry: PokedexEntry): string {
+    return this.i18n.pick({ en: entry.flavor ?? null, es: entry.flavorEs ?? null, zh: entry.flavorZh ?? null });
   }
 }

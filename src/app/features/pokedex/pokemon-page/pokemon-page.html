@@ -17,8 +17,8 @@
               <app-type-badge [type]="tp" />
             }
           </div>
-          @if (p.entry.flavor) {
-            <p class="mt-3 max-w-xl text-sm italic text-ink-dim">{{ p.entry.flavor }}</p>
+          @if (flavorText(p.entry); as flavor) {
+            <p class="mt-3 max-w-xl text-sm italic text-ink-dim">{{ flavor }}</p>
           }
         </div>
         <dl class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-4">

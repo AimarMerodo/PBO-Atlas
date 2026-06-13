@@ -88,6 +88,13 @@ function flattenChain(chain) {
   return line;
 }
 
+/** Latest localized Pokedex flavor text from PokeAPI species (cleaned). */
+function speciesFlavor(species, lang) {
+  const entries = (species.flavor_text_entries ?? []).filter((f) => f.language.name === lang);
+  const text = entries.at(-1)?.flavor_text;
+  return text ? text.replace(/[\n\r\t]+/g, " ").replace(/\s+/g, " ").trim() : null;
+}
+
 function describeEvolution(d) {
   if (!d) return "special";
   const parts = [];
@@ -142,6 +149,8 @@ async function buildEntry(slug) {
       spritePboShiny: pboSprite(slug, true),
       evYield: gameLookup(evYieldByName, slug),
       flavor: gameLookup(flavorByName, slug),
+      flavorEs: speciesFlavor(species, "es"),
+      flavorZh: speciesFlavor(species, "zh-hans"),
       evolutionChainUrl: species.evolution_chain?.url ?? null,
     },
   };

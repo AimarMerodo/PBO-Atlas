@@ -120,6 +120,8 @@ export interface PokedexEntry {
   spritePboShiny?: string | null;
   evYield?: EvYield[] | null;
   flavor?: string | null;
+  flavorEs?: string | null;
+  flavorZh?: string | null;
 }
 
 export interface EvoStage {
