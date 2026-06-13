@@ -2,6 +2,23 @@
   display: block;
 }
 
+/* Bento card corner colour glow (intensifies on hover). */
+.corner-glow {
+  position: absolute;
+  right: -2.5rem;
+  top: -2.5rem;
+  z-index: -1;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 9999px;
+  opacity: 0.18;
+  filter: blur(2rem);
+  transition: opacity 0.3s ease;
+}
+.bento-card:hover .corner-glow {
+  opacity: 0.55;
+}
+
 /* ===================================================================
    Day -> sunset -> night -> dawn time-lapse hero.
    Pixel-art mountains by Luis Zuno (@ansimuz), CC0. One long loop drives

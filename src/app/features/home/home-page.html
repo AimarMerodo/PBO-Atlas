@@ -69,21 +69,32 @@
 
   <section>
     <h2 class="mb-5 text-xl font-bold">{{ i18n.t("home.explore") }}</h2>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[156px]">
       @for (s of sections; track s.route) {
         <a
           [routerLink]="s.route"
           [style.--tint]="s.tint"
-          class="group relative isolate overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--tint)] hover:shadow-xl hover:shadow-black/30"
+          [class]="
+            'bento-card group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl border border-line bg-surface p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--tint)] hover:shadow-xl hover:shadow-black/30 ' +
+            s.bento
+          "
         >
-          <div
-            class="pointer-events-none absolute -right-10 -top-10 -z-10 h-28 w-28 rounded-full opacity-20 blur-2xl transition-opacity duration-300 group-hover:opacity-60"
-            style="background: var(--tint)"
-            aria-hidden="true"
-          ></div>
-          <div class="flex items-start gap-4">
+          <div class="corner-glow" style="background: var(--tint)" aria-hidden="true"></div>
+          @if (s.peek) {
+            <img
+              [src]="s.peek"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              [class]="
+                'pointer-events-none absolute object-contain opacity-80 drop-shadow-xl transition-transform duration-300 group-hover:scale-110 [image-rendering:pixelated] ' +
+                (s.featured ? '-right-3 top-2 h-40 w-40' : '-bottom-3 -right-3 h-24 w-24')
+              "
+            />
+          }
+          <div class="relative">
             <div
-              class="rounded-xl p-3 transition-transform duration-300 group-hover:scale-110"
+              class="mb-2 inline-flex rounded-xl p-2.5 transition-transform duration-300 group-hover:scale-110"
               style="background: color-mix(in srgb, var(--tint) 16%, transparent); color: var(--tint)"
             >
               @switch (s.route) {
@@ -107,15 +118,15 @@
                 }
               }
             </div>
-            <div class="min-w-0">
-              <div class="flex flex-wrap items-baseline gap-x-2">
-                <h3 class="font-bold transition-colors group-hover:[color:var(--tint)]">{{ i18n.t(s.title) }}</h3>
-                @if (stats(); as st) {
-                  <span class="text-xs text-ink-dim tabular-nums">{{ s.count(st) }} {{ i18n.t(s.countLabel) }}</span>
-                }
-              </div>
-              <p class="mt-1 text-sm text-ink-dim">{{ i18n.t(s.desc) }}</p>
+            <div class="flex flex-wrap items-baseline gap-x-2">
+              <h3 class="font-bold transition-colors group-hover:[color:var(--tint)]">{{ i18n.t(s.title) }}</h3>
+              @if (stats(); as st) {
+                <span class="text-xs text-ink-dim tabular-nums">{{ s.count(st) }} {{ i18n.t(s.countLabel) }}</span>
+              }
             </div>
+            @if (s.featured) {
+              <p class="mt-1 max-w-[62%] text-sm text-ink-dim">{{ i18n.t(s.desc) }}</p>
+            }
           </div>
         </a>
       }
