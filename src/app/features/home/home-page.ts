@@ -20,8 +20,10 @@ interface SectionCard {
   bento: string;
   /** The big card: shows artwork + description. */
   featured?: boolean;
-  /** Decorative animated sprite that peeks into the card. */
+  /** Decorative animated sprite that peeks into the card corner. */
   peek?: string;
+  /** Full-card faded background image (e.g. a region map). */
+  cover?: string;
 }
 
 const SPRITE = (id: string) => `https://play.pokemonshowdown.com/sprites/ani/${id}.gif`;
@@ -31,7 +33,7 @@ const SECTIONS: SectionCard[] = [
   { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "lg:col-span-2" },
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: SPRITE("arcanine") },
   { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "" },
-  { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-2" },
+  { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-2", cover: "/maps/sinnoh.png" },
   { route: "/natures", title: "nav.natures", desc: "home.naturesDesc", count: (s) => s.natures, countLabel: "home.count.natures", tint: "#2dd4bf", bento: "lg:col-span-2" },
 ];
 

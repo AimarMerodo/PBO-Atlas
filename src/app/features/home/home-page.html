@@ -80,6 +80,16 @@
           "
         >
           <div class="corner-glow" style="background: var(--tint)" aria-hidden="true"></div>
+          @if (s.cover) {
+            <img
+              [src]="s.cover"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-30 transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-surface via-surface/70 to-surface/20"></div>
+          }
           @if (s.peek) {
             <img
               [src]="s.peek"
@@ -88,7 +98,7 @@
               loading="lazy"
               [class]="
                 'pointer-events-none absolute object-contain opacity-80 drop-shadow-xl transition-transform duration-300 group-hover:scale-110 [image-rendering:pixelated] ' +
-                (s.featured ? '-right-3 top-2 h-40 w-40' : '-bottom-3 -right-3 h-24 w-24')
+                (s.featured ? '-right-5 -top-3 h-56 w-56' : '-bottom-3 -right-3 h-24 w-24')
               "
             />
           }
