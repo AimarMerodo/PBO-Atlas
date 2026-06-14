@@ -36,7 +36,7 @@ const SECTIONS: SectionCard[] = [
   { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "lg:col-span-2", peek: SPRITE("delibird") },
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: "/mount-avatar.gif", peekClass: "-bottom-3 -right-3 h-32 w-32" },
   { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.gif", peekClass: "-bottom-3 -right-4 h-32 w-32" },
-  { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-2", cover: "/maps/sinnoh.png" },
+  { route: "/regions", title: "nav.regions", desc: "home.regionsDesc", count: () => 4, countLabel: "home.count.regions", tint: "#34d399", bento: "lg:col-span-4", cover: "/maps/sinnoh.png" },
 ];
 
 @Component({
