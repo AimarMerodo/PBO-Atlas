@@ -9,13 +9,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <!-- Fonts: Anton (headlines) + Work Sans (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <!-- Self-hosted fonts: Anton (headlines) + Work Sans (body). Preload the
+       latin subsets used above the fold; @font-face lives in styles.css. -->
+  <link rel="preload" href="/fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     // Prerendered HTML is always English; hide the app until Angular applies
     // the saved language (revealed in App, with a failsafe timeout).
