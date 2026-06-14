@@ -20,6 +20,10 @@
   --color-ink-dim: var(--text-dim);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
+
+  /* Trying new type: Anton for headlines, Work Sans for body. */
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Anton", var(--font-sans);
 }
 
 html {
@@ -29,10 +33,23 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
   /* Full-bleed hero uses 100vw; clip the scrollbar-gutter overflow without
      breaking the sticky header (clip is not a scroll container). */
   overflow-x: clip;
+}
+
+/* Headlines in Anton (condensed display). Anton is a single weight, so the
+   font-weight utilities on headings are effectively no-ops — that's fine. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 ::selection {
