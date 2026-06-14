@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, computed, inject, resource } from "@angular/core";
+import { ChangeDetectionStrategy, Component, computed, effect, inject, resource } from "@angular/core";
 import { NgTemplateOutlet } from "@angular/common";
+import { Title } from "@angular/platform-browser";
 import { RouterLink } from "@angular/router";
 import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideShirt, LucideTrendingUp } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
@@ -81,4 +82,9 @@ export class HomePage {
     tw: 2 + (i % 5),
     delay: ((i * 17) % 50) / 10,
   }));
+
+  constructor() {
+    const title = inject(Title);
+    effect(() => title.setTitle(`${this.i18n.t("nav.home")} | PBO Atlas`));
+  }
 }

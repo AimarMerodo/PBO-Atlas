@@ -3,6 +3,7 @@ import type { DictKey } from "./en";
 export const pt: Record<DictKey, string> = {
   "site.title": "PBO Atlas",
   "site.tagline": "Mapas, spawns e Pokédex de Pokemon Blaze Online",
+  "nav.home": "Início",
   "nav.regions": "Regiões",
   "nav.pokedex": "Pokédex",
   "nav.search": "Buscar",
