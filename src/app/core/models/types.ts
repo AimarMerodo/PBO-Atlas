@@ -167,12 +167,33 @@ export interface Learnset {
   tutor: string[];
 }
 
+/** A non-wild way to obtain a pokemon (shop, event, ranked reward, craft...). */
+export type ObtainMethod =
+  | "store"
+  | "event"
+  | "ranked"
+  | "craft"
+  | "mining"
+  | "boss"
+  | "quest"
+  | "roaming"
+  | "evolution";
+
+export interface Acquisition {
+  method: ObtainMethod | string;
+  /** Short "where" label, e.g. "Goodwill Token Shop" or "Top 10 monthly OU Ranked". */
+  source: string;
+  /** Optional cost / condition, e.g. "1,000 Goodwill Tokens" or "April–June". */
+  detail?: string;
+}
+
 export interface PokemonPage {
   entry: PokedexEntry;
   abilities: AbilityInfo[];
   evoStages: EvoStage[];
   encounters: Encounter[];
   catchableAncestors: { slug: string; name: string }[];
+  obtain: Acquisition[];
   learnset: Learnset | null;
   moves: Record<string, MoveInfo> | null;
 }

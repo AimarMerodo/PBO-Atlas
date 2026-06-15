@@ -1,4 +1,4 @@
-@if (encounters().length === 0) {
+@if (encounters().length === 0 && obtain().length === 0) {
   <div class="rounded-xl border border-line bg-surface px-4 py-5 text-sm text-ink-dim">
     <p>{{ i18n.t("pokemon.notCatchable") }}</p>
     @if (catchableAncestors().length > 0) {
@@ -17,37 +17,99 @@
     }
   </div>
 } @else {
-  <div class="overflow-x-auto rounded-xl border border-line">
-    <table class="w-full text-sm">
-      <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
-        <tr>
-          <th class="px-4 py-2.5">{{ i18n.t("pokemon.region") }}</th>
-          <th class="px-4 py-2.5">{{ i18n.t("pokemon.location") }}</th>
-          <th class="px-4 py-2.5">{{ i18n.t("spawn.rarity") }}</th>
-          <th class="px-4 py-2.5">{{ i18n.t("spawn.time") }}</th>
-          <th class="px-4 py-2.5">{{ i18n.t("spawn.method") }}</th>
-          <th class="px-4 py-2.5">{{ i18n.t("spawn.level") }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (e of sorted(); track $index) {
-          <tr class="border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2">
-            <td class="px-4 py-2 text-ink-dim">{{ e.regionName }}</td>
-            <td class="px-4 py-2">
-              <a
-                [routerLink]="['/region', e.region, e.locationId]"
-                class="font-medium transition-colors hover:text-accent-soft"
-              >
-                {{ e.locationName }}
-              </a>
-            </td>
-            <td class="px-4 py-2"><app-rarity-badge [rarity]="e.rarity" /></td>
-            <td class="px-4 py-2"><app-time-icon [time]="e.time" /></td>
-            <td class="px-4 py-2"><app-method-icon [method]="e.method" /></td>
-            <td class="whitespace-nowrap px-4 py-2 text-ink-dim">{{ levelLabel(e) }}</td>
+  @if (encounters().length > 0) {
+    <div class="overflow-x-auto rounded-xl border border-line">
+      <table class="w-full text-sm">
+        <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
+          <tr>
+            <th class="px-4 py-2.5">{{ i18n.t("pokemon.region") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("pokemon.location") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.rarity") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.time") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.method") }}</th>
+            <th class="px-4 py-2.5">{{ i18n.t("spawn.level") }}</th>
           </tr>
-        }
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody>
+          @for (e of sorted(); track $index) {
+            <tr class="border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2">
+              <td class="px-4 py-2 text-ink-dim">{{ e.regionName }}</td>
+              <td class="px-4 py-2">
+                <a
+                  [routerLink]="['/region', e.region, e.locationId]"
+                  class="font-medium transition-colors hover:text-accent-soft"
+                >
+                  {{ e.locationName }}
+                </a>
+              </td>
+              <td class="px-4 py-2"><app-rarity-badge [rarity]="e.rarity" /></td>
+              <td class="px-4 py-2"><app-time-icon [time]="e.time" /></td>
+              <td class="px-4 py-2"><app-method-icon [method]="e.method" /></td>
+              <td class="whitespace-nowrap px-4 py-2 text-ink-dim">{{ levelLabel(e) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  @if (obtain().length > 0) {
+    @if (encounters().length > 0) {
+      <h3 class="mt-5 mb-2 text-sm font-bold uppercase tracking-wide text-ink-dim">
+        {{ i18n.t("pokemon.otherWays") }}
+      </h3>
+    }
+    <div class="grid gap-2 sm:grid-cols-2">
+      @for (o of obtain(); track $index) {
+        <div class="flex items-start gap-3 rounded-xl border border-line bg-surface p-3">
+          <span
+            class="grid h-9 w-9 shrink-0 place-items-center rounded-lg"
+            [style.background]="'color-mix(in srgb, ' + tint(o.method) + ' 16%, transparent)'"
+            [style.color]="tint(o.method)"
+            [style.box-shadow]="'inset 0 0 0 1px color-mix(in srgb, ' + tint(o.method) + ' 35%, transparent)'"
+          >
+            @switch (o.method) {
+              @case ("store") {
+                <svg lucideStore class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("event") {
+                <svg lucideSparkles class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("ranked") {
+                <svg lucideTrophy class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("craft") {
+                <svg lucideHammer class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("mining") {
+                <svg lucidePickaxe class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("boss") {
+                <svg lucideSwords class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("quest") {
+                <svg lucideScrollText class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @case ("roaming") {
+                <svg lucideRadar class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+              @default {
+                <svg lucideCircleArrowUp class="h-4.5 w-4.5" aria-hidden="true"></svg>
+              }
+            }
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[11px] font-semibold uppercase tracking-wide" [style.color]="tint(o.method)">
+              {{ methodLabel(o.method) }}
+            </p>
+            <p class="font-semibold leading-snug text-ink">{{ o.source }}</p>
+            @if (o.detail) {
+              <p class="mt-0.5 text-sm leading-snug text-ink-dim">{{ o.detail }}</p>
+            }
+          </div>
+        </div>
+      }
+    </div>
+    <p class="mt-2 text-xs text-ink-dim/80">{{ i18n.t("pokemon.obtainSource") }}</p>
+  }
 }

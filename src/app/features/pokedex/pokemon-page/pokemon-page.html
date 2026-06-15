@@ -76,8 +76,14 @@
     }
 
     <section>
-      <h2 class="mb-3 text-lg font-bold">{{ i18n.t("pokemon.whereToCatch") }}</h2>
-      <app-catch-locations [encounters]="p.encounters" [catchableAncestors]="p.catchableAncestors" />
+      <h2 class="mb-3 text-lg font-bold">
+        {{ i18n.t(p.encounters.length === 0 && p.obtain.length > 0 ? "pokemon.howToObtain" : "pokemon.whereToCatch") }}
+      </h2>
+      <app-catch-locations
+        [encounters]="p.encounters"
+        [catchableAncestors]="p.catchableAncestors"
+        [obtain]="p.obtain"
+      />
     </section>
 
     @if (p.learnset && p.moves) {

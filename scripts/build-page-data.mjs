@@ -26,6 +26,7 @@ const abilities = await readJson("abilities.json");
 const movesData = await readJson("moves.json");
 const natures = await readJson("natures.json");
 const searchIndex = await readJson("search-index.json");
+const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 
 const spawnsByRegion = {};
 for (const r of regions) spawnsByRegion[r.id] = await readJson("spawns", `${r.id}.json`);
@@ -86,11 +87,14 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     evoStages,
     encounters: encounters.get(slug) ?? [],
     catchableAncestors,
+    obtain: acquisitions[slug] ?? [],
     learnset,
     moves,
   });
 }
-console.log(`pokemon: ${Object.keys(pokedex).length} files`);
+const badAcq = Object.keys(acquisitions).filter((s) => !pokedex[s]);
+if (badAcq.length) console.warn(`  ⚠ acquisitions.json has ${badAcq.length} unknown slug(s): ${badAcq.join(", ")}`);
+console.log(`pokemon: ${Object.keys(pokedex).length} files (${Object.keys(acquisitions).length} with obtain methods)`);
 
 // --- locations/<region>/<id>.json + regions/<region>.json ---
 for (const r of regions) {
