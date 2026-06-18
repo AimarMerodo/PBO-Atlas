@@ -2748,8 +2748,8 @@
   "name": "Eevee Costume Bundle Female",
   "icon": {
    "page": "item_pack8.png",
-   "x": 799,
-   "y": 379,
+   "x": 715,
+   "y": 295,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,
@@ -2838,8 +2838,8 @@
   "name": "Eevee Costume Bundle Male",
   "icon": {
    "page": "item_pack8.png",
-   "x": 799,
-   "y": 379,
+   "x": 757,
+   "y": 337,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,
@@ -3258,8 +3258,8 @@
   "name": "Gengar Costume Bundle Female",
   "icon": {
    "page": "item_pack9.png",
-   "x": 85,
-   "y": 379,
+   "x": 1,
+   "y": 295,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,
@@ -3348,8 +3348,8 @@
   "name": "Gengar Costume Bundle Male",
   "icon": {
    "page": "item_pack9.png",
-   "x": 85,
-   "y": 379,
+   "x": 43,
+   "y": 337,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,
@@ -23368,13 +23368,13 @@
   "slug": "mining-genesis-bundle",
   "name": "Mining Genesis Bundle",
   "icon": {
-   "page": "item_pack10.png",
-   "x": 169,
-   "y": 43,
+   "page": "item_pack.png",
+   "x": 991,
+   "y": 199,
    "pageW": 1024,
    "pageH": 1024,
-   "w": 40,
-   "h": 40
+   "w": 32,
+   "h": 32
   },
   "items": [
    {
@@ -23382,14 +23382,30 @@
     "es": "Tablet Minera",
     "pt": "Ferramenta de mineração",
     "zh": "挖矿工具垫",
-    "icon": null
+    "icon": {
+     "page": "item_pack.png",
+     "x": 991,
+     "y": 199,
+     "pageW": 1024,
+     "pageH": 1024,
+     "w": 32,
+     "h": 32
+    }
    },
    {
     "name": "Bronze Pickaxe",
     "es": "Piqueta de Bronce",
     "pt": "Picareta de bronze",
     "zh": "青铜镐",
-    "icon": null
+    "icon": {
+     "page": "item_pack.png",
+     "x": 991,
+     "y": 437,
+     "pageW": 1024,
+     "pageH": 1024,
+     "w": 32,
+     "h": 32
+    }
    },
    {
     "name": "Mining Hat (Amethyst)",
@@ -24328,8 +24344,8 @@
   "name": "Pikachu Costume Bundle Female",
   "icon": {
    "page": "item_pack11.png",
-   "x": 295,
-   "y": 841,
+   "x": 211,
+   "y": 757,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,
@@ -24418,8 +24434,8 @@
   "name": "Pikachu Costume Bundle Male",
   "icon": {
    "page": "item_pack11.png",
-   "x": 295,
-   "y": 841,
+   "x": 253,
+   "y": 799,
    "pageW": 1024,
    "pageH": 1024,
    "w": 40,

@@ -68,6 +68,16 @@ for (const atlas of ["item_pack.atlas", "donator_pack.atlas", "item_icons_4x.atl
 }
 console.log(`atlas icons: ${Object.keys(icons).length}`);
 
+// Some atlases name regions in Title Case with spaces ("Garchompite",
+// "Metagrossite Crest") while findIcon's candidates are lowercase-dashed.
+// A normalized index lets the lookup match regardless of case/spacing.
+const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const iconsNorm = {};
+for (const [k, v] of Object.entries(icons)) {
+  const n = norm(k);
+  if (n && v.w !== undefined && !(n in iconsNorm)) iconsNorm[n] = v;
+}
+
 // Machine items ("Gen7 TM01", "TM27", "TR05", "HM02") get the typed disc
 // icon (tr-<type>) of the move they teach.
 const moveType = {};
@@ -116,7 +126,7 @@ function findIcon(name) {
   const dash = (s) => s.toLowerCase().trim().replace(/\s+/g, "-");
   const candidates = [dash(base), slugify(base), dash(noParens), slugify(noParens), dash(noBlueprint)];
   if (noFirstWord.split(/\s+/).length >= 2) candidates.push(dash(noFirstWord));
-  for (const c of candidates) if (c && icons[c]) return icons[c];
+  for (const c of candidates) if (c && (icons[c] || iconsNorm[norm(c)])) return icons[c] ?? iconsNorm[norm(c)];
   return null;
 }
 
