@@ -91,9 +91,9 @@
         <h2 class="mb-3 text-lg font-bold">{{ i18n.t("pokemon.drops") }}</h2>
         <div class="flex flex-wrap gap-2">
           @for (d of p.drops; track d.slug) {
-            <a
-              [routerLink]="['/items']"
-              [queryParams]="{ item: d.slug }"
+            <button
+              type="button"
+              (click)="selectedDrop.set(d)"
               class="flex items-center gap-2 rounded-xl border border-line bg-surface py-1.5 pl-1.5 pr-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
               [title]="localItemName(d)"
             >
@@ -101,11 +101,15 @@
                 <app-item-icon [icon]="d.icon" [size]="28" />
               </span>
               <span class="text-sm font-medium">{{ localItemName(d) }}</span>
-            </a>
+            </button>
           }
         </div>
         <p class="mt-2 text-xs text-ink-dim">{{ i18n.t("pokemon.dropsHint") }}</p>
       </section>
+    }
+
+    @if (selectedDrop(); as sel) {
+      <app-item-modal [item]="sel" (closed)="selectedDrop.set(null)" />
     }
 
     @if (p.learnset && p.moves) {

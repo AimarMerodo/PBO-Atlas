@@ -39,7 +39,9 @@ for (const [itemSlug, srcs] of Object.entries(itemSources)) {
   for (const src of srcs) {
     if (src.method !== "drop" || !src.pokemon) continue;
     const list = pokemonDrops.get(src.pokemon) ?? [];
-    list.push({ slug: itemSlug, name: item.name, es: item.es, pt: item.pt, zh: item.zh, icon: item.icon, regions: src.regions ?? [] });
+    // Carry the full item (+ its sources) so the pokemon page can open the
+    // same item modal in place instead of linking away to /items.
+    if (!list.some((x) => x.slug === itemSlug)) list.push({ ...item, sources: itemSources[itemSlug] });
     pokemonDrops.set(src.pokemon, list);
   }
 }

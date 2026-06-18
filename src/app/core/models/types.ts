@@ -187,17 +187,6 @@ export interface Acquisition {
   detail?: string;
 }
 
-/** An item this pokemon drops when caught/fainted (inverse of ItemSource). */
-export interface ItemDrop {
-  slug: string;
-  name: string;
-  es: string | null;
-  pt: string | null;
-  zh: string | null;
-  icon: AtlasIcon | null;
-  regions: string[];
-}
-
 export interface PokemonPage {
   entry: PokedexEntry;
   abilities: AbilityInfo[];
@@ -205,7 +194,8 @@ export interface PokemonPage {
   encounters: Encounter[];
   catchableAncestors: { slug: string; name: string }[];
   obtain: Acquisition[];
-  drops: ItemDrop[];
+  /** Items this pokemon drops when caught/fainted (full items, modal-ready). */
+  drops: GameItem[];
   learnset: Learnset | null;
   moves: Record<string, MoveInfo> | null;
 }
