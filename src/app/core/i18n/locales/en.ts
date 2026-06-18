@@ -205,6 +205,7 @@ export const en = {
   "footer.post": "or Nintendo. Data from the game's official forum.",
   "nav.feedback": "Feedback",
   "nav.menu": "Menu",
+  "nav.language": "Language",
   "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
   "banner.ingame": "In-game",
   "banner.link": "More info",

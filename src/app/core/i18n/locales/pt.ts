@@ -204,6 +204,7 @@ export const pt: Record<DictKey, string> = {
   "footer.post": "nem à Nintendo. Dados do fórum oficial do jogo.",
   "nav.feedback": "Feedback",
   "nav.menu": "Menu",
+  "nav.language": "Idioma",
   "banner.text": "Viu algum dado errado ou tem uma sugestão? Fale comigo:",
   "banner.ingame": "No jogo",
   "banner.link": "Mais informações",
