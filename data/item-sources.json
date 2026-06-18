@@ -21,6 +21,13 @@
         "detail": "125 Ores"
       }
     ],
+    "absolite": [
+      {
+        "method": "shop",
+        "source": "PvP Store",
+        "detail": "2,500 Ranked Tokens"
+      }
+    ],
     "aggronite": [
       {
         "method": "drop",
@@ -29,6 +36,13 @@
         "regions": [
           "Hoenn"
         ]
+      }
+    ],
+    "assault-vest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "800 Tokens"
       }
     ],
     "auspicious-armor": [
@@ -91,6 +105,41 @@
         ]
       }
     ],
+    "charizardite-x": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "3,000 Ores"
+      }
+    ],
+    "choice-band": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Coins"
+      }
+    ],
+    "choice-scarf": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Coins"
+      }
+    ],
+    "choice-specs": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Coins"
+      }
+    ],
+    "damp-rock": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "300 Tokens"
+      }
+    ],
     "dawn-stone": [
       {
         "method": "drop",
@@ -100,6 +149,11 @@
           "Sinnoh",
           "Jvaloh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "deepseascale": [
@@ -155,6 +209,11 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "eject-pack": [
@@ -174,11 +233,30 @@
         ]
       }
     ],
+    "electric-seed": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "200 Ores"
+      }
+    ],
+    "eviolite": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "800 Tokens"
+      }
+    ],
     "exp-share": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "400 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "65 Coins"
       }
     ],
     "expert-belt": [
@@ -201,6 +279,11 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "galarica-cuff": [
@@ -234,6 +317,20 @@
         "detail": "Wayward Cave 2F"
       }
     ],
+    "gardevoirite": [
+      {
+        "method": "shop",
+        "source": "Battle Token Shop",
+        "detail": "2,000 Battle Tokens"
+      }
+    ],
+    "grassy-seed": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "200 Ores"
+      }
+    ],
     "hard-stone": [
       {
         "method": "drop",
@@ -258,11 +355,37 @@
         ]
       }
     ],
+    "heat-rock": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "300 Tokens"
+      }
+    ],
+    "ice-stone": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
+      }
+    ],
+    "icy-rock": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "300 Tokens"
+      }
+    ],
     "iv-randomizer": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "75 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "25 Coins"
       }
     ],
     "kings-rock": [
@@ -300,6 +423,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "leek": [
@@ -310,6 +438,27 @@
         "regions": [
           "Jvaloh"
         ]
+      }
+    ],
+    "leftovers": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "800 Tokens"
+      }
+    ],
+    "life-orb": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "800 Tokens"
+      }
+    ],
+    "light-ball": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "50 Coins"
       }
     ],
     "light-clay": [
@@ -380,6 +529,13 @@
         ]
       }
     ],
+    "medichamite": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "2,500 Tokens"
+      }
+    ],
     "metagrossite-crest": [
       {
         "method": "drop",
@@ -447,6 +603,13 @@
         ]
       }
     ],
+    "misty-seed": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "200 Ores"
+      }
+    ],
     "moon-stone": [
       {
         "method": "drop",
@@ -455,6 +618,18 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
+      }
+    ],
+    "muscle-band": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "200 Tokens"
       }
     ],
     "mystic-water": [
@@ -514,6 +689,13 @@
         ]
       }
     ],
+    "permanent-air-balloon": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "300 Ores"
+      }
+    ],
     "poison-barb": [
       {
         "method": "drop",
@@ -556,6 +738,13 @@
         ]
       }
     ],
+    "psychic-seed": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "200 Ores"
+      }
+    ],
     "razor-claw": [
       {
         "method": "drop",
@@ -596,6 +785,13 @@
         "detail": "300 Ores"
       }
     ],
+    "rocky-helmet": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "600 Tokens"
+      }
+    ],
     "sharp-beak": [
       {
         "method": "drop",
@@ -632,6 +828,11 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "silk-scarf": [
@@ -660,6 +861,13 @@
         "regions": [
           "Sinnoh"
         ]
+      }
+    ],
+    "smooth-rock": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "300 Tokens"
       }
     ],
     "soft-sand": [
@@ -719,6 +927,11 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "terrain-extender": [
@@ -746,6 +959,11 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
       }
     ],
     "twisted-spoon": [
@@ -766,6 +984,13 @@
         ]
       }
     ],
+    "tyranitarite": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "45,000 Casino Tokens"
+      }
+    ],
     "water-stone": [
       {
         "method": "drop",
@@ -776,6 +1001,18 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Coins"
+      }
+    ],
+    "wise-glasses": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "200 Tokens"
       }
     ]
   }

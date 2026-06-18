@@ -93,20 +93,35 @@ const DROPS = [
   d("star-piece", "Staryu", ["Hoenn"]),
 ];
 
-// item slug, shop name, price/detail. (Dynite Ore Store, Jubilife City.)
-const s = (item, source, detail) => ({ item, source, detail });
+// Shop inventories (notable items only — TMs, mounts, cosmetics & event
+// chests are intentionally skipped). [itemSlug, price] per shop + unit.
+const fmt = (n) => n.toLocaleString("en-US");
+const shop = (source, unit, rows) => rows.map(([item, price]) => ({ item, source, detail: `${fmt(price)} ${unit}` }));
 const SHOPS = [
-  s("ability-patch", "Dynite Ore Store", "125 Ores"),
-  s("ability-capsule", "Dynite Ore Store", "60 Ores"),
-  s("macho-brace", "Dynite Ore Store", "500 Ores"),
-  s("exp-share", "Dynite Ore Store", "400 Ores"),
-  s("light-clay", "Dynite Ore Store", "300 Ores"),
-  s("metronome", "Dynite Ore Store", "400 Ores"),
-  s("terrain-extender", "Dynite Ore Store", "200 Ores"),
-  s("iv-randomizer", "Dynite Ore Store", "75 Ores"),
-  s("red-card", "Dynite Ore Store", "300 Ores"),
-  s("eject-pack", "Dynite Ore Store", "300 Ores"),
-  s("shell-bell", "Dynite Ore Store", "40 Ores"),
+  // Dynite Ore Store — Global Terminal, Jubilife City (from Dynamax Invasion).
+  ...shop("Dynite Ore Store", "Ores", [
+    ["permanent-air-balloon", 300], ["metronome", 400], ["macho-brace", 500], ["exp-share", 400],
+    ["light-clay", 300], ["terrain-extender", 200], ["ability-patch", 125], ["iv-randomizer", 75],
+    ["ability-capsule", 60], ["grassy-seed", 200], ["electric-seed", 200], ["psychic-seed", 200],
+    ["misty-seed", 200], ["charizardite-x", 3000], ["red-card", 300], ["eject-pack", 300], ["shell-bell", 40],
+  ]),
+  // Crew Wars Token Shop — Hearthome City (Sinnoh) / Rockshore City (Jvaloh).
+  ...shop("Crew Wars Token Shop", "Tokens", [
+    ["medichamite", 2500], ["life-orb", 800], ["assault-vest", 800], ["leftovers", 800], ["eviolite", 800],
+    ["rocky-helmet", 600], ["wise-glasses", 200], ["muscle-band", 200],
+    ["damp-rock", 300], ["icy-rock", 300], ["heat-rock", 300], ["smooth-rock", 300],
+  ]),
+  // Blaze Coin Shop — Global Terminal, Jubilife City (from wild faints & PvE).
+  ...shop("Blaze Coin Shop", "Coins", [
+    ["choice-scarf", 150], ["choice-band", 150], ["choice-specs", 150], ["light-ball", 50],
+    ["exp-share", 65], ["iv-randomizer", 25],
+    ["fire-stone", 15], ["water-stone", 15], ["thunder-stone", 15], ["leaf-stone", 15], ["shiny-stone", 15],
+    ["dusk-stone", 15], ["dawn-stone", 15], ["ice-stone", 15], ["moon-stone", 15], ["sun-stone", 15],
+  ]),
+  // Mega stone token shops.
+  { item: "gardevoirite", source: "Battle Token Shop", detail: "2,000 Battle Tokens" },
+  { item: "absolite", source: "PvP Store", detail: "2,500 Ranked Tokens" },
+  { item: "tyranitarite", source: "Casino Token Store", detail: "45,000 Casino Tokens" },
 ];
 
 const items = (await readJson("items.json")).items;
