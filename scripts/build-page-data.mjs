@@ -28,6 +28,21 @@ const natures = await readJson("natures.json");
 const searchIndex = await readJson("search-index.json");
 const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 const itemSources = (await readJson("item-sources.json")).sources ?? {};
+const itemsData = await readJson("items.json");
+
+// --- Pokemon item-drop reverse index (inverse of item-sources "drop" rows) ---
+const itemBySlug = new Map(itemsData.items.map((i) => [i.slug, i]));
+const pokemonDrops = new Map();
+for (const [itemSlug, srcs] of Object.entries(itemSources)) {
+  const item = itemBySlug.get(itemSlug);
+  if (!item) continue;
+  for (const src of srcs) {
+    if (src.method !== "drop" || !src.pokemon) continue;
+    const list = pokemonDrops.get(src.pokemon) ?? [];
+    list.push({ slug: itemSlug, name: item.name, es: item.es, pt: item.pt, zh: item.zh, icon: item.icon, regions: src.regions ?? [] });
+    pokemonDrops.set(src.pokemon, list);
+  }
+}
 
 const spawnsByRegion = {};
 for (const r of regions) spawnsByRegion[r.id] = await readJson("spawns", `${r.id}.json`);
@@ -89,6 +104,7 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     encounters: encounters.get(slug) ?? [],
     catchableAncestors,
     obtain: acquisitions[slug] ?? [],
+    drops: pokemonDrops.get(slug) ?? [],
     learnset,
     moves,
   });
@@ -181,7 +197,6 @@ await write("lists/search.json", searchIndex);
 await write("lists/natures.json", natures);
 
 // Items: merge in "where to get" sources for the notable ones.
-const itemsData = await readJson("items.json");
 let itemsWithSources = 0;
 await write("lists/items.json", {
   items: itemsData.items.map((it) => {

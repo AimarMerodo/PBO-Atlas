@@ -6,7 +6,8 @@ import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import { keepPrevious } from "@core/utils/keep-previous";
 import type { DictKey } from "@core/i18n/dictionaries";
-import type { PokedexEntry } from "@core/models/types";
+import type { ItemDrop, PokedexEntry } from "@core/models/types";
+import { ItemIcon } from "@shared/components/item-icon/item-icon";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 import { AbilityList } from "@features/pokedex/components/ability-list/ability-list";
 import { CatchLocations } from "@features/pokedex/components/catch-locations/catch-locations";
@@ -27,6 +28,7 @@ import { TypeEffectiveness } from "@features/pokedex/components/type-effectivene
     AbilityList,
     CatchLocations,
     EvolutionLine,
+    ItemIcon,
     MovesSection,
     PokemonArtwork,
     StatBars,
@@ -72,5 +74,9 @@ export class PokemonPageComponent {
   /** Localized Pokedex description (en from the game, es/zh from PokeAPI; pt falls back to en). */
   protected flavorText(entry: PokedexEntry): string {
     return this.i18n.pick({ en: entry.flavor ?? null, es: entry.flavorEs ?? null, zh: entry.flavorZh ?? null });
+  }
+
+  protected localItemName(d: ItemDrop): string {
+    return this.i18n.pick({ en: d.name, es: d.es, zh: d.zh, pt: d.pt });
   }
 }

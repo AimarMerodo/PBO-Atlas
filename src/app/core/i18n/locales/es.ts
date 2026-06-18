@@ -103,6 +103,8 @@ export const es: Record<DictKey, string> = {
   "pokemon.howToObtain": "Cómo conseguirlo",
   "pokemon.otherWays": "Otras formas de conseguirlo",
   "pokemon.obtainSource": "Fuente: guías del foro oficial de Pokemon Blaze Online",
+  "pokemon.drops": "Objetos que suelta",
+  "pokemon.dropsHint": "Objetos que puede soltar al capturarlo o debilitarlo (más probabilidad al debilitarlo).",
   "obtain.store": "Tienda",
   "obtain.event": "Evento de temporada",
   "obtain.ranked": "Recompensa de Ranked",

@@ -101,6 +101,8 @@ export const en = {
   "pokemon.howToObtain": "How to obtain",
   "pokemon.otherWays": "Other ways to obtain",
   "pokemon.obtainSource": "Source: official Pokemon Blaze Online forum guides",
+  "pokemon.drops": "Item drops",
+  "pokemon.dropsHint": "Items it may drop when caught or fainted (higher chance on faint).",
   "obtain.store": "Shop",
   "obtain.event": "Seasonal event",
   "obtain.ranked": "Ranked reward",

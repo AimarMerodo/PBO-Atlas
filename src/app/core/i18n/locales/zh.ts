@@ -101,6 +101,8 @@ export const zh: Record<DictKey, string> = {
   "pokemon.howToObtain": "如何获得",
   "pokemon.otherWays": "其他获取方式",
   "pokemon.obtainSource": "来源：Pokemon Blaze Online 官方论坛攻略",
+  "pokemon.drops": "掉落物品",
+  "pokemon.dropsHint": "捕捉或击倒该宝可梦时可能掉落的物品（击倒时掉率更高）。",
   "obtain.store": "商店",
   "obtain.event": "季节活动",
   "obtain.ranked": "排位奖励",
