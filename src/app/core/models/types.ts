@@ -227,6 +227,20 @@ export interface AtlasIcon {
   pageH: number;
 }
 
+/** A way to obtain an item: a wild drop from a pokemon, or a shop purchase. */
+export interface ItemSource {
+  method: "drop" | "shop" | string;
+  /** Drop: the pokemon slug + display name that drops it (links to its page). */
+  pokemon?: string;
+  pokemonName?: string;
+  /** Drop: regions where that pokemon (and so the drop) is available. */
+  regions?: string[];
+  /** Shop: the shop name. */
+  source?: string;
+  /** Shop price, or a precise drop location. */
+  detail?: string;
+}
+
 export interface GameItem {
   id: number;
   slug: string;
@@ -242,6 +256,7 @@ export interface GameItem {
   icon: AtlasIcon | null;
   teaches?: { name: string; es: string | null; zh: string | null; pt: string | null; type: string | null } | null;
   evolves?: { slug: string; name: string }[] | null;
+  sources?: ItemSource[] | null;
 }
 
 export interface Mount {

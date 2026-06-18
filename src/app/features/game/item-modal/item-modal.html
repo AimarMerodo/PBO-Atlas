@@ -35,4 +35,39 @@
       </div>
     }
   }
+
+  @if (item().sources?.length) {
+    <div class="mt-4 border-t border-line pt-3">
+      <p class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("item.whereToFind") }}</p>
+      <ul class="space-y-2">
+        @for (s of item().sources ?? []; track $index) {
+          <li class="flex items-start gap-2 text-sm leading-snug">
+            @if (s.method === "shop") {
+              <svg lucideStore class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+              <span>
+                <span class="text-ink-dim">{{ i18n.t("item.buyAt") }}&nbsp;</span>
+                <span class="font-semibold">{{ s.source }}</span>
+                @if (s.detail) {
+                  <span class="text-ink-dim">&nbsp;— {{ s.detail }}</span>
+                }
+              </span>
+            } @else {
+              <svg lucidePawPrint class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+              <span>
+                <span class="text-ink-dim">{{ i18n.t("item.droppedBy") }}</span>
+                <a
+                  [routerLink]="['/pokedex', s.pokemon]"
+                  (click)="closed.emit()"
+                  class="font-semibold text-accent-soft hover:underline"
+                >
+                  {{ s.pokemonName }}
+                </a>
+                <span class="text-ink-dim">{{ dropDetail(s) }}</span>
+              </span>
+            }
+          </li>
+        }
+      </ul>
+    </div>
+  }
 </app-game-modal>

@@ -27,6 +27,7 @@ const movesData = await readJson("moves.json");
 const natures = await readJson("natures.json");
 const searchIndex = await readJson("search-index.json");
 const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
+const itemSources = (await readJson("item-sources.json")).sources ?? {};
 
 const spawnsByRegion = {};
 for (const r of regions) spawnsByRegion[r.id] = await readJson("spawns", `${r.id}.json`);
@@ -179,14 +180,26 @@ await write(
 await write("lists/search.json", searchIndex);
 await write("lists/natures.json", natures);
 
+// Items: merge in "where to get" sources for the notable ones.
+const itemsData = await readJson("items.json");
+let itemsWithSources = 0;
+await write("lists/items.json", {
+  items: itemsData.items.map((it) => {
+    const src = itemSources[it.slug];
+    if (!src) return it;
+    itemsWithSources++;
+    return { ...it, sources: src };
+  }),
+});
+
 // Lazy datasets reused as-is
-for (const f of ["items.json", "mounts.json", "cosmetics.json"]) {
+for (const f of ["mounts.json", "cosmetics.json"]) {
   await copyFile(path.join(SRC, f), path.join(OUT, "lists", f.replace(".json", "") + ".json")).catch(async () => {
     await mkdir(path.join(OUT, "lists"), { recursive: true });
     await copyFile(path.join(SRC, f), path.join(OUT, "lists", f));
   });
 }
-console.log("lists: home, pokedex, search, natures, items, mounts, cosmetics");
+console.log(`lists: home, pokedex, search, natures, items (${itemsWithSources} with sources), mounts, cosmetics`);
 
 // Slug manifests for prerendering
 await write("lists/routes.json", {

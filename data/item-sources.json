@@ -1,0 +1,782 @@
+{
+  "_meta": {
+    "note": "Where to get notable items. Sourced by hand from the official PBO forum (drops thread #1744, shops thread #1760). method ∈ drop|shop.",
+    "sources": [
+      "https://forums.pokemonblazeonline.com/threads/wild-drops-and-where-to-find-them-wip.1744/",
+      "https://forums.pokemonblazeonline.com/threads/items-shops-overview-wip.1760/"
+    ]
+  },
+  "sources": {
+    "ability-capsule": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "60 Ores"
+      }
+    ],
+    "ability-patch": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "125 Ores"
+      }
+    ],
+    "aggronite": [
+      {
+        "method": "drop",
+        "pokemon": "aron",
+        "pokemonName": "Aron",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "auspicious-armor": [
+      {
+        "method": "drop",
+        "pokemon": "charcadet",
+        "pokemonName": "Charcadet",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "black-belt": [
+      {
+        "method": "drop",
+        "pokemon": "sawk",
+        "pokemonName": "Sawk",
+        "regions": [
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "meditite",
+        "pokemonName": "Meditite",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh"
+        ]
+      }
+    ],
+    "black-glasses": [
+      {
+        "method": "drop",
+        "pokemon": "sandile",
+        "pokemonName": "Sandile",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "charcoal": [
+      {
+        "method": "drop",
+        "pokemon": "vulpix",
+        "pokemonName": "Vulpix",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "torkoal",
+        "pokemonName": "Torkoal",
+        "regions": [
+          "Sinnoh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "dawn-stone": [
+      {
+        "method": "drop",
+        "pokemon": "kirlia",
+        "pokemonName": "Kirlia",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh"
+        ]
+      }
+    ],
+    "deepseascale": [
+      {
+        "method": "drop",
+        "pokemon": "clamperl",
+        "pokemonName": "Clamperl",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "deepseatooth": [
+      {
+        "method": "drop",
+        "pokemon": "clamperl",
+        "pokemonName": "Clamperl",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "dragon-fang": [
+      {
+        "method": "drop",
+        "pokemon": "gible",
+        "pokemonName": "Gible",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "dragon-scale": [
+      {
+        "method": "drop",
+        "pokemon": "horsea",
+        "pokemonName": "Horsea",
+        "regions": [
+          "Sinnoh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "dusk-stone": [
+      {
+        "method": "drop",
+        "pokemon": "murkrow",
+        "pokemonName": "Murkrow",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "eject-pack": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "300 Ores"
+      }
+    ],
+    "electirizer": [
+      {
+        "method": "drop",
+        "pokemon": "elekid",
+        "pokemonName": "Elekid",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "exp-share": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "400 Ores"
+      }
+    ],
+    "expert-belt": [
+      {
+        "method": "drop",
+        "pokemon": "pinsir",
+        "pokemonName": "Pinsir",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "fire-stone": [
+      {
+        "method": "drop",
+        "pokemon": "vulpix",
+        "pokemonName": "Vulpix",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "galarica-cuff": [
+      {
+        "method": "drop",
+        "pokemon": "slowpoke-galar",
+        "pokemonName": "Slowpoke-Galar",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "galarica-wreath": [
+      {
+        "method": "drop",
+        "pokemon": "slowpoke-galar",
+        "pokemonName": "Slowpoke-Galar",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "garchompite": [
+      {
+        "method": "drop",
+        "pokemon": "gible",
+        "pokemonName": "Gible",
+        "regions": [
+          "Sinnoh"
+        ],
+        "detail": "Wayward Cave 2F"
+      }
+    ],
+    "hard-stone": [
+      {
+        "method": "drop",
+        "pokemon": "onix",
+        "pokemonName": "Onix",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "heart-scale": [
+      {
+        "method": "drop",
+        "pokemon": "luvdisc",
+        "pokemonName": "Luvdisc",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "iv-randomizer": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "75 Ores"
+      }
+    ],
+    "kings-rock": [
+      {
+        "method": "drop",
+        "pokemon": "politoed",
+        "pokemonName": "Politoed",
+        "regions": [
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "slowpoke",
+        "pokemonName": "Slowpoke",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "leaf-stone": [
+      {
+        "method": "drop",
+        "pokemon": "seedot",
+        "pokemonName": "Seedot",
+        "regions": [
+          "Sinnoh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "gloom",
+        "pokemonName": "Gloom",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "leek": [
+      {
+        "method": "drop",
+        "pokemon": "farfetchd-galar",
+        "pokemonName": "Farfetch'd-Galar",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
+    "light-clay": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "300 Ores"
+      }
+    ],
+    "macho-brace": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "500 Ores"
+      }
+    ],
+    "magmarizer": [
+      {
+        "method": "drop",
+        "pokemon": "magby",
+        "pokemonName": "Magby",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "magnet": [
+      {
+        "method": "drop",
+        "pokemon": "magnemite",
+        "pokemonName": "Magnemite",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "malicious-armor": [
+      {
+        "method": "drop",
+        "pokemon": "charcadet",
+        "pokemonName": "Charcadet",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "manectite": [
+      {
+        "method": "drop",
+        "pokemon": "electrike",
+        "pokemonName": "Electrike",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "mawilite": [
+      {
+        "method": "drop",
+        "pokemon": "mawile",
+        "pokemonName": "Mawile",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "metagrossite-crest": [
+      {
+        "method": "drop",
+        "pokemon": "tatsugiri-curly",
+        "pokemonName": "Tatsugiri",
+        "regions": [
+          "Hoenn"
+        ],
+        "detail": "Meteor Falls"
+      }
+    ],
+    "metagrossite-essence": [
+      {
+        "method": "drop",
+        "pokemon": "relicanth",
+        "pokemonName": "Relicanth",
+        "regions": [
+          "Hoenn"
+        ],
+        "detail": "Route 126"
+      }
+    ],
+    "metal-coat": [
+      {
+        "method": "drop",
+        "pokemon": "scyther",
+        "pokemonName": "Scyther",
+        "regions": [
+          "Sinnoh"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "onix",
+        "pokemonName": "Onix",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "beldum",
+        "pokemonName": "Beldum",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "metronome": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "400 Ores"
+      }
+    ],
+    "miracle-seed": [
+      {
+        "method": "drop",
+        "pokemon": "fomantis",
+        "pokemonName": "Fomantis",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
+    "moon-stone": [
+      {
+        "method": "drop",
+        "pokemon": "clefairy",
+        "pokemonName": "Clefairy",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "mystic-water": [
+      {
+        "method": "drop",
+        "pokemon": "frillish",
+        "pokemonName": "Frillish",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "pelipper",
+        "pokemonName": "Pelipper",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "never-melt-ice": [
+      {
+        "method": "drop",
+        "pokemon": "cryogonal",
+        "pokemonName": "Cryogonal",
+        "regions": [
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "jynx",
+        "pokemonName": "Jynx",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "oval-stone": [
+      {
+        "method": "drop",
+        "pokemon": "chansey",
+        "pokemonName": "Chansey",
+        "regions": [
+          "Sinnoh"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "happiny",
+        "pokemonName": "Happiny",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
+    "poison-barb": [
+      {
+        "method": "drop",
+        "pokemon": "qwilfish",
+        "pokemonName": "Qwilfish",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "skorupi",
+        "pokemonName": "Skorupi",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "prism-scale": [
+      {
+        "method": "drop",
+        "pokemon": "feebas",
+        "pokemonName": "Feebas",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "protector": [
+      {
+        "method": "drop",
+        "pokemon": "rhyhorn",
+        "pokemonName": "Rhyhorn",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "razor-claw": [
+      {
+        "method": "drop",
+        "pokemon": "sneasel",
+        "pokemonName": "Sneasel",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh"
+        ]
+      }
+    ],
+    "razor-fang": [
+      {
+        "method": "drop",
+        "pokemon": "gligar",
+        "pokemonName": "Gligar",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "reaper-cloth": [
+      {
+        "method": "drop",
+        "pokemon": "duskull",
+        "pokemonName": "Duskull",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ],
+    "red-card": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "300 Ores"
+      }
+    ],
+    "sharp-beak": [
+      {
+        "method": "drop",
+        "pokemon": "starly",
+        "pokemonName": "Starly",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "sharpedonite": [
+      {
+        "method": "drop",
+        "pokemon": "carvanha",
+        "pokemonName": "Carvanha",
+        "regions": [
+          "Sinnoh"
+        ],
+        "detail": "Route 222"
+      }
+    ],
+    "shell-bell": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "40 Ores"
+      }
+    ],
+    "shiny-stone": [
+      {
+        "method": "drop",
+        "pokemon": "roselia",
+        "pokemonName": "Roselia",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "silk-scarf": [
+      {
+        "method": "drop",
+        "pokemon": "lickitung",
+        "pokemonName": "Lickitung",
+        "regions": [
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "kangaskhan",
+        "pokemonName": "Kangaskhan",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
+    "silver-powder": [
+      {
+        "method": "drop",
+        "pokemon": "dustox",
+        "pokemonName": "Dustox",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "soft-sand": [
+      {
+        "method": "drop",
+        "pokemon": "diglett",
+        "pokemonName": "Diglett",
+        "regions": [
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "sandslash",
+        "pokemonName": "Sandslash",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "spell-tag": [
+      {
+        "method": "drop",
+        "pokemon": "misdreavus",
+        "pokemonName": "Misdreavus",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "star-piece": [
+      {
+        "method": "drop",
+        "pokemon": "staryu",
+        "pokemonName": "Staryu",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "stardust": [
+      {
+        "method": "drop",
+        "pokemon": "staryu",
+        "pokemonName": "Staryu",
+        "regions": [
+          "Hoenn"
+        ]
+      }
+    ],
+    "sun-stone": [
+      {
+        "method": "drop",
+        "pokemon": "helioptile",
+        "pokemonName": "Helioptile",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "terrain-extender": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Store",
+        "detail": "200 Ores"
+      }
+    ],
+    "thunder-stone": [
+      {
+        "method": "drop",
+        "pokemon": "magnemite",
+        "pokemonName": "Magnemite",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "pichu",
+        "pokemonName": "Pichu",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "twisted-spoon": [
+      {
+        "method": "drop",
+        "pokemon": "abra",
+        "pokemonName": "Abra",
+        "regions": [
+          "Jvaloh"
+        ]
+      },
+      {
+        "method": "drop",
+        "pokemon": "kadabra",
+        "pokemonName": "Kadabra",
+        "regions": [
+          "Sinnoh"
+        ]
+      }
+    ],
+    "water-stone": [
+      {
+        "method": "drop",
+        "pokemon": "staryu",
+        "pokemonName": "Staryu",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ]
+      }
+    ]
+  }
+}
