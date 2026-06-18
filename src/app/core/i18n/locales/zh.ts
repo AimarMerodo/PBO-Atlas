@@ -203,6 +203,7 @@ export const zh: Record<DictKey, string> = {
   "footer.pre": "PBO Atlas 是粉丝工具，与",
   "footer.post": "或任天堂无关。数据来自游戏官方论坛。",
   "nav.feedback": "反馈",
+  "nav.menu": "菜单",
   "banner.text": "发现数据错误或有建议？联系我：",
   "banner.ingame": "游戏内",
   "banner.link": "更多信息",

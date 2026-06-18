@@ -204,6 +204,7 @@ export const en = {
   "footer.pre": "PBO Atlas is a fan tool, not affiliated with",
   "footer.post": "or Nintendo. Data from the game's official forum.",
   "nav.feedback": "Feedback",
+  "nav.menu": "Menu",
   "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
   "banner.ingame": "In-game",
   "banner.link": "More info",

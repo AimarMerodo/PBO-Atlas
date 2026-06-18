@@ -203,6 +203,7 @@ export const pt: Record<DictKey, string> = {
   "footer.pre": "PBO Atlas é uma ferramenta de fãs, não afiliada a",
   "footer.post": "nem à Nintendo. Dados do fórum oficial do jogo.",
   "nav.feedback": "Feedback",
+  "nav.menu": "Menu",
   "banner.text": "Viu algum dado errado ou tem uma sugestão? Fale comigo:",
   "banner.ingame": "No jogo",
   "banner.link": "Mais informações",

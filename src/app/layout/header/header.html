@@ -1,32 +1,52 @@
 <header class="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
-    <a routerLink="/" class="flex shrink-0 items-center gap-2 whitespace-nowrap font-bold tracking-tight">
+    <a routerLink="/" class="flex shrink-0 items-center gap-2 whitespace-nowrap font-bold tracking-tight" (click)="close()">
       <img src="/logo.png" alt="" aria-hidden="true" class="h-9 w-auto" />
       <span>PBO <span class="text-accent-soft">Atlas</span></span>
     </a>
-    <nav class="flex items-center gap-1 text-sm text-ink-dim">
-      <a routerLink="/regions" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.regions") }}
-      </a>
-      <a routerLink="/pokedex" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.pokedex") }}
-      </a>
-      <a routerLink="/items" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.items") }}
-      </a>
-      <a routerLink="/mounts" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.mounts") }}
-      </a>
-      <a routerLink="/cosmetics" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.cosmetics") }}
-      </a>
-      <a routerLink="/feedback" class="rounded-lg px-3 py-1.5 hover:bg-surface hover:text-ink transition-colors">
-        {{ i18n.t("nav.feedback") }}
-      </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-1 text-sm text-ink-dim md:flex">
+      @for (link of links; track link.route) {
+        <a [routerLink]="link.route" class="rounded-lg px-3 py-1.5 transition-colors hover:bg-surface hover:text-ink">
+          {{ i18n.t(link.label) }}
+        </a>
+      }
     </nav>
-    <div class="ml-auto flex items-center gap-3">
+
+    <div class="ml-auto flex items-center gap-2 sm:gap-3">
       <app-search-trigger />
       <app-language-toggle />
+      <!-- Hamburger (mobile only) -->
+      <button
+        type="button"
+        class="grid h-9 w-9 place-items-center rounded-lg text-ink-dim transition-colors hover:bg-surface hover:text-ink md:hidden"
+        (click)="toggle()"
+        [attr.aria-expanded]="open()"
+        aria-controls="mobile-nav"
+        [attr.aria-label]="i18n.t('nav.menu')"
+      >
+        @if (open()) {
+          <svg lucideX class="h-5 w-5" aria-hidden="true"></svg>
+        } @else {
+          <svg lucideMenu class="h-5 w-5" aria-hidden="true"></svg>
+        }
+      </button>
     </div>
   </div>
+
+  <!-- Mobile drawer -->
+  @if (open()) {
+    <nav id="mobile-nav" class="border-t border-line bg-bg px-2 py-2 md:hidden">
+      @for (link of links; track link.route) {
+        <a
+          [routerLink]="link.route"
+          (click)="close()"
+          class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink"
+        >
+          {{ i18n.t(link.label) }}
+        </a>
+      }
+    </nav>
+  }
 </header>
