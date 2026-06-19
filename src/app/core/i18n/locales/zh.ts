@@ -205,6 +205,8 @@ export const zh: Record<DictKey, string> = {
   "search.locations": "地点",
   "search.noResults": "没有结果",
   "search.hint": "按 Ctrl+K 可在任意页面搜索",
+  "footer.madeWithPre": "用",
+  "footer.madeWithPost": "为 PBO 社区打造。",
   "footer.pre": "PBO Atlas 是粉丝工具，与",
   "footer.post": "或任天堂无关。数据来自游戏官方论坛。",
   "nav.feedback": "反馈",

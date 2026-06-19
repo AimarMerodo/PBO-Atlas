@@ -208,6 +208,8 @@ export const es: Record<DictKey, string> = {
   "search.locations": "Localizaciones",
   "search.noResults": "Sin resultados",
   "search.hint": "Pulsa Ctrl+K para buscar desde cualquier página",
+  "footer.madeWithPre": "Hecho con",
+  "footer.madeWithPost": "para la comunidad de PBO.",
   "footer.pre": "PBO Atlas es una herramienta de fans, no afiliada a",
   "footer.post": "ni a Nintendo. Datos del foro oficial del juego.",
   "nav.feedback": "Contacto",

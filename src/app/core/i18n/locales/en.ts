@@ -206,6 +206,8 @@ export const en = {
   "search.locations": "Locations",
   "search.noResults": "No results",
   "search.hint": "Press Ctrl+K to search from any page",
+  "footer.madeWithPre": "Made with",
+  "footer.madeWithPost": "for the PBO community.",
   "footer.pre": "PBO Atlas is a fan tool, not affiliated with",
   "footer.post": "or Nintendo. Data from the game's official forum.",
   "nav.feedback": "Feedback",
