@@ -216,6 +216,7 @@ export const es: Record<DictKey, string> = {
   "banner.text": "¿Has visto algún dato mal o tienes una sugerencia? Escríbeme:",
   "banner.ingame": "En el juego",
   "banner.link": "Más info",
+  "feedback.heyChip": "Mi yo in-game",
   "feedback.title": "Contacto y sugerencias",
   "feedback.subtitle":
     "¿Algún spawn que no cuadra, un pokemon que falta, o una idea para mejorar la web? Escríbeme por cualquiera de estas vías:",

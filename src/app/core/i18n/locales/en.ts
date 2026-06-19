@@ -214,6 +214,7 @@ export const en = {
   "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
   "banner.ingame": "In-game",
   "banner.link": "More info",
+  "feedback.heyChip": "My in-game self",
   "feedback.title": "Feedback & suggestions",
   "feedback.subtitle":
     "A spawn that looks wrong, a missing pokemon, or an idea to improve the site? Reach me through either of these:",

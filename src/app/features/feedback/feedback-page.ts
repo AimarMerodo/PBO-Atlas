@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, effect, inject } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
-import { LucideGamepad2, LucideInfo, LucideMessageCircle } from "@lucide/angular";
+import { LucideGamepad2, LucideHeart, LucideInfo, LucideMessageCircle } from "@lucide/angular";
 import { CONTACT, GAME_URL } from "@core/contact";
 import { LanguageService } from "@core/i18n/language.service";
 import { CopyButton } from "@features/feedback/copy-button/copy-button";
 
-/** Contact cards (Discord + in-game) and what to include in a data report. */
+/** Friendly contact page: my in-game avatar, Discord + in-game handles, report tips. */
 @Component({
   selector: "app-feedback-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideGamepad2, LucideInfo, LucideMessageCircle, CopyButton],
+  imports: [LucideGamepad2, LucideHeart, LucideInfo, LucideMessageCircle, CopyButton],
   templateUrl: "./feedback-page.html",
 })
 export class FeedbackPage {

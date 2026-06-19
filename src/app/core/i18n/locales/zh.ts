@@ -213,6 +213,7 @@ export const zh: Record<DictKey, string> = {
   "banner.text": "发现数据错误或有建议？联系我：",
   "banner.ingame": "游戏内",
   "banner.link": "更多信息",
+  "feedback.heyChip": "我的游戏形象",
   "feedback.title": "反馈与建议",
   "feedback.subtitle": "发现疑似错误的出现数据、缺少的宝可梦，或有改进网站的想法？可通过以下任一方式联系我：",
   "feedback.discordTitle": "Discord",

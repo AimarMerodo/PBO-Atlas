@@ -213,6 +213,7 @@ export const pt: Record<DictKey, string> = {
   "banner.text": "Viu algum dado errado ou tem uma sugestão? Fale comigo:",
   "banner.ingame": "No jogo",
   "banner.link": "Mais informações",
+  "feedback.heyChip": "Meu eu no jogo",
   "feedback.title": "Feedback e sugestões",
   "feedback.subtitle": "Um spawn que parece errado, um Pokémon faltando ou uma ideia para melhorar o site? Fale comigo por um destes canais:",
   "feedback.discordTitle": "Discord",
