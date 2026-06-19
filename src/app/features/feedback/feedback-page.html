@@ -1,8 +1,8 @@
-<div class="relative">
+<div class="relative flex min-h-[74vh] items-center">
   <!-- ambient red glow, top-left -->
   <div class="pointer-events-none absolute -left-24 -top-28 h-72 w-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
 
-  <div class="relative grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+  <div class="relative grid w-full items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
     <!-- LEFT: statement -->
     <section>
       <div class="fb-in mb-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-accent-soft">
@@ -11,7 +11,7 @@
       </div>
 
       <h1
-        class="fb-in mb-7 whitespace-pre-line font-display text-5xl leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl"
+        class="fb-in mb-7 whitespace-pre-line font-display text-6xl leading-[0.9] tracking-tight sm:text-7xl lg:text-8xl"
         style="animation-delay: 0.06s"
       >
         {{ i18n.t("feedback.bigTitle") }}
@@ -25,7 +25,7 @@
             src="/creator-avatar.webp"
             alt=""
             aria-hidden="true"
-            class="fb-bob relative h-28 w-auto drop-shadow-[0_10px_22px_rgba(0,0,0,0.5)]"
+            class="fb-bob relative h-32 w-auto drop-shadow-[0_10px_22px_rgba(0,0,0,0.5)]"
           />
         </div>
         <div class="flex flex-col gap-1">
@@ -37,10 +37,10 @@
         </div>
       </div>
 
-      <p class="fb-in mb-5 max-w-md text-base leading-relaxed text-ink-dim" style="animation-delay: 0.2s">
+      <p class="fb-in mb-5 max-w-lg text-lg leading-relaxed text-ink-dim" style="animation-delay: 0.2s">
         {{ i18n.t("feedback.bio") }}
       </p>
-      <p class="fb-in max-w-sm text-[13px] leading-relaxed text-ink-dim/70" style="animation-delay: 0.28s">
+      <p class="fb-in max-w-md text-sm leading-relaxed text-ink-dim/70" style="animation-delay: 0.28s">
         {{ i18n.t("feedback.responseNote") }}
       </p>
     </section>
