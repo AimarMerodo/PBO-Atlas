@@ -2,6 +2,7 @@ export const en = {
   "site.title": "PBO Atlas",
   "site.tagline": "Pokemon Blaze Online maps, spawns and pokedex",
   "nav.home": "Home",
+  "common.scrollTop": "Scroll to top",
   "nav.regions": "Regions",
   "nav.pokedex": "Pokédex",
   "nav.search": "Search",

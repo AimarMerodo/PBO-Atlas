@@ -4,6 +4,7 @@ export const zh: Record<DictKey, string> = {
   "site.title": "PBO Atlas",
   "site.tagline": "Pokemon Blaze Online 地图、出现地点与图鉴",
   "nav.home": "首页",
+  "common.scrollTop": "回到顶部",
   "nav.regions": "地区",
   "nav.pokedex": "图鉴",
   "nav.search": "搜索",

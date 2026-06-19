@@ -4,6 +4,7 @@ export const es: Record<DictKey, string> = {
   "site.title": "PBO Atlas",
   "site.tagline": "Mapas, spawns y pokedex de Pokemon Blaze Online",
   "nav.home": "Inicio",
+  "common.scrollTop": "Volver arriba",
   "nav.regions": "Regiones",
   "nav.pokedex": "Pokédex",
   "nav.search": "Buscar",
