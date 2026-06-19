@@ -54,32 +54,50 @@
         {{ i18n.t("feedback.reachVia") }}
       </p>
 
+      <ng-template #rowInner let-ch let-i="i">
+        <span class="fb-idx min-w-[46px] font-display text-3xl leading-none text-[#3a445c] transition-colors">
+          {{ pad(i + 1) }}
+        </span>
+        <span class="flex min-w-0 flex-1 flex-col gap-1.5">
+          <span class="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+            <span class="fb-name text-2xl font-bold tracking-tight text-ink transition-colors">{{ i18n.t(ch.name) }}</span>
+            <span class="text-sm font-semibold text-accent-soft">{{ ch.handle }}</span>
+          </span>
+          <span class="text-sm leading-relaxed text-ink-dim">{{ i18n.t(ch.desc) }}</span>
+        </span>
+        <span class="fb-go grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line text-ink-dim">
+          @if (copiedIdx() === i) {
+            <svg lucideCheck class="h-4.5 w-4.5 text-emerald-400" aria-hidden="true"></svg>
+          } @else if (ch.href) {
+            <svg lucideArrowUpRight class="h-4.5 w-4.5" aria-hidden="true"></svg>
+          } @else {
+            <svg lucideArrowRight class="h-4.5 w-4.5" aria-hidden="true"></svg>
+          }
+        </span>
+      </ng-template>
+
       @for (ch of channels; track ch.handle; let i = $index) {
-        <button
-          type="button"
-          (click)="copy(i, ch.handle)"
-          [attr.aria-label]="i18n.t(ch.name) + ': ' + ch.handle"
-          class="fb-row fb-inx flex w-full items-center gap-5 border-t border-line px-1 py-6 text-left last:border-b lg:px-7"
-          [style.animationDelay]="0.18 + i * 0.1 + 's'"
-        >
-          <span class="fb-idx min-w-[46px] font-display text-3xl leading-none text-[#3a445c] transition-colors">
-            {{ pad(i + 1) }}
-          </span>
-          <span class="flex min-w-0 flex-1 flex-col gap-1.5">
-            <span class="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-              <span class="fb-name text-2xl font-bold tracking-tight text-ink transition-colors">{{ i18n.t(ch.name) }}</span>
-              <span class="text-sm font-semibold text-accent-soft">{{ ch.handle }}</span>
-            </span>
-            <span class="text-sm leading-relaxed text-ink-dim">{{ i18n.t(ch.desc) }}</span>
-          </span>
-          <span class="fb-go grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line text-ink-dim">
-            @if (copiedIdx() === i) {
-              <svg lucideCheck class="h-4.5 w-4.5 text-emerald-400" aria-hidden="true"></svg>
-            } @else {
-              <svg lucideArrowRight class="h-4.5 w-4.5" aria-hidden="true"></svg>
-            }
-          </span>
-        </button>
+        @if (ch.href) {
+          <a
+            [href]="ch.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="fb-row fb-inx flex w-full items-center gap-5 border-t border-line px-1 py-6 text-left last:border-b lg:px-7"
+            [style.animationDelay]="0.18 + i * 0.1 + 's'"
+          >
+            <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
+          </a>
+        } @else {
+          <button
+            type="button"
+            (click)="copy(i, ch.handle)"
+            [attr.aria-label]="i18n.t(ch.name) + ': ' + ch.handle"
+            class="fb-row fb-inx flex w-full items-center gap-5 border-t border-line px-1 py-6 text-left last:border-b lg:px-7"
+            [style.animationDelay]="0.18 + i * 0.1 + 's'"
+          >
+            <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
+          </button>
+        }
       }
 
       <p class="mt-5 px-1 text-xs text-ink-dim lg:px-7">
