@@ -9,6 +9,10 @@ import { SearchTrigger } from "@shared/components/search-dialog/search-trigger";
 @Component({
   selector: "app-header",
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // display:contents removes the host's own box so the inner `position: sticky`
+  // <header> is a direct child of the full-height app shell — otherwise it can
+  // only stick within the host's ~header-height box and scrolls away immediately.
+  host: { class: "contents" },
   imports: [RouterLink, RouterLinkActive, LanguageToggle, SearchTrigger, LucideMenu, LucideX],
   templateUrl: "./header.html",
 })
