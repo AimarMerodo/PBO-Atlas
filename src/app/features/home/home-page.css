@@ -31,18 +31,17 @@
   /* Track the video's 16:9 (56vw) so object-cover fills the band with almost no
      crop on normal screens; clamp keeps a sane height on phones and huge screens. */
   min-height: clamp(440px, 56vw, 760px);
-  background: #0c1018;
+  /* The poster shows instantly while the video loads (and as a fallback if it
+     can't load), so the band is never blank; the video covers it once playing.
+     NOTE: we deliberately do NOT hide the video under prefers-reduced-motion —
+     it's the page's centrepiece and the owner wants it visible regardless. */
+  background: #0c1018 url(/hero-poster.webp) center 40% / cover no-repeat;
 }
 .hero-video {
   z-index: 1;
   /* Bias the crop slightly upward so the Pokémon (lower third) stay in frame
      on very wide screens where cover trims top/bottom. */
   object-position: center 40%;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-video {
-    display: none;
-  }
 }
 
 /* Light scrim over the hero for headline/search legibility (the text also
