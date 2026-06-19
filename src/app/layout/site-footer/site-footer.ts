@@ -10,7 +10,7 @@ import { GAME_NAME, GAME_URL } from "@core/contact";
   template: `
     <footer class="border-t border-line py-6">
       <div
-        class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 text-xs text-ink-dim sm:flex-row sm:justify-between sm:gap-4"
+        class="flex w-full flex-col items-center gap-2 px-4 text-xs text-ink-dim sm:flex-row sm:justify-between sm:gap-4 sm:px-6"
       >
         <p class="inline-flex items-center gap-1 whitespace-nowrap">
           {{ i18n.t("footer.madeWithPre") }}
