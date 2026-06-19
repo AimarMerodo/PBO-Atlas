@@ -18,6 +18,9 @@ export class PokemonArtwork {
   readonly artworkShiny = input.required<string | null>();
   readonly spritePbo = input<string | null>(null);
   readonly spritePboShiny = input<string | null>(null);
+  /** Explicit Showdown animated id (needed for forms whose dashless sprite
+   *  filename can't be turned back into the dashed Showdown id). */
+  readonly aniId = input<string | null>(null);
 
   protected readonly i18n = inject(LanguageService);
   protected readonly shiny = signal(false);
@@ -30,8 +33,10 @@ export class PokemonArtwork {
     this.shiny() && this.spritePboShiny() ? this.spritePboShiny() : this.spritePbo()
   );
 
-  /** Showdown id derived from the in-game sprite filename (same naming). */
-  private readonly showdownId = computed(() => this.spritePbo()?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null);
+  /** Showdown id: explicit (forms) or derived from the in-game sprite filename. */
+  private readonly showdownId = computed(
+    () => this.aniId() ?? this.spritePbo()?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null,
+  );
   protected readonly aniUrl = computed(() => {
     const id = this.showdownId();
     return id ? `https://play.pokemonshowdown.com/sprites/ani${this.shiny() ? "-shiny" : ""}/${id}.gif` : null;

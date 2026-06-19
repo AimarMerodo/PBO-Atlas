@@ -45,6 +45,29 @@ for (const [slug, e] of Object.entries(pokedex)) {
   formsBySpecies.set(e.speciesId, list);
 }
 
+// --- Showdown animated-sprite id ---
+// Base forms use the dashless id (charizard); form entries (mega/gmax/regional,
+// id >= 10000) need a dash before the form suffix (charizard-megax) or Showdown's
+// /ani/ gif 404s and the artwork falls back to the static official art.
+const spriteId = (e) => e.spritePbo?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null;
+const baseSpriteId = new Map();
+for (const e of Object.values(pokedex)) {
+  if (e.id >= 10000) continue;
+  if (!baseSpriteId.has(e.speciesId) || e.id === e.speciesId) {
+    const id = spriteId(e);
+    if (id) baseSpriteId.set(e.speciesId, id);
+  }
+}
+// Only forms need an explicit id; base mons derive it from spritePbo as before
+// (returning undefined omits the field, keeping base page files unchanged).
+const aniId = (e) => {
+  if (e.id < 10000) return undefined;
+  const id = spriteId(e);
+  if (!id) return undefined;
+  const base = baseSpriteId.get(e.speciesId);
+  return base && id.startsWith(base) && id.length > base.length ? `${base}-${id.slice(base.length)}` : id;
+};
+
 // --- Pokemon item-drop reverse index (inverse of item-sources "drop" rows) ---
 const itemBySlug = new Map(itemsData.items.map((i) => [i.slug, i]));
 const pokemonDrops = new Map();
@@ -115,7 +138,7 @@ for (const [slug, entry] of Object.entries(pokedex)) {
       ? evoStages.filter((m) => m.slug !== slug && (encounters.get(m.slug)?.length ?? 0) > 0).map(({ slug: s, name }) => ({ slug: s, name }))
       : [];
   await write(`pokemon/${slug}.json`, {
-    entry: { ...entry, evolutionLine: undefined },
+    entry: { ...entry, evolutionLine: undefined, aniId: aniId(entry) },
     abilities: entry.abilities.map((a) => ({ ...a, ...(abilities[a.slug] ?? {}) })),
     evoStages,
     encounters: encounters.get(slug) ?? [],

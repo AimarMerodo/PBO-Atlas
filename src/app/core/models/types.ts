@@ -117,6 +117,8 @@ export interface PokedexEntry {
   artworkShiny?: string | null;
   spritePbo?: string | null;
   spritePboShiny?: string | null;
+  /** Showdown animated-sprite id (dashed for forms, e.g. "charizard-megax"). */
+  aniId?: string | null;
   evYield?: EvYield[] | null;
   flavor?: string | null;
   flavorEs?: string | null;
