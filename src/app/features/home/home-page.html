@@ -4,12 +4,14 @@
        its own clipped wrapper so the search dropdown can overflow the hero. -->
   <section class="hero-band relative z-20 isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] border-b border-line">
     <div class="hero-bg absolute inset-0 overflow-hidden">
+      <div class="hero-blur" aria-hidden="true"></div>
       <video
-        class="hero-video absolute inset-0 h-full w-full object-cover"
+        class="hero-video absolute inset-0 h-full w-full object-contain"
         autoplay
         muted
         loop
         playsinline
+        preload="auto"
         poster="/hero-poster.webp"
         aria-hidden="true"
       >

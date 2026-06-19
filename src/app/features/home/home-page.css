@@ -28,12 +28,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(400px, 72vh, 720px);
+  /* Track the video's 16:9 (56.25vw) so the contained video fills the band
+     with no crop; clamp keeps it a sane height on phones and huge screens. */
+  min-height: clamp(440px, 56vw, 760px);
+  background: #0c1018;
 }
-.hero-bg {
-  background: #0c1018 url(/hero-poster.webp) center/cover no-repeat;
+/* Blurred poster fills any leftover band edges (phones / ultrawide) behind the
+   contained video, so the full video frame is always visible — no crop, no bars. */
+.hero-blur {
+  position: absolute;
+  inset: -40px;
+  background: url(/hero-poster.webp) center/cover no-repeat;
+  filter: blur(34px) brightness(0.8) saturate(1.1);
 }
 .hero-video {
+  z-index: 1;
   object-position: center;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -42,10 +51,11 @@
   }
 }
 
-/* Scrim over the video for headline/search legibility. */
+/* Light scrim over the hero for headline/search legibility (the text also
+   carries its own drop-shadow), kept subtle so the video stays visible. */
 .hero-scrim {
   position: absolute;
   inset: 0;
-  z-index: 5;
-  background: linear-gradient(rgba(12, 16, 24, 0.25), rgba(12, 16, 24, 0.45) 55%, rgba(12, 16, 24, 0.82));
+  z-index: 4;
+  background: linear-gradient(rgba(12, 16, 24, 0.12), rgba(12, 16, 24, 0.24) 55%, rgba(12, 16, 24, 0.45));
 }
