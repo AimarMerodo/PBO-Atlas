@@ -1,0 +1,55 @@
+@keyframes fb-bob {
+  0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+  50% { transform: translateY(-7px) rotate(1.5deg); }
+}
+@keyframes fb-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.1); }
+}
+@keyframes fb-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fb-inx {
+  from { opacity: 0; transform: translateX(22px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fb-bob { animation: fb-bob 5.5s ease-in-out infinite; }
+.fb-pulse { animation: fb-pulse 3s ease-in-out infinite; }
+.fb-in { animation: fb-in 0.6s ease both; }
+.fb-inx { animation: fb-inx 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+/* Channel row hover: red accent bar slides in, the row shifts right. */
+.fb-row {
+  position: relative;
+  transition: padding 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.28s ease;
+}
+.fb-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.fb-row:hover { background: linear-gradient(90deg, rgba(239, 68, 68, 0.07), transparent 70%); }
+.fb-row:hover::before { transform: scaleY(1); }
+.fb-row:hover .fb-idx { color: var(--accent); }
+.fb-row:hover .fb-name { color: #fff; }
+.fb-row:hover .fb-go {
+  transform: translateX(5px);
+  color: var(--accent-soft);
+  border-color: var(--accent);
+  opacity: 1;
+}
+.fb-go { transition: transform 0.28s ease, color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease; opacity: 0.75; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-bob, .fb-pulse, .fb-in, .fb-inx { animation: none; }
+}

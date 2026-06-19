@@ -218,7 +218,12 @@ export const es: Record<DictKey, string> = {
   "banner.text": "¿Has visto algún dato mal o tienes una sugerencia? Escríbeme:",
   "banner.ingame": "En el juego",
   "banner.link": "Más info",
-  "feedback.heyChip": "Mi yo in-game",
+  "feedback.eyebrow": "Contacto y comentarios",
+  "feedback.bigTitle": "PONTE EN\nCONTACTO.",
+  "feedback.online": "Suelo estar en línea",
+  "feedback.bio": "PBO Atlas es un proyecto de una sola persona. ¿Viste datos erróneos, un mapa roto o tienes una idea? Elige un canal — lo leo todo.",
+  "feedback.responseNote": "No hace falta cuenta. Suelo responder en un par de días.",
+  "feedback.reachVia": "Cómo contactarme",
   "feedback.title": "Contacto y sugerencias",
   "feedback.subtitle":
     "¿Algún spawn que no cuadra, un pokemon que falta, o una idea para mejorar la web? Escríbeme por cualquiera de estas vías:",

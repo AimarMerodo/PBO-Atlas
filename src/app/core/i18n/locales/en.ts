@@ -216,7 +216,12 @@ export const en = {
   "banner.text": "Spotted wrong data or have a suggestion? Contact me:",
   "banner.ingame": "In-game",
   "banner.link": "More info",
-  "feedback.heyChip": "My in-game self",
+  "feedback.eyebrow": "Contact & feedback",
+  "feedback.bigTitle": "GET IN\nTOUCH.",
+  "feedback.online": "Usually online",
+  "feedback.bio": "PBO Atlas is a one-person project. Spotted wrong spawn data, a broken map, or have an idea? Pick a channel — I read everything.",
+  "feedback.responseNote": "No account needed. I usually reply within a couple of days.",
+  "feedback.reachVia": "Ways to reach me",
   "feedback.title": "Feedback & suggestions",
   "feedback.subtitle":
     "A spawn that looks wrong, a missing pokemon, or an idea to improve the site? Reach me through either of these:",
