@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, inject, signal } from "@angular/core";
 import { NgTemplateOutlet } from "@angular/common";
 import { Meta, Title } from "@angular/platform-browser";
-import { LucideArrowRight, LucideArrowUpRight, LucideCheck } from "@lucide/angular";
+import { LucideArrowUpRight, LucideCheck, LucideCopy } from "@lucide/angular";
 import { CONTACT, FORUM_URL, GAME_URL, REPO_URL } from "@core/contact";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -19,7 +19,7 @@ interface Channel {
 @Component({
   selector: "app-feedback-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgTemplateOutlet, LucideArrowRight, LucideArrowUpRight, LucideCheck],
+  imports: [NgTemplateOutlet, LucideArrowUpRight, LucideCheck, LucideCopy],
   templateUrl: "./feedback-page.html",
   styleUrl: "./feedback-page.css",
 })
