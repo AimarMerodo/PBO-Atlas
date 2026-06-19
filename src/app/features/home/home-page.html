@@ -4,28 +4,17 @@
        its own clipped wrapper so the search dropdown can overflow the hero. -->
   <section class="hero-band relative z-20 isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] border-b border-line">
     <div class="hero-bg absolute inset-0 overflow-hidden">
-      <div class="sky"></div>
-      <div class="stars">
-        @for (s of stars; track $index) {
-          <span
-            [style.left.%]="s.left"
-            [style.top.%]="s.top"
-            [style.width.px]="s.size"
-            [style.height.px]="s.size"
-            [style.--tw]="s.tw + 's'"
-            [style.--td]="s.delay + 's'"
-          ></span>
-        }
-      </div>
-      <div class="sun2"></div>
-      <div class="moon"></div>
-      <div class="px-scene">
-        <div class="px-layer px-far"></div>
-        <div class="px-layer px-mid"></div>
-        <div class="px-layer px-trees"></div>
-        <div class="px-layer px-fg"></div>
-      </div>
-      <div class="dc-tint"></div>
+      <video
+        class="hero-video absolute inset-0 h-full w-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/hero-poster.webp"
+        aria-hidden="true"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
       <div class="hero-scrim"></div>
     </div>
 
