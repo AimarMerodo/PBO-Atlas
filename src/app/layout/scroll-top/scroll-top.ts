@@ -22,7 +22,7 @@ import { LanguageService } from "@core/i18n/language.service";
       [class.pointer-events-none]="!visible()"
       [class.opacity-0]="!visible()"
       [class.translate-y-3]="!visible()"
-      class="fixed bottom-5 right-5 z-40 grid h-11 w-11 place-items-center rounded-full border border-line bg-surface/90 text-ink shadow-lg shadow-black/40 backdrop-blur transition-all duration-200 hover:border-accent/60 hover:text-accent-soft focus-visible:outline-2 focus-visible:outline-accent"
+      class="fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-accent text-white shadow-xl shadow-accent/40 ring-1 ring-black/15 transition-all duration-200 hover:scale-105 hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       <svg lucideArrowUp class="h-5 w-5" aria-hidden="true"></svg>
     </button>
