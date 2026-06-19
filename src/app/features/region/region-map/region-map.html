@@ -34,16 +34,19 @@
     }
   </div>
 
+  <!-- No overflow-hidden here: the spawn popover must be able to extend past the
+       map edges (otherwise it gets clipped, badly so on small mobile maps). The
+       image itself is rounded instead. -->
   <div
-    class="relative w-full overflow-hidden rounded-xl border border-line"
+    class="relative w-full rounded-xl border border-line"
     [style.aspectRatio]="map().imageWidth + ' / ' + map().imageHeight"
     (dismissOutside)="active.set(null)"
   >
-    <img [src]="map().image" [alt]="region() + ' map'" class="absolute inset-0 h-full w-full object-cover" />
+    <img [src]="map().image" [alt]="region() + ' map'" class="absolute inset-0 h-full w-full rounded-xl object-cover" />
 
     <!-- Dim the map while searching so the matches stand out -->
     @if (isSearching()) {
-      <div class="pointer-events-none absolute inset-0 bg-bg/65"></div>
+      <div class="pointer-events-none absolute inset-0 rounded-xl bg-bg/65"></div>
     }
 
     @for (item of visibleMarkers(); track item.marker.locationId) {
@@ -76,9 +79,12 @@
 
     @if (activePreview(); as preview) {
       @if (activeMarker(); as marker) {
+        <!-- No -translate-x-1/2 class here: in Tailwind v4 that uses the `translate`
+             property which would STACK with the inline transform's translate(-50%),
+             shifting the popover off-screen. The inline transform does the centring. -->
         <div
           data-modal-content
-          class="absolute z-20 w-56 -translate-x-1/2 rounded-xl border border-line bg-surface p-3 shadow-2xl"
+          class="absolute z-20 w-56 rounded-xl border border-line bg-surface p-3 shadow-2xl"
           [style.left]="popoverLeft(marker.x)"
           [style.top.%]="marker.y"
           [style.transform]="popoverTransform(marker.y)"

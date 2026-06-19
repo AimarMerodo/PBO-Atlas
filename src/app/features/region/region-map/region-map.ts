@@ -84,9 +84,11 @@ export class RegionMapComponent {
       : `${base} bg-black/85 text-white opacity-0 group-hover:opacity-100`;
   }
 
-  /** Clamp the popover horizontally so it never overflows the map edges. */
+  /** Position the popover's centre at the marker, but clamp by its real half-width
+   *  (w-56 → 7rem) so a centred popover never spills past the map/viewport edge —
+   *  a percentage clamp isn't enough on narrow mobile maps. */
   protected popoverLeft(x: number): string {
-    return `${Math.min(Math.max(x, 12), 88)}%`;
+    return `clamp(7rem, ${x}%, calc(100% - 7rem))`;
   }
 
   /** Flip the popover above the marker when it sits near the bottom of the map. */
