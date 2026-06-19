@@ -14,6 +14,9 @@ const RARITY_FILTERS = ["common", "uncommon", "rare", "very-rare", "ultra-rare",
 @Component({
   selector: "app-spawn-table",
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // Without this the host is display:inline, so its table overflows the host box
+  // and the parent's space-y gap collapses (the "Source:" line glues to the table).
+  host: { class: "block" },
   imports: [RouterLink, RarityBadge, TimeIcon, MethodIcon],
   templateUrl: "./spawn-table.html",
 })
