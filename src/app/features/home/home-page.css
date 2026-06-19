@@ -28,17 +28,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Track the video's 16:9 (56vw) so the contained video nearly fills the band
-     on normal screens (negligible bars); clamp keeps a sane height on phones and
-     huge screens. */
+  /* Track the video's 16:9 (56vw) so object-cover fills the band edge-to-edge
+     with a minimal centred crop on normal screens; clamp keeps a sane height on
+     phones and huge screens. */
   min-height: clamp(440px, 56vw, 760px);
-  /* Solid dark band: the contained video shows in full with clean cinematic bars
-     that blend into the page (no crop, no blur). NOTE: we deliberately do NOT
-     hide the video under prefers-reduced-motion — it's the page's centrepiece. */
+  /* Solid dark fallback behind the video. NOTE: we deliberately do NOT hide the
+     video under prefers-reduced-motion — it's the page's centrepiece. */
   background: #0c1018;
 }
 .hero-video {
   z-index: 1;
+  /* Centre the crop so only sky (top) and foreground grass (bottom) are trimmed;
+     Charizard/Pikachu/Squirtle sit in the middle band and always stay in frame. */
+  object-position: center;
 }
 
 /* Light scrim over the hero for headline/search legibility (the text also
