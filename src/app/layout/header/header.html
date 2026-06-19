@@ -11,6 +11,7 @@
         <a
           [routerLink]="link.route"
           routerLinkActive="text-ink after:scale-x-100"
+          [routerLinkActiveOptions]="{ exact: link.exact === true }"
           class="relative rounded-lg px-3 py-1.5 transition-colors hover:text-ink after:pointer-events-none after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-accent after:transition-transform after:duration-200"
         >
           {{ i18n.t(link.label) }}
@@ -46,6 +47,7 @@
         <a
           [routerLink]="link.route"
           routerLinkActive="text-ink before:scale-y-100"
+          [routerLinkActiveOptions]="{ exact: link.exact === true }"
           (click)="close()"
           class="relative block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink before:absolute before:left-0 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:origin-center before:scale-y-0 before:rounded-full before:bg-accent before:transition-transform before:duration-200"
         >

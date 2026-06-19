@@ -15,8 +15,10 @@ import { SearchTrigger } from "@shared/components/search-dialog/search-trigger";
 export class Header {
   protected readonly i18n = inject(LanguageService);
 
-  /** Primary nav links, shared by the desktop bar and the mobile drawer. */
-  protected readonly links: { route: string; label: DictKey }[] = [
+  /** Primary nav links, shared by the desktop bar and the mobile drawer.
+   *  `exact` is set on Home so its underline only lights up on "/" (not every route). */
+  protected readonly links: { route: string; label: DictKey; exact?: boolean }[] = [
+    { route: "/", label: "nav.home", exact: true },
     { route: "/regions", label: "nav.regions" },
     { route: "/pokedex", label: "nav.pokedex" },
     { route: "/items", label: "nav.items" },

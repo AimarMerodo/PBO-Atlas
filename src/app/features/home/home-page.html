@@ -1,12 +1,11 @@
 <div class="space-y-16">
-  <!-- Full-bleed day→night time-lapse hero: pixel-art mountains (ansimuz, CC0)
-       behind a CSS-animated sky, sun/moon and stars. The animated scene is in
-       its own clipped wrapper so the search dropdown can overflow the hero. -->
+  <!-- Full-bleed day→night time-lapse hero: an AI-generated pixel-art Pokémon
+       video fills the band edge-to-edge (object-cover). The band height tracks
+       16:9 so the crop stays minimal on normal screens. -->
   <section class="hero-band relative z-20 isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] border-b border-line">
     <div class="hero-bg absolute inset-0 overflow-hidden">
-      <div class="hero-blur" aria-hidden="true"></div>
       <video
-        class="hero-video absolute inset-0 h-full w-full object-contain"
+        class="hero-video absolute inset-0 h-full w-full object-cover"
         autoplay
         muted
         loop
