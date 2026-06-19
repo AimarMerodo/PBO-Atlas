@@ -74,6 +74,19 @@ body {
   overflow-x: clip;
 }
 
+/* Native <select>: the browser's arrow hugs the right edge. Replace it with a
+   custom chevron inset from the edge (applies to every select in the app). The
+   selects pair this with `pr-8` so the text never runs under the chevron. */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2397a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 0.85rem;
+  padding-right: 2rem;
+}
+
 /* Headlines in Anton (condensed display). Anton is a single weight, so the
    font-weight utilities on headings are effectively no-ops — that's fine. */
 h1,

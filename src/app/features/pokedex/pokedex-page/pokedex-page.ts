@@ -49,7 +49,7 @@ export class PokedexPageComponent {
   protected readonly evStats = EV_STATS;
 
   protected readonly selectClass =
-    "rounded-lg border border-line bg-surface px-2.5 py-1.5 text-sm capitalize text-ink outline-none transition-colors hover:border-accent/40";
+    "rounded-lg border border-line bg-surface pl-2.5 pr-8 py-1.5 text-sm capitalize text-ink outline-none transition-colors hover:border-accent/40";
 
   protected readonly generations = computed(() => {
     const all = this.list.value() ?? [];
