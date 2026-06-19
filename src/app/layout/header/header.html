@@ -8,7 +8,11 @@
     <!-- Desktop nav -->
     <nav class="hidden items-center gap-1 text-sm text-ink-dim md:flex">
       @for (link of links; track link.route) {
-        <a [routerLink]="link.route" class="rounded-lg px-3 py-1.5 transition-colors hover:bg-surface hover:text-ink">
+        <a
+          [routerLink]="link.route"
+          routerLinkActive="text-ink after:scale-x-100"
+          class="relative rounded-lg px-3 py-1.5 transition-colors hover:text-ink after:pointer-events-none after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-accent after:transition-transform after:duration-200"
+        >
           {{ i18n.t(link.label) }}
         </a>
       }
@@ -41,8 +45,9 @@
       @for (link of links; track link.route) {
         <a
           [routerLink]="link.route"
+          routerLinkActive="text-ink before:scale-y-100"
           (click)="close()"
-          class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink"
+          class="relative block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink before:absolute before:left-0 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:origin-center before:scale-y-0 before:rounded-full before:bg-accent before:transition-transform before:duration-200"
         >
           {{ i18n.t(link.label) }}
         </a>

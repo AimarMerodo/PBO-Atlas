@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from "@angular/core";
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 import { LucideMenu, LucideX } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -9,7 +9,7 @@ import { SearchTrigger } from "@shared/components/search-dialog/search-trigger";
 @Component({
   selector: "app-header",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LanguageToggle, SearchTrigger, LucideMenu, LucideX],
+  imports: [RouterLink, RouterLinkActive, LanguageToggle, SearchTrigger, LucideMenu, LucideX],
   templateUrl: "./header.html",
 })
 export class Header {
