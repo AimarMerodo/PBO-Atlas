@@ -101,7 +101,7 @@
               loading="lazy"
               [class]="
                 'pointer-events-none absolute object-contain opacity-80 drop-shadow-xl transition-transform duration-300 group-hover:scale-110 [image-rendering:pixelated] ' +
-                (s.featured ? '-right-6 -bottom-8 h-[24rem] w-[24rem]' : (s.peekClass ?? '-bottom-3 -right-3 h-24 w-24'))
+                (s.featured ? '-right-2 -bottom-3 h-44 w-44 sm:-right-6 sm:-bottom-8 sm:h-[24rem] sm:w-[24rem]' : (s.peekClass ?? '-bottom-3 -right-3 h-24 w-24'))
               "
             />
           }
@@ -185,7 +185,7 @@
       </div>
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         @for (st of statItems(); track st.label) {
-          <div class="rounded-2xl border border-line bg-surface p-5 text-center">
+          <div [class]="'rounded-2xl border border-line bg-surface p-5 text-center' + ($last ? ' col-span-2 sm:col-span-1' : '')">
             <p class="text-3xl font-extrabold tabular-nums text-accent-soft">
               <app-count-up [value]="st.value" />
             </p>
