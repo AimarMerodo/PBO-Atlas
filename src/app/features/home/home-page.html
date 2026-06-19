@@ -22,7 +22,7 @@
 
     <div class="relative z-10 px-6 py-20 text-center sm:py-28">
       <span
-        class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-ink backdrop-blur"
+        class="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-black/40 px-3 py-1 text-xs font-semibold tracking-wide text-white shadow-sm shadow-black/30 backdrop-blur"
       >
         <span
           aria-hidden="true"
@@ -32,10 +32,10 @@
         PBO Atlas
       </span>
 
-      <h1 class="mx-auto mt-5 max-w-2xl text-3xl font-extrabold tracking-tight drop-shadow-lg sm:text-5xl">
+      <h1 class="hero-title mx-auto mt-5 max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
         {{ i18n.t("home.heroTitle") }}
       </h1>
-      <p class="mx-auto mt-4 max-w-xl text-ink drop-shadow sm:text-lg">{{ i18n.t("home.heroSubtitle") }}</p>
+      <p class="hero-desc mx-auto mt-4 max-w-xl text-white sm:text-lg">{{ i18n.t("home.heroSubtitle") }}</p>
 
       <div class="mt-7">
         <app-hero-search />
@@ -50,7 +50,7 @@
         </a>
         <a
           routerLink="/regions"
-          class="rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 font-semibold text-ink backdrop-blur transition-colors hover:bg-white/10"
+          class="rounded-lg border border-white/30 bg-black/35 px-5 py-2.5 font-semibold text-white shadow-lg shadow-black/20 backdrop-blur transition-colors hover:bg-black/50"
         >
           {{ i18n.t("nav.regions") }}
         </a>
