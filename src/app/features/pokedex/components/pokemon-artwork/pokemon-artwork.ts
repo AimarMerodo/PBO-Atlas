@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, linkedSignal } from "@angular/core";
 import { LucideSparkles } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
+import { ShinyPreference } from "./shiny-preference";
 
 /**
  * Pokemon artwork with a normal/shiny toggle and the animated battle sprite
@@ -23,10 +24,12 @@ export class PokemonArtwork {
   readonly aniId = input<string | null>(null);
 
   protected readonly i18n = inject(LanguageService);
-  // Reset to normal/non-failed whenever the pokemon changes — otherwise the
-  // component is reused across pokedex/:slug navigations and shiny stays stuck
-  // on (worse: a form without shiny art hides the toggle, so it can't be undone).
-  protected readonly shiny = linkedSignal({ source: this.name, computation: () => false });
+  // Shiny is a shared preference so it persists as you browse pokemon (set once,
+  // every pokemon stays shiny until toggled off).
+  private readonly shinyPref = inject(ShinyPreference);
+  protected readonly shiny = this.shinyPref.shiny;
+  // Ani-failure is per-pokemon: reset when the pokemon changes so a missing
+  // sprite on one doesn't force the static fallback on the next.
   protected readonly aniFailed = linkedSignal({ source: this.name, computation: () => false });
 
   protected readonly src = computed(() =>
@@ -46,7 +49,7 @@ export class PokemonArtwork {
   });
 
   protected toggleShiny(): void {
-    this.shiny.update((s) => !s);
+    this.shinyPref.toggle();
     this.aniFailed.set(false);
   }
 }
