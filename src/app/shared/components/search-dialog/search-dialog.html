@@ -1,11 +1,11 @@
 @if (dialog.isOpen()) {
   <div
     class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center pt-[12vh] px-4"
-    (click)="dialog.close()"
+    (dismissOutside)="dialog.close()"
   >
     <div
+      data-modal-content
       class="w-full max-w-lg rounded-xl border border-line bg-surface shadow-2xl overflow-hidden"
-      (click)="$event.stopPropagation()"
       role="dialog"
       aria-modal="true"
     >

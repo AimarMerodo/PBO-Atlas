@@ -2,12 +2,13 @@ import { ChangeDetectionStrategy, Component, input, output } from "@angular/core
 import { LucideX } from "@lucide/angular";
 import type { AtlasIcon } from "@core/models/types";
 import { ItemIcon } from "@shared/components/item-icon/item-icon";
+import { DismissOutside } from "@shared/directives/dismiss-outside";
 
 /** Generic detail dialog for game entities: large atlas icon, title, badge and projected content. */
 @Component({
   selector: "app-game-modal",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideX, ItemIcon],
+  imports: [LucideX, ItemIcon, DismissOutside],
   templateUrl: "./game-modal.html",
 })
 export class GameModal {

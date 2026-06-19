@@ -3,6 +3,7 @@ import { RouterLink } from "@angular/router";
 import { LucideArrowRight, LucideSearch, LucideX } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { MapMarker, MarkerPreview, RegionMapData } from "@core/models/types";
+import { DismissOutside } from "@shared/directives/dismiss-outside";
 
 // Interactive region map: a static image with percentage-positioned markers.
 const KIND_STYLES: Record<string, string> = {
@@ -14,7 +15,7 @@ const KIND_STYLES: Record<string, string> = {
 @Component({
   selector: "app-region-map",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LucideArrowRight, LucideSearch, LucideX],
+  imports: [RouterLink, LucideArrowRight, LucideSearch, LucideX, DismissOutside],
   templateUrl: "./region-map.html",
 })
 export class RegionMapComponent {

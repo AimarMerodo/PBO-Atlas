@@ -14,13 +14,14 @@ import { LucideMapPin } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { DataService } from "@core/data/data.service";
 import type { SearchIndex } from "@core/models/types";
+import { DismissOutside } from "@shared/directives/dismiss-outside";
 import { SearchDialogService } from "./search-dialog.service";
 
 /** Global search overlay. Rendered at the app root (see SearchDialogService). */
 @Component({
   selector: "app-search-dialog",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin],
+  imports: [LucideMapPin, DismissOutside],
   templateUrl: "./search-dialog.html",
 })
 export class SearchDialog {
