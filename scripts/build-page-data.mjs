@@ -29,7 +29,21 @@ const searchIndex = await readJson("search-index.json");
 const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 const itemSources = (await readJson("item-sources.json")).sources ?? {};
 const itemsData = await readJson("items.json");
-const formsData = (await readJson("forms.json")).forms ?? {};
+
+// --- Mega/Primal/Gigantamax forms, grouped by species (from the dex itself) ---
+// Mega & gmax forms are real dex entries sharing the base species id; surface
+// them on the base (and sibling) pages as compact links to their full ficha.
+const formKind = (slug) =>
+  /-mega(-[xy])?$/.test(slug) ? "mega" : /-primal$/.test(slug) ? "primal" : /-gmax$/.test(slug) ? "gmax" : null;
+const KIND_ORDER = { mega: 0, primal: 1, gmax: 2 };
+const formsBySpecies = new Map();
+for (const [slug, e] of Object.entries(pokedex)) {
+  const kind = formKind(slug);
+  if (!kind) continue;
+  const list = formsBySpecies.get(e.speciesId) ?? [];
+  list.push({ kind, slug, name: e.name, types: e.types, artwork: e.artwork });
+  formsBySpecies.set(e.speciesId, list);
+}
 
 // --- Pokemon item-drop reverse index (inverse of item-sources "drop" rows) ---
 const itemBySlug = new Map(itemsData.items.map((i) => [i.slug, i]));
@@ -108,12 +122,11 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     catchableAncestors,
     obtain: acquisitions[slug] ?? [],
     drops: pokemonDrops.get(slug) ?? [],
-    // Mega/Primal/Gigantamax forms; resolve the required Mega Stone to a full
-    // (modal-ready) item so the page can open it in place, like drops.
-    forms: (formsData[slug] ?? []).map(({ stoneSlug, ...f }) => {
-      const item = stoneSlug ? itemBySlug.get(stoneSlug) : null;
-      return { ...f, stone: item ? { ...item, sources: itemSources[stoneSlug] } : null };
-    }),
+    // This species' Mega/Primal/Gigantamax forms (excluding self), each a link
+    // to its own full ficha; sorted mega → primal → gmax.
+    forms: (formsBySpecies.get(entry.speciesId) ?? [])
+      .filter((f) => f.slug !== slug)
+      .sort((a, b) => KIND_ORDER[a.kind] - KIND_ORDER[b.kind] || a.name.localeCompare(b.name)),
     learnset,
     moves,
   });

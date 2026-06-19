@@ -187,16 +187,14 @@ export interface Acquisition {
   detail?: string;
 }
 
-/** A Mega Evolution, Primal Reversion or Gigantamax form of a pokemon. */
+/** A Mega Evolution, Primal Reversion or Gigantamax form — a real dex entry,
+ *  linked from its base/sibling pages. */
 export interface PokemonForm {
   kind: "mega" | "primal" | "gmax";
+  slug: string;
   name: string;
-  /** Pokemon Showdown sprite id, e.g. "charizard-megax" (the URL is built client-side). */
-  spriteId: string;
   types: string[];
-  stats: Record<StatName, number>;
-  /** The Mega Stone needed (modal-ready), when PBO has it; null for gmax/primal. */
-  stone: GameItem | null;
+  artwork: string | null;
 }
 
 export interface PokemonPage {
