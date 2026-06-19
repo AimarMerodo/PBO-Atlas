@@ -233,6 +233,8 @@ export const zh: Record<DictKey, string> = {
   "feedback.ingameTitle": "游戏内（Pokemon Blaze Online）",
   "feedback.ingameHint": "在游戏中给我发消息",
   "feedback.ingameShort": "游戏内",
+  "feedback.forumTitle": "论坛",
+  "feedback.forumHint": "在 Pokemon Blaze Online 论坛上联系我。",
   "feedback.githubTitle": "GitHub",
   "feedback.githubHint": "以 issue 形式报告错误或建议功能。",
   "feedback.copy": "复制",

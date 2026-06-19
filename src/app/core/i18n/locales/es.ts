@@ -237,6 +237,8 @@ export const es: Record<DictKey, string> = {
   "feedback.ingameTitle": "En el juego (Pokemon Blaze Online)",
   "feedback.ingameHint": "Háblame dentro del juego",
   "feedback.ingameShort": "En el juego",
+  "feedback.forumTitle": "Foro",
+  "feedback.forumHint": "Háblame en el foro de Pokemon Blaze Online.",
   "feedback.githubTitle": "GitHub",
   "feedback.githubHint": "Reporta errores o sugiere funciones como issues.",
   "feedback.copy": "Copiar",

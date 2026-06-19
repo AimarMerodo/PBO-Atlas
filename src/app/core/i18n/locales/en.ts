@@ -235,6 +235,8 @@ export const en = {
   "feedback.ingameTitle": "In-game (Pokemon Blaze Online)",
   "feedback.ingameHint": "Message me in the game",
   "feedback.ingameShort": "In-game",
+  "feedback.forumTitle": "Forum",
+  "feedback.forumHint": "Message me on the Pokemon Blaze Online forum.",
   "feedback.githubTitle": "GitHub",
   "feedback.githubHint": "Report bugs or suggest features as issues.",
   "feedback.copy": "Copy",
