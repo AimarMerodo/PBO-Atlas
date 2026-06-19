@@ -21,7 +21,7 @@
 
     <div class="ml-auto flex items-center gap-2 sm:gap-3">
       <app-search-trigger />
-      <app-language-toggle class="hidden md:flex" />
+      <app-language-toggle />
       <!-- Hamburger (mobile only) -->
       <button
         type="button"
@@ -54,10 +54,6 @@
           {{ i18n.t(link.label) }}
         </a>
       }
-      <div class="mt-2 flex items-center justify-between gap-3 border-t border-line px-3 pt-3 pb-1">
-        <span class="text-xs font-semibold uppercase tracking-wide text-ink-dim">{{ i18n.t("nav.language") }}</span>
-        <app-language-toggle />
-      </div>
     </nav>
   }
 </header>
