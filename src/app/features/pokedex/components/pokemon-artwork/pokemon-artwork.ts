@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, computed, inject, input, linkedSignal } from "@angular/core";
 import { LucideSparkles } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 
@@ -23,8 +23,11 @@ export class PokemonArtwork {
   readonly aniId = input<string | null>(null);
 
   protected readonly i18n = inject(LanguageService);
-  protected readonly shiny = signal(false);
-  protected readonly aniFailed = signal(false);
+  // Reset to normal/non-failed whenever the pokemon changes — otherwise the
+  // component is reused across pokedex/:slug navigations and shiny stays stuck
+  // on (worse: a form without shiny art hides the toggle, so it can't be undone).
+  protected readonly shiny = linkedSignal({ source: this.name, computation: () => false });
+  protected readonly aniFailed = linkedSignal({ source: this.name, computation: () => false });
 
   protected readonly src = computed(() =>
     this.shiny() && this.artworkShiny() ? this.artworkShiny() : this.artwork()
