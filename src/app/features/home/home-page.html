@@ -1,11 +1,12 @@
 <div class="space-y-16">
   <!-- Full-bleed day→night time-lapse hero: an AI-generated pixel-art Pokémon
-       video fills the band edge-to-edge (object-cover). The band height tracks
-       16:9 so the crop stays minimal on normal screens. -->
+       video shown in full (object-contain) over a solid dark band, so the whole
+       frame is always visible with no crop. The band height tracks 16:9 so on
+       normal screens the dark bars are negligible. -->
   <section class="hero-band relative z-20 isolate -mt-8 mx-[calc(50%-50vw)] w-[100vw] border-b border-line">
     <div class="hero-bg absolute inset-0 overflow-hidden">
       <video
-        class="hero-video absolute inset-0 h-full w-full object-cover"
+        class="hero-video absolute inset-0 h-full w-full object-contain"
         autoplay
         muted
         loop
