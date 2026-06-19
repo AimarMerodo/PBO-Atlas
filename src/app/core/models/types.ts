@@ -187,6 +187,18 @@ export interface Acquisition {
   detail?: string;
 }
 
+/** A Mega Evolution, Primal Reversion or Gigantamax form of a pokemon. */
+export interface PokemonForm {
+  kind: "mega" | "primal" | "gmax";
+  name: string;
+  /** Pokemon Showdown sprite id, e.g. "charizard-megax" (the URL is built client-side). */
+  spriteId: string;
+  types: string[];
+  stats: Record<StatName, number>;
+  /** The Mega Stone needed (modal-ready), when PBO has it; null for gmax/primal. */
+  stone: GameItem | null;
+}
+
 export interface PokemonPage {
   entry: PokedexEntry;
   abilities: AbilityInfo[];
@@ -196,6 +208,8 @@ export interface PokemonPage {
   obtain: Acquisition[];
   /** Items this pokemon drops when caught/fainted (full items, modal-ready). */
   drops: GameItem[];
+  /** Mega/Primal/Gigantamax forms (empty if none). */
+  forms: PokemonForm[];
   learnset: Learnset | null;
   moves: Record<string, MoveInfo> | null;
 }

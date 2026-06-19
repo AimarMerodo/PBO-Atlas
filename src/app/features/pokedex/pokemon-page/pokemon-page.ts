@@ -15,6 +15,7 @@ import { CatchLocations } from "@features/pokedex/components/catch-locations/cat
 import { EvolutionLine } from "@features/pokedex/components/evolution-line/evolution-line";
 import { MovesSection } from "@features/pokedex/components/moves-section/moves-section";
 import { PokemonArtwork } from "@features/pokedex/components/pokemon-artwork/pokemon-artwork";
+import { PokemonForms } from "@features/pokedex/components/pokemon-forms/pokemon-forms";
 import { StatBars } from "@features/pokedex/components/stat-bars/stat-bars";
 import { TypeEffectiveness } from "@features/pokedex/components/type-effectiveness/type-effectiveness";
 
@@ -33,6 +34,7 @@ import { TypeEffectiveness } from "@features/pokedex/components/type-effectivene
     ItemModal,
     MovesSection,
     PokemonArtwork,
+    PokemonForms,
     StatBars,
     TypeEffectiveness,
   ],

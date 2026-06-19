@@ -1,0 +1,50 @@
+<div class="grid gap-4 lg:grid-cols-2">
+  @for (f of forms(); track f.name) {
+    <div class="rounded-2xl border border-line bg-surface p-4">
+      <div class="flex items-start gap-4">
+        <div class="grid h-28 w-28 shrink-0 place-items-center rounded-xl bg-bg/50">
+          <img
+            [src]="sprite(f.spriteId)"
+            (error)="onError($event, f.spriteId)"
+            [alt]="f.name"
+            loading="lazy"
+            class="max-h-24 w-auto object-contain [image-rendering:pixelated]"
+          />
+        </div>
+        <div class="min-w-0 flex-1">
+          <span
+            class="inline-block rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide"
+            [style]="kindStyle(f.kind)"
+          >
+            {{ kindLabel(f.kind) }}
+          </span>
+          <h3 class="mt-1 font-bold leading-tight">{{ f.name }}</h3>
+          <div class="mt-2 flex flex-wrap gap-1.5">
+            @for (t of f.types; track t) {
+              <app-type-badge [type]="t" />
+            }
+          </div>
+          @if (f.stone; as stone) {
+            <button
+              type="button"
+              (click)="selectedStone.set(stone)"
+              class="mt-3 inline-flex items-center gap-2 rounded-lg border border-line bg-bg/40 py-1 pl-1 pr-2.5 text-xs font-medium transition-all hover:-translate-y-0.5 hover:border-accent/60"
+            >
+              <span class="grid place-items-center rounded bg-zinc-300/80 p-0.5">
+                <app-item-icon [icon]="stone.icon" [size]="22" />
+              </span>
+              {{ localItemName(stone) }}
+            </button>
+          }
+        </div>
+      </div>
+      <div class="mt-4">
+        <app-stat-bars [stats]="f.stats" />
+      </div>
+    </div>
+  }
+</div>
+
+@if (selectedStone(); as s) {
+  <app-item-modal [item]="s" (closed)="selectedStone.set(null)" />
+}

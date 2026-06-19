@@ -29,6 +29,7 @@ const searchIndex = await readJson("search-index.json");
 const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 const itemSources = (await readJson("item-sources.json")).sources ?? {};
 const itemsData = await readJson("items.json");
+const formsData = (await readJson("forms.json")).forms ?? {};
 
 // --- Pokemon item-drop reverse index (inverse of item-sources "drop" rows) ---
 const itemBySlug = new Map(itemsData.items.map((i) => [i.slug, i]));
@@ -107,6 +108,12 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     catchableAncestors,
     obtain: acquisitions[slug] ?? [],
     drops: pokemonDrops.get(slug) ?? [],
+    // Mega/Primal/Gigantamax forms; resolve the required Mega Stone to a full
+    // (modal-ready) item so the page can open it in place, like drops.
+    forms: (formsData[slug] ?? []).map(({ stoneSlug, ...f }) => {
+      const item = stoneSlug ? itemBySlug.get(stoneSlug) : null;
+      return { ...f, stone: item ? { ...item, sources: itemSources[stoneSlug] } : null };
+    }),
     learnset,
     moves,
   });

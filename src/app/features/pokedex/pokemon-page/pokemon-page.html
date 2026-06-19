@@ -75,6 +75,13 @@
       </section>
     }
 
+    @if (p.forms.length > 0) {
+      <section>
+        <h2 class="mb-3 text-lg font-bold">{{ i18n.t("pokemon.forms") }}</h2>
+        <app-pokemon-forms [forms]="p.forms" />
+      </section>
+    }
+
     <section>
       <h2 class="mb-3 text-lg font-bold">
         {{ i18n.t(p.encounters.length === 0 && p.obtain.length > 0 ? "pokemon.howToObtain" : "pokemon.whereToCatch") }}
