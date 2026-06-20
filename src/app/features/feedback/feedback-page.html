@@ -2,7 +2,7 @@
   <!-- ambient red glow, top-left -->
   <div class="pointer-events-none absolute -left-24 -top-28 h-72 w-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
 
-  <div class="relative grid w-full items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
+  <div class="relative grid w-full items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
     <!-- LEFT: statement -->
     <section>
       <div class="fb-in mb-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-accent-soft">
@@ -55,7 +55,7 @@
       </p>
 
       <ng-template #rowInner let-ch let-i="i">
-        <span class="fb-idx min-w-[42px] font-display text-3xl leading-none text-[#3a445c] transition-colors">
+        <span class="fb-idx min-w-[46px] font-display text-3xl leading-none text-[#3a445c] transition-colors">
           {{ pad(i + 1) }}
         </span>
         <span class="flex min-w-0 flex-1 flex-col gap-1.5">
@@ -71,36 +71,34 @@
           } @else if (ch.href) {
             <svg lucideArrowUpRight class="h-4.5 w-4.5" aria-hidden="true"></svg>
           } @else {
-            <svg lucideCopy class="h-4.5 w-4.5" aria-hidden="true"></svg>
+            <svg lucideArrowRight class="h-4.5 w-4.5" aria-hidden="true"></svg>
           }
         </span>
       </ng-template>
 
-      <div class="grid gap-3 sm:grid-cols-2 lg:px-1">
-        @for (ch of channels; track ch.handle; let i = $index) {
-          @if (ch.href) {
-            <a
-              [href]="ch.href"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="fb-row fb-inx flex items-center gap-4 rounded-xl border border-line p-5 text-left"
-              [style.animationDelay]="0.18 + i * 0.08 + 's'"
-            >
-              <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
-            </a>
-          } @else {
-            <button
-              type="button"
-              (click)="copy(i, ch.handle)"
-              [attr.aria-label]="i18n.t(ch.name) + ': ' + ch.handle"
-              class="fb-row fb-inx flex items-center gap-4 rounded-xl border border-line p-5 text-left"
-              [style.animationDelay]="0.18 + i * 0.08 + 's'"
-            >
-              <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
-            </button>
-          }
+      @for (ch of channels; track ch.handle; let i = $index) {
+        @if (ch.href) {
+          <a
+            [href]="ch.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="fb-row fb-inx flex w-full items-center gap-5 border-t border-line px-1 py-6 text-left last:border-b lg:px-7"
+            [style.animationDelay]="0.18 + i * 0.1 + 's'"
+          >
+            <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
+          </a>
+        } @else {
+          <button
+            type="button"
+            (click)="copy(i, ch.handle)"
+            [attr.aria-label]="i18n.t(ch.name) + ': ' + ch.handle"
+            class="fb-row fb-inx flex w-full items-center gap-5 border-t border-line px-1 py-6 text-left last:border-b lg:px-7"
+            [style.animationDelay]="0.18 + i * 0.1 + 's'"
+          >
+            <ng-container [ngTemplateOutlet]="rowInner" [ngTemplateOutletContext]="{ $implicit: ch, i }" />
+          </button>
         }
-      </div>
+      }
 
       <p class="mt-5 px-1 text-xs text-ink-dim lg:px-7">
         <a [href]="gameUrl" target="_blank" rel="noopener noreferrer" class="text-accent-soft hover:underline"
