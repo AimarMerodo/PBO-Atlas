@@ -36,10 +36,7 @@
     "latias": [{ "method": "quest", "source": "Roaming after the 500 Dex quest", "detail": "Hoenn" }],
     "regirock": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }],
     "registeel": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }],
-    "regice": [
-      { "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" },
-      { "method": "event", "source": "Christmas Event", "detail": "Roaming" }
-    ],
+    "regice": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }, { "method": "event", "source": "Christmas Event", "detail": "Roaming" }],
     "manaphy": [{ "method": "quest", "source": "Manaphy quest", "detail": "Requires Lv. 80 Fishing (Hoenn)" }],
     "cosmog": [{ "method": "mining", "source": "Legendary mining reward", "detail": "Cosmog chest" }],
     "solgaleo": [{ "method": "mining", "source": "Cosmog chest (Legendary mining)", "detail": "Then evolve Cosmog → Cosmoem → Solgaleo (Lv. 53, daytime)" }],
@@ -66,6 +63,30 @@
     "kingambit": [{ "method": "boss", "source": "King Bisharp boss", "detail": "Beat King Bisharp at Mt. Pyre Summit (Hoenn) for the Leader's Crest, then evolve Bisharp" }],
     "ursaluna": [{ "method": "event", "source": "Halloween Shop", "detail": "Evolve Ursaring with a Peat Block (200 Soul Shards)" }],
     "kyogre-primal": [{ "method": "evolution", "source": "Blue Orb", "detail": "Equip the Blue Orb on a Kyogre (Primal Reversion)." }],
-    "groudon-primal": [{ "method": "evolution", "source": "Red Orb", "detail": "Equip the Red Orb on a Groudon (Primal Reversion)." }]
+    "groudon-primal": [{ "method": "evolution", "source": "Red Orb", "detail": "Equip the Red Orb on a Groudon (Primal Reversion)." }],
+    "eevee": [{ "method": "store", "source": "Goodwill Token Shop", "detail": "Eevee Chest (250 Goodwill Tokens)" }],
+    "wo-chien": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Rotating Legendary Chest (2,000 Ores · Feb–May)" }],
+    "ting-lu": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Rotating Legendary Chest (2,000 Ores · Jun–Sep)" }],
+    "chien-pao": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Rotating Legendary Chest (2,000 Ores · Oct–Jan)" }],
+    "tepig": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Tepig Chest (75 Ores)" }],
+    "oshawott": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Oshawott Chest (75 Ores)" }],
+    "snivy": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Snivy Chest (75 Ores)" }],
+    "skarmory": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Skarmory Chest (150 Ores)" }],
+    "hatenna": [{ "method": "store", "source": "Dynite Ore Shop", "detail": "Hatenna Chest (150 Ores)" }],
+    "togepi": [{ "method": "store", "source": "Battle Tokens Shop", "detail": "Togepi Chest (220 Battle Tokens)" }],
+    "axew": [{ "method": "store", "source": "Battle Tokens Shop", "detail": "Axew Chest (220 Battle Tokens)" }],
+    "porygon": [{ "method": "store", "source": "Battle Tokens Shop", "detail": "Porygon Chest (220 Battle Tokens)" }, { "method": "store", "source": "Flying Trader — Route 130 (12th)", "detail": "Porygon Chest (200,000 F)" }],
+    "slowpoke": [{ "method": "store", "source": "Ranked Battle Token Trader", "detail": "Slowpoke Chest (100 Ranked Tokens)" }],
+    "slowpoke-galar": [{ "method": "store", "source": "Ranked Battle Token Trader", "detail": "Slowpoke-Galar Chest (120 Ranked Tokens)" }],
+    "ferroseed": [{ "method": "store", "source": "Ranked Battle Token Trader", "detail": "Ferroseed Chest (450 Ranked Tokens)" }],
+    "darumaka": [{ "method": "store", "source": "Ranked Battle Token Trader", "detail": "Darumaka Chest (450 Ranked Tokens)" }],
+    "dratini": [{ "method": "store", "source": "Dragon Trader — Golburn City (5th)", "detail": "Dratini Chest (200,000 F)" }, { "method": "event", "source": "Fish Contest", "detail": "Dratini Chest (1st place)" }],
+    "larvesta": [{ "method": "store", "source": "Grass Trader — Eterna Forest (26th)", "detail": "Larvesta Chest (200,000 F)" }, { "method": "event", "source": "Bug Contest", "detail": "Larvesta Chest (1st place)" }],
+    "spiritomb": [{ "method": "store", "source": "Ghost/Dark Trader — Mt. Pyre 1F (19th)", "detail": "Spiritomb Chest (150,000 F)" }, { "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Spiritomb Chest (250 Soul Shards)" }],
+    "gimmighoul": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Ghimmighoul Chest (chance)" }],
+    "houndour": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
+    "lillipup": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
+    "rockruff": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
+    "chansey": [{ "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Halloween Chansey Chest (500 Soul Shards)" }]
   }
 }
