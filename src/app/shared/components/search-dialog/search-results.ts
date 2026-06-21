@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, input, output } from "@angular/core";
-import { LucideMap, LucideMapPin } from "@lucide/angular";
+import { LucideMapPin } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { ItemIcon } from "@shared/components/item-icon/item-icon";
 import { hrefFor, type SearchGroups } from "./search";
@@ -12,7 +12,7 @@ import { hrefFor, type SearchGroups } from "./search";
 @Component({
   selector: "app-search-results",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin, LucideMap, ItemIcon],
+  imports: [LucideMapPin, ItemIcon],
   template: `
     @if (results().pokemon.length) {
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.pokemon") }}</p>
@@ -69,7 +69,7 @@ import { hrefFor, type SearchGroups } from "./search";
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.regions") }}</p>
       @for (r of results().regions; track r.id) {
         <button (click)="go.emit(href.region(r.id))" class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2">
-          <svg lucideMap class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+          <img [src]="'/maps/' + r.id + '.png'" alt="" width="48" height="32" class="h-8 w-12 shrink-0 rounded object-cover ring-1 ring-line" />
           <span class="text-sm">{{ r.name }}</span>
         </button>
       }
