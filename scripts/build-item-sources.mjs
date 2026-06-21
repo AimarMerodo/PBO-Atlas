@@ -91,6 +91,18 @@ const DROPS = [
   d("heart-scale", "Luvdisc", ["Sinnoh", "Jvaloh", "Hoenn"]),
   d("stardust", "Staryu", ["Hoenn"]),
   d("star-piece", "Staryu", ["Hoenn"]),
+  // Crafting materials — fossil fragments drop from their fossil Pokémon (also via
+  // Mining); Honey from Combee. Source: forum crafting guide (#5742).
+  d("fossilized-carapace", "Anorith", [], "Fossil Pokémon · also from Mining"),
+  d("shell-plate-fragment", "Tirtouga", [], "Fossil Pokémon · also from Mining"),
+  d("fossilized-crest", "Shieldon", [], "Fossil Pokémon · also from Mining"),
+  d("ancient-wing-fragment", "Archen", [], "Fossil Pokémon · also from Mining"),
+  d("glacial-crest-shard", "Amaura", [], "Fossil Pokémon · also from Mining"),
+  d("oceanic-fossil-residue", "Kabuto", [], "Fossil Pokémon · also from Mining"),
+  d("spiral-shell-fragment", "Omanyte", [], "Fossil Pokémon · also from Mining"),
+  d("reptilian-fang", "Tyrunt", [], "Fossil Pokémon · also from Mining"),
+  d("rampaging-jawbone", "Cranidos", [], "Fossil Pokémon · also from Mining"),
+  d("honey", "Combee", ["Sinnoh", "Jvaloh", "Hoenn"], "Chance drop"),
 ];
 
 // Shop inventories (notable items only — TMs, mounts, cosmetics & event
@@ -122,6 +134,16 @@ const SHOPS = [
   { item: "gardevoirite", source: "Battle Token Shop", detail: "2,000 Battle Tokens" },
   { item: "absolite", source: "PvP Store", detail: "2,500 Ranked Tokens" },
   { item: "tyranitarite", source: "Casino Token Store", detail: "45,000 Casino Tokens" },
+  // Pokédollar (F) NPC shops & monthly type traders (forum #1760).
+  ...shop("Route 208 Experts (Sinnoh)", "F", [
+    ["heal-powder", 300], ["energy-powder", 300], ["energy-root", 1200], ["revival-herb", 2800],
+    ["rawst-berry", 1000], ["chesto-berry", 1000], ["cheri-berry", 1000], ["aspear-berry", 1000],
+    ["oran-berry", 1000], ["sitrus-berry", 1000], ["pecha-berry", 1000], ["persim-berry", 1000], ["lum-berry", 1500],
+  ]),
+  ...shop("Dragon Trader · Golburn City (5th)", "F", [["dragon-fang", 35000], ["dragon-scale", 10000]]),
+  ...shop("Flying/Normal Trader · Route 130 (12th)", "F", [["silk-scarf", 35000], ["soothe-bell", 10000]]),
+  ...shop("Ghost/Dark Trader · Mt. Pyre 1F (19th)", "F", [["spell-tag", 35000], ["dusk-stone", 10000]]),
+  ...shop("Grass Trader · Eterna Forest (26th)", "F", [["miracle-seed", 35000], ["leaf-stone", 10000]]),
 ];
 
 const items = (await readJson("items.json")).items;
@@ -168,9 +190,30 @@ for (const row of TRADES) {
   push(row.item, { method: "npc", source: row.source, detail: row.detail });
 }
 
-// Bulk NPC-shop sources from the in-game Item Finder capture (data/item-finder.json).
-// Adds shop rows ONLY for items that don't already have a curated shop source above —
-// existing drop/shop rows are never modified. Items are matched by display name → slug.
+// Non-shop "where to get": event chests & NPC reward pools, rendered via the item
+// modal's generic branch. method ∈ event|quest. Source: forum #1760.
+const REWARDS = [
+  ...["razor-fang", "razor-claw", "metal-coat", "dusk-stone", "dawn-stone", "shiny-stone", "moon-stone"].map(
+    (item) => ({ item, method: "event", source: "Evolution Stone Chest", detail: "Gamepass / Dynamax event" }),
+  ),
+  ...["rare-candy", "stardust", "deepseascale", "deepseatooth", "water-stone", "dragon-scale", "nugget", "elixir", "ether"].map(
+    (item) => ({ item, method: "event", source: "Beachhouse Brawl", detail: "Event reward" }),
+  ),
+  ...["malicious-armor", "auspicious-armor", "spell-tag", "toxic-orb", "weakness-policy"].map(
+    (item) => ({ item, method: "quest", source: "Hex Maniacs reward", detail: "Chance" }),
+  ),
+];
+for (const row of REWARDS) {
+  if (!itemSlugs.has(row.item)) {
+    warnings.push(`reward: unknown item slug "${row.item}"`);
+    continue;
+  }
+  push(row.item, { method: row.method, source: row.source, detail: row.detail });
+}
+
+// Bulk shop sources from the in-game Item Finder capture (data/item-finder.json).
+// Additive: adds every shop where an item is sold, de-duped (by source+detail) against
+// sources already added above — never removes anything. Matched by display name → slug.
 const norm = (s) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 const slugByName = new Map();
 for (const i of items) if (!slugByName.has(norm(i.name))) slugByName.set(norm(i.name), i.slug);
@@ -189,9 +232,9 @@ for (const it of finder?.items ?? []) {
     finderUnmatched++;
     continue;
   }
-  // Don't modify items that already have a curated shop source.
-  if ((out[slug] ?? []).some((r) => r.method === "shop")) continue;
-  const seen = new Set();
+  // Dedup against sources already present (curated + earlier finder rows) by
+  // source+detail, so an item keeps every distinct shop it's sold at.
+  const seen = new Set((out[slug] ?? []).map((r) => `${r.source}|${r.detail ?? ""}`));
   for (const o of it.opciones_compra ?? []) {
     if (!o.tienda) continue;
     const detail = [o.cantidad, o.moneda].filter((x) => x !== null && x !== undefined && x !== "").join(" ");

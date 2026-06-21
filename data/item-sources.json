@@ -12,6 +12,31 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "60 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "60 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "60 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "100 Cursed ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "60 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "100 Glacial Ore"
       }
     ],
     "ability-patch": [
@@ -19,6 +44,31 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "125 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "125 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "125 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "125 Cursed ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "125 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "125 Glacial Ore"
       }
     ],
     "absolite": [
@@ -26,6 +76,11 @@
         "method": "shop",
         "source": "PvP Store",
         "detail": "2,500 Ranked Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2500 Ranked Battle Token"
       }
     ],
     "ace-trainer-blue-costume-bundle-female": [
@@ -87,6 +142,15 @@
         "detail": "750 Frost Shard"
       }
     ],
+    "ancient-wing-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "archen",
+        "pokemonName": "Archen",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "angel-costume-bundle-female": [
       {
         "method": "shop",
@@ -122,11 +186,23 @@
         "detail": "1 Kanto Protagonist Costume Bundle Ticket"
       }
     ],
+    "aspear-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
+      }
+    ],
     "assault-vest": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "800 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "800 Crew Wars Token"
       }
     ],
     "atk-ev-master-ball": [
@@ -144,6 +220,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "quest",
+        "source": "Hex Maniacs reward",
+        "detail": "Chance"
       }
     ],
     "avalugg-hisui-chest": [
@@ -488,6 +569,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "3,000 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "3000 Dynite ore"
       }
     ],
     "charmander-surf-mount-chest": [
@@ -502,6 +588,20 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "cheri-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
+      }
+    ],
+    "chesto-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
       }
     ],
     "chi-yu-chest": [
@@ -563,6 +663,11 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "150 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Blaze Coin"
       }
     ],
     "choice-scarf": [
@@ -570,6 +675,11 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "150 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Blaze Coin"
       }
     ],
     "choice-specs": [
@@ -577,6 +687,11 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "150 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "150 Blaze Coin"
       }
     ],
     "chople-berry": [
@@ -696,6 +811,16 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "300 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "30 Purple Ooze"
       }
     ],
     "dark-fire-stone": [
@@ -768,6 +893,21 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "decidueye-costume-bundle-female": [
@@ -801,6 +941,11 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
       }
     ],
     "deepseatooth": [
@@ -813,6 +958,11 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
       }
     ],
     "def-ev-master-ball": [
@@ -903,6 +1053,11 @@
       },
       {
         "method": "shop",
+        "source": "Dragon Trader · Golburn City (5th)",
+        "detail": "35,000 F"
+      },
+      {
+        "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
       },
@@ -928,6 +1083,16 @@
           "Sinnoh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Dragon Trader · Golburn City (5th)",
+        "detail": "10,000 F"
+      },
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
       }
     ],
     "dream-land-costume-chest": [
@@ -957,6 +1122,26 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Ghost/Dark Trader · Mt. Pyre 1F (19th)",
+        "detail": "10,000 F"
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "easter-altaria-mount-chest": [
@@ -1035,6 +1220,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "300 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "300 Dynite ore"
       }
     ],
     "electirizer": [
@@ -1059,6 +1249,39 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "200 Dynite ore"
+      }
+    ],
+    "elixir": [
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
+      }
+    ],
+    "energy-powder": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "300 F"
+      }
+    ],
+    "energy-root": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,200 F"
+      }
+    ],
+    "ether": [
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
       }
     ],
     "everstone": [
@@ -1087,6 +1310,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "800 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "800 Crew Wars Token"
       }
     ],
     "exp-share": [
@@ -1099,6 +1327,26 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "65 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "65 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "200 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "200 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "400 Dynite ore"
       }
     ],
     "expert-belt": [
@@ -1215,6 +1463,16 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "fisherman-chest": [
@@ -1250,6 +1508,24 @@
         "method": "shop",
         "source": "Dragon Ball Shop",
         "detail": "14 Dragon Ball"
+      }
+    ],
+    "fossilized-carapace": [
+      {
+        "method": "drop",
+        "pokemon": "anorith",
+        "pokemonName": "Anorith",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
+    "fossilized-crest": [
+      {
+        "method": "drop",
+        "pokemon": "shieldon",
+        "pokemonName": "Shieldon",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "frost-stone": [
@@ -1366,6 +1642,11 @@
         "method": "shop",
         "source": "Battle Token Shop",
         "detail": "2,000 Battle Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "2000 Battle Token"
       }
     ],
     "gary-costume-bundle": [
@@ -1450,6 +1731,15 @@
         "detail": "750 Frost Shard"
       }
     ],
+    "glacial-crest-shard": [
+      {
+        "method": "drop",
+        "pokemon": "amaura",
+        "pokemonName": "Amaura",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "glastrier-mount-chest": [
       {
         "method": "shop",
@@ -1518,6 +1808,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "200 Dynite ore"
       }
     ],
     "great-ball-shiny-tracker-safe": [
@@ -1643,6 +1938,13 @@
         "detail": "200 Radiance Token"
       }
     ],
+    "heal-powder": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "300 F"
+      }
+    ],
     "heart-scale": [
       {
         "method": "drop",
@@ -1667,6 +1969,16 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "300 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "30 Purple Ooze"
       }
     ],
     "heavy-duty-boots": [
@@ -1686,6 +1998,19 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "750 Soul Shard"
+      }
+    ],
+    "honey": [
+      {
+        "method": "drop",
+        "pokemon": "combee",
+        "pokemonName": "Combee",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ],
+        "detail": "Chance drop"
       }
     ],
     "houndoom-costume-bundle": [
@@ -1714,6 +2039,21 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "200 Frost Shard"
       }
     ],
     "icy-rock": [
@@ -1721,6 +2061,16 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "300 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "30 Purple Ooze"
       }
     ],
     "incineroar-costume-bundle-male": [
@@ -1787,6 +2137,36 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "25 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "100 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "25 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "75 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "75 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "600 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "75 Dynite ore"
       }
     ],
     "kahili-costume-bundle-female": [
@@ -1904,6 +2284,26 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Grass Trader · Eterna Forest (26th)",
+        "detail": "10,000 F"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "150 Heart Petals"
       }
     ],
     "leek": [
@@ -1921,6 +2321,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "800 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "800 Crew Wars Token"
       }
     ],
     "life-orb": [
@@ -1928,6 +2333,16 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "800 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "2100 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "800 Crew Wars Token"
       }
     ],
     "light-ball": [
@@ -1935,6 +2350,11 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "50 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "50 Blaze Coin"
       }
     ],
     "light-clay": [
@@ -1942,6 +2362,21 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "300 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "300 Dynite ore"
       }
     ],
     "lillie-costume-bundle-female": [
@@ -1975,6 +2410,13 @@
         "method": "shop",
         "source": "Blooming Ore Trades",
         "detail": "75 Blooming Ore"
+      }
+    ],
+    "lum-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,500 F"
       }
     ],
     "lunala-mount-chest": [
@@ -2025,6 +2467,26 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "500 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "250 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "250 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "300 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "500 Dynite ore"
       }
     ],
     "macho-brace-exp-share-blueprint": [
@@ -2106,6 +2568,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "quest",
+        "source": "Hex Maniacs reward",
+        "detail": "Chance"
       }
     ],
     "manaphy-mount-chest": [
@@ -2195,6 +2662,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "2,500 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "2500 Crew Wars Token"
       }
     ],
     "mental-herb": [
@@ -2252,6 +2724,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
       }
     ],
     "metronome": [
@@ -2259,6 +2736,31 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "400 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "400 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "400 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "400 Cursed ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "400 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "400 Glacial Ore"
       }
     ],
     "mew-chest": [
@@ -2293,6 +2795,11 @@
       },
       {
         "method": "shop",
+        "source": "Grass Trader · Eterna Forest (26th)",
+        "detail": "35,000 F"
+      },
+      {
+        "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
       }
@@ -2316,6 +2823,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "200 Dynite ore"
       }
     ],
     "moltres-mount": [
@@ -2338,6 +2850,26 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "150 Heart Petals"
       }
     ],
     "move-block-exp-share-blueprint": [
@@ -2359,6 +2891,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "200 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "200 Crew Wars Token"
       }
     ],
     "myers-costume-bundle": [
@@ -2438,6 +2975,11 @@
     ],
     "nugget": [
       {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
+      },
+      {
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "80 Casino Token"
@@ -2448,6 +2990,15 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "oceanic-fossil-residue": [
+      {
+        "method": "drop",
+        "pokemon": "kabuto",
+        "pokemonName": "Kabuto",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "ogerpon-mask-accessory-cornerstone": [
@@ -2469,6 +3020,13 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "500 Soul Shard"
+      }
+    ],
+    "oran-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
       }
     ],
     "orc-mask": [
@@ -2524,11 +3082,33 @@
         "detail": "300 Soul Shard"
       }
     ],
+    "pecha-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
+      }
+    ],
     "permanent-air-balloon": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "300 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "300 Dynite ore"
       }
     ],
     "permanent-chesto-berry": [
@@ -2586,6 +3166,13 @@
         "method": "shop",
         "source": "Battle Tokens Shop",
         "detail": "150 Battle Token"
+      }
+    ],
+    "persim-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
       }
     ],
     "petal-egg-stone": [
@@ -2803,6 +3390,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "200 Dynite ore"
       }
     ],
     "pumpkin-jellicent-mount-chest": [
@@ -2833,6 +3425,15 @@
         "detail": "500 Crew Wars Token"
       }
     ],
+    "rampaging-jawbone": [
+      {
+        "method": "drop",
+        "pokemon": "cranidos",
+        "pokemonName": "Cranidos",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "ranger-costume-bundle-female": [
       {
         "method": "shop",
@@ -2849,9 +3450,21 @@
     ],
     "rare-candy": [
       {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
+      },
+      {
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "140 Casino Token"
+      }
+    ],
+    "rawst-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
       }
     ],
     "razor-claw": [
@@ -2863,6 +3476,11 @@
           "Sinnoh",
           "Jvaloh"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
       }
     ],
     "razor-fang": [
@@ -2873,6 +3491,11 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
       }
     ],
     "reaper-cloth": [
@@ -2904,6 +3527,11 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "300 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "300 Dynite ore"
       }
     ],
     "red-costume-bundle": [
@@ -2927,11 +3555,27 @@
         "detail": "Trade a Groudon · equip on Groudon for Primal Reversion"
       }
     ],
+    "reptilian-fang": [
+      {
+        "method": "drop",
+        "pokemon": "tyrunt",
+        "pokemonName": "Tyrunt",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "reverse-stone": [
       {
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "100 Soul Shard"
+      }
+    ],
+    "revival-herb": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "2,800 F"
       }
     ],
     "riley-costume-bundle": [
@@ -2960,6 +3604,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "600 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "600 Crew Wars Token"
       }
     ],
     "roseli-berry": [
@@ -3068,6 +3717,30 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "40 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "40 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "40 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "40 Dynite ore"
+      }
+    ],
+    "shell-plate-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "tirtouga",
+        "pokemonName": "Tirtouga",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "shenron-mount": [
@@ -3090,6 +3763,26 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "event",
+        "source": "Evolution Stone Chest",
+        "detail": "Gamepass / Dynamax event"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "200 Heart Petals"
       }
     ],
     "shock-drive": [
@@ -3125,6 +3818,11 @@
       },
       {
         "method": "shop",
+        "source": "Flying/Normal Trader · Route 130 (12th)",
+        "detail": "35,000 F"
+      },
+      {
+        "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
       },
@@ -3147,6 +3845,13 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      }
+    ],
+    "sitrus-berry": [
+      {
+        "method": "shop",
+        "source": "Route 208 Experts (Sinnoh)",
+        "detail": "1,000 F"
       }
     ],
     "skarmory-chest": [
@@ -3231,6 +3936,16 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "300 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "30 Purple Ooze"
       }
     ],
     "snivy-chest": [
@@ -3269,6 +3984,13 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      }
+    ],
+    "soothe-bell": [
+      {
+        "method": "shop",
+        "source": "Flying/Normal Trader · Route 130 (12th)",
+        "detail": "10,000 F"
       }
     ],
     "soothe-share-blueprint": [
@@ -3317,6 +4039,16 @@
       },
       {
         "method": "shop",
+        "source": "Ghost/Dark Trader · Mt. Pyre 1F (19th)",
+        "detail": "35,000 F"
+      },
+      {
+        "method": "quest",
+        "source": "Hex Maniacs reward",
+        "detail": "Chance"
+      },
+      {
+        "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
       }
@@ -3326,6 +4058,15 @@
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "350 Frost Shard"
+      }
+    ],
+    "spiral-shell-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "omanyte",
+        "pokemonName": "Omanyte",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "spiritomb-chest": [
@@ -3388,6 +4129,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
       }
     ],
     "steel-memory": [
@@ -3459,6 +4205,16 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "super-grepa-berry": [
@@ -3629,6 +4385,21 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "200 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "200 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "200 Dynite ore"
       }
     ],
     "terrakion-chest": [
@@ -3675,6 +4446,16 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "tiffany-costume-bundle": [
@@ -3710,6 +4491,13 @@
         "method": "shop",
         "source": "Battle Tokens Shop",
         "detail": "220 Battle Token"
+      }
+    ],
+    "toxic-orb": [
+      {
+        "method": "quest",
+        "source": "Hex Maniacs reward",
+        "detail": "Chance"
       }
     ],
     "tropius-wings": [
@@ -3763,6 +4551,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "45,000 Casino Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "45000 Casino Token"
       }
     ],
     "ultra-ball-shiny-tracker-safe": [
@@ -3933,9 +4726,29 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      },
+      {
+        "method": "event",
+        "source": "Beachhouse Brawl",
+        "detail": "Event reward"
+      },
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "75 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "15 Blaze Coin"
       }
     ],
     "weakness-policy": [
+      {
+        "method": "quest",
+        "source": "Hex Maniacs reward",
+        "detail": "Chance"
+      },
       {
         "method": "shop",
         "source": "Battle Tokens Shop",
@@ -3980,6 +4793,11 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "200 Tokens"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "200 Crew Wars Token"
       }
     ],
     "witch-costume-bundle-female": [
