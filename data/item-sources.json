@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "note": "Where to get notable items. Sourced by hand from the official PBO forum (drops thread #1744, shops thread #1760). method ∈ drop|shop.",
+    "note": "Where to get items. Hand-sourced drops + shops from the official PBO forum (#1744, #1760), plus NPC-shop rows auto-added from the in-game Item Finder capture (data/item-finder.json) for items lacking a curated shop. method ∈ drop|shop.",
     "sources": [
       "https://forums.pokemonblazeonline.com/threads/wild-drops-and-where-to-find-them-wip.1744/",
       "https://forums.pokemonblazeonline.com/threads/items-shops-overview-wip.1760/"
@@ -28,6 +28,20 @@
         "detail": "2,500 Ranked Tokens"
       }
     ],
+    "ace-trainer-blue-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "100 Abyssal Pearl"
+      }
+    ],
+    "ace-trainer-blue-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "100 Abyssal Pearl"
+      }
+    ],
     "aggronite": [
       {
         "method": "drop",
@@ -38,11 +52,88 @@
         ]
       }
     ],
+    "akku-mask": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "150 Soul Shard"
+      }
+    ],
+    "alistor-mask": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "alolan-ninetales-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "alolan-ninetales-mount-chest-untradable": [
+      {
+        "method": "shop",
+        "source": "Fox Mount Rewarder",
+        "detail": "1 Free Fox Mount Ticket"
+      }
+    ],
+    "alolan-sandslash-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "angel-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "angel-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "annihlape-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "75 Cursed ore"
+      }
+    ],
+    "articuno-mount": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "ash-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Kanto Protagonist Costume Shop",
+        "detail": "1 Kanto Protagonist Costume Bundle Ticket"
+      }
+    ],
     "assault-vest": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "800 Tokens"
+      }
+    ],
+    "atk-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
       }
     ],
     "auspicious-armor": [
@@ -53,6 +144,60 @@
         "regions": [
           "Hoenn"
         ]
+      }
+    ],
+    "avalugg-hisui-chest": [
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "150 Glacial Ore"
+      }
+    ],
+    "axew-chest": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "220 Battle Token"
+      }
+    ],
+    "babiri-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "big-mushroom": [
+      {
+        "method": "shop",
+        "source": "Tiny Mushroom Store",
+        "detail": "5 Tiny Mushroom"
+      }
+    ],
+    "big-root": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "150 Battle Token"
+      }
+    ],
+    "billy-hocus-pocus-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "binding-band": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "300 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
       }
     ],
     "black-belt": [
@@ -72,6 +217,11 @@
           "Sinnoh",
           "Jvaloh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
       }
     ],
     "black-glasses": [
@@ -82,6 +232,215 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "black-sludge": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "250 Battle Token"
+      }
+    ],
+    "blaze-coin": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "6 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "6 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "5 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "6 Dynite ore"
+      }
+    ],
+    "bloody-nurse-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "blunder-policy": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "booster-energy": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "800 Crew Wars Token"
+      }
+    ],
+    "brendan-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Hoenn Protagonist Costume Shop",
+        "detail": "1 Hoenn Protagonist Costume Bundle Ticket"
+      }
+    ],
+    "broken-tm-disk": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "45 Daycare Token"
+      }
+    ],
+    "broly-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Dragon Ball Shop",
+        "detail": "7 Dragon Ball"
+      }
+    ],
+    "bug-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "bulbasaur-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "burn-drive": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "250 Egg Shard"
+      }
+    ],
+    "butterfree-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "750 Heart Petals"
+      }
+    ],
+    "buzzwole-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "650 Ranked Battle Token"
+      }
+    ],
+    "caitlin-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "calyrex-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "1500 Dynite ore"
+      }
+    ],
+    "candy-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "150 Egg Shard"
+      }
+    ],
+    "caramel-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "150 Egg Shard"
+      }
+    ],
+    "carrot-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "750 Egg Shard"
+      }
+    ],
+    "cat-headphones": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "caulifla-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Dragon Ball Shop",
+        "detail": "7 Dragon Ball"
+      }
+    ],
+    "celesteela-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "650 Ranked Battle Token"
+      }
+    ],
+    "celestial-peak-ticket-1-hour": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "50 Crew Wars Token"
+      }
+    ],
+    "celestial-peak-ticket-24-hours": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "1100 Crew Wars Token"
+      }
+    ],
+    "celestial-peak-ticket-8-hours": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "370 Crew Wars Token"
+      }
+    ],
+    "cell-battery": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "chandelure-costume-bundle-1": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "75 Cursed ore"
+      }
+    ],
+    "chandelure-spider-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "300 Cursed ore"
       }
     ],
     "charcoal": [
@@ -103,6 +462,18 @@
           "Sinnoh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "charizard-black-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "500 Spirit Token"
       }
     ],
     "charizardite-x": [
@@ -110,6 +481,74 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "3,000 Ores"
+      }
+    ],
+    "charmander-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "charti-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "chi-yu-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2500 Ranked Battle Token"
+      }
+    ],
+    "chien-pao-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "2000 Dynite ore"
+      }
+    ],
+    "chien-pao-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "500 Battle Token"
+      }
+    ],
+    "chilan-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "chill-drive": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "250 Egg Shard"
+      }
+    ],
+    "chipped-pot": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "150 Soul Shard"
+      }
+    ],
+    "choco-dragonite-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "300 Blooming Ore"
       }
     ],
     "choice-band": [
@@ -133,11 +572,179 @@
         "detail": "150 Coins"
       }
     ],
+    "chople-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "christmas-penguin-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "christmas-sweater": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "250 Frost Shard"
+      }
+    ],
+    "christmas-tree-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "chucky-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "cinderace-chest-halloween-2025": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "150 Cursed ore"
+      }
+    ],
+    "coba-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "cobalion-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "cobalion-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Shiny Coin Store",
+        "detail": "35 Shiny Coin"
+      }
+    ],
+    "colbur-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "cornerstone-mask": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "1500 Heat Shard"
+      }
+    ],
+    "corviknight-wings": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
+      }
+    ],
+    "cracked-pot": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "100 Soul Shard"
+      }
+    ],
+    "crawdaunt-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "750 Heat Shard"
+      }
+    ],
+    "crew-wars-token": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "1 Blaze Coin"
+      }
+    ],
+    "crobat-wings": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
+      }
+    ],
     "damp-rock": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      }
+    ],
+    "dark-fire-stone": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "150 Soul Shard"
+      }
+    ],
+    "dark-ice-stone": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "50 Cursed ore"
+      }
+    ],
+    "dark-leaf-stone": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "50 Cursed ore"
+      }
+    ],
+    "dark-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "dark-metagross-mount": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2000 Ranked Battle Token"
+      }
+    ],
+    "dark-thunder-stone": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "50 Cursed ore"
+      }
+    ],
+    "dark-water-stone": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "50 Spirit Token"
+      }
+    ],
+    "darumaka-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "450 Ranked Battle Token"
       }
     ],
     "dawn-stone": [
@@ -154,6 +761,27 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      }
+    ],
+    "decidueye-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "decidueye-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "decidueye-wings": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
       }
     ],
     "deepseascale": [
@@ -180,6 +808,83 @@
         ]
       }
     ],
+    "def-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
+      }
+    ],
+    "delta-charizard-wings": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "350 Spirit Token"
+      }
+    ],
+    "deoxys-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "2000 Dynite ore"
+      }
+    ],
+    "dewgong-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "1000 Frost Shard"
+      }
+    ],
+    "diancie-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Diancie Costume Shop",
+        "detail": "1 Diancie Costume Bundle Ticket"
+      }
+    ],
+    "diancie-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Diancie Costume Shop",
+        "detail": "1 Diancie Costume Bundle Ticket"
+      }
+    ],
+    "diggersby-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "dive-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "50 Abyssal Pearl"
+      }
+    ],
+    "dive-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "50 Abyssal Pearl"
+      }
+    ],
+    "doublade-backpack": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "350 Spirit Token"
+      }
+    ],
+    "douse-drive": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "250 Egg Shard"
+      }
+    ],
     "dragon-fang": [
       {
         "method": "drop",
@@ -188,6 +893,23 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "dragon-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
       }
     ],
     "dragon-scale": [
@@ -199,6 +921,20 @@
           "Sinnoh",
           "Hoenn"
         ]
+      }
+    ],
+    "dream-land-costume-chest": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "750 Heart Petals"
+      }
+    ],
+    "dubious-disc": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "100 Battle Token"
       }
     ],
     "dusk-stone": [
@@ -214,6 +950,77 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      }
+    ],
+    "easter-altaria-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "300 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "300 Blooming Ore"
+      }
+    ],
+    "easter-cinderace-chest-2026": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "150 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "150 Blooming Ore"
+      }
+    ],
+    "easter-serperior-chest-2026": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "150 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "150 Blooming Ore"
+      }
+    ],
+    "eevee-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "250 Goodwill Token"
+      }
+    ],
+    "eevee-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "350 Goodwill Token"
+      }
+    ],
+    "eevee-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "350 Goodwill Token"
+      }
+    ],
+    "egg-move-voucher": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "40 Crew Wars Token"
+      }
+    ],
+    "eject-button": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "300 Ranked Battle Token"
       }
     ],
     "eject-pack": [
@@ -233,11 +1040,39 @@
         ]
       }
     ],
+    "electric-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
     "electric-seed": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      }
+    ],
+    "everstone": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "everstone-exp-share-blueprint": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "500 Daycare Token"
+      }
+    ],
+    "evil-chansey-mount": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "1000 Daycare Token"
       }
     ],
     "eviolite": [
@@ -267,6 +1102,95 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "fairy-feather": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "fairy-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "female-easter-hat-2018-blue-green": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "50 Egg Shard"
+      }
+    ],
+    "female-easter-hat-2018-white-red": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "50 Egg Shard"
+      }
+    ],
+    "female-nutcracker-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "female-santa-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "female-skeleton-dancer-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "ferroseed-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "450 Ranked Battle Token"
+      }
+    ],
+    "festive-boy-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "festive-girl-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "fighting-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "fire-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
       }
     ],
     "fire-stone": [
@@ -286,6 +1210,102 @@
         "detail": "15 Coins"
       }
     ],
+    "fisherman-chest": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "5 Abyssal Pearl"
+      }
+    ],
+    "fisherman-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "flapple-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "flying-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "flying-nimbus": [
+      {
+        "method": "shop",
+        "source": "Dragon Ball Shop",
+        "detail": "14 Dragon Ball"
+      }
+    ],
+    "frost-stone": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "300 Frost Shard"
+      }
+    ],
+    "frozen-yoshi-mount": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "150 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "150 Blooming Ore"
+      }
+    ],
+    "full-ev-reset": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "100 Casino Token"
+      }
+    ],
+    "galarian-articuno-chest": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "3000 Battle Token"
+      }
+    ],
+    "galarian-moltres-chest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "2000 Crew Wars Token"
+      }
+    ],
+    "galarian-slowking-mask": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "galarian-slowpoke-hat": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "galarian-zapdos-chest": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "15000 Casino Token"
+      }
+    ],
     "galarica-cuff": [
       {
         "method": "drop",
@@ -294,6 +1314,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "10 Abyssal Pearl"
       }
     ],
     "galarica-wreath": [
@@ -304,6 +1329,18 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "50 Abyssal Pearl"
+      }
+    ],
+    "galaxy-mew-mount": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "750 Spirit Token"
       }
     ],
     "garchompite": [
@@ -324,11 +1361,234 @@
         "detail": "2,000 Battle Tokens"
       }
     ],
+    "gary-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Kanto Protagonist Costume Shop",
+        "detail": "1 Kanto Protagonist Costume Bundle Ticket"
+      }
+    ],
+    "gastly-overhead": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
+      }
+    ],
+    "gastrodon-west-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "200 Crew Wars Token"
+      }
+    ],
+    "genesect-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "75 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "75 Blooming Ore"
+      }
+    ],
+    "gengarite": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "10000 Soul Shard"
+      }
+    ],
+    "gholdengo-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "ghost-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "ghost-rider-bike-mount-lavender": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "150 Cursed ore"
+      }
+    ],
+    "ghost-rider-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "ghostface-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "gingerbread-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "glastrier-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "300 Glacial Ore"
+      }
+    ],
+    "gloria-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "20 Blaze Coin"
+      }
+    ],
+    "gogoat-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "300 Crew Wars Token"
+      }
+    ],
+    "gold-amulet": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "300 Daycare Token"
+      }
+    ],
+    "golfer-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "golurk-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "goodra-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "gracidea": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "1000 Egg Shard"
+      }
+    ],
+    "grass-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
     "grassy-seed": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      }
+    ],
+    "great-ball-shiny-tracker-safe": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "10 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "10 Frost Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "10 Heart Petals"
+      },
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "10 Soul Shard"
+      }
+    ],
+    "green-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Kanto Protagonist Costume Shop",
+        "detail": "1 Kanto Protagonist Costume Bundle Ticket"
+      }
+    ],
+    "grip-claw": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "ground-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "guy-fawkes-mask": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "gyarados-surf-mount-shadow": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "350 Battle Token"
+      }
+    ],
+    "haban-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "halloween-clown-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "halloween-skarmory-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "300 Cursed ore"
       }
     ],
     "hard-stone": [
@@ -341,6 +1601,39 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "hasshaku-gardevoir-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "75 Cursed ore"
+      }
+    ],
+    "hatenna-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "150 Dynite ore"
+      }
+    ],
+    "hatterene-chest-christmas-2025": [
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "150 Glacial Ore"
+      }
+    ],
+    "hawaiian-t-shirt-chest": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "200 Radiance Token"
       }
     ],
     "heart-scale": [
@@ -355,11 +1648,58 @@
         ]
       }
     ],
+    "hearthflame-mask": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "500 Radiance Token"
+      }
+    ],
     "heat-rock": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      }
+    ],
+    "heavy-duty-boots": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "350 Ranked Battle Token"
+      }
+    ],
+    "hellfire-typhlosion-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "750 Soul Shard"
+      }
+    ],
+    "houndoom-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "hp-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
+      }
+    ],
+    "ice-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
       }
     ],
     "ice-stone": [
@@ -376,6 +1716,60 @@
         "detail": "300 Tokens"
       }
     ],
+    "incineroar-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "inferno-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Inferno Costume Shop",
+        "detail": "1 Inferno Costume Bundle Ticket"
+      }
+    ],
+    "inferno-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Inferno Costume Shop",
+        "detail": "1 Inferno Costume Bundle Ticket"
+      }
+    ],
+    "iron-boulder-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "iron-crown-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "iron-leaves-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "iv-potion": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "20 Blaze Coin"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "200 Casino Token"
+      }
+    ],
     "iv-randomizer": [
       {
         "method": "shop",
@@ -386,6 +1780,27 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "25 Coins"
+      }
+    ],
+    "kahili-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "kasib-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "kebia-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
       }
     ],
     "kings-rock": [
@@ -404,6 +1819,60 @@
         "regions": [
           "Sinnoh"
         ]
+      }
+    ],
+    "kukui-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "kyogre-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "150 Abyssal Pearl"
+      }
+    ],
+    "lagging-tail": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "300 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "300 Ranked Battle Token"
+      }
+    ],
+    "lance-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Discord Coin Store",
+        "detail": "750 Discord Coin"
+      }
+    ],
+    "latias-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "latios-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "latiosite": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "10000 Heat Shard"
       }
     ],
     "leaf-stone": [
@@ -468,11 +1937,101 @@
         "detail": "300 Ores"
       }
     ],
+    "lillie-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "lollipop-mount-chest-halloween-2025": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "lopunnite": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "10000 Egg Shard"
+      }
+    ],
+    "luigi-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "75 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "75 Blooming Ore"
+      }
+    ],
+    "lunala-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "750 Spirit Token"
+      }
+    ],
+    "lure": [
+      {
+        "method": "shop",
+        "source": "Blooming Ore Shop",
+        "detail": "100 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Blooming Ore Trades",
+        "detail": "100 Blooming Ore"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "360 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "100 Dynite ore"
+      }
+    ],
+    "luvdisc-mount-chest-a": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "500 Heart Petals"
+      }
+    ],
+    "luvdisc-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "750 Heart Petals"
+      }
+    ],
     "macho-brace": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "500 Ores"
+      }
+    ],
+    "macho-brace-exp-share-blueprint": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "500 Daycare Token"
+      }
+    ],
+    "magearna-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "650 Ranked Battle Token"
       }
     ],
     "magmarizer": [
@@ -497,6 +2056,39 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "male-easter-hat-2018-blue-green": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "50 Egg Shard"
+      }
+    ],
+    "male-easter-hat-2018-white-red": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "50 Egg Shard"
+      }
+    ],
+    "male-nutcracker-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "male-santa-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
       }
     ],
     "malicious-armor": [
@@ -509,6 +2101,13 @@
         ]
       }
     ],
+    "manaphy-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "750 Heat Shard"
+      }
+    ],
     "manectite": [
       {
         "method": "drop",
@@ -517,6 +2116,54 @@
         "regions": [
           "Sinnoh"
         ]
+      }
+    ],
+    "marshadow-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2500 Ranked Battle Token"
+      }
+    ],
+    "marshadow-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "75 Cursed ore"
+      }
+    ],
+    "master-ball-shiny-tracker-safe": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "100 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "100 Frost Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "100 Heart Petals"
+      },
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "100 Heat Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "100 Soul Shard"
+      }
+    ],
+    "masterpiece-teacup": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "150 Soul Shard"
       }
     ],
     "mawilite": [
@@ -529,11 +2176,25 @@
         ]
       }
     ],
+    "may-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Hoenn Protagonist Costume Shop",
+        "detail": "1 Hoenn Protagonist Costume Bundle Ticket"
+      }
+    ],
     "medichamite": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "2,500 Tokens"
+      }
+    ],
+    "mental-herb": [
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "30 Abyssal Pearl"
       }
     ],
     "metagrossite-crest": [
@@ -593,6 +2254,27 @@
         "detail": "400 Ores"
       }
     ],
+    "mew-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "1000 Goodwill Token"
+      }
+    ],
+    "mew-chest-halloween-2025": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "1000 Spirit Token"
+      }
+    ],
+    "mew-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
     "miracle-seed": [
       {
         "method": "drop",
@@ -601,6 +2283,25 @@
         "regions": [
           "Jvaloh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "misdreavus-mask": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "30 Cursed ore"
+      }
+    ],
+    "mismagius-hat": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
       }
     ],
     "misty-seed": [
@@ -608,6 +2309,13 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      }
+    ],
+    "moltres-mount": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
       }
     ],
     "moon-stone": [
@@ -625,11 +2333,32 @@
         "detail": "15 Coins"
       }
     ],
+    "move-block-exp-share-blueprint": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "500 Daycare Token"
+      }
+    ],
+    "mummy-cowboy-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
     "muscle-band": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "200 Tokens"
+      }
+    ],
+    "myers-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
       }
     ],
     "mystic-water": [
@@ -650,6 +2379,16 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Abyssal Pearl Trader",
+        "detail": "3 Abyssal Pearl"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
       }
     ],
     "never-melt-ice": [
@@ -669,6 +2408,74 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "ninetales-mount-chest-untradable": [
+      {
+        "method": "shop",
+        "source": "Fox Mount Rewarder",
+        "detail": "1 Free Fox Mount Ticket"
+      }
+    ],
+    "noivern-wings": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
+      }
+    ],
+    "nugget": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "80 Casino Token"
+      }
+    ],
+    "occa-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "ogerpon-mask-accessory-cornerstone": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "ogerpon-mask-accessory-hearthflame": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "200 Radiance Token"
+      }
+    ],
+    "oogieboogie-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "orc-mask": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "150 Soul Shard"
+      }
+    ],
+    "oshawott-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "75 Dynite ore"
       }
     ],
     "oval-stone": [
@@ -689,11 +2496,117 @@
         ]
       }
     ],
+    "passho-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "payapa-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "peat-block": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "300 Soul Shard"
+      }
+    ],
     "permanent-air-balloon": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "300 Ores"
+      }
+    ],
+    "permanent-chesto-berry": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "permanent-custap-berry": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "200 Battle Token"
+      }
+    ],
+    "permanent-focus-sash": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      }
+    ],
+    "permanent-lum-berry": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "permanent-sitrus-berry": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "permanent-throat-spray": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "150 Battle Token"
+      }
+    ],
+    "petal-egg-stone": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "200 Egg Shard"
+      }
+    ],
+    "pikachu-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "350 Goodwill Token"
+      }
+    ],
+    "pikachu-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "350 Goodwill Token"
+      }
+    ],
+    "poipole-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "650 Ranked Battle Token"
       }
     ],
     "poison-barb": [
@@ -714,6 +2627,139 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "poison-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "poke-ball-shiny-tracker-safe": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "5 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "5 Frost Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "5 Heart Petals"
+      },
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "5 Heat Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "5 Soul Shard"
+      }
+    ],
+    "porygon-chest": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "150 Battle Token"
+      }
+    ],
+    "power-anklet": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "power-band": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "power-belt": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "power-bracer": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "power-herb": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "300 Battle Token"
+      }
+    ],
+    "power-lens": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "power-weight": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "200 Daycare Token"
+      }
+    ],
+    "pp-max": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "25 Ranked Battle Token"
+      }
+    ],
+    "pp-up": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "10 Ranked Battle Token"
+      }
+    ],
+    "primarina-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Primarina Costume Shop",
+        "detail": "1 Primarina Costume Bundle Ticket"
+      }
+    ],
+    "primarina-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Primarina Costume Shop",
+        "detail": "1 Primarina Costume Bundle Ticket"
       }
     ],
     "prism-scale": [
@@ -738,11 +2784,67 @@
         ]
       }
     ],
+    "psychic-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
     "psychic-seed": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      }
+    ],
+    "pumpkin-jellicent-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "1000 Soul Shard"
+      }
+    ],
+    "pumpkin-mask-2025-glowing": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "purple-fnaf-bear-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "quaxly-chest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "500 Crew Wars Token"
+      }
+    ],
+    "ranger-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Ranger Costume Shop",
+        "detail": "1 Ranger Costume Bundle Ticket"
+      }
+    ],
+    "ranger-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Ranger Costume Shop",
+        "detail": "1 Ranger Costume Bundle Ticket"
+      }
+    ],
+    "rare-candy": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "140 Casino Token"
       }
     ],
     "razor-claw": [
@@ -776,6 +2878,18 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "100 Soul Shard"
+      }
+    ],
+    "reaper-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "500 Spirit Token"
       }
     ],
     "red-card": [
@@ -785,11 +2899,116 @@
         "detail": "300 Ores"
       }
     ],
+    "red-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Kanto Protagonist Costume Shop",
+        "detail": "1 Kanto Protagonist Costume Bundle Ticket"
+      }
+    ],
+    "red-ninja-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "reverse-stone": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "100 Soul Shard"
+      }
+    ],
+    "riley-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "750 Heart Petals"
+      }
+    ],
+    "rindo-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "rock-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
     "rocky-helmet": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "600 Tokens"
+      }
+    ],
+    "roseli-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "rotom-frost-chest": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "250 Frost Shard"
+      }
+    ],
+    "sableye-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "75 Cursed ore"
+      }
+    ],
+    "safety-goggles": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "300 Ranked Battle Token"
+      }
+    ],
+    "sandslash-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "scorched-metal-coat": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "scroll-of-darkness": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "600 Daycare Token"
+      }
+    ],
+    "scroll-of-waters": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "600 Daycare Token"
+      }
+    ],
+    "shadow-articuno-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Discord Coin Store",
+        "detail": "1500 Discord Coin"
       }
     ],
     "sharp-beak": [
@@ -800,6 +3019,16 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
       }
     ],
     "sharpedonite": [
@@ -813,11 +3042,25 @@
         "detail": "Route 222"
       }
     ],
+    "shed-shell": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "300 Ranked Battle Token"
+      }
+    ],
     "shell-bell": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "40 Ores"
+      }
+    ],
+    "shenron-mount": [
+      {
+        "method": "shop",
+        "source": "Dragon Ball Shop",
+        "detail": "21 Dragon Ball"
       }
     ],
     "shiny-stone": [
@@ -833,6 +3076,20 @@
         "method": "shop",
         "source": "Blaze Coin Shop",
         "detail": "15 Coins"
+      }
+    ],
+    "shock-drive": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "250 Egg Shard"
+      }
+    ],
+    "shuca-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
       }
     ],
     "silk-scarf": [
@@ -851,6 +3108,16 @@
         "regions": [
           "Jvaloh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
       }
     ],
     "silver-powder": [
@@ -861,6 +3128,88 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "skarmory-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "150 Dynite ore"
+      }
+    ],
+    "skarmory-chest-halloween-2025": [
+      {
+        "method": "shop",
+        "source": "Cursed Ore Trades",
+        "detail": "150 Cursed ore"
+      }
+    ],
+    "skeleton-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "skeleton-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "sled-mount-chest-a": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
+      }
+    ],
+    "sled-mount-chest-b": [
+      {
+        "method": "shop",
+        "source": "Glacial Ore Shop",
+        "detail": "150 Glacial Ore"
+      }
+    ],
+    "slowpoke-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "100 Ranked Battle Token"
+      }
+    ],
+    "slowpoke-galar-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
+      }
+    ],
+    "slowpoke-hat": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "slowpoke-hat-amnesia": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "200 Radiance Token"
+      }
+    ],
+    "smoke-ball": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "25 Daycare Token"
       }
     ],
     "smooth-rock": [
@@ -868,6 +3217,20 @@
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "300 Tokens"
+      }
+    ],
+    "snivy-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "75 Dynite ore"
+      }
+    ],
+    "snowball": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "120 Ranked Battle Token"
       }
     ],
     "soft-sand": [
@@ -887,6 +3250,46 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "soothe-share-blueprint": [
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "500 Daycare Token"
+      }
+    ],
+    "soul-reaper-sword-benkai": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "spatk-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
+      }
+    ],
+    "spdef-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
+      }
+    ],
+    "speed-ev-master-ball": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "500 Casino Token"
       }
     ],
     "spell-tag": [
@@ -897,6 +3300,60 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Token Shop",
+        "detail": "75 Daycare Token"
+      }
+    ],
+    "spheal-backpack": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "350 Frost Shard"
+      }
+    ],
+    "spiritomb-chest": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "250 Soul Shard"
+      }
+    ],
+    "sprigatito-chest": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "500 Crew Wars Token"
+      }
+    ],
+    "squirtle-mask": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "squirtle-mood-pack-easter-2024": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "250 Egg Shard"
+      }
+    ],
+    "squirtle-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "500 Heat Shard"
+      }
+    ],
+    "stantler-rudolph-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "750 Frost Shard"
       }
     ],
     "star-piece": [
@@ -919,6 +3376,62 @@
         ]
       }
     ],
+    "steel-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
+      }
+    ],
+    "storm-nimbus": [
+      {
+        "method": "shop",
+        "source": "Dragon Ball Shop",
+        "detail": "14 Dragon Ball"
+      }
+    ],
+    "summer-eevee-chest-2025": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "500 Radiance Token"
+      }
+    ],
+    "summer-garchomp-gamble-chest-2025": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "750 Heat Shard"
+      }
+    ],
+    "summer-garchomp-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "750 Radiance Token"
+      }
+    ],
+    "summer-ice-stone": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "50 Radiance Token"
+      }
+    ],
+    "summer-thunder-stone": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "150 Heat Shard"
+      }
+    ],
+    "summer-water-stone": [
+      {
+        "method": "shop",
+        "source": "Radiance Token Shop",
+        "detail": "50 Radiance Token"
+      }
+    ],
     "sun-stone": [
       {
         "method": "drop",
@@ -934,11 +3447,195 @@
         "detail": "15 Coins"
       }
     ],
+    "super-grepa-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "super-hondew-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "super-kelpsy-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "super-pomeg-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "super-qualot-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "super-tamato-berry": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "15 Dynite ore"
+      },
+      {
+        "method": "shop",
+        "source": "Purple Ooze Shop",
+        "detail": "20 Purple Ooze"
+      }
+    ],
+    "swampert-mask": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "sweet-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "150 Egg Shard"
+      }
+    ],
+    "syrupy-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "200 Egg Shard"
+      }
+    ],
+    "tanga-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "tapu-fini-surf-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "tapu-koko-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "tapu-lele-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "tart-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "150 Egg Shard"
+      }
+    ],
+    "team-aqua-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Aqua Costume Shop",
+        "detail": "1 Team Aqua Costume Bundle Ticket"
+      }
+    ],
+    "team-aqua-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Aqua Costume Shop",
+        "detail": "1 Team Aqua Costume Bundle Ticket"
+      }
+    ],
+    "team-magma-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Magma Costume Shop",
+        "detail": "1 Team Magma Costume Bundle Ticket"
+      }
+    ],
+    "team-magma-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Magma Costume Shop",
+        "detail": "1 Team Magma Costume Bundle Ticket"
+      }
+    ],
+    "tepig-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "75 Dynite ore"
+      }
+    ],
     "terrain-extender": [
       {
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "200 Ores"
+      }
+    ],
+    "terrakion-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "terrakion-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Shiny Coin Store",
+        "detail": "35 Shiny Coin"
+      }
+    ],
+    "thug-life-shades": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "200 Egg Shard"
       }
     ],
     "thunder-stone": [
@@ -966,6 +3663,62 @@
         "detail": "15 Coins"
       }
     ],
+    "tiffany-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "ting-lu-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "2000 Dynite ore"
+      }
+    ],
+    "toad-costume-bundle-chest": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "500 Egg Shard"
+      }
+    ],
+    "toffee-apple": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "200 Egg Shard"
+      }
+    ],
+    "togepi-chest": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "220 Battle Token"
+      }
+    ],
+    "tropius-wings": [
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "200 Heat Shard"
+      }
+    ],
+    "tutor-move-voucher": [
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Store",
+        "detail": "40 Crew Wars Token"
+      }
+    ],
+    "twisted-forest-ticket": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
     "twisted-spoon": [
       {
         "method": "drop",
@@ -984,11 +3737,171 @@
         ]
       }
     ],
+    "type-null-chest": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "3600 Casino Token"
+      }
+    ],
     "tyranitarite": [
       {
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "45,000 Casino Tokens"
+      }
+    ],
+    "ultra-ball-shiny-tracker-safe": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "25 Egg Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "25 Frost Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "25 Heart Petals"
+      },
+      {
+        "method": "shop",
+        "source": "Heat Shard Shop",
+        "detail": "25 Heat Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "25 Soul Shard"
+      }
+    ],
+    "umbreon-chest-halloween-2025": [
+      {
+        "method": "shop",
+        "source": "Spirit Token Shop",
+        "detail": "500 Spirit Token"
+      }
+    ],
+    "umbreon-ears": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "umbreon-mount-moonlight": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "125 Dynite ore"
+      }
+    ],
+    "unallocated-ev-reset": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "80 Casino Token"
+      }
+    ],
+    "undead-rapidash-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "750 Soul Shard"
+      }
+    ],
+    "unremarkable-teacup": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "100 Soul Shard"
+      }
+    ],
+    "up-grade": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "100 Battle Token"
+      }
+    ],
+    "ursaluna-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "4000 Casino Token"
+      }
+    ],
+    "uruk-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "valentine-togekiss-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "1000 Heart Petals"
+      }
+    ],
+    "vampire-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "vampire-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "victini-chest": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "15000 Casino Token"
+      }
+    ],
+    "viktor-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Blaze Coin Shop",
+        "detail": "20 Blaze Coin"
+      }
+    ],
+    "virizion-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "virizion-mount-chest": [
+      {
+        "method": "shop",
+        "source": "Shiny Coin Store",
+        "detail": "35 Shiny Coin"
+      }
+    ],
+    "wacan-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "water-memory": [
+      {
+        "method": "shop",
+        "source": "Casino Token Store",
+        "detail": "720 Casino Token"
       }
     ],
     "water-stone": [
@@ -1008,11 +3921,149 @@
         "detail": "15 Coins"
       }
     ],
+    "weakness-policy": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "250 Battle Token"
+      }
+    ],
+    "whipped-dream": [
+      {
+        "method": "shop",
+        "source": "Frost Shard Shop",
+        "detail": "150 Frost Shard"
+      },
+      {
+        "method": "shop",
+        "source": "Heart Petals Shop",
+        "detail": "150 Heart Petals"
+      }
+    ],
+    "white-fnaf-bear-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "white-herb": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "250 Battle Token"
+      }
+    ],
+    "wide-lens": [
+      {
+        "method": "shop",
+        "source": "Battle Tokens Shop",
+        "detail": "150 Battle Token"
+      }
+    ],
     "wise-glasses": [
       {
         "method": "shop",
         "source": "Crew Wars Token Shop",
         "detail": "200 Tokens"
+      }
+    ],
+    "witch-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "witch-staff": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "200 Soul Shard"
+      }
+    ],
+    "wizard-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "wo-chien-chest": [
+      {
+        "method": "shop",
+        "source": "Dynite Ore Shop",
+        "detail": "2000 Dynite ore"
+      }
+    ],
+    "yache-berry": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "yellow-fnaf-bear-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "yoshi-mount-chest-classic": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "750 Egg Shard"
+      }
+    ],
+    "yoshi-mount-chest-pastel": [
+      {
+        "method": "shop",
+        "source": "Egg Shard Shop",
+        "detail": "750 Egg Shard"
+      }
+    ],
+    "zapdos-mount": [
+      {
+        "method": "shop",
+        "source": "Goodwill Token Shop",
+        "detail": "800 Goodwill Token"
+      }
+    ],
+    "zekrom-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2500 Ranked Battle Token"
+      }
+    ],
+    "zombie-groom-costume-bundle": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "zombie-pirate-costume-bundle-female": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "zombie-pirate-costume-bundle-male": [
+      {
+        "method": "shop",
+        "source": "Soul Shard Stone Trades",
+        "detail": "500 Soul Shard"
+      }
+    ],
+    "zygarde-chest": [
+      {
+        "method": "shop",
+        "source": "Ranked Battle Token Store",
+        "detail": "2500 Ranked Battle Token"
       }
     ]
   }

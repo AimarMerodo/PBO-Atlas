@@ -1,0 +1,6889 @@
+{
+  "fuente": "Pokemon Blaze Online - Item Finder",
+  "fecha_captura": "2026-06-21",
+  "total_items_unicos": 560,
+  "total_filas_compra": 680,
+  "nota": "Cada item puede comprarse en varias tiendas/monedas. 'opciones_compra' lista cada combinacion (tienda + cantidad + moneda) tal como aparece en el Item Finder. 'ubicacion' es la linea que aparece bajo el nombre del item (donde se localiza/se obtiene).",
+  "items": [
+    {
+      "nombre": "Ability Capsule",
+      "opciones_compra": [
+        {
+          "cantidad": 60,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 60,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        },
+        {
+          "cantidad": 60,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ability Patch",
+      "opciones_compra": [
+        {
+          "cantidad": 125,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 125,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 125,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        },
+        {
+          "cantidad": 125,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 125,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Absolite",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ace Trainer Blue Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Ace Trainer Blue Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Akku Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Alistor Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Alolan-Ninetales Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Alolan-Ninetales Mount Chest (Untradable)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Free Fox Mount Ticket",
+          "tienda": "Fox Mount Rewarder",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Alolan-Sandslash Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Angel Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Angel Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Annihlape Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Articuno Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ash Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Kanto Protagonist Costume Bundle Ticket",
+          "tienda": "Kanto Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #2"
+        }
+      ]
+    },
+    {
+      "nombre": "Assault Vest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Atk EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Avalugg-Hisui Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Axew Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 220,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Babiri Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Big Mushroom",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Tiny Mushroom",
+          "tienda": "Tiny Mushroom Store",
+          "ubicacion": "Joyce's House"
+        }
+      ]
+    },
+    {
+      "nombre": "Big Root",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Billy Hocus Pocus Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Binding Band",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Black Belt",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Black Glasses",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Black Sludge",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Blaze Coin",
+      "opciones_compra": [
+        {
+          "cantidad": 6,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 6,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 5,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 6,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Bloody Nurse Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Blunder Policy",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Booster Energy",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Brendan Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Hoenn Protagonist Costume Bundle Ticket",
+          "tienda": "Hoenn Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Broken TM Disk",
+      "opciones_compra": [
+        {
+          "cantidad": 45,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Broly Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 7,
+          "moneda": "Dragon Ball",
+          "tienda": "Dragon Ball Shop",
+          "ubicacion": "Eterenal Dragon Cavern"
+        }
+      ]
+    },
+    {
+      "nombre": "Bug Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Bulbasaur-Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Burn Drive",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Butterfree Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Buzzwole Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 650,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Caitlin Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Calyrex Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Candy Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Caramel Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Carrot Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cat Headphones",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Caulifla Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 7,
+          "moneda": "Dragon Ball",
+          "tienda": "Dragon Ball Shop",
+          "ubicacion": "Eterenal Dragon Cavern"
+        }
+      ]
+    },
+    {
+      "nombre": "Celesteela Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 650,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Celestial Peak Ticket (1 hour)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Celestial Peak Ticket (24 hours)",
+      "opciones_compra": [
+        {
+          "cantidad": 1100,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Celestial Peak Ticket (8 hours)",
+      "opciones_compra": [
+        {
+          "cantidad": 370,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cell Battery",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chandelure Costume Bundle #1",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chandelure Spider Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Charcoal",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Charizard Black Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Charizardite X",
+      "opciones_compra": [
+        {
+          "cantidad": 3000,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Charmander-Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Charti Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chi-Yu Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chien-Pao Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chien-Pao Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chilan Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chill Drive",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chipped Pot",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Choco Dragonite Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Choice Band",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Choice Scarf",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Choice Specs",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chople Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Christmas Penguin Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Christmas Sweater",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Christmas Tree Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Chucky Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cinderace Chest (Halloween 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Coba Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cobalion Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cobalion Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 35,
+          "moneda": "Shiny Coin",
+          "tienda": "Shiny Coin Store",
+          "ubicacion": "Hearthome City"
+        }
+      ]
+    },
+    {
+      "nombre": "Colbur Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cornerstone Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Corviknight Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Cracked Pot",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Crawdaunt Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Crew Wars Token",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Crobat Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Damp Rock",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 30,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Fire Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Ice Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Leaf Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Metagross Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Thunder Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dark Water Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Darumaka Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dawn Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Decidueye Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Decidueye Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Decidueye Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Def EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Delta Charizard Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Deoxys Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dewgong Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Diancie Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Diancie Costume Bundle Ticket",
+          "tienda": "Diancie Costume Shop",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Diancie Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Diancie Costume Bundle Ticket",
+          "tienda": "Diancie Costume Shop",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Diggersby Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dive Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Dive Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Doublade Backpack",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Douse Drive",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dragon Fang",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dragon Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Dream Land Costume Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dubious Disc",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Dusk Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Easter Cinderace Chest (2026)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Easter Serperior Chest (2026)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Easter-Altaria Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Eevee Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Eevee Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Eevee Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Egg Move Voucher",
+      "opciones_compra": [
+        {
+          "cantidad": 40,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Eject Button",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Eject Pack",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Electric Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Electric Seed",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Everstone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Everstone Exp Share Blueprint",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Evil Chansey Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Eviolite",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Exp. Share",
+      "opciones_compra": [
+        {
+          "cantidad": 65,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 400,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Expert Belt",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Fairy Feather",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Fairy Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Female Easter Hat 2018 (Blue-Green)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Female Easter Hat 2018 (White-Red)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Female Nutcracker Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Female Santa Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Female Skeleton Dancer Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ferroseed Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Festive Boy Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Festive Girl Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Fighting Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Fire Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Fire Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Fisherman Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Fisherman Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Flapple Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Flying Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Flying Nimbus",
+      "opciones_compra": [
+        {
+          "cantidad": 14,
+          "moneda": "Dragon Ball",
+          "tienda": "Dragon Ball Shop",
+          "ubicacion": "Eterenal Dragon Cavern"
+        }
+      ]
+    },
+    {
+      "nombre": "Frost Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Frozen Yoshi Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Full EV Reset",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarian Slowking Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarian-Articuno Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 3000,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarian-Moltres Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarian-Slowpoke Hat",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarian-Zapdos Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 15000,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarica Cuff",
+      "opciones_compra": [
+        {
+          "cantidad": 10,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Galarica Wreath",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Galaxy Mew Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gardevoirite",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gary Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Kanto Protagonist Costume Bundle Ticket",
+          "tienda": "Kanto Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #2"
+        }
+      ]
+    },
+    {
+      "nombre": "Gastly Overhead",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gastrodon-West Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM004 Agility",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM007 Protect",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM008 Fire Fang",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM009 Thunder Fang",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM010 Ice Fang",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM012 Low Kick",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM013 Acid Spray",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM015 Struggle Bug",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM016 Psybeam",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM017 Confuse Ray",
+      "opciones_compra": [
+        {
+          "cantidad": 400,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM020 Trailblaze",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM022 Chilling Water",
+      "opciones_compra": [
+        {
+          "cantidad": 2,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM025 Facade",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM029 Hex",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM030 Snarl",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM037 Draining Kiss",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM040 Air Cutter",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM041 Stored Power",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM046 Avalanche",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM054 Psyshock",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM057 False Swipe",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM062 Foul Play",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM064 Bulk Up",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM065 Air Slash",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM066 Body Slam",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM067 Fire Punch",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM068 Thunder Punch",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM069 Ice Punch",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM071 Seed Bomb",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM074 Reflect",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM075 Light Screen",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM076 Rock Blast",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM077 Waterfall",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM081 Grass Knot",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM082 Thunder Wave",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM083 Poison Jab",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM086 Rock Slide",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM087 Taunt",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM088 Swords Dance",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM089 Body Press",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM090 Spikes",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM091 Toxic Spikes",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM094 Dark Pulse",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM096 Eerie Impulse",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM099 Iron Head",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM100 Dragon Dance",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM102 Gunk Shot",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM103 Substitute",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM104 Iron Defense",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM106 Drill Run",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM107 Will-O-Wisp",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM109 Trick",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM110 Liquidation",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM111 Giga Drain",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM112 Aura Sphere",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM113 Tailwind",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM116 Stealth Rock",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM117 Hyper Voice",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM120 Psychic",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM121 Heavy Slam",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM122 Encore",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM123 Surf",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM124 Ice Spinner",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM125 Flamethrower",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM126 Thunderbolt",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM127 Play Rough",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM128 Amnesia",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM129 Calm Mind",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM133 Earth Power",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM135 Ice Beam",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM136 Electric Terrain",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM139 Misty Terrain",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM140 Nasty Plot",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM143 Blizzard",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM148 Sludge Bomb",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM149 Earthquake",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM150 Stone Edge",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM156 Outrage",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM157 Overheat",
+      "opciones_compra": [
+        {
+          "cantidad": 450,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM159 Leaf Storm",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM160 Hurricane",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM164 Brave Bird",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM165 Flare Blitz",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM172 Roar",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM173 Charge",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM175 Toxic",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM177 Spite",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM180 Gyro Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM181 Knock Off",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 50,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM182 Bug Bite",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM184 Vacuum Wave",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM187 Icicle Spear",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM188 Scald",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM191 Uproar",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM196 Flip Turn",
+      "opciones_compra": [
+        {
+          "cantidad": 30,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM199 Lash Out",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM201 Misty Explosion",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM207 Temper Flare",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM211 Electroweb",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM212 Triple Axel",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM214 Sludge Wave",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM217 Future Sight",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM226 Dragon Cheer",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM227 Alluring Voice",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM228 Psychic Noise",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM229 Upper Hand",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gen9 TM500 Hidden Power",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Genesect Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Gengarite",
+      "opciones_compra": [
+        {
+          "cantidad": 10000,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gholdengo Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ghost Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Ghost Rider Bike Mount (Lavender)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ghost Rider Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ghostface Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gingerbread Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Glastrier Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gloria Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 20,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gogoat Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gold Amulet",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Golfer Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Golurk Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Goodra Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gracidea",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Grass Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Grassy Seed",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Great Ball (Shiny Tracker Safe)",
+      "opciones_compra": [
+        {
+          "cantidad": 10,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 10,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 10,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 10,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Green Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Kanto Protagonist Costume Bundle Ticket",
+          "tienda": "Kanto Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #2"
+        }
+      ]
+    },
+    {
+      "nombre": "Grip Claw",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ground Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Guy Fawkes Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Gyarados Surf Mount (Shadow)",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Haban Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Halloween Clown Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Halloween Skarmory Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hard Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hasshaku Gardevoir Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hatenna Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hatterene Chest (Christmas 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hawaiian T-Shirt Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hearthflame Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Heat Rock",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 30,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Heavy-Duty Boots",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 350,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hellfire Typhlosion Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Houndoom Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Hp EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Ice Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Ice Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Icy Rock",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 30,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Incineroar Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Inferno Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Inferno Costume Bundle Ticket",
+          "tienda": "Inferno Costume Shop",
+          "ubicacion": "Trade Shop"
+        }
+      ]
+    },
+    {
+      "nombre": "Inferno Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Inferno Costume Bundle Ticket",
+          "tienda": "Inferno Costume Shop",
+          "ubicacion": "Trade Shop"
+        }
+      ]
+    },
+    {
+      "nombre": "Iron Boulder Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Iron Crown Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Iron Leaves Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "IV Potion",
+      "opciones_compra": [
+        {
+          "cantidad": 20,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "IV Randomizer",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 25,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 600,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Kahili Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Kasib Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Kebia Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Kukui Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Kyogre Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Lagging Tail",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Lance Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Discord Coin",
+          "tienda": "Discord Coin Store",
+          "ubicacion": "Hearthome City"
+        }
+      ]
+    },
+    {
+      "nombre": "Latias Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Latios Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Latiosite",
+      "opciones_compra": [
+        {
+          "cantidad": 10000,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Leaf Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Leftovers",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Life Orb",
+      "opciones_compra": [
+        {
+          "cantidad": 2100,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        },
+        {
+          "cantidad": 800,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Light Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Light Clay",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Lillie Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Lollipop Mount Chest (Halloween 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Lopunnite",
+      "opciones_compra": [
+        {
+          "cantidad": 10000,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Luigi Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Lunala Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Lure",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 360,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Luvdisc Mount Chest A",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Luvdisc Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Macho Brace",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 250,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 500,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Macho Brace Exp Share Blueprint",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Magearna Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 650,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Magnet",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Male Easter Hat 2018 (Blue-Green)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Male Easter Hat 2018 (White-Red)",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Male Nutcracker Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Male Santa Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Manaphy Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Marshadow Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Marshadow Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Master Ball (Shiny Tracker Safe)",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 100,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Masterpiece Teacup",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "May Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Hoenn Protagonist Costume Bundle Ticket",
+          "tienda": "Hoenn Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Medichamite",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mental Herb",
+      "opciones_compra": [
+        {
+          "cantidad": 30,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        }
+      ]
+    },
+    {
+      "nombre": "Metronome",
+      "opciones_compra": [
+        {
+          "cantidad": 400,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 400,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 400,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        },
+        {
+          "cantidad": 400,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 400,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mew Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mew Chest (Halloween 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mew Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Miracle Seed",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Misdreavus Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 30,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mismagius Hat",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Misty Seed",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Moltres Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Moon Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Move-Block Exp Share Blueprint",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mummy Cowboy Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Muscle Band",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Myers Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Mystic Water",
+      "opciones_compra": [
+        {
+          "cantidad": 3,
+          "moneda": "Abyssal Pearl",
+          "tienda": "Abyssal Pearl Trader",
+          "ubicacion": "Treasure Hunter House"
+        },
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Never-Melt Ice",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ninetales Mount Chest (Untradable)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Free Fox Mount Ticket",
+          "tienda": "Fox Mount Rewarder",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Noivern Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Nugget",
+      "opciones_compra": [
+        {
+          "cantidad": 80,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Occa Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ogerpon Mask Accessory (Cornerstone)",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ogerpon Mask Accessory (Hearthflame)",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "OogieBoogie Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Orc Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Oshawott Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Passho Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Payapa Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Peat Block",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Air Balloon",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 300,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Chesto Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Custap Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Focus Sash",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Lum Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Sitrus Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Permanent Throat Spray",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Petal Egg Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Pikachu Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Pikachu Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Poipole Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 650,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Poison Barb",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Poison Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Poke Ball (Shiny Tracker Safe)",
+      "opciones_compra": [
+        {
+          "cantidad": 5,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 5,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 5,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 5,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 5,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Porygon Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Anklet",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Band",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Belt",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Bracer",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Herb",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Lens",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Power Weight",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "PP Max",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "PP Up",
+      "opciones_compra": [
+        {
+          "cantidad": 10,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Primarina Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 1,
+          "moneda": "Primarina Costume Bundle Ticket",
+          "tienda": "Primarina Costume Shop",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Primarina Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 1,
+          "moneda": "Primarina Costume Bundle Ticket",
+          "tienda": "Primarina Costume Shop",
+          "ubicacion": "Easter Island #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Psychic Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Psychic Seed",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Pumpkin Jellicent Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Pumpkin Mask 2025 (Glowing)",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Purple Fnaf Bear Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Quaxly Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ranger Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Ranger Costume Bundle Ticket",
+          "tienda": "Ranger Costume Shop",
+          "ubicacion": "Hoenn Safari Zone"
+        }
+      ]
+    },
+    {
+      "nombre": "Ranger Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Ranger Costume Bundle Ticket",
+          "tienda": "Ranger Costume Shop",
+          "ubicacion": "Hoenn Safari Zone"
+        }
+      ]
+    },
+    {
+      "nombre": "Rare Candy",
+      "opciones_compra": [
+        {
+          "cantidad": 140,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Reaper Cloth",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Reaper Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Red Card",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Red Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Kanto Protagonist Costume Bundle Ticket",
+          "tienda": "Kanto Protagonist Costume Shop",
+          "ubicacion": "Sandgem House #2"
+        }
+      ]
+    },
+    {
+      "nombre": "Red Ninja Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Reverse Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Riley Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Rindo Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Rock Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Rocky Helmet",
+      "opciones_compra": [
+        {
+          "cantidad": 600,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Roseli Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Rotom-Frost Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sableye Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Safety Goggles",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sandslash Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Scorched Metal Coat",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Scroll of Darkness",
+      "opciones_compra": [
+        {
+          "cantidad": 600,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Scroll of Waters",
+      "opciones_compra": [
+        {
+          "cantidad": 600,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shadow Articuno Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Discord Coin",
+          "tienda": "Discord Coin Store",
+          "ubicacion": "Hearthome City"
+        }
+      ]
+    },
+    {
+      "nombre": "Sharp Beak",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shed Shell",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shell Bell",
+      "opciones_compra": [
+        {
+          "cantidad": 40,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 40,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 40,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shenron Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 21,
+          "moneda": "Dragon Ball",
+          "tienda": "Dragon Ball Shop",
+          "ubicacion": "Eterenal Dragon Cavern"
+        }
+      ]
+    },
+    {
+      "nombre": "Shiny Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shock Drive",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Shuca Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Silk Scarf",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        },
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Silver Powder",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Skarmory Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Skarmory Chest (Halloween 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Cursed ore",
+          "tienda": "Cursed Ore Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Skeleton Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Skeleton Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sled Mount Chest A",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sled Mount Chest B",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Glacial Ore",
+          "tienda": "Glacial Ore Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Slowpoke Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Slowpoke Hat",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Slowpoke Hat (Amnesia)",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Slowpoke-Galar Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Smoke Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Smooth Rock",
+      "opciones_compra": [
+        {
+          "cantidad": 300,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        },
+        {
+          "cantidad": 30,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Snivy Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Snowball",
+      "opciones_compra": [
+        {
+          "cantidad": 120,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Soft Sand",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Soothe Share Blueprint",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Soul Reaper Sword (Benkai)",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "SpAtk EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "SpDef EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Speed EV Master Ball",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Spell Tag",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Daycare Token",
+          "tienda": "Daycare Token Shop",
+          "ubicacion": "Daycare (Hoenn) +2 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Spheal Backpack",
+      "opciones_compra": [
+        {
+          "cantidad": 350,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Spiritomb Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sprigatito Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Squirtle Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Squirtle Mood Pack (Easter 2024)",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Squirtle-Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Stantler (Rudolph) Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Steel Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Storm Nimbus",
+      "opciones_compra": [
+        {
+          "cantidad": 14,
+          "moneda": "Dragon Ball",
+          "tienda": "Dragon Ball Shop",
+          "ubicacion": "Eterenal Dragon Cavern"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Eevee Chest (2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Garchomp Gamble Chest (2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Garchomp Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Ice Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Thunder Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Summer Water Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 50,
+          "moneda": "Radiance Token",
+          "tienda": "Radiance Token Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sun Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Grepa Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Hondew Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Kelpsy Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Pomeg Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Qualot Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Super Tamato Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 15,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        },
+        {
+          "cantidad": 20,
+          "moneda": "Purple Ooze",
+          "tienda": "Purple Ooze Shop",
+          "ubicacion": "Shoal Cave Inner Room (High Tide)"
+        }
+      ]
+    },
+    {
+      "nombre": "Swampert Mask",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Sweet Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Syrupy Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tanga Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tapu Fini Surf Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tapu Koko Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tapu Lele Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tart Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Team Aqua Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Team Aqua Costume Bundle Ticket",
+          "tienda": "Aqua Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Team Aqua Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Team Aqua Costume Bundle Ticket",
+          "tienda": "Aqua Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Team Magma Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Team Magma Costume Bundle Ticket",
+          "tienda": "Magma Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Team Magma Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 1,
+          "moneda": "Team Magma Costume Bundle Ticket",
+          "tienda": "Magma Costume Shop",
+          "ubicacion": "Sandgem House #1"
+        }
+      ]
+    },
+    {
+      "nombre": "Tepig Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Terrain Extender",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Shop",
+          "ubicacion": "Veilstone Super Mart"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Blooming Ore",
+          "tienda": "Blooming Ore Trades",
+          "ubicacion": "Easter Island #1"
+        },
+        {
+          "cantidad": 200,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Terrakion Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Terrakion Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 35,
+          "moneda": "Shiny Coin",
+          "tienda": "Shiny Coin Store",
+          "ubicacion": "Hearthome City"
+        }
+      ]
+    },
+    {
+      "nombre": "Thug Life Shades",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Thunder Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tiffany Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ting-Lu Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Toad Costume Bundle Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Toffee Apple",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Togepi Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 220,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tropius Wings",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Tutor Move Voucher",
+      "opciones_compra": [
+        {
+          "cantidad": 40,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Twisted Forest Ticket",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Type Null Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 3600,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Tyranitarite",
+      "opciones_compra": [
+        {
+          "cantidad": 45000,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Ultra Ball (Shiny Tracker Safe)",
+      "opciones_compra": [
+        {
+          "cantidad": 25,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        },
+        {
+          "cantidad": 25,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 25,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 25,
+          "moneda": "Heat Shard",
+          "tienda": "Heat Shard Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        },
+        {
+          "cantidad": 25,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Umbreon Chest (Halloween 2025)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Spirit Token",
+          "tienda": "Spirit Token Shop",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Umbreon Ears",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Umbreon Mount (Moonlight)",
+      "opciones_compra": [
+        {
+          "cantidad": 125,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Unallocated EV Reset",
+      "opciones_compra": [
+        {
+          "cantidad": 80,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Undead Rapidash Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Unremarkable Teacup",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Up-Grade",
+      "opciones_compra": [
+        {
+          "cantidad": 100,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Ursaluna Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 4000,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Uruk Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Valentine Togekiss Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1000,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Vampire Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Vampire Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Victini Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 15000,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Viktor Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 20,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Virizion Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 1500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Virizion Mount Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 35,
+          "moneda": "Shiny Coin",
+          "tienda": "Shiny Coin Store",
+          "ubicacion": "Hearthome City"
+        }
+      ]
+    },
+    {
+      "nombre": "Wacan Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Water Memory",
+      "opciones_compra": [
+        {
+          "cantidad": 720,
+          "moneda": "Casino Token",
+          "tienda": "Casino Token Store",
+          "ubicacion": "Veilstone Game Corner"
+        }
+      ]
+    },
+    {
+      "nombre": "Water Stone",
+      "opciones_compra": [
+        {
+          "cantidad": 75,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        },
+        {
+          "cantidad": 15,
+          "moneda": "Blaze Coin",
+          "tienda": "Blaze Coin Shop",
+          "ubicacion": "Celadon City SuperMarket +7 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Weakness Policy",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Whipped Dream",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Frost Shard",
+          "tienda": "Frost Shard Shop",
+          "ubicacion": "CrystalPeak's House #1 +1 more"
+        },
+        {
+          "cantidad": 150,
+          "moneda": "Heart Petals",
+          "tienda": "Heart Petals Shop",
+          "ubicacion": "Global Terminal 1F +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "White Fnaf Bear Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "White Herb",
+      "opciones_compra": [
+        {
+          "cantidad": 250,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Wide Lens",
+      "opciones_compra": [
+        {
+          "cantidad": 150,
+          "moneda": "Battle Token",
+          "tienda": "Battle Tokens Shop",
+          "ubicacion": "Battle Frontier Lobby +4 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Wise Glasses",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Crew Wars Token",
+          "tienda": "Crew Wars Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Witch Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Witch Staff",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Wizard Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Wo-Chien Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2000,
+          "moneda": "Dynite ore",
+          "tienda": "Dynite Ore Shop",
+          "ubicacion": "Celadon City SuperMarket +5 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Yache Berry",
+      "opciones_compra": [
+        {
+          "cantidad": 200,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Yellow Fnaf Bear Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Yoshi Mount Chest (Classic)",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Yoshi Mount Chest (Pastel)",
+      "opciones_compra": [
+        {
+          "cantidad": 750,
+          "moneda": "Egg Shard",
+          "tienda": "Egg Shard Shop",
+          "ubicacion": "Easter Trade Tree #1 +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zapdos Mount",
+      "opciones_compra": [
+        {
+          "cantidad": 800,
+          "moneda": "Goodwill Token",
+          "tienda": "Goodwill Token Shop",
+          "ubicacion": "Celadon City PokeCenter +27 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zekrom Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zombie Groom Costume Bundle",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zombie Pirate Costume Bundle (Female)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zombie Pirate Costume Bundle (Male)",
+      "opciones_compra": [
+        {
+          "cantidad": 500,
+          "moneda": "Soul Shard",
+          "tienda": "Soul Shard Stone Trades",
+          "ubicacion": "Rockshore City (Parallel) +1 more"
+        }
+      ]
+    },
+    {
+      "nombre": "Zygarde Chest",
+      "opciones_compra": [
+        {
+          "cantidad": 2500,
+          "moneda": "Ranked Battle Token",
+          "tienda": "Ranked Battle Token Store",
+          "ubicacion": "Celadon City SuperMarket +6 more"
+        }
+      ]
+    }
+  ]
+}
