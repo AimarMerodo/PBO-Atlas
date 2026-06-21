@@ -155,10 +155,45 @@ for (const row of SHOPS) {
   push(row.item, { method: "shop", source: row.source, detail: row.detail });
 }
 
+// Bulk NPC-shop sources from the in-game Item Finder capture (data/item-finder.json).
+// Adds shop rows ONLY for items that don't already have a curated shop source above —
+// existing drop/shop rows are never modified. Items are matched by display name → slug.
+const norm = (s) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const slugByName = new Map();
+for (const i of items) if (!slugByName.has(norm(i.name))) slugByName.set(norm(i.name), i.slug);
+
+let finder = null;
+try {
+  finder = JSON.parse(await readFile(path.join(ROOT, "data", "item-finder.json"), "utf8"));
+} catch {
+  warnings.push("item-finder.json not found — skipping bulk shop import");
+}
+let finderAdded = 0;
+let finderUnmatched = 0;
+for (const it of finder?.items ?? []) {
+  const slug = slugByName.get(norm(it.nombre));
+  if (!slug) {
+    finderUnmatched++;
+    continue;
+  }
+  // Don't modify items that already have a curated shop source.
+  if ((out[slug] ?? []).some((r) => r.method === "shop")) continue;
+  const seen = new Set();
+  for (const o of it.opciones_compra ?? []) {
+    if (!o.tienda) continue;
+    const detail = [o.cantidad, o.moneda].filter((x) => x !== null && x !== undefined && x !== "").join(" ");
+    const key = `${o.tienda}|${detail}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    push(slug, { method: "shop", source: o.tienda, detail });
+    finderAdded++;
+  }
+}
+
 const sorted = Object.fromEntries(Object.keys(out).sort().map((k) => [k, out[k]]));
 const payload = {
   _meta: {
-    note: "Where to get notable items. Sourced by hand from the official PBO forum (drops thread #1744, shops thread #1760). method ∈ drop|shop.",
+    note: "Where to get items. Hand-sourced drops + shops from the official PBO forum (#1744, #1760), plus NPC-shop rows auto-added from the in-game Item Finder capture (data/item-finder.json) for items lacking a curated shop. method ∈ drop|shop.",
     sources: [
       "https://forums.pokemonblazeonline.com/threads/wild-drops-and-where-to-find-them-wip.1744/",
       "https://forums.pokemonblazeonline.com/threads/items-shops-overview-wip.1760/",
@@ -171,6 +206,7 @@ await writeFile(path.join(ROOT, "data", "item-sources.json"), JSON.stringify(pay
 
 const dropCount = Object.values(sorted).reduce((n, a) => n + a.length, 0);
 console.log(`item-sources.json: ${Object.keys(sorted).length} items, ${dropCount} source rows`);
+console.log(`  finder: +${finderAdded} shop rows for ${finderAdded ? "newly-covered" : "0"} items, ${finderUnmatched} finder items unmatched (e.g. Gen9 TMs)`);
 if (warnings.length) {
   console.warn(`${warnings.length} warning(s):`);
   for (const w of warnings) console.warn("  ⚠ " + w);
