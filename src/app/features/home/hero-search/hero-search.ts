@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, computed, inject, signal } from "@angular/core";
 import { Router } from "@angular/router";
-import { LucideMapPin, LucideSearch } from "@lucide/angular";
+import { LucideSearch } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { SearchIndex } from "@core/models/types";
+import { firstHref, searchAll } from "@shared/components/search-dialog/search";
+import { SearchResults } from "@shared/components/search-dialog/search-results";
 
 /**
  * Inline hero search: a real input with its own results dropdown (pokemon +
@@ -12,7 +14,7 @@ import type { SearchIndex } from "@core/models/types";
 @Component({
   selector: "app-hero-search",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideSearch, LucideMapPin],
+  imports: [LucideSearch, SearchResults],
   templateUrl: "./hero-search.html",
 })
 export class HeroSearch {
@@ -25,21 +27,7 @@ export class HeroSearch {
   protected readonly open = signal(false);
   protected readonly index = signal<SearchIndex | null>(null);
 
-  protected readonly pokemonResults = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    const index = this.index();
-    if (!q || !index) return [];
-    return index.pokemon.filter((p) => p.name.toLowerCase().includes(q) || String(p.id) === q).slice(0, 6);
-  });
-
-  protected readonly locationResults = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    const index = this.index();
-    if (!q || !index) return [];
-    return index.locations.filter((l) => l.name.toLowerCase().includes(q)).slice(0, 6);
-  });
-
-  protected readonly hasResults = computed(() => this.pokemonResults().length > 0 || this.locationResults().length > 0);
+  protected readonly results = computed(() => searchAll(this.index(), this.query(), 6));
 
   private load(): void {
     if (!this.index()) void this.data.searchIndex().then((index) => this.index.set(index));
@@ -57,18 +45,8 @@ export class HeroSearch {
   }
 
   protected onEnter(): void {
-    const first = this.pokemonResults()[0] ?? null;
-    if (first) {
-      this.go("/pokedex/" + first.slug);
-      return;
-    }
-    const loc = this.locationResults()[0] ?? null;
-    if (loc) this.go("/region/" + loc.region + "/" + loc.id);
-  }
-
-  /** Warm the cache on hover so picking a result navigates instantly. */
-  protected preload(slug: string): void {
-    void this.data.pokemon(slug);
+    const href = firstHref(this.results());
+    if (href) this.go(href);
   }
 
   protected go(href: string): void {

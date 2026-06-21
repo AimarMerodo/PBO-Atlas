@@ -237,6 +237,10 @@ export interface PokedexCard {
 export interface SearchIndex {
   pokemon: { slug: string; name: string; id: number; types: string[]; sprite: string | null; caught: boolean }[];
   locations: { id: string; name: string; region: string }[];
+  items: { slug: string; name: string }[];
+  mounts: { name: string }[];
+  cosmetics: { slug: string; name: string }[];
+  regions: { id: string; name: string }[];
 }
 
 export interface AtlasIcon {

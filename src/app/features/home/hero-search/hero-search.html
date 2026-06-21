@@ -21,40 +21,10 @@
       class="absolute left-0 right-0 top-full z-30 mt-2 overflow-hidden rounded-xl border border-line bg-surface shadow-2xl"
     >
       <div class="max-h-[55vh] overflow-y-auto p-2">
-        @if (!hasResults()) {
+        @if (!results().total) {
           <p class="px-3 py-4 text-sm text-ink-dim">{{ index() ? i18n.t("search.noResults") : "..." }}</p>
         }
-        @if (pokemonResults().length) {
-          <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.pokemon") }}</p>
-          @for (p of pokemonResults(); track p.slug) {
-            <button
-              (click)="go('/pokedex/' + p.slug)"
-              (mouseenter)="preload(p.slug)"
-              class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2"
-            >
-              @if (p.sprite) {
-                <img [src]="p.sprite" alt="" width="32" height="32" class="h-8 w-8 object-contain" />
-              } @else {
-                <span class="w-8"></span>
-              }
-              <span class="text-sm">{{ p.name }}</span>
-              <span class="ml-auto text-xs text-ink-dim">#{{ p.id }}</span>
-            </button>
-          }
-        }
-        @if (locationResults().length) {
-          <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.locations") }}</p>
-          @for (l of locationResults(); track l.region + l.id) {
-            <button
-              (click)="go('/region/' + l.region + '/' + l.id)"
-              class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2"
-            >
-              <svg lucideMapPin class="h-4 w-4 text-ink-dim" aria-hidden="true"></svg>
-              <span class="text-sm">{{ l.name }}</span>
-              <span class="ml-auto text-xs capitalize text-ink-dim">{{ l.region }}</span>
-            </button>
-          }
-        }
+        <app-search-results [results]="results()" (go)="go($event)" />
       </div>
     </div>
   }

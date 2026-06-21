@@ -1,5 +1,5 @@
-// Build src/data/search-index.json: a compact index for the client-side
-// global search dialog (pokemon + locations).
+// Build src/data/search-index.json: a compact index for the client-side global
+// search (pokemon, locations, items, mounts, cosmetics, regions).
 // Usage: node scripts/build-search-index.mjs
 
 import { readFile, readdir, writeFile } from "node:fs/promises";
@@ -8,10 +8,11 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SPAWNS_DIR = path.join(ROOT, "data", "spawns");
-const POKEDEX_FILE = path.join(ROOT, "data", "pokedex.json");
 const OUT_FILE = path.join(ROOT, "data", "search-index.json");
+const readData = async (file) => JSON.parse(await readFile(path.join(ROOT, "data", file), "utf8"));
+const asArray = (raw, key) => (Array.isArray(raw) ? raw : (raw[key] ?? Object.values(raw)[0]));
 
-const pokedex = JSON.parse(await readFile(POKEDEX_FILE, "utf8"));
+const pokedex = await readData("pokedex.json");
 
 const caughtSlugs = new Set();
 const locations = [];
@@ -35,5 +36,13 @@ const pokemon = Object.values(pokedex)
     caught: caughtSlugs.has(p.slug),
   }));
 
-await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations }), "utf8");
-console.log(`Wrote ${pokemon.length} pokemon + ${locations.length} locations -> ${path.relative(ROOT, OUT_FILE)}`);
+const items = asArray(await readData("items.json"), "items").map((i) => ({ slug: i.slug, name: i.name }));
+const mounts = asArray(await readData("mounts.json"), "mounts").map((m) => ({ name: m.name }));
+const cosmetics = asArray(await readData("cosmetics.json"), "cosmetics").map((c) => ({ slug: c.slug, name: c.name }));
+const regions = asArray(await readData("regions.json"), "regions").map((r) => ({ id: r.id, name: r.name }));
+
+await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions }), "utf8");
+console.log(
+  `Wrote ${pokemon.length} pokemon, ${locations.length} locations, ${items.length} items, ` +
+    `${mounts.length} mounts, ${cosmetics.length} cosmetics, ${regions.length} regions -> ${path.relative(ROOT, OUT_FILE)}`,
+);
