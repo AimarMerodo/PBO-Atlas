@@ -13,7 +13,8 @@
     "maps": "node scripts/build-maps.mjs",
     "search-index": "node scripts/build-search-index.mjs",
     "page-data": "node scripts/build-page-data.mjs",
-    "data": "npm run scrape && npm run pokedex && npm run moves && npm run extras && npm run maps && npm run search-index && npm run page-data"
+    "artwork": "node scripts/build-artwork.mjs",
+    "data": "npm run scrape && npm run pokedex && npm run moves && npm run extras && npm run maps && npm run search-index && npm run page-data && npm run artwork"
   },
   "private": true,
   "packageManager": "npm@10.9.3",
