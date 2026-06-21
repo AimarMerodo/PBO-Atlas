@@ -36,9 +36,9 @@ const pokemon = Object.values(pokedex)
     caught: caughtSlugs.has(p.slug),
   }));
 
-const items = asArray(await readData("items.json"), "items").map((i) => ({ slug: i.slug, name: i.name }));
-const mounts = asArray(await readData("mounts.json"), "mounts").map((m) => ({ name: m.name }));
-const cosmetics = asArray(await readData("cosmetics.json"), "cosmetics").map((c) => ({ slug: c.slug, name: c.name }));
+const items = asArray(await readData("items.json"), "items").map((i) => ({ slug: i.slug, name: i.name, icon: i.icon ?? null }));
+const mounts = asArray(await readData("mounts.json"), "mounts").map((m) => ({ name: m.name, icon: m.icon ?? null }));
+const cosmetics = asArray(await readData("cosmetics.json"), "cosmetics").map((c) => ({ slug: c.slug, name: c.name, icon: c.icon ?? null }));
 const regions = asArray(await readData("regions.json"), "regions").map((r) => ({ id: r.id, name: r.name }));
 
 await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions }), "utf8");

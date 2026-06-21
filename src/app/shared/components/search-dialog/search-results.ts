@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input, output } from "@angular/core";
-import { LucideFootprints, LucideMap, LucideMapPin, LucidePackage, LucideShirt } from "@lucide/angular";
+import { LucideMap, LucideMapPin } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
+import { ItemIcon } from "@shared/components/item-icon/item-icon";
 import { hrefFor, type SearchGroups } from "./search";
 
 /**
@@ -11,7 +12,7 @@ import { hrefFor, type SearchGroups } from "./search";
 @Component({
   selector: "app-search-results",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin, LucidePackage, LucideFootprints, LucideShirt, LucideMap],
+  imports: [LucideMapPin, LucideMap, ItemIcon],
   template: `
     @if (results().pokemon.length) {
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.pokemon") }}</p>
@@ -31,7 +32,7 @@ import { hrefFor, type SearchGroups } from "./search";
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.items") }}</p>
       @for (i of results().items; track i.slug) {
         <button (click)="go.emit(href.item(i.slug))" class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2">
-          <svg lucidePackage class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+          <app-item-icon [icon]="i.icon" [size]="28" />
           <span class="text-sm">{{ i.name }}</span>
         </button>
       }
@@ -40,7 +41,7 @@ import { hrefFor, type SearchGroups } from "./search";
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.mounts") }}</p>
       @for (m of results().mounts; track m.name) {
         <button (click)="go.emit(href.mount(m.name))" class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2">
-          <svg lucideFootprints class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+          <app-item-icon [icon]="m.icon" [size]="28" />
           <span class="text-sm">{{ m.name }}</span>
         </button>
       }
@@ -49,7 +50,7 @@ import { hrefFor, type SearchGroups } from "./search";
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.cosmetics") }}</p>
       @for (c of results().cosmetics; track c.slug) {
         <button (click)="go.emit(href.cosmetic(c.slug))" class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left hover:bg-surface-2">
-          <svg lucideShirt class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+          <app-item-icon [icon]="c.icon" [size]="28" />
           <span class="text-sm">{{ c.name }}</span>
         </button>
       }
