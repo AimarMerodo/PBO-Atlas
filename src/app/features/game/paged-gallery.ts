@@ -1,4 +1,5 @@
-import { computed, effect, inject, signal, type Signal } from "@angular/core";
+import { computed, inject, signal, type Signal } from "@angular/core";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { ActivatedRoute } from "@angular/router";
 import { paginate } from "@core/utils/paginate";
 
@@ -16,8 +17,10 @@ function replaceQueryParam(key: string, value: string | null): void {
 
 /**
  * Shared "open a detail modal from a deep link, keep the URL in sync" behavior.
- * Reads the initial ?<key>=<slug> once, opens the matching entry when the list
- * loads, and rewrites the query param when the selection changes.
+ * The selection follows the ?<key>=<slug> query param reactively, so it opens
+ * both from the initial URL AND from later navigations (e.g. the global search
+ * landing on this page while it's already mounted). Internal clicks use
+ * replaceState to update the URL without a scroll-to-top navigation.
  *
  * Must be called from an injection context (component field initializer).
  */
@@ -26,19 +29,24 @@ export function deepLinkSelection<T>(
   key: string,
   slugOf: (entry: T) => string,
 ) {
-  const initialSlug = inject(ActivatedRoute).snapshot.queryParamMap.get(key);
-  const selected = signal<T | null>(null);
+  const route = inject(ActivatedRoute);
+  const param = signal<string | null>(route.snapshot.queryParamMap.get(key));
+  // React to external navigations that change ?<key>= (e.g. the global search).
+  // Internal selects use replaceState, which the router doesn't emit, so they
+  // update `param` directly below — no double-fire, no navigation/scroll.
+  route.queryParamMap.pipe(takeUntilDestroyed()).subscribe((m) => param.set(m.get(key)));
 
-  effect(() => {
+  const selected = computed<T | null>(() => {
     const list = source();
-    if (list && initialSlug) {
-      selected.set(list.find((e) => slugOf(e) === initialSlug) ?? null);
-    }
+    const slug = param();
+    if (!list || !slug) return null;
+    return list.find((e) => slugOf(e) === slug) ?? null;
   });
 
   const select = (entry: T | null): void => {
-    selected.set(entry);
-    replaceQueryParam(key, entry ? slugOf(entry) : null);
+    const slug = entry ? slugOf(entry) : null;
+    param.set(slug);
+    replaceQueryParam(key, slug);
   };
 
   return { selected, select };

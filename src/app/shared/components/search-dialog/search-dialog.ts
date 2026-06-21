@@ -10,11 +10,12 @@ import {
   viewChild,
 } from "@angular/core";
 import { Router } from "@angular/router";
-import { LucideMapPin } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { DataService } from "@core/data/data.service";
 import type { SearchIndex } from "@core/models/types";
 import { DismissOutside } from "@shared/directives/dismiss-outside";
+import { searchAll } from "./search";
+import { SearchResults } from "./search-results";
 
 /**
  * Search dialog open/close state. The trigger button lives in the header,
@@ -27,7 +28,7 @@ export const searchOpen = signal(false);
 @Component({
   selector: "app-search-dialog",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin, DismissOutside],
+  imports: [DismissOutside, SearchResults],
   templateUrl: "./search-dialog.html",
 })
 export class SearchDialog {
@@ -51,19 +52,7 @@ export class SearchDialog {
     });
   }
 
-  protected readonly pokemonResults = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    const index = this.index();
-    if (!q || !index) return [];
-    return index.pokemon.filter((p) => p.name.toLowerCase().includes(q) || String(p.id) === q).slice(0, 8);
-  });
-
-  protected readonly locationResults = computed(() => {
-    const q = this.query().trim().toLowerCase();
-    const index = this.index();
-    if (!q || !index) return [];
-    return index.locations.filter((l) => l.name.toLowerCase().includes(q)).slice(0, 8);
-  });
+  protected readonly results = computed(() => searchAll(this.index(), this.query(), 8));
 
   @HostListener("window:keydown", ["$event"])
   onKeydown(event: KeyboardEvent): void {
