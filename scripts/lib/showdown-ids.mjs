@@ -1,6 +1,9 @@
 // Map PokeAPI slugs to Showdown-style ids (used by the game's pokemondata
 // and its sprite filenames): lowercase, no dashes, default forms unsuffixed.
 
+import { existsSync } from "node:fs";
+import path from "node:path";
+
 // PokeAPI default-form slug -> showdown id, for forms where stripping dashes
 // is not enough because showdown drops the default-form suffix entirely.
 const DEFAULT_FORM_ALIASES = {
@@ -54,6 +57,15 @@ export function showdownCandidates(slug) {
   // Mega/regional suffix conventions match after dash removal
   // (charizard-mega-x -> charizardmegax, voltorb-hisui -> voltorbhisui).
   return [...new Set(out)];
+}
+
+/** Path to the PBO sprite for a slug (front / front-shiny), or null if absent. */
+export function pboSprite(root, slug, shiny) {
+  for (const cand of showdownCandidates(slug)) {
+    const rel = `sprites/pbo/${shiny ? "front-shiny" : "front"}/${cand}.png`;
+    if (existsSync(path.join(root, "public", rel))) return `/${rel}`;
+  }
+  return null;
 }
 
 export { dashless };

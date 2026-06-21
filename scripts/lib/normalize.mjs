@@ -15,13 +15,6 @@ const RARITIES = {
   legendary: "legendary",
 };
 
-const TIMES = {
-  all: "all",
-  day: "day",
-  night: "night",
-  "day/night": "all",
-};
-
 const METHOD_PREFIXES = [
   ["walk", "walking"],
   ["waking", "walking"], // forum typo (Jvaloh)
@@ -63,14 +56,16 @@ const STAT_SYNONYMS = {
   spe: "speed",
 };
 
-const clean = (s) => (s ?? "").replace(/\s+/g, " ").trim();
+export const clean = (s) => (s ?? "").replace(/\s+/g, " ").trim();
 
 export function parseRarity(raw) {
   return RARITIES[clean(raw).toLowerCase()] ?? null;
 }
 
 export function parseTime(raw) {
-  return TIMES[clean(raw).toLowerCase()] ?? null;
+  const v = clean(raw).toLowerCase();
+  if (v === "day/night") return "all";
+  return v === "all" || v === "day" || v === "night" ? v : null;
 }
 
 export function parseMethod(raw) {

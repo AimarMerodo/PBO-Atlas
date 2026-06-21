@@ -23,7 +23,7 @@
         "
       >
         @if (stage.id !== null) {
-          <span class="self-end font-mono text-[10px] text-ink-dim">#{{ dexNo(stage.id) }}</span>
+          <span class="self-end font-mono text-[10px] text-ink-dim">#{{ pad(stage.id, 3) }}</span>
         }
         @if (stage.artwork) {
           <img

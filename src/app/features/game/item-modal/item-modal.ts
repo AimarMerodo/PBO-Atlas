@@ -29,10 +29,7 @@ export class ItemModal {
     return parts.length ? "· " + parts.join(" — ") : "";
   }
 
-  protected readonly localName = computed(() => {
-    const i = this.item();
-    return this.i18n.pick({ en: i.name, es: i.es, zh: i.zh, pt: i.pt });
-  });
+  protected readonly localName = computed(() => this.i18n.localName(this.item()));
 
   protected readonly localDescription = computed(() => {
     const i = this.item();
@@ -46,6 +43,6 @@ export class ItemModal {
 
   protected readonly teachesName = computed(() => {
     const teaches = this.item().teaches;
-    return teaches ? this.i18n.pick({ en: teaches.name, es: teaches.es, zh: teaches.zh, pt: teaches.pt }) : "";
+    return teaches ? this.i18n.localName(teaches) : "";
   });
 }

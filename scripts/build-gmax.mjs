@@ -5,24 +5,16 @@
 // stats, abilities, artwork) + the PBO sprite + the base species' evolution line
 // and localized flavor. Run: node scripts/build-gmax.mjs
 import { readFile, writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchText } from "./lib/http.mjs";
-import { showdownCandidates } from "./lib/showdown-ids.mjs";
+import { pboSprite } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const POKEDEX = path.join(ROOT, "data", "pokedex.json");
 const API = "https://pokeapi.co/api/v2";
 
 const fetchJson = async (url) => JSON.parse(await fetchText(url, { subdir: "pokeapi", delayMs: 300 }));
-const pboSprite = (slug, shiny) => {
-  for (const cand of showdownCandidates(slug)) {
-    const rel = `sprites/pbo/${shiny ? "front-shiny" : "front"}/${cand}.png`;
-    if (existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
-  }
-  return null;
-};
 
 const pokedex = JSON.parse(await readFile(POKEDEX, "utf8"));
 
@@ -67,8 +59,8 @@ for (const gslug of gmaxSlugs) {
     spriteShiny: p.sprites.front_shiny ?? null,
     artwork: p.sprites.other?.["official-artwork"]?.front_default ?? p.sprites.front_default,
     artworkShiny: p.sprites.other?.["official-artwork"]?.front_shiny ?? p.sprites.front_shiny ?? null,
-    spritePbo: pboSprite(slug, false),
-    spritePboShiny: pboSprite(slug, true),
+    spritePbo: pboSprite(ROOT, slug, false),
+    spritePboShiny: pboSprite(ROOT, slug, true),
     evYield: null,
     flavor: null,
     flavorEs: base.flavorEs ?? null,

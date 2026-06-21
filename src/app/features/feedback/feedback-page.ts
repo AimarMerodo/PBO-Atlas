@@ -5,6 +5,7 @@ import { LucideArrowRight, LucideArrowUpRight, LucideCheck } from "@lucide/angul
 import { CONTACT, FORUM_URL, GAME_URL, REPO_URL } from "@core/contact";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
+import { pad } from "@core/utils/format";
 
 interface Channel {
   name: DictKey;
@@ -47,9 +48,7 @@ export class FeedbackPage {
     effect(() => title.setTitle(`${this.i18n.t("feedback.title")} | PBO Atlas`));
   }
 
-  protected pad(n: number): string {
-    return String(n).padStart(2, "0");
-  }
+  protected readonly pad = pad;
 
   protected async copy(index: number, value: string): Promise<void> {
     try {

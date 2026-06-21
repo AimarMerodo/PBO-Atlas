@@ -11,44 +11,44 @@
         ></svg>
         <input
           [value]="query()"
-          (input)="setQuery($any($event.target).value)"
+          (input)="set('query', $any($event.target).value)"
           [placeholder]="i18n.t('pokedex.searchPlaceholder')"
           autofocus
           class="w-full rounded-2xl border border-line bg-surface py-3.5 pl-12 pr-4 text-lg shadow-lg outline-none transition-colors placeholder:text-ink-dim focus:border-accent/70 focus:ring-2 focus:ring-accent/20"
         />
       </div>
       <div class="flex flex-wrap items-center justify-center gap-2">
-        <select [value]="type() ?? ''" (change)="setType($any($event.target).value)" [class]="selectClass">
+        <select [value]="type() ?? ''" (change)="set('type', $any($event.target).value)" [class]="selectClass">
           <option value="">{{ i18n.t("pokedex.allTypes") }}</option>
           @for (tp of typeOptions; track tp) {
             <option [value]="tp" class="capitalize">{{ tp }}</option>
           }
         </select>
-        <select [value]="region() ?? ''" (change)="setRegion($any($event.target).value)" [class]="selectClass">
+        <select [value]="region() ?? ''" (change)="set('region', $any($event.target).value)" [class]="selectClass">
           <option value="">{{ i18n.t("pokedex.allRegions") }}</option>
           @for (r of regionOptions; track r.value) {
             <option [value]="r.value">{{ r.label }}</option>
           }
         </select>
-        <select [value]="rarity() ?? ''" (change)="setRarity($any($event.target).value)" [class]="selectClass">
+        <select [value]="rarity() ?? ''" (change)="set('rarity', $any($event.target).value)" [class]="selectClass">
           <option value="">{{ i18n.t("pokedex.allRarities") }}</option>
           @for (r of rarityOptions; track r) {
-            <option [value]="r">{{ tKey("rarity." + r) }}</option>
+            <option [value]="r">{{ i18n.t($any("rarity." + r)) }}</option>
           }
         </select>
-        <select [value]="gen() ?? ''" (change)="setGen($any($event.target).value)" [class]="selectClass">
+        <select [value]="gen() ?? ''" (change)="set('gen', $any($event.target).value)" [class]="selectClass">
           <option value="">{{ i18n.t("pokedex.allGens") }}</option>
           @for (g of generations(); track g) {
             <option [value]="g">{{ i18n.t("pokedex.gen") }} {{ g }}</option>
           }
         </select>
-        <select [value]="ev() ?? ''" (change)="setEv($any($event.target).value)" [class]="selectClass">
+        <select [value]="ev() ?? ''" (change)="set('ev', $any($event.target).value)" [class]="selectClass">
           <option value="">{{ i18n.t("pokedex.anyEv") }}</option>
           @for (s of evStats; track s) {
-            <option [value]="s">EV: {{ tKey("stat." + s) }}</option>
+            <option [value]="s">EV: {{ i18n.t($any("stat." + s)) }}</option>
           }
         </select>
-        <select [value]="sort()" (change)="setSort($any($event.target).value)" [class]="selectClass">
+        <select [value]="sort()" (change)="set('sort', $any($event.target).value)" [class]="selectClass">
           <option value="number">{{ i18n.t("pokedex.sortNumber") }}</option>
           <option value="name">{{ i18n.t("pokedex.sortName") }}</option>
           <option value="stats">{{ i18n.t("pokedex.sortStats") }}</option>
@@ -84,7 +84,7 @@
               class="pointer-events-none absolute inset-x-0 top-0 h-32 opacity-25 transition-opacity group-hover:opacity-40"
               [style.background]="'radial-gradient(circle at 50% 0%, ' + tint(p) + ', transparent 70%)'"
             ></div>
-            <span class="self-end font-mono text-xs text-ink-dim">#{{ dexNo(p.id) }}</span>
+            <span class="self-end font-mono text-xs text-ink-dim">#{{ pad(p.id, 3) }}</span>
             @if (p.artwork || p.sprite) {
               <img
                 [src]="p.artwork ?? p.sprite"

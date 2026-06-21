@@ -3,6 +3,7 @@ import { RouterLink } from "@angular/router";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import { RARITY_ORDER } from "@core/utils/colors";
+import { levelLabel } from "@core/utils/format";
 import type { Spawn } from "@core/models/types";
 import { RarityBadge } from "@shared/components/rarity-badge/rarity-badge";
 import { TimeIcon } from "@shared/components/time-icon/time-icon";
@@ -67,7 +68,7 @@ export class SpawnTableComponent {
 
   protected levelLabel(s: Spawn): string {
     if (!s.level) return "—";
-    return s.level.min === s.level.max ? `${s.level.min}` : `${s.level.min}–${s.level.max}`;
+    return levelLabel(s.level.min, s.level.max);
   }
 
   protected evsLabel(s: Spawn): string {

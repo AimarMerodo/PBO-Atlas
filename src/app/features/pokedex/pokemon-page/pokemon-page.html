@@ -43,7 +43,7 @@
               <dd class="flex flex-wrap gap-1 font-medium">
                 @for (ev of p.entry.evYield ?? []; track ev.stat) {
                   <span class="rounded-full bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent-soft">
-                    +{{ ev.amount }} {{ tKey("stat." + ev.stat) }}
+                    +{{ ev.amount }} {{ i18n.t($any("stat." + ev.stat)) }}
                   </span>
                 }
               </dd>
@@ -103,12 +103,12 @@
               type="button"
               (click)="selectedDrop.set(d)"
               class="flex items-center gap-2 rounded-xl border border-line bg-surface py-1.5 pl-1.5 pr-3 transition-all hover:-translate-y-0.5 hover:border-accent/60"
-              [title]="localItemName(d)"
+              [title]="i18n.localName(d)"
             >
               <span class="grid place-items-center rounded-lg bg-zinc-300/80 p-1">
                 <app-item-icon [icon]="d.icon" [size]="28" />
               </span>
-              <span class="text-sm font-medium">{{ localItemName(d) }}</span>
+              <span class="text-sm font-medium">{{ i18n.localName(d) }}</span>
             </button>
           }
         </div>

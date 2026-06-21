@@ -76,6 +76,12 @@ export interface MarkerPreview {
   topSpawns: { slug: string; name: string; spriteUrl: string | null }[];
 }
 
+export interface LocationSummary {
+  id: string;
+  name: string;
+  speciesCount: number;
+}
+
 export interface RegionPage {
   meta: RegionMeta;
   locations: { id: string; name: string; speciesCount: number }[];

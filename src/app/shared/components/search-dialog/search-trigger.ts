@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { LucideSearch } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
-import { SearchDialogService } from "./search-dialog.service";
+import { searchOpen } from "./search-dialog";
 
 /** Header button that opens the global search dialog (rendered at app root). */
 @Component({
@@ -10,7 +10,7 @@ import { SearchDialogService } from "./search-dialog.service";
   imports: [LucideSearch],
   template: `
     <button
-      (click)="dialog.open()"
+      (click)="searchOpen.set(true)"
       class="flex items-center gap-2 rounded-lg border border-line bg-surface px-3 py-1.5 text-sm text-ink-dim hover:text-ink transition-colors"
     >
       <svg lucideSearch class="h-4 w-4" aria-hidden="true"></svg>
@@ -21,5 +21,5 @@ import { SearchDialogService } from "./search-dialog.service";
 })
 export class SearchTrigger {
   protected readonly i18n = inject(LanguageService);
-  protected readonly dialog = inject(SearchDialogService);
+  protected readonly searchOpen = searchOpen;
 }

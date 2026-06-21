@@ -13,7 +13,6 @@ import { DismissOutside } from "@shared/directives/dismiss-outside";
 })
 export class GameModal {
   readonly title = input.required<string>();
-  readonly subtitle = input<string | null>(null);
   readonly badge = input<string | null>(null);
   readonly icon = input.required<AtlasIcon | null>();
   readonly closed = output<void>();

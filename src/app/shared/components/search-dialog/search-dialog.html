@@ -1,7 +1,7 @@
-@if (dialog.isOpen()) {
+@if (searchOpen()) {
   <div
     class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center pt-[12vh] px-4"
-    (dismissOutside)="dialog.close()"
+    (dismissOutside)="searchOpen.set(false)"
   >
     <div
       data-modal-content

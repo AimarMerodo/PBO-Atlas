@@ -4,9 +4,10 @@ import { RouterLink } from "@angular/router";
 import { LucideFilterX, LucideSearch } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
-import type { DictKey } from "@core/i18n/dictionaries";
 import type { PokedexCard } from "@core/models/types";
 import { TYPE_COLORS } from "@core/utils/colors";
+import { paginate } from "@core/utils/paginate";
+import { pad } from "@core/utils/format";
 import { Pager } from "@shared/components/pager/pager";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 
@@ -15,6 +16,7 @@ const REGION_ORDER = ["sinnoh", "jvaloh", "hoenn", "kanto"];
 const RARITY_OPTIONS = ["common", "uncommon", "rare", "very-rare", "ultra-rare", "legendary"] as const;
 const EV_STATS = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"] as const;
 type SortKey = "number" | "name" | "stats";
+type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "sort";
 
 /** Pokedex grid with name/number search, type/region/rarity/gen/EV filters and sorting. */
 @Component({
@@ -42,6 +44,18 @@ export class PokedexPageComponent {
   protected readonly ev = signal<string | null>(null);
   protected readonly sort = signal<SortKey>("number");
   protected readonly page = signal(1);
+
+  /** Single source of truth for the filter signals: maps a field to how to reset it
+   *  and how to write a raw <input>/<select> string into its signal. */
+  private readonly filters = {
+    query: { reset: () => this.query.set(""), coerce: (v: string) => this.query.set(v) },
+    type: { reset: () => this.type.set(null), coerce: (v: string) => this.type.set(v || null) },
+    region: { reset: () => this.region.set(null), coerce: (v: string) => this.region.set(v || null) },
+    rarity: { reset: () => this.rarity.set(null), coerce: (v: string) => this.rarity.set(v || null) },
+    gen: { reset: () => this.gen.set(null), coerce: (v: string) => this.gen.set(v ? Number(v) : null) },
+    ev: { reset: () => this.ev.set(null), coerce: (v: string) => this.ev.set(v || null) },
+    sort: { reset: () => this.sort.set("number"), coerce: (v: string) => this.sort.set(v as SortKey) },
+  } as const;
 
   protected readonly typeOptions = Object.keys(TYPE_COLORS);
   protected readonly regionOptions = REGION_ORDER.map((r) => ({ value: r, label: r[0].toUpperCase() + r.slice(1) }));
@@ -85,12 +99,10 @@ export class PokedexPageComponent {
     return out;
   });
 
-  protected readonly pageCount = computed(() => Math.max(1, Math.ceil(this.filtered().length / PAGE_SIZE)));
-  protected readonly current = computed(() => Math.min(this.page(), this.pageCount()));
-  protected readonly visible = computed(() => {
-    const start = (this.current() - 1) * PAGE_SIZE;
-    return this.filtered().slice(start, start + PAGE_SIZE);
-  });
+  private readonly paged = computed(() => paginate(this.filtered(), this.page(), PAGE_SIZE));
+  protected readonly pageCount = computed(() => this.paged().pageCount);
+  protected readonly current = computed(() => this.paged().current);
+  protected readonly visible = computed(() => this.paged().visible);
 
   constructor() {
     inject(Title).setTitle("Pokédex | PBO Atlas");
@@ -100,49 +112,14 @@ export class PokedexPageComponent {
     });
   }
 
-  protected setQuery(value: string): void {
-    this.query.set(value);
-    this.page.set(1);
-  }
-
-  protected setType(value: string): void {
-    this.type.set(value || null);
-    this.page.set(1);
-  }
-
-  protected setRegion(value: string): void {
-    this.region.set(value || null);
-    this.page.set(1);
-  }
-
-  protected setRarity(value: string): void {
-    this.rarity.set(value || null);
-    this.page.set(1);
-  }
-
-  protected setGen(value: string): void {
-    this.gen.set(value ? Number(value) : null);
-    this.page.set(1);
-  }
-
-  protected setEv(value: string): void {
-    this.ev.set(value || null);
-    this.page.set(1);
-  }
-
-  protected setSort(value: string): void {
-    this.sort.set(value as SortKey);
+  /** Write any filter field from its raw control value; always resets to page 1. */
+  protected set(key: FilterKey, value: string): void {
+    this.filters[key].coerce(value);
     this.page.set(1);
   }
 
   protected clearFilters(): void {
-    this.query.set("");
-    this.type.set(null);
-    this.region.set(null);
-    this.rarity.set(null);
-    this.gen.set(null);
-    this.ev.set(null);
-    this.sort.set("number");
+    for (const f of Object.values(this.filters)) f.reset();
     this.page.set(1);
   }
 
@@ -155,11 +132,5 @@ export class PokedexPageComponent {
     return TYPE_COLORS[p.types[0]] ?? "#9099a1";
   }
 
-  protected dexNo(id: number): string {
-    return String(id).padStart(3, "0");
-  }
-
-  protected tKey(key: string): string {
-    return this.i18n.t(key as DictKey);
-  }
+  protected readonly pad = pad;
 }

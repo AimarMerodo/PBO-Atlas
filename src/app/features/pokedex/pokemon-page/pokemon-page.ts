@@ -5,7 +5,6 @@ import { LucideArrowLeft } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import { keepPrevious } from "@core/utils/keep-previous";
-import type { DictKey } from "@core/i18n/dictionaries";
 import type { GameItem, PokedexEntry } from "@core/models/types";
 import { ItemIcon } from "@shared/components/item-icon/item-icon";
 import { ItemModal } from "@features/game/item-modal/item-modal";
@@ -74,16 +73,8 @@ export class PokemonPageComponent {
     });
   }
 
-  protected tKey(key: string): string {
-    return this.i18n.t(key as DictKey);
-  }
-
   /** Localized Pokedex description (en from the game, es/zh from PokeAPI; pt falls back to en). */
   protected flavorText(entry: PokedexEntry): string {
     return this.i18n.pick({ en: entry.flavor ?? null, es: entry.flavorEs ?? null, zh: entry.flavorZh ?? null });
-  }
-
-  protected localItemName(d: GameItem): string {
-    return this.i18n.pick({ en: d.name, es: d.es, zh: d.zh, pt: d.pt });
   }
 }
