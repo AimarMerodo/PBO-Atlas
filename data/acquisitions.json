@@ -64,6 +64,8 @@
     "reshiram": [{ "method": "event", "source": "Summer Event" }],
     "necrozma": [{ "method": "craft", "source": "Necrozma Chest", "detail": "Crafted (Crafting Lv. 20)" }],
     "kingambit": [{ "method": "boss", "source": "King Bisharp boss", "detail": "Beat King Bisharp at Mt. Pyre Summit (Hoenn) for the Leader's Crest, then evolve Bisharp" }],
-    "ursaluna": [{ "method": "event", "source": "Halloween Shop", "detail": "Evolve Ursaring with a Peat Block (200 Soul Shards)" }]
+    "ursaluna": [{ "method": "event", "source": "Halloween Shop", "detail": "Evolve Ursaring with a Peat Block (200 Soul Shards)" }],
+    "kyogre-primal": [{ "method": "evolution", "source": "Blue Orb", "detail": "Equip the Blue Orb on a Kyogre (Primal Reversion)." }],
+    "groudon-primal": [{ "method": "evolution", "source": "Red Orb", "detail": "Equip the Red Orb on a Groudon (Primal Reversion)." }]
   }
 }
