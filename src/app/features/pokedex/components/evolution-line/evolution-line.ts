@@ -5,6 +5,7 @@ import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { EvoStage } from "@core/models/types";
+import { pad } from "@core/utils/format";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 
 /** Evolution line with large artwork cards and localized trigger pills. */
@@ -52,7 +53,5 @@ export class EvolutionLine {
       .join(" · ");
   }
 
-  protected dexNo(id: number): string {
-    return String(id).padStart(3, "0");
-  }
+  protected readonly pad = pad;
 }

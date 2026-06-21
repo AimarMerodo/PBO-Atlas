@@ -33,4 +33,9 @@ export class LanguageService {
   pick(record: Partial<Record<string, string | null>>): string {
     return record[this._lang()] ?? record["en"] ?? "";
   }
+
+  /** Pick the localized display name from an entity with en/es/zh/pt fields. */
+  localName(e: { name: string; es?: string | null; zh?: string | null; pt?: string | null }): string {
+    return this.pick({ en: e.name, es: e.es, zh: e.zh, pt: e.pt });
+  }
 }

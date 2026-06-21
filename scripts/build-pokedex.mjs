@@ -3,12 +3,11 @@
 // Usage: node scripts/build-pokedex.mjs
 
 import { readFile, readdir, mkdir, writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchText } from "./lib/http.mjs";
 import { parseCsv } from "./lib/csv.mjs";
-import { showdownCandidates, dashless } from "./lib/showdown-ids.mjs";
+import { showdownCandidates, dashless, pboSprite } from "./lib/showdown-ids.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SPAWNS_DIR = path.join(ROOT, "data", "spawns");
@@ -52,14 +51,6 @@ function gameLookup(map, slug) {
   for (const cand of showdownCandidates(slug)) {
     const v = map.get(cand);
     if (v !== undefined) return v;
-  }
-  return null;
-}
-
-function pboSprite(slug, shiny) {
-  for (const cand of showdownCandidates(slug)) {
-    const rel = `sprites/pbo/${shiny ? "front-shiny" : "front"}/${cand}.png`;
-    if (existsSync(path.join(ROOT, "public", rel))) return `/${rel}`;
   }
   return null;
 }
@@ -145,8 +136,8 @@ async function buildEntry(slug) {
       spriteShiny: pokemon.sprites.front_shiny ?? null,
       artwork: pokemon.sprites.other?.["official-artwork"]?.front_default ?? pokemon.sprites.front_default,
       artworkShiny: pokemon.sprites.other?.["official-artwork"]?.front_shiny ?? pokemon.sprites.front_shiny ?? null,
-      spritePbo: pboSprite(slug, false),
-      spritePboShiny: pboSprite(slug, true),
+      spritePbo: pboSprite(ROOT, slug, false),
+      spritePboShiny: pboSprite(ROOT, slug, true),
       evYield: gameLookup(evYieldByName, slug),
       flavor: gameLookup(flavorByName, slug),
       flavorEs: speciesFlavor(species, "es"),

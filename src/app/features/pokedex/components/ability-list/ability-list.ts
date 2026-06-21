@@ -16,16 +16,11 @@ export class AbilityList {
   protected readonly i18n = inject(LanguageService);
 
   protected name(a: AbilityInfo): string {
-    const lang = this.i18n.lang();
-    if (lang === "es") return a.es;
-    if (lang === "zh") return a.zh || a.en;
-    return a.en; // en + pt (no official Portuguese ability names)
+    // No official Portuguese ability names: pt falls back to en via pick().
+    return this.i18n.pick({ en: a.en, es: a.es, zh: a.zh });
   }
 
   protected text(a: AbilityInfo): string {
-    const lang = this.i18n.lang();
-    const detail =
-      lang === "es" ? a.detailEs : lang === "zh" ? a.detailZh : lang === "pt" ? a.detailPt : a.detail;
-    return detail || a.detail || a.textEn;
+    return this.i18n.pick({ en: a.detail, es: a.detailEs, zh: a.detailZh, pt: a.detailPt }) || a.detail || a.textEn;
   }
 }

@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, computed, inject, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, HostListener, computed, inject, signal } from "@angular/core";
 import { LucideCheck, LucideChevronDown } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { LANGS, type Lang } from "@core/i18n/dictionaries";
+import { DismissOutside } from "@shared/directives/dismiss-outside";
 
 @Component({
   selector: "app-language-toggle",
@@ -9,12 +10,12 @@ import { LANGS, type Lang } from "@core/i18n/dictionaries";
   // The active language comes from localStorage (browser-only), so the
   // prerendered HTML (always EN) never matches; skip hydration to re-render.
   host: { ngSkipHydration: "true" },
-  imports: [LucideCheck, LucideChevronDown],
+  imports: [LucideCheck, LucideChevronDown, DismissOutside],
   template: `
-    <div class="relative">
+    <div class="relative" (dismissOutside)="open.set(false)">
       <button
         type="button"
-        (click)="toggle()"
+        (click)="$event.stopPropagation(); toggle()"
         [attr.aria-expanded]="open()"
         aria-haspopup="listbox"
         [attr.aria-label]="i18n.t('nav.language')"
@@ -27,6 +28,7 @@ import { LANGS, type Lang } from "@core/i18n/dictionaries";
 
       @if (open()) {
         <ul
+          data-modal-content
           class="absolute right-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border border-line bg-surface py-1 shadow-2xl"
           role="listbox"
         >
@@ -57,7 +59,6 @@ import { LANGS, type Lang } from "@core/i18n/dictionaries";
 })
 export class LanguageToggle {
   protected readonly i18n = inject(LanguageService);
-  private readonly host = inject(ElementRef<HTMLElement>);
   protected readonly langs = LANGS;
   protected readonly open = signal(false);
 
@@ -83,11 +84,6 @@ export class LanguageToggle {
   protected select(code: Lang): void {
     this.i18n.setLang(code);
     this.open.set(false);
-  }
-
-  @HostListener("document:click", ["$event"])
-  protected onDocumentClick(event: MouseEvent): void {
-    if (this.open() && !this.host.nativeElement.contains(event.target as Node)) this.open.set(false);
   }
 
   @HostListener("document:keydown.escape")

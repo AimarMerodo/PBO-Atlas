@@ -15,9 +15,15 @@ import { LanguageService } from "@core/i18n/language.service";
 import { DataService } from "@core/data/data.service";
 import type { SearchIndex } from "@core/models/types";
 import { DismissOutside } from "@shared/directives/dismiss-outside";
-import { SearchDialogService } from "./search-dialog.service";
 
-/** Global search overlay. Rendered at the app root (see SearchDialogService). */
+/**
+ * Search dialog open/close state. The trigger button lives in the header,
+ * but the overlay must render at the app root: the header's backdrop-filter
+ * creates a containing block that would trap a position:fixed overlay.
+ */
+export const searchOpen = signal(false);
+
+/** Global search overlay. Rendered at the app root (see searchOpen). */
 @Component({
   selector: "app-search-dialog",
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -26,7 +32,7 @@ import { SearchDialogService } from "./search-dialog.service";
 })
 export class SearchDialog {
   protected readonly i18n = inject(LanguageService);
-  protected readonly dialog = inject(SearchDialogService);
+  protected readonly searchOpen = searchOpen;
   private readonly data = inject(DataService);
   private readonly router = inject(Router);
 
@@ -37,7 +43,7 @@ export class SearchDialog {
 
   constructor() {
     effect(() => {
-      if (this.dialog.isOpen()) {
+      if (searchOpen()) {
         this.query.set("");
         if (!this.index()) void this.data.searchIndex().then((index) => this.index.set(index));
         this.input()?.nativeElement.focus();
@@ -63,13 +69,13 @@ export class SearchDialog {
   onKeydown(event: KeyboardEvent): void {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
-      this.dialog.open();
+      searchOpen.set(true);
     }
-    if (event.key === "Escape") this.dialog.close();
+    if (event.key === "Escape") searchOpen.set(false);
   }
 
   protected go(href: string): void {
-    this.dialog.close();
+    searchOpen.set(false);
     void this.router.navigateByUrl(href);
   }
 }

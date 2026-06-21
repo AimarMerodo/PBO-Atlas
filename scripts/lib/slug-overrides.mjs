@@ -99,9 +99,3 @@ export const SLUG_OVERRIDES = {
 // Suffix-style regional forms used on the forum ("Voltorb-Hisui") map to
 // PokeAPI's "<species>-<region>" slugs ("voltorb-hisui") via plain slugify,
 // so they need no entry here unless PokeAPI uses a different word.
-export const FORM_SUFFIXES = {
-  hisui: "hisui",
-  alola: "alola",
-  galar: "galar",
-  paldea: "paldea",
-};

@@ -22,7 +22,7 @@ const CHART: Record<string, Record<string, number>> = {
   fairy: { fire: 0.5, fighting: 2, poison: 0.5, dragon: 2, dark: 2, steel: 0.5 },
 };
 
-export const ALL_TYPES = Object.keys(CHART);
+const ALL_TYPES = Object.keys(CHART);
 
 export interface DefenseProfile {
   x4: string[];

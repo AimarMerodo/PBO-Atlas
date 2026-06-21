@@ -4,6 +4,7 @@ import { RouterLink } from "@angular/router";
 import { LucideArrowRight, LucideMap, LucideMapPin, LucidePawPrint } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
+import { pad } from "@core/utils/format";
 
 /** Region index: one large map "poster" per region, with aggregate totals. */
 @Component({
@@ -31,9 +32,7 @@ export class RegionsPageComponent {
     };
   });
 
-  protected pad(n: number): string {
-    return String(n).padStart(2, "0");
-  }
+  protected readonly pad = pad;
 
   constructor() {
     const title = inject(Title);

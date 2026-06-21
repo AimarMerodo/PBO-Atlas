@@ -59,5 +59,3 @@ export async function fetchText(url, { subdir = "html", delayMs = DELAY_MS } = {
   await writeFile(file, text, "utf8");
   return text;
 }
-
-export { CACHE_DIR, cachePath };

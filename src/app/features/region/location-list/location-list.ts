@@ -1,12 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LanguageService } from "@core/i18n/language.service";
-
-export interface LocationSummary {
-  id: string;
-  name: string;
-  speciesCount: number;
-}
+import type { LocationSummary } from "@core/models/types";
 
 @Component({
   selector: "app-location-list",

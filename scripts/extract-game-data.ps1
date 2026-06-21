@@ -18,7 +18,6 @@ $jarEntries = @(
   "pokedex/translated_moves.csv",
   "pokedex/ev_yield.csv",
   "pokedex/pokemon_flavor.csv",
-  "pokedex/megas.csv",
   "pokedex/showdown/gen9moves.json",
   "nature/nature_list.csv",
   "nature/nature_es.csv",
@@ -50,10 +49,10 @@ foreach ($b in $bundles) {
 Write-Output "jar -> $($bundles.Count) bundle jsons"
 $zip.Dispose()
 
-# --- 2. Game i18n CSVs (ability/item name translations) ---
+# --- 2. Game i18n CSVs (item name translations) ---
 $i18nDir = Join-Path $cache "i18n"
 New-Item -ItemType Directory -Force $i18nDir | Out-Null
-foreach ($f in @("abilities_es.csv","abilities_pt.csv","abilities_zh.csv","items_es.csv","items_pt.csv","items_zh.csv")) {
+foreach ($f in @("items_es.csv","items_pt.csv","items_zh.csv")) {
   Copy-Item (Join-Path $GameDir "assets\i18n\$f") $i18nDir -Force
 }
 Write-Output "copied i18n csvs"

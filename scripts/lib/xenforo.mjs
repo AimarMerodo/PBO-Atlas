@@ -3,10 +3,7 @@
 
 import * as cheerio from "cheerio";
 import { fetchText } from "./http.mjs";
-
-const EXPECTED_HEADER = ["sprite", "pokemon", "rarity", "time", "method", "level", "ev"];
-
-const clean = (s) => (s ?? "").replace(/\s+/g, " ").trim();
+import { clean } from "./normalize.mjs";
 
 /** Fetch all pages of a thread and return cheerio docs in order. */
 export async function fetchThreadPages(threadUrl) {
@@ -155,5 +152,5 @@ export function extractLocationTables({ bodies }) {
     walk(body);
   }
 
-  return { locations, warnings, expectedHeader: EXPECTED_HEADER };
+  return { locations, warnings };
 }

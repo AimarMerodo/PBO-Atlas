@@ -14,6 +14,7 @@ import {
 import { LanguageService } from "@core/i18n/language.service";
 import type { Acquisition, Encounter } from "@core/models/types";
 import { RARITY_ORDER } from "@core/utils/colors";
+import { levelLabel as formatLevel } from "@core/utils/format";
 import { MethodIcon } from "@shared/components/method-icon/method-icon";
 import { RarityBadge } from "@shared/components/rarity-badge/rarity-badge";
 import { TimeIcon } from "@shared/components/time-icon/time-icon";
@@ -79,6 +80,6 @@ export class CatchLocations {
 
   protected levelLabel(e: Encounter): string {
     if (!e.level) return "—";
-    return e.level.min === e.level.max ? String(e.level.min) : `${e.level.min}–${e.level.max}`;
+    return formatLevel(e.level.min, e.level.max);
   }
 }

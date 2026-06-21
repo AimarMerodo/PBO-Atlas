@@ -62,13 +62,11 @@ export class MovesSection {
   }
 
   protected moveName(move: MoveInfo): string {
-    const lang = this.i18n.lang();
-    return lang === "es" ? move.es : lang === "zh" ? move.zh || move.en : lang === "pt" ? move.pt || move.en : move.en;
+    return this.i18n.pick({ en: move.en, es: move.es, zh: move.zh, pt: move.pt });
   }
 
   protected moveDesc(move: MoveInfo): string {
-    const lang = this.i18n.lang();
-    return (lang === "es" ? move.descEs : lang === "zh" ? move.descZh : null) || move.descEn || "";
+    return this.i18n.pick({ en: move.descEn, es: move.descEs, zh: move.descZh }) || move.descEn || "";
   }
 
   protected classColor(cls: string): string {
