@@ -87,6 +87,15 @@
         "detail": "750 Frost Shard"
       }
     ],
+    "ancient-wing-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "archen",
+        "pokemonName": "Archen",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "angel-costume-bundle-female": [
       {
         "method": "shop",
@@ -1252,6 +1261,24 @@
         "detail": "14 Dragon Ball"
       }
     ],
+    "fossilized-carapace": [
+      {
+        "method": "drop",
+        "pokemon": "anorith",
+        "pokemonName": "Anorith",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
+    "fossilized-crest": [
+      {
+        "method": "drop",
+        "pokemon": "shieldon",
+        "pokemonName": "Shieldon",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "frost-stone": [
       {
         "method": "shop",
@@ -1448,6 +1475,15 @@
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "750 Frost Shard"
+      }
+    ],
+    "glacial-crest-shard": [
+      {
+        "method": "drop",
+        "pokemon": "amaura",
+        "pokemonName": "Amaura",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "glastrier-mount-chest": [
@@ -1686,6 +1722,19 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "750 Soul Shard"
+      }
+    ],
+    "honey": [
+      {
+        "method": "drop",
+        "pokemon": "combee",
+        "pokemonName": "Combee",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ],
+        "detail": "Chance drop"
       }
     ],
     "houndoom-costume-bundle": [
@@ -2450,6 +2499,15 @@
         "detail": "200 Ranked Battle Token"
       }
     ],
+    "oceanic-fossil-residue": [
+      {
+        "method": "drop",
+        "pokemon": "kabuto",
+        "pokemonName": "Kabuto",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "ogerpon-mask-accessory-cornerstone": [
       {
         "method": "shop",
@@ -2833,6 +2891,15 @@
         "detail": "500 Crew Wars Token"
       }
     ],
+    "rampaging-jawbone": [
+      {
+        "method": "drop",
+        "pokemon": "cranidos",
+        "pokemonName": "Cranidos",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
+      }
+    ],
     "ranger-costume-bundle-female": [
       {
         "method": "shop",
@@ -2925,6 +2992,15 @@
         "method": "npc",
         "source": "Infernal Sanctum NPC",
         "detail": "Trade a Groudon · equip on Groudon for Primal Reversion"
+      }
+    ],
+    "reptilian-fang": [
+      {
+        "method": "drop",
+        "pokemon": "tyrunt",
+        "pokemonName": "Tyrunt",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "reverse-stone": [
@@ -3068,6 +3144,15 @@
         "method": "shop",
         "source": "Dynite Ore Store",
         "detail": "40 Ores"
+      }
+    ],
+    "shell-plate-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "tirtouga",
+        "pokemonName": "Tirtouga",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "shenron-mount": [
@@ -3326,6 +3411,15 @@
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "350 Frost Shard"
+      }
+    ],
+    "spiral-shell-fragment": [
+      {
+        "method": "drop",
+        "pokemon": "omanyte",
+        "pokemonName": "Omanyte",
+        "regions": [],
+        "detail": "Fossil Pokémon · also from Mining"
       }
     ],
     "spiritomb-chest": [

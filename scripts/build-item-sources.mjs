@@ -91,6 +91,18 @@ const DROPS = [
   d("heart-scale", "Luvdisc", ["Sinnoh", "Jvaloh", "Hoenn"]),
   d("stardust", "Staryu", ["Hoenn"]),
   d("star-piece", "Staryu", ["Hoenn"]),
+  // Crafting materials — fossil fragments drop from their fossil Pokémon (also via
+  // Mining); Honey from Combee. Source: forum crafting guide (#5742).
+  d("fossilized-carapace", "Anorith", [], "Fossil Pokémon · also from Mining"),
+  d("shell-plate-fragment", "Tirtouga", [], "Fossil Pokémon · also from Mining"),
+  d("fossilized-crest", "Shieldon", [], "Fossil Pokémon · also from Mining"),
+  d("ancient-wing-fragment", "Archen", [], "Fossil Pokémon · also from Mining"),
+  d("glacial-crest-shard", "Amaura", [], "Fossil Pokémon · also from Mining"),
+  d("oceanic-fossil-residue", "Kabuto", [], "Fossil Pokémon · also from Mining"),
+  d("spiral-shell-fragment", "Omanyte", [], "Fossil Pokémon · also from Mining"),
+  d("reptilian-fang", "Tyrunt", [], "Fossil Pokémon · also from Mining"),
+  d("rampaging-jawbone", "Cranidos", [], "Fossil Pokémon · also from Mining"),
+  d("honey", "Combee", ["Sinnoh", "Jvaloh", "Hoenn"], "Chance drop"),
 ];
 
 // Shop inventories (notable items only — TMs, mounts, cosmetics & event
