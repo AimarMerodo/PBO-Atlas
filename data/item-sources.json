@@ -275,6 +275,13 @@
         "detail": "500 Soul Shard"
       }
     ],
+    "blue-orb": [
+      {
+        "method": "npc",
+        "source": "Tidal Sanctum NPC",
+        "detail": "Trade a Kyogre · equip on Kyogre for Primal Reversion"
+      }
+    ],
     "blunder-policy": [
       {
         "method": "shop",
@@ -2911,6 +2918,13 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "500 Soul Shard"
+      }
+    ],
+    "red-orb": [
+      {
+        "method": "npc",
+        "source": "Infernal Sanctum NPC",
+        "detail": "Trade a Groudon · equip on Groudon for Primal Reversion"
       }
     ],
     "reverse-stone": [

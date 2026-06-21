@@ -155,6 +155,19 @@ for (const row of SHOPS) {
   push(row.item, { method: "shop", source: row.source, detail: row.detail });
 }
 
+// NPC trades / special exchanges (not a shop, not a wild drop). method "npc".
+const TRADES = [
+  { item: "blue-orb", source: "Tidal Sanctum NPC", detail: "Trade a Kyogre · equip on Kyogre for Primal Reversion" },
+  { item: "red-orb", source: "Infernal Sanctum NPC", detail: "Trade a Groudon · equip on Groudon for Primal Reversion" },
+];
+for (const row of TRADES) {
+  if (!itemSlugs.has(row.item)) {
+    warnings.push(`trade: unknown item slug "${row.item}"`);
+    continue;
+  }
+  push(row.item, { method: "npc", source: row.source, detail: row.detail });
+}
+
 // Bulk NPC-shop sources from the in-game Item Finder capture (data/item-finder.json).
 // Adds shop rows ONLY for items that don't already have a curated shop source above —
 // existing drop/shop rows are never modified. Items are matched by display name → slug.

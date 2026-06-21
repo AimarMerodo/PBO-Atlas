@@ -87,6 +87,17 @@ for (const [itemSlug, srcs] of Object.entries(itemSources)) {
 const spawnsByRegion = {};
 for (const r of regions) spawnsByRegion[r.id] = await readJson("spawns", `${r.id}.json`);
 
+// Merge curated special-area encounters (safari/warp maps not in the scraped overworld
+// spawns: Tidal/Infernal sanctums, Celestial Peak). Kept in data/extra-spawns.json so a
+// re-scrape can't wipe them. Each entry: { region, id, name, spawns[] }.
+const extraSpawns = await readJson("extra-spawns.json").catch(() => ({ locations: [] }));
+for (const loc of extraSpawns.locations ?? []) {
+  const reg = spawnsByRegion[loc.region];
+  if (reg && !reg.locations.some((l) => l.id === loc.id)) {
+    reg.locations.push({ id: loc.id, name: loc.name, spawns: loc.spawns });
+  }
+}
+
 const maps = {};
 for (const r of regions) {
   try {

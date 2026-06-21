@@ -51,7 +51,7 @@
                   <span class="text-ink-dim">&nbsp;— {{ s.detail }}</span>
                 }
               </span>
-            } @else {
+            } @else if (s.method === "drop") {
               <svg lucidePawPrint class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
               <span>
                 <span class="text-ink-dim">{{ i18n.t("item.droppedBy") }}</span>
@@ -63,6 +63,14 @@
                   {{ s.pokemonName }}
                 </a>
                 <span class="text-ink-dim">{{ dropDetail(s) }}</span>
+              </span>
+            } @else {
+              <svg lucideArrowLeftRight class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+              <span>
+                <span class="font-semibold">{{ s.source }}</span>
+                @if (s.detail) {
+                  <span class="text-ink-dim">&nbsp;— {{ s.detail }}</span>
+                }
               </span>
             }
           </li>
