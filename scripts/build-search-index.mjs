@@ -36,9 +36,18 @@ const pokemon = Object.values(pokedex)
     caught: caughtSlugs.has(p.slug),
   }));
 
-const items = asArray(await readData("items.json"), "items").map((i) => ({ slug: i.slug, name: i.name, icon: i.icon ?? null }));
-const mounts = asArray(await readData("mounts.json"), "mounts").map((m) => ({ name: m.name, icon: m.icon ?? null }));
-const cosmetics = asArray(await readData("cosmetics.json"), "cosmetics").map((c) => ({ slug: c.slug, name: c.name, icon: c.icon ?? null }));
+const mountsArr = asArray(await readData("mounts.json"), "mounts");
+const cosmeticsArr = asArray(await readData("cosmetics.json"), "cosmetics");
+const mounts = mountsArr.map((m) => ({ name: m.name, icon: m.icon ?? null }));
+const cosmetics = cosmeticsArr.map((c) => ({ slug: c.slug, name: c.name, icon: c.icon ?? null }));
+
+// Mounts and cosmetic bundles are ALSO present in items.json; drop those exact
+// name duplicates from the items index so each only shows in its own section
+// (distinct items like "X Mount Chest" are not in those sets, so they stay).
+const ownSection = new Set([...mountsArr, ...cosmeticsArr].map((e) => (e.name ?? "").trim().toLowerCase()));
+const items = asArray(await readData("items.json"), "items")
+  .filter((i) => !ownSection.has((i.name ?? "").trim().toLowerCase()))
+  .map((i) => ({ slug: i.slug, name: i.name, icon: i.icon ?? null }));
 const regions = asArray(await readData("regions.json"), "regions").map((r) => ({ id: r.id, name: r.name }));
 
 await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions }), "utf8");
