@@ -121,6 +121,8 @@ export const zh: Record<DictKey, string> = {
   "pokemon.defenses": "弱点与抗性",
   "pokemon.shiny": "查看闪光形态",
   "pokemon.shinyLabel": "闪光",
+  "pokemon.alpha": "切换 Alpha 光环",
+  "pokemon.alphaLabel": "Alpha",
   "type.normal": "一般",
   "type.fire": "火",
   "type.water": "水",
