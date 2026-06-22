@@ -10,9 +10,9 @@
   },
   "acquisitions": {
     "heatran": [{ "method": "roaming", "source": "Stark Mountain quest", "detail": "Roams Sinnoh after clearing the Stark Mountain questline" }],
-    "mesprit": [{ "method": "boss", "source": "Lake Verity — Legendary Cave", "detail": "Sinnoh" }],
-    "uxie": [{ "method": "boss", "source": "Lake Acuity — Legendary Cave", "detail": "Sinnoh" }],
-    "azelf": [{ "method": "boss", "source": "Lake Valor — Legendary Cave", "detail": "Sinnoh" }],
+    "mesprit": [{ "method": "craft", "source": "Mesprit Chest", "detail": "Open the chest — crafted with the Emotion Core (dropped by the Mesprit boss · Lake Verity, Sinnoh)" }],
+    "uxie": [{ "method": "craft", "source": "Uxie Chest", "detail": "Open the chest — crafted with the Knowledge Core (dropped by the Uxie boss · Lake Acuity, Sinnoh)" }],
+    "azelf": [{ "method": "craft", "source": "Azelf Chest", "detail": "Open the chest — crafted with the Will Core (dropped by the Azelf boss · Lake Valor, Sinnoh)" }],
     "zarude": [{ "method": "boss", "source": "Nuzbar Village", "detail": "Jvaloh" }],
     "entei": [{ "method": "roaming", "source": "Roaming", "detail": "Jvaloh, after the story" }],
     "raikou": [{ "method": "roaming", "source": "Roaming", "detail": "Jvaloh, after the story" }],
@@ -34,9 +34,9 @@
     "yveltal": [{ "method": "event", "source": "Halloween Event", "detail": "Roaming" }],
     "latios": [{ "method": "quest", "source": "Roaming after the 500 Dex quest", "detail": "Hoenn" }],
     "latias": [{ "method": "quest", "source": "Roaming after the 500 Dex quest", "detail": "Hoenn" }],
-    "regirock": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }],
-    "registeel": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }],
-    "regice": [{ "method": "quest", "source": "Regi Trio quest chest", "detail": "Hoenn" }, { "method": "event", "source": "Christmas Event", "detail": "Roaming" }],
+    "regirock": [{ "method": "craft", "source": "Regirock Chest", "detail": "Open the chest — crafted with the Rock Core (dropped by the Regirock boss · Hoenn)" }],
+    "registeel": [{ "method": "craft", "source": "Registeel Chest", "detail": "Open the chest — crafted with the Steel Core (dropped by the Registeel boss · Hoenn)" }],
+    "regice": [{ "method": "craft", "source": "Regice Chest", "detail": "Open the chest — crafted with the Ice Core (dropped by the Regice boss · Hoenn)" }, { "method": "event", "source": "Christmas Event", "detail": "Roaming" }],
     "manaphy": [{ "method": "quest", "source": "Manaphy quest", "detail": "Requires Lv. 80 Fishing (Hoenn)" }],
     "cosmog": [{ "method": "mining", "source": "Legendary mining reward", "detail": "Cosmog chest" }],
     "solgaleo": [{ "method": "mining", "source": "Cosmog chest (Legendary mining)", "detail": "Then evolve Cosmog → Cosmoem → Solgaleo (Lv. 53, daytime)" }],
@@ -88,6 +88,7 @@
     "lillipup": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
     "rockruff": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
     "chansey": [{ "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Halloween Chansey Chest (500 Soul Shards)" }],
-    "rotom-frost": [{ "method": "event", "source": "Christmas — Frost Shard Shop", "detail": "Rotom-Frost Chest (250 Frost Shards)" }]
+    "rotom-frost": [{ "method": "event", "source": "Christmas — Frost Shard Shop", "detail": "Rotom-Frost Chest (250 Frost Shards)" }],
+    "regidrago": [{ "method": "craft", "source": "Regidrago Chest", "detail": "Open the chest — crafted with the Dragon Core (dropped by the Regidrago boss)" }]
   }
 }
