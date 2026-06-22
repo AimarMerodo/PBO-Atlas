@@ -202,6 +202,16 @@ const REWARDS = [
   ...["malicious-armor", "auspicious-armor", "spell-tag", "toxic-orb", "weakness-policy"].map(
     (item) => ({ item, method: "quest", source: "Hex Maniacs reward", detail: "Chance" }),
   ),
+  // Crafting cores — boss drops & mining (forum #1760 / #5742). moon-core is unreleased.
+  ...["emotion-core", "will-core", "knowledge-core"].map(
+    (item) => ({ item, method: "boss", source: "Lake Trio bosses", detail: "Chance drop" }),
+  ),
+  ...["steel-core", "rock-core", "ice-core"].map(
+    (item) => ({ item, method: "boss", source: "Regi bosses", detail: "Chance drop" }),
+  ),
+  { item: "dragon-core", method: "boss", source: "Regidrago boss", detail: "Chance drop" },
+  { item: "prismatic-core", method: "mining", source: "Dark Ore Mining", detail: "Legendary Reward" },
+  { item: "sun-core", method: "mining", source: "Mining minigame", detail: "Legendary Reward" },
 ];
 for (const row of REWARDS) {
   if (!itemSlugs.has(row.item)) {

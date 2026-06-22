@@ -65,7 +65,19 @@
                 <span class="text-ink-dim">{{ dropDetail(s) }}</span>
               </span>
             } @else {
-              <svg lucideArrowLeftRight class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+              @switch (s.method) {
+                @case ("boss") {
+                  <svg lucideSwords class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+                } @case ("mining") {
+                  <svg lucidePickaxe class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+                } @case ("event") {
+                  <svg lucideSparkles class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+                } @case ("quest") {
+                  <svg lucideScrollText class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+                } @default {
+                  <svg lucideArrowLeftRight class="mt-0.5 h-4 w-4 shrink-0 text-accent-soft" aria-hidden="true"></svg>
+                }
+              }
               <span>
                 <span class="font-semibold">{{ s.source }}</span>
                 @if (s.detail) {

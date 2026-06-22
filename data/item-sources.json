@@ -1042,6 +1042,13 @@
         "detail": "250 Egg Shard"
       }
     ],
+    "dragon-core": [
+      {
+        "method": "boss",
+        "source": "Regidrago boss",
+        "detail": "Chance drop"
+      }
+    ],
     "dragon-fang": [
       {
         "method": "drop",
@@ -1261,6 +1268,13 @@
         "method": "event",
         "source": "Beachhouse Brawl",
         "detail": "Event reward"
+      }
+    ],
+    "emotion-core": [
+      {
+        "method": "boss",
+        "source": "Lake Trio bosses",
+        "detail": "Chance drop"
       }
     ],
     "energy-powder": [
@@ -2027,6 +2041,13 @@
         "detail": "500 Casino Token"
       }
     ],
+    "ice-core": [
+      {
+        "method": "boss",
+        "source": "Regi bosses",
+        "detail": "Chance drop"
+      }
+    ],
     "ice-memory": [
       {
         "method": "shop",
@@ -2206,6 +2227,13 @@
         "regions": [
           "Sinnoh"
         ]
+      }
+    ],
+    "knowledge-core": [
+      {
+        "method": "boss",
+        "source": "Lake Trio bosses",
+        "detail": "Chance drop"
       }
     ],
     "kukui-costume-bundle": [
@@ -3368,6 +3396,13 @@
         ]
       }
     ],
+    "prismatic-core": [
+      {
+        "method": "mining",
+        "source": "Dark Ore Mining",
+        "detail": "Legendary Reward"
+      }
+    ],
     "protector": [
       {
         "method": "drop",
@@ -3590,6 +3625,13 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "rock-core": [
+      {
+        "method": "boss",
+        "source": "Regi bosses",
+        "detail": "Chance drop"
       }
     ],
     "rock-memory": [
@@ -4136,6 +4178,13 @@
         "detail": "Event reward"
       }
     ],
+    "steel-core": [
+      {
+        "method": "boss",
+        "source": "Regi bosses",
+        "detail": "Chance drop"
+      }
+    ],
     "steel-memory": [
       {
         "method": "shop",
@@ -4190,6 +4239,13 @@
         "method": "shop",
         "source": "Radiance Token Shop",
         "detail": "50 Radiance Token"
+      }
+    ],
+    "sun-core": [
+      {
+        "method": "mining",
+        "source": "Mining minigame",
+        "detail": "Legendary Reward"
       }
     ],
     "sun-stone": [
@@ -4786,6 +4842,13 @@
         "method": "shop",
         "source": "Battle Tokens Shop",
         "detail": "150 Battle Token"
+      }
+    ],
+    "will-core": [
+      {
+        "method": "boss",
+        "source": "Lake Trio bosses",
+        "detail": "Chance drop"
       }
     ],
     "wise-glasses": [
