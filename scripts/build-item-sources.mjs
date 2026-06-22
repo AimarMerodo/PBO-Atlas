@@ -103,6 +103,13 @@ const DROPS = [
   d("reptilian-fang", "Tyrunt", [], "Fossil Pokémon · also from Mining"),
   d("rampaging-jawbone", "Cranidos", [], "Fossil Pokémon · also from Mining"),
   d("honey", "Combee", ["Sinnoh", "Jvaloh", "Hoenn"], "Chance drop"),
+  // Crafting cores — each dropped by its specific boss Pokémon (per the item desc).
+  d("emotion-core", "Mesprit", [], "Boss · chance"),
+  d("will-core", "Azelf", [], "Boss · chance"),
+  d("knowledge-core", "Uxie", [], "Boss · chance"),
+  d("steel-core", "Registeel", [], "Boss · chance"),
+  d("rock-core", "Regirock", [], "Boss · chance"),
+  d("ice-core", "Regice", [], "Boss · chance"),
 ];
 
 // Shop inventories (notable items only — TMs, mounts, cosmetics & event
@@ -202,13 +209,8 @@ const REWARDS = [
   ...["malicious-armor", "auspicious-armor", "spell-tag", "toxic-orb", "weakness-policy"].map(
     (item) => ({ item, method: "quest", source: "Hex Maniacs reward", detail: "Chance" }),
   ),
-  // Crafting cores — boss drops & mining (forum #1760 / #5742). moon-core is unreleased.
-  ...["emotion-core", "will-core", "knowledge-core"].map(
-    (item) => ({ item, method: "boss", source: "Lake Trio bosses", detail: "Chance drop" }),
-  ),
-  ...["steel-core", "rock-core", "ice-core"].map(
-    (item) => ({ item, method: "boss", source: "Regi bosses", detail: "Chance drop" }),
-  ),
+  // Cores via mining (forum #5742); the Lake Trio / Regi cores are specific boss
+  // drops — see DROPS above. moon-core is unreleased.
   { item: "dragon-core", method: "boss", source: "Regidrago boss", detail: "Chance drop" },
   { item: "prismatic-core", method: "mining", source: "Dark Ore Mining", detail: "Legendary Reward" },
   { item: "sun-core", method: "mining", source: "Mining minigame", detail: "Legendary Reward" },

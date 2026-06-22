@@ -1272,9 +1272,11 @@
     ],
     "emotion-core": [
       {
-        "method": "boss",
-        "source": "Lake Trio bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "mesprit",
+        "pokemonName": "Mesprit",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "energy-powder": [
@@ -2043,9 +2045,11 @@
     ],
     "ice-core": [
       {
-        "method": "boss",
-        "source": "Regi bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "regice",
+        "pokemonName": "Regice",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "ice-memory": [
@@ -2231,9 +2235,11 @@
     ],
     "knowledge-core": [
       {
-        "method": "boss",
-        "source": "Lake Trio bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "uxie",
+        "pokemonName": "Uxie",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "kukui-costume-bundle": [
@@ -3629,9 +3635,11 @@
     ],
     "rock-core": [
       {
-        "method": "boss",
-        "source": "Regi bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "regirock",
+        "pokemonName": "Regirock",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "rock-memory": [
@@ -4180,9 +4188,11 @@
     ],
     "steel-core": [
       {
-        "method": "boss",
-        "source": "Regi bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "registeel",
+        "pokemonName": "Registeel",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "steel-memory": [
@@ -4846,9 +4856,11 @@
     ],
     "will-core": [
       {
-        "method": "boss",
-        "source": "Lake Trio bosses",
-        "detail": "Chance drop"
+        "method": "drop",
+        "pokemon": "azelf",
+        "pokemonName": "Azelf",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "wise-glasses": [
