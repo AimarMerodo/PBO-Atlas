@@ -87,6 +87,7 @@
     "houndour": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
     "lillipup": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
     "rockruff": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
-    "chansey": [{ "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Halloween Chansey Chest (500 Soul Shards)" }]
+    "chansey": [{ "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Halloween Chansey Chest (500 Soul Shards)" }],
+    "rotom-frost": [{ "method": "event", "source": "Christmas — Frost Shard Shop", "detail": "Rotom-Frost Chest (250 Frost Shards)" }]
   }
 }
