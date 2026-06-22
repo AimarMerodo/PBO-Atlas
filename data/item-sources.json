@@ -1042,6 +1042,13 @@
         "detail": "250 Egg Shard"
       }
     ],
+    "dragon-core": [
+      {
+        "method": "boss",
+        "source": "Regidrago boss",
+        "detail": "Chance drop"
+      }
+    ],
     "dragon-fang": [
       {
         "method": "drop",
@@ -1261,6 +1268,15 @@
         "method": "event",
         "source": "Beachhouse Brawl",
         "detail": "Event reward"
+      }
+    ],
+    "emotion-core": [
+      {
+        "method": "drop",
+        "pokemon": "mesprit",
+        "pokemonName": "Mesprit",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "energy-powder": [
@@ -2027,6 +2043,15 @@
         "detail": "500 Casino Token"
       }
     ],
+    "ice-core": [
+      {
+        "method": "drop",
+        "pokemon": "regice",
+        "pokemonName": "Regice",
+        "regions": [],
+        "detail": "Boss · chance"
+      }
+    ],
     "ice-memory": [
       {
         "method": "shop",
@@ -2206,6 +2231,15 @@
         "regions": [
           "Sinnoh"
         ]
+      }
+    ],
+    "knowledge-core": [
+      {
+        "method": "drop",
+        "pokemon": "uxie",
+        "pokemonName": "Uxie",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "kukui-costume-bundle": [
@@ -3368,6 +3402,13 @@
         ]
       }
     ],
+    "prismatic-core": [
+      {
+        "method": "mining",
+        "source": "Dark Ore Mining",
+        "detail": "Legendary Reward"
+      }
+    ],
     "protector": [
       {
         "method": "drop",
@@ -3590,6 +3631,15 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "rock-core": [
+      {
+        "method": "drop",
+        "pokemon": "regirock",
+        "pokemonName": "Regirock",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "rock-memory": [
@@ -4136,6 +4186,15 @@
         "detail": "Event reward"
       }
     ],
+    "steel-core": [
+      {
+        "method": "drop",
+        "pokemon": "registeel",
+        "pokemonName": "Registeel",
+        "regions": [],
+        "detail": "Boss · chance"
+      }
+    ],
     "steel-memory": [
       {
         "method": "shop",
@@ -4190,6 +4249,13 @@
         "method": "shop",
         "source": "Radiance Token Shop",
         "detail": "50 Radiance Token"
+      }
+    ],
+    "sun-core": [
+      {
+        "method": "mining",
+        "source": "Mining minigame",
+        "detail": "Legendary Reward"
       }
     ],
     "sun-stone": [
@@ -4786,6 +4852,15 @@
         "method": "shop",
         "source": "Battle Tokens Shop",
         "detail": "150 Battle Token"
+      }
+    ],
+    "will-core": [
+      {
+        "method": "drop",
+        "pokemon": "azelf",
+        "pokemonName": "Azelf",
+        "regions": [],
+        "detail": "Boss · chance"
       }
     ],
     "wise-glasses": [

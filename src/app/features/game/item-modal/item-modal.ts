@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, output } from "@angular/core";
 import { RouterLink } from "@angular/router";
-import { LucideArrowLeftRight, LucidePawPrint, LucideStore } from "@lucide/angular";
+import { LucideArrowLeftRight, LucidePawPrint, LucidePickaxe, LucideScrollText, LucideSparkles, LucideStore, LucideSwords } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { GameItem, ItemSource } from "@core/models/types";
 import { itemCategoryKey } from "@core/utils/item-category";
@@ -14,7 +14,7 @@ import { TypeBadge } from "@shared/components/type-badge/type-badge";
 @Component({
   selector: "app-item-modal",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, GameModal, TypeBadge, LucideArrowLeftRight, LucidePawPrint, LucideStore],
+  imports: [RouterLink, GameModal, TypeBadge, LucideArrowLeftRight, LucidePawPrint, LucidePickaxe, LucideScrollText, LucideSparkles, LucideStore, LucideSwords],
   templateUrl: "./item-modal.html",
 })
 export class ItemModal {
