@@ -1272,11 +1272,9 @@
     ],
     "emotion-core": [
       {
-        "method": "drop",
-        "pokemon": "mesprit",
-        "pokemonName": "Mesprit",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Mesprit boss",
+        "detail": "Chance drop"
       }
     ],
     "energy-powder": [
@@ -2045,11 +2043,9 @@
     ],
     "ice-core": [
       {
-        "method": "drop",
-        "pokemon": "regice",
-        "pokemonName": "Regice",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Regice boss",
+        "detail": "Chance drop"
       }
     ],
     "ice-memory": [
@@ -2235,11 +2231,9 @@
     ],
     "knowledge-core": [
       {
-        "method": "drop",
-        "pokemon": "uxie",
-        "pokemonName": "Uxie",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Uxie boss",
+        "detail": "Chance drop"
       }
     ],
     "kukui-costume-bundle": [
@@ -3635,11 +3629,9 @@
     ],
     "rock-core": [
       {
-        "method": "drop",
-        "pokemon": "regirock",
-        "pokemonName": "Regirock",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Regirock boss",
+        "detail": "Chance drop"
       }
     ],
     "rock-memory": [
@@ -4188,11 +4180,9 @@
     ],
     "steel-core": [
       {
-        "method": "drop",
-        "pokemon": "registeel",
-        "pokemonName": "Registeel",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Registeel boss",
+        "detail": "Chance drop"
       }
     ],
     "steel-memory": [
@@ -4856,11 +4846,9 @@
     ],
     "will-core": [
       {
-        "method": "drop",
-        "pokemon": "azelf",
-        "pokemonName": "Azelf",
-        "regions": [],
-        "detail": "Boss · chance"
+        "method": "boss",
+        "source": "Azelf boss",
+        "detail": "Chance drop"
       }
     ],
     "wise-glasses": [
