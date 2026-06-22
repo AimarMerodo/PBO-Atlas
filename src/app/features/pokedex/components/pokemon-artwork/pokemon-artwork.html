@@ -1,32 +1,57 @@
+<!-- No overflow-hidden: the Alpha drop-shadow aura must be able to extend past the sprite without being clipped into a box. -->
 <div
-  class="relative flex min-h-72 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-72"
+  class="relative flex min-h-72 shrink-0 items-center justify-center rounded-2xl border border-line bg-gradient-to-br from-surface to-surface-2 p-6 sm:w-72"
 >
-  @if (artworkShiny()) {
+  <div class="absolute right-3 top-3 z-10 flex gap-1.5">
     <button
-      (click)="toggleShiny()"
-      [attr.aria-pressed]="shiny()"
-      [title]="i18n.t('pokemon.shiny')"
+      (click)="toggleAlpha()"
+      [attr.aria-pressed]="alpha()"
+      [title]="i18n.t('pokemon.alpha')"
       [class]="
-        'absolute right-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ' +
-        (shiny()
-          ? 'border-amber-400/60 bg-amber-400/15 text-amber-300'
+        'inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ' +
+        (alpha()
+          ? 'border-red-400/60 bg-red-500/15 text-red-300'
           : 'border-line bg-surface text-ink-dim hover:text-ink')
       "
     >
-      <svg lucideSparkles class="h-3.5 w-3.5" aria-hidden="true"></svg>
-      {{ i18n.t("pokemon.shinyLabel") }}
+      <svg lucideFlame class="h-3.5 w-3.5" aria-hidden="true"></svg>
+      {{ i18n.t("pokemon.alphaLabel") }}
     </button>
-  }
+    @if (artworkShiny()) {
+      <button
+        (click)="toggleShiny()"
+        [attr.aria-pressed]="shiny()"
+        [title]="i18n.t('pokemon.shiny')"
+        [class]="
+          'inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ' +
+          (shiny()
+            ? 'border-amber-400/60 bg-amber-400/15 text-amber-300'
+            : 'border-line bg-surface text-ink-dim hover:text-ink')
+        "
+      >
+        <svg lucideSparkles class="h-3.5 w-3.5" aria-hidden="true"></svg>
+        {{ i18n.t("pokemon.shinyLabel") }}
+      </button>
+    }
+  </div>
   @if (aniUrl() && !aniFailed()) {
     <img
       [src]="aniUrl()"
-      [alt]="shiny() ? name() + ' shiny' : name()"
+      [alt]="altText()"
       (error)="aniFailed.set(true)"
+      [style.filter]="auraFilter()"
       class="pointer-events-none max-h-40 w-auto scale-[1.75] [image-rendering:pixelated]"
     />
   } @else if (src()) {
-    <img [src]="src()" [alt]="shiny() ? name() + ' shiny' : name()" width="200" height="200" class="pointer-events-none" />
+    <img [src]="src()" [alt]="altText()" [style.filter]="auraFilter()" width="200" height="200" class="pointer-events-none" />
   } @else if (gameSprite()) {
-    <img [src]="gameSprite()" [alt]="name()" width="120" height="120" class="pointer-events-none [image-rendering:pixelated]" />
+    <img
+      [src]="gameSprite()"
+      [alt]="altText()"
+      [style.filter]="auraFilter()"
+      width="120"
+      height="120"
+      class="pointer-events-none [image-rendering:pixelated]"
+    />
   }
 </div>
