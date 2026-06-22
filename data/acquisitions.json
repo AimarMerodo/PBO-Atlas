@@ -89,6 +89,21 @@
     "rockruff": [{ "method": "quest", "source": "Hex Maniacs reward", "detail": "Pupper Chest (chance · 33% each)" }],
     "chansey": [{ "method": "event", "source": "Halloween — Soul Shard Shop", "detail": "Halloween Chansey Chest (500 Soul Shards)" }],
     "rotom-frost": [{ "method": "event", "source": "Christmas — Frost Shard Shop", "detail": "Rotom-Frost Chest (250 Frost Shards)" }],
-    "regidrago": [{ "method": "craft", "source": "Regidrago Chest", "detail": "Open the chest — crafted with the Dragon Core (dropped by the Regidrago boss)" }]
+    "regidrago": [{ "method": "craft", "source": "Regidrago Chest", "detail": "Open the chest — crafted with the Dragon Core (dropped by the Regidrago boss)" }],
+    "anorith": [{ "method": "mining", "source": "Anorith Chest", "detail": "Trade the Claw Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "lileep": [{ "method": "mining", "source": "Lileep Chest", "detail": "Trade the Root Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "tirtouga": [{ "method": "mining", "source": "Tirtouga Chest", "detail": "Trade the Cover Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "shieldon": [{ "method": "mining", "source": "Shieldon Chest", "detail": "Trade the Armor Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "archen": [{ "method": "mining", "source": "Archen Chest", "detail": "Trade the Plume Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "amaura": [{ "method": "mining", "source": "Amaura Chest", "detail": "Trade the Sail Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "cranidos": [{ "method": "mining", "source": "Cranidos Chest", "detail": "Trade the Skull Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "omanyte": [{ "method": "mining", "source": "Omanyte Chest", "detail": "Trade the Helix Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "kabuto": [{ "method": "mining", "source": "Kabuto Chest", "detail": "Trade the Dome Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "aerodactyl": [{ "method": "mining", "source": "Aerodactyl Chest", "detail": "Trade the Old Amber to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "tyrunt": [{ "method": "mining", "source": "Tyrunt Chest", "detail": "Trade the Jaw Fossil to the Fallarbor Town NPC for the chest (fossils found by Mining)" }],
+    "dracozolt": [{ "method": "mining", "source": "Dracozolt Chest", "detail": "Trade its two fusion fossils to the Fallarbor Town NPC for the chest (found by Mining)" }],
+    "arctozolt": [{ "method": "mining", "source": "Arctozolt Chest", "detail": "Trade its two fusion fossils to the Fallarbor Town NPC for the chest (found by Mining)" }],
+    "dracovish": [{ "method": "mining", "source": "Dracovish Chest", "detail": "Trade its two fusion fossils to the Fallarbor Town NPC for the chest (found by Mining)" }],
+    "arctovish": [{ "method": "mining", "source": "Arctovish Chest", "detail": "Trade its two fusion fossils to the Fallarbor Town NPC for the chest (found by Mining)" }]
   }
 }
