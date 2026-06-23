@@ -124,6 +124,8 @@ export const pt: Record<DictKey, string> = {
   "pokemon.defenses": "Fraquezas e resistências",
   "pokemon.shiny": "Ver versão shiny",
   "pokemon.shinyLabel": "Shiny",
+  "pokemon.alpha": "Alternar a aura alpha",
+  "pokemon.alphaLabel": "Alpha",
   "type.normal": "Normal",
   "type.fire": "Fogo",
   "type.water": "Água",

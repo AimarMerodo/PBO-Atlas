@@ -124,6 +124,8 @@ export const en = {
   "pokemon.defenses": "Weaknesses & resistances",
   "pokemon.shiny": "View shiny version",
   "pokemon.shinyLabel": "Shiny",
+  "pokemon.alpha": "Toggle the alpha aura",
+  "pokemon.alphaLabel": "Alpha",
   "type.normal": "Normal",
   "type.fire": "Fire",
   "type.water": "Water",
