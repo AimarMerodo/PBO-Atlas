@@ -1,8 +1,11 @@
-@if (encounters().length === 0 && obtain().length === 0) {
+@if (notInPbo()) {
+  <div class="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-5 text-sm text-red-200">
+    <p>{{ i18n.t("pokemon.notInPbo") }}</p>
+  </div>
+} @else if (encounters().length === 0 && obtain().length === 0) {
   <div class="rounded-xl border border-line bg-surface px-4 py-5 text-sm text-ink-dim">
-    <p>{{ i18n.t("pokemon.notCatchable") }}</p>
     @if (catchableAncestors().length > 0) {
-      <p class="mt-2">
+      <p>
         {{ i18n.t("pokemon.tryEvolving") }}
         @for (a of catchableAncestors(); track a.slug; let i = $index) {
           <span>
@@ -14,6 +17,8 @@
         }
         <span>.</span>
       </p>
+    } @else {
+      <p>{{ i18n.t("pokemon.noObtainInfo") }}</p>
     }
   </div>
 } @else {

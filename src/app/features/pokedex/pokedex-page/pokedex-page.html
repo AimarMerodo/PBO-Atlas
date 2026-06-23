@@ -54,6 +54,23 @@
           <option value="name">{{ i18n.t("pokedex.sortName") }}</option>
           <option value="stats">{{ i18n.t("pokedex.sortStats") }}</option>
         </select>
+        <label
+          class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-line bg-surface px-2.5 py-1.5 text-sm text-ink-dim transition-colors hover:text-ink"
+        >
+          <span class="relative inline-flex shrink-0">
+            <input
+              type="checkbox"
+              [checked]="hideNotInPbo()"
+              (change)="hideNotInPbo.set($any($event.target).checked)"
+              class="peer sr-only"
+            />
+            <span class="h-5 w-9 rounded-full bg-line transition-colors peer-checked:bg-accent"></span>
+            <span
+              class="pointer-events-none absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform peer-checked:translate-x-4"
+            ></span>
+          </span>
+          {{ i18n.t("pokedex.hideNotInPbo") }}
+        </label>
         <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
           {{ filtered().length }} {{ i18n.t("pokedex.results") }}
         </span>

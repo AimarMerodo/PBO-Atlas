@@ -44,6 +44,8 @@ export class PokedexPageComponent {
   protected readonly ev = signal<string | null>(null);
   protected readonly sort = signal<SortKey>("number");
   protected readonly page = signal(1);
+  /** On by default: hide pokemon confirmed absent from PBO (forms/variants). */
+  protected readonly hideNotInPbo = signal(true);
 
   /** Single source of truth for the filter signals: maps a field to how to reset it
    *  and how to write a raw <input>/<select> string into its signal. */
@@ -83,7 +85,9 @@ export class PokedexPageComponent {
     const rarity = this.rarity();
     const gen = this.gen();
     const ev = this.ev();
+    const hideNip = this.hideNotInPbo();
     const out = (this.list.value() ?? []).filter((p) => {
+      if (hideNip && p.notInPbo) return false;
       if (q && !p.name.toLowerCase().includes(q) && String(p.id) !== q) return false;
       if (type && !p.types.includes(type)) return false;
       if (region && !p.regions.includes(region)) return false;

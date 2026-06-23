@@ -218,6 +218,8 @@ export interface PokemonPage {
   forms: PokemonForm[];
   learnset: Learnset | null;
   moves: Record<string, MoveInfo> | null;
+  /** Confirmed absent from PBO (forms/variants not implemented). */
+  notInPbo?: boolean;
 }
 
 export interface PokedexCard {
@@ -232,6 +234,7 @@ export interface PokedexCard {
   regions: string[];
   rarities: string[];
   evs: string[];
+  notInPbo?: boolean;
 }
 
 export interface SearchIndex {
