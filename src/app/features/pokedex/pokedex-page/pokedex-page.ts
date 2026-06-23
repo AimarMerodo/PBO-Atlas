@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource, signal } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
-import { RouterLink } from "@angular/router";
+import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { LucideFilterX, LucideSearch } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
@@ -28,6 +28,8 @@ type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "sort";
 export class PokedexPageComponent {
   private readonly data = inject(DataService);
   protected readonly i18n = inject(LanguageService);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
 
   protected readonly list = resource({ loader: () => this.data.pokedexList() });
 
@@ -43,7 +45,9 @@ export class PokedexPageComponent {
   protected readonly gen = signal<number | null>(null);
   protected readonly ev = signal<string | null>(null);
   protected readonly sort = signal<SortKey>("number");
-  protected readonly page = signal(1);
+  // Page lives in the URL (?page=N) so returning to the list (e.g. browser back
+  // after opening a pokemon) lands you on the same page instead of page 1.
+  protected readonly page = signal(Math.max(1, Number(this.route.snapshot.queryParamMap.get("page")) || 1));
   /** On by default: hide pokemon confirmed absent from PBO (forms/variants). */
   protected readonly hideNotInPbo = signal(true);
 
@@ -120,16 +124,29 @@ export class PokedexPageComponent {
   protected set(key: FilterKey, value: string): void {
     this.filters[key].coerce(value);
     this.page.set(1);
+    this.syncPageUrl();
   }
 
   protected clearFilters(): void {
     for (const f of Object.values(this.filters)) f.reset();
     this.page.set(1);
+    this.syncPageUrl();
   }
 
   protected goTo(page: number): void {
     this.page.set(page);
+    this.syncPageUrl();
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /** Reflect the current page in the URL (?page=N, dropped on page 1). */
+  private syncPageUrl(): void {
+    void this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { page: this.page() > 1 ? this.page() : null },
+      queryParamsHandling: "merge",
+      replaceUrl: true,
+    });
   }
 
   protected tint(p: PokedexCard): string {
