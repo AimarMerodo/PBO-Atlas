@@ -76,6 +76,7 @@ export const es: Record<DictKey, string> = {
   "pokedex.sortStats": "Total de stats",
   "pokedex.noResults": "Ningún pokemon coincide.",
   "pokedex.results": "resultados",
+  "pokedex.hideNotInPbo": "Ocultar los no-PBO",
   "pagination.prev": "Página anterior",
   "pagination.next": "Página siguiente",
   "pagination.of": "de",
@@ -99,6 +100,8 @@ export const es: Record<DictKey, string> = {
   "pokemon.notCatchable":
     "No aparece en estado salvaje en Pokemon Blaze Online, pero puede conseguirse por otros medios (cofres, eventos, evolución...).",
   "pokemon.tryEvolving": "Consíguelo evolucionando a",
+  "pokemon.notInPbo": "Este Pokémon no está en Pokémon Blaze Online.",
+  "pokemon.noObtainInfo": "Todavía no hay información sobre cómo conseguir este Pokémon.",
   "pokemon.location": "Localización",
   "pokemon.region": "Región",
   "pokemon.howToObtain": "Cómo conseguirlo",

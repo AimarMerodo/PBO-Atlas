@@ -74,6 +74,7 @@ export const en = {
   "pokedex.sortStats": "Base stat total",
   "pokedex.noResults": "No pokemon match.",
   "pokedex.results": "results",
+  "pokedex.hideNotInPbo": "Hide non-PBO",
   "pagination.prev": "Previous page",
   "pagination.next": "Next page",
   "pagination.of": "of",
@@ -97,6 +98,8 @@ export const en = {
   "pokemon.notCatchable":
     "Not found in the wild in Pokemon Blaze Online, but it may be obtainable through other means (chests, events, evolution...).",
   "pokemon.tryEvolving": "Get it by evolving",
+  "pokemon.notInPbo": "This Pokémon is not in Pokémon Blaze Online.",
+  "pokemon.noObtainInfo": "No information yet on how to obtain this Pokémon.",
   "pokemon.location": "Location",
   "pokemon.region": "Region",
   "pokemon.howToObtain": "How to obtain",

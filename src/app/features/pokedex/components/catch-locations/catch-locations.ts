@@ -44,6 +44,7 @@ export class CatchLocations {
   readonly encounters = input.required<Encounter[]>();
   readonly catchableAncestors = input.required<{ slug: string; name: string }[]>();
   readonly obtain = input<Acquisition[]>([]);
+  readonly notInPbo = input(false);
 
   protected readonly i18n = inject(LanguageService);
 

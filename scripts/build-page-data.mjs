@@ -29,6 +29,7 @@ const searchIndex = await readJson("search-index.json");
 const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 const itemSources = (await readJson("item-sources.json")).sources ?? {};
 const itemsData = await readJson("items.json");
+const notInPbo = new Set((await readJson("not-in-pbo.json")).slugs ?? []);
 
 // --- Mega/Primal/Gigantamax forms, grouped by species (from the dex itself) ---
 // Mega & gmax forms are real dex entries sharing the base species id; surface
@@ -155,6 +156,7 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     encounters: encounters.get(slug) ?? [],
     catchableAncestors,
     obtain: acquisitions[slug] ?? [],
+    ...(notInPbo.has(slug) && { notInPbo: true }),
     drops: pokemonDrops.get(slug) ?? [],
     // This species' Mega/Primal/Gigantamax forms (excluding self), each a link
     // to its own full ficha; sorted mega → primal → gmax.
@@ -167,6 +169,8 @@ for (const [slug, entry] of Object.entries(pokedex)) {
 }
 const badAcq = Object.keys(acquisitions).filter((s) => !pokedex[s]);
 if (badAcq.length) console.warn(`  ⚠ acquisitions.json has ${badAcq.length} unknown slug(s): ${badAcq.join(", ")}`);
+const badNip = [...notInPbo].filter((s) => !pokedex[s]);
+if (badNip.length) console.warn(`  ⚠ not-in-pbo.json has ${badNip.length} unknown slug(s): ${badNip.join(", ")}`);
 console.log(`pokemon: ${Object.keys(pokedex).length} files (${Object.keys(acquisitions).length} with obtain methods)`);
 
 // --- locations/<region>/<id>.json + regions/<region>.json ---
@@ -247,6 +251,7 @@ await write(
       regions: [...new Set((encounters.get(p.slug) ?? []).map((e) => e.region))],
       rarities: [...new Set((encounters.get(p.slug) ?? []).map((e) => e.rarity))],
       evs: (p.evYield ?? []).map((ev) => ev.stat),
+      ...(notInPbo.has(p.slug) && { notInPbo: true }),
     }))
 );
 await write("lists/search.json", searchIndex);
