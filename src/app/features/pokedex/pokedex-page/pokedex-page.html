@@ -57,6 +57,18 @@
             }
           </select>
         }
+        <app-combobox
+          [options]="filterOpts.value()?.abilities ?? []"
+          [value]="ability()"
+          [placeholder]="i18n.t('pokedex.anyAbility')"
+          (valueChange)="set('ability', $event ?? '')"
+        />
+        <app-combobox
+          [options]="filterOpts.value()?.moves ?? []"
+          [value]="move()"
+          [placeholder]="i18n.t('pokedex.anyMove')"
+          (valueChange)="set('move', $event ?? '')"
+        />
         <select [value]="sort()" (change)="set('sort', $any($event.target).value)" [class]="selectClass">
           <option value="number">{{ i18n.t("pokedex.sortNumber") }}</option>
           <option value="name">{{ i18n.t("pokedex.sortName") }}</option>
