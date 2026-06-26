@@ -16,7 +16,7 @@ const REGION_ORDER = ["sinnoh", "jvaloh", "hoenn", "kanto"];
 const RARITY_OPTIONS = ["common", "uncommon", "rare", "very-rare", "ultra-rare", "legendary"] as const;
 const EV_STATS = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"] as const;
 type SortKey = "number" | "name" | "stats";
-type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "sort";
+type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "event" | "sort";
 
 /** Pokedex grid with name/number search, type/region/rarity/gen/EV filters and sorting. */
 @Component({
@@ -44,6 +44,7 @@ export class PokedexPageComponent {
   protected readonly rarity = signal<string | null>(null);
   protected readonly gen = signal<number | null>(null);
   protected readonly ev = signal<string | null>(null);
+  protected readonly event = signal<string | null>(null);
   protected readonly sort = signal<SortKey>("number");
   // Page lives in the URL (?page=N) so returning to the list (e.g. browser back
   // after opening a pokemon) lands you on the same page instead of page 1.
@@ -60,6 +61,7 @@ export class PokedexPageComponent {
     rarity: { reset: () => this.rarity.set(null), coerce: (v: string) => this.rarity.set(v || null) },
     gen: { reset: () => this.gen.set(null), coerce: (v: string) => this.gen.set(v ? Number(v) : null) },
     ev: { reset: () => this.ev.set(null), coerce: (v: string) => this.ev.set(v || null) },
+    event: { reset: () => this.event.set(null), coerce: (v: string) => this.event.set(v || null) },
     sort: { reset: () => this.sort.set("number"), coerce: (v: string) => this.sort.set(v as SortKey) },
   } as const;
 
@@ -76,9 +78,13 @@ export class PokedexPageComponent {
     return [...new Set(all.map((p) => p.generation).filter((g): g is number => g !== null))].sort((a, b) => a - b);
   });
 
+  protected readonly eventOptions = computed(() =>
+    [...new Set((this.list.value() ?? []).map((p) => p.event).filter((e): e is string => !!e))].sort()
+  );
+
   protected readonly hasActiveFilters = computed(() =>
     Boolean(
-      this.query() || this.type() || this.region() || this.rarity() || this.gen() || this.ev() || this.sort() !== "number"
+      this.query() || this.type() || this.region() || this.rarity() || this.gen() || this.ev() || this.event() || this.sort() !== "number"
     )
   );
 
@@ -89,9 +95,11 @@ export class PokedexPageComponent {
     const rarity = this.rarity();
     const gen = this.gen();
     const ev = this.ev();
+    const event = this.event();
     const hideNip = this.hideNotInPbo();
     const out = (this.list.value() ?? []).filter((p) => {
       if (hideNip && p.notInPbo) return false;
+      if (event && p.event !== event) return false;
       if (q && !p.name.toLowerCase().includes(q) && String(p.id) !== q) return false;
       if (type && !p.types.includes(type)) return false;
       if (region && !p.regions.includes(region)) return false;

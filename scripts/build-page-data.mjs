@@ -129,9 +129,24 @@ for (const r of regions) {
   }
 }
 
+// Reverse map: base SPECIES id -> its custom event-sprite variants. Keyed by species
+// (not exact base slug) so a mon's mega's event variant (e.g. Diancie-Mega-E5) also
+// shows on the base Diancie page, and vice-versa.
+const eventFormsBySpecies = new Map();
+for (const e of Object.values(pokedex)) {
+  if (!e.event) continue;
+  const sid = pokedex[e.customBase]?.speciesId;
+  if (sid == null) continue;
+  const arr = eventFormsBySpecies.get(sid) ?? [];
+  arr.push({ slug: e.slug, name: e.name, sprite: e.spritePbo ?? e.sprite, event: e.event });
+  eventFormsBySpecies.set(sid, arr);
+}
+for (const arr of eventFormsBySpecies.values())
+  arr.sort((a, b) => a.event.localeCompare(b.event) || a.name.localeCompare(b.name));
+
 // --- pokemon/<slug>.json ---
 for (const [slug, entry] of Object.entries(pokedex)) {
-  const learnset = movesData.learnsets[slug] ?? null;
+  const learnset = movesData.learnsets[slug] ?? movesData.learnsets[entry.customBase] ?? null;
   let moves = null;
   if (learnset) {
     moves = {};
@@ -143,7 +158,7 @@ for (const [slug, entry] of Object.entries(pokedex)) {
   }
   const evoStages = (entry.evolutionLine ?? []).map((m) => {
     const e = pokedex[m.slug];
-    return { slug: m.slug, name: m.name, trigger: m.trigger, id: e?.id ?? null, artwork: e?.artwork ?? null, types: e?.types ?? [] };
+    return { slug: m.slug, name: m.name, trigger: m.trigger, id: e?.id ?? null, artwork: e?.artwork ?? e?.spritePbo ?? null, types: e?.types ?? [] };
   });
   const catchableAncestors =
     (encounters.get(slug)?.length ?? 0) === 0
@@ -155,9 +170,16 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     evoStages,
     encounters: encounters.get(slug) ?? [],
     catchableAncestors,
-    obtain: acquisitions[slug] ?? [],
+    obtain:
+      acquisitions[slug] ??
+      (entry.event
+        ? [{ method: "event", source: `${entry.event[0].toUpperCase()}${entry.event.slice(1)} event`, detail: "Event-exclusive custom sprite" }]
+        : []),
     ...(notInPbo.has(slug) && { notInPbo: true }),
     drops: pokemonDrops.get(slug) ?? [],
+    eventForms: (eventFormsBySpecies.get(entry.event ? pokedex[entry.customBase]?.speciesId : entry.speciesId) ?? []).filter(
+      (f) => f.slug !== slug,
+    ),
     // This species' Mega/Primal/Gigantamax forms (excluding self), each a link
     // to its own full ficha; sorted mega → primal → gmax.
     forms: (formsBySpecies.get(entry.speciesId) ?? [])
@@ -252,6 +274,7 @@ await write(
       rarities: [...new Set((encounters.get(p.slug) ?? []).map((e) => e.rarity))],
       evs: (p.evYield ?? []).map((ev) => ev.stat),
       ...(notInPbo.has(p.slug) && { notInPbo: true }),
+      ...(p.event && { event: p.event }),
     }))
 );
 await write("lists/search.json", searchIndex);
