@@ -9,6 +9,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { pokemonSlug } from "./lib/normalize.mjs";
+import { ITEM_ALIASES, DROPS as SUP_DROPS, MINE, CRAFT, FISH, BOSS, REWARD, CHEST, EVENT, SHOPS as SUP_SHOPS } from "./lib/item-source-data.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = async (...p) => JSON.parse(await readFile(path.join(ROOT, "data", ...p), "utf8"));
@@ -255,6 +256,51 @@ for (const it of finder?.items ?? []) {
     push(slug, { method: "shop", source: o.tienda, detail });
     finderAdded++;
   }
+}
+
+// --- Supplemental curated sources: mining/fishing/crafting/PvE-rewards/chests/events
+// hand-pulled from the forum guides (lib/item-source-data.mjs). STRICTLY ADDITIVE:
+// only adds a row when that (item, category) isn't already covered — never removes
+// or rewrites a curated/finder row. My method names map onto the existing taxonomy
+// (mine→mining, chest→event); fish/craft/reward are genuinely new categories the
+// remote didn't have.
+const METHOD_MAP = { mine: "mining", chest: "event" };
+const NEW_METHODS = new Set(["fish", "craft", "reward"]);
+const resolveItem = (ref) => {
+  if (itemSlugs.has(ref)) return ref;
+  const n = norm(ref);
+  const slug = ITEM_ALIASES[n] ?? slugByName.get(n);
+  return slug && itemSlugs.has(slug) ? slug : null;
+};
+let suppAdded = 0;
+for (const row of [...SUP_DROPS, ...MINE, ...CRAFT, ...FISH, ...BOSS, ...REWARD, ...CHEST, ...EVENT, ...SUP_SHOPS]) {
+  const slug = resolveItem(row.item);
+  if (!slug) {
+    warnings.push(`supplemental: unknown item "${row.item}"`);
+    continue;
+  }
+  const method = METHOD_MAP[row.method] ?? row.method;
+  const existing = out[slug] ?? [];
+  if (row.method === "drop") {
+    const pslug = pokemonSlug(row.pokemon);
+    if (!pokedex[pslug]) {
+      warnings.push(`supplemental drop: unknown pokemon "${row.pokemon}" for ${row.item}`);
+      continue;
+    }
+    if (existing.some((r) => r.method === "drop" && r.pokemon === pslug)) continue;
+    push(slug, { method: "drop", pokemon: pslug, pokemonName: row.pokemon, regions: row.regions, ...(row.detail ? { detail: row.detail } : {}) });
+    suppAdded++;
+    continue;
+  }
+  // New categories (fish/craft/reward) and shops dedup by exact source; the overlap
+  // categories (mining/boss/event) defer to whatever the remote already has for the item.
+  const dup =
+    NEW_METHODS.has(method) || method === "shop"
+      ? existing.some((r) => r.method === method && norm(r.source ?? "") === norm(row.source ?? ""))
+      : existing.some((r) => r.method === method);
+  if (dup) continue;
+  push(slug, { method, source: row.source, ...(row.detail ? { detail: row.detail } : {}) });
+  suppAdded++;
 }
 
 const sorted = Object.fromEntries(Object.keys(out).sort().map((k) => [k, out[k]]));
