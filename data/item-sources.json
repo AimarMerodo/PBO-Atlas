@@ -420,10 +420,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "black-glasses": [
@@ -439,10 +435,6 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "black-sludge": [
@@ -724,10 +716,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "charizard-black-costume-bundle": [
@@ -1327,10 +1315,6 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "dragon-memory": [
@@ -2394,10 +2378,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "hasshaku-gardevoir-costume-bundle": [
@@ -3256,10 +3236,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "male-easter-hat-2018-blue-green": [
@@ -3560,10 +3536,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "misdreavus-mask": [
@@ -3716,10 +3688,6 @@
         "method": "fish",
         "source": "Fishing level reward",
         "detail": "Lvl 30"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "mythic-bait": [
@@ -3779,10 +3747,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "ninetales-mount-chest-untradable": [
@@ -4143,10 +4107,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "poison-memory": [
@@ -4763,10 +4723,6 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "sharpedonite": [
@@ -4919,10 +4875,6 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "silver-powder": [
@@ -4938,10 +4890,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "sitrus-berry": [
@@ -5105,10 +5053,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "soothe-bell": [
@@ -5188,10 +5132,6 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "spheal-backpack": [
@@ -5756,10 +5696,6 @@
       {
         "method": "reward",
         "source": "Legendary Caverns (Lake Trio)"
-      },
-      {
-        "method": "shop",
-        "source": "Daycare Shop"
       }
     ],
     "type-null-chest": [

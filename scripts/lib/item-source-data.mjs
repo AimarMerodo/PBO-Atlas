@@ -288,12 +288,8 @@ export const SHOPS = [
     ["everstone-exp-share-blueprint", "500 Coins"], ["macho-brace-exp-share-blueprint", "500 Coins"],
     ["move-block-exp-share-blueprint", "500 Coins"], ["soothe-share-blueprint", "500 Coins"],
   ]),
-  // Type-boost held items also sold at the Daycare (price TBC — pending in-game confirmation).
-  ...g("shop", "Daycare Shop", [
-    "black-belt", "black-glasses", "charcoal", "dragon-fang", "hard-stone", "magnet",
-    "miracle-seed", "mystic-water", "never-melt-ice", "poison-barb", "sharp-beak",
-    "silk-scarf", "silver-powder", "soft-sand", "spell-tag", "twisted-spoon",
-  ]),
+  // (Type-boost held items are already sold via the remote's "Daycare Token Shop"
+  // at 75 Daycare Token — sourced from data/item-finder.json — so no entry here.)
   ...g("shop", "Mining Shop", [["gold-pickaxe-blueprint"], ["diamond-pickaxe-blueprint"], ["platinum-pickaxe-blueprint"]]),
   // Mega stone token shops (#2163)
   { item: "absolite", method: "shop", source: "PvP Store", detail: "2,500 Ranked Tokens" },
