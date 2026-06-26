@@ -242,6 +242,22 @@ export interface PokedexCard {
   notInPbo?: boolean;
   /** Custom event-sprite variant (christmas/halloween/…); absent for normal mons. */
   event?: string;
+  /** Ability slugs (for the pokedex ability filter); omitted on event variants. */
+  abilities?: string[];
+}
+
+export interface NamedOption {
+  slug: string;
+  en: string;
+  es?: string;
+  zh?: string;
+  pt?: string;
+}
+
+/** Picker options for the pokedex ability/move filters. */
+export interface FilterOptions {
+  abilities: NamedOption[];
+  moves: NamedOption[];
 }
 
 export interface SearchIndex {

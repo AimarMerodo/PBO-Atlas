@@ -275,10 +275,33 @@ await write(
       evs: (p.evYield ?? []).map((ev) => ev.stat),
       ...(notInPbo.has(p.slug) && { notInPbo: true }),
       ...(p.event && { event: p.event }),
+      ...(!p.event && { abilities: p.abilities.map((a) => a.slug) }),
     }))
 );
 await write("lists/search.json", searchIndex);
 await write("lists/natures.json", natures);
+
+// Pokedex ability/move filters: picker options + a move->pokemon index (the latter is
+// big, so it's a separate lazily-loaded file). Event variants are excluded — the base
+// mon already represents them, and including 376 clones would just add noise.
+{
+  const abilityUsed = new Set();
+  const movePokemon = {};
+  for (const [slug, e] of Object.entries(pokedex)) {
+    if (e.event) continue;
+    for (const a of e.abilities ?? []) abilityUsed.add(a.slug);
+    const ls = movesData.learnsets[slug];
+    if (!ls) continue;
+    const moves = new Set([...ls.level.map(([m]) => m), ...ls.machine, ...ls.egg, ...ls.tutor]);
+    for (const m of moves) (movePokemon[m] ??= []).push(slug);
+  }
+  const opt = (slug, rec) => ({ slug, en: rec?.en ?? slug, ...(rec?.es && { es: rec.es }), ...(rec?.zh && { zh: rec.zh }), ...(rec?.pt && { pt: rec.pt }) });
+  const abilities_ = [...abilityUsed].map((s) => opt(s, abilities[s])).sort((a, b) => a.en.localeCompare(b.en));
+  const moves_ = Object.keys(movePokemon).map((s) => opt(s, movesData.moves[s])).sort((a, b) => a.en.localeCompare(b.en));
+  await write("lists/filters.json", { abilities: abilities_, moves: moves_ });
+  await write("lists/move-index.json", movePokemon);
+  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves`);
+}
 
 // Items: merge in "where to get" sources for the notable ones.
 let itemsWithSources = 0;
