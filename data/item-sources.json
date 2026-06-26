@@ -37,6 +37,21 @@
         "method": "shop",
         "source": "Glacial Ore Shop",
         "detail": "100 Glacial Ore"
+      },
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "high tier"
+      },
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest",
+        "detail": "high tier"
+      },
+      {
+        "method": "event",
+        "source": "Gold Blaze Chest",
+        "detail": "20%"
       }
     ],
     "ability-patch": [
@@ -69,6 +84,16 @@
         "method": "shop",
         "source": "Glacial Ore Shop",
         "detail": "125 Glacial Ore"
+      },
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "legendary tier"
+      },
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 80"
       }
     ],
     "absolite": [
@@ -83,6 +108,13 @@
         "detail": "2500 Ranked Battle Token"
       }
     ],
+    "abyssal-pearl": [
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 60 — Finn's Shop currency"
+      }
+    ],
     "ace-trainer-blue-costume-bundle-female": [
       {
         "method": "shop",
@@ -95,6 +127,27 @@
         "method": "shop",
         "source": "Abyssal Pearl Trader",
         "detail": "100 Abyssal Pearl"
+      }
+    ],
+    "aero-wing-fragment": [
+      {
+        "method": "reward",
+        "source": "NPC north of Mauville (Lv100 Swellow)",
+        "detail": "Aerodactylite fragment"
+      }
+    ],
+    "aether-rod": [
+      {
+        "method": "craft",
+        "source": "Crafting (Fishing)",
+        "detail": "Lvl 125"
+      }
+    ],
+    "aether-rod-blueprint": [
+      {
+        "method": "fish",
+        "source": "Fisherman's Shop",
+        "detail": "350K F (reusable)"
       }
     ],
     "aggronite": [
@@ -142,6 +195,13 @@
         "detail": "750 Frost Shard"
       }
     ],
+    "ancient-rib-fragment": [
+      {
+        "method": "reward",
+        "source": "Marina, Route 111 (Mining Lv40)",
+        "detail": "Aerodactylite fragment"
+      }
+    ],
     "ancient-wing-fragment": [
       {
         "method": "drop",
@@ -170,6 +230,13 @@
         "method": "shop",
         "source": "Cursed Ore Trades",
         "detail": "75 Cursed ore"
+      }
+    ],
+    "armor-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Shieldon"
       }
     ],
     "articuno-mount": [
@@ -225,6 +292,11 @@
         "method": "quest",
         "source": "Hex Maniacs reward",
         "detail": "Chance"
+      },
+      {
+        "method": "reward",
+        "source": "Item Bomb",
+        "detail": "high tier"
       }
     ],
     "avalugg-hisui-chest": [
@@ -248,11 +320,51 @@
         "detail": "200 Ranked Battle Token"
       }
     ],
+    "banettite": [
+      {
+        "method": "event",
+        "source": "Halloween event",
+        "detail": "boss reward (Mega Stone)"
+      }
+    ],
+    "basic-bait": [
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest"
+      },
+      {
+        "method": "fish",
+        "source": "Fisherman's Shop",
+        "detail": "5K F"
+      }
+    ],
     "big-mushroom": [
       {
         "method": "shop",
         "source": "Tiny Mushroom Store",
         "detail": "5 Tiny Mushroom"
+      },
+      {
+        "method": "drop",
+        "pokemon": "parasect",
+        "pokemonName": "Parasect",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
+    "big-nugget": [
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
+      }
+    ],
+    "big-pearl": [
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
       }
     ],
     "big-root": [
@@ -279,6 +391,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "120 Tokens"
       }
     ],
     "black-belt": [
@@ -303,6 +420,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "black-glasses": [
@@ -318,6 +439,10 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "black-sludge": [
@@ -368,6 +493,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "120 Tokens"
       }
     ],
     "booster-energy": [
@@ -389,6 +519,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "45 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "100 Coins — crafting material"
       }
     ],
     "broly-costume-bundle": [
@@ -398,11 +533,23 @@
         "detail": "7 Dragon Ball"
       }
     ],
+    "bronze-pickaxe": [
+      {
+        "method": "reward",
+        "source": "Mining unlock (Lavaridge)",
+        "detail": "starter pickaxe"
+      }
+    ],
     "bug-memory": [
       {
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "bulbasaur-surf-mount-chest": [
@@ -417,6 +564,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "250 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
       }
     ],
     "butterfree-mount-chest": [
@@ -440,6 +592,12 @@
         "detail": "500 Egg Shard"
       }
     ],
+    "calcium": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      }
+    ],
     "calyrex-chest": [
       {
         "method": "shop",
@@ -459,6 +617,12 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "150 Egg Shard"
+      }
+    ],
+    "carbos": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
       }
     ],
     "carrot-mount-chest": [
@@ -515,6 +679,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "120 Tokens"
       }
     ],
     "chandelure-costume-bundle-1": [
@@ -555,6 +724,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "charizard-black-costume-bundle": [
@@ -637,6 +810,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "250 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
       }
     ],
     "chipped-pot": [
@@ -736,6 +914,13 @@
         "detail": "150 Cursed ore"
       }
     ],
+    "claw-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Anorith"
+      }
+    ],
     "coba-berry": [
       {
         "method": "shop",
@@ -757,11 +942,30 @@
         "detail": "35 Shiny Coin"
       }
     ],
+    "cocoa-stone": [
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
+      }
+    ],
     "colbur-berry": [
       {
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "comet-shard": [
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "high tier"
+      },
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest",
+        "detail": "high tier"
       }
     ],
     "cornerstone-mask": [
@@ -771,11 +975,25 @@
         "detail": "1500 Heat Shard"
       }
     ],
+    "corrupted-petal": [
+      {
+        "method": "event",
+        "source": "Valentine event",
+        "detail": "Corrupted Roserade boss"
+      }
+    ],
     "corviknight-wings": [
       {
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "250 Soul Shard"
+      }
+    ],
+    "cover-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Tirtouga"
       }
     ],
     "cracked-pot": [
@@ -849,6 +1067,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "dark-metagross-mount": [
@@ -946,6 +1169,10 @@
         "method": "event",
         "source": "Beachhouse Brawl",
         "detail": "Event reward"
+      },
+      {
+        "method": "reward",
+        "source": "Fishing Contest"
       }
     ],
     "deepseatooth": [
@@ -963,6 +1190,10 @@
         "method": "event",
         "source": "Beachhouse Brawl",
         "detail": "Event reward"
+      },
+      {
+        "method": "reward",
+        "source": "Fishing Contest"
       }
     ],
     "def-ev-master-ball": [
@@ -991,6 +1222,18 @@
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "1000 Frost Shard"
+      }
+    ],
+    "diamond-pickaxe": [
+      {
+        "method": "craft",
+        "source": "Pickaxe Guru House (Route 111)"
+      }
+    ],
+    "diamond-pickaxe-blueprint": [
+      {
+        "method": "shop",
+        "source": "Mining Shop"
       }
     ],
     "diancie-costume-bundle-female": [
@@ -1028,6 +1271,13 @@
         "detail": "50 Abyssal Pearl"
       }
     ],
+    "dome-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Kabuto"
+      }
+    ],
     "doublade-backpack": [
       {
         "method": "shop",
@@ -1040,6 +1290,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "250 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
       }
     ],
     "dragon-core": [
@@ -1072,6 +1327,10 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "dragon-memory": [
@@ -1079,6 +1338,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "dragon-scale": [
@@ -1100,6 +1364,17 @@
         "method": "event",
         "source": "Beachhouse Brawl",
         "detail": "Event reward"
+      },
+      {
+        "method": "reward",
+        "source": "Fishing Contest"
+      }
+    ],
+    "dratini-scale": [
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest",
+        "detail": "legendary tier"
       }
     ],
     "dream-land-costume-chest": [
@@ -1213,6 +1488,11 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "40 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "40 Tokens"
       }
     ],
     "eject-button": [
@@ -1220,6 +1500,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "300 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "300 Tokens"
       }
     ],
     "eject-pack": [
@@ -1249,6 +1534,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "electric-seed": [
@@ -1291,6 +1581,12 @@
         "detail": "1,200 F"
       }
     ],
+    "enhanced-bait": [
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest"
+      }
+    ],
     "ether": [
       {
         "method": "event",
@@ -1303,6 +1599,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "75 Coins"
       }
     ],
     "everstone-exp-share-blueprint": [
@@ -1310,6 +1611,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "500 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "500 Coins"
       }
     ],
     "evil-chansey-mount": [
@@ -1376,6 +1682,16 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "reward",
+        "source": "Item Bomb",
+        "detail": "high tier"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "400 Tokens"
       }
     ],
     "fairy-feather": [
@@ -1383,6 +1699,27 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "drop",
+        "pokemon": "marill",
+        "pokemonName": "Marill",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh",
+          "Hoenn"
+        ],
+        "detail": "crafting material"
+      },
+      {
+        "method": "drop",
+        "pokemon": "ralts",
+        "pokemonName": "Ralts",
+        "regions": [
+          "Sinnoh",
+          "Jvaloh"
+        ],
+        "detail": "crafting material"
       }
     ],
     "fairy-memory": [
@@ -1390,6 +1727,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "female-easter-hat-2018-blue-green": [
@@ -1453,6 +1795,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "fire-memory": [
@@ -1460,6 +1807,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "fire-stone": [
@@ -1503,6 +1855,13 @@
         "detail": "500 Heat Shard"
       }
     ],
+    "flame-orb": [
+      {
+        "method": "event",
+        "source": "Summer event",
+        "detail": "Pyros Sage Hard"
+      }
+    ],
     "flapple-costume-bundle": [
       {
         "method": "shop",
@@ -1515,6 +1874,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "flying-nimbus": [
@@ -1522,6 +1886,13 @@
         "method": "shop",
         "source": "Dragon Ball Shop",
         "detail": "14 Dragon Ball"
+      }
+    ],
+    "fossilized-bird": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Galar fossil part"
       }
     ],
     "fossilized-carapace": [
@@ -1542,11 +1913,46 @@
         "detail": "Fossil Pokémon · also from Mining"
       }
     ],
+    "fossilized-dino": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Galar fossil part"
+      }
+    ],
+    "fossilized-drake": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Galar fossil part"
+      }
+    ],
+    "fossilized-fish": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Galar fossil part"
+      }
+    ],
+    "fossilized-talon-segment": [
+      {
+        "method": "reward",
+        "source": "Route 111 (trade Lileep/Anorith)",
+        "detail": "Aerodactylite fragment"
+      }
+    ],
     "frost-stone": [
       {
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "300 Frost Shard"
+      }
+    ],
+    "frozen-fusion-pack": [
+      {
+        "method": "craft",
+        "source": "Fusion Master (Cinnabar Island)",
+        "detail": "Kyurem fusion"
       }
     ],
     "frozen-yoshi-mount": [
@@ -1566,6 +1972,13 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "100 Casino Token"
+      }
+    ],
+    "fusion-flare-pack": [
+      {
+        "method": "craft",
+        "source": "Fusion Master (Cinnabar Island)",
+        "detail": "Kyurem fusion"
       }
     ],
     "galarian-articuno-chest": [
@@ -1701,6 +2114,11 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "10000 Soul Shard"
+      },
+      {
+        "method": "event",
+        "source": "Halloween event",
+        "detail": "Chamunda Hard (Mega Stone)"
       }
     ],
     "gholdengo-costume-bundle": [
@@ -1715,6 +2133,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "ghost-rider-bike-mount-lavender": [
@@ -1780,6 +2203,23 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "300 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "300 Coins"
+      }
+    ],
+    "gold-pickaxe": [
+      {
+        "method": "craft",
+        "source": "Pickaxe Guru House (Route 111)"
+      }
+    ],
+    "gold-pickaxe-blueprint": [
+      {
+        "method": "shop",
+        "source": "Mining Shop"
       }
     ],
     "golfer-costume-bundle": [
@@ -1796,6 +2236,13 @@
         "detail": "500 Soul Shard"
       }
     ],
+    "good-rod": [
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 30"
+      }
+    ],
     "goodra-costume-bundle": [
       {
         "method": "shop",
@@ -1808,6 +2255,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "1000 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "1,000 Egg Shards"
       }
     ],
     "grass-memory": [
@@ -1815,6 +2267,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "grassy-seed": [
@@ -1827,6 +2284,11 @@
         "method": "shop",
         "source": "Dynite Ore Shop",
         "detail": "200 Dynite ore"
+      },
+      {
+        "method": "event",
+        "source": "Summer event",
+        "detail": "Sylvaris Sage Hard"
       }
     ],
     "great-ball-shiny-tracker-safe": [
@@ -1863,6 +2325,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "120 Tokens"
       }
     ],
     "ground-memory": [
@@ -1870,6 +2337,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "guy-fawkes-mask": [
@@ -1922,6 +2394,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "hasshaku-gardevoir-costume-bundle": [
@@ -1959,6 +2435,13 @@
         "detail": "300 F"
       }
     ],
+    "heart-petals": [
+      {
+        "method": "event",
+        "source": "Valentine event",
+        "detail": "event currency"
+      }
+    ],
     "heart-scale": [
       {
         "method": "drop",
@@ -1969,6 +2452,10 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)"
       }
     ],
     "hearthflame-mask": [
@@ -2005,6 +2492,18 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "350 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "350 Tokens"
+      }
+    ],
+    "helix-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Omanyte"
       }
     ],
     "hellfire-typhlosion-mount-chest": [
@@ -2012,6 +2511,132 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "750 Soul Shard"
+      }
+    ],
+    "hidden-power-shard-bug": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-dark": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-dragon": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-electric": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-fairy": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-fighting": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-fire": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-flying": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-ghost": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-grass": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-ground": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-ice": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-normal": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-poison": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-psychic": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-rock": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-steel": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
+      }
+    ],
+    "hidden-power-shard-water": [
+      {
+        "method": "reward",
+        "source": "Fighting Dojo (Saffron City)",
+        "detail": "4 Apprentices daily — weekly type rotation"
       }
     ],
     "honey": [
@@ -2034,11 +2659,24 @@
         "detail": "500 Soul Shard"
       }
     ],
+    "houndoominite": [
+      {
+        "method": "event",
+        "source": "Halloween event",
+        "detail": "boss reward (Mega Stone)"
+      }
+    ],
     "hp-ev-master-ball": [
       {
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "500 Casino Token"
+      }
+    ],
+    "hp-up": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
       }
     ],
     "ice-core": [
@@ -2053,6 +2691,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "ice-stone": [
@@ -2075,6 +2718,21 @@
         "method": "shop",
         "source": "Frost Shard Shop",
         "detail": "200 Frost Shard"
+      },
+      {
+        "method": "boss",
+        "source": "Regice"
+      }
+    ],
+    "icicle-plate": [
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest",
+        "detail": "Mythic Rod material"
+      },
+      {
+        "method": "boss",
+        "source": "Regice"
       }
     ],
     "icy-rock": [
@@ -2115,6 +2773,12 @@
         "detail": "1 Inferno Costume Bundle Ticket"
       }
     ],
+    "iron": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      }
+    ],
     "iron-boulder-chest": [
       {
         "method": "shop",
@@ -2134,6 +2798,12 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "1500 Ranked Battle Token"
+      }
+    ],
+    "iron-plate": [
+      {
+        "method": "boss",
+        "source": "Registeel"
       }
     ],
     "iv-potion": [
@@ -2227,6 +2897,10 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "reward",
+        "source": "VS Seeker"
       }
     ],
     "knowledge-core": [
@@ -2260,6 +2934,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "300 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "300 Tokens"
       }
     ],
     "lance-costume-bundle": [
@@ -2371,6 +3050,15 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "800 Crew Wars Token"
+      },
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "2,100 Tokens"
       }
     ],
     "light-ball": [
@@ -2426,6 +3114,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "10000 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "10,000 Egg Shards (Mega Stone)"
       }
     ],
     "luigi-costume-bundle": [
@@ -2522,6 +3215,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "500 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "500 Coins"
       }
     ],
     "magearna-chest": [
@@ -2558,6 +3256,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "male-easter-hat-2018-blue-green": [
@@ -2601,6 +3303,11 @@
         "method": "quest",
         "source": "Hex Maniacs reward",
         "detail": "Chance"
+      },
+      {
+        "method": "reward",
+        "source": "Item Bomb",
+        "detail": "high tier"
       }
     ],
     "manaphy-mount-chest": [
@@ -2704,6 +3411,13 @@
         "detail": "30 Abyssal Pearl"
       }
     ],
+    "metagrossite-core": [
+      {
+        "method": "boss",
+        "source": "Tyrantrum (Route 111 NPC)",
+        "detail": "x3 for Metagrossite"
+      }
+    ],
     "metagrossite-crest": [
       {
         "method": "drop",
@@ -2724,6 +3438,12 @@
           "Hoenn"
         ],
         "detail": "Route 126"
+      }
+    ],
+    "metal-alloy": [
+      {
+        "method": "boss",
+        "source": "Registeel"
       }
     ],
     "metal-coat": [
@@ -2757,6 +3477,10 @@
         "method": "event",
         "source": "Evolution Stone Chest",
         "detail": "Gamepass / Dynamax event"
+      },
+      {
+        "method": "boss",
+        "source": "Registeel"
       }
     ],
     "metronome": [
@@ -2812,6 +3536,12 @@
         "detail": "800 Goodwill Token"
       }
     ],
+    "mind-plate": [
+      {
+        "method": "reward",
+        "source": "Legendary Caverns (Lake Trio)"
+      }
+    ],
     "miracle-seed": [
       {
         "method": "drop",
@@ -2830,6 +3560,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "misdreavus-mask": [
@@ -2865,6 +3599,13 @@
         "detail": "800 Goodwill Token"
       }
     ],
+    "moon-core": [
+      {
+        "method": "mining",
+        "source": "Mining (Dark Ore, legendary)",
+        "detail": "N-Lunarizer material"
+      }
+    ],
     "moon-stone": [
       {
         "method": "drop",
@@ -2898,6 +3639,10 @@
         "method": "shop",
         "source": "Heart Petals Shop",
         "detail": "150 Heart Petals"
+      },
+      {
+        "method": "reward",
+        "source": "Item Bomb"
       }
     ],
     "move-block-exp-share-blueprint": [
@@ -2905,6 +3650,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "500 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "500 Coins"
       }
     ],
     "mummy-cowboy-costume-bundle": [
@@ -2961,6 +3711,50 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 30"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
+      }
+    ],
+    "mythic-bait": [
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 85"
+      }
+    ],
+    "mythic-rod": [
+      {
+        "method": "craft",
+        "source": "Crafting (Fishing)",
+        "detail": "Lvl 100"
+      }
+    ],
+    "mythic-rod-blueprint": [
+      {
+        "method": "fish",
+        "source": "Fisherman's Shop",
+        "detail": "200K F (reusable)"
+      }
+    ],
+    "n-lunarizer": [
+      {
+        "method": "craft",
+        "source": "Crafting (Crafter Hale)",
+        "detail": "75K F + Prism Casing + Moon Core + 4 Comet Shards + 2 Star Pieces (Necrozma Dawn Wings)"
+      }
+    ],
+    "n-solarizer": [
+      {
+        "method": "craft",
+        "source": "Crafting (Crafter Hale)",
+        "detail": "75K F + Prism Casing + Sun Core + 4 Star Pieces (Necrozma Dusk Mane)"
       }
     ],
     "never-melt-ice": [
@@ -2985,6 +3779,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "ninetales-mount-chest-untradable": [
@@ -3011,6 +3809,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "80 Casino Token"
+      },
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
       }
     ],
     "occa-berry": [
@@ -3041,6 +3844,32 @@
         "method": "shop",
         "source": "Radiance Token Shop",
         "detail": "200 Radiance Token"
+      }
+    ],
+    "old-amber": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Aerodactyl"
+      }
+    ],
+    "old-rod": [
+      {
+        "method": "reward",
+        "source": "Fishing Guide quest (Jubilife)",
+        "detail": "starter rod"
+      }
+    ],
+    "one-time-air-balloon": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      }
+    ],
+    "one-time-focus-sash": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
       }
     ],
     "oogieboogie-costume-bundle": [
@@ -3101,6 +3930,20 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "200 Ranked Battle Token"
+      }
+    ],
+    "pearl": [
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
+      }
+    ],
+    "pearl-string": [
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
       }
     ],
     "peat-block": [
@@ -3177,6 +4020,12 @@
         "detail": "200 Ranked Battle Token"
       }
     ],
+    "permanent-room-service": [
+      {
+        "method": "reward",
+        "source": "Legendary Caverns (Lake Trio)"
+      }
+    ],
     "permanent-sitrus-berry": [
       {
         "method": "shop",
@@ -3203,11 +4052,32 @@
         "detail": "1,000 F"
       }
     ],
+    "petal-dust": [
+      {
+        "method": "event",
+        "source": "Valentine event",
+        "detail": "quest drop"
+      }
+    ],
     "petal-egg-stone": [
       {
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "200 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
+      }
+    ],
+    "petalized-coral": [
+      {
+        "method": "drop",
+        "pokemon": "lileep",
+        "pokemonName": "Lileep",
+        "regions": [],
+        "detail": "Gold Pickaxe material"
       }
     ],
     "pikachu-costume-bundle-female": [
@@ -3222,6 +4092,25 @@
         "method": "shop",
         "source": "Goodwill Token Shop",
         "detail": "350 Goodwill Token"
+      }
+    ],
+    "platinum-pickaxe": [
+      {
+        "method": "craft",
+        "source": "Pickaxe Guru House (Route 111)"
+      }
+    ],
+    "platinum-pickaxe-blueprint": [
+      {
+        "method": "shop",
+        "source": "Mining Shop"
+      }
+    ],
+    "plume-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Archen"
       }
     ],
     "poipole-chest": [
@@ -3254,6 +4143,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "poison-memory": [
@@ -3261,6 +4154,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "poke-ball-shiny-tracker-safe": [
@@ -3302,6 +4200,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "power-band": [
@@ -3309,6 +4212,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "power-belt": [
@@ -3316,6 +4224,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "power-bracer": [
@@ -3323,6 +4236,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "power-herb": [
@@ -3337,6 +4255,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "power-weight": [
@@ -3344,6 +4267,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "200 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "200 Coins"
       }
     ],
     "pp-max": [
@@ -3358,6 +4286,20 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "10 Ranked Battle Token"
+      },
+      {
+        "method": "event",
+        "source": "Gold Blaze Chest",
+        "detail": "20%"
+      }
+    ],
+    "prehistoric-jawbone-shard": [
+      {
+        "method": "drop",
+        "pokemon": "aerodactyl",
+        "pokemonName": "Aerodactyl",
+        "regions": [],
+        "detail": "Aerodactylite fragment"
       }
     ],
     "primarina-costume-bundle-female": [
@@ -3384,6 +4326,13 @@
         "detail": "1 Primarina Costume Bundle Ticket"
       }
     ],
+    "prism-casing": [
+      {
+        "method": "craft",
+        "source": "Crafting (Crafter Hale)",
+        "detail": "5 Comet Shards + 2 Stardust + 2 Everstone"
+      }
+    ],
     "prism-scale": [
       {
         "method": "drop",
@@ -3394,6 +4343,11 @@
           "Jvaloh",
           "Hoenn"
         ]
+      },
+      {
+        "method": "fish",
+        "source": "Fishing level reward",
+        "detail": "Lvl 20"
       }
     ],
     "prismatic-core": [
@@ -3411,6 +4365,16 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "boss",
+        "source": "Regirock"
+      }
+    ],
+    "protein": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
       }
     ],
     "psychic-memory": [
@@ -3418,6 +4382,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "psychic-seed": [
@@ -3446,6 +4415,13 @@
         "detail": "200 Soul Shard"
       }
     ],
+    "punching-glove": [
+      {
+        "method": "reward",
+        "source": "Item Bomb",
+        "detail": "legendary tier"
+      }
+    ],
     "purple-fnaf-bear-costume-bundle": [
       {
         "method": "shop",
@@ -3458,6 +4434,13 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "500 Crew Wars Token"
+      }
+    ],
+    "quick-claw": [
+      {
+        "method": "reward",
+        "source": "Item Bomb",
+        "detail": "high tier"
       }
     ],
     "rampaging-jawbone": [
@@ -3493,6 +4476,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "140 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "140 Tokens"
       }
     ],
     "rawst-berry": [
@@ -3639,6 +4627,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "rocky-helmet": [
@@ -3651,6 +4644,13 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "600 Crew Wars Token"
+      }
+    ],
+    "root-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Lileep"
       }
     ],
     "roseli-berry": [
@@ -3679,6 +4679,18 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "300 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "300 Tokens"
+      }
+    ],
+    "sail-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Amaura"
       }
     ],
     "sandslash-costume-bundle": [
@@ -3686,6 +4698,13 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "500 Egg Shard"
+      }
+    ],
+    "scizorite": [
+      {
+        "method": "reward",
+        "source": "Bug Catching Contest",
+        "detail": "Rank 1 (rare)"
       }
     ],
     "scorched-metal-coat": [
@@ -3700,6 +4719,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "600 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "600 Coins — Urshifu (Single Strike)"
       }
     ],
     "scroll-of-waters": [
@@ -3707,6 +4731,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "600 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "600 Coins — Urshifu (Rapid Strike)"
       }
     ],
     "shadow-articuno-mount-chest": [
@@ -3734,6 +4763,10 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "sharpedonite": [
@@ -3752,6 +4785,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "300 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "300 Tokens"
       }
     ],
     "shell-bell": [
@@ -3825,6 +4863,10 @@
         "method": "shop",
         "source": "Heart Petals Shop",
         "detail": "200 Heart Petals"
+      },
+      {
+        "method": "reward",
+        "source": "Item Bomb"
       }
     ],
     "shock-drive": [
@@ -3832,6 +4874,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "250 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "250 Egg Shards"
       }
     ],
     "shuca-berry": [
@@ -3872,6 +4919,10 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "silver-powder": [
@@ -3887,6 +4938,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "sitrus-berry": [
@@ -3924,6 +4979,13 @@
         "detail": "500 Soul Shard"
       }
     ],
+    "skull-fossil": [
+      {
+        "method": "mining",
+        "source": "Mining (Fossil Maniac)",
+        "detail": "Revives into Cranidos"
+      }
+    ],
     "sled-mount-chest-a": [
       {
         "method": "shop",
@@ -3936,6 +4998,13 @@
         "method": "shop",
         "source": "Glacial Ore Shop",
         "detail": "150 Glacial Ore"
+      }
+    ],
+    "slowbronite": [
+      {
+        "method": "reward",
+        "source": "Fishing Contest",
+        "detail": "Top 5 (rare)"
       }
     ],
     "slowpoke-chest": [
@@ -3971,6 +5040,11 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "25 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "25 Coins"
       }
     ],
     "smooth-rock": [
@@ -4002,6 +5076,11 @@
         "method": "shop",
         "source": "Ranked Battle Token Store",
         "detail": "120 Ranked Battle Token"
+      },
+      {
+        "method": "shop",
+        "source": "Ranked Battle Tokens Trader",
+        "detail": "120 Tokens"
       }
     ],
     "soft-sand": [
@@ -4026,6 +5105,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "soothe-bell": [
@@ -4040,6 +5123,18 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "500 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop",
+        "detail": "500 Coins"
+      }
+    ],
+    "soul-dew": [
+      {
+        "method": "event",
+        "source": "Summer event",
+        "detail": "Aquara Sage Hard"
       }
     ],
     "soul-reaper-sword-benkai": [
@@ -4093,6 +5188,10 @@
         "method": "shop",
         "source": "Daycare Token Shop",
         "detail": "75 Daycare Token"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "spheal-backpack": [
@@ -4116,6 +5215,13 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "250 Soul Shard"
+      }
+    ],
+    "splash-plate": [
+      {
+        "method": "fish",
+        "source": "Fishing treasure chest",
+        "detail": "Aether Rod material"
       }
     ],
     "sprigatito-chest": [
@@ -4161,6 +5267,11 @@
         "regions": [
           "Hoenn"
         ]
+      },
+      {
+        "method": "mining",
+        "source": "Mining (Origin Ore)",
+        "detail": "money item"
       }
     ],
     "stardust": [
@@ -4190,6 +5301,17 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
+      }
+    ],
+    "stone-plate": [
+      {
+        "method": "boss",
+        "source": "Regirock"
       }
     ],
     "storm-nimbus": [
@@ -4333,6 +5455,13 @@
         "detail": "20 Purple Ooze"
       }
     ],
+    "super-rod": [
+      {
+        "method": "fish",
+        "source": "Fisherman's Shop",
+        "detail": "75K F"
+      }
+    ],
     "super-tamato-berry": [
       {
         "method": "shop",
@@ -4357,6 +5486,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "150 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "150 Egg Shards"
       }
     ],
     "syrupy-apple": [
@@ -4364,6 +5498,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "200 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "200 Egg Shards"
       }
     ],
     "tanga-berry": [
@@ -4399,6 +5538,11 @@
         "method": "shop",
         "source": "Egg Shard Shop",
         "detail": "150 Egg Shard"
+      },
+      {
+        "method": "event",
+        "source": "Easter event",
+        "detail": "150 Egg Shards"
       }
     ],
     "team-aqua-costume-bundle-female": [
@@ -4528,6 +5672,16 @@
         "detail": "2000 Dynite ore"
       }
     ],
+    "tiny-mushroom": [
+      {
+        "method": "drop",
+        "pokemon": "paras",
+        "pokemonName": "Paras",
+        "regions": [
+          "Jvaloh"
+        ]
+      }
+    ],
     "toad-costume-bundle-chest": [
       {
         "method": "shop",
@@ -4568,6 +5722,11 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "40 Crew Wars Token"
+      },
+      {
+        "method": "shop",
+        "source": "Crew Wars Token Shop",
+        "detail": "40 Tokens"
       }
     ],
     "twisted-forest-ticket": [
@@ -4593,6 +5752,14 @@
         "regions": [
           "Sinnoh"
         ]
+      },
+      {
+        "method": "reward",
+        "source": "Legendary Caverns (Lake Trio)"
+      },
+      {
+        "method": "shop",
+        "source": "Daycare Shop"
       }
     ],
     "type-null-chest": [
@@ -4704,6 +5871,12 @@
         "detail": "500 Soul Shard"
       }
     ],
+    "utility-umbrella": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      }
+    ],
     "valentine-togekiss-mount-chest": [
       {
         "method": "shop",
@@ -4765,6 +5938,11 @@
         "method": "shop",
         "source": "Casino Token Store",
         "detail": "720 Casino Token"
+      },
+      {
+        "method": "shop",
+        "source": "Casino Token Trader",
+        "detail": "720 Tokens"
       }
     ],
     "water-stone": [
@@ -4861,6 +6039,10 @@
         "method": "shop",
         "source": "Crew Wars Token Store",
         "detail": "200 Crew Wars Token"
+      },
+      {
+        "method": "reward",
+        "source": "Legendary Caverns (Lake Trio)"
       }
     ],
     "witch-costume-bundle-female": [
@@ -4933,6 +6115,12 @@
         "detail": "2500 Ranked Battle Token"
       }
     ],
+    "zinc": [
+      {
+        "method": "reward",
+        "source": "VS Seeker"
+      }
+    ],
     "zombie-groom-costume-bundle": [
       {
         "method": "shop",
@@ -4952,6 +6140,12 @@
         "method": "shop",
         "source": "Soul Shard Stone Trades",
         "detail": "500 Soul Shard"
+      }
+    ],
+    "zoom-lens": [
+      {
+        "method": "reward",
+        "source": "Item Bomb"
       }
     ],
     "zygarde-chest": [
