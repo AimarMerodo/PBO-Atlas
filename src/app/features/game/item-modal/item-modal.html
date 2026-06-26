@@ -85,7 +85,7 @@
                 }
               }
               <span>
-                <span class="font-semibold">{{ s.source }}</span>
+                <span class="font-semibold">{{ s.method === "boss" ? bossLabel(s.source ?? "") : s.source }}</span>
                 @if (s.detail) {
                   <span class="text-ink-dim">&nbsp;— {{ s.detail }}</span>
                 }

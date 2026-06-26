@@ -29,6 +29,11 @@ export class ItemModal {
     return parts.length ? "· " + parts.join(" — ") : "";
   }
 
+  /** Boss sources display as "<Name> Boss" regardless of how the data spells it. */
+  protected bossLabel(source: string): string {
+    return source.replace(/\s+boss\s*$/i, "") + " Boss";
+  }
+
   protected readonly localName = computed(() => this.i18n.localName(this.item()));
 
   protected readonly localDescription = computed(() => {
