@@ -99,13 +99,12 @@ export class DressupPageComponent {
     const title = inject(Title);
     effect(() => title.setTitle(`${this.i18n.t("dressup.title")} | PBO Atlas`));
 
-    // Default to the first preset so the canvas isn't empty on first load.
+    // Start on the bare base body (same as "Clear all") — no preset applied.
     effect(() => {
       const m = this.model();
       if (!m || this.inited) return;
       this.inited = true;
       this.bodyId.set(m.bodies[0] ?? "1");
-      if (m.presets[0]) this.selections.set({ ...m.presets[0].slots });
     });
 
     // Repaint whenever the look, direction, body or animation frame changes.
