@@ -344,6 +344,8 @@ export interface DressupMount {
 export interface DressupData {
   /** Base body sprite ids (skin tones). */
   bodies: string[];
+  /** Base body ids available in the seated riding pose (used while mounted). */
+  rideBodies: string[];
   /** Slot draw order, back to front. */
   slotOrder: string[];
   items: DressupItem[];

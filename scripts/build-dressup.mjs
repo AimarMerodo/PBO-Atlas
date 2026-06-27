@@ -118,8 +118,28 @@ for (const ln of mountRows) {
 mounts.sort((a, b) => a.name.localeCompare(b.name));
 console.log(`mounts: ${mounts.length} (copied front+back: ${fromGameMounts})`);
 
+// --- 6. Riding-pose sprites (used while mounted): seated/gripping base body + cosmetics ---
+const rideBaseSrc = path.join(GAME, "assets/ui/sprite/mounts/base");
+const ridePdSrc = path.join(GAME, "assets/ui/sprite/mounts/paperdoll");
+const rideBaseOut = path.join(REPO, "public/sprites/pbo/mounts/ride-base");
+const rideOut = path.join(REPO, "public/sprites/pbo/mounts/ride");
+fs.mkdirSync(rideBaseOut, { recursive: true });
+fs.mkdirSync(rideOut, { recursive: true });
+let rideBodies;
+if (fs.existsSync(rideBaseSrc)) {
+  const baseFiles = fs.readdirSync(rideBaseSrc).filter((f) => f.endsWith(".png"));
+  for (const f of baseFiles) fs.copyFileSync(path.join(rideBaseSrc, f), path.join(rideBaseOut, f));
+  let n = 0;
+  for (const f of fs.readdirSync(ridePdSrc).filter((f) => f.endsWith(".png"))) { fs.copyFileSync(path.join(ridePdSrc, f), path.join(rideOut, f)); n++; }
+  rideBodies = baseFiles.map((f) => f.slice(0, -4)).sort();
+  console.log(`ride sprites copied: ${n} cosmetics, ${rideBodies.length} base bodies`);
+} else {
+  rideBodies = fs.readdirSync(rideBaseOut).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)).sort();
+}
+
 const data = {
   bodies: ["1", "2", "3", "4"].filter((b) => pdHave.has(b)),
+  rideBodies,
   slotOrder,
   items,
   mounts,

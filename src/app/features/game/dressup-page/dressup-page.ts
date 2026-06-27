@@ -188,9 +188,14 @@ export class DressupPageComponent {
     const sx = fr * CELL;
     const sy = dr * CELL;
     const sel = this.selections();
+    // While mounted, draw the seated riding pose (separate base + cosmetic sprites);
+    // cosmetics with no riding variant simply don't load and are hidden.
+    const rideBody = mt ? (m.rideBodies.includes(this.skin()) ? this.skin() : m.rideBodies[0]) : null;
     for (const slot of m.slotOrder) {
       const pid = slot === "BODY" ? this.skin() : sel[slot];
-      if (pid) this.blit(this.spritePath(pid), CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
+      if (!pid) continue;
+      const src = mt ? (slot === "BODY" ? this.rideBasePath(rideBody!) : this.ridePath(pid)) : this.spritePath(pid);
+      this.blit(src, CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
 
     if (mt) {
@@ -202,6 +207,9 @@ export class DressupPageComponent {
 
   protected spritePath = (pid: string) => `/sprites/pbo/paperdolls/${pid}.png`;
   protected mountPath = (id: string, layer: "back" | "front") => `/sprites/pbo/mounts/${layer}/${id}.png`;
+  /** Seated/gripping pose sprites, used while mounted. */
+  protected ridePath = (pid: string) => `/sprites/pbo/mounts/ride/${pid}.png`;
+  protected rideBasePath = (id: string) => `/sprites/pbo/mounts/ride-base/${id}.png`;
   protected itemName = (it: DressupItem) => this.i18n.pick({ en: it.name, es: it.es, pt: it.pt, zh: it.zh });
   protected mountName = (m: DressupMount) => this.i18n.pick({ en: m.name, es: m.es, pt: m.pt, zh: m.zh });
   protected tabLabel = (tab: string) => (tab === MOUNT ? this.i18n.t("dressup.mount") : this.i18n.t(`dressup.slot.${tab}` as DictKey));
