@@ -33,6 +33,7 @@ import {
   LucideShirt,
   LucideShuffle,
   LucideSmile,
+  LucideSwords,
   LucideTrash2,
   LucideX,
 } from "@lucide/angular";
@@ -51,12 +52,23 @@ const RIDE_POSE = "2";
 /** Head accessories the client keeps from the walking sheet when a cosmetic has no seated variant; body
  *  garments without a seated variant are dropped instead (matching the decompiled mounted renderer). */
 const RIDE_FALLBACK_SLOTS = new Set(["HAIR", "CAP", "BEARD", "GLASSES", "BEAK"]);
+/** One-click preset: the full in-game Tanjiro (Kamado) cosmetic set, keyed by the slot each piece packs into. */
+const TANJIRO_LOOK: Record<string, string> = {
+  HAIR: "4991", // Tanjiro Face
+  CAP: "4995", // Tanjiro Hair
+  SHIRT: "4992",
+  JACKET: "4996",
+  PANTS: "4994",
+  SHOE: "4993",
+  TAIL: "4997", // Nichirin Sword
+  BEAK: "4998", // Aura
+};
 
 /** Character dress-up tool: composite paper-doll sprite layers on a canvas, live and animated. */
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideChevronDown, LucideChevronLeft, LucideChevronRight, LucideChevronUp, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideShirt, LucideShuffle, LucideSmile, LucideTrash2, LucideX],
+  imports: [LucideBird, LucideChevronDown, LucideChevronLeft, LucideChevronRight, LucideChevronUp, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -301,6 +313,15 @@ export class DressupPageComponent {
     pick("WINGS", 0.15);
     pick("TAIL", 0.15);
     pick("BEAK", 0.15);
+    this.selections.set(next);
+  }
+  /** Quick-equip the full Tanjiro look (filtered to slots the catalog actually has). */
+  protected equipTanjiro(): void {
+    const have = this.itemsBySlot();
+    const next: Record<string, string> = {};
+    for (const [slot, pid] of Object.entries(TANJIRO_LOOK)) {
+      if (have.get(slot)?.some((it) => it.pid === pid)) next[slot] = pid;
+    }
     this.selections.set(next);
   }
   protected selectTab(tab: string): void {

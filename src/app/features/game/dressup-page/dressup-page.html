@@ -49,6 +49,9 @@
           <button type="button" (click)="randomLook()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
             <svg lucideShuffle class="h-4 w-4"></svg>{{ i18n.t("dressup.random") }}
           </button>
+          <button type="button" (click)="equipTanjiro()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+            <svg lucideSwords class="h-4 w-4"></svg>Tanjiro
+          </button>
           <button type="button" (click)="clearAll()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
             <svg lucideTrash2 class="h-4 w-4"></svg>{{ i18n.t("dressup.clear") }}
           </button>
