@@ -117,48 +117,42 @@
           class="mb-3 w-full rounded-xl border border-line bg-bg px-3 py-2 text-sm text-ink placeholder:text-ink-dim/70"
         />
 
-        @if (activeTab() === MOUNT) {
-          <div class="grid grid-cols-[repeat(auto-fill,minmax(68px,1fr))] gap-2">
-            <button type="button" (click)="mount.set('')" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
-              <svg lucideX class="h-5 w-5"></svg>
-            </button>
-            @for (m of pagedMounts(); track m.id) {
-              <button
-                type="button"
-                (click)="pickMount(m.id)"
-                [title]="mountName(m)"
-                [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (mount() === m.id ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
-              >
-                <img loading="lazy" [src]="mountPath(m.id, 'back')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
-                <img loading="lazy" [src]="mountPath(m.id, 'front')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+        <div class="max-h-[440px] overflow-y-auto pr-1">
+          @if (activeTab() === MOUNT) {
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(68px,1fr))] gap-2">
+              <button type="button" (click)="mount.set('')" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                <svg lucideX class="h-5 w-5"></svg>
               </button>
-            }
-          </div>
-        } @else {
-          <div class="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-2">
-            <button type="button" (click)="removeSlot(activeTab())" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
-              <svg lucideX class="h-4 w-4"></svg>
-            </button>
-            @for (it of pagedItems(); track it.pid) {
-              <button
-                type="button"
-                (click)="pickItem(activeTab(), it.pid)"
-                [title]="itemName(it)"
-                [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (isOn(activeTab(), it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
-              >
-                <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+              @for (m of gridMounts(); track m.id) {
+                <button
+                  type="button"
+                  (click)="pickMount(m.id)"
+                  [title]="mountName(m)"
+                  [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (mount() === m.id ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
+                >
+                  <img loading="lazy" [src]="mountPath(m.id, 'back')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                  <img loading="lazy" [src]="mountPath(m.id, 'front')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                </button>
+              }
+            </div>
+          } @else {
+            <div class="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-2">
+              <button type="button" (click)="removeSlot(activeTab())" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                <svg lucideX class="h-4 w-4"></svg>
               </button>
-            }
-          </div>
-        }
-
-        @if (pages() > 1) {
-          <div class="mt-3 flex items-center justify-center gap-3 text-xs text-ink-dim">
-            <button type="button" (click)="prevPage()" class="grid h-7 w-7 place-items-center rounded-lg border border-line hover:border-accent" aria-label="prev"><svg lucideChevronLeft class="h-4 w-4"></svg></button>
-            <span>{{ pageNum() }} / {{ pages() }}</span>
-            <button type="button" (click)="nextPage()" class="grid h-7 w-7 place-items-center rounded-lg border border-line hover:border-accent" aria-label="next"><svg lucideChevronRight class="h-4 w-4"></svg></button>
-          </div>
-        }
+              @for (it of gridItems(); track it.pid) {
+                <button
+                  type="button"
+                  (click)="pickItem(activeTab(), it.pid)"
+                  [title]="itemName(it)"
+                  [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (isOn(activeTab(), it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
+                >
+                  <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+                </button>
+              }
+            </div>
+          }
+        </div>
 
         <div class="mt-4 border-t border-line pt-3">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.wearing") }}</h3>

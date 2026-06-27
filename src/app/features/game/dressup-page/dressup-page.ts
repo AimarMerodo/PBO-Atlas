@@ -44,7 +44,6 @@ import type { DressupData, DressupItem, DressupMount } from "@core/models/types"
 const CELL = 64;
 const COLS = 4;
 const MOUNT = "MOUNT";
-const PAGE_SIZE = 24;
 /** Catalog tab order — the game's real PaperDollType channels, then mounts. */
 const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
 
@@ -80,7 +79,6 @@ export class DressupPageComponent {
   protected readonly dir = signal(0);
   protected readonly playing = signal(true);
   protected readonly query = signal("");
-  protected readonly page = signal(0);
   private readonly frame = signal(0);
 
   /** Cosmetics for the current gender (gendered variants + unisex). */
@@ -114,13 +112,8 @@ export class DressupPageComponent {
     const arr = this.model()?.mounts ?? [];
     return q ? arr.filter((m) => this.mountName(m).toLowerCase().includes(q)) : arr;
   });
-  /** Pagination over the active tab (avoids loading hundreds of thumbnails at once). */
+  /** Total filtered results in the active tab (shown as a count). */
   protected readonly totalCount = computed(() => (this.activeTab() === MOUNT ? this.gridMounts() : this.gridItems()).length);
-  protected readonly pages = computed(() => Math.max(1, Math.ceil(this.totalCount() / PAGE_SIZE)));
-  private readonly safePage = computed(() => Math.min(this.page(), this.pages() - 1));
-  protected readonly pageNum = computed(() => this.safePage() + 1);
-  protected readonly pagedItems = computed<DressupItem[]>(() => this.gridItems().slice(this.safePage() * PAGE_SIZE, this.safePage() * PAGE_SIZE + PAGE_SIZE));
-  protected readonly pagedMounts = computed<DressupMount[]>(() => this.gridMounts().slice(this.safePage() * PAGE_SIZE, this.safePage() * PAGE_SIZE + PAGE_SIZE));
 
   protected readonly wearing = computed(() => {
     const sel = this.selections();
@@ -283,13 +276,6 @@ export class DressupPageComponent {
   protected selectTab(tab: string): void {
     this.activeTab.set(tab);
     this.query.set("");
-    this.page.set(0);
-  }
-  protected prevPage(): void {
-    this.page.set((this.safePage() - 1 + this.pages()) % this.pages());
-  }
-  protected nextPage(): void {
-    this.page.set((this.safePage() + 1) % this.pages());
   }
   protected setDir(d: number): void {
     this.dir.set(d);
@@ -299,10 +285,8 @@ export class DressupPageComponent {
   }
   protected setGender(g: "M" | "F"): void {
     this.gender.set(g);
-    this.page.set(0);
   }
   protected onSearch(e: Event): void {
     this.query.set((e.target as HTMLInputElement).value);
-    this.page.set(0);
   }
 }
