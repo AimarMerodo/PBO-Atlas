@@ -92,12 +92,14 @@ const fromGameMounts = fs.existsSync(mfSrc);
 const listIds = (dir) => new Set(fs.readdirSync(dir).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)));
 const haveFront = listIds(fromGameMounts ? mfSrc : mfOut);
 const haveBack = listIds(fromGameMounts ? mbSrc : mbOut);
+// Mount sheets vary in size: cell = sheetHeight/4 (64 or 96), cols = sheetWidth/cell (4 or 8).
+const pngSize = (file) => { const b = fs.readFileSync(file); return [b.readUInt32BE(16), b.readUInt32BE(20)]; };
 const mountRows = fs.readFileSync(path.join(cache, "item/mounts.csv"), "utf8").split(/\r?\n/);
 const mounts = [];
 const seenMount = new Set();
 for (const ln of mountRows) {
   const c = ln.split(",");
-  const name = c[0], type = c[1], sid = c[4]; // col 4 = mount sprite id
+  const name = c[0], type = c[1], sid = c[4]; // col 4 = mount sprite id, col 3 = rider y-offset
   if (!name || !/^\d+$/.test(sid)) continue;
   if (!haveFront.has(sid) || !haveBack.has(sid) || seenMount.has(sid)) continue;
   seenMount.add(sid);
@@ -105,7 +107,9 @@ for (const ln of mountRows) {
     fs.copyFileSync(path.join(mfSrc, sid + ".png"), path.join(mfOut, sid + ".png"));
     fs.copyFileSync(path.join(mbSrc, sid + ".png"), path.join(mbOut, sid + ".png"));
   }
-  const e = { id: sid, name, type };
+  const [w, h] = pngSize(path.join(mbOut, sid + ".png"));
+  const cell = Math.round(h / 4);
+  const e = { id: sid, name, type, cell, cols: Math.round(w / cell), oy: Number.parseInt(c[3], 10) || 0 };
   if (esMap.get(name)) e.es = esMap.get(name);
   if (ptMap.get(name)) e.pt = ptMap.get(name);
   if (zhMap.get(name)) e.zh = zhMap.get(name);

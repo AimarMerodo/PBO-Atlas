@@ -333,6 +333,12 @@ export interface DressupMount {
   zh?: string;
   /** LAND_POKEMON | SURF_POKEMON. */
   type: string;
+  /** Square cell size in px (sheet height / 4 rows): 64 or 96. */
+  cell: number;
+  /** Animation frames per direction (sheet width / cell): 4 or 8. */
+  cols: number;
+  /** Rider vertical offset in native px — how high the character sits. */
+  oy: number;
 }
 
 export interface DressupData {

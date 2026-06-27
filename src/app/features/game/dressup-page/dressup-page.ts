@@ -31,7 +31,6 @@ import type { DressupData, DressupItem, DressupMount } from "@core/models/types"
 
 const CELL = 64;
 const COLS = 4;
-const SCALE = 5;
 const MOUNT = "MOUNT";
 /** Catalog tab order — the game's real PaperDollType channels, then mounts. */
 const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
@@ -157,9 +156,10 @@ export class DressupPageComponent {
     }
     return im;
   }
-  private blit(src: string, sx: number, sy: number, dx: number, dy: number, d: number): void {
+  /** Draw one square cell (`cell`px) of a sprite sheet, scaled to `dSize`px. */
+  private blit(src: string, cell: number, sx: number, sy: number, dx: number, dy: number, dSize: number): void {
     const im = this.img(src);
-    if (im.complete && im.naturalWidth) this.ctx!.drawImage(im, sx, sy, CELL, CELL, dx, dy, d, d);
+    if (im.complete && im.naturalWidth) this.ctx!.drawImage(im, sx, sy, cell, cell, dx, dy, dSize, dSize);
   }
 
   private draw(): void {
@@ -168,19 +168,36 @@ export class DressupPageComponent {
     if (!ctx || !m) return;
     const cv = ctx.canvas;
     ctx.clearRect(0, 0, cv.width, cv.height);
-    const d = CELL * SCALE;
-    const dx = (cv.width - d) / 2;
-    const dy = cv.height - d - 12;
-    const sx = this.frame() * CELL;
-    const sy = this.dir() * CELL;
-    const mId = this.mount();
-    if (mId) this.blit(this.mountPath(mId, "back"), sx, sy, dx, dy, d);
+
+    const mt = this.mountItem(); // mount sheets vary in cell size; the rider sits `oy`px up
+    const baseline = cv.height - 16; // ground line = character feet when unmounted
+    const unitsTall = mt ? Math.max(mt.cell, CELL + mt.oy) + 4 : CELL + 6;
+    const scale = (baseline - 12) / unitsTall;
+    const cx = cv.width / 2;
+    const fr = this.frame();
+    const dr = this.dir();
+
+    if (mt) {
+      const mw = mt.cell * scale;
+      const col = fr % mt.cols;
+      this.blit(this.mountPath(mt.id, "back"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
+    }
+
+    const cw = CELL * scale;
+    const charBottom = baseline - (mt ? mt.oy * scale : 0);
+    const sx = fr * CELL;
+    const sy = dr * CELL;
     const sel = this.selections();
     for (const slot of m.slotOrder) {
       const pid = slot === "BODY" ? this.skin() : sel[slot];
-      if (pid) this.blit(this.spritePath(pid), sx, sy, dx, dy, d);
+      if (pid) this.blit(this.spritePath(pid), CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
-    if (mId) this.blit(this.mountPath(mId, "front"), sx, sy, dx, dy, d);
+
+    if (mt) {
+      const mw = mt.cell * scale;
+      const col = fr % mt.cols;
+      this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
+    }
   }
 
   protected spritePath = (pid: string) => `/sprites/pbo/paperdolls/${pid}.png`;
