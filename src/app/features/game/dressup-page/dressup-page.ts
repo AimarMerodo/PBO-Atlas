@@ -14,6 +14,7 @@ import {
 import { Meta, Title } from "@angular/platform-browser";
 import {
   LucideBird,
+  LucideCheck,
   LucideChevronLeft,
   LucideChevronRight,
   LucideCrown,
@@ -32,6 +33,7 @@ import {
   LucideShirt,
   LucideShuffle,
   LucideSmile,
+  LucideSparkles,
   LucideSwords,
   LucideTrash2,
   LucideX,
@@ -67,8 +69,9 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
+  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSparkles, LucideSwords, LucideTrash2, LucideX],
   templateUrl: "./dressup-page.html",
+  styleUrl: "./dressup-page.css",
 })
 export class DressupPageComponent {
   protected readonly i18n = inject(LanguageService);
@@ -259,6 +262,16 @@ export class DressupPageComponent {
   protected mountName = (m: DressupMount) => this.i18n.pick({ en: m.name, es: m.es, pt: m.pt, zh: m.zh });
   protected tabLabel = (tab: string) => (tab === MOUNT ? this.i18n.t("dressup.mount") : this.i18n.t(`dressup.slot.${tab}` as DictKey));
   protected isOn = (slot: string, pid: string) => this.selections()[slot] === pid;
+  /** Equipped sprite pid for a slot's summary chip ("" when empty / for the mount slot). */
+  protected equippedPid = (tab: string) => (tab === MOUNT ? "" : this.selections()[tab] ?? "");
+  /** Equipped item name for a slot's summary row ("—" when empty). */
+  protected equippedName = (tab: string): string => {
+    if (tab === MOUNT) return this.mountItem() ? this.mountName(this.mountItem()!) : "—";
+    const pid = this.selections()[tab];
+    if (!pid) return "—";
+    const it = this.byPid().get(pid);
+    return it ? this.itemName(it) : pid;
+  };
 
   protected pickItem(slot: string, pid: string): void {
     this.selections.update((s) => {
