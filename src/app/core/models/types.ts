@@ -322,6 +322,8 @@ export interface DressupItem {
   slot: string;
   /** "M" | "F" | "U" (unisex). */
   gender: string;
+  /** 1 when a seated riding variant exists at /sprites/pbo/mounts/ride/<pid>.png. */
+  ride?: number;
 }
 
 /** A mount: back + front sprite sheets at /sprites/pbo/mounts/{back,front}/<id>.png */

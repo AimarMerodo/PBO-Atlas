@@ -137,6 +137,15 @@ if (fs.existsSync(rideBaseSrc)) {
   rideBodies = fs.readdirSync(rideBaseOut).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)).sort();
 }
 
+// Mark items that ship a seated riding variant (mounts/paperdoll/<pid>). The game, while mounted,
+// draws the riding variant if it exists; for the few cosmetics without one it keeps the walking
+// sprite for head accessories (HAIR/CAP/BEARD/GLASSES/BEAK) and hides body garments. `ride` lets
+// the /dressup canvas reproduce that without 404-probing each sprite.
+const ridePidSet = new Set(fs.readdirSync(rideOut).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)));
+let rideCount = 0;
+for (const it of items) if (ridePidSet.has(it.pid)) { it.ride = 1; rideCount++; }
+console.log(`ride variants matched to catalog: ${rideCount}/${items.length} items`);
+
 const data = {
   bodies: ["1", "2", "3", "4"].filter((b) => pdHave.has(b)),
   rideBodies,

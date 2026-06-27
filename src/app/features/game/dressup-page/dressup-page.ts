@@ -46,6 +46,11 @@ const COLS = 4;
 const MOUNT = "MOUNT";
 /** Catalog tab order — the game's real PaperDollType channels, then mounts. */
 const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
+/** Seated/gripping base pose used for Pokemon mounts (mounts/base/2 in the client; base/1 is the bike pose). */
+const RIDE_POSE = "2";
+/** Head accessories the client keeps from the walking sheet when a cosmetic has no seated variant; body
+ *  garments without a seated variant are dropped instead (matching the decompiled mounted renderer). */
+const RIDE_FALLBACK_SLOTS = new Set(["HAIR", "CAP", "BEARD", "GLASSES", "BEAK"]);
 
 /** Character dress-up tool: composite paper-doll sprite layers on a canvas, live and animated. */
 @Component({
@@ -121,6 +126,8 @@ export class DressupPageComponent {
     return Object.entries(sel).map(([slot, pid]) => ({ slot, pid, item: byPid.get(slot + "|" + pid) ?? null }));
   });
   protected readonly mountItem = computed(() => this.model()?.mounts?.find((m) => m.id === this.mount()) ?? null);
+  /** pid -> item, so draw() can read each cosmetic's `ride` flag (has a seated riding variant). */
+  private readonly byPid = computed(() => new Map((this.model()?.items ?? []).map((it) => [it.pid, it])));
 
   private ctx: CanvasRenderingContext2D | null = null;
   private readonly imgs = new Map<string, HTMLImageElement>();
@@ -195,6 +202,7 @@ export class DressupPageComponent {
     const sx = fr * CELL;
     const sy = dr * CELL;
     const sel = this.selections();
+    const ride = !!mt;
 
     // mount_back, then the seated riding character (its own pose + cosmetics), then mount_front.
     // Mounting also turns to a side view (see pickMount): head-on a big mount hides the rider,
@@ -202,12 +210,27 @@ export class DressupPageComponent {
     const mw = mt ? mt.cell * scale : 0;
     const col = mt ? fr % mt.cols : 0;
     if (mt) this.blit(this.mountPath(mt.id, "back"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
-    const rideBody = mt ? (m.rideBodies.includes(this.skin()) ? this.skin() : m.rideBodies[0]) : "";
+
+    // Reproduce the client's mounted compositing (decompiled MountedNetworkPlayerAnimation): the rider
+    // is the seated/gripping base pose — mounts/base/2 for a Pokemon mount (base/1 is the bike pose) —
+    // and the equipped cosmetics' SEATED variants, which are authored to register with that pose. A
+    // cosmetic with no seated variant keeps its walking sprite for head accessories and is dropped for
+    // body garments, so the base's baked-in green only shows where the real game shows it too.
+    const rideBase = mt ? (mt.type === "BIKE" ? "1" : RIDE_POSE) : "";
+    const byPid = this.byPid();
     const charBottom = mt ? baseline - mt.oy * scale : baseline;
     for (const slot of m.slotOrder) {
-      const pid = slot === "BODY" ? this.skin() : sel[slot];
-      if (!pid) continue;
-      const src = mt ? (slot === "BODY" ? this.rideBasePath(rideBody) : this.ridePath(pid)) : this.spritePath(pid);
+      let src: string | null;
+      if (slot === "BODY") {
+        src = ride ? this.rideBasePath(rideBase) : this.spritePath(this.skin());
+      } else {
+        const pid = sel[slot];
+        if (!pid) continue;
+        if (!ride) src = this.spritePath(pid);
+        else if (byPid.get(pid)?.ride) src = this.ridePath(pid);
+        else if (RIDE_FALLBACK_SLOTS.has(slot)) src = this.spritePath(pid);
+        else continue; // body garment with no seated variant: not drawn while mounted (green base shows)
+      }
       this.blit(src, CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
     if (mt) this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
