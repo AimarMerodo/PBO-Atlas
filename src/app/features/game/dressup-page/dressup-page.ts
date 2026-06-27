@@ -14,10 +14,8 @@ import {
 import { Meta, Title } from "@angular/platform-browser";
 import {
   LucideBird,
-  LucideChevronDown,
   LucideChevronLeft,
   LucideChevronRight,
-  LucideChevronUp,
   LucideCrown,
   LucideFeather,
   LucideFootprints,
@@ -30,6 +28,7 @@ import {
   LucidePlay,
   LucideRabbit,
   LucideScissors,
+  LucideSearch,
   LucideShirt,
   LucideShuffle,
   LucideSmile,
@@ -68,7 +67,7 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideChevronDown, LucideChevronLeft, LucideChevronRight, LucideChevronUp, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
+  imports: [LucideBird, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -78,12 +77,8 @@ export class DressupPageComponent {
   private readonly canvasRef = viewChild<ElementRef<HTMLCanvasElement>>("cv");
 
   protected readonly MOUNT = MOUNT;
-  protected readonly dirs = [
-    { dir: 3, label: "up" },
-    { dir: 1, label: "left" },
-    { dir: 2, label: "right" },
-    { dir: 0, label: "down" },
-  ];
+  /** Facing cycle for the < / > rotate buttons: front -> right -> back -> left (clockwise to the viewer). */
+  private readonly ROTATION = [0, 2, 3, 1];
 
   private readonly res = resource({ loader: () => this.data.dressup() });
   protected readonly model = computed<DressupData | null>(() => this.res.value() ?? null);
@@ -116,12 +111,15 @@ export class DressupPageComponent {
   });
   protected readonly tabCount = (tab: string) => (tab === MOUNT ? this.model()?.mounts?.length ?? 0 : this.itemsBySlot().get(tab)?.length ?? 0);
 
-  /** Items shown in the active tab's grid (filtered by search). */
+  /** Whether the search box is driving a global (all-slots) cosmetic search. */
+  protected readonly searching = computed(() => !!this.query().trim() && this.activeTab() !== MOUNT);
+  /** Grid items: the active tab's cosmetics, or — while searching — matches across every slot. */
   protected readonly gridItems = computed<DressupItem[]>(() => {
     if (this.activeTab() === MOUNT) return [];
     const q = this.query().trim().toLowerCase();
-    const arr = this.itemsBySlot().get(this.activeTab()) ?? [];
-    return q ? arr.filter((it) => this.itemName(it).toLowerCase().includes(q)) : arr;
+    if (!q) return this.itemsBySlot().get(this.activeTab()) ?? [];
+    const pool = this.genderedItems(); // search every slot, not just the open tab
+    return pool.filter((it) => (it.name + " " + (it.es ?? "") + " " + (it.pt ?? "")).toLowerCase().includes(q));
   });
   protected readonly gridMounts = computed<DressupMount[]>(() => {
     if (this.activeTab() !== MOUNT) return [];
@@ -328,8 +326,11 @@ export class DressupPageComponent {
     this.activeTab.set(tab);
     this.query.set("");
   }
-  protected setDir(d: number): void {
-    this.dir.set(d);
+  /** Rotate the character one step around the facing cycle (+1 = clockwise, -1 = counter-clockwise). */
+  protected rotate(step: number): void {
+    const cur = this.ROTATION.indexOf(this.dir());
+    const i = (cur < 0 ? 0 : cur) + step;
+    this.dir.set(this.ROTATION[((i % this.ROTATION.length) + this.ROTATION.length) % this.ROTATION.length]);
   }
   protected togglePlay(): void {
     this.playing.update((p) => !p);

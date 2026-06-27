@@ -10,34 +10,6 @@
   </div>
 
   <div class="flex flex-col gap-4 lg:flex-row lg:items-start">
-    <!-- Category rail -->
-    <nav class="flex gap-2 overflow-x-auto pb-1 lg:w-[92px] lg:shrink-0 lg:flex-col lg:overflow-visible lg:pb-0">
-      @for (tab of tabs(); track tab) {
-        <button
-          type="button"
-          (click)="selectTab(tab)"
-          [class]="'flex shrink-0 flex-col items-center gap-1 rounded-xl border px-2 py-2.5 text-[11px] font-medium leading-none transition-colors lg:w-full ' + (activeTab() === tab ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface text-ink-dim hover:text-ink')"
-        >
-          @switch (tab) {
-            @case ("HAIR") { <svg lucideScissors class="h-5 w-5"></svg> }
-            @case ("CAP") { <svg lucideCrown class="h-5 w-5"></svg> }
-            @case ("GLASSES") { <svg lucideGlasses class="h-5 w-5"></svg> }
-            @case ("BEARD") { <svg lucideSmile class="h-5 w-5"></svg> }
-            @case ("SHIRT") { <svg lucideShirt class="h-5 w-5"></svg> }
-            @case ("JACKET") { <svg lucideLayers class="h-5 w-5"></svg> }
-            @case ("GLOVES") { <svg lucideHand class="h-5 w-5"></svg> }
-            @case ("PANTS") { <svg lucidePersonStanding class="h-5 w-5"></svg> }
-            @case ("SHOE") { <svg lucideFootprints class="h-5 w-5"></svg> }
-            @case ("WINGS") { <svg lucideFeather class="h-5 w-5"></svg> }
-            @case ("TAIL") { <svg lucidePawPrint class="h-5 w-5"></svg> }
-            @case ("BEAK") { <svg lucideBird class="h-5 w-5"></svg> }
-            @default { <svg lucideRabbit class="h-5 w-5"></svg> }
-          }
-          <span class="text-center">{{ tabLabel(tab) }}</span>
-        </button>
-      }
-    </nav>
-
     <!-- Preview stage -->
     <div class="min-w-0 flex-1 lg:sticky lg:top-20">
       <div class="rounded-2xl border border-line bg-surface p-4">
@@ -69,29 +41,17 @@
 
         <canvas
           #cv
-          width="360"
-          height="340"
-          class="mx-auto block w-full max-w-[420px] rounded-xl [image-rendering:pixelated]"
+          width="480"
+          height="480"
+          class="mx-auto block w-full max-w-[600px] rounded-xl [image-rendering:pixelated]"
           style="background: radial-gradient(circle at 50% 76%, #2a3550 0%, #161d2b 55%, #0c1018 100%)"
         ></canvas>
 
-        <div class="mt-3 flex items-center justify-center gap-2">
-          @for (d of dirs; track d.dir) {
-            <button
-              type="button"
-              (click)="setDir(d.dir)"
-              [class]="'grid h-9 w-9 place-items-center rounded-lg border transition-colors ' + (dir() === d.dir ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line text-ink-dim hover:text-ink')"
-              [attr.aria-label]="d.label"
-            >
-              @switch (d.dir) {
-                @case (3) { <svg lucideChevronUp class="h-4 w-4"></svg> }
-                @case (1) { <svg lucideChevronLeft class="h-4 w-4"></svg> }
-                @case (2) { <svg lucideChevronRight class="h-4 w-4"></svg> }
-                @default { <svg lucideChevronDown class="h-4 w-4"></svg> }
-              }
-            </button>
-          }
-          <span class="mx-1 h-6 w-px bg-line"></span>
+        <!-- Rotate the character with < / >, plus play/pause for the walk cycle -->
+        <div class="mt-3 flex items-center justify-center gap-3">
+          <button type="button" (click)="rotate(-1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate left">
+            <svg lucideChevronLeft class="h-5 w-5"></svg>
+          </button>
           <button
             type="button"
             (click)="togglePlay()"
@@ -100,25 +60,60 @@
           >
             @if (playing()) { <svg lucidePause class="h-4 w-4"></svg> } @else { <svg lucidePlay class="h-4 w-4"></svg> }
           </button>
+          <button type="button" (click)="rotate(1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate right">
+            <svg lucideChevronRight class="h-5 w-5"></svg>
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Item panel -->
-    <div class="lg:w-[340px] lg:shrink-0">
+    <!-- Cosmetics: category rail sits right beside the catalog card -->
+    <div class="flex gap-2 lg:shrink-0">
+      <nav class="flex shrink-0 flex-col gap-1.5 self-start">
+        @for (tab of tabs(); track tab) {
+          <button
+            type="button"
+            (click)="selectTab(tab)"
+            [class]="'flex w-[64px] flex-col items-center gap-1 rounded-xl border px-1 py-2 text-[10px] font-medium leading-none transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface text-ink-dim hover:text-ink')"
+          >
+            @switch (tab) {
+              @case ("HAIR") { <svg lucideScissors class="h-5 w-5"></svg> }
+              @case ("CAP") { <svg lucideCrown class="h-5 w-5"></svg> }
+              @case ("GLASSES") { <svg lucideGlasses class="h-5 w-5"></svg> }
+              @case ("BEARD") { <svg lucideSmile class="h-5 w-5"></svg> }
+              @case ("SHIRT") { <svg lucideShirt class="h-5 w-5"></svg> }
+              @case ("JACKET") { <svg lucideLayers class="h-5 w-5"></svg> }
+              @case ("GLOVES") { <svg lucideHand class="h-5 w-5"></svg> }
+              @case ("PANTS") { <svg lucidePersonStanding class="h-5 w-5"></svg> }
+              @case ("SHOE") { <svg lucideFootprints class="h-5 w-5"></svg> }
+              @case ("WINGS") { <svg lucideFeather class="h-5 w-5"></svg> }
+              @case ("TAIL") { <svg lucidePawPrint class="h-5 w-5"></svg> }
+              @case ("BEAK") { <svg lucideBird class="h-5 w-5"></svg> }
+              @default { <svg lucideRabbit class="h-5 w-5"></svg> }
+            }
+            <span class="text-center">{{ tabLabel(tab) }}</span>
+          </button>
+        }
+      </nav>
+
+      <!-- Item panel -->
+      <div class="min-w-0 flex-1 lg:w-[320px] lg:flex-none">
       <div class="rounded-2xl border border-line bg-surface p-4">
-        <div class="mb-3 flex items-baseline justify-between">
-          <h2 class="text-base font-semibold">{{ tabLabel(activeTab()) }}</h2>
-          <span class="text-xs text-ink-dim">{{ totalCount() }}</span>
+        <div class="mb-3 flex items-baseline justify-between gap-2">
+          <h2 class="truncate text-base font-semibold">{{ searching() ? ('"' + query().trim() + '"') : tabLabel(activeTab()) }}</h2>
+          <span class="shrink-0 text-xs text-ink-dim">{{ totalCount() }}</span>
         </div>
 
-        <input
-          type="search"
-          [value]="query()"
-          (input)="onSearch($event)"
-          [placeholder]="i18n.t('dressup.search')"
-          class="mb-3 w-full rounded-xl border border-line bg-bg px-3 py-2 text-sm text-ink placeholder:text-ink-dim/70"
-        />
+        <div class="relative mb-3">
+          <svg lucideSearch class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"></svg>
+          <input
+            type="search"
+            [value]="query()"
+            (input)="onSearch($event)"
+            [placeholder]="i18n.t('dressup.search')"
+            class="w-full rounded-xl border border-line bg-bg py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim/70"
+          />
+        </div>
 
         <div class="max-h-[440px] overflow-y-auto pr-1">
           @if (activeTab() === MOUNT) {
@@ -140,20 +135,25 @@
             </div>
           } @else {
             <div class="grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))] gap-2">
-              <button type="button" (click)="removeSlot(activeTab())" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
-                <svg lucideX class="h-4 w-4"></svg>
-              </button>
-              @for (it of gridItems(); track it.pid) {
+              @if (!searching()) {
+                <button type="button" (click)="removeSlot(activeTab())" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                  <svg lucideX class="h-4 w-4"></svg>
+                </button>
+              }
+              @for (it of gridItems(); track $index) {
                 <button
                   type="button"
-                  (click)="pickItem(activeTab(), it.pid)"
+                  (click)="pickItem(it.slot, it.pid)"
                   [title]="itemName(it)"
-                  [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (isOn(activeTab(), it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
+                  [class]="'relative aspect-square overflow-hidden rounded-lg border bg-[#0d1320] ' + (isOn(it.slot, it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')"
                 >
                   <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
                 </button>
               }
             </div>
+            @if (searching() && !gridItems().length) {
+              <p class="py-6 text-center text-sm text-ink-dim">{{ i18n.t("dressup.empty") }}</p>
+            }
           }
         </div>
 
@@ -180,6 +180,7 @@
             <p class="text-xs text-ink-dim">{{ i18n.t("dressup.empty") }}</p>
           }
         </div>
+      </div>
       </div>
     </div>
   </div>
