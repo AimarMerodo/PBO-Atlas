@@ -266,6 +266,7 @@ export const pt: Record<DictKey, string> = {
   "dressup.remove": "Remover",
   "dressup.slot.BODY": "Corpo",
   "dressup.slot.HAIR": "Cabelo",
+  "dressup.slot.CAP": "Boné",
   "dressup.slot.FACE": "Rosto",
   "dressup.slot.HAT": "Chapéu",
   "dressup.slot.HOOD": "Capuz",

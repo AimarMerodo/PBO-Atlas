@@ -32,8 +32,8 @@ import type { DressupData, DressupItem } from "@core/models/types";
 const CELL = 64;
 const COLS = 4;
 const SCALE = 5;
-/** Accordion order in the catalog (head -> torso -> legs -> extras). */
-const UI_SLOTS = ["HAIR", "FACE", "HAT", "HOOD", "MASK", "GLASSES", "CROWN", "HORNS", "BEARD", "BEAK", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "TAIL", "WINGS", "CAPE", "AURA", "BACKPACK", "HELD", "OTHER"];
+/** Catalog accordion order. These are the game's real PaperDollType channels. */
+const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
 
 /** Character dress-up tool: composite paper-doll sprite layers on a canvas, live and animated. */
 @Component({

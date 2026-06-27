@@ -266,6 +266,7 @@ export const zh: Record<DictKey, string> = {
   "dressup.remove": "移除",
   "dressup.slot.BODY": "身体",
   "dressup.slot.HAIR": "头发",
+  "dressup.slot.CAP": "帽子",
   "dressup.slot.FACE": "脸",
   "dressup.slot.HAT": "头饰",
   "dressup.slot.HOOD": "兜帽",

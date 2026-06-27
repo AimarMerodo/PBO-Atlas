@@ -269,6 +269,7 @@ export const en = {
   "dressup.remove": "Remove",
   "dressup.slot.BODY": "Body",
   "dressup.slot.HAIR": "Hair",
+  "dressup.slot.CAP": "Cap",
   "dressup.slot.FACE": "Face",
   "dressup.slot.HAT": "Headwear",
   "dressup.slot.HOOD": "Hood",
