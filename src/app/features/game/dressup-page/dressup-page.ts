@@ -111,24 +111,24 @@ export class DressupPageComponent {
   });
   protected readonly tabCount = (tab: string) => (tab === MOUNT ? this.model()?.mounts?.length ?? 0 : this.itemsBySlot().get(tab)?.length ?? 0);
 
-  /** Whether the search box is driving a global (all-slots) cosmetic search. */
-  protected readonly searching = computed(() => !!this.query().trim() && this.activeTab() !== MOUNT);
-  /** Grid items: the active tab's cosmetics, or — while searching — matches across every slot. */
+  /** Whether the search box is driving a global search (cosmetics + mounts across every tab). */
+  protected readonly searching = computed(() => !!this.query().trim());
+  /** Cosmetics shown: the active tab's items, or — while searching — matches across every slot. */
   protected readonly gridItems = computed<DressupItem[]>(() => {
-    if (this.activeTab() === MOUNT) return [];
     const q = this.query().trim().toLowerCase();
-    if (!q) return this.itemsBySlot().get(this.activeTab()) ?? [];
-    const pool = this.genderedItems(); // search every slot, not just the open tab
-    return pool.filter((it) => (it.name + " " + (it.es ?? "") + " " + (it.pt ?? "")).toLowerCase().includes(q));
+    if (q) return this.genderedItems().filter((it) => (it.name + " " + (it.es ?? "") + " " + (it.pt ?? "")).toLowerCase().includes(q));
+    if (this.activeTab() === MOUNT) return [];
+    return this.itemsBySlot().get(this.activeTab()) ?? [];
   });
+  /** Mounts shown: all mounts on the Mounts tab, or — while searching — mounts matching the query. */
   protected readonly gridMounts = computed<DressupMount[]>(() => {
-    if (this.activeTab() !== MOUNT) return [];
     const q = this.query().trim().toLowerCase();
     const arr = this.model()?.mounts ?? [];
-    return q ? arr.filter((m) => this.mountName(m).toLowerCase().includes(q)) : arr;
+    if (q) return arr.filter((m) => (m.name + " " + (m.es ?? "") + " " + (m.pt ?? "")).toLowerCase().includes(q));
+    return this.activeTab() === MOUNT ? arr : [];
   });
-  /** Total filtered results in the active tab (shown as a count). */
-  protected readonly totalCount = computed(() => (this.activeTab() === MOUNT ? this.gridMounts() : this.gridItems()).length);
+  /** Total filtered results (cosmetics + mounts), shown as a count. */
+  protected readonly totalCount = computed(() => this.gridItems().length + this.gridMounts().length);
 
   protected readonly wearing = computed(() => {
     const sel = this.selections();
