@@ -193,7 +193,11 @@ export class DressupPageComponent {
 
     const mt = this.mountItem(); // mount sheets vary in cell size (64 or 96px)
     const baseline = cv.height - 16; // ground line = character feet when unmounted
-    const unitsTall = mt ? Math.max(mt.cell, CELL + mt.oy) + 6 : CELL + 6;
+    // The client re-centers a large mount sprite (sheet width >= 384) over the 64px tile by shifting it
+    // down 16px, so the rider effectively sits oy + 16 above the mount's feet. Without this the rider
+    // sinks into the mount (worst on low-oy mounts like Milotic). Native px; scaled with everything else.
+    const riderLift = mt ? (mt.cell * mt.cols >= 384 ? 16 : 0) : 0;
+    const unitsTall = mt ? Math.max(mt.cell, CELL + mt.oy + riderLift) + 6 : CELL + 6;
     const scale = (baseline - 12) / unitsTall;
     const cx = cv.width / 2;
     const fr = this.frame();
@@ -218,7 +222,7 @@ export class DressupPageComponent {
     // body garments, so the base's baked-in green only shows where the real game shows it too.
     const rideBase = mt ? (mt.type === "BIKE" ? "1" : RIDE_POSE) : "";
     const byPid = this.byPid();
-    const charBottom = mt ? baseline - mt.oy * scale : baseline;
+    const charBottom = mt ? baseline - (mt.oy + riderLift) * scale : baseline;
     for (const slot of m.slotOrder) {
       let src: string | null;
       if (slot === "BODY") {
