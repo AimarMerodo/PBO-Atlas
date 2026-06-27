@@ -1,21 +1,33 @@
-<div class="mx-auto max-w-6xl px-4 py-6">
-  <div class="forge lg:h-[calc(100vh-7rem)]">
-    <!-- Top bar -->
-    <div class="forge-bar">
-      <div class="forge-logo">
-        <span class="forge-mark"><svg lucideSparkles class="h-4 w-4"></svg></span>
-        <span class="forge-title">AVATAR <span class="accent">FORGE</span></span>
+<!-- Full-bleed: break out of the app shell's centered max-w-6xl container. -->
+<div class="ml-[calc(50%-50vw)] w-screen px-3 sm:px-4 lg:h-[calc(100vh-8.5rem)] lg:overflow-hidden">
+  <div class="flex h-full flex-col gap-3">
+    <!-- Toolbar -->
+    <div class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-surface px-4 py-3">
+      <div class="flex items-center gap-3">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/15 text-accent-soft">
+          <svg lucideShirt class="h-5 w-5" aria-hidden="true"></svg>
+        </span>
+        <div>
+          <h1 class="text-xl font-bold leading-tight">{{ i18n.t("dressup.title") }}</h1>
+          <p class="hidden text-sm text-ink-dim sm:block">{{ i18n.t("dressup.subtitle") }}</p>
+        </div>
       </div>
       <div class="flex flex-wrap items-center gap-2">
-        <div class="forge-seg">
-          <button type="button" (click)="setGender('M')" [class.on]="gender() === 'M'">{{ i18n.t("dressup.male") }}</button>
-          <button type="button" (click)="setGender('F')" [class.on]="gender() === 'F'">{{ i18n.t("dressup.female") }}</button>
+        <div class="inline-flex overflow-hidden rounded-lg border border-line">
+          <button type="button" (click)="setGender('M')" [class]="'px-3 py-1.5 text-sm transition-colors ' + (gender() === 'M' ? 'bg-accent text-white' : 'text-ink-dim hover:text-ink')">{{ i18n.t("dressup.male") }}</button>
+          <button type="button" (click)="setGender('F')" [class]="'px-3 py-1.5 text-sm transition-colors ' + (gender() === 'F' ? 'bg-accent text-white' : 'text-ink-dim hover:text-ink')">{{ i18n.t("dressup.female") }}</button>
         </div>
-        <button type="button" class="forge-btn" (click)="randomLook()"><svg lucideShuffle class="h-3.5 w-3.5"></svg>{{ i18n.t("dressup.random") }}</button>
-        <button type="button" class="forge-btn forge-btn--gold" (click)="equipTanjiro()"><svg lucideSwords class="h-3.5 w-3.5"></svg>Tanjiro</button>
-        <button type="button" class="forge-btn" (click)="clearAll()"><svg lucideTrash2 class="h-3.5 w-3.5"></svg>{{ i18n.t("dressup.clear") }}</button>
+        <button type="button" (click)="randomLook()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+          <svg lucideShuffle class="h-4 w-4"></svg><span class="hidden sm:inline">{{ i18n.t("dressup.random") }}</span>
+        </button>
+        <button type="button" (click)="equipTanjiro()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+          <svg lucideSwords class="h-4 w-4"></svg>Tanjiro
+        </button>
+        <button type="button" (click)="clearAll()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+          <svg lucideTrash2 class="h-4 w-4"></svg><span class="hidden sm:inline">{{ i18n.t("dressup.clear") }}</span>
+        </button>
         @if (model()?.bodies?.length) {
-          <select class="forge-select" [value]="skin()" (change)="skin.set($any($event.target).value)">
+          <select [value]="skin()" (change)="skin.set($any($event.target).value)" class="rounded-lg border border-line bg-surface-2 px-2 py-1.5 text-sm text-ink">
             @for (b of model()!.bodies; track b; let i = $index) {
               <option [value]="b">{{ i18n.t("dressup.skin") }} {{ i + 1 }}</option>
             }
@@ -25,129 +37,142 @@
     </div>
 
     <!-- Main -->
-    <div class="flex min-h-0 flex-1 flex-col lg:flex-row">
-      <!-- Left: preview stage + equipment summary -->
-      <div class="forge-stage flex min-w-0 flex-1 flex-col items-center gap-4 p-4 lg:min-h-0 lg:overflow-y-auto">
-        <div class="forge-label self-start">EQUIPMENT</div>
-        <canvas
-          #cv
-          width="480"
-          height="480"
-          [class.forge-bob]="playing()"
-          class="forge-canvas block w-full max-w-[520px]"
-        ></canvas>
-
-        <!-- Rotate with < / >, plus play/pause for the walk cycle -->
-        <div class="flex items-center justify-center gap-3">
-          <button type="button" class="forge-ctrl" (click)="rotate(-1)" aria-label="rotate left"><svg lucideChevronLeft class="h-5 w-5"></svg></button>
-          <button type="button" class="forge-ctrl" (click)="togglePlay()" [attr.aria-label]="playing() ? i18n.t('dressup.pause') : i18n.t('dressup.animate')">
-            @if (playing()) { <svg lucidePause class="h-4 w-4"></svg> } @else { <svg lucidePlay class="h-4 w-4"></svg> }
-          </button>
-          <button type="button" class="forge-ctrl" (click)="rotate(1)" aria-label="rotate right"><svg lucideChevronRight class="h-5 w-5"></svg></button>
+    <div class="flex min-h-0 flex-1 flex-col gap-3 lg:flex-row">
+      <!-- Left: preview + equipment summary -->
+      <div class="flex w-full flex-col gap-3 lg:w-[460px] lg:shrink-0">
+        <div class="rounded-2xl border border-line bg-surface p-4">
+          <canvas
+            #cv
+            width="480"
+            height="480"
+            class="mx-auto block w-full max-w-[400px] rounded-xl [image-rendering:pixelated]"
+            style="background: radial-gradient(circle at 50% 76%, #2a3550 0%, #161d2b 55%, #0c1018 100%)"
+          ></canvas>
+          <div class="mt-3 flex items-center justify-center gap-3">
+            <button type="button" (click)="rotate(-1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate left"><svg lucideChevronLeft class="h-5 w-5"></svg></button>
+            <button type="button" (click)="togglePlay()" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" [attr.aria-label]="playing() ? i18n.t('dressup.pause') : i18n.t('dressup.animate')">
+              @if (playing()) { <svg lucidePause class="h-4 w-4"></svg> } @else { <svg lucidePlay class="h-4 w-4"></svg> }
+            </button>
+            <button type="button" (click)="rotate(1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate right"><svg lucideChevronRight class="h-5 w-5"></svg></button>
+          </div>
         </div>
 
-        <!-- Equipment slots: every category + what's worn, click to jump to it -->
-        <div class="grid w-full max-w-[440px] grid-cols-2 gap-2">
-          @for (tab of tabs(); track tab) {
-            <button type="button" (click)="selectTab(tab)" [class.on]="activeTab() === tab && !searching()" class="forge-slot">
-              <span class="forge-chip">
-                @if (tab === MOUNT) {
-                  @if (mountItem(); as mt) {
-                    <img [src]="mountPath(mt.id, 'back')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
-                    <img [src]="mountPath(mt.id, 'front')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+        <div class="rounded-2xl border border-line bg-surface p-4 lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
+          <h2 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.wearing") }}</h2>
+          <div class="grid grid-cols-2 gap-2">
+            @for (tab of tabs(); track tab) {
+              <button type="button" (click)="selectTab(tab)" [class]="'flex items-center gap-2 rounded-lg border p-2 text-left transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/10' : 'border-line bg-surface-2 hover:border-accent-soft')">
+                <span class="relative grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded bg-[#0d1320] text-ink-dim">
+                  @if (tab === MOUNT) {
+                    @if (mountItem(); as mt) {
+                      <img [src]="mountPath(mt.id, 'back')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                      <img [src]="mountPath(mt.id, 'front')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                    } @else { <svg lucideRabbit class="h-4 w-4"></svg> }
+                  } @else if (equippedPid(tab)) {
+                    <img [src]="spritePath(equippedPid(tab))" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
                   } @else {
-                    <svg lucideRabbit class="h-4 w-4"></svg>
+                    @switch (tab) {
+                      @case ("HAIR") { <svg lucideScissors class="h-4 w-4"></svg> }
+                      @case ("CAP") { <svg lucideCrown class="h-4 w-4"></svg> }
+                      @case ("GLASSES") { <svg lucideGlasses class="h-4 w-4"></svg> }
+                      @case ("BEARD") { <svg lucideSmile class="h-4 w-4"></svg> }
+                      @case ("SHIRT") { <svg lucideShirt class="h-4 w-4"></svg> }
+                      @case ("JACKET") { <svg lucideLayers class="h-4 w-4"></svg> }
+                      @case ("GLOVES") { <svg lucideHand class="h-4 w-4"></svg> }
+                      @case ("PANTS") { <svg lucidePersonStanding class="h-4 w-4"></svg> }
+                      @case ("SHOE") { <svg lucideFootprints class="h-4 w-4"></svg> }
+                      @case ("WINGS") { <svg lucideFeather class="h-4 w-4"></svg> }
+                      @case ("TAIL") { <svg lucidePawPrint class="h-4 w-4"></svg> }
+                      @case ("BEAK") { <svg lucideBird class="h-4 w-4"></svg> }
+                      @default { <svg lucideRabbit class="h-4 w-4"></svg> }
+                    }
                   }
-                } @else if (equippedPid(tab)) {
-                  <img [src]="spritePath(equippedPid(tab))" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
-                } @else {
-                  @switch (tab) {
-                    @case ("HAIR") { <svg lucideScissors class="h-4 w-4"></svg> }
-                    @case ("CAP") { <svg lucideCrown class="h-4 w-4"></svg> }
-                    @case ("GLASSES") { <svg lucideGlasses class="h-4 w-4"></svg> }
-                    @case ("BEARD") { <svg lucideSmile class="h-4 w-4"></svg> }
-                    @case ("SHIRT") { <svg lucideShirt class="h-4 w-4"></svg> }
-                    @case ("JACKET") { <svg lucideLayers class="h-4 w-4"></svg> }
-                    @case ("GLOVES") { <svg lucideHand class="h-4 w-4"></svg> }
-                    @case ("PANTS") { <svg lucidePersonStanding class="h-4 w-4"></svg> }
-                    @case ("SHOE") { <svg lucideFootprints class="h-4 w-4"></svg> }
-                    @case ("WINGS") { <svg lucideFeather class="h-4 w-4"></svg> }
-                    @case ("TAIL") { <svg lucidePawPrint class="h-4 w-4"></svg> }
-                    @case ("BEAK") { <svg lucideBird class="h-4 w-4"></svg> }
-                    @default { <svg lucideRabbit class="h-4 w-4"></svg> }
-                  }
-                }
-              </span>
-              <span class="min-w-0 flex-1">
-                <span class="forge-slot-label block">{{ tabLabel(tab) }}</span>
-                <span class="forge-slot-name block">{{ equippedName(tab) }}</span>
-              </span>
-            </button>
-          }
+                </span>
+                <span class="min-w-0 flex-1">
+                  <span class="block text-[10px] font-medium uppercase leading-none tracking-wide text-ink-dim">{{ tabLabel(tab) }}</span>
+                  <span class="mt-0.5 block truncate text-sm leading-tight text-ink">{{ equippedName(tab) }}</span>
+                </span>
+              </button>
+            }
+          </div>
         </div>
       </div>
 
       <!-- Right: catalog -->
-      <div class="forge-panel flex w-full min-h-0 flex-col lg:w-[444px] lg:flex-none">
-        <div class="forge-pills">
+      <div class="flex min-h-0 w-full flex-1 flex-col rounded-2xl border border-line bg-surface lg:min-w-0">
+        <div class="flex flex-wrap gap-2 border-b border-line p-3">
           @for (tab of tabs(); track tab) {
-            <button type="button" (click)="selectTab(tab)" [class.on]="activeTab() === tab && !searching()" class="forge-pill">{{ tabLabel(tab) }}</button>
+            <button type="button" (click)="selectTab(tab)" [class]="'inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-medium transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface-2 text-ink-dim hover:text-ink')">
+              @switch (tab) {
+                @case ("HAIR") { <svg lucideScissors class="h-3.5 w-3.5"></svg> }
+                @case ("CAP") { <svg lucideCrown class="h-3.5 w-3.5"></svg> }
+                @case ("GLASSES") { <svg lucideGlasses class="h-3.5 w-3.5"></svg> }
+                @case ("BEARD") { <svg lucideSmile class="h-3.5 w-3.5"></svg> }
+                @case ("SHIRT") { <svg lucideShirt class="h-3.5 w-3.5"></svg> }
+                @case ("JACKET") { <svg lucideLayers class="h-3.5 w-3.5"></svg> }
+                @case ("GLOVES") { <svg lucideHand class="h-3.5 w-3.5"></svg> }
+                @case ("PANTS") { <svg lucidePersonStanding class="h-3.5 w-3.5"></svg> }
+                @case ("SHOE") { <svg lucideFootprints class="h-3.5 w-3.5"></svg> }
+                @case ("WINGS") { <svg lucideFeather class="h-3.5 w-3.5"></svg> }
+                @case ("TAIL") { <svg lucidePawPrint class="h-3.5 w-3.5"></svg> }
+                @case ("BEAK") { <svg lucideBird class="h-3.5 w-3.5"></svg> }
+                @default { <svg lucideRabbit class="h-3.5 w-3.5"></svg> }
+              }
+              {{ tabLabel(tab) }}
+            </button>
           }
         </div>
 
-        <div class="forge-head">
-          <span class="forge-head-label">{{ searching() ? query().trim() : tabLabel(activeTab()) }}</span>
-          <span class="forge-head-count">{{ totalCount() }} ITEMS</span>
+        <div class="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
+          <h2 class="truncate text-base font-semibold">{{ searching() ? query().trim() : tabLabel(activeTab()) }}</h2>
+          <span class="shrink-0 text-xs text-ink-dim">{{ totalCount() }}</span>
         </div>
 
-        <div class="forge-search">
-          <svg lucideSearch class="h-4 w-4"></svg>
-          <input type="search" [value]="query()" (input)="onSearch($event)" [placeholder]="i18n.t('dressup.search')" />
+        <div class="border-b border-line p-3">
+          <div class="relative">
+            <svg lucideSearch class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"></svg>
+            <input type="search" [value]="query()" (input)="onSearch($event)" [placeholder]="i18n.t('dressup.search')" class="w-full rounded-xl border border-line bg-bg py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim/70" />
+          </div>
         </div>
 
-        <div class="max-h-[62vh] flex-1 overflow-y-auto lg:max-h-none">
-          <div class="forge-grid">
-            <!-- "none" cell while browsing a single tab (hidden during a mixed search) -->
+        <div class="max-h-[60vh] flex-1 overflow-y-auto p-3 lg:max-h-none">
+          <div class="grid grid-cols-[repeat(auto-fill,minmax(76px,1fr))] gap-2">
             @if (!searching()) {
               @if (activeTab() === MOUNT) {
-                <button type="button" class="forge-card none" (click)="clearMount()" [class.on]="!mount()" [title]="i18n.t('dressup.none')">
-                  <svg lucideX class="h-6 w-6"></svg>
-                  <span class="forge-name">{{ i18n.t("dressup.none") }}</span>
+                <button type="button" (click)="clearMount()" [class]="'flex aspect-square flex-col items-center justify-center gap-1 rounded-lg border text-ink-dim transition-colors ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                  <svg lucideX class="h-5 w-5"></svg><span class="text-[10px]">{{ i18n.t("dressup.none") }}</span>
                 </button>
               } @else {
-                <button type="button" class="forge-card none" (click)="removeSlot(activeTab())" [class.on]="!selections()[activeTab()]" [title]="i18n.t('dressup.none')">
-                  <svg lucideX class="h-6 w-6"></svg>
-                  <span class="forge-name">{{ i18n.t("dressup.none") }}</span>
+                <button type="button" (click)="removeSlot(activeTab())" [class]="'flex aspect-square flex-col items-center justify-center gap-1 rounded-lg border text-ink-dim transition-colors ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                  <svg lucideX class="h-5 w-5"></svg><span class="text-[10px]">{{ i18n.t("dressup.none") }}</span>
                 </button>
               }
             }
             @for (it of gridItems(); track $index) {
-              <button type="button" class="forge-card" [class.on]="isOn(it.slot, it.pid)" (click)="pickItem(it.slot, it.pid)" [title]="itemName(it)">
-                <span class="forge-swatch">
+              <button type="button" (click)="pickItem(it.slot, it.pid)" [title]="itemName(it)" [class]="'relative flex flex-col items-center gap-1 rounded-lg border p-1.5 transition-colors ' + (isOn(it.slot, it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')">
+                <span class="relative aspect-square w-full overflow-hidden rounded bg-[#0d1320]">
                   <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
                 </span>
-                <span class="forge-name">{{ itemName(it) }}</span>
-                @if (isOn(it.slot, it.pid)) { <span class="forge-check"><svg lucideCheck class="h-3 w-3"></svg></span> }
+                <span class="w-full truncate text-center text-[10px] leading-tight text-ink-dim">{{ itemName(it) }}</span>
+                @if (isOn(it.slot, it.pid)) { <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-accent text-white"><svg lucideCheck class="h-3 w-3"></svg></span> }
               </button>
             }
             @for (m of gridMounts(); track m.id) {
-              <button type="button" class="forge-card" [class.on]="mount() === m.id" (click)="pickMount(m.id)" [title]="mountName(m)">
-                <span class="forge-swatch">
+              <button type="button" (click)="pickMount(m.id)" [title]="mountName(m)" [class]="'relative flex flex-col items-center gap-1 rounded-lg border p-1.5 transition-colors ' + (mount() === m.id ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')">
+                <span class="relative aspect-square w-full overflow-hidden rounded bg-[#0d1320]">
                   <img loading="lazy" [src]="mountPath(m.id, 'back')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
                   <img loading="lazy" [src]="mountPath(m.id, 'front')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
                 </span>
-                <span class="forge-name">{{ mountName(m) }}</span>
-                @if (mount() === m.id) { <span class="forge-check"><svg lucideCheck class="h-3 w-3"></svg></span> }
+                <span class="w-full truncate text-center text-[10px] leading-tight text-ink-dim">{{ mountName(m) }}</span>
+                @if (mount() === m.id) { <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-accent text-white"><svg lucideCheck class="h-3 w-3"></svg></span> }
               </button>
             }
           </div>
           @if (searching() && !totalCount()) {
-            <p class="forge-empty">{{ i18n.t("dressup.empty") }}</p>
+            <p class="py-10 text-center text-sm text-ink-dim">{{ i18n.t("dressup.empty") }}</p>
           }
         </div>
       </div>
     </div>
-
-    <div class="forge-scan"></div>
   </div>
 </div>

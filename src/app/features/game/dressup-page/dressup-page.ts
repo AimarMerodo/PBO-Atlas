@@ -33,7 +33,6 @@ import {
   LucideShirt,
   LucideShuffle,
   LucideSmile,
-  LucideSparkles,
   LucideSwords,
   LucideTrash2,
   LucideX,
@@ -69,9 +68,8 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSparkles, LucideSwords, LucideTrash2, LucideX],
+  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
   templateUrl: "./dressup-page.html",
-  styleUrl: "./dressup-page.css",
 })
 export class DressupPageComponent {
   protected readonly i18n = inject(LanguageService);
