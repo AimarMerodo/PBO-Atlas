@@ -309,3 +309,31 @@ export interface RoutesManifest {
   locations: string[];
   regions: string[];
 }
+
+/** A single wearable cosmetic in the dress-up tool (one paper-doll sprite sheet). */
+export interface DressupItem {
+  name: string;
+  es?: string;
+  pt?: string;
+  zh?: string;
+  /** Paper-doll sprite id -> /sprites/pbo/paperdolls/<pid>.png */
+  pid: string;
+  /** Equip slot (HAIR, SHIRT, MASK, ...). */
+  slot: string;
+  /** "M" | "F" | "U" (unisex). */
+  gender: string;
+}
+
+export interface DressupPreset {
+  name: string;
+  slots: Record<string, string>;
+}
+
+export interface DressupData {
+  /** Base body sprite ids (paper-doll sheets). */
+  bodies: string[];
+  /** Slot draw order, back to front. */
+  slotOrder: string[];
+  items: DressupItem[];
+  presets: DressupPreset[];
+}

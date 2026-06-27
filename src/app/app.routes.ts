@@ -40,6 +40,10 @@ export const routes: Routes = [
       import("@features/game/cosmetics-page/cosmetics-page").then((m) => m.CosmeticsPageComponent),
   },
   {
+    path: "dressup",
+    loadComponent: () => import("@features/game/dressup-page/dressup-page").then((m) => m.DressupPageComponent),
+  },
+  {
     path: "feedback",
     loadComponent: () => import("@features/feedback/feedback-page").then((m) => m.FeedbackPage),
   },

@@ -2,6 +2,7 @@ import { Injectable, inject } from "@angular/core";
 import { DATA_LOADER } from "./data-loader";
 import type {
   CosmeticBundle,
+  DressupData,
   GameItem,
   HomePayload,
   LocationPage,
@@ -32,4 +33,5 @@ export class DataService {
   items = () => this.getJson<{ items: GameItem[] }>("lists/items.json");
   mounts = () => this.getJson<Mount[]>("lists/mounts.json");
   cosmetics = () => this.getJson<CosmeticBundle[]>("lists/cosmetics.json");
+  dressup = () => this.getJson<DressupData>("dressup.json");
 }
