@@ -120,7 +120,7 @@
         <div class="max-h-[440px] overflow-y-auto pr-1">
           @if (activeTab() === MOUNT) {
             <div class="grid grid-cols-[repeat(auto-fill,minmax(68px,1fr))] gap-2">
-              <button type="button" (click)="mount.set('')" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+              <button type="button" (click)="clearMount()" [class]="'grid aspect-square place-items-center rounded-lg border text-ink-dim ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
                 <svg lucideX class="h-5 w-5"></svg>
               </button>
               @for (m of gridMounts(); track m.id) {
@@ -162,7 +162,7 @@
                 <span class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 py-1 pl-1 pr-2 text-xs">
                   <span class="relative h-5 w-5 overflow-hidden rounded bg-[#0d1320]"><img [src]="mountPath(mt.id, 'back')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" /><img [src]="mountPath(mt.id, 'front')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" /></span>
                   <span class="font-medium">{{ mountName(mt) }}</span>
-                  <button type="button" (click)="mount.set('')" class="text-ink-dim hover:text-accent-soft" [attr.aria-label]="i18n.t('dressup.remove')"><svg lucideX class="h-3.5 w-3.5"></svg></button>
+                  <button type="button" (click)="clearMount()" class="text-ink-dim hover:text-accent-soft" [attr.aria-label]="i18n.t('dressup.remove')"><svg lucideX class="h-3.5 w-3.5"></svg></button>
                 </span>
               }
               @for (w of wearing(); track w.slot) {

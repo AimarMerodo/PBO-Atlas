@@ -44,8 +44,6 @@ import type { DressupData, DressupItem, DressupMount } from "@core/models/types"
 const CELL = 64;
 const COLS = 4;
 const MOUNT = "MOUNT";
-/** Rider feet sit this far up the mount (fraction of mount height) so the outfit clears it. */
-const RIDE_FRAC = 0.42;
 /** Catalog tab order — the game's real PaperDollType channels, then mounts. */
 const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
 
@@ -188,7 +186,7 @@ export class DressupPageComponent {
 
     const mt = this.mountItem(); // mount sheets vary in cell size (64 or 96px)
     const baseline = cv.height - 16; // ground line = character feet when unmounted
-    const unitsTall = mt ? Math.max(mt.cell, mt.cell * RIDE_FRAC + CELL) + 6 : CELL + 6;
+    const unitsTall = mt ? Math.max(mt.cell, CELL + mt.oy) + 6 : CELL + 6;
     const scale = (baseline - 12) / unitsTall;
     const cx = cv.width / 2;
     const fr = this.frame();
@@ -198,23 +196,28 @@ export class DressupPageComponent {
     const sy = dr * CELL;
     const sel = this.selections();
 
-    // Draw the whole mount first, then the full standing character on top — so every cosmetic
-    // stays visible — with the rider's feet up near the mount's back (RIDE_FRAC).
-    if (mt) {
-      const mw = mt.cell * scale;
-      const col = fr % mt.cols;
-      this.blit(this.mountPath(mt.id, "back"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
-      this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
-    }
-    const charBottom = mt ? baseline - mt.cell * RIDE_FRAC * scale : baseline;
+    // mount_back, then the seated riding character (its own pose + cosmetics), then mount_front.
+    // Mounting also turns to a side view (see pickMount): head-on a big mount hides the rider,
+    // but in profile it only overlaps a leg, so the rider and outfit show.
+    const mw = mt ? mt.cell * scale : 0;
+    const col = mt ? fr % mt.cols : 0;
+    if (mt) this.blit(this.mountPath(mt.id, "back"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
+    const rideBody = mt ? (m.rideBodies.includes(this.skin()) ? this.skin() : m.rideBodies[0]) : "";
+    const charBottom = mt ? baseline - mt.oy * scale : baseline;
     for (const slot of m.slotOrder) {
       const pid = slot === "BODY" ? this.skin() : sel[slot];
-      if (pid) this.blit(this.spritePath(pid), CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
+      if (!pid) continue;
+      const src = mt ? (slot === "BODY" ? this.rideBasePath(rideBody) : this.ridePath(pid)) : this.spritePath(pid);
+      this.blit(src, CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
+    if (mt) this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
   }
 
   protected spritePath = (pid: string) => `/sprites/pbo/paperdolls/${pid}.png`;
   protected mountPath = (id: string, layer: "back" | "front") => `/sprites/pbo/mounts/${layer}/${id}.png`;
+  /** Seated riding-pose sprites, used while mounted. */
+  protected ridePath = (pid: string) => `/sprites/pbo/mounts/ride/${pid}.png`;
+  protected rideBasePath = (id: string) => `/sprites/pbo/mounts/ride-base/${id}.png`;
   protected itemName = (it: DressupItem) => this.i18n.pick({ en: it.name, es: it.es, pt: it.pt, zh: it.zh });
   protected mountName = (m: DressupMount) => this.i18n.pick({ en: m.name, es: m.es, pt: m.pt, zh: m.zh });
   protected tabLabel = (tab: string) => (tab === MOUNT ? this.i18n.t("dressup.mount") : this.i18n.t(`dressup.slot.${tab}` as DictKey));
@@ -229,7 +232,17 @@ export class DressupPageComponent {
     });
   }
   protected pickMount(id: string): void {
-    this.mount.update((cur) => (cur === id ? "" : id));
+    // Face sideways when mounting: head-on, a big mount's front layer hides the rider, but
+    // in profile it's just a leg, so the whole outfit shows on the mount.
+    if (this.mount() === id) this.clearMount();
+    else {
+      this.mount.set(id);
+      this.dir.set(2);
+    }
+  }
+  protected clearMount(): void {
+    this.mount.set("");
+    this.dir.set(0);
   }
   protected removeSlot(slot: string): void {
     this.selections.update((s) => {
