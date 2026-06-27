@@ -81,29 +81,45 @@ for (const ln of rows) {
 }
 items.sort((a, b) => DRAW_ID[a.slot] - DRAW_ID[b.slot] || a.name.localeCompare(b.name));
 
-// --- 5. One-click presets, resolved to their real channels ---
-const PRESETS = {
-  Tanjiro: ["Tanjiro Hair", "Tanjiro Face", "Tanjiro Shirt", "Tanjiro Jacket", "Tanjiro Pants", "Tanjiro Shoes", "Tanjiro Sword", "Tanjiro Aura"],
-  Eevee: ["Eevee Costume Hood", "Eevee Costume Top (Male)", "Eevee Costume Pants (Male)", "Eevee Costume Shoes (Male)", "Eevee Costume Tail (Male)"],
-  Stitch: ["Stitch Mask", "Stitch Top", "Stitch Pants", "Stitch Shoes"],
-};
-const presets = Object.entries(PRESETS)
-  .map(([name, names]) => {
-    const slots = {};
-    for (const n of names) {
-      const it = byName.get(n);
-      if (it) slots[it.slot] = it.pid;
-    }
-    return { name, slots };
-  })
-  .filter((p) => Object.keys(p.slots).length);
+// --- 5. Mounts (same 256x256 / 64px-cell grid -> rendered as back + front layers) ---
+const mfSrc = path.join(GAME, "assets/ui/sprite/mounts/mount_front");
+const mbSrc = path.join(GAME, "assets/ui/sprite/mounts/mount_back");
+const mfOut = path.join(REPO, "public/sprites/pbo/mounts/front");
+const mbOut = path.join(REPO, "public/sprites/pbo/mounts/back");
+fs.mkdirSync(mfOut, { recursive: true });
+fs.mkdirSync(mbOut, { recursive: true });
+const fromGameMounts = fs.existsSync(mfSrc);
+const listIds = (dir) => new Set(fs.readdirSync(dir).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)));
+const haveFront = listIds(fromGameMounts ? mfSrc : mfOut);
+const haveBack = listIds(fromGameMounts ? mbSrc : mbOut);
+const mountRows = fs.readFileSync(path.join(cache, "item/mounts.csv"), "utf8").split(/\r?\n/);
+const mounts = [];
+const seenMount = new Set();
+for (const ln of mountRows) {
+  const c = ln.split(",");
+  const name = c[0], type = c[1], sid = c[4]; // col 4 = mount sprite id
+  if (!name || !/^\d+$/.test(sid)) continue;
+  if (!haveFront.has(sid) || !haveBack.has(sid) || seenMount.has(sid)) continue;
+  seenMount.add(sid);
+  if (fromGameMounts) {
+    fs.copyFileSync(path.join(mfSrc, sid + ".png"), path.join(mfOut, sid + ".png"));
+    fs.copyFileSync(path.join(mbSrc, sid + ".png"), path.join(mbOut, sid + ".png"));
+  }
+  const e = { id: sid, name, type };
+  if (esMap.get(name)) e.es = esMap.get(name);
+  if (ptMap.get(name)) e.pt = ptMap.get(name);
+  if (zhMap.get(name)) e.zh = zhMap.get(name);
+  mounts.push(e);
+}
+mounts.sort((a, b) => a.name.localeCompare(b.name));
+console.log(`mounts: ${mounts.length} (copied front+back: ${fromGameMounts})`);
 
 const data = {
   bodies: ["1", "2", "3", "4"].filter((b) => pdHave.has(b)),
   slotOrder,
   items,
-  presets,
+  mounts,
 };
 fs.mkdirSync(path.dirname(outData), { recursive: true });
 fs.writeFileSync(outData, JSON.stringify(data));
-console.log(`dressup.json -> ${items.length} items, ${data.bodies.length} bodies, ${presets.length} presets (skipped ${skipped} with unresolved channel)`);
+console.log(`dressup.json -> ${items.length} items, ${mounts.length} mounts, ${data.bodies.length} bodies (skipped ${skipped} with unresolved channel)`);

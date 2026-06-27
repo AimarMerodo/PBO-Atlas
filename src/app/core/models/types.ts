@@ -324,16 +324,22 @@ export interface DressupItem {
   gender: string;
 }
 
-export interface DressupPreset {
+/** A mount: back + front sprite sheets at /sprites/pbo/mounts/{back,front}/<id>.png */
+export interface DressupMount {
+  id: string;
   name: string;
-  slots: Record<string, string>;
+  es?: string;
+  pt?: string;
+  zh?: string;
+  /** LAND_POKEMON | SURF_POKEMON. */
+  type: string;
 }
 
 export interface DressupData {
-  /** Base body sprite ids (paper-doll sheets). */
+  /** Base body sprite ids (skin tones). */
   bodies: string[];
   /** Slot draw order, back to front. */
   slotOrder: string[];
   items: DressupItem[];
-  presets: DressupPreset[];
+  mounts: DressupMount[];
 }
