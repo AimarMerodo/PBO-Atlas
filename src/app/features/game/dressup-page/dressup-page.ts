@@ -3,6 +3,7 @@ import {
   Component,
   DestroyRef,
   ElementRef,
+  PLATFORM_ID,
   afterNextRender,
   computed,
   effect,
@@ -11,6 +12,7 @@ import {
   signal,
   viewChild,
 } from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
 import { Meta, Title } from "@angular/platform-browser";
 import {
   LucideBird,
@@ -18,6 +20,7 @@ import {
   LucideChevronLeft,
   LucideChevronRight,
   LucideCrown,
+  LucideDownload,
   LucideFeather,
   LucideFootprints,
   LucideGlasses,
@@ -28,6 +31,7 @@ import {
   LucidePersonStanding,
   LucidePlay,
   LucideRabbit,
+  LucideSave,
   LucideScissors,
   LucideSearch,
   LucideShirt,
@@ -35,6 +39,7 @@ import {
   LucideSmile,
   LucideSwords,
   LucideTrash2,
+  LucideUpload,
   LucideX,
 } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
@@ -52,6 +57,15 @@ const RIDE_POSE = "2";
 /** Head accessories the client keeps from the walking sheet when a cosmetic has no seated variant; body
  *  garments without a seated variant are dropped instead (matching the decompiled mounted renderer). */
 const RIDE_FALLBACK_SLOTS = new Set(["HAIR", "CAP", "BEARD", "GLASSES", "BEAK"]);
+const PRESETS_KEY = "pbo-dressup-presets";
+/** A saved look: name + everything needed to restore it. */
+interface DressupPreset {
+  name: string;
+  gender: "M" | "F";
+  skin: string;
+  sel: Record<string, string>;
+  mount: string;
+}
 /** One-click preset: the full in-game Tanjiro (Kamado) cosmetic set, keyed by the slot each piece packs into. */
 const TANJIRO_LOOK: Record<string, string> = {
   HAIR: "4991", // Tanjiro Face
@@ -68,7 +82,7 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideX],
+  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -76,6 +90,8 @@ export class DressupPageComponent {
   private readonly data = inject(DataService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly canvasRef = viewChild<ElementRef<HTMLCanvasElement>>("cv");
+  private readonly fileRef = viewChild<ElementRef<HTMLInputElement>>("file");
+  private readonly platformId = inject(PLATFORM_ID);
 
   protected readonly MOUNT = MOUNT;
   /** Facing cycle for the < / > rotate buttons: front -> right -> back -> left (clockwise to the viewer). */
@@ -92,6 +108,8 @@ export class DressupPageComponent {
   protected readonly dir = signal(0);
   protected readonly playing = signal(true);
   protected readonly query = signal("");
+  protected readonly presets = signal<DressupPreset[]>([]);
+  protected readonly presetName = signal("");
   private readonly frame = signal(0);
 
   /** Cosmetics for the current gender (gendered variants + unisex). */
@@ -167,6 +185,7 @@ export class DressupPageComponent {
     });
 
     afterNextRender(() => {
+      this.loadPresets();
       const cv = this.canvasRef()?.nativeElement;
       if (!cv) return;
       this.ctx = cv.getContext("2d");
@@ -327,6 +346,85 @@ export class DressupPageComponent {
       if (have.get(slot)?.some((it) => it.pid === pid)) next[slot] = pid;
     }
     this.selections.set(next);
+  }
+  // --- Saved looks (presets): persisted in localStorage, exportable/importable as JSON ---
+  private loadPresets(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    try {
+      const raw = localStorage.getItem(PRESETS_KEY);
+      const data = raw ? JSON.parse(raw) : [];
+      if (Array.isArray(data)) this.presets.set(data.filter((p) => p && typeof p.name === "string"));
+    } catch {
+      /* ignore corrupt storage */
+    }
+  }
+  private persistPresets(list: DressupPreset[]): void {
+    const sorted = [...list].sort((a, b) => a.name.localeCompare(b.name));
+    this.presets.set(sorted);
+    if (isPlatformBrowser(this.platformId)) {
+      try {
+        localStorage.setItem(PRESETS_KEY, JSON.stringify(sorted));
+      } catch {
+        /* storage full / unavailable */
+      }
+    }
+  }
+  protected onPresetName(e: Event): void {
+    this.presetName.set((e.target as HTMLInputElement).value);
+  }
+  /** Save the current look under the typed name (overwrites a same-named preset). */
+  protected savePreset(): void {
+    const name = this.presetName().trim();
+    if (!name) return;
+    const preset: DressupPreset = { name, gender: this.gender(), skin: this.skin(), sel: { ...this.selections() }, mount: this.mount() };
+    this.persistPresets([...this.presets().filter((p) => p.name !== name), preset]);
+    this.presetName.set("");
+  }
+  protected applyPreset(p: DressupPreset): void {
+    this.gender.set(p.gender === "F" ? "F" : "M");
+    this.skin.set(p.skin || "1");
+    this.selections.set({ ...(p.sel ?? {}) });
+    this.mount.set(p.mount ?? "");
+  }
+  protected deletePreset(name: string): void {
+    this.persistPresets(this.presets().filter((p) => p.name !== name));
+  }
+  /** Download all saved looks as a JSON file. */
+  protected exportPresets(): void {
+    if (!isPlatformBrowser(this.platformId) || !this.presets().length) return;
+    const blob = new Blob([JSON.stringify(this.presets(), null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "pbo-dressup-presets.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+  protected triggerImport(): void {
+    this.fileRef()?.nativeElement.click();
+  }
+  /** Merge looks from a JSON file (same name overwrites). */
+  protected importPresets(e: Event): void {
+    const input = e.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(String(reader.result));
+        const incoming: DressupPreset[] = Array.isArray(data) ? data : [data];
+        const byName = new Map(this.presets().map((p) => [p.name, p]));
+        for (const p of incoming) {
+          if (!p || typeof p.name !== "string" || typeof p.sel !== "object") continue;
+          byName.set(p.name, { name: p.name, gender: p.gender === "F" ? "F" : "M", skin: String(p.skin ?? "1"), sel: p.sel ?? {}, mount: String(p.mount ?? "") });
+        }
+        this.persistPresets([...byName.values()]);
+      } catch {
+        /* invalid file */
+      }
+      input.value = "";
+    };
+    reader.readAsText(file);
   }
   protected selectTab(tab: string): void {
     this.activeTab.set(tab);
