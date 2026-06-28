@@ -27,6 +27,7 @@ import {
   LucideGlasses,
   LucideHand,
   LucideLayers,
+  LucideLayoutGrid,
   LucideMapPin,
   LucidePause,
   LucidePawPrint,
@@ -56,6 +57,8 @@ import { decodeLook, downloadJson, encodeLook } from "./dressup-io";
 const CELL = 64;
 const COLS = 4;
 const MOUNT = "MOUNT";
+/** Pseudo-tab that shows every cosmetic across all slots in one grid. */
+const ALL = "ALL";
 /** Catalog tab order — the game's real PaperDollType channels, then mounts. */
 const UI_SLOTS = ["HAIR", "CAP", "GLASSES", "BEARD", "SHIRT", "JACKET", "GLOVES", "PANTS", "SHOE", "WINGS", "TAIL", "BEAK"];
 /** Seated/gripping base pose used for Pokemon mounts (mounts/base/2 in the client; base/1 is the bike pose). */
@@ -77,7 +80,7 @@ interface DressupPreset {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideLayoutGrid, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -89,6 +92,7 @@ export class DressupPageComponent {
   private readonly platformId = inject(PLATFORM_ID);
 
   protected readonly MOUNT = MOUNT;
+  protected readonly ALL = ALL;
   /** Facing cycle for the < / > rotate buttons: front -> right -> back -> left (clockwise to the viewer). */
   private readonly ROTATION = [0, 2, 3, 1];
 
@@ -131,7 +135,10 @@ export class DressupPageComponent {
     const slots = UI_SLOTS.filter((s) => groups.has(s));
     return this.model()?.mounts?.length ? [...slots, MOUNT] : slots;
   });
-  protected readonly tabCount = (tab: string) => (tab === MOUNT ? this.model()?.mounts?.length ?? 0 : this.itemsBySlot().get(tab)?.length ?? 0);
+  /** Catalog tab strip: an "All" filter first, then every populated slot, then mounts. */
+  protected readonly catalogTabs = computed(() => [ALL, ...this.tabs()]);
+  protected readonly tabCount = (tab: string) =>
+    tab === MOUNT ? this.model()?.mounts?.length ?? 0 : tab === ALL ? this.genderedItems().length : this.itemsBySlot().get(tab)?.length ?? 0;
 
   /** Whether the search box is driving a global search (cosmetics + mounts across every tab). */
   protected readonly searching = computed(() => !!this.query().trim());
@@ -139,6 +146,7 @@ export class DressupPageComponent {
   protected readonly gridItems = computed<DressupItem[]>(() => {
     const q = this.query().trim().toLowerCase();
     if (q) return this.genderedItems().filter((it) => (it.name + " " + (it.es ?? "") + " " + (it.pt ?? "")).toLowerCase().includes(q));
+    if (this.activeTab() === ALL) return this.genderedItems();
     if (this.activeTab() === MOUNT) return [];
     return this.itemsBySlot().get(this.activeTab()) ?? [];
   });
@@ -161,23 +169,15 @@ export class DressupPageComponent {
   /** pid -> item, so draw() can read each cosmetic's `ride` flag (has a seated riding variant). */
   private readonly byPid = computed(() => new Map((this.model()?.items ?? []).map((it) => [it.pid, it])));
 
-  /** Cosmetics with a known in-game source, grouped by slot for the "where to find" guide modal. */
-  protected readonly sourceGroups = computed(() => {
-    const groups = new Map<string, DressupItem[]>();
-    const seen = new Set<string>();
-    for (const it of this.model()?.items ?? []) {
-      if (!it.where) continue;
-      const key = it.slot + "|" + it.name + "|" + it.where; // drop M/F duplicates of the same garment
-      if (seen.has(key)) continue;
-      seen.add(key);
-      (groups.get(it.slot) ?? groups.set(it.slot, []).get(it.slot)!).push(it);
-    }
-    return UI_SLOTS.filter((s) => groups.has(s)).map((slot) => ({
-      slot,
-      items: groups.get(slot)!.sort((a, b) => this.itemName(a).localeCompare(this.itemName(b))),
-    }));
+  /** Cosmetics worn on the character right now, sorted by slot — for the "where to find" modal. */
+  protected readonly equippedItems = computed(() => {
+    const byPid = this.byPid();
+    const order = new Map(UI_SLOTS.map((s, i) => [s, i] as const));
+    return Object.entries(this.selections())
+      .map(([slot, pid]) => ({ slot, pid, item: byPid.get(pid) ?? null }))
+      .filter((w): w is { slot: string; pid: string; item: DressupItem } => !!w.item)
+      .sort((a, b) => (order.get(a.slot) ?? 99) - (order.get(b.slot) ?? 99));
   });
-  protected readonly sourceCount = computed(() => this.sourceGroups().reduce((n, g) => n + g.items.length, 0));
 
   private ctx: CanvasRenderingContext2D | null = null;
   private readonly imgs = new Map<string, HTMLImageElement>();
@@ -314,7 +314,8 @@ export class DressupPageComponent {
   protected rideBasePath = (id: string) => `/sprites/pbo/mounts/ride-base/${id}.png`;
   protected itemName = (it: DressupItem) => this.i18n.pick({ en: it.name, es: it.es, pt: it.pt, zh: it.zh });
   protected mountName = (m: DressupMount) => this.i18n.pick({ en: m.name, es: m.es, pt: m.pt, zh: m.zh });
-  protected tabLabel = (tab: string) => (tab === MOUNT ? this.i18n.t("dressup.mount") : this.i18n.t(`dressup.slot.${tab}` as DictKey));
+  protected tabLabel = (tab: string) =>
+    tab === MOUNT ? this.i18n.t("dressup.mount") : tab === ALL ? this.i18n.t("dressup.all") : this.i18n.t(`dressup.slot.${tab}` as DictKey);
   protected isOn = (slot: string, pid: string) => this.selections()[slot] === pid;
   /** Equipped sprite pid for a slot's summary chip ("" when empty / for the mount slot). */
   protected equippedPid = (tab: string) => (tab === MOUNT ? "" : this.selections()[tab] ?? "");
