@@ -281,6 +281,7 @@ export const pt: Record<DictKey, string> = {
   "dressup.share": "Compartilhar",
   "dressup.copied": "Link copiado!",
   "dressup.noPresets": "Ainda não há looks salvos.",
+  "dressup.noSources": "Ainda não se sabe onde conseguir.",
   "dressup.slot.BODY": "Corpo",
   "dressup.slot.HAIR": "Cabelo",
   "dressup.slot.CAP": "Boné",

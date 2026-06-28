@@ -284,6 +284,7 @@ export const en = {
   "dressup.share": "Share",
   "dressup.copied": "Link copied!",
   "dressup.noPresets": "No saved looks yet.",
+  "dressup.noSources": "No known sources yet.",
   "dressup.slot.BODY": "Body",
   "dressup.slot.HAIR": "Hair",
   "dressup.slot.CAP": "Cap",

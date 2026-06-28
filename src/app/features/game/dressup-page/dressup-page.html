@@ -23,6 +23,11 @@
     <button type="button" (click)="shareLook()" [class]="'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors ' + (shared() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface-2 hover:border-accent')">
       @if (shared()) { <svg lucideCheck class="h-4 w-4"></svg>{{ i18n.t("dressup.copied") }} } @else { <svg lucideShare2 class="h-4 w-4"></svg>{{ i18n.t("dressup.share") }} }
     </button>
+    @if (sourceCount()) {
+      <button type="button" (click)="openSources()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+        <svg lucideStore class="h-4 w-4"></svg>{{ i18n.t("item.whereToFind") }}
+      </button>
+    }
     @if (model()?.bodies?.length) {
       <select [value]="skin()" (change)="skin.set($any($event.target).value)" class="rounded-lg border border-line bg-surface-2 px-2 py-1.5 text-sm text-ink">
         @for (b of model()!.bodies; track b; let i = $index) {
@@ -138,7 +143,9 @@
           <input type="search" [value]="query()" (input)="onSearch($event)" [placeholder]="i18n.t('dressup.search')" class="w-full rounded-xl border border-line bg-bg py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim/70" />
         </div>
 
-        <div class="-mr-1 max-h-[60vh] overflow-y-auto pr-1 lg:max-h-none lg:min-h-0 lg:flex-1">
+        <!-- px/pt leave room for the selected-card ring + pop-out badges so the first row/edge
+             columns aren't clipped by this scroll container; -mx keeps the grid full-width. -->
+        <div class="-mx-2 max-h-[60vh] overflow-y-auto px-2 pt-2 lg:max-h-none lg:min-h-0 lg:flex-1">
           <div class="grid grid-cols-[repeat(auto-fill,minmax(72px,1fr))] gap-2">
             @if (!searching()) {
               @if (activeTab() === MOUNT) {
@@ -230,6 +237,44 @@
             <svg lucideDownload class="h-4 w-4"></svg>{{ i18n.t("dressup.exportAll") }}
           </button>
           <input #file type="file" accept="application/json,.json" (change)="importPresets($event)" class="hidden" />
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Where-to-find guide: every sourced cosmetic and how to get it, grouped by slot. -->
+  @if (sourcesOpen()) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" (dismissOutside)="closeSources()">
+      <div data-modal-content role="dialog" aria-modal="true" [attr.aria-label]="i18n.t('item.whereToFind')" class="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-line bg-surface p-5 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between gap-3">
+          <h2 class="flex items-center gap-2 text-xl font-bold leading-tight"><svg lucideStore class="h-5 w-5 text-accent-soft"></svg>{{ i18n.t("item.whereToFind") }}</h2>
+          <button type="button" (click)="closeSources()" aria-label="Close" class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+        </div>
+        <div class="-mr-1 min-h-0 flex-1 overflow-y-auto pr-1">
+          @if (sourceCount()) {
+            <div class="space-y-4">
+              @for (g of sourceGroups(); track g.slot) {
+                <div>
+                  <h3 class="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ tabLabel(g.slot) }}<span class="text-ink-dim/60">· {{ g.items.length }}</span></h3>
+                  <ul class="space-y-1.5">
+                    @for (it of g.items; track it.pid) {
+                      <li class="flex items-center gap-3 rounded-lg border border-line bg-surface-2 p-2">
+                        <span class="relative h-9 w-9 shrink-0 overflow-hidden rounded bg-[#0d1320]">
+                          <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+                        </span>
+                        <span class="min-w-0 flex-1">
+                          <span class="block truncate text-sm font-medium text-ink">{{ itemName(it) }}</span>
+                          <span class="mt-0.5 flex items-center gap-1 text-xs text-ink-dim"><svg lucideMapPin class="h-3 w-3 shrink-0 text-accent-soft"></svg><span class="truncate">{{ it.where }}</span></span>
+                        </span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              }
+            </div>
+          } @else {
+            <p class="py-8 text-center text-sm text-ink-dim">{{ i18n.t("dressup.noSources") }}</p>
+          }
         </div>
       </div>
     </div>

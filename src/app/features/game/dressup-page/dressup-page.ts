@@ -41,6 +41,7 @@ import {
   LucideShirt,
   LucideShuffle,
   LucideSmile,
+  LucideStore,
   LucideTrash2,
   LucideUpload,
   LucideX,
@@ -76,7 +77,7 @@ interface DressupPreset {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -107,6 +108,8 @@ export class DressupPageComponent {
   protected readonly presets = signal<DressupPreset[]>([]);
   protected readonly presetName = signal("");
   protected readonly presetsOpen = signal(false);
+  /** Whether the "where to find" sources guide modal is open. */
+  protected readonly sourcesOpen = signal(false);
   /** Name of the preset whose title is being edited inline (null = none). */
   protected readonly editing = signal<string | null>(null);
   protected readonly editValue = signal("");
@@ -158,6 +161,24 @@ export class DressupPageComponent {
   /** pid -> item, so draw() can read each cosmetic's `ride` flag (has a seated riding variant). */
   private readonly byPid = computed(() => new Map((this.model()?.items ?? []).map((it) => [it.pid, it])));
 
+  /** Cosmetics with a known in-game source, grouped by slot for the "where to find" guide modal. */
+  protected readonly sourceGroups = computed(() => {
+    const groups = new Map<string, DressupItem[]>();
+    const seen = new Set<string>();
+    for (const it of this.model()?.items ?? []) {
+      if (!it.where) continue;
+      const key = it.slot + "|" + it.name + "|" + it.where; // drop M/F duplicates of the same garment
+      if (seen.has(key)) continue;
+      seen.add(key);
+      (groups.get(it.slot) ?? groups.set(it.slot, []).get(it.slot)!).push(it);
+    }
+    return UI_SLOTS.filter((s) => groups.has(s)).map((slot) => ({
+      slot,
+      items: groups.get(slot)!.sort((a, b) => this.itemName(a).localeCompare(this.itemName(b))),
+    }));
+  });
+  protected readonly sourceCount = computed(() => this.sourceGroups().reduce((n, g) => n + g.items.length, 0));
+
   private ctx: CanvasRenderingContext2D | null = null;
   private readonly imgs = new Map<string, HTMLImageElement>();
   private inited = false;
@@ -202,8 +223,8 @@ export class DressupPageComponent {
       if (this.ctx) this.ctx.imageSmoothingEnabled = false;
       this.draw();
       const id = setInterval(() => {
-        // Pause the walk cycle while the presets modal is open (no point repainting under it).
-        if (this.playing() && !this.presetsOpen()) this.frame.update((f) => (f + 1) % COLS);
+        // Pause the walk cycle while a modal is open (no point repainting under a solid backdrop).
+        if (this.playing() && !this.presetsOpen() && !this.sourcesOpen()) this.frame.update((f) => (f + 1) % COLS);
       }, 160);
       this.destroyRef.onDestroy(() => clearInterval(id));
     });
@@ -427,6 +448,12 @@ export class DressupPageComponent {
   }
   protected closePresets(): void {
     this.presetsOpen.set(false);
+  }
+  protected openSources(): void {
+    this.sourcesOpen.set(true);
+  }
+  protected closeSources(): void {
+    this.sourcesOpen.set(false);
   }
   /** Download a single saved look as its own JSON file. */
   protected exportPreset(p: DressupPreset): void {

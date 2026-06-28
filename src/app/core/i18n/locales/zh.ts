@@ -281,6 +281,7 @@ export const zh: Record<DictKey, string> = {
   "dressup.share": "分享",
   "dressup.copied": "链接已复制！",
   "dressup.noPresets": "还没有保存的造型。",
+  "dressup.noSources": "暂无已知获取途径。",
   "dressup.slot.BODY": "身体",
   "dressup.slot.HAIR": "头发",
   "dressup.slot.CAP": "帽子",
