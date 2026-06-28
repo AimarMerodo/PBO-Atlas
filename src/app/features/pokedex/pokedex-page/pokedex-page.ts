@@ -8,6 +8,7 @@ import type { PokedexCard } from "@core/models/types";
 import { TYPE_COLORS } from "@core/utils/colors";
 import { paginate } from "@core/utils/paginate";
 import { pad } from "@core/utils/format";
+import { Combobox } from "@shared/components/combobox/combobox";
 import { Pager } from "@shared/components/pager/pager";
 import { TypeBadge } from "@shared/components/type-badge/type-badge";
 
@@ -16,13 +17,13 @@ const REGION_ORDER = ["sinnoh", "jvaloh", "hoenn", "kanto"];
 const RARITY_OPTIONS = ["common", "uncommon", "rare", "very-rare", "ultra-rare", "legendary"] as const;
 const EV_STATS = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"] as const;
 type SortKey = "number" | "name" | "stats";
-type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "sort";
+type FilterKey = "query" | "type" | "region" | "rarity" | "gen" | "ev" | "event" | "ability" | "move" | "sort";
 
 /** Pokedex grid with name/number search, type/region/rarity/gen/EV filters and sorting. */
 @Component({
   selector: "app-pokedex-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LucideFilterX, LucideSearch, Pager, TypeBadge],
+  imports: [RouterLink, LucideFilterX, LucideSearch, Pager, TypeBadge, Combobox],
   templateUrl: "./pokedex-page.html",
 })
 export class PokedexPageComponent {
@@ -32,6 +33,13 @@ export class PokedexPageComponent {
   private readonly router = inject(Router);
 
   protected readonly list = resource({ loader: () => this.data.pokedexList() });
+  // Ability/move picker options (small). The move->pokemon index is big, so it's only
+  // fetched once the user actually picks a move (params() stays undefined until then).
+  protected readonly filterOpts = resource({ loader: () => this.data.filters() });
+  private readonly moveIndexRes = resource({
+    params: () => (this.move() ? true : undefined),
+    loader: () => this.data.moveIndex(),
+  });
 
   /** Warm the cache on hover so clicking a card navigates instantly. */
   protected preload(slug: string): void {
@@ -44,6 +52,9 @@ export class PokedexPageComponent {
   protected readonly rarity = signal<string | null>(null);
   protected readonly gen = signal<number | null>(null);
   protected readonly ev = signal<string | null>(null);
+  protected readonly event = signal<string | null>(null);
+  protected readonly ability = signal<string | null>(null);
+  protected readonly move = signal<string | null>(null);
   protected readonly sort = signal<SortKey>("number");
   // Page lives in the URL (?page=N) so returning to the list (e.g. browser back
   // after opening a pokemon) lands you on the same page instead of page 1.
@@ -60,6 +71,9 @@ export class PokedexPageComponent {
     rarity: { reset: () => this.rarity.set(null), coerce: (v: string) => this.rarity.set(v || null) },
     gen: { reset: () => this.gen.set(null), coerce: (v: string) => this.gen.set(v ? Number(v) : null) },
     ev: { reset: () => this.ev.set(null), coerce: (v: string) => this.ev.set(v || null) },
+    event: { reset: () => this.event.set(null), coerce: (v: string) => this.event.set(v || null) },
+    ability: { reset: () => this.ability.set(null), coerce: (v: string) => this.ability.set(v || null) },
+    move: { reset: () => this.move.set(null), coerce: (v: string) => this.move.set(v || null) },
     sort: { reset: () => this.sort.set("number"), coerce: (v: string) => this.sort.set(v as SortKey) },
   } as const;
 
@@ -76,9 +90,22 @@ export class PokedexPageComponent {
     return [...new Set(all.map((p) => p.generation).filter((g): g is number => g !== null))].sort((a, b) => a - b);
   });
 
+  protected readonly eventOptions = computed(() =>
+    [...new Set((this.list.value() ?? []).map((p) => p.event).filter((e): e is string => !!e))].sort()
+  );
+
   protected readonly hasActiveFilters = computed(() =>
     Boolean(
-      this.query() || this.type() || this.region() || this.rarity() || this.gen() || this.ev() || this.sort() !== "number"
+      this.query() ||
+        this.type() ||
+        this.region() ||
+        this.rarity() ||
+        this.gen() ||
+        this.ev() ||
+        this.event() ||
+        this.ability() ||
+        this.move() ||
+        this.sort() !== "number"
     )
   );
 
@@ -89,9 +116,17 @@ export class PokedexPageComponent {
     const rarity = this.rarity();
     const gen = this.gen();
     const ev = this.ev();
+    const event = this.event();
+    const ability = this.ability();
+    const move = this.move();
+    const moveIdx = this.moveIndexRes.value();
+    const moveSet = move && moveIdx && moveIdx[move] ? new Set(moveIdx[move]) : null;
     const hideNip = this.hideNotInPbo();
     const out = (this.list.value() ?? []).filter((p) => {
       if (hideNip && p.notInPbo) return false;
+      if (event && p.event !== event) return false;
+      if (ability && !(p.abilities ?? []).includes(ability)) return false;
+      if (moveSet && !moveSet.has(p.slug)) return false;
       if (q && !p.name.toLowerCase().includes(q) && String(p.id) !== q) return false;
       if (type && !p.types.includes(type)) return false;
       if (region && !p.regions.includes(region)) return false;

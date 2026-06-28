@@ -129,9 +129,24 @@ for (const r of regions) {
   }
 }
 
+// Reverse map: base SPECIES id -> its custom event-sprite variants. Keyed by species
+// (not exact base slug) so a mon's mega's event variant (e.g. Diancie-Mega-E5) also
+// shows on the base Diancie page, and vice-versa.
+const eventFormsBySpecies = new Map();
+for (const e of Object.values(pokedex)) {
+  if (!e.event) continue;
+  const sid = pokedex[e.customBase]?.speciesId;
+  if (sid == null) continue;
+  const arr = eventFormsBySpecies.get(sid) ?? [];
+  arr.push({ slug: e.slug, name: e.name, sprite: e.spritePbo ?? e.sprite, event: e.event });
+  eventFormsBySpecies.set(sid, arr);
+}
+for (const arr of eventFormsBySpecies.values())
+  arr.sort((a, b) => a.event.localeCompare(b.event) || a.name.localeCompare(b.name));
+
 // --- pokemon/<slug>.json ---
 for (const [slug, entry] of Object.entries(pokedex)) {
-  const learnset = movesData.learnsets[slug] ?? null;
+  const learnset = movesData.learnsets[slug] ?? movesData.learnsets[entry.customBase] ?? null;
   let moves = null;
   if (learnset) {
     moves = {};
@@ -143,7 +158,7 @@ for (const [slug, entry] of Object.entries(pokedex)) {
   }
   const evoStages = (entry.evolutionLine ?? []).map((m) => {
     const e = pokedex[m.slug];
-    return { slug: m.slug, name: m.name, trigger: m.trigger, id: e?.id ?? null, artwork: e?.artwork ?? null, types: e?.types ?? [] };
+    return { slug: m.slug, name: m.name, trigger: m.trigger, id: e?.id ?? null, artwork: e?.artwork ?? e?.spritePbo ?? null, types: e?.types ?? [] };
   });
   const catchableAncestors =
     (encounters.get(slug)?.length ?? 0) === 0
@@ -155,9 +170,16 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     evoStages,
     encounters: encounters.get(slug) ?? [],
     catchableAncestors,
-    obtain: acquisitions[slug] ?? [],
+    obtain:
+      acquisitions[slug] ??
+      (entry.event
+        ? [{ method: "event", source: `${entry.event[0].toUpperCase()}${entry.event.slice(1)} event`, detail: "Event-exclusive custom sprite" }]
+        : []),
     ...(notInPbo.has(slug) && { notInPbo: true }),
     drops: pokemonDrops.get(slug) ?? [],
+    eventForms: (eventFormsBySpecies.get(entry.event ? pokedex[entry.customBase]?.speciesId : entry.speciesId) ?? []).filter(
+      (f) => f.slug !== slug,
+    ),
     // This species' Mega/Primal/Gigantamax forms (excluding self), each a link
     // to its own full ficha; sorted mega → primal → gmax.
     forms: (formsBySpecies.get(entry.speciesId) ?? [])
@@ -252,10 +274,34 @@ await write(
       rarities: [...new Set((encounters.get(p.slug) ?? []).map((e) => e.rarity))],
       evs: (p.evYield ?? []).map((ev) => ev.stat),
       ...(notInPbo.has(p.slug) && { notInPbo: true }),
+      ...(p.event && { event: p.event }),
+      ...(!p.event && { abilities: p.abilities.map((a) => a.slug) }),
     }))
 );
 await write("lists/search.json", searchIndex);
 await write("lists/natures.json", natures);
+
+// Pokedex ability/move filters: picker options + a move->pokemon index (the latter is
+// big, so it's a separate lazily-loaded file). Event variants are excluded — the base
+// mon already represents them, and including 376 clones would just add noise.
+{
+  const abilityUsed = new Set();
+  const movePokemon = {};
+  for (const [slug, e] of Object.entries(pokedex)) {
+    if (e.event) continue;
+    for (const a of e.abilities ?? []) abilityUsed.add(a.slug);
+    const ls = movesData.learnsets[slug];
+    if (!ls) continue;
+    const moves = new Set([...ls.level.map(([m]) => m), ...ls.machine, ...ls.egg, ...ls.tutor]);
+    for (const m of moves) (movePokemon[m] ??= []).push(slug);
+  }
+  const opt = (slug, rec) => ({ slug, en: rec?.en ?? slug, ...(rec?.es && { es: rec.es }), ...(rec?.zh && { zh: rec.zh }), ...(rec?.pt && { pt: rec.pt }) });
+  const abilities_ = [...abilityUsed].map((s) => opt(s, abilities[s])).sort((a, b) => a.en.localeCompare(b.en));
+  const moves_ = Object.keys(movePokemon).map((s) => opt(s, movesData.moves[s])).sort((a, b) => a.en.localeCompare(b.en));
+  await write("lists/filters.json", { abilities: abilities_, moves: moves_ });
+  await write("lists/move-index.json", movePokemon);
+  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves`);
+}
 
 // Items: merge in "where to get" sources for the notable ones.
 let itemsWithSources = 0;

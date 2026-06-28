@@ -3,6 +3,7 @@ import { DATA_LOADER } from "./data-loader";
 import type {
   CosmeticBundle,
   DressupData,
+  FilterOptions,
   GameItem,
   HomePayload,
   LocationPage,
@@ -34,4 +35,7 @@ export class DataService {
   mounts = () => this.getJson<Mount[]>("lists/mounts.json");
   cosmetics = () => this.getJson<CosmeticBundle[]>("lists/cosmetics.json");
   dressup = () => this.getJson<DressupData>("dressup.json");
+  filters = () => this.getJson<FilterOptions>("lists/filters.json");
+  /** move slug -> pokemon slugs that learn it. Big; loaded only when the move filter is used. */
+  moveIndex = () => this.getJson<Record<string, string[]>>("lists/move-index.json");
 }

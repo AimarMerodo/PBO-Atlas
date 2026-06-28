@@ -49,6 +49,26 @@
             <option [value]="s">EV: {{ i18n.t($any("stat." + s)) }}</option>
           }
         </select>
+        @if (eventOptions().length) {
+          <select [value]="event() ?? ''" (change)="set('event', $any($event.target).value)" [class]="selectClass">
+            <option value="">{{ i18n.t("pokedex.allEvents") }}</option>
+            @for (ev of eventOptions(); track ev) {
+              <option [value]="ev" class="capitalize">{{ ev }}</option>
+            }
+          </select>
+        }
+        <app-combobox
+          [options]="filterOpts.value()?.abilities ?? []"
+          [value]="ability()"
+          [placeholder]="i18n.t('pokedex.anyAbility')"
+          (valueChange)="set('ability', $event ?? '')"
+        />
+        <app-combobox
+          [options]="filterOpts.value()?.moves ?? []"
+          [value]="move()"
+          [placeholder]="i18n.t('pokedex.anyMove')"
+          (valueChange)="set('move', $event ?? '')"
+        />
         <select [value]="sort()" (change)="set('sort', $any($event.target).value)" [class]="selectClass">
           <option value="number">{{ i18n.t("pokedex.sortNumber") }}</option>
           <option value="name">{{ i18n.t("pokedex.sortName") }}</option>
@@ -109,6 +129,7 @@
                 [alt]="p.name"
                 width="130"
                 height="130"
+                [style.image-rendering]="p.event ? 'pixelated' : null"
                 class="relative drop-shadow-lg transition-transform duration-200 group-hover:scale-110"
               />
             } @else {

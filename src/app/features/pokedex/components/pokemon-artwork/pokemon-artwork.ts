@@ -22,6 +22,8 @@ export class PokemonArtwork {
   /** Explicit Showdown animated id (needed for forms whose dashless sprite
    *  filename can't be turned back into the dashed Showdown id). */
   readonly aniId = input<string | null>(null);
+  /** Custom event forms have no Showdown animation — render the static sprite only. */
+  readonly noAni = input(false);
 
   protected readonly i18n = inject(LanguageService);
   // Shiny is a shared module-level preference so it persists as you browse pokemon
@@ -35,7 +37,7 @@ export class PokemonArtwork {
   /** Red Alpha aura — tight drop-shadows that hug the silhouette. Kept small so the
    *  blur doesn't merge across a wide sprite into a rectangular haze. */
   protected readonly auraFilter = computed(() =>
-    this.alpha()
+    this.alpha() && !this.noAni()
       ? "drop-shadow(0 0 2px rgba(239,68,68,1)) drop-shadow(0 0 4px rgba(239,68,68,0.9)) drop-shadow(0 0 6px rgba(239,68,68,0.6))"
       : null,
   );
@@ -55,6 +57,7 @@ export class PokemonArtwork {
     () => this.aniId() ?? this.spritePbo()?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null,
   );
   protected readonly aniUrl = computed(() => {
+    if (this.noAni()) return null;
     const id = this.showdownId();
     return id ? `https://play.pokemonshowdown.com/sprites/ani${this.shiny() ? "-shiny" : ""}/${id}.gif` : null;
   });

@@ -1,0 +1,3386 @@
+[
+  {
+    "event": "christmas",
+    "name": "Abomasnow-C",
+    "base": "abomasnow",
+    "showdownId": "abomasnowc",
+    "pokedexNumber": 1313,
+    "nationalDex": 460,
+    "sprite": "/sprites/pbo/custom/christmas/abomasnowc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Altaria-C",
+    "base": "altaria",
+    "showdownId": "altariac",
+    "pokedexNumber": 1319,
+    "nationalDex": 334,
+    "sprite": "/sprites/pbo/custom/christmas/altariac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Arcanine-C",
+    "base": "arcanine",
+    "showdownId": "arcaninec",
+    "pokedexNumber": 1663,
+    "nationalDex": 59,
+    "sprite": "/sprites/pbo/custom/christmas/arcaninec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Cacturne-C",
+    "base": "cacturne",
+    "showdownId": "cacturnec",
+    "pokedexNumber": 1647,
+    "nationalDex": 332,
+    "sprite": "/sprites/pbo/custom/christmas/cacturnec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Celebi-C4",
+    "base": "celebi",
+    "showdownId": "celebic4",
+    "pokedexNumber": 1819,
+    "nationalDex": 251,
+    "sprite": "/sprites/pbo/custom/christmas/celebic4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Clefable-C4",
+    "base": "clefable",
+    "showdownId": "clefablec4",
+    "pokedexNumber": 1809,
+    "nationalDex": 36,
+    "sprite": "/sprites/pbo/custom/christmas/clefablec4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Cloyster-C4",
+    "base": "cloyster",
+    "showdownId": "cloysterc4",
+    "pokedexNumber": 1813,
+    "nationalDex": 91,
+    "sprite": "/sprites/pbo/custom/christmas/cloysterc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Cresselia-C",
+    "base": "cresselia",
+    "showdownId": "cresseliac",
+    "pokedexNumber": 1665,
+    "nationalDex": 488,
+    "sprite": "/sprites/pbo/custom/christmas/cresseliac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Delibird-C4",
+    "base": "delibird",
+    "showdownId": "delibirdc4",
+    "pokedexNumber": 1815,
+    "nationalDex": 225,
+    "sprite": "/sprites/pbo/custom/christmas/delibirdc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Dragonite-C",
+    "base": "dragonite",
+    "showdownId": "dragonitec",
+    "pokedexNumber": 1656,
+    "nationalDex": 149,
+    "sprite": "/sprites/pbo/custom/christmas/dragonitec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Electivire-C",
+    "base": "electivire",
+    "showdownId": "electivirec",
+    "pokedexNumber": 1654,
+    "nationalDex": 466,
+    "sprite": "/sprites/pbo/custom/christmas/electivirec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Flygon-C4",
+    "base": "flygon",
+    "showdownId": "flygonc4",
+    "pokedexNumber": 1821,
+    "nationalDex": 330,
+    "sprite": "/sprites/pbo/custom/christmas/flygonc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Garchomp-C",
+    "base": "garchomp",
+    "showdownId": "garchompc",
+    "pokedexNumber": 1653,
+    "nationalDex": 445,
+    "sprite": "/sprites/pbo/custom/christmas/garchompc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Gholdengo-C4",
+    "base": "gholdengo",
+    "showdownId": "gholdengoc4",
+    "pokedexNumber": 1830,
+    "nationalDex": 1000,
+    "sprite": "/sprites/pbo/custom/christmas/gholdengoc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Gigalith-C",
+    "base": "gigalith",
+    "showdownId": "gigalithc",
+    "pokedexNumber": 1657,
+    "nationalDex": 526,
+    "sprite": "/sprites/pbo/custom/christmas/gigalithc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Gimmighoul-C4",
+    "base": "gimmighoul",
+    "showdownId": "gimmighoulc4",
+    "pokedexNumber": 1829,
+    "nationalDex": 999,
+    "sprite": "/sprites/pbo/custom/christmas/gimmighoulc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Grimmsnarl-C",
+    "base": "grimmsnarl",
+    "showdownId": "grimmsnarlc",
+    "pokedexNumber": 1317,
+    "nationalDex": 861,
+    "sprite": "/sprites/pbo/custom/christmas/grimmsnarlc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Hatterene-C4",
+    "base": "hatterene",
+    "showdownId": "hatterenec4",
+    "pokedexNumber": 1828,
+    "nationalDex": 858,
+    "sprite": "/sprites/pbo/custom/christmas/hatterenec4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Heliolisk-C4",
+    "base": "heliolisk",
+    "showdownId": "helioliskc4",
+    "pokedexNumber": 1825,
+    "nationalDex": 695,
+    "sprite": "/sprites/pbo/custom/christmas/helioliskc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Hydreigon-C",
+    "base": "hydreigon",
+    "showdownId": "hydreigonc",
+    "pokedexNumber": 1662,
+    "nationalDex": 635,
+    "sprite": "/sprites/pbo/custom/christmas/hydreigonc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Indeedee-C",
+    "base": "indeedee",
+    "showdownId": "indeedeec",
+    "pokedexNumber": 1314,
+    "nationalDex": 876,
+    "sprite": "/sprites/pbo/custom/christmas/indeedeec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Lucario-C",
+    "base": "lucario",
+    "showdownId": "lucarioc",
+    "pokedexNumber": 1312,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/christmas/lucarioc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Machamp-C4",
+    "base": "machamp",
+    "showdownId": "machampc4",
+    "pokedexNumber": 1812,
+    "nationalDex": 68,
+    "sprite": "/sprites/pbo/custom/christmas/machampc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Magnezone-C4",
+    "base": "magnezone",
+    "showdownId": "magnezonec4",
+    "pokedexNumber": 1823,
+    "nationalDex": 462,
+    "sprite": "/sprites/pbo/custom/christmas/magnezonec4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Mamoswine-C",
+    "base": "mamoswine",
+    "showdownId": "mamoswinec",
+    "pokedexNumber": 1661,
+    "nationalDex": 473,
+    "sprite": "/sprites/pbo/custom/christmas/mamoswinec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Manectric-C4",
+    "base": "manectric",
+    "showdownId": "manectricc4",
+    "pokedexNumber": 1820,
+    "nationalDex": 310,
+    "sprite": "/sprites/pbo/custom/christmas/manectricc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Mantine-C4",
+    "base": "mantine",
+    "showdownId": "mantinec4",
+    "pokedexNumber": 1816,
+    "nationalDex": 226,
+    "sprite": "/sprites/pbo/custom/christmas/mantinec4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Medicham-C",
+    "base": "medicham",
+    "showdownId": "medichamc",
+    "pokedexNumber": 1648,
+    "nationalDex": 308,
+    "sprite": "/sprites/pbo/custom/christmas/medichamc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Medicham-Mega-C",
+    "base": "medichammega",
+    "showdownId": "medichammegac",
+    "pokedexNumber": 1649,
+    "nationalDex": 308,
+    "sprite": "/sprites/pbo/custom/christmas/medichammegac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Meowscarada-C",
+    "base": "meowscarada",
+    "showdownId": "meowscaradac",
+    "pokedexNumber": 1666,
+    "nationalDex": 908,
+    "sprite": "/sprites/pbo/custom/christmas/meowscaradac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Milotic-C4",
+    "base": "milotic",
+    "showdownId": "miloticc4",
+    "pokedexNumber": 1822,
+    "nationalDex": 350,
+    "sprite": "/sprites/pbo/custom/christmas/miloticc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Minior-C4",
+    "base": "minior",
+    "showdownId": "miniorc4",
+    "pokedexNumber": 1826,
+    "nationalDex": 774,
+    "sprite": "/sprites/pbo/custom/christmas/miniorc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Nidoking-C4",
+    "base": "nidoking",
+    "showdownId": "nidokingc4",
+    "pokedexNumber": 1808,
+    "nationalDex": 34,
+    "sprite": "/sprites/pbo/custom/christmas/nidokingc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Nidoqueen-C",
+    "base": "nidoqueen",
+    "showdownId": "nidoqueenc",
+    "pokedexNumber": 1664,
+    "nationalDex": 31,
+    "sprite": "/sprites/pbo/custom/christmas/nidoqueenc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Ninetales-Alola-C",
+    "base": "ninetalesalola",
+    "showdownId": "ninetalesalolac",
+    "pokedexNumber": 1247,
+    "nationalDex": 38,
+    "sprite": "/sprites/pbo/custom/christmas/ninetalesalolac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Ninetales-Alola-C4",
+    "base": "ninetalesalola",
+    "showdownId": "ninetalesalolac4",
+    "pokedexNumber": 1810,
+    "nationalDex": 38,
+    "sprite": "/sprites/pbo/custom/christmas/ninetalesalolac4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Noctowl-C4",
+    "base": "noctowl",
+    "showdownId": "noctowlc4",
+    "pokedexNumber": 1814,
+    "nationalDex": 164,
+    "sprite": "/sprites/pbo/custom/christmas/noctowlc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Poliwrath-C4",
+    "base": "poliwrath",
+    "showdownId": "poliwrathc4",
+    "pokedexNumber": 1811,
+    "nationalDex": 62,
+    "sprite": "/sprites/pbo/custom/christmas/poliwrathc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Regice-C",
+    "base": "regice",
+    "showdownId": "regicec",
+    "pokedexNumber": 1318,
+    "nationalDex": 378,
+    "sprite": "/sprites/pbo/custom/christmas/regicec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Riolu-C",
+    "base": "riolu",
+    "showdownId": "rioluc",
+    "pokedexNumber": 1311,
+    "nationalDex": 447,
+    "sprite": "/sprites/pbo/custom/christmas/rioluc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Sandslash-Alola-C4",
+    "base": "sandslashalola",
+    "showdownId": "sandslashalolac4",
+    "pokedexNumber": 1807,
+    "nationalDex": 28,
+    "sprite": "/sprites/pbo/custom/christmas/sandslashalolac4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Sawsbuck-C4",
+    "base": "sawsbuck",
+    "showdownId": "sawsbuckc4",
+    "pokedexNumber": 1831,
+    "nationalDex": 586,
+    "sprite": "/sprites/pbo/custom/christmas/sawsbuckc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Scrafty-C4",
+    "base": "scrafty",
+    "showdownId": "scraftyc4",
+    "pokedexNumber": 1824,
+    "nationalDex": 560,
+    "sprite": "/sprites/pbo/custom/christmas/scraftyc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Snorlax-C",
+    "base": "snorlax",
+    "showdownId": "snorlaxc",
+    "pokedexNumber": 1244,
+    "nationalDex": 143,
+    "sprite": "/sprites/pbo/custom/christmas/snorlaxc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Stantler-C",
+    "base": "stantler",
+    "showdownId": "stantlerc",
+    "pokedexNumber": 1315,
+    "nationalDex": 234,
+    "sprite": "/sprites/pbo/custom/christmas/stantlerc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Starmie-C",
+    "base": "starmie",
+    "showdownId": "starmiec",
+    "pokedexNumber": 1660,
+    "nationalDex": 121,
+    "sprite": "/sprites/pbo/custom/christmas/starmiec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Staryu-C",
+    "base": "staryu",
+    "showdownId": "staryuc",
+    "pokedexNumber": 1659,
+    "nationalDex": 120,
+    "sprite": "/sprites/pbo/custom/christmas/staryuc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Talonflame-C",
+    "base": "talonflame",
+    "showdownId": "talonflamec",
+    "pokedexNumber": 1650,
+    "nationalDex": 663,
+    "sprite": "/sprites/pbo/custom/christmas/talonflamec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Torkoal-C",
+    "base": "torkoal",
+    "showdownId": "torkoalc",
+    "pokedexNumber": 1658,
+    "nationalDex": 324,
+    "sprite": "/sprites/pbo/custom/christmas/torkoalc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Tyranitar-C4",
+    "base": "tyranitar",
+    "showdownId": "tyranitarc4",
+    "pokedexNumber": 1817,
+    "nationalDex": 248,
+    "sprite": "/sprites/pbo/custom/christmas/tyranitarc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Tyranitar-Mega-C4",
+    "base": "tyranitarmega",
+    "showdownId": "tyranitarmegac4",
+    "pokedexNumber": 1818,
+    "nationalDex": 248,
+    "sprite": "/sprites/pbo/custom/christmas/tyranitarmegac4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Vanilluxe-C",
+    "base": "vanilluxe",
+    "showdownId": "vanilluxec",
+    "pokedexNumber": 1655,
+    "nationalDex": 584,
+    "sprite": "/sprites/pbo/custom/christmas/vanilluxec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Venusaur-C4",
+    "base": "venusaur",
+    "showdownId": "venusaurc4",
+    "pokedexNumber": 1806,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/christmas/venusaurc4.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Vulpix-Alola-C",
+    "base": "vulpixalola",
+    "showdownId": "vulpixalolac",
+    "pokedexNumber": 1310,
+    "nationalDex": 37,
+    "sprite": "/sprites/pbo/custom/christmas/vulpixalolac.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Weavile-C",
+    "base": "weavile",
+    "showdownId": "weavilec",
+    "pokedexNumber": 1652,
+    "nationalDex": 461,
+    "sprite": "/sprites/pbo/custom/christmas/weavilec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Whimsicott-C",
+    "base": "whimsicott",
+    "showdownId": "whimsicottc",
+    "pokedexNumber": 1316,
+    "nationalDex": 547,
+    "sprite": "/sprites/pbo/custom/christmas/whimsicottc.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Xurkitree-C",
+    "base": "xurkitree",
+    "showdownId": "xurkitreec",
+    "pokedexNumber": 1651,
+    "nationalDex": 796,
+    "sprite": "/sprites/pbo/custom/christmas/xurkitreec.png"
+  },
+  {
+    "event": "christmas",
+    "name": "Xurkitree-C4",
+    "base": "xurkitree",
+    "showdownId": "xurkitreec4",
+    "pokedexNumber": 1827,
+    "nationalDex": 796,
+    "sprite": "/sprites/pbo/custom/christmas/xurkitreec4.png"
+  },
+  {
+    "event": "easter",
+    "name": "Altaria-E5",
+    "base": "altaria",
+    "showdownId": "altariae5",
+    "pokedexNumber": 1843,
+    "nationalDex": 334,
+    "sprite": "/sprites/pbo/custom/easter/altariae5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Appletun-E",
+    "base": "appletun",
+    "showdownId": "appletune",
+    "pokedexNumber": 1673,
+    "nationalDex": 842,
+    "sprite": "/sprites/pbo/custom/easter/appletune.png"
+  },
+  {
+    "event": "easter",
+    "name": "Applin-E",
+    "base": "applin",
+    "showdownId": "appline",
+    "pokedexNumber": 1670,
+    "nationalDex": 840,
+    "sprite": "/sprites/pbo/custom/easter/appline.png"
+  },
+  {
+    "event": "easter",
+    "name": "Arcanine-E5",
+    "base": "arcanine",
+    "showdownId": "arcaninee5",
+    "pokedexNumber": 1844,
+    "nationalDex": 59,
+    "sprite": "/sprites/pbo/custom/easter/arcaninee5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Azumarill-E",
+    "base": "azumarill",
+    "showdownId": "azumarille",
+    "pokedexNumber": 1522,
+    "nationalDex": 184,
+    "sprite": "/sprites/pbo/custom/easter/azumarille.png"
+  },
+  {
+    "event": "easter",
+    "name": "Breloom-E5",
+    "base": "breloom",
+    "showdownId": "breloome5",
+    "pokedexNumber": 1845,
+    "nationalDex": 286,
+    "sprite": "/sprites/pbo/custom/easter/breloome5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Buneary-E",
+    "base": "buneary",
+    "showdownId": "bunearye",
+    "pokedexNumber": 1679,
+    "nationalDex": 427,
+    "sprite": "/sprites/pbo/custom/easter/bunearye.png"
+  },
+  {
+    "event": "easter",
+    "name": "Cinderace-E5",
+    "base": "cinderace",
+    "showdownId": "cinderacee5",
+    "pokedexNumber": 1846,
+    "nationalDex": 815,
+    "sprite": "/sprites/pbo/custom/easter/cinderacee5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Diancie-E5",
+    "base": "diancie",
+    "showdownId": "dianciee5",
+    "pokedexNumber": 1847,
+    "nationalDex": 719,
+    "sprite": "/sprites/pbo/custom/easter/dianciee5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Diancie-Mega-E5",
+    "base": "dianciemega",
+    "showdownId": "dianciemegae5",
+    "pokedexNumber": 1855,
+    "nationalDex": 719,
+    "sprite": "/sprites/pbo/custom/easter/dianciemegae5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Diggersby-E",
+    "base": "diggersby",
+    "showdownId": "diggersbye",
+    "pokedexNumber": 1681,
+    "nationalDex": 660,
+    "sprite": "/sprites/pbo/custom/easter/diggersbye.png"
+  },
+  {
+    "event": "easter",
+    "name": "Diggersby-E5",
+    "base": "diggersby",
+    "showdownId": "diggersbye5",
+    "pokedexNumber": 1848,
+    "nationalDex": 660,
+    "sprite": "/sprites/pbo/custom/easter/diggersbye5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Dipplin-E",
+    "base": "dipplin",
+    "showdownId": "dippline",
+    "pokedexNumber": 1671,
+    "nationalDex": 1011,
+    "sprite": "/sprites/pbo/custom/easter/dippline.png"
+  },
+  {
+    "event": "easter",
+    "name": "Dragonite-E5",
+    "base": "dragonite",
+    "showdownId": "dragonitee5",
+    "pokedexNumber": 1849,
+    "nationalDex": 149,
+    "sprite": "/sprites/pbo/custom/easter/dragonitee5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Exeggcute-E",
+    "base": "exeggcute",
+    "showdownId": "exeggcutee",
+    "pokedexNumber": 1667,
+    "nationalDex": 102,
+    "sprite": "/sprites/pbo/custom/easter/exeggcutee.png"
+  },
+  {
+    "event": "easter",
+    "name": "Exeggutor-Alola-E",
+    "base": "exeggutoralola",
+    "showdownId": "exeggutoralolae",
+    "pokedexNumber": 1669,
+    "nationalDex": 103,
+    "sprite": "/sprites/pbo/custom/easter/exeggutoralolae.png"
+  },
+  {
+    "event": "easter",
+    "name": "Exeggutor-E",
+    "base": "exeggutor",
+    "showdownId": "exeggutore",
+    "pokedexNumber": 1668,
+    "nationalDex": 103,
+    "sprite": "/sprites/pbo/custom/easter/exeggutore.png"
+  },
+  {
+    "event": "easter",
+    "name": "Flapple-E",
+    "base": "flapple",
+    "showdownId": "flapplee",
+    "pokedexNumber": 1674,
+    "nationalDex": 841,
+    "sprite": "/sprites/pbo/custom/easter/flapplee.png"
+  },
+  {
+    "event": "easter",
+    "name": "Genesect-E",
+    "base": "genesect",
+    "showdownId": "genesecte",
+    "pokedexNumber": 1675,
+    "nationalDex": 649,
+    "sprite": "/sprites/pbo/custom/easter/genesecte.png"
+  },
+  {
+    "event": "easter",
+    "name": "Genesect-E5",
+    "base": "genesect",
+    "showdownId": "genesecte5",
+    "pokedexNumber": 1850,
+    "nationalDex": 649,
+    "sprite": "/sprites/pbo/custom/easter/genesecte5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Hydrapple-E",
+    "base": "hydrapple",
+    "showdownId": "hydrapplee",
+    "pokedexNumber": 1672,
+    "nationalDex": 1019,
+    "sprite": "/sprites/pbo/custom/easter/hydrapplee.png"
+  },
+  {
+    "event": "easter",
+    "name": "Kommo-o-E",
+    "base": "kommoo",
+    "showdownId": "kommooe",
+    "pokedexNumber": 1523,
+    "nationalDex": 784,
+    "sprite": "/sprites/pbo/custom/easter/kommooe.png"
+  },
+  {
+    "event": "easter",
+    "name": "Lopunny-E",
+    "base": "lopunny",
+    "showdownId": "lopunnye",
+    "pokedexNumber": 1680,
+    "nationalDex": 428,
+    "sprite": "/sprites/pbo/custom/easter/lopunnye.png"
+  },
+  {
+    "event": "easter",
+    "name": "Meloetta-E5",
+    "base": "meloetta",
+    "showdownId": "meloettae5",
+    "pokedexNumber": 1851,
+    "nationalDex": 648,
+    "sprite": "/sprites/pbo/custom/easter/meloettae5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Serperior-E5",
+    "base": "serperior",
+    "showdownId": "serperiore5",
+    "pokedexNumber": 1852,
+    "nationalDex": 497,
+    "sprite": "/sprites/pbo/custom/easter/serperiore5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Sneasler-E5",
+    "base": "sneasler",
+    "showdownId": "sneaslere5",
+    "pokedexNumber": 1853,
+    "nationalDex": 903,
+    "sprite": "/sprites/pbo/custom/easter/sneaslere5.png"
+  },
+  {
+    "event": "easter",
+    "name": "Staraptor-E",
+    "base": "staraptor",
+    "showdownId": "staraptore",
+    "pokedexNumber": 1521,
+    "nationalDex": 398,
+    "sprite": "/sprites/pbo/custom/easter/staraptore.png"
+  },
+  {
+    "event": "easter",
+    "name": "Togekiss-E",
+    "base": "togekiss",
+    "showdownId": "togekisse",
+    "pokedexNumber": 1678,
+    "nationalDex": 468,
+    "sprite": "/sprites/pbo/custom/easter/togekisse.png"
+  },
+  {
+    "event": "easter",
+    "name": "Togepi-E",
+    "base": "togepi",
+    "showdownId": "togepie",
+    "pokedexNumber": 1676,
+    "nationalDex": 175,
+    "sprite": "/sprites/pbo/custom/easter/togepie.png"
+  },
+  {
+    "event": "easter",
+    "name": "Togetic-E",
+    "base": "togetic",
+    "showdownId": "togetice",
+    "pokedexNumber": 1677,
+    "nationalDex": 176,
+    "sprite": "/sprites/pbo/custom/easter/togetice.png"
+  },
+  {
+    "event": "easter",
+    "name": "Virizion-E5",
+    "base": "virizion",
+    "showdownId": "virizione5",
+    "pokedexNumber": 1854,
+    "nationalDex": 640,
+    "sprite": "/sprites/pbo/custom/easter/virizione5.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Absol-H",
+    "base": "absol",
+    "showdownId": "absolh",
+    "pokedexNumber": 1232,
+    "nationalDex": 359,
+    "sprite": "/sprites/pbo/custom/halloween/absolh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Absol-H2",
+    "base": "absol",
+    "showdownId": "absolh2",
+    "pokedexNumber": 1295,
+    "nationalDex": 359,
+    "sprite": "/sprites/pbo/custom/halloween/absolh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Absol-H3-FullMoon",
+    "base": "absol",
+    "showdownId": "absolh3fullmoon",
+    "pokedexNumber": 1618,
+    "nationalDex": 359,
+    "sprite": "/sprites/pbo/custom/halloween/absolh3fullmoon.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Absol-H3-ShadowMoon",
+    "base": "absol",
+    "showdownId": "absolh3shadowmoon",
+    "pokedexNumber": 1643,
+    "nationalDex": 359,
+    "sprite": "/sprites/pbo/custom/halloween/absolh3shadowmoon.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Absol-H4",
+    "base": "absol",
+    "showdownId": "absolh4",
+    "pokedexNumber": 1792,
+    "nationalDex": 359,
+    "sprite": "/sprites/pbo/custom/halloween/absolh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Aerodactyl-H",
+    "base": "aerodactyl",
+    "showdownId": "aerodactylh",
+    "pokedexNumber": 1610,
+    "nationalDex": 142,
+    "sprite": "/sprites/pbo/custom/halloween/aerodactylh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Aggron-H4",
+    "base": "aggron",
+    "showdownId": "aggronh4",
+    "pokedexNumber": 1750,
+    "nationalDex": 306,
+    "sprite": "/sprites/pbo/custom/halloween/aggronh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Aggron-Mega-H4",
+    "base": "aggronmega",
+    "showdownId": "aggronmegah4",
+    "pokedexNumber": 1751,
+    "nationalDex": 306,
+    "sprite": "/sprites/pbo/custom/halloween/aggronmegah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Alakazam-H",
+    "base": "alakazam",
+    "showdownId": "alakazamh",
+    "pokedexNumber": 1291,
+    "nationalDex": 65,
+    "sprite": "/sprites/pbo/custom/halloween/alakazamh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Alakazam-H2",
+    "base": "alakazam",
+    "showdownId": "alakazamh2",
+    "pokedexNumber": 1614,
+    "nationalDex": 65,
+    "sprite": "/sprites/pbo/custom/halloween/alakazamh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Arbok-H4",
+    "base": "arbok",
+    "showdownId": "arbokh4",
+    "pokedexNumber": 1770,
+    "nationalDex": 24,
+    "sprite": "/sprites/pbo/custom/halloween/arbokh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Archeops-H4",
+    "base": "archeops",
+    "showdownId": "archeopsh4",
+    "pokedexNumber": 1802,
+    "nationalDex": 567,
+    "sprite": "/sprites/pbo/custom/halloween/archeopsh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Armaldo-H4",
+    "base": "armaldo",
+    "showdownId": "armaldoh4",
+    "pokedexNumber": 1801,
+    "nationalDex": 348,
+    "sprite": "/sprites/pbo/custom/halloween/armaldoh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Armarouge-H4",
+    "base": "armarouge",
+    "showdownId": "armarougeh4",
+    "pokedexNumber": 1766,
+    "nationalDex": 936,
+    "sprite": "/sprites/pbo/custom/halloween/armarougeh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Azumarill-H",
+    "base": "azumarill",
+    "showdownId": "azumarillh",
+    "pokedexNumber": 1603,
+    "nationalDex": 184,
+    "sprite": "/sprites/pbo/custom/halloween/azumarillh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Bagon-H",
+    "base": "bagon",
+    "showdownId": "bagonh",
+    "pokedexNumber": 1273,
+    "nationalDex": 371,
+    "sprite": "/sprites/pbo/custom/halloween/bagonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Banette-H",
+    "base": "banette",
+    "showdownId": "banetteh",
+    "pokedexNumber": 1227,
+    "nationalDex": 354,
+    "sprite": "/sprites/pbo/custom/halloween/banetteh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Banette-H2",
+    "base": "banette",
+    "showdownId": "banetteh2",
+    "pokedexNumber": 1271,
+    "nationalDex": 354,
+    "sprite": "/sprites/pbo/custom/halloween/banetteh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Banette-H3-Day",
+    "base": "banette",
+    "showdownId": "banetteh3day",
+    "pokedexNumber": 1589,
+    "nationalDex": 354,
+    "sprite": "/sprites/pbo/custom/halloween/banetteh3day.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Banette-H3-Night",
+    "base": "banette",
+    "showdownId": "banetteh3night",
+    "pokedexNumber": 1591,
+    "nationalDex": 354,
+    "sprite": "/sprites/pbo/custom/halloween/banetteh3night.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Banette-H4",
+    "base": "banette",
+    "showdownId": "banetteh4",
+    "pokedexNumber": 1794,
+    "nationalDex": 354,
+    "sprite": "/sprites/pbo/custom/halloween/banetteh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Beartic-H",
+    "base": "beartic",
+    "showdownId": "beartich",
+    "pokedexNumber": 1296,
+    "nationalDex": 614,
+    "sprite": "/sprites/pbo/custom/halloween/beartich.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Bisharp-H",
+    "base": "bisharp",
+    "showdownId": "bisharph",
+    "pokedexNumber": 1304,
+    "nationalDex": 625,
+    "sprite": "/sprites/pbo/custom/halloween/bisharph.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Blacephalon-H",
+    "base": "blacephalon",
+    "showdownId": "blacephalonh",
+    "pokedexNumber": 1615,
+    "nationalDex": 806,
+    "sprite": "/sprites/pbo/custom/halloween/blacephalonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Blastoise-H",
+    "base": "blastoise",
+    "showdownId": "blastoiseh",
+    "pokedexNumber": 1268,
+    "nationalDex": 9,
+    "sprite": "/sprites/pbo/custom/halloween/blastoiseh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Blastoise-H2",
+    "base": "blastoise",
+    "showdownId": "blastoiseh2",
+    "pokedexNumber": 1579,
+    "nationalDex": 9,
+    "sprite": "/sprites/pbo/custom/halloween/blastoiseh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Blissey-H",
+    "base": "blissey",
+    "showdownId": "blisseyh",
+    "pokedexNumber": 1581,
+    "nationalDex": 242,
+    "sprite": "/sprites/pbo/custom/halloween/blisseyh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Braixen-H",
+    "base": "braixen",
+    "showdownId": "braixenh",
+    "pokedexNumber": 1286,
+    "nationalDex": 654,
+    "sprite": "/sprites/pbo/custom/halloween/braixenh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Braixen-H2",
+    "base": "braixen",
+    "showdownId": "braixenh2",
+    "pokedexNumber": 1635,
+    "nationalDex": 654,
+    "sprite": "/sprites/pbo/custom/halloween/braixenh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Breloom-H4",
+    "base": "breloom",
+    "showdownId": "breloomh4",
+    "pokedexNumber": 1749,
+    "nationalDex": 286,
+    "sprite": "/sprites/pbo/custom/halloween/breloomh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Bulbasaur-H",
+    "base": "bulbasaur",
+    "showdownId": "bulbasaurh",
+    "pokedexNumber": 1258,
+    "nationalDex": 1,
+    "sprite": "/sprites/pbo/custom/halloween/bulbasaurh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ceruledge-H4",
+    "base": "ceruledge",
+    "showdownId": "ceruledgeh4",
+    "pokedexNumber": 1785,
+    "nationalDex": 937,
+    "sprite": "/sprites/pbo/custom/halloween/ceruledgeh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Chandelure-H4",
+    "base": "chandelure",
+    "showdownId": "chandelureh4",
+    "pokedexNumber": 1762,
+    "nationalDex": 609,
+    "sprite": "/sprites/pbo/custom/halloween/chandelureh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Chansey-H",
+    "base": "chansey",
+    "showdownId": "chanseyh",
+    "pokedexNumber": 1225,
+    "nationalDex": 113,
+    "sprite": "/sprites/pbo/custom/halloween/chanseyh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Charizard-H",
+    "base": "charizard",
+    "showdownId": "charizardh",
+    "pokedexNumber": 1252,
+    "nationalDex": 6,
+    "sprite": "/sprites/pbo/custom/halloween/charizardh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Charizard-H2",
+    "base": "charizard",
+    "showdownId": "charizardh2",
+    "pokedexNumber": 1578,
+    "nationalDex": 6,
+    "sprite": "/sprites/pbo/custom/halloween/charizardh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Charmander-H",
+    "base": "charmander",
+    "showdownId": "charmanderh",
+    "pokedexNumber": 1250,
+    "nationalDex": 4,
+    "sprite": "/sprites/pbo/custom/halloween/charmanderh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Charmeleon-H",
+    "base": "charmeleon",
+    "showdownId": "charmeleonh",
+    "pokedexNumber": 1251,
+    "nationalDex": 5,
+    "sprite": "/sprites/pbo/custom/halloween/charmeleonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cinderace-H",
+    "base": "cinderace",
+    "showdownId": "cinderaceh",
+    "pokedexNumber": 1604,
+    "nationalDex": 815,
+    "sprite": "/sprites/pbo/custom/halloween/cinderaceh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cinderace-H4",
+    "base": "cinderace",
+    "showdownId": "cinderaceh4",
+    "pokedexNumber": 1784,
+    "nationalDex": 815,
+    "sprite": "/sprites/pbo/custom/halloween/cinderaceh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cloyster-H",
+    "base": "cloyster",
+    "showdownId": "cloysterh",
+    "pokedexNumber": 1277,
+    "nationalDex": 91,
+    "sprite": "/sprites/pbo/custom/halloween/cloysterh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cobalion-H4",
+    "base": "cobalion",
+    "showdownId": "cobalionh4",
+    "pokedexNumber": 1779,
+    "nationalDex": 638,
+    "sprite": "/sprites/pbo/custom/halloween/cobalionh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Comfey-H4",
+    "base": "comfey",
+    "showdownId": "comfeyh4",
+    "pokedexNumber": 1765,
+    "nationalDex": 764,
+    "sprite": "/sprites/pbo/custom/halloween/comfeyh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Conkeldurr-H",
+    "base": "conkeldurr",
+    "showdownId": "conkeldurrh",
+    "pokedexNumber": 1283,
+    "nationalDex": 534,
+    "sprite": "/sprites/pbo/custom/halloween/conkeldurrh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Conkeldurr-H2",
+    "base": "conkeldurr",
+    "showdownId": "conkeldurrh2",
+    "pokedexNumber": 1626,
+    "nationalDex": 534,
+    "sprite": "/sprites/pbo/custom/halloween/conkeldurrh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Corviknight-H4",
+    "base": "corviknight",
+    "showdownId": "corviknighth4",
+    "pokedexNumber": 1791,
+    "nationalDex": 823,
+    "sprite": "/sprites/pbo/custom/halloween/corviknighth4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Crawdaunt-H",
+    "base": "crawdaunt",
+    "showdownId": "crawdaunth",
+    "pokedexNumber": 1623,
+    "nationalDex": 342,
+    "sprite": "/sprites/pbo/custom/halloween/crawdaunth.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cresselia-H4",
+    "base": "cresselia",
+    "showdownId": "cresseliah4",
+    "pokedexNumber": 1759,
+    "nationalDex": 488,
+    "sprite": "/sprites/pbo/custom/halloween/cresseliah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Cubone-H",
+    "base": "cubone",
+    "showdownId": "cuboneh",
+    "pokedexNumber": 1272,
+    "nationalDex": 104,
+    "sprite": "/sprites/pbo/custom/halloween/cuboneh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Darmanitan-H",
+    "base": "darmanitan",
+    "showdownId": "darmanitanh",
+    "pokedexNumber": 1609,
+    "nationalDex": 555,
+    "sprite": "/sprites/pbo/custom/halloween/darmanitanh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Delphox-H",
+    "base": "delphox",
+    "showdownId": "delphoxh",
+    "pokedexNumber": 1287,
+    "nationalDex": 655,
+    "sprite": "/sprites/pbo/custom/halloween/delphoxh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Delphox-H2",
+    "base": "delphox",
+    "showdownId": "delphoxh2",
+    "pokedexNumber": 1636,
+    "nationalDex": 655,
+    "sprite": "/sprites/pbo/custom/halloween/delphoxh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Delphox-H4",
+    "base": "delphox",
+    "showdownId": "delphoxh4",
+    "pokedexNumber": 1780,
+    "nationalDex": 655,
+    "sprite": "/sprites/pbo/custom/halloween/delphoxh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Dragapult-H",
+    "base": "dragapult",
+    "showdownId": "dragapulth",
+    "pokedexNumber": 1297,
+    "nationalDex": 887,
+    "sprite": "/sprites/pbo/custom/halloween/dragapulth.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Dragapult-H2",
+    "base": "dragapult",
+    "showdownId": "dragapulth2",
+    "pokedexNumber": 1642,
+    "nationalDex": 887,
+    "sprite": "/sprites/pbo/custom/halloween/dragapulth2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Eevee-H",
+    "base": "eevee",
+    "showdownId": "eeveeh",
+    "pokedexNumber": 1299,
+    "nationalDex": 133,
+    "sprite": "/sprites/pbo/custom/halloween/eeveeh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Eevee-H2",
+    "base": "eevee",
+    "showdownId": "eeveeh2",
+    "pokedexNumber": 1592,
+    "nationalDex": 133,
+    "sprite": "/sprites/pbo/custom/halloween/eeveeh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Electabuzz-H",
+    "base": "electabuzz",
+    "showdownId": "electabuzzh",
+    "pokedexNumber": 1248,
+    "nationalDex": 125,
+    "sprite": "/sprites/pbo/custom/halloween/electabuzzh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Electivire-H",
+    "base": "electivire",
+    "showdownId": "electivireh",
+    "pokedexNumber": 1249,
+    "nationalDex": 466,
+    "sprite": "/sprites/pbo/custom/halloween/electivireh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Empoleon-H4",
+    "base": "empoleon",
+    "showdownId": "empoleonh4",
+    "pokedexNumber": 1787,
+    "nationalDex": 395,
+    "sprite": "/sprites/pbo/custom/halloween/empoleonh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Entei-H",
+    "base": "entei",
+    "showdownId": "enteih",
+    "pokedexNumber": 1230,
+    "nationalDex": 244,
+    "sprite": "/sprites/pbo/custom/halloween/enteih.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Entei-H2",
+    "base": "entei",
+    "showdownId": "enteih2",
+    "pokedexNumber": 1293,
+    "nationalDex": 244,
+    "sprite": "/sprites/pbo/custom/halloween/enteih2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Entei-H3",
+    "base": "entei",
+    "showdownId": "enteih3",
+    "pokedexNumber": 1597,
+    "nationalDex": 244,
+    "sprite": "/sprites/pbo/custom/halloween/enteih3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Espeon-H",
+    "base": "espeon",
+    "showdownId": "espeonh",
+    "pokedexNumber": 1646,
+    "nationalDex": 196,
+    "sprite": "/sprites/pbo/custom/halloween/espeonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Feebas-H",
+    "base": "feebas",
+    "showdownId": "feebash",
+    "pokedexNumber": 1630,
+    "nationalDex": 349,
+    "sprite": "/sprites/pbo/custom/halloween/feebash.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Fennekin-H",
+    "base": "fennekin",
+    "showdownId": "fennekinh",
+    "pokedexNumber": 1285,
+    "nationalDex": 653,
+    "sprite": "/sprites/pbo/custom/halloween/fennekinh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Fennekin-H2",
+    "base": "fennekin",
+    "showdownId": "fennekinh2",
+    "pokedexNumber": 1634,
+    "nationalDex": 653,
+    "sprite": "/sprites/pbo/custom/halloween/fennekinh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Flareon-H",
+    "base": "flareon",
+    "showdownId": "flareonh",
+    "pokedexNumber": 1300,
+    "nationalDex": 136,
+    "sprite": "/sprites/pbo/custom/halloween/flareonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Flareon-H2",
+    "base": "flareon",
+    "showdownId": "flareonh2",
+    "pokedexNumber": 1593,
+    "nationalDex": 136,
+    "sprite": "/sprites/pbo/custom/halloween/flareonh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Frillish-H4",
+    "base": "frillish",
+    "showdownId": "frillishh4",
+    "pokedexNumber": 1760,
+    "nationalDex": 592,
+    "sprite": "/sprites/pbo/custom/halloween/frillishh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gallade-H",
+    "base": "gallade",
+    "showdownId": "galladeh",
+    "pokedexNumber": 1586,
+    "nationalDex": 475,
+    "sprite": "/sprites/pbo/custom/halloween/galladeh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Garchomp-H",
+    "base": "garchomp",
+    "showdownId": "garchomph",
+    "pokedexNumber": 1284,
+    "nationalDex": 445,
+    "sprite": "/sprites/pbo/custom/halloween/garchomph.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gardevoir-H",
+    "base": "gardevoir",
+    "showdownId": "gardevoirh",
+    "pokedexNumber": 1228,
+    "nationalDex": 282,
+    "sprite": "/sprites/pbo/custom/halloween/gardevoirh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gardevoir-H2",
+    "base": "gardevoir",
+    "showdownId": "gardevoirh2",
+    "pokedexNumber": 1585,
+    "nationalDex": 282,
+    "sprite": "/sprites/pbo/custom/halloween/gardevoirh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gardevoir-H4",
+    "base": "gardevoir",
+    "showdownId": "gardevoirh4",
+    "pokedexNumber": 1773,
+    "nationalDex": 282,
+    "sprite": "/sprites/pbo/custom/halloween/gardevoirh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gardevoir-Mega-H2",
+    "base": "gardevoirmega",
+    "showdownId": "gardevoirmegah2",
+    "pokedexNumber": 1587,
+    "nationalDex": 282,
+    "sprite": "/sprites/pbo/custom/halloween/gardevoirmegah2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gengar-H",
+    "base": "gengar",
+    "showdownId": "gengarh",
+    "pokedexNumber": 1223,
+    "nationalDex": 94,
+    "sprite": "/sprites/pbo/custom/halloween/gengarh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gengar-H2",
+    "base": "gengar",
+    "showdownId": "gengarh2",
+    "pokedexNumber": 1290,
+    "nationalDex": 94,
+    "sprite": "/sprites/pbo/custom/halloween/gengarh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gengar-H3",
+    "base": "gengar",
+    "showdownId": "gengarh3",
+    "pokedexNumber": 1601,
+    "nationalDex": 94,
+    "sprite": "/sprites/pbo/custom/halloween/gengarh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Glaceon-H",
+    "base": "glaceon",
+    "showdownId": "glaceonh",
+    "pokedexNumber": 1645,
+    "nationalDex": 471,
+    "sprite": "/sprites/pbo/custom/halloween/glaceonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gligar-H",
+    "base": "gligar",
+    "showdownId": "gligarh",
+    "pokedexNumber": 1239,
+    "nationalDex": 207,
+    "sprite": "/sprites/pbo/custom/halloween/gligarh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gliscor-H",
+    "base": "gliscor",
+    "showdownId": "gliscorh",
+    "pokedexNumber": 1240,
+    "nationalDex": 472,
+    "sprite": "/sprites/pbo/custom/halloween/gliscorh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Granbull-H4",
+    "base": "granbull",
+    "showdownId": "granbullh4",
+    "pokedexNumber": 1747,
+    "nationalDex": 210,
+    "sprite": "/sprites/pbo/custom/halloween/granbullh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Grimmsnarl-H",
+    "base": "grimmsnarl",
+    "showdownId": "grimmsnarlh",
+    "pokedexNumber": 1624,
+    "nationalDex": 861,
+    "sprite": "/sprites/pbo/custom/halloween/grimmsnarlh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Guzzlord-H4",
+    "base": "guzzlord",
+    "showdownId": "guzzlordh4",
+    "pokedexNumber": 1783,
+    "nationalDex": 799,
+    "sprite": "/sprites/pbo/custom/halloween/guzzlordh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gyarados-H",
+    "base": "gyarados",
+    "showdownId": "gyaradosh",
+    "pokedexNumber": 1242,
+    "nationalDex": 130,
+    "sprite": "/sprites/pbo/custom/halloween/gyaradosh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gyarados-H2",
+    "base": "gyarados",
+    "showdownId": "gyaradosh2",
+    "pokedexNumber": 1289,
+    "nationalDex": 130,
+    "sprite": "/sprites/pbo/custom/halloween/gyaradosh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Gyarados-H3",
+    "base": "gyarados",
+    "showdownId": "gyaradosh3",
+    "pokedexNumber": 1641,
+    "nationalDex": 130,
+    "sprite": "/sprites/pbo/custom/halloween/gyaradosh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hatenna-H",
+    "base": "hatenna",
+    "showdownId": "hatennah",
+    "pokedexNumber": 1261,
+    "nationalDex": 856,
+    "sprite": "/sprites/pbo/custom/halloween/hatennah.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hatterene-H",
+    "base": "hatterene",
+    "showdownId": "hattereneh",
+    "pokedexNumber": 1263,
+    "nationalDex": 858,
+    "sprite": "/sprites/pbo/custom/halloween/hattereneh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hattrem-H",
+    "base": "hattrem",
+    "showdownId": "hattremh",
+    "pokedexNumber": 1262,
+    "nationalDex": 857,
+    "sprite": "/sprites/pbo/custom/halloween/hattremh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Heatran-H",
+    "base": "heatran",
+    "showdownId": "heatranh",
+    "pokedexNumber": 1309,
+    "nationalDex": 485,
+    "sprite": "/sprites/pbo/custom/halloween/heatranh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Heracross-H",
+    "base": "heracross",
+    "showdownId": "heracrossh",
+    "pokedexNumber": 1617,
+    "nationalDex": 214,
+    "sprite": "/sprites/pbo/custom/halloween/heracrossh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hoopa-H4",
+    "base": "hoopa",
+    "showdownId": "hoopah4",
+    "pokedexNumber": 1798,
+    "nationalDex": 720,
+    "sprite": "/sprites/pbo/custom/halloween/hoopah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hoopa-Unbound-H4",
+    "base": "hoopaunbound",
+    "showdownId": "hoopaunboundh4",
+    "pokedexNumber": 1799,
+    "nationalDex": 720,
+    "sprite": "/sprites/pbo/custom/halloween/hoopaunboundh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Houndoom-H",
+    "base": "houndoom",
+    "showdownId": "houndoomh",
+    "pokedexNumber": 1307,
+    "nationalDex": 229,
+    "sprite": "/sprites/pbo/custom/halloween/houndoomh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Hydreigon-H",
+    "base": "hydreigon",
+    "showdownId": "hydreigonh",
+    "pokedexNumber": 1308,
+    "nationalDex": 635,
+    "sprite": "/sprites/pbo/custom/halloween/hydreigonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Infernape-H4",
+    "base": "infernape",
+    "showdownId": "infernapeh4",
+    "pokedexNumber": 1777,
+    "nationalDex": 392,
+    "sprite": "/sprites/pbo/custom/halloween/infernapeh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Inteleon-H",
+    "base": "inteleon",
+    "showdownId": "inteleonh",
+    "pokedexNumber": 1605,
+    "nationalDex": 818,
+    "sprite": "/sprites/pbo/custom/halloween/inteleonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ivysaur-H",
+    "base": "ivysaur",
+    "showdownId": "ivysaurh",
+    "pokedexNumber": 1259,
+    "nationalDex": 2,
+    "sprite": "/sprites/pbo/custom/halloween/ivysaurh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Jellicent-H4",
+    "base": "jellicent",
+    "showdownId": "jellicenth4",
+    "pokedexNumber": 1761,
+    "nationalDex": 593,
+    "sprite": "/sprites/pbo/custom/halloween/jellicenth4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Jirachi-H",
+    "base": "jirachi",
+    "showdownId": "jirachih",
+    "pokedexNumber": 1599,
+    "nationalDex": 385,
+    "sprite": "/sprites/pbo/custom/halloween/jirachih.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Jolteon-H",
+    "base": "jolteon",
+    "showdownId": "jolteonh",
+    "pokedexNumber": 1302,
+    "nationalDex": 135,
+    "sprite": "/sprites/pbo/custom/halloween/jolteonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kabutops-H",
+    "base": "kabutops",
+    "showdownId": "kabutopsh",
+    "pokedexNumber": 1613,
+    "nationalDex": 141,
+    "sprite": "/sprites/pbo/custom/halloween/kabutopsh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kabutops-H4",
+    "base": "kabutops",
+    "showdownId": "kabutopsh4",
+    "pokedexNumber": 1800,
+    "nationalDex": 141,
+    "sprite": "/sprites/pbo/custom/halloween/kabutopsh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kangaskhan-H",
+    "base": "kangaskhan",
+    "showdownId": "kangaskhanh",
+    "pokedexNumber": 1256,
+    "nationalDex": 115,
+    "sprite": "/sprites/pbo/custom/halloween/kangaskhanh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-H",
+    "base": "keldeo",
+    "showdownId": "keldeoh",
+    "pokedexNumber": 1237,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-H2",
+    "base": "keldeo",
+    "showdownId": "keldeoh2",
+    "pokedexNumber": 1279,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-H3",
+    "base": "keldeo",
+    "showdownId": "keldeoh3",
+    "pokedexNumber": 1628,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-H4",
+    "base": "keldeo",
+    "showdownId": "keldeoh4",
+    "pokedexNumber": 1803,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-Resolute-H",
+    "base": "keldeoresolute",
+    "showdownId": "keldeoresoluteh",
+    "pokedexNumber": 1238,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoresoluteh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-Resolute-H2",
+    "base": "keldeoresolute",
+    "showdownId": "keldeoresoluteh2",
+    "pokedexNumber": 1280,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoresoluteh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-Resolute-H3",
+    "base": "keldeoresolute",
+    "showdownId": "keldeoresoluteh3",
+    "pokedexNumber": 1629,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoresoluteh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Keldeo-Resolute-H4",
+    "base": "keldeoresolute",
+    "showdownId": "keldeoresoluteh4",
+    "pokedexNumber": 1804,
+    "nationalDex": 647,
+    "sprite": "/sprites/pbo/custom/halloween/keldeoresoluteh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kingdra-H",
+    "base": "kingdra",
+    "showdownId": "kingdrah",
+    "pokedexNumber": 1233,
+    "nationalDex": 230,
+    "sprite": "/sprites/pbo/custom/halloween/kingdrah.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kingdra-H2",
+    "base": "kingdra",
+    "showdownId": "kingdrah2",
+    "pokedexNumber": 1619,
+    "nationalDex": 230,
+    "sprite": "/sprites/pbo/custom/halloween/kingdrah2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Kirlia-H",
+    "base": "kirlia",
+    "showdownId": "kirliah",
+    "pokedexNumber": 1584,
+    "nationalDex": 281,
+    "sprite": "/sprites/pbo/custom/halloween/kirliah.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Klefki-H4",
+    "base": "klefki",
+    "showdownId": "klefkih4",
+    "pokedexNumber": 1763,
+    "nationalDex": 707,
+    "sprite": "/sprites/pbo/custom/halloween/klefkih4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Latias-H4",
+    "base": "latias",
+    "showdownId": "latiash4",
+    "pokedexNumber": 1775,
+    "nationalDex": 380,
+    "sprite": "/sprites/pbo/custom/halloween/latiash4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Leafeon-H",
+    "base": "leafeon",
+    "showdownId": "leafeonh",
+    "pokedexNumber": 1644,
+    "nationalDex": 470,
+    "sprite": "/sprites/pbo/custom/halloween/leafeonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Lopunny-H4",
+    "base": "lopunny",
+    "showdownId": "lopunnyh4",
+    "pokedexNumber": 1755,
+    "nationalDex": 428,
+    "sprite": "/sprites/pbo/custom/halloween/lopunnyh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Lucario-H",
+    "base": "lucario",
+    "showdownId": "lucarioh",
+    "pokedexNumber": 1222,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/halloween/lucarioh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Lucario-H2",
+    "base": "lucario",
+    "showdownId": "lucarioh2",
+    "pokedexNumber": 1602,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/halloween/lucarioh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Lucario-H4",
+    "base": "lucario",
+    "showdownId": "lucarioh4",
+    "pokedexNumber": 1757,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/halloween/lucarioh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Lucario-Mega-H4",
+    "base": "lucariomega",
+    "showdownId": "lucariomegah4",
+    "pokedexNumber": 1758,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/halloween/lucariomegah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Luxray-H4",
+    "base": "luxray",
+    "showdownId": "luxrayh4",
+    "pokedexNumber": 1796,
+    "nationalDex": 405,
+    "sprite": "/sprites/pbo/custom/halloween/luxrayh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Magikarp-H",
+    "base": "magikarp",
+    "showdownId": "magikarph",
+    "pokedexNumber": 1241,
+    "nationalDex": 129,
+    "sprite": "/sprites/pbo/custom/halloween/magikarph.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Magikarp-H2",
+    "base": "magikarp",
+    "showdownId": "magikarph2",
+    "pokedexNumber": 1288,
+    "nationalDex": 129,
+    "sprite": "/sprites/pbo/custom/halloween/magikarph2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Magikarp-H3",
+    "base": "magikarp",
+    "showdownId": "magikarph3",
+    "pokedexNumber": 1607,
+    "nationalDex": 129,
+    "sprite": "/sprites/pbo/custom/halloween/magikarph3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mamoswine-H",
+    "base": "mamoswine",
+    "showdownId": "mamoswineh",
+    "pokedexNumber": 1620,
+    "nationalDex": 473,
+    "sprite": "/sprites/pbo/custom/halloween/mamoswineh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mandibuzz-H",
+    "base": "mandibuzz",
+    "showdownId": "mandibuzzh",
+    "pokedexNumber": 1633,
+    "nationalDex": 630,
+    "sprite": "/sprites/pbo/custom/halloween/mandibuzzh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Marowak-Alola-H",
+    "base": "marowakalola",
+    "showdownId": "marowakalolah",
+    "pokedexNumber": 1282,
+    "nationalDex": 105,
+    "sprite": "/sprites/pbo/custom/halloween/marowakalolah.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Marowak-H",
+    "base": "marowak",
+    "showdownId": "marowakh",
+    "pokedexNumber": 1281,
+    "nationalDex": 105,
+    "sprite": "/sprites/pbo/custom/halloween/marowakh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mawile-H",
+    "base": "mawile",
+    "showdownId": "mawileh",
+    "pokedexNumber": 1298,
+    "nationalDex": 303,
+    "sprite": "/sprites/pbo/custom/halloween/mawileh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Metagross-H4",
+    "base": "metagross",
+    "showdownId": "metagrossh4",
+    "pokedexNumber": 1752,
+    "nationalDex": 376,
+    "sprite": "/sprites/pbo/custom/halloween/metagrossh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mew-H",
+    "base": "mew",
+    "showdownId": "mewh",
+    "pokedexNumber": 1257,
+    "nationalDex": 151,
+    "sprite": "/sprites/pbo/custom/halloween/mewh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mew-H2",
+    "base": "mew",
+    "showdownId": "mewh2",
+    "pokedexNumber": 1582,
+    "nationalDex": 151,
+    "sprite": "/sprites/pbo/custom/halloween/mewh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Mew-H4",
+    "base": "mew",
+    "showdownId": "mewh4",
+    "pokedexNumber": 1805,
+    "nationalDex": 151,
+    "sprite": "/sprites/pbo/custom/halloween/mewh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Milotic-H",
+    "base": "milotic",
+    "showdownId": "milotich",
+    "pokedexNumber": 1631,
+    "nationalDex": 350,
+    "sprite": "/sprites/pbo/custom/halloween/milotich.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ninetales-H4",
+    "base": "ninetales",
+    "showdownId": "ninetalesh4",
+    "pokedexNumber": 1771,
+    "nationalDex": 38,
+    "sprite": "/sprites/pbo/custom/halloween/ninetalesh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Omastar-H",
+    "base": "omastar",
+    "showdownId": "omastarh",
+    "pokedexNumber": 1627,
+    "nationalDex": 139,
+    "sprite": "/sprites/pbo/custom/halloween/omastarh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Piplup-H4",
+    "base": "piplup",
+    "showdownId": "pipluph4",
+    "pokedexNumber": 1753,
+    "nationalDex": 393,
+    "sprite": "/sprites/pbo/custom/halloween/pipluph4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Primarina-H4",
+    "base": "primarina",
+    "showdownId": "primarinah4",
+    "pokedexNumber": 1764,
+    "nationalDex": 730,
+    "sprite": "/sprites/pbo/custom/halloween/primarinah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Prinplup-H4",
+    "base": "prinplup",
+    "showdownId": "prinpluph4",
+    "pokedexNumber": 1754,
+    "nationalDex": 394,
+    "sprite": "/sprites/pbo/custom/halloween/prinpluph4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Raikou-H",
+    "base": "raikou",
+    "showdownId": "raikouh",
+    "pokedexNumber": 1229,
+    "nationalDex": 243,
+    "sprite": "/sprites/pbo/custom/halloween/raikouh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Raikou-H2",
+    "base": "raikou",
+    "showdownId": "raikouh2",
+    "pokedexNumber": 1292,
+    "nationalDex": 243,
+    "sprite": "/sprites/pbo/custom/halloween/raikouh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Raikou-H3",
+    "base": "raikou",
+    "showdownId": "raikouh3",
+    "pokedexNumber": 1596,
+    "nationalDex": 243,
+    "sprite": "/sprites/pbo/custom/halloween/raikouh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ralts-H",
+    "base": "ralts",
+    "showdownId": "raltsh",
+    "pokedexNumber": 1583,
+    "nationalDex": 280,
+    "sprite": "/sprites/pbo/custom/halloween/raltsh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Revavroom-H4",
+    "base": "revavroom",
+    "showdownId": "revavroomh4",
+    "pokedexNumber": 1786,
+    "nationalDex": 966,
+    "sprite": "/sprites/pbo/custom/halloween/revavroomh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Rhyperior-H4",
+    "base": "rhyperior",
+    "showdownId": "rhyperiorh4",
+    "pokedexNumber": 1778,
+    "nationalDex": 464,
+    "sprite": "/sprites/pbo/custom/halloween/rhyperiorh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Rillaboom-H",
+    "base": "rillaboom",
+    "showdownId": "rillaboomh",
+    "pokedexNumber": 1606,
+    "nationalDex": 812,
+    "sprite": "/sprites/pbo/custom/halloween/rillaboomh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Riolu-H",
+    "base": "riolu",
+    "showdownId": "rioluh",
+    "pokedexNumber": 1234,
+    "nationalDex": 447,
+    "sprite": "/sprites/pbo/custom/halloween/rioluh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Riolu-H4",
+    "base": "riolu",
+    "showdownId": "rioluh4",
+    "pokedexNumber": 1756,
+    "nationalDex": 447,
+    "sprite": "/sprites/pbo/custom/halloween/rioluh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Sableye-H",
+    "base": "sableye",
+    "showdownId": "sableyeh",
+    "pokedexNumber": 1632,
+    "nationalDex": 302,
+    "sprite": "/sprites/pbo/custom/halloween/sableyeh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Salamence-H",
+    "base": "salamence",
+    "showdownId": "salamenceh",
+    "pokedexNumber": 1275,
+    "nationalDex": 373,
+    "sprite": "/sprites/pbo/custom/halloween/salamenceh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Salamence-H2",
+    "base": "salamence",
+    "showdownId": "salamenceh2",
+    "pokedexNumber": 1640,
+    "nationalDex": 373,
+    "sprite": "/sprites/pbo/custom/halloween/salamenceh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Salazzle-H4",
+    "base": "salazzle",
+    "showdownId": "salazzleh4",
+    "pokedexNumber": 1782,
+    "nationalDex": 758,
+    "sprite": "/sprites/pbo/custom/halloween/salazzleh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Sceptile-H4",
+    "base": "sceptile",
+    "showdownId": "sceptileh4",
+    "pokedexNumber": 1772,
+    "nationalDex": 254,
+    "sprite": "/sprites/pbo/custom/halloween/sceptileh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scizor-H",
+    "base": "scizor",
+    "showdownId": "scizorh",
+    "pokedexNumber": 1235,
+    "nationalDex": 212,
+    "sprite": "/sprites/pbo/custom/halloween/scizorh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scizor-H2",
+    "base": "scizor",
+    "showdownId": "scizorh2",
+    "pokedexNumber": 1265,
+    "nationalDex": 212,
+    "sprite": "/sprites/pbo/custom/halloween/scizorh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scizor-H3",
+    "base": "scizor",
+    "showdownId": "scizorh3",
+    "pokedexNumber": 1612,
+    "nationalDex": 212,
+    "sprite": "/sprites/pbo/custom/halloween/scizorh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scyther-H",
+    "base": "scyther",
+    "showdownId": "scytherh",
+    "pokedexNumber": 1224,
+    "nationalDex": 123,
+    "sprite": "/sprites/pbo/custom/halloween/scytherh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scyther-H2",
+    "base": "scyther",
+    "showdownId": "scytherh2",
+    "pokedexNumber": 1264,
+    "nationalDex": 123,
+    "sprite": "/sprites/pbo/custom/halloween/scytherh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Scyther-H3",
+    "base": "scyther",
+    "showdownId": "scytherh3",
+    "pokedexNumber": 1611,
+    "nationalDex": 123,
+    "sprite": "/sprites/pbo/custom/halloween/scytherh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Sharpedo-H",
+    "base": "sharpedo",
+    "showdownId": "sharpedoh",
+    "pokedexNumber": 1305,
+    "nationalDex": 319,
+    "sprite": "/sprites/pbo/custom/halloween/sharpedoh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shelgon-H",
+    "base": "shelgon",
+    "showdownId": "shelgonh",
+    "pokedexNumber": 1274,
+    "nationalDex": 372,
+    "sprite": "/sprites/pbo/custom/halloween/shelgonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shellder-H",
+    "base": "shellder",
+    "showdownId": "shellderh",
+    "pokedexNumber": 1276,
+    "nationalDex": 90,
+    "sprite": "/sprites/pbo/custom/halloween/shellderh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shuppet-H",
+    "base": "shuppet",
+    "showdownId": "shuppeth",
+    "pokedexNumber": 1226,
+    "nationalDex": 353,
+    "sprite": "/sprites/pbo/custom/halloween/shuppeth.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shuppet-H2",
+    "base": "shuppet",
+    "showdownId": "shuppeth2",
+    "pokedexNumber": 1270,
+    "nationalDex": 353,
+    "sprite": "/sprites/pbo/custom/halloween/shuppeth2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shuppet-H3-Day",
+    "base": "shuppet",
+    "showdownId": "shuppeth3day",
+    "pokedexNumber": 1588,
+    "nationalDex": 353,
+    "sprite": "/sprites/pbo/custom/halloween/shuppeth3day.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shuppet-H3-Night",
+    "base": "shuppet",
+    "showdownId": "shuppeth3night",
+    "pokedexNumber": 1590,
+    "nationalDex": 353,
+    "sprite": "/sprites/pbo/custom/halloween/shuppeth3night.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Shuppet-H4",
+    "base": "shuppet",
+    "showdownId": "shuppeth4",
+    "pokedexNumber": 1793,
+    "nationalDex": 353,
+    "sprite": "/sprites/pbo/custom/halloween/shuppeth4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Skarmory-H",
+    "base": "skarmory",
+    "showdownId": "skarmoryh",
+    "pokedexNumber": 1236,
+    "nationalDex": 227,
+    "sprite": "/sprites/pbo/custom/halloween/skarmoryh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Skarmory-H2",
+    "base": "skarmory",
+    "showdownId": "skarmoryh2",
+    "pokedexNumber": 1595,
+    "nationalDex": 227,
+    "sprite": "/sprites/pbo/custom/halloween/skarmoryh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Skarmory-H4",
+    "base": "skarmory",
+    "showdownId": "skarmoryh4",
+    "pokedexNumber": 1748,
+    "nationalDex": 227,
+    "sprite": "/sprites/pbo/custom/halloween/skarmoryh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slaking-H4",
+    "base": "slaking",
+    "showdownId": "slakingh4",
+    "pokedexNumber": 1774,
+    "nationalDex": 289,
+    "sprite": "/sprites/pbo/custom/halloween/slakingh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowbro-H",
+    "base": "slowbro",
+    "showdownId": "slowbroh",
+    "pokedexNumber": 1254,
+    "nationalDex": 80,
+    "sprite": "/sprites/pbo/custom/halloween/slowbroh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowbro-H2",
+    "base": "slowbro",
+    "showdownId": "slowbroh2",
+    "pokedexNumber": 1637,
+    "nationalDex": 80,
+    "sprite": "/sprites/pbo/custom/halloween/slowbroh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowking-H",
+    "base": "slowking",
+    "showdownId": "slowkingh",
+    "pokedexNumber": 1255,
+    "nationalDex": 199,
+    "sprite": "/sprites/pbo/custom/halloween/slowkingh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowking-H2",
+    "base": "slowking",
+    "showdownId": "slowkingh2",
+    "pokedexNumber": 1638,
+    "nationalDex": 199,
+    "sprite": "/sprites/pbo/custom/halloween/slowkingh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowpoke-H",
+    "base": "slowpoke",
+    "showdownId": "slowpokeh",
+    "pokedexNumber": 1253,
+    "nationalDex": 79,
+    "sprite": "/sprites/pbo/custom/halloween/slowpokeh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Slowpoke-H2",
+    "base": "slowpoke",
+    "showdownId": "slowpokeh2",
+    "pokedexNumber": 1621,
+    "nationalDex": 79,
+    "sprite": "/sprites/pbo/custom/halloween/slowpokeh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Snubbull-H4",
+    "base": "snubbull",
+    "showdownId": "snubbullh4",
+    "pokedexNumber": 1746,
+    "nationalDex": 209,
+    "sprite": "/sprites/pbo/custom/halloween/snubbullh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Squirtle-H",
+    "base": "squirtle",
+    "showdownId": "squirtleh",
+    "pokedexNumber": 1266,
+    "nationalDex": 7,
+    "sprite": "/sprites/pbo/custom/halloween/squirtleh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Suicune-H",
+    "base": "suicune",
+    "showdownId": "suicuneh",
+    "pokedexNumber": 1231,
+    "nationalDex": 245,
+    "sprite": "/sprites/pbo/custom/halloween/suicuneh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Suicune-H2",
+    "base": "suicune",
+    "showdownId": "suicuneh2",
+    "pokedexNumber": 1294,
+    "nationalDex": 245,
+    "sprite": "/sprites/pbo/custom/halloween/suicuneh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Suicune-H3",
+    "base": "suicune",
+    "showdownId": "suicuneh3",
+    "pokedexNumber": 1598,
+    "nationalDex": 245,
+    "sprite": "/sprites/pbo/custom/halloween/suicuneh3.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Swampert-H4",
+    "base": "swampert",
+    "showdownId": "swamperth4",
+    "pokedexNumber": 1795,
+    "nationalDex": 260,
+    "sprite": "/sprites/pbo/custom/halloween/swamperth4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Sylveon-H",
+    "base": "sylveon",
+    "showdownId": "sylveonh",
+    "pokedexNumber": 1594,
+    "nationalDex": 700,
+    "sprite": "/sprites/pbo/custom/halloween/sylveonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tangrowth-H",
+    "base": "tangrowth",
+    "showdownId": "tangrowthh",
+    "pokedexNumber": 1639,
+    "nationalDex": 465,
+    "sprite": "/sprites/pbo/custom/halloween/tangrowthh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Teddiursa-H4",
+    "base": "teddiursa",
+    "showdownId": "teddiursah4",
+    "pokedexNumber": 1788,
+    "nationalDex": 216,
+    "sprite": "/sprites/pbo/custom/halloween/teddiursah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tinkatink-H4",
+    "base": "tinkatink",
+    "showdownId": "tinkatinkh4",
+    "pokedexNumber": 1767,
+    "nationalDex": 957,
+    "sprite": "/sprites/pbo/custom/halloween/tinkatinkh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tinkaton-H4",
+    "base": "tinkaton",
+    "showdownId": "tinkatonh4",
+    "pokedexNumber": 1769,
+    "nationalDex": 959,
+    "sprite": "/sprites/pbo/custom/halloween/tinkatonh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tinkatuff-H4",
+    "base": "tinkatuff",
+    "showdownId": "tinkatuffh4",
+    "pokedexNumber": 1768,
+    "nationalDex": 958,
+    "sprite": "/sprites/pbo/custom/halloween/tinkatuffh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Togekiss-H",
+    "base": "togekiss",
+    "showdownId": "togekissh",
+    "pokedexNumber": 1600,
+    "nationalDex": 468,
+    "sprite": "/sprites/pbo/custom/halloween/togekissh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Torterra-H4",
+    "base": "torterra",
+    "showdownId": "torterrah4",
+    "pokedexNumber": 1776,
+    "nationalDex": 389,
+    "sprite": "/sprites/pbo/custom/halloween/torterrah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Toucannon-H",
+    "base": "toucannon",
+    "showdownId": "toucannonh",
+    "pokedexNumber": 1278,
+    "nationalDex": 733,
+    "sprite": "/sprites/pbo/custom/halloween/toucannonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tyranitar-H",
+    "base": "tyranitar",
+    "showdownId": "tyranitarh",
+    "pokedexNumber": 1306,
+    "nationalDex": 248,
+    "sprite": "/sprites/pbo/custom/halloween/tyranitarh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tyranitar-H2",
+    "base": "tyranitar",
+    "showdownId": "tyranitarh2",
+    "pokedexNumber": 1622,
+    "nationalDex": 248,
+    "sprite": "/sprites/pbo/custom/halloween/tyranitarh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tyrantrum-H",
+    "base": "tyrantrum",
+    "showdownId": "tyrantrumh",
+    "pokedexNumber": 1625,
+    "nationalDex": 697,
+    "sprite": "/sprites/pbo/custom/halloween/tyrantrumh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Tyrantrum-H4",
+    "base": "tyrantrum",
+    "showdownId": "tyrantrumh4",
+    "pokedexNumber": 1797,
+    "nationalDex": 697,
+    "sprite": "/sprites/pbo/custom/halloween/tyrantrumh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Umbreon-H",
+    "base": "umbreon",
+    "showdownId": "umbreonh",
+    "pokedexNumber": 1303,
+    "nationalDex": 197,
+    "sprite": "/sprites/pbo/custom/halloween/umbreonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Umbreon-H4",
+    "base": "umbreon",
+    "showdownId": "umbreonh4",
+    "pokedexNumber": 1745,
+    "nationalDex": 197,
+    "sprite": "/sprites/pbo/custom/halloween/umbreonh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ursaluna-H4",
+    "base": "ursaluna",
+    "showdownId": "ursalunah4",
+    "pokedexNumber": 1790,
+    "nationalDex": 901,
+    "sprite": "/sprites/pbo/custom/halloween/ursalunah4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Ursaring-H4",
+    "base": "ursaring",
+    "showdownId": "ursaringh4",
+    "pokedexNumber": 1789,
+    "nationalDex": 217,
+    "sprite": "/sprites/pbo/custom/halloween/ursaringh4.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Vaporeon-H",
+    "base": "vaporeon",
+    "showdownId": "vaporeonh",
+    "pokedexNumber": 1301,
+    "nationalDex": 134,
+    "sprite": "/sprites/pbo/custom/halloween/vaporeonh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Venusaur-H",
+    "base": "venusaur",
+    "showdownId": "venusaurh",
+    "pokedexNumber": 1260,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/halloween/venusaurh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Venusaur-H2",
+    "base": "venusaur",
+    "showdownId": "venusaurh2",
+    "pokedexNumber": 1580,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/halloween/venusaurh2.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Volcarona-H",
+    "base": "volcarona",
+    "showdownId": "volcaronah",
+    "pokedexNumber": 1616,
+    "nationalDex": 637,
+    "sprite": "/sprites/pbo/custom/halloween/volcaronah.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Wartortle-H",
+    "base": "wartortle",
+    "showdownId": "wartortleh",
+    "pokedexNumber": 1267,
+    "nationalDex": 8,
+    "sprite": "/sprites/pbo/custom/halloween/wartortleh.png"
+  },
+  {
+    "event": "halloween",
+    "name": "Yveltal-H4",
+    "base": "yveltal",
+    "showdownId": "yveltalh4",
+    "pokedexNumber": 1781,
+    "nationalDex": 717,
+    "sprite": "/sprites/pbo/custom/halloween/yveltalh4.png"
+  },
+  {
+    "event": "summer",
+    "name": "Annihilape-S",
+    "base": "annihilape",
+    "showdownId": "annihilapes",
+    "pokedexNumber": 1534,
+    "nationalDex": 979,
+    "sprite": "/sprites/pbo/custom/summer/annihilapes.png"
+  },
+  {
+    "event": "summer",
+    "name": "Barraskewda-S",
+    "base": "barraskewda",
+    "showdownId": "barraskewdas",
+    "pokedexNumber": 1540,
+    "nationalDex": 847,
+    "sprite": "/sprites/pbo/custom/summer/barraskewdas.png"
+  },
+  {
+    "event": "summer",
+    "name": "Blastoise-S",
+    "base": "blastoise",
+    "showdownId": "blastoises",
+    "pokedexNumber": 1577,
+    "nationalDex": 9,
+    "sprite": "/sprites/pbo/custom/summer/blastoises.png"
+  },
+  {
+    "event": "summer",
+    "name": "Breloom-S",
+    "base": "breloom",
+    "showdownId": "brelooms",
+    "pokedexNumber": 1532,
+    "nationalDex": 286,
+    "sprite": "/sprites/pbo/custom/summer/brelooms.png"
+  },
+  {
+    "event": "summer",
+    "name": "Camerupt-S",
+    "base": "camerupt",
+    "showdownId": "camerupts",
+    "pokedexNumber": 1533,
+    "nationalDex": 323,
+    "sprite": "/sprites/pbo/custom/summer/camerupts.png"
+  },
+  {
+    "event": "summer",
+    "name": "Chandelure-S",
+    "base": "chandelure",
+    "showdownId": "chandelures",
+    "pokedexNumber": 1546,
+    "nationalDex": 609,
+    "sprite": "/sprites/pbo/custom/summer/chandelures.png"
+  },
+  {
+    "event": "summer",
+    "name": "Charizard-S",
+    "base": "charizard",
+    "showdownId": "charizards",
+    "pokedexNumber": 1576,
+    "nationalDex": 6,
+    "sprite": "/sprites/pbo/custom/summer/charizards.png"
+  },
+  {
+    "event": "summer",
+    "name": "Chesnaught-S",
+    "base": "chesnaught",
+    "showdownId": "chesnaughts",
+    "pokedexNumber": 1544,
+    "nationalDex": 652,
+    "sprite": "/sprites/pbo/custom/summer/chesnaughts.png"
+  },
+  {
+    "event": "summer",
+    "name": "Crocalor-S",
+    "base": "crocalor",
+    "showdownId": "crocalors",
+    "pokedexNumber": 1718,
+    "nationalDex": 910,
+    "sprite": "/sprites/pbo/custom/summer/crocalors.png"
+  },
+  {
+    "event": "summer",
+    "name": "Dartrix-S",
+    "base": "dartrix",
+    "showdownId": "dartrixs",
+    "pokedexNumber": 1728,
+    "nationalDex": 723,
+    "sprite": "/sprites/pbo/custom/summer/dartrixs.png"
+  },
+  {
+    "event": "summer",
+    "name": "Decidueye-Hisui-S",
+    "base": "decidueyehisui",
+    "showdownId": "decidueyehisuis",
+    "pokedexNumber": 1729,
+    "nationalDex": 724,
+    "sprite": "/sprites/pbo/custom/summer/decidueyehisuis.png"
+  },
+  {
+    "event": "summer",
+    "name": "Dragonite-S",
+    "base": "dragonite",
+    "showdownId": "dragonites",
+    "pokedexNumber": 1537,
+    "nationalDex": 149,
+    "sprite": "/sprites/pbo/custom/summer/dragonites.png"
+  },
+  {
+    "event": "summer",
+    "name": "Eevee-S",
+    "base": "eevee",
+    "showdownId": "eevees",
+    "pokedexNumber": 1720,
+    "nationalDex": 133,
+    "sprite": "/sprites/pbo/custom/summer/eevees.png"
+  },
+  {
+    "event": "summer",
+    "name": "Empoleon-S",
+    "base": "empoleon",
+    "showdownId": "empoleons",
+    "pokedexNumber": 1539,
+    "nationalDex": 395,
+    "sprite": "/sprites/pbo/custom/summer/empoleons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Espeon-S",
+    "base": "espeon",
+    "showdownId": "espeons",
+    "pokedexNumber": 1743,
+    "nationalDex": 196,
+    "sprite": "/sprites/pbo/custom/summer/espeons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Excadrill-S",
+    "base": "excadrill",
+    "showdownId": "excadrills",
+    "pokedexNumber": 1722,
+    "nationalDex": 530,
+    "sprite": "/sprites/pbo/custom/summer/excadrills.png"
+  },
+  {
+    "event": "summer",
+    "name": "Ferrothorn-S",
+    "base": "ferrothorn",
+    "showdownId": "ferrothorns",
+    "pokedexNumber": 1531,
+    "nationalDex": 598,
+    "sprite": "/sprites/pbo/custom/summer/ferrothorns.png"
+  },
+  {
+    "event": "summer",
+    "name": "Froakie-S",
+    "base": "froakie",
+    "showdownId": "froakies",
+    "pokedexNumber": 1723,
+    "nationalDex": 656,
+    "sprite": "/sprites/pbo/custom/summer/froakies.png"
+  },
+  {
+    "event": "summer",
+    "name": "Frogadier-S",
+    "base": "frogadier",
+    "showdownId": "frogadiers",
+    "pokedexNumber": 1724,
+    "nationalDex": 657,
+    "sprite": "/sprites/pbo/custom/summer/frogadiers.png"
+  },
+  {
+    "event": "summer",
+    "name": "Fuecoco-S",
+    "base": "fuecoco",
+    "showdownId": "fuecocos",
+    "pokedexNumber": 1717,
+    "nationalDex": 909,
+    "sprite": "/sprites/pbo/custom/summer/fuecocos.png"
+  },
+  {
+    "event": "summer",
+    "name": "Garchomp-Mega-S",
+    "base": "garchompmega",
+    "showdownId": "garchompmegas",
+    "pokedexNumber": 1727,
+    "nationalDex": 445,
+    "sprite": "/sprites/pbo/custom/summer/garchompmegas.png"
+  },
+  {
+    "event": "summer",
+    "name": "Garchomp-S",
+    "base": "garchomp",
+    "showdownId": "garchomps",
+    "pokedexNumber": 1726,
+    "nationalDex": 445,
+    "sprite": "/sprites/pbo/custom/summer/garchomps.png"
+  },
+  {
+    "event": "summer",
+    "name": "Gastrodon-S",
+    "base": "gastrodon",
+    "showdownId": "gastrodons",
+    "pokedexNumber": 1730,
+    "nationalDex": 423,
+    "sprite": "/sprites/pbo/custom/summer/gastrodons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Glaceon-S",
+    "base": "glaceon",
+    "showdownId": "glaceons",
+    "pokedexNumber": 1744,
+    "nationalDex": 471,
+    "sprite": "/sprites/pbo/custom/summer/glaceons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Greninja-S",
+    "base": "greninja",
+    "showdownId": "greninjas",
+    "pokedexNumber": 1541,
+    "nationalDex": 658,
+    "sprite": "/sprites/pbo/custom/summer/greninjas.png"
+  },
+  {
+    "event": "summer",
+    "name": "Greninja-S2",
+    "base": "greninja",
+    "showdownId": "greninjas2",
+    "pokedexNumber": 1725,
+    "nationalDex": 658,
+    "sprite": "/sprites/pbo/custom/summer/greninjas2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Hippowdon-S",
+    "base": "hippowdon",
+    "showdownId": "hippowdons",
+    "pokedexNumber": 1731,
+    "nationalDex": 450,
+    "sprite": "/sprites/pbo/custom/summer/hippowdons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Infernape-S",
+    "base": "infernape",
+    "showdownId": "infernapes",
+    "pokedexNumber": 1567,
+    "nationalDex": 392,
+    "sprite": "/sprites/pbo/custom/summer/infernapes.png"
+  },
+  {
+    "event": "summer",
+    "name": "Kingdra-S",
+    "base": "kingdra",
+    "showdownId": "kingdras",
+    "pokedexNumber": 1732,
+    "nationalDex": 230,
+    "sprite": "/sprites/pbo/custom/summer/kingdras.png"
+  },
+  {
+    "event": "summer",
+    "name": "Lapras-S",
+    "base": "lapras",
+    "showdownId": "laprass",
+    "pokedexNumber": 1525,
+    "nationalDex": 131,
+    "sprite": "/sprites/pbo/custom/summer/laprass.png"
+  },
+  {
+    "event": "summer",
+    "name": "Lapras-S2",
+    "base": "lapras",
+    "showdownId": "laprass2",
+    "pokedexNumber": 1733,
+    "nationalDex": 131,
+    "sprite": "/sprites/pbo/custom/summer/laprass2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latias-S",
+    "base": "latias",
+    "showdownId": "latiass",
+    "pokedexNumber": 1565,
+    "nationalDex": 380,
+    "sprite": "/sprites/pbo/custom/summer/latiass.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latias-S2",
+    "base": "latias",
+    "showdownId": "latiass2",
+    "pokedexNumber": 1734,
+    "nationalDex": 380,
+    "sprite": "/sprites/pbo/custom/summer/latiass2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latios-S",
+    "base": "latios",
+    "showdownId": "latioss",
+    "pokedexNumber": 1566,
+    "nationalDex": 381,
+    "sprite": "/sprites/pbo/custom/summer/latioss.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latios-S2",
+    "base": "latios",
+    "showdownId": "latioss2",
+    "pokedexNumber": 1735,
+    "nationalDex": 381,
+    "sprite": "/sprites/pbo/custom/summer/latioss2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Leafeon-S",
+    "base": "leafeon",
+    "showdownId": "leafeons",
+    "pokedexNumber": 1575,
+    "nationalDex": 470,
+    "sprite": "/sprites/pbo/custom/summer/leafeons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Lilligant-Hisui-S",
+    "base": "lilliganthisui",
+    "showdownId": "lilliganthisuis",
+    "pokedexNumber": 1736,
+    "nationalDex": 549,
+    "sprite": "/sprites/pbo/custom/summer/lilliganthisuis.png"
+  },
+  {
+    "event": "summer",
+    "name": "Ludicolo-S",
+    "base": "ludicolo",
+    "showdownId": "ludicolos",
+    "pokedexNumber": 1571,
+    "nationalDex": 272,
+    "sprite": "/sprites/pbo/custom/summer/ludicolos.png"
+  },
+  {
+    "event": "summer",
+    "name": "Milotic-S",
+    "base": "milotic",
+    "showdownId": "milotics",
+    "pokedexNumber": 1528,
+    "nationalDex": 350,
+    "sprite": "/sprites/pbo/custom/summer/milotics.png"
+  },
+  {
+    "event": "summer",
+    "name": "Ninetales-S",
+    "base": "ninetales",
+    "showdownId": "ninetaless",
+    "pokedexNumber": 1530,
+    "nationalDex": 38,
+    "sprite": "/sprites/pbo/custom/summer/ninetaless.png"
+  },
+  {
+    "event": "summer",
+    "name": "Pelipper-S",
+    "base": "pelipper",
+    "showdownId": "pelippers",
+    "pokedexNumber": 1569,
+    "nationalDex": 279,
+    "sprite": "/sprites/pbo/custom/summer/pelippers.png"
+  },
+  {
+    "event": "summer",
+    "name": "Pikachu-S",
+    "base": "pikachu",
+    "showdownId": "pikachus",
+    "pokedexNumber": 1524,
+    "nationalDex": 25,
+    "sprite": "/sprites/pbo/custom/summer/pikachus.png"
+  },
+  {
+    "event": "summer",
+    "name": "Politoed-S",
+    "base": "politoed",
+    "showdownId": "politoeds",
+    "pokedexNumber": 1737,
+    "nationalDex": 186,
+    "sprite": "/sprites/pbo/custom/summer/politoeds.png"
+  },
+  {
+    "event": "summer",
+    "name": "Primarina-S",
+    "base": "primarina",
+    "showdownId": "primarinas",
+    "pokedexNumber": 1738,
+    "nationalDex": 730,
+    "sprite": "/sprites/pbo/custom/summer/primarinas.png"
+  },
+  {
+    "event": "summer",
+    "name": "Raichu-Alola-S",
+    "base": "raichualola",
+    "showdownId": "raichualolas",
+    "pokedexNumber": 1527,
+    "nationalDex": 26,
+    "sprite": "/sprites/pbo/custom/summer/raichualolas.png"
+  },
+  {
+    "event": "summer",
+    "name": "Raichu-S",
+    "base": "raichu",
+    "showdownId": "raichus",
+    "pokedexNumber": 1526,
+    "nationalDex": 26,
+    "sprite": "/sprites/pbo/custom/summer/raichus.png"
+  },
+  {
+    "event": "summer",
+    "name": "Reuniclus-S",
+    "base": "reuniclus",
+    "showdownId": "reunicluss",
+    "pokedexNumber": 1739,
+    "nationalDex": 579,
+    "sprite": "/sprites/pbo/custom/summer/reunicluss.png"
+  },
+  {
+    "event": "summer",
+    "name": "Ribombee-S",
+    "base": "ribombee",
+    "showdownId": "ribombees",
+    "pokedexNumber": 1535,
+    "nationalDex": 743,
+    "sprite": "/sprites/pbo/custom/summer/ribombees.png"
+  },
+  {
+    "event": "summer",
+    "name": "Scizor-S",
+    "base": "scizor",
+    "showdownId": "scizors",
+    "pokedexNumber": 1574,
+    "nationalDex": 212,
+    "sprite": "/sprites/pbo/custom/summer/scizors.png"
+  },
+  {
+    "event": "summer",
+    "name": "Scyther-S",
+    "base": "scyther",
+    "showdownId": "scythers",
+    "pokedexNumber": 1573,
+    "nationalDex": 123,
+    "sprite": "/sprites/pbo/custom/summer/scythers.png"
+  },
+  {
+    "event": "summer",
+    "name": "Sharpedo-S",
+    "base": "sharpedo",
+    "showdownId": "sharpedos",
+    "pokedexNumber": 1538,
+    "nationalDex": 319,
+    "sprite": "/sprites/pbo/custom/summer/sharpedos.png"
+  },
+  {
+    "event": "summer",
+    "name": "Skeledirge-S",
+    "base": "skeledirge",
+    "showdownId": "skeledirges",
+    "pokedexNumber": 1547,
+    "nationalDex": 911,
+    "sprite": "/sprites/pbo/custom/summer/skeledirges.png"
+  },
+  {
+    "event": "summer",
+    "name": "Skeledirge-S2",
+    "base": "skeledirge",
+    "showdownId": "skeledirges2",
+    "pokedexNumber": 1719,
+    "nationalDex": 911,
+    "sprite": "/sprites/pbo/custom/summer/skeledirges2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Snorlax-S",
+    "base": "snorlax",
+    "showdownId": "snorlaxs",
+    "pokedexNumber": 1740,
+    "nationalDex": 143,
+    "sprite": "/sprites/pbo/custom/summer/snorlaxs.png"
+  },
+  {
+    "event": "summer",
+    "name": "Steelix-S",
+    "base": "steelix",
+    "showdownId": "steelixs",
+    "pokedexNumber": 1545,
+    "nationalDex": 208,
+    "sprite": "/sprites/pbo/custom/summer/steelixs.png"
+  },
+  {
+    "event": "summer",
+    "name": "Sylveon-S",
+    "base": "sylveon",
+    "showdownId": "sylveons",
+    "pokedexNumber": 1572,
+    "nationalDex": 700,
+    "sprite": "/sprites/pbo/custom/summer/sylveons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Torkoal-S",
+    "base": "torkoal",
+    "showdownId": "torkoals",
+    "pokedexNumber": 1536,
+    "nationalDex": 324,
+    "sprite": "/sprites/pbo/custom/summer/torkoals.png"
+  },
+  {
+    "event": "summer",
+    "name": "Torterra-S",
+    "base": "torterra",
+    "showdownId": "torterras",
+    "pokedexNumber": 1542,
+    "nationalDex": 389,
+    "sprite": "/sprites/pbo/custom/summer/torterras.png"
+  },
+  {
+    "event": "summer",
+    "name": "Toxicroak-S",
+    "base": "toxicroak",
+    "showdownId": "toxicroaks",
+    "pokedexNumber": 1543,
+    "nationalDex": 454,
+    "sprite": "/sprites/pbo/custom/summer/toxicroaks.png"
+  },
+  {
+    "event": "summer",
+    "name": "Tropius-S",
+    "base": "tropius",
+    "showdownId": "tropiuss",
+    "pokedexNumber": 1741,
+    "nationalDex": 357,
+    "sprite": "/sprites/pbo/custom/summer/tropiuss.png"
+  },
+  {
+    "event": "summer",
+    "name": "Vaporeon-S",
+    "base": "vaporeon",
+    "showdownId": "vaporeons",
+    "pokedexNumber": 1721,
+    "nationalDex": 134,
+    "sprite": "/sprites/pbo/custom/summer/vaporeons.png"
+  },
+  {
+    "event": "summer",
+    "name": "Venusaur-S",
+    "base": "venusaur",
+    "showdownId": "venusaurs",
+    "pokedexNumber": 1570,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/summer/venusaurs.png"
+  },
+  {
+    "event": "summer",
+    "name": "Volcanion-S",
+    "base": "volcanion",
+    "showdownId": "volcanions",
+    "pokedexNumber": 1568,
+    "nationalDex": 721,
+    "sprite": "/sprites/pbo/custom/summer/volcanions.png"
+  },
+  {
+    "event": "summer",
+    "name": "Volcanion-S2",
+    "base": "volcanion",
+    "showdownId": "volcanions2",
+    "pokedexNumber": 1742,
+    "nationalDex": 721,
+    "sprite": "/sprites/pbo/custom/summer/volcanions2.png"
+  },
+  {
+    "event": "summer",
+    "name": "Volcarona-S",
+    "base": "volcarona",
+    "showdownId": "volcaronas",
+    "pokedexNumber": 1529,
+    "nationalDex": 637,
+    "sprite": "/sprites/pbo/custom/summer/volcaronas.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Espathra-V",
+    "base": "espathra",
+    "showdownId": "espathrav",
+    "pokedexNumber": 1842,
+    "nationalDex": 956,
+    "sprite": "/sprites/pbo/custom/valentine/espathrav.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Flittle-V",
+    "base": "flittle",
+    "showdownId": "flittlev",
+    "pokedexNumber": 1841,
+    "nationalDex": 955,
+    "sprite": "/sprites/pbo/custom/valentine/flittlev.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Gallade-V",
+    "base": "gallade",
+    "showdownId": "galladev",
+    "pokedexNumber": 1838,
+    "nationalDex": 475,
+    "sprite": "/sprites/pbo/custom/valentine/galladev.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Gardevoir-V",
+    "base": "gardevoir",
+    "showdownId": "gardevoirv",
+    "pokedexNumber": 1835,
+    "nationalDex": 282,
+    "sprite": "/sprites/pbo/custom/valentine/gardevoirv.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Indeedee-V",
+    "base": "indeedee",
+    "showdownId": "indeedeev",
+    "pokedexNumber": 1839,
+    "nationalDex": 876,
+    "sprite": "/sprites/pbo/custom/valentine/indeedeev.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Maushold-V",
+    "base": "maushold",
+    "showdownId": "mausholdv",
+    "pokedexNumber": 1840,
+    "nationalDex": 925,
+    "sprite": "/sprites/pbo/custom/valentine/mausholdv.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Nidoking-V",
+    "base": "nidoking",
+    "showdownId": "nidokingv",
+    "pokedexNumber": 1833,
+    "nationalDex": 34,
+    "sprite": "/sprites/pbo/custom/valentine/nidokingv.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Nidoqueen-V",
+    "base": "nidoqueen",
+    "showdownId": "nidoqueenv",
+    "pokedexNumber": 1832,
+    "nationalDex": 31,
+    "sprite": "/sprites/pbo/custom/valentine/nidoqueenv.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Roserade-V",
+    "base": "roserade",
+    "showdownId": "roseradev",
+    "pokedexNumber": 1836,
+    "nationalDex": 407,
+    "sprite": "/sprites/pbo/custom/valentine/roseradev.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Starmie-V",
+    "base": "starmie",
+    "showdownId": "starmiev",
+    "pokedexNumber": 1834,
+    "nationalDex": 121,
+    "sprite": "/sprites/pbo/custom/valentine/starmiev.png"
+  },
+  {
+    "event": "valentine",
+    "name": "Togekiss-V",
+    "base": "togekiss",
+    "showdownId": "togekissv",
+    "pokedexNumber": 1837,
+    "nationalDex": 468,
+    "sprite": "/sprites/pbo/custom/valentine/togekissv.png"
+  }
+]
