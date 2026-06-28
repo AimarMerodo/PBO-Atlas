@@ -332,3 +332,49 @@ export interface RoutesManifest {
   locations: string[];
   regions: string[];
 }
+
+/** A single wearable cosmetic in the dress-up tool (one paper-doll sprite sheet). */
+export interface DressupItem {
+  name: string;
+  es?: string;
+  pt?: string;
+  zh?: string;
+  /** Paper-doll sprite id -> /sprites/pbo/paperdolls/<pid>.png */
+  pid: string;
+  /** Equip slot (HAIR, SHIRT, MASK, ...). */
+  slot: string;
+  /** "M" | "F" | "U" (unisex). */
+  gender: string;
+  /** 1 when a seated riding variant exists at /sprites/pbo/mounts/ride/<pid>.png. */
+  ride?: number;
+  /** Short "where to find" string (shop/drop), when known. Most cosmetics have none. */
+  where?: string;
+}
+
+/** A mount: back + front sprite sheets at /sprites/pbo/mounts/{back,front}/<id>.png */
+export interface DressupMount {
+  id: string;
+  name: string;
+  es?: string;
+  pt?: string;
+  zh?: string;
+  /** LAND_POKEMON | SURF_POKEMON. */
+  type: string;
+  /** Square cell size in px (sheet height / 4 rows): 64 or 96. */
+  cell: number;
+  /** Animation frames per direction (sheet width / cell): 4 or 8. */
+  cols: number;
+  /** Rider vertical offset in native px — how high the character sits. */
+  oy: number;
+}
+
+export interface DressupData {
+  /** Base body sprite ids (skin tones). */
+  bodies: string[];
+  /** Base body ids available in the seated riding pose (used while mounted). */
+  rideBodies: string[];
+  /** Slot draw order, back to front. */
+  slotOrder: string[];
+  items: DressupItem[];
+  mounts: DressupMount[];
+}

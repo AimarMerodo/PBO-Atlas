@@ -1,0 +1,281 @@
+<div class="space-y-6">
+  <div class="text-center">
+    <h1 class="text-3xl font-extrabold tracking-tight">{{ i18n.t("dressup.title") }}</h1>
+    <p class="mt-1 text-sm text-ink-dim">{{ i18n.t("dressup.subtitle") }}</p>
+  </div>
+
+  <!-- Controls -->
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    <div class="inline-flex overflow-hidden rounded-lg border border-line">
+      <button type="button" (click)="setGender('M')" [class]="'px-3 py-1.5 text-sm transition-colors ' + (gender() === 'M' ? 'bg-accent text-white' : 'text-ink-dim hover:text-ink')">{{ i18n.t("dressup.male") }}</button>
+      <button type="button" (click)="setGender('F')" [class]="'px-3 py-1.5 text-sm transition-colors ' + (gender() === 'F' ? 'bg-accent text-white' : 'text-ink-dim hover:text-ink')">{{ i18n.t("dressup.female") }}</button>
+    </div>
+    <button type="button" (click)="randomLook()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+      <svg lucideShuffle class="h-4 w-4"></svg>{{ i18n.t("dressup.random") }}
+    </button>
+    <button type="button" (click)="clearAll()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+      <svg lucideTrash2 class="h-4 w-4"></svg>{{ i18n.t("dressup.clear") }}
+    </button>
+    <button type="button" (click)="openPresets()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+      <svg lucideBookmark class="h-4 w-4"></svg>{{ i18n.t("dressup.presets") }}
+      @if (presets().length) { <span class="rounded-full bg-accent/20 px-1.5 text-xs text-accent-soft">{{ presets().length }}</span> }
+    </button>
+    <button type="button" (click)="shareLook()" [class]="'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors ' + (shared() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface-2 hover:border-accent')">
+      @if (shared()) { <svg lucideCheck class="h-4 w-4"></svg>{{ i18n.t("dressup.copied") }} } @else { <svg lucideShare2 class="h-4 w-4"></svg>{{ i18n.t("dressup.share") }} }
+    </button>
+    @if (equippedItems().length) {
+      <button type="button" (click)="openSources()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+        <svg lucideStore class="h-4 w-4"></svg>{{ i18n.t("item.whereToFind") }}
+      </button>
+    }
+    @if (model()?.bodies?.length) {
+      <select [value]="skin()" (change)="skin.set($any($event.target).value)" class="rounded-lg border border-line bg-surface-2 px-2 py-1.5 text-sm text-ink">
+        @for (b of model()!.bodies; track b; let i = $index) {
+          <option [value]="b">{{ i18n.t("dressup.skin") }} {{ i + 1 }}</option>
+        }
+      </select>
+    }
+  </div>
+
+  <!-- The right cell stretches to the left column's height (grid + abs catalog), so the
+       catalog matches the preview+wearing height and the cosmetics scroll inside it. -->
+  <div class="flex flex-col gap-4 lg:grid lg:grid-cols-[400px_minmax(0,1fr)]">
+    <!-- Left: preview + equipment summary -->
+    <div class="space-y-4">
+      <div class="rounded-2xl border border-line bg-surface p-4">
+        <canvas
+          #cv
+          width="480"
+          height="480"
+          class="mx-auto block w-full max-w-[360px] rounded-xl [image-rendering:pixelated]"
+          style="background: radial-gradient(circle at 50% 76%, #2a3550 0%, #161d2b 55%, #0c1018 100%)"
+        ></canvas>
+        <div class="mt-3 flex items-center justify-center gap-3">
+          <button type="button" (click)="rotate(-1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate left"><svg lucideChevronLeft class="h-5 w-5"></svg></button>
+          <button type="button" (click)="togglePlay()" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" [attr.aria-label]="playing() ? i18n.t('dressup.pause') : i18n.t('dressup.animate')">
+            @if (playing()) { <svg lucidePause class="h-4 w-4"></svg> } @else { <svg lucidePlay class="h-4 w-4"></svg> }
+          </button>
+          <button type="button" (click)="rotate(1)" class="grid h-10 w-10 place-items-center rounded-lg border border-line text-ink-dim transition-colors hover:border-accent hover:text-ink" aria-label="rotate right"><svg lucideChevronRight class="h-5 w-5"></svg></button>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-line bg-surface p-4">
+        <h2 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.wearing") }}</h2>
+        <div class="grid grid-cols-2 gap-2">
+          @for (tab of tabs(); track tab) {
+            <div [class]="'relative flex items-center gap-1 rounded-lg border p-2 transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/10' : 'border-line bg-surface-2 hover:border-accent-soft')">
+              <button type="button" (click)="selectTab(tab)" class="flex min-w-0 flex-1 items-center gap-2 text-left">
+              <span class="relative grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded bg-[#0d1320] text-ink-dim">
+                @if (tab === MOUNT) {
+                  @if (mountItem(); as mt) {
+                    <img [src]="mountPath(mt.id, 'back')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                    <img [src]="mountPath(mt.id, 'front')" alt="" [style.width.%]="mt.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                  } @else { <svg lucideRabbit class="h-4 w-4"></svg> }
+                } @else if (equippedPid(tab)) {
+                  <img [src]="spritePath(equippedPid(tab))" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+                } @else {
+                  @switch (tab) {
+                    @case ("HAIR") { <svg lucideScissors class="h-4 w-4"></svg> }
+                    @case ("CAP") { <svg lucideCrown class="h-4 w-4"></svg> }
+                    @case ("GLASSES") { <svg lucideGlasses class="h-4 w-4"></svg> }
+                    @case ("BEARD") { <svg lucideSmile class="h-4 w-4"></svg> }
+                    @case ("SHIRT") { <svg lucideShirt class="h-4 w-4"></svg> }
+                    @case ("JACKET") { <svg lucideLayers class="h-4 w-4"></svg> }
+                    @case ("GLOVES") { <svg lucideHand class="h-4 w-4"></svg> }
+                    @case ("PANTS") { <svg lucidePersonStanding class="h-4 w-4"></svg> }
+                    @case ("SHOE") { <svg lucideFootprints class="h-4 w-4"></svg> }
+                    @case ("WINGS") { <svg lucideFeather class="h-4 w-4"></svg> }
+                    @case ("TAIL") { <svg lucidePawPrint class="h-4 w-4"></svg> }
+                    @case ("BEAK") { <svg lucideBird class="h-4 w-4"></svg> }
+                    @default { <svg lucideRabbit class="h-4 w-4"></svg> }
+                  }
+                }
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block text-[10px] font-medium uppercase leading-none tracking-wide text-ink-dim">{{ tabLabel(tab) }}</span>
+                <span class="mt-0.5 block truncate text-sm leading-tight text-ink">{{ equippedName(tab) }}</span>
+              </span>
+              </button>
+              @if (tab === MOUNT ? mountItem() : equippedPid(tab)) {
+                <button type="button" (click)="tab === MOUNT ? clearMount() : removeSlot(tab)" class="grid h-6 w-6 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft" [attr.aria-label]="i18n.t('dressup.remove')">
+                  <svg lucideX class="h-3.5 w-3.5"></svg>
+                </button>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: catalog — stretches to the left column's height; cosmetics scroll inside -->
+    <div class="relative min-w-0">
+      <div class="flex flex-col rounded-2xl border border-line bg-surface p-4 lg:absolute lg:inset-0">
+        <div class="mb-3 flex flex-none flex-wrap gap-2">
+          @for (tab of catalogTabs(); track tab) {
+            <button type="button" (click)="selectTab(tab)" [class]="'inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-medium transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface-2 text-ink-dim hover:text-ink')">
+              @switch (tab) {
+                @case ("ALL") { <svg lucideLayoutGrid class="h-3.5 w-3.5"></svg> }
+                @case ("HAIR") { <svg lucideScissors class="h-3.5 w-3.5"></svg> }
+                @case ("CAP") { <svg lucideCrown class="h-3.5 w-3.5"></svg> }
+                @case ("GLASSES") { <svg lucideGlasses class="h-3.5 w-3.5"></svg> }
+                @case ("BEARD") { <svg lucideSmile class="h-3.5 w-3.5"></svg> }
+                @case ("SHIRT") { <svg lucideShirt class="h-3.5 w-3.5"></svg> }
+                @case ("JACKET") { <svg lucideLayers class="h-3.5 w-3.5"></svg> }
+                @case ("GLOVES") { <svg lucideHand class="h-3.5 w-3.5"></svg> }
+                @case ("PANTS") { <svg lucidePersonStanding class="h-3.5 w-3.5"></svg> }
+                @case ("SHOE") { <svg lucideFootprints class="h-3.5 w-3.5"></svg> }
+                @case ("WINGS") { <svg lucideFeather class="h-3.5 w-3.5"></svg> }
+                @case ("TAIL") { <svg lucidePawPrint class="h-3.5 w-3.5"></svg> }
+                @case ("BEAK") { <svg lucideBird class="h-3.5 w-3.5"></svg> }
+                @default { <svg lucideRabbit class="h-3.5 w-3.5"></svg> }
+              }
+              {{ tabLabel(tab) }}
+            </button>
+          }
+        </div>
+
+        <div class="mb-3 flex flex-none items-center justify-between gap-3">
+          <h2 class="truncate text-base font-semibold">{{ searching() ? query().trim() : tabLabel(activeTab()) }}</h2>
+          <span class="shrink-0 text-xs text-ink-dim">{{ totalCount() }}</span>
+        </div>
+
+        <div class="relative mb-3 flex-none">
+          <svg lucideSearch class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"></svg>
+          <input type="search" [value]="query()" (input)="onSearch($event)" [placeholder]="i18n.t('dressup.search')" class="w-full rounded-xl border border-line bg-bg py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-dim/70" />
+        </div>
+
+        <!-- px/pt leave room for the selected-card ring + pop-out badges so the first row/edge
+             columns aren't clipped by this scroll container; -mx keeps the grid full-width. -->
+        <div class="-mx-2 max-h-[60vh] overflow-y-auto px-2 pt-2 lg:max-h-none lg:min-h-0 lg:flex-1">
+          <div class="grid grid-cols-[repeat(auto-fill,minmax(72px,1fr))] gap-2">
+            @if (!searching() && activeTab() !== ALL) {
+              @if (activeTab() === MOUNT) {
+                <button type="button" (click)="clearMount()" [class]="'flex aspect-square flex-col items-center justify-center gap-1 rounded-lg border text-ink-dim transition-colors ' + (!mount() ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                  <svg lucideX class="h-5 w-5"></svg><span class="text-[10px]">{{ i18n.t("dressup.none") }}</span>
+                </button>
+              } @else {
+                <button type="button" (click)="removeSlot(activeTab())" [class]="'flex aspect-square flex-col items-center justify-center gap-1 rounded-lg border text-ink-dim transition-colors ' + (!selections()[activeTab()] ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')" [title]="i18n.t('dressup.none')">
+                  <svg lucideX class="h-5 w-5"></svg><span class="text-[10px]">{{ i18n.t("dressup.none") }}</span>
+                </button>
+              }
+            }
+            @for (it of gridItems(); track $index) {
+            <button type="button" (click)="pickItem(it.slot, it.pid)" [title]="itemName(it)" [class]="'relative flex flex-col items-center gap-1 rounded-lg border p-1.5 transition-colors ' + (isOn(it.slot, it.pid) ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')">
+              <span class="relative aspect-square w-full overflow-hidden rounded bg-[#0d1320]">
+                <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+              </span>
+              <span class="w-full truncate text-center text-[10px] leading-tight text-ink-dim">{{ itemName(it) }}</span>
+              @if (it.where) { <span class="absolute -left-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full border border-line bg-surface text-ink-dim" [title]="i18n.t('item.whereToFind') + ': ' + it.where"><svg lucideMapPin class="h-3 w-3"></svg></span> }
+              @if (isOn(it.slot, it.pid)) { <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-accent text-white"><svg lucideCheck class="h-3 w-3"></svg></span> }
+            </button>
+          }
+          @for (m of gridMounts(); track m.id) {
+            <button type="button" (click)="pickMount(m.id)" [title]="mountName(m)" [class]="'relative flex flex-col items-center gap-1 rounded-lg border p-1.5 transition-colors ' + (mount() === m.id ? 'border-accent ring-2 ring-accent/40' : 'border-line bg-surface-2 hover:border-accent-soft')">
+              <span class="relative aspect-square w-full overflow-hidden rounded bg-[#0d1320]">
+                <img loading="lazy" [src]="mountPath(m.id, 'back')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+                <img loading="lazy" [src]="mountPath(m.id, 'front')" alt="" [style.width.%]="m.cols * 100" class="absolute left-0 top-0 h-[400%] max-w-none [image-rendering:pixelated]" />
+              </span>
+              <span class="w-full truncate text-center text-[10px] leading-tight text-ink-dim">{{ mountName(m) }}</span>
+              @if (mount() === m.id) { <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-accent text-white"><svg lucideCheck class="h-3 w-3"></svg></span> }
+            </button>
+          }
+          </div>
+          @if (searching() && !totalCount()) {
+            <p class="py-10 text-center text-sm text-ink-dim">{{ i18n.t("dressup.empty") }}</p>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if (presetsOpen()) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" (dismissOutside)="closePresets()">
+      <div data-modal-content role="dialog" aria-modal="true" [attr.aria-label]="i18n.t('dressup.presets')" class="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-line bg-surface p-5 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="text-xl font-bold leading-tight">{{ i18n.t("dressup.presets") }}</h2>
+          <button type="button" (click)="closePresets()" aria-label="Close" class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+        </div>
+
+        <!-- Save the current look -->
+        <div class="flex gap-2">
+          <input type="text" [value]="presetName()" (input)="onPresetName($event)" (keydown.enter)="savePreset()" [placeholder]="i18n.t('dressup.presetName')" class="min-w-0 flex-1 rounded-lg border border-line bg-bg px-3 py-2 text-sm text-ink placeholder:text-ink-dim/70" />
+          <button type="button" (click)="savePreset()" [disabled]="!presetName().trim()" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-accent bg-accent/15 px-3 py-2 text-sm text-accent-soft transition-colors hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-40">
+            <svg lucideSave class="h-4 w-4"></svg>{{ i18n.t("dressup.save") }}
+          </button>
+        </div>
+
+        <!-- Saved looks: apply, export one, or delete -->
+        <div class="-mr-1 mt-4 min-h-0 flex-1 overflow-y-auto pr-1">
+          @if (presets().length) {
+            <ul class="space-y-2">
+              @for (p of presets(); track p.name) {
+                <li class="flex items-center gap-1 rounded-lg border border-line bg-surface-2 p-1.5">
+                  @if (editing() === p.name) {
+                    <input type="text" [value]="editValue()" (input)="onEditName($event)" (keydown.enter)="commitRename(p.name)" (keydown.escape)="cancelRename()" autofocus class="min-w-0 flex-1 rounded border border-accent bg-bg px-2 py-1 text-sm text-ink" />
+                    <button type="button" (click)="commitRename(p.name)" [title]="i18n.t('dressup.save')" [attr.aria-label]="i18n.t('dressup.save')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-accent-soft transition-colors hover:bg-accent/15"><svg lucideCheck class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="cancelRename()" [title]="i18n.t('dressup.cancel')" [attr.aria-label]="i18n.t('dressup.cancel')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+                  } @else {
+                    <button type="button" (click)="applyPreset(p); closePresets()" [title]="i18n.t('dressup.apply') + ' · ' + p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
+                    <button type="button" (click)="startRename(p)" [title]="i18n.t('dressup.rename')" [attr.aria-label]="i18n.t('dressup.rename')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucidePencil class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="updatePreset(p)" [title]="i18n.t('dressup.update')" [attr.aria-label]="i18n.t('dressup.update')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/15 hover:text-accent-soft"><svg lucideSave class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="exportPreset(p)" [title]="i18n.t('dressup.export')" [attr.aria-label]="i18n.t('dressup.export')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucideDownload class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="deletePreset(p.name)" [title]="i18n.t('dressup.remove')" [attr.aria-label]="i18n.t('dressup.remove')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft"><svg lucideX class="h-4 w-4"></svg></button>
+                  }
+                </li>
+              }
+            </ul>
+          } @else {
+            <p class="py-8 text-center text-sm text-ink-dim">{{ i18n.t("dressup.noPresets") }}</p>
+          }
+        </div>
+
+        <!-- Import merges into your saved looks (never clears them); export-all downloads them all -->
+        <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
+          <button type="button" (click)="triggerImport()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm transition-colors hover:border-accent">
+            <svg lucideUpload class="h-4 w-4"></svg>{{ i18n.t("dressup.import") }}
+          </button>
+          <button type="button" (click)="exportAll()" [disabled]="!presets().length" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm transition-colors hover:border-accent disabled:cursor-not-allowed disabled:opacity-40">
+            <svg lucideDownload class="h-4 w-4"></svg>{{ i18n.t("dressup.exportAll") }}
+          </button>
+          <input #file type="file" accept="application/json,.json" (change)="importPresets($event)" class="hidden" />
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Where-to-find guide: every sourced cosmetic and how to get it, grouped by slot. -->
+  @if (sourcesOpen()) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" (dismissOutside)="closeSources()">
+      <div data-modal-content role="dialog" aria-modal="true" [attr.aria-label]="i18n.t('item.whereToFind')" class="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-line bg-surface p-5 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between gap-3">
+          <h2 class="flex items-center gap-2 text-xl font-bold leading-tight"><svg lucideStore class="h-5 w-5 text-accent-soft"></svg>{{ i18n.t("item.whereToFind") }}</h2>
+          <button type="button" (click)="closeSources()" aria-label="Close" class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+        </div>
+        <div class="-mr-1 min-h-0 flex-1 overflow-y-auto pr-1">
+          @if (equippedItems().length) {
+            <ul class="space-y-1.5">
+              @for (w of equippedItems(); track w.slot) {
+                <li class="flex items-center gap-3 rounded-lg border border-line bg-surface-2 p-2">
+                  <span class="relative h-9 w-9 shrink-0 overflow-hidden rounded bg-[#0d1320]">
+                    <img loading="lazy" [src]="spritePath(w.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
+                  </span>
+                  <span class="min-w-0 flex-1">
+                    <span class="block text-[10px] font-medium uppercase leading-none tracking-wide text-ink-dim">{{ tabLabel(w.slot) }}</span>
+                    <span class="mt-0.5 block truncate text-sm font-medium text-ink">{{ itemName(w.item) }}</span>
+                    @if (w.item.where) {
+                      <span class="mt-1 flex items-center gap-1 text-xs text-ink-dim"><svg lucideMapPin class="h-3 w-3 shrink-0 text-accent-soft"></svg><span class="truncate">{{ w.item.where }}</span></span>
+                    } @else {
+                      <span class="mt-1 block text-xs italic text-ink-dim/70">{{ i18n.t("dressup.noData") }}</span>
+                    }
+                  </span>
+                </li>
+              }
+            </ul>
+          } @else {
+            <p class="py-8 text-center text-sm text-ink-dim">{{ i18n.t("dressup.noData") }}</p>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

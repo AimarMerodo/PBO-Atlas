@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, effect, inject, resource 
 import { NgTemplateOutlet } from "@angular/common";
 import { Title } from "@angular/platform-browser";
 import { RouterLink } from "@angular/router";
-import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideShirt, LucideTrendingUp } from "@lucide/angular";
+import { LucideBookOpen, LucideCompass, LucideFlaskConical, LucideMap, LucideMapPin, LucidePawPrint, LucideRabbit, LucideShirt, LucideSparkles, LucideTrendingUp } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
@@ -14,8 +14,11 @@ interface SectionCard {
   route: string;
   title: DictKey;
   desc: DictKey;
-  count: (s: HomePayload["stats"]) => number;
-  countLabel: DictKey;
+  /** Stat count shown next to the title; omit for tool cards that show a `tagline` instead. */
+  count?: (s: HomePayload["stats"]) => number;
+  countLabel?: DictKey;
+  /** Short subtitle for cards without a numeric count (e.g. the Locker tool). */
+  tagline?: DictKey;
   /** Accent colour used for the card glow / icon tint. */
   tint: string;
   /** Grid spans for the bento layout (large screens). */
@@ -34,15 +37,16 @@ const SPRITE = (id: string) => `https://play.pokemonshowdown.com/sprites/ani/${i
 
 const SECTIONS: SectionCard[] = [
   { route: "/pokedex", title: "nav.pokedex", desc: "home.pokedexDesc", count: (s) => s.pokemon, countLabel: "home.count.pokemon", tint: "#f87171", bento: "lg:col-span-2 lg:row-span-2", featured: true, peek: SPRITE("charizard") },
-  { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "lg:col-span-2", peek: SPRITE("delibird") },
+  { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "", peek: SPRITE("delibird") },
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: "/mount-avatar.webp", peekClass: "-bottom-3 -right-3 h-32 w-32" },
   { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.webp", peekClass: "-bottom-3 -right-4 h-32 w-32" },
+  { route: "/dressup", title: "nav.dressup", desc: "home.dressupTagline", tagline: "home.dressupTagline", tint: "#38bdf8", bento: "", peek: SPRITE("mimikyu") },
 ];
 
 @Component({
   selector: "app-home-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideMapPin, LucidePawPrint, LucideCompass, LucideTrendingUp],
+  imports: [RouterLink, NgTemplateOutlet, HeroSearch, CountUp, LucideMap, LucideBookOpen, LucideFlaskConical, LucideRabbit, LucideShirt, LucideSparkles, LucideMapPin, LucidePawPrint, LucideCompass, LucideTrendingUp],
   templateUrl: "./home-page.html",
   styleUrl: "./home-page.css",
 })
