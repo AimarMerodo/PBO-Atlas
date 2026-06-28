@@ -278,6 +278,8 @@ export const pt: Record<DictKey, string> = {
   "dressup.rename": "Renomear",
   "dressup.cancel": "Cancelar",
   "dressup.exportAll": "Exportar tudo",
+  "dressup.share": "Compartilhar",
+  "dressup.copied": "Link copiado!",
   "dressup.noPresets": "Ainda não há looks salvos.",
   "dressup.slot.BODY": "Corpo",
   "dressup.slot.HAIR": "Cabelo",

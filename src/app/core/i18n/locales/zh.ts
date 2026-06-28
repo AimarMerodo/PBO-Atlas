@@ -278,6 +278,8 @@ export const zh: Record<DictKey, string> = {
   "dressup.rename": "重命名",
   "dressup.cancel": "取消",
   "dressup.exportAll": "全部导出",
+  "dressup.share": "分享",
+  "dressup.copied": "链接已复制！",
   "dressup.noPresets": "还没有保存的造型。",
   "dressup.slot.BODY": "身体",
   "dressup.slot.HAIR": "头发",

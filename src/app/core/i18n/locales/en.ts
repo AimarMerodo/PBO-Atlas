@@ -281,6 +281,8 @@ export const en = {
   "dressup.rename": "Rename",
   "dressup.cancel": "Cancel",
   "dressup.exportAll": "Export all",
+  "dressup.share": "Share",
+  "dressup.copied": "Link copied!",
   "dressup.noPresets": "No saved looks yet.",
   "dressup.slot.BODY": "Body",
   "dressup.slot.HAIR": "Hair",

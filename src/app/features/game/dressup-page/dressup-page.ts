@@ -27,6 +27,7 @@ import {
   LucideGlasses,
   LucideHand,
   LucideLayers,
+  LucideMapPin,
   LucidePause,
   LucidePawPrint,
   LucidePencil,
@@ -36,6 +37,7 @@ import {
   LucideSave,
   LucideScissors,
   LucideSearch,
+  LucideShare2,
   LucideShirt,
   LucideShuffle,
   LucideSmile,
@@ -48,6 +50,7 @@ import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { DressupData, DressupItem, DressupMount } from "@core/models/types";
 import { DismissOutside } from "@shared/directives/dismiss-outside";
+import { decodeLook, downloadJson, encodeLook } from "./dressup-io";
 
 const CELL = 64;
 const COLS = 4;
@@ -73,7 +76,7 @@ interface DressupPreset {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -99,6 +102,8 @@ export class DressupPageComponent {
   protected readonly dir = signal(0);
   protected readonly playing = signal(true);
   protected readonly query = signal("");
+  /** Brief "link copied" feedback on the Share button. */
+  protected readonly shared = signal(false);
   protected readonly presets = signal<DressupPreset[]>([]);
   protected readonly presetName = signal("");
   protected readonly presetsOpen = signal(false);
@@ -161,6 +166,16 @@ export class DressupPageComponent {
     inject(Meta).updateTag({ name: "description", content: "Mix and match Pokemon Blaze Online costumes and mounts and preview your character live." });
     const title = inject(Title);
     effect(() => title.setTitle(`${this.i18n.t("dressup.title")} | PBO Atlas`));
+
+    // Apply a shared look from ?look= (and skip the default-skin init effect so it isn't overwritten).
+    if (isPlatformBrowser(this.platformId)) {
+      const param = new URLSearchParams(location.search).get("look");
+      const look = param && decodeLook(param);
+      if (look) {
+        this.applyLook(look);
+        this.inited = true;
+      }
+    }
 
     effect(() => {
       const m = this.model();
@@ -334,7 +349,6 @@ export class DressupPageComponent {
     pick("BEAK", 0.15);
     this.selections.set(next);
   }
-  // --- Saved looks (presets): persisted in localStorage, exportable/importable as JSON ---
   private loadPresets(): void {
     if (!isPlatformBrowser(this.platformId)) return;
     try {
@@ -396,10 +410,14 @@ export class DressupPageComponent {
     this.persistPresets(renamed);
   }
   protected applyPreset(p: DressupPreset): void {
-    this.gender.set(p.gender === "F" ? "F" : "M");
-    this.skin.set(p.skin || "1");
-    this.selections.set({ ...(p.sel ?? {}) });
-    this.mount.set(p.mount ?? "");
+    this.applyLook(p);
+  }
+  /** Apply any look-shaped object (preset or shared URL) to the character. */
+  private applyLook(l: { gender?: string; skin?: string; sel?: Record<string, string>; mount?: string }): void {
+    this.gender.set(l.gender === "F" ? "F" : "M");
+    this.skin.set(l.skin || "1");
+    this.selections.set({ ...(l.sel ?? {}) });
+    this.mount.set(l.mount ?? "");
   }
   protected deletePreset(name: string): void {
     this.persistPresets(this.presets().filter((p) => p.name !== name));
@@ -410,25 +428,28 @@ export class DressupPageComponent {
   protected closePresets(): void {
     this.presetsOpen.set(false);
   }
-  private download(filename: string, text: string): void {
-    const blob = new Blob([text], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
   /** Download a single saved look as its own JSON file. */
   protected exportPreset(p: DressupPreset): void {
     if (!isPlatformBrowser(this.platformId)) return;
     const slug = p.name.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "").toLowerCase() || "look";
-    this.download(`pbo-look-${slug}.json`, JSON.stringify(p, null, 2));
+    downloadJson(`pbo-look-${slug}.json`, p);
   }
   /** Download all saved looks as one JSON file. */
   protected exportAll(): void {
     if (!isPlatformBrowser(this.platformId) || !this.presets().length) return;
-    this.download("pbo-dressup-presets.json", JSON.stringify(this.presets(), null, 2));
+    downloadJson("pbo-dressup-presets.json", this.presets());
+  }
+  /** Copy a ?look= link for the current outfit to the clipboard. */
+  protected shareLook(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    const look = { gender: this.gender(), skin: this.skin(), sel: this.selections(), mount: this.mount() };
+    const url = `${location.origin}/dressup?look=${encodeLook(look)}`;
+    history.replaceState(null, "", url);
+    const ok = () => {
+      this.shared.set(true);
+      setTimeout(() => this.shared.set(false), 1800);
+    };
+    navigator.clipboard?.writeText(url).then(ok, ok);
   }
   protected triggerImport(): void {
     this.fileRef()?.nativeElement.click();

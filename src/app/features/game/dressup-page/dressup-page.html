@@ -20,6 +20,9 @@
       <svg lucideBookmark class="h-4 w-4"></svg>{{ i18n.t("dressup.presets") }}
       @if (presets().length) { <span class="rounded-full bg-accent/20 px-1.5 text-xs text-accent-soft">{{ presets().length }}</span> }
     </button>
+    <button type="button" (click)="shareLook()" [class]="'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors ' + (shared() ? 'border-accent bg-accent/15 text-accent-soft' : 'border-line bg-surface-2 hover:border-accent')">
+      @if (shared()) { <svg lucideCheck class="h-4 w-4"></svg>{{ i18n.t("dressup.copied") }} } @else { <svg lucideShare2 class="h-4 w-4"></svg>{{ i18n.t("dressup.share") }} }
+    </button>
     @if (model()?.bodies?.length) {
       <select [value]="skin()" (change)="skin.set($any($event.target).value)" class="rounded-lg border border-line bg-surface-2 px-2 py-1.5 text-sm text-ink">
         @for (b of model()!.bodies; track b; let i = $index) {
@@ -154,6 +157,7 @@
                 <img loading="lazy" [src]="spritePath(it.pid)" alt="" class="absolute left-0 top-0 h-[400%] w-[400%] max-w-none [image-rendering:pixelated]" />
               </span>
               <span class="w-full truncate text-center text-[10px] leading-tight text-ink-dim">{{ itemName(it) }}</span>
+              @if (it.where) { <span class="absolute -left-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full border border-line bg-surface text-ink-dim" [title]="i18n.t('item.whereToFind') + ': ' + it.where"><svg lucideMapPin class="h-3 w-3"></svg></span> }
               @if (isOn(it.slot, it.pid)) { <span class="absolute -right-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full bg-accent text-white"><svg lucideCheck class="h-3 w-3"></svg></span> }
             </button>
           }

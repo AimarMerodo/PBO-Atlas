@@ -146,6 +146,24 @@ let rideCount = 0;
 for (const it of items) if (ridePidSet.has(it.pid)) { it.ride = 1; rideCount++; }
 console.log(`ride variants matched to catalog: ${rideCount}/${items.length} items`);
 
+// "Where to find": attach a short source string from data/item-sources.json (keyed by item slug).
+// Only ~few % of cosmetics are sourced (drops/shops); the rest stay undefined (no UI shown).
+const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const srcPath = path.join(REPO, "data/item-sources.json");
+let whereCount = 0;
+if (fs.existsSync(srcPath)) {
+  const srcMap = JSON.parse(fs.readFileSync(srcPath, "utf8")).sources ?? {};
+  const oneSource = (s) =>
+    s.method === "drop" ? `Drops from ${s.pokemonName || s.pokemon}` : [s.source, s.detail].filter(Boolean).join(" · ");
+  for (const it of items) {
+    const list = srcMap[slugify(it.name)];
+    if (!list || !list.length) continue;
+    it.where = [...new Set(list.map(oneSource).filter(Boolean))].slice(0, 2).join("  /  ");
+    if (it.where) whereCount++;
+  }
+}
+console.log(`where-to-find matched: ${whereCount}/${items.length} items`);
+
 const data = {
   bodies: ["1", "2", "3", "4"].filter((b) => pdHave.has(b)),
   rideBodies,
