@@ -180,7 +180,7 @@
   </div>
 
   @if (presetsOpen()) {
-    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm" (dismissOutside)="closePresets()">
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4" (dismissOutside)="closePresets()">
       <div data-modal-content role="dialog" aria-modal="true" [attr.aria-label]="i18n.t('dressup.presets')" class="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-line bg-surface p-5 shadow-2xl">
         <div class="mb-4 flex items-center justify-between">
           <h2 class="text-xl font-bold leading-tight">{{ i18n.t("dressup.presets") }}</h2>
@@ -201,7 +201,8 @@
             <ul class="space-y-2">
               @for (p of presets(); track p.name) {
                 <li class="flex items-center gap-1 rounded-lg border border-line bg-surface-2 p-1.5">
-                  <button type="button" (click)="applyPreset(p); closePresets()" [title]="p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
+                  <button type="button" (click)="applyPreset(p); closePresets()" [title]="i18n.t('dressup.apply') + ' · ' + p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
+                  <button type="button" (click)="updatePreset(p)" [title]="i18n.t('dressup.update')" [attr.aria-label]="i18n.t('dressup.update')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/15 hover:text-accent-soft"><svg lucideSave class="h-4 w-4"></svg></button>
                   <button type="button" (click)="exportPreset(p)" [title]="i18n.t('dressup.export')" [attr.aria-label]="i18n.t('dressup.export')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucideDownload class="h-4 w-4"></svg></button>
                   <button type="button" (click)="deletePreset(p.name)" [title]="i18n.t('dressup.remove')" [attr.aria-label]="i18n.t('dressup.remove')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft"><svg lucideX class="h-4 w-4"></svg></button>
                 </li>

@@ -278,6 +278,8 @@ export const es: Record<DictKey, string> = {
   "dressup.presetName": "Nombre del preset",
   "dressup.export": "Exportar",
   "dressup.import": "Importar",
+  "dressup.apply": "Aplicar",
+  "dressup.update": "Actualizar",
   "dressup.noPresets": "Aún no hay looks guardados.",
   "dressup.slot.BODY": "Cuerpo",
   "dressup.slot.HAIR": "Pelo",

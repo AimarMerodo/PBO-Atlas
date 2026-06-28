@@ -276,6 +276,8 @@ export const en = {
   "dressup.presetName": "Preset name",
   "dressup.export": "Export",
   "dressup.import": "Import",
+  "dressup.apply": "Apply",
+  "dressup.update": "Update",
   "dressup.noPresets": "No saved looks yet.",
   "dressup.slot.BODY": "Body",
   "dressup.slot.HAIR": "Hair",

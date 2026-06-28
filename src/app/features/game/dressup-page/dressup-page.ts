@@ -195,7 +195,8 @@ export class DressupPageComponent {
       if (this.ctx) this.ctx.imageSmoothingEnabled = false;
       this.draw();
       const id = setInterval(() => {
-        if (this.playing()) this.frame.update((f) => (f + 1) % COLS);
+        // Pause the walk cycle while the presets modal is open (no point repainting under it).
+        if (this.playing() && !this.presetsOpen()) this.frame.update((f) => (f + 1) % COLS);
       }, 160);
       this.destroyRef.onDestroy(() => clearInterval(id));
     });
@@ -375,13 +376,21 @@ export class DressupPageComponent {
   protected onPresetName(e: Event): void {
     this.presetName.set((e.target as HTMLInputElement).value);
   }
+  /** Write the current look into a preset by name (creates or overwrites). */
+  private storePreset(name: string): void {
+    const preset: DressupPreset = { name, gender: this.gender(), skin: this.skin(), sel: { ...this.selections() }, mount: this.mount() };
+    this.persistPresets([...this.presets().filter((p) => p.name !== name), preset]);
+  }
   /** Save the current look under the typed name (overwrites a same-named preset). */
   protected savePreset(): void {
     const name = this.presetName().trim();
     if (!name) return;
-    const preset: DressupPreset = { name, gender: this.gender(), skin: this.skin(), sel: { ...this.selections() }, mount: this.mount() };
-    this.persistPresets([...this.presets().filter((p) => p.name !== name), preset]);
+    this.storePreset(name);
     this.presetName.set("");
+  }
+  /** Overwrite an existing preset with the current look (edit-and-save in place). */
+  protected updatePreset(p: DressupPreset): void {
+    this.storePreset(p.name);
   }
   protected applyPreset(p: DressupPreset): void {
     this.gender.set(p.gender === "F" ? "F" : "M");

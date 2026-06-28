@@ -273,6 +273,8 @@ export const zh: Record<DictKey, string> = {
   "dressup.presetName": "预设名称",
   "dressup.export": "导出",
   "dressup.import": "导入",
+  "dressup.apply": "应用",
+  "dressup.update": "更新",
   "dressup.noPresets": "还没有保存的造型。",
   "dressup.slot.BODY": "身体",
   "dressup.slot.HAIR": "头发",
