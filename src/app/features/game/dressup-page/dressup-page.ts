@@ -280,17 +280,12 @@ export class DressupPageComponent {
     });
   }
   protected pickMount(id: string): void {
-    // Face sideways when mounting: head-on, a big mount's front layer hides the rider, but
-    // in profile it's just a leg, so the whole outfit shows on the mount.
+    // Keep whatever direction the user is facing — don't snap to a fixed side on mount.
     if (this.mount() === id) this.clearMount();
-    else {
-      this.mount.set(id);
-      this.dir.set(2);
-    }
+    else this.mount.set(id);
   }
   protected clearMount(): void {
     this.mount.set("");
-    this.dir.set(0);
   }
   protected removeSlot(slot: string): void {
     this.selections.update((s) => {
