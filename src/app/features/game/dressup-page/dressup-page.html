@@ -54,7 +54,8 @@
         <h2 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.wearing") }}</h2>
         <div class="grid grid-cols-2 gap-2">
           @for (tab of tabs(); track tab) {
-            <button type="button" (click)="selectTab(tab)" [class]="'flex items-center gap-2 rounded-lg border p-2 text-left transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/10' : 'border-line bg-surface-2 hover:border-accent-soft')">
+            <div [class]="'relative flex items-center gap-1 rounded-lg border p-2 transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/10' : 'border-line bg-surface-2 hover:border-accent-soft')">
+              <button type="button" (click)="selectTab(tab)" class="flex min-w-0 flex-1 items-center gap-2 text-left">
               <span class="relative grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded bg-[#0d1320] text-ink-dim">
                 @if (tab === MOUNT) {
                   @if (mountItem(); as mt) {
@@ -85,7 +86,13 @@
                 <span class="block text-[10px] font-medium uppercase leading-none tracking-wide text-ink-dim">{{ tabLabel(tab) }}</span>
                 <span class="mt-0.5 block truncate text-sm leading-tight text-ink">{{ equippedName(tab) }}</span>
               </span>
-            </button>
+              </button>
+              @if (tab === MOUNT ? mountItem() : equippedPid(tab)) {
+                <button type="button" (click)="tab === MOUNT ? clearMount() : removeSlot(tab)" class="grid h-6 w-6 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft" [attr.aria-label]="i18n.t('dressup.remove')">
+                  <svg lucideX class="h-3.5 w-3.5"></svg>
+                </button>
+              }
+            </div>
           }
         </div>
       </div>
