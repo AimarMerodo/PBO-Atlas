@@ -253,8 +253,8 @@ export const en = {
   "feedback.reportTitle": "What to include in a report?",
   "feedback.reportBody":
     "Tell me the page or the pokemon/route where you saw it and what looks wrong. Spawn data comes from the official Pokemon Blaze Online forum, so recent in-game changes may take a while to show up here.",
-  "nav.dressup": "Dress-up",
-  "dressup.title": "Dress-up studio",
+  "nav.dressup": "Locker",
+  "dressup.title": "Locker",
   "dressup.subtitle": "Mix any cosmetics and preview your character — live and animated.",
   "dressup.search": "Search cosmetics… (e.g. tanjiro, mask, hair)",
   "dressup.hint": "Click a piece to wear it, click again to remove it. Mix freely across slots.",
