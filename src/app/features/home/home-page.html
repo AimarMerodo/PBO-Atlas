@@ -123,12 +123,19 @@
                 @case ("/cosmetics") {
                   <svg lucideShirt class="h-6 w-6" aria-hidden="true"></svg>
                 }
+                @case ("/dressup") {
+                  <svg lucideSparkles class="h-6 w-6" aria-hidden="true"></svg>
+                }
               }
             </div>
             <div class="flex flex-wrap items-baseline gap-x-2">
               <h3 class="font-bold transition-colors group-hover:[color:var(--tint)]">{{ i18n.t(s.title) }}</h3>
-              @if (stats(); as st) {
-                <span class="text-xs text-ink-dim tabular-nums">{{ s.count(st) }} {{ i18n.t(s.countLabel) }}</span>
+              @if (s.count) {
+                @if (stats(); as st) {
+                  <span class="text-xs text-ink-dim tabular-nums">{{ s.count(st) }} {{ i18n.t(s.countLabel!) }}</span>
+                }
+              } @else if (s.tagline) {
+                <span class="text-xs text-ink-dim">{{ i18n.t(s.tagline) }}</span>
               }
             </div>
             @if (s.featured) {

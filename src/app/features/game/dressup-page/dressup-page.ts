@@ -46,6 +46,8 @@ import {
   LucideTrash2,
   LucideUpload,
   LucideX,
+  LucideZoomIn,
+  LucideZoomOut,
 } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
@@ -80,7 +82,7 @@ interface DressupPreset {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideLayoutGrid, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideLayoutGrid, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX, LucideZoomIn, LucideZoomOut],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -106,6 +108,8 @@ export class DressupPageComponent {
   protected readonly activeTab = signal<string>("HAIR");
   protected readonly dir = signal(0);
   protected readonly playing = signal(true);
+  /** Preview magnification (1 = fit, up to 3x to inspect details). */
+  protected readonly zoom = signal(1);
   protected readonly query = signal("");
   /** Brief "link copied" feedback on the Share button. */
   protected readonly shared = signal(false);
@@ -217,6 +221,7 @@ export class DressupPageComponent {
       this.mount();
       this.dir();
       this.frame();
+      this.zoom();
       this.draw();
     });
 
@@ -257,6 +262,19 @@ export class DressupPageComponent {
     if (!ctx || !m) return;
     const cv = ctx.canvas;
     ctx.clearRect(0, 0, cv.width, cv.height);
+
+    // Zoom magnifies the whole render around an upper-middle pivot (keeps head/torso in
+    // view while inspecting); the canvas clips whatever spills past its edges. The CSS
+    // background gradient isn't transformed, so it stays put behind the character.
+    const z = this.zoom();
+    if (z !== 1) {
+      const px = cv.width / 2;
+      const py = cv.height * 0.42;
+      ctx.save();
+      ctx.translate(px, py);
+      ctx.scale(z, z);
+      ctx.translate(-px, -py);
+    }
 
     const mt = this.mountItem(); // mount sheets vary in cell size (64 or 96px)
     const baseline = cv.height - 16; // ground line = character feet when unmounted
@@ -305,6 +323,8 @@ export class DressupPageComponent {
       this.blit(src, CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
     if (mt) this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
+
+    if (z !== 1) ctx.restore();
   }
 
   protected spritePath = (pid: string) => `/sprites/pbo/paperdolls/${pid}.png`;
@@ -523,6 +543,16 @@ export class DressupPageComponent {
   }
   protected togglePlay(): void {
     this.playing.update((p) => !p);
+  }
+  /** Clamp the preview zoom to [1, 3] (1 = fit, 3 = closest detail view). */
+  protected setZoom(z: number): void {
+    this.zoom.set(Math.min(3, Math.max(1, Math.round(z * 100) / 100)));
+  }
+  protected zoomBy(step: number): void {
+    this.setZoom(this.zoom() + step);
+  }
+  protected onZoom(e: Event): void {
+    this.setZoom(Number((e.target as HTMLInputElement).value));
   }
   protected setGender(g: "M" | "F"): void {
     this.gender.set(g);
