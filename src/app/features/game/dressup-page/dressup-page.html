@@ -32,12 +32,12 @@
     }
   </div>
 
-  <!-- Desktop: the studio fills the viewport height so the page itself doesn't scroll — the
-       WEARING list and the catalog scroll internally instead. Mobile keeps natural flow. -->
-  <div class="flex flex-col gap-4 lg:grid lg:h-[calc(100vh-15rem)] lg:grid-cols-[400px_minmax(0,1fr)] lg:grid-rows-[minmax(0,1fr)] lg:overflow-hidden">
+  <!-- The right cell stretches to the left column's height (grid + abs catalog), so the
+       catalog matches the preview+wearing height and the cosmetics scroll inside it. -->
+  <div class="flex flex-col gap-4 lg:grid lg:grid-cols-[400px_minmax(0,1fr)]">
     <!-- Left: preview + equipment summary -->
-    <div class="flex flex-col gap-4 lg:min-h-0">
-      <div class="rounded-2xl border border-line bg-surface p-4 lg:shrink-0">
+    <div class="space-y-4">
+      <div class="rounded-2xl border border-line bg-surface p-4">
         <canvas
           #cv
           width="480"
@@ -54,9 +54,9 @@
         </div>
       </div>
 
-      <div class="rounded-2xl border border-line bg-surface p-4 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
-        <h2 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim lg:flex-none">{{ i18n.t("dressup.wearing") }}</h2>
-        <div class="grid grid-cols-2 gap-2 lg:min-h-0 lg:flex-1 lg:content-start lg:overflow-y-auto lg:pr-1">
+      <div class="rounded-2xl border border-line bg-surface p-4">
+        <h2 class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.wearing") }}</h2>
+        <div class="grid grid-cols-2 gap-2">
           @for (tab of tabs(); track tab) {
             <div [class]="'relative flex items-center gap-1 rounded-lg border p-2 transition-colors ' + (activeTab() === tab && !searching() ? 'border-accent bg-accent/10' : 'border-line bg-surface-2 hover:border-accent-soft')">
               <button type="button" (click)="selectTab(tab)" class="flex min-w-0 flex-1 items-center gap-2 text-left">
