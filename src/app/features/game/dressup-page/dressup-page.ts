@@ -16,6 +16,7 @@ import { isPlatformBrowser } from "@angular/common";
 import { Meta, Title } from "@angular/platform-browser";
 import {
   LucideBird,
+  LucideBookmark,
   LucideCheck,
   LucideChevronLeft,
   LucideChevronRight,
@@ -46,6 +47,7 @@ import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import type { DictKey } from "@core/i18n/dictionaries";
 import type { DressupData, DressupItem, DressupMount } from "@core/models/types";
+import { DismissOutside } from "@shared/directives/dismiss-outside";
 
 const CELL = 64;
 const COLS = 4;
@@ -82,7 +84,7 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideBird, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -110,6 +112,7 @@ export class DressupPageComponent {
   protected readonly query = signal("");
   protected readonly presets = signal<DressupPreset[]>([]);
   protected readonly presetName = signal("");
+  protected readonly presetsOpen = signal(false);
   private readonly frame = signal(0);
 
   /** Cosmetics for the current gender (gendered variants + unisex). */
@@ -389,21 +392,31 @@ export class DressupPageComponent {
   protected deletePreset(name: string): void {
     this.persistPresets(this.presets().filter((p) => p.name !== name));
   }
-  /** Download all saved looks as a JSON file. */
-  protected exportPresets(): void {
-    if (!isPlatformBrowser(this.platformId) || !this.presets().length) return;
-    const blob = new Blob([JSON.stringify(this.presets(), null, 2)], { type: "application/json" });
+  protected openPresets(): void {
+    this.presetsOpen.set(true);
+  }
+  protected closePresets(): void {
+    this.presetsOpen.set(false);
+  }
+  private download(filename: string, text: string): void {
+    const blob = new Blob([text], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "pbo-dressup-presets.json";
+    a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
+  }
+  /** Download a single saved look as its own JSON file. */
+  protected exportPreset(p: DressupPreset): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    const slug = p.name.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "").toLowerCase() || "look";
+    this.download(`pbo-look-${slug}.json`, JSON.stringify(p, null, 2));
   }
   protected triggerImport(): void {
     this.fileRef()?.nativeElement.click();
   }
-  /** Merge looks from a JSON file (same name overwrites). */
+  /** Merge look(s) from a JSON file into the saved list — never clears existing (same name overwrites). */
   protected importPresets(e: Event): void {
     const input = e.target as HTMLInputElement;
     const file = input.files?.[0];

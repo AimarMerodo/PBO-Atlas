@@ -19,50 +19,16 @@
     <button type="button" (click)="clearAll()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
       <svg lucideTrash2 class="h-4 w-4"></svg>{{ i18n.t("dressup.clear") }}
     </button>
+    <button type="button" (click)="openPresets()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
+      <svg lucideBookmark class="h-4 w-4"></svg>{{ i18n.t("dressup.presets") }}
+      @if (presets().length) { <span class="rounded-full bg-accent/20 px-1.5 text-xs text-accent-soft">{{ presets().length }}</span> }
+    </button>
     @if (model()?.bodies?.length) {
       <select [value]="skin()" (change)="skin.set($any($event.target).value)" class="rounded-lg border border-line bg-surface-2 px-2 py-1.5 text-sm text-ink">
         @for (b of model()!.bodies; track b; let i = $index) {
           <option [value]="b">{{ i18n.t("dressup.skin") }} {{ i + 1 }}</option>
         }
       </select>
-    }
-  </div>
-
-  <!-- Saved looks: name + save, plus export/import as JSON, and the saved chips -->
-  <div class="rounded-2xl border border-line bg-surface p-3">
-    <div class="flex flex-wrap items-center gap-2">
-      <h2 class="mr-auto text-xs font-bold uppercase tracking-wide text-ink-dim">{{ i18n.t("dressup.presets") }}</h2>
-      <input
-        type="text"
-        [value]="presetName()"
-        (input)="onPresetName($event)"
-        (keydown.enter)="savePreset()"
-        [placeholder]="i18n.t('dressup.presetName')"
-        class="w-44 rounded-lg border border-line bg-bg px-3 py-1.5 text-sm text-ink placeholder:text-ink-dim/70"
-      />
-      <button type="button" (click)="savePreset()" [disabled]="!presetName().trim()" class="inline-flex items-center gap-1.5 rounded-lg border border-accent bg-accent/15 px-3 py-1.5 text-sm text-accent-soft transition-colors hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-40">
-        <svg lucideSave class="h-4 w-4"></svg>{{ i18n.t("dressup.save") }}
-      </button>
-      <span class="mx-1 h-5 w-px bg-line"></span>
-      <button type="button" (click)="exportPresets()" [disabled]="!presets().length" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent disabled:cursor-not-allowed disabled:opacity-40">
-        <svg lucideDownload class="h-4 w-4"></svg>{{ i18n.t("dressup.export") }}
-      </button>
-      <button type="button" (click)="triggerImport()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-1.5 text-sm transition-colors hover:border-accent">
-        <svg lucideUpload class="h-4 w-4"></svg>{{ i18n.t("dressup.import") }}
-      </button>
-      <input #file type="file" accept="application/json,.json" (change)="importPresets($event)" class="hidden" />
-    </div>
-    @if (presets().length) {
-      <div class="mt-3 flex flex-wrap gap-2">
-        @for (p of presets(); track p.name) {
-          <span class="inline-flex items-center overflow-hidden rounded-lg border border-line bg-surface-2">
-            <button type="button" (click)="applyPreset(p)" class="px-3 py-1.5 text-sm text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
-            <button type="button" (click)="deletePreset(p.name)" class="grid h-8 w-7 place-items-center border-l border-line text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft" [attr.aria-label]="i18n.t('dressup.remove')"><svg lucideX class="h-3.5 w-3.5"></svg></button>
-          </span>
-        }
-      </div>
-    } @else {
-      <p class="mt-2 text-xs text-ink-dim">{{ i18n.t("dressup.noPresets") }}</p>
     }
   </div>
 
@@ -212,4 +178,48 @@
       </div>
     </div>
   </div>
+
+  @if (presetsOpen()) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm" (dismissOutside)="closePresets()">
+      <div data-modal-content role="dialog" aria-modal="true" [attr.aria-label]="i18n.t('dressup.presets')" class="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-line bg-surface p-5 shadow-2xl">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="text-xl font-bold leading-tight">{{ i18n.t("dressup.presets") }}</h2>
+          <button type="button" (click)="closePresets()" aria-label="Close" class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+        </div>
+
+        <!-- Save the current look -->
+        <div class="flex gap-2">
+          <input type="text" [value]="presetName()" (input)="onPresetName($event)" (keydown.enter)="savePreset()" [placeholder]="i18n.t('dressup.presetName')" class="min-w-0 flex-1 rounded-lg border border-line bg-bg px-3 py-2 text-sm text-ink placeholder:text-ink-dim/70" />
+          <button type="button" (click)="savePreset()" [disabled]="!presetName().trim()" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-accent bg-accent/15 px-3 py-2 text-sm text-accent-soft transition-colors hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-40">
+            <svg lucideSave class="h-4 w-4"></svg>{{ i18n.t("dressup.save") }}
+          </button>
+        </div>
+
+        <!-- Saved looks: apply, export one, or delete -->
+        <div class="-mr-1 mt-4 min-h-0 flex-1 overflow-y-auto pr-1">
+          @if (presets().length) {
+            <ul class="space-y-2">
+              @for (p of presets(); track p.name) {
+                <li class="flex items-center gap-1 rounded-lg border border-line bg-surface-2 p-1.5">
+                  <button type="button" (click)="applyPreset(p); closePresets()" [title]="p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
+                  <button type="button" (click)="exportPreset(p)" [title]="i18n.t('dressup.export')" [attr.aria-label]="i18n.t('dressup.export')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucideDownload class="h-4 w-4"></svg></button>
+                  <button type="button" (click)="deletePreset(p.name)" [title]="i18n.t('dressup.remove')" [attr.aria-label]="i18n.t('dressup.remove')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft"><svg lucideX class="h-4 w-4"></svg></button>
+                </li>
+              }
+            </ul>
+          } @else {
+            <p class="py-8 text-center text-sm text-ink-dim">{{ i18n.t("dressup.noPresets") }}</p>
+          }
+        </div>
+
+        <!-- Import merges into your saved looks (never clears them) -->
+        <div class="mt-4 flex items-center gap-2 border-t border-line pt-3">
+          <button type="button" (click)="triggerImport()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm transition-colors hover:border-accent">
+            <svg lucideUpload class="h-4 w-4"></svg>{{ i18n.t("dressup.import") }}
+          </button>
+          <input #file type="file" accept="application/json,.json" (change)="importPresets($event)" class="hidden" />
+        </div>
+      </div>
+    </div>
+  }
 </div>
