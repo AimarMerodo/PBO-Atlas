@@ -201,10 +201,17 @@
             <ul class="space-y-2">
               @for (p of presets(); track p.name) {
                 <li class="flex items-center gap-1 rounded-lg border border-line bg-surface-2 p-1.5">
-                  <button type="button" (click)="applyPreset(p); closePresets()" [title]="i18n.t('dressup.apply') + ' · ' + p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
-                  <button type="button" (click)="updatePreset(p)" [title]="i18n.t('dressup.update')" [attr.aria-label]="i18n.t('dressup.update')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/15 hover:text-accent-soft"><svg lucideSave class="h-4 w-4"></svg></button>
-                  <button type="button" (click)="exportPreset(p)" [title]="i18n.t('dressup.export')" [attr.aria-label]="i18n.t('dressup.export')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucideDownload class="h-4 w-4"></svg></button>
-                  <button type="button" (click)="deletePreset(p.name)" [title]="i18n.t('dressup.remove')" [attr.aria-label]="i18n.t('dressup.remove')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft"><svg lucideX class="h-4 w-4"></svg></button>
+                  @if (editing() === p.name) {
+                    <input type="text" [value]="editValue()" (input)="onEditName($event)" (keydown.enter)="commitRename(p.name)" (keydown.escape)="cancelRename()" autofocus class="min-w-0 flex-1 rounded border border-accent bg-bg px-2 py-1 text-sm text-ink" />
+                    <button type="button" (click)="commitRename(p.name)" [title]="i18n.t('dressup.save')" [attr.aria-label]="i18n.t('dressup.save')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-accent-soft transition-colors hover:bg-accent/15"><svg lucideCheck class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="cancelRename()" [title]="i18n.t('dressup.cancel')" [attr.aria-label]="i18n.t('dressup.cancel')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:text-ink"><svg lucideX class="h-4 w-4"></svg></button>
+                  } @else {
+                    <button type="button" (click)="applyPreset(p); closePresets()" [title]="i18n.t('dressup.apply') + ' · ' + p.name" class="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium text-ink transition-colors hover:text-accent-soft">{{ p.name }}</button>
+                    <button type="button" (click)="startRename(p)" [title]="i18n.t('dressup.rename')" [attr.aria-label]="i18n.t('dressup.rename')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucidePencil class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="updatePreset(p)" [title]="i18n.t('dressup.update')" [attr.aria-label]="i18n.t('dressup.update')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/15 hover:text-accent-soft"><svg lucideSave class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="exportPreset(p)" [title]="i18n.t('dressup.export')" [attr.aria-label]="i18n.t('dressup.export')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-surface hover:text-ink"><svg lucideDownload class="h-4 w-4"></svg></button>
+                    <button type="button" (click)="deletePreset(p.name)" [title]="i18n.t('dressup.remove')" [attr.aria-label]="i18n.t('dressup.remove')" class="grid h-8 w-8 shrink-0 place-items-center rounded text-ink-dim transition-colors hover:bg-accent/20 hover:text-accent-soft"><svg lucideX class="h-4 w-4"></svg></button>
+                  }
                 </li>
               }
             </ul>
@@ -213,10 +220,13 @@
           }
         </div>
 
-        <!-- Import merges into your saved looks (never clears them) -->
-        <div class="mt-4 flex items-center gap-2 border-t border-line pt-3">
+        <!-- Import merges into your saved looks (never clears them); export-all downloads them all -->
+        <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-3">
           <button type="button" (click)="triggerImport()" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm transition-colors hover:border-accent">
             <svg lucideUpload class="h-4 w-4"></svg>{{ i18n.t("dressup.import") }}
+          </button>
+          <button type="button" (click)="exportAll()" [disabled]="!presets().length" class="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm transition-colors hover:border-accent disabled:cursor-not-allowed disabled:opacity-40">
+            <svg lucideDownload class="h-4 w-4"></svg>{{ i18n.t("dressup.exportAll") }}
           </button>
           <input #file type="file" accept="application/json,.json" (change)="importPresets($event)" class="hidden" />
         </div>

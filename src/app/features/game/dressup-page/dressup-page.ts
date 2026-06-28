@@ -29,6 +29,7 @@ import {
   LucideLayers,
   LucidePause,
   LucidePawPrint,
+  LucidePencil,
   LucidePersonStanding,
   LucidePlay,
   LucideRabbit,
@@ -84,7 +85,7 @@ const TANJIRO_LOOK: Record<string, string> = {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideUpload, LucideX],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShirt, LucideShuffle, LucideSmile, LucideSwords, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -113,6 +114,9 @@ export class DressupPageComponent {
   protected readonly presets = signal<DressupPreset[]>([]);
   protected readonly presetName = signal("");
   protected readonly presetsOpen = signal(false);
+  /** Name of the preset whose title is being edited inline (null = none). */
+  protected readonly editing = signal<string | null>(null);
+  protected readonly editValue = signal("");
   private readonly frame = signal(0);
 
   /** Cosmetics for the current gender (gendered variants + unisex). */
@@ -392,6 +396,26 @@ export class DressupPageComponent {
   protected updatePreset(p: DressupPreset): void {
     this.storePreset(p.name);
   }
+  protected startRename(p: DressupPreset): void {
+    this.editing.set(p.name);
+    this.editValue.set(p.name);
+  }
+  protected onEditName(e: Event): void {
+    this.editValue.set((e.target as HTMLInputElement).value);
+  }
+  protected cancelRename(): void {
+    this.editing.set(null);
+  }
+  /** Commit the inline name edit (no-op if blank/unchanged; same new name overwrites). */
+  protected commitRename(oldName: string): void {
+    const newName = this.editValue().trim();
+    this.editing.set(null);
+    if (!newName || newName === oldName) return;
+    const renamed = this.presets()
+      .filter((p) => p.name !== newName)
+      .map((p) => (p.name === oldName ? { ...p, name: newName } : p));
+    this.persistPresets(renamed);
+  }
   protected applyPreset(p: DressupPreset): void {
     this.gender.set(p.gender === "F" ? "F" : "M");
     this.skin.set(p.skin || "1");
@@ -421,6 +445,11 @@ export class DressupPageComponent {
     if (!isPlatformBrowser(this.platformId)) return;
     const slug = p.name.replace(/[^a-z0-9]+/gi, "-").replace(/^-+|-+$/g, "").toLowerCase() || "look";
     this.download(`pbo-look-${slug}.json`, JSON.stringify(p, null, 2));
+  }
+  /** Download all saved looks as one JSON file. */
+  protected exportAll(): void {
+    if (!isPlatformBrowser(this.platformId) || !this.presets().length) return;
+    this.download("pbo-dressup-presets.json", JSON.stringify(this.presets(), null, 2));
   }
   protected triggerImport(): void {
     this.fileRef()?.nativeElement.click();
