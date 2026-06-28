@@ -1,6 +1,6 @@
 # Informe de assets de Pokemon Blaze Online
 
-Escaneo de `Desktop\cosas\pbo-windows` (cliente del juego). Los devs han dado permiso para usar los assets.
+Escaneo del cliente del juego (instalación local de PBO). Los devs han dado permiso para usar los assets.
 Fuentes: carpeta `assets/` del cliente y datos embebidos en `pbo.jar` (un .jar es un zip).
 
 ## La base de datos del juego (dentro de `pbo.jar`)

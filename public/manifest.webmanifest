@@ -1,0 +1,15 @@
+{
+  "name": "PBO Atlas",
+  "short_name": "PBO Atlas",
+  "description": "Pokémon Blaze Online maps, spawns, pokédex and locker.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0c1018",
+  "theme_color": "#0c1018",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
