@@ -3,8 +3,10 @@
 # Usage: powershell -File scripts/extract-game-data.ps1 [-GameDir <path>]
 
 param(
-  [string]$GameDir = "$env:USERPROFILE\Desktop\cosas\pbo-windows"
+  [string]$GameDir = "$env:PBO_GAME_DIR"
 )
+
+if (-not $GameDir) { Write-Error "Provide -GameDir <path> (or set PBO_GAME_DIR) to your local PBO install."; exit 1 }
 
 $ErrorActionPreference = "Stop"
 $repo = Split-Path $PSScriptRoot -Parent

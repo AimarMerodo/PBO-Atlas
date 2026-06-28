@@ -9,7 +9,9 @@ import path from "node:path";
 
 const REPO = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")), "..");
 const cache = path.join(REPO, "scripts/.cache/game");
-const GAME = process.env.PBO_GAME_DIR || "C:/Users/Aimar/Desktop/cosas/pbo-windows";
+// Point PBO_GAME_DIR at your local PBO install to re-copy raw assets; otherwise the
+// already-committed sprites in public/ are reused.
+const GAME = process.env.PBO_GAME_DIR || "";
 const gamePD = path.join(GAME, "assets/ui/sprite/paperdolls");
 const outSprites = path.join(REPO, "public/sprites/pbo/paperdolls");
 const outData = path.join(REPO, "public/data/dressup.json");
