@@ -46,8 +46,6 @@ import {
   LucideTrash2,
   LucideUpload,
   LucideX,
-  LucideZoomIn,
-  LucideZoomOut,
 } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
@@ -82,7 +80,7 @@ interface DressupPreset {
 @Component({
   selector: "app-dressup-page",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideLayoutGrid, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX, LucideZoomIn, LucideZoomOut],
+  imports: [DismissOutside, LucideBird, LucideBookmark, LucideCheck, LucideChevronLeft, LucideChevronRight, LucideCrown, LucideDownload, LucideFeather, LucideFootprints, LucideGlasses, LucideHand, LucideLayers, LucideLayoutGrid, LucideMapPin, LucidePause, LucidePawPrint, LucidePencil, LucidePersonStanding, LucidePlay, LucideRabbit, LucideSave, LucideScissors, LucideSearch, LucideShare2, LucideShirt, LucideShuffle, LucideSmile, LucideStore, LucideTrash2, LucideUpload, LucideX],
   templateUrl: "./dressup-page.html",
 })
 export class DressupPageComponent {
@@ -108,8 +106,6 @@ export class DressupPageComponent {
   protected readonly activeTab = signal<string>("HAIR");
   protected readonly dir = signal(0);
   protected readonly playing = signal(true);
-  /** Preview magnification (1 = fit, up to 3x to inspect details). */
-  protected readonly zoom = signal(1);
   protected readonly query = signal("");
   /** Brief "link copied" feedback on the Share button. */
   protected readonly shared = signal(false);
@@ -221,7 +217,6 @@ export class DressupPageComponent {
       this.mount();
       this.dir();
       this.frame();
-      this.zoom();
       this.draw();
     });
 
@@ -285,20 +280,6 @@ export class DressupPageComponent {
     const byPid = this.byPid();
     const charBottom = mt ? baseline - (mt.oy + riderLift) * scale : baseline;
 
-    // Zoom magnifies the whole render. Pivot near the head (unmounted) or the mount+rider
-    // centre (mounted) so zooming frames the face/upper body instead of drifting up to the
-    // forehead; the 480² canvas clips the overflow and the CSS background gradient (not
-    // transformed) stays put behind the character. cw*0.28 lands roughly on the head.
-    const z = this.zoom();
-    if (z !== 1) {
-      const charTop = charBottom - cw;
-      const pivotY = mt ? (Math.min(baseline - mw, charTop) + baseline) / 2 : charTop + cw * 0.46;
-      ctx.save();
-      ctx.translate(cx, pivotY);
-      ctx.scale(z, z);
-      ctx.translate(-cx, -pivotY);
-    }
-
     // mount_back, then the seated riding character (its own pose + cosmetics), then mount_front.
     // Mounting also turns to a side view (see pickMount): head-on a big mount hides the rider,
     // but in profile it only overlaps a leg, so the rider and outfit show.
@@ -324,8 +305,6 @@ export class DressupPageComponent {
       this.blit(src, CELL, sx, sy, cx - cw / 2, charBottom - cw, cw);
     }
     if (mt) this.blit(this.mountPath(mt.id, "front"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
-
-    if (z !== 1) ctx.restore();
   }
 
   protected spritePath = (pid: string) => `/sprites/pbo/paperdolls/${pid}.png`;
@@ -544,16 +523,6 @@ export class DressupPageComponent {
   }
   protected togglePlay(): void {
     this.playing.update((p) => !p);
-  }
-  /** Clamp the preview zoom to [1, 2] (1 = fit, 2 = head-to-waist portrait). */
-  protected setZoom(z: number): void {
-    this.zoom.set(Math.min(2, Math.max(1, Math.round(z * 100) / 100)));
-  }
-  protected zoomBy(step: number): void {
-    this.setZoom(this.zoom() + step);
-  }
-  protected onZoom(e: Event): void {
-    this.setZoom(Number((e.target as HTMLInputElement).value));
   }
   protected setGender(g: "M" | "F"): void {
     this.gender.set(g);

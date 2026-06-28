@@ -40,7 +40,7 @@ const SECTIONS: SectionCard[] = [
   { route: "/items", title: "nav.items", desc: "home.itemsDesc", count: (s) => s.items, countLabel: "home.count.items", tint: "#a78bfa", bento: "", peek: SPRITE("delibird") },
   { route: "/mounts", title: "nav.mounts", desc: "home.mountsDesc", count: (s) => s.mounts, countLabel: "home.count.mounts", tint: "#fbbf24", bento: "", peek: "/mount-avatar.webp", peekClass: "-bottom-3 -right-3 h-32 w-32" },
   { route: "/cosmetics", title: "nav.cosmetics", desc: "home.cosmeticsDesc", count: (s) => s.cosmetics, countLabel: "home.count.bundles", tint: "#f472b6", bento: "", peek: "/tanjiro-avatar.webp", peekClass: "-bottom-3 -right-4 h-32 w-32" },
-  { route: "/dressup", title: "nav.dressup", desc: "home.dressupTagline", tagline: "home.dressupTagline", tint: "#38bdf8", bento: "", peek: "/stitch-avatar.webp", peekClass: "-bottom-3 -right-2 h-36 w-36" },
+  { route: "/dressup", title: "nav.dressup", desc: "home.dressupTagline", tagline: "home.dressupTagline", tint: "#38bdf8", bento: "", peek: SPRITE("mimikyu") },
 ];
 
 @Component({
