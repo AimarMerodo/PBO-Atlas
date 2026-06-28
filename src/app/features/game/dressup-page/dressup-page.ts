@@ -263,19 +263,6 @@ export class DressupPageComponent {
     const cv = ctx.canvas;
     ctx.clearRect(0, 0, cv.width, cv.height);
 
-    // Zoom magnifies the whole render around an upper-middle pivot (keeps head/torso in
-    // view while inspecting); the canvas clips whatever spills past its edges. The CSS
-    // background gradient isn't transformed, so it stays put behind the character.
-    const z = this.zoom();
-    if (z !== 1) {
-      const px = cv.width / 2;
-      const py = cv.height * 0.42;
-      ctx.save();
-      ctx.translate(px, py);
-      ctx.scale(z, z);
-      ctx.translate(-px, -py);
-    }
-
     const mt = this.mountItem(); // mount sheets vary in cell size (64 or 96px)
     const baseline = cv.height - 16; // ground line = character feet when unmounted
     // The client re-centers a large mount sprite (sheet width >= 384) over the 64px tile by shifting it
@@ -292,12 +279,29 @@ export class DressupPageComponent {
     const sy = dr * CELL;
     const sel = this.selections();
     const ride = !!mt;
+    const mw = mt ? mt.cell * scale : 0;
+    const col = mt ? fr % mt.cols : 0;
+    const rideBase = mt ? (mt.type === "BIKE" ? "1" : RIDE_POSE) : "";
+    const byPid = this.byPid();
+    const charBottom = mt ? baseline - (mt.oy + riderLift) * scale : baseline;
+
+    // Zoom magnifies the whole render. Pivot near the head (unmounted) or the mount+rider
+    // centre (mounted) so zooming frames the face/upper body instead of drifting up to the
+    // forehead; the 480² canvas clips the overflow and the CSS background gradient (not
+    // transformed) stays put behind the character. cw*0.28 lands roughly on the head.
+    const z = this.zoom();
+    if (z !== 1) {
+      const charTop = charBottom - cw;
+      const pivotY = mt ? (Math.min(baseline - mw, charTop) + baseline) / 2 : charTop + cw * 0.46;
+      ctx.save();
+      ctx.translate(cx, pivotY);
+      ctx.scale(z, z);
+      ctx.translate(-cx, -pivotY);
+    }
 
     // mount_back, then the seated riding character (its own pose + cosmetics), then mount_front.
     // Mounting also turns to a side view (see pickMount): head-on a big mount hides the rider,
     // but in profile it only overlaps a leg, so the rider and outfit show.
-    const mw = mt ? mt.cell * scale : 0;
-    const col = mt ? fr % mt.cols : 0;
     if (mt) this.blit(this.mountPath(mt.id, "back"), mt.cell, col * mt.cell, dr * mt.cell, cx - mw / 2, baseline - mw, mw);
 
     // Reproduce the client's mounted compositing (decompiled MountedNetworkPlayerAnimation): the rider
@@ -305,9 +309,6 @@ export class DressupPageComponent {
     // and the equipped cosmetics' SEATED variants, which are authored to register with that pose. A
     // cosmetic with no seated variant keeps its walking sprite for head accessories and is dropped for
     // body garments, so the base's baked-in green only shows where the real game shows it too.
-    const rideBase = mt ? (mt.type === "BIKE" ? "1" : RIDE_POSE) : "";
-    const byPid = this.byPid();
-    const charBottom = mt ? baseline - (mt.oy + riderLift) * scale : baseline;
     for (const slot of m.slotOrder) {
       let src: string | null;
       if (slot === "BODY") {
@@ -544,9 +545,9 @@ export class DressupPageComponent {
   protected togglePlay(): void {
     this.playing.update((p) => !p);
   }
-  /** Clamp the preview zoom to [1, 3] (1 = fit, 3 = closest detail view). */
+  /** Clamp the preview zoom to [1, 2] (1 = fit, 2 = head-to-waist portrait). */
   protected setZoom(z: number): void {
-    this.zoom.set(Math.min(3, Math.max(1, Math.round(z * 100) / 100)));
+    this.zoom.set(Math.min(2, Math.max(1, Math.round(z * 100) / 100)));
   }
   protected zoomBy(step: number): void {
     this.setZoom(this.zoom() + step);
