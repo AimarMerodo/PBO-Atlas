@@ -478,7 +478,7 @@ export class DressupPageComponent {
     // Build a shareable link and copy it WITHOUT touching the address bar, so sharing never
     // pins your own page to a stale ?look= snapshot.
     const look = { gender: this.gender(), skin: this.skin(), sel: this.selections(), mount: this.mount() };
-    const url = `${location.origin}/dressup?look=${encodeLook(look)}`;
+    const url = `${location.origin}/locker?look=${encodeLook(look)}`;
     const ok = () => {
       this.shared.set(true);
       setTimeout(() => this.shared.set(false), 1800);

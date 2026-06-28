@@ -28,7 +28,7 @@ export class Header {
     { route: "/items", label: "nav.items" },
     { route: "/mounts", label: "nav.mounts" },
     { route: "/cosmetics", label: "nav.cosmetics" },
-    { route: "/dressup", label: "nav.dressup" },
+    { route: "/locker", label: "nav.dressup" },
     { route: "/feedback", label: "nav.feedback" },
   ];
 

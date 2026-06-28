@@ -1,4 +1,4 @@
-// Builds the character dress-up dataset for the /dressup tool.
+// Builds the character dress-up dataset for the /locker tool.
 // - Copies the paper-doll sprite sheets from the game client into public/sprites/pbo/paperdolls.
 // - Reads items.csv (+ localized name CSVs) and writes public/data/dressup.json.
 // Slots are the game's real PaperDollType channels: items.csv column 5 holds either the
@@ -140,7 +140,7 @@ if (fs.existsSync(rideBaseSrc)) {
 // Mark items that ship a seated riding variant (mounts/paperdoll/<pid>). The game, while mounted,
 // draws the riding variant if it exists; for the few cosmetics without one it keeps the walking
 // sprite for head accessories (HAIR/CAP/BEARD/GLASSES/BEAK) and hides body garments. `ride` lets
-// the /dressup canvas reproduce that without 404-probing each sprite.
+// the /locker canvas reproduce that without 404-probing each sprite.
 const ridePidSet = new Set(fs.readdirSync(rideOut).filter((f) => f.endsWith(".png")).map((f) => f.slice(0, -4)));
 let rideCount = 0;
 for (const it of items) if (ridePidSet.has(it.pid)) { it.ride = 1; rideCount++; }
