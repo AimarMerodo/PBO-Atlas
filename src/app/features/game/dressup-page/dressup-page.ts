@@ -195,6 +195,11 @@ export class DressupPageComponent {
       if (look) {
         this.applyLook(look);
         this.inited = true;
+        // Consume the shared look once, then drop ?look= from the URL so editing and
+        // refreshing don't snap back to the shared snapshot (it's just a copy-able link).
+        const url = new URL(location.href);
+        url.searchParams.delete("look");
+        history.replaceState(null, "", url.pathname + url.search + url.hash);
       }
     }
 
@@ -469,9 +474,10 @@ export class DressupPageComponent {
   /** Copy a ?look= link for the current outfit to the clipboard. */
   protected shareLook(): void {
     if (!isPlatformBrowser(this.platformId)) return;
+    // Build a shareable link and copy it WITHOUT touching the address bar, so sharing never
+    // pins your own page to a stale ?look= snapshot.
     const look = { gender: this.gender(), skin: this.skin(), sel: this.selections(), mount: this.mount() };
     const url = `${location.origin}/dressup?look=${encodeLook(look)}`;
-    history.replaceState(null, "", url);
     const ok = () => {
       this.shared.set(true);
       setTimeout(() => this.shared.set(false), 1800);
