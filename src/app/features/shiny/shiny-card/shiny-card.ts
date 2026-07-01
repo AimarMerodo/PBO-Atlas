@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, output, signal } from "@angular/core";
 import { RouterLink } from "@angular/router";
-import { LucideHeart } from "@lucide/angular";
+import { LucideGripVertical, LucideHeart } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import type { PokedexCard } from "@core/models/types";
 import { pad } from "@core/utils/format";
@@ -10,12 +10,20 @@ import { pad } from "@core/utils/format";
 @Component({
   selector: "app-shiny-card",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, LucideHeart],
+  imports: [RouterLink, LucideGripVertical, LucideHeart],
   template: `
     <div
-      class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-all hover:-translate-y-0.5"
+      class="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-all hover:-translate-y-0.5"
       [style.border-color]="fav() ? 'rgb(248 113 113 / 0.55)' : null"
     >
+      @if (reorderable()) {
+        <!-- Drag affordance: the whole card drags; this just signals it -->
+        <span
+          class="pointer-events-none absolute left-2 top-2 z-10 grid h-6 w-6 place-items-center rounded-md border border-line bg-bg/70 text-ink-dim opacity-80 shadow-sm group-hover:opacity-100"
+        >
+          <svg lucideGripVertical class="h-3.5 w-3.5" aria-hidden="true"></svg>
+        </span>
+      }
       <a [routerLink]="['/pokedex', card().slug]" class="flex flex-col items-center px-3 pt-3 transition-colors group-hover:bg-surface-2/40">
         <div class="grid h-24 w-full place-items-center">
           @if (aniUrl() && !failed()) {
@@ -55,6 +63,8 @@ import { pad } from "@core/utils/format";
 export class ShinyCard {
   readonly card = input.required<PokedexCard>();
   readonly fav = input(false);
+  /** Shows a drag-affordance grip (used in the reorderable favourites view). */
+  readonly reorderable = input(false);
   readonly toggle = output<void>();
 
   protected readonly i18n = inject(LanguageService);

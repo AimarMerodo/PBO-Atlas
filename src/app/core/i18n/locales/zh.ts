@@ -17,6 +17,7 @@ export const zh: Record<DictKey, string> = {
   "shiny.favsOnly": "收藏",
   "shiny.favourite": "收藏",
   "shiny.saved": "已收藏",
+  "shiny.reorderHint": "拖动手柄可重新排序你的收藏",
   "shiny.unfavourite": "取消收藏",
   "shiny.noFavs": "还没有收藏——点击闪光上的爱心来收藏。",
   "nav.search": "搜索",

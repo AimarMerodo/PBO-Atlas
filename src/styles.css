@@ -102,3 +102,23 @@ h6 {
 ::selection {
   background: #ef444466;
 }
+
+/* Drag-to-reorder (shiny favourites). Global so the body-appended CDK preview is styled too. */
+.cdk-drag-preview {
+  border-radius: 1rem;
+  box-shadow:
+    0 12px 28px rgb(0 0 0 / 0.45),
+    0 0 0 1px rgb(248 113 113 / 0.6);
+  transform: scale(1.05);
+}
+.cdk-drag-placeholder {
+  opacity: 0.35;
+}
+/* The dropped item eases back into place */
+.cdk-drag-animating {
+  transition: transform 220ms cubic-bezier(0, 0, 0.2, 1);
+}
+/* Siblings slide out of the way while dragging */
+.cdk-drop-list-dragging .cdk-drag:not(.cdk-drag-placeholder) {
+  transition: transform 220ms cubic-bezier(0, 0, 0.2, 1);
+}

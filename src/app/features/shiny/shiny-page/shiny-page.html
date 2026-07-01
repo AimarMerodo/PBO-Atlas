@@ -26,21 +26,59 @@
       {{ i18n.t("shiny.favsOnly") }} ({{ favCount() }})
     </button>
     <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
-      {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+      {{ (favsOnly() ? favVisible().length : filtered().length) }} {{ i18n.t("pokedex.results") }}
     </span>
   </div>
 
-  @if (filtered().length === 0) {
-    <p class="rounded-xl border border-line bg-surface px-4 py-8 text-center text-sm text-ink-dim">
-      {{ favsOnly() ? i18n.t("shiny.noFavs") : i18n.t("pokedex.noResults") }}
-    </p>
-  } @else {
-    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-      @for (p of visible(); track p.slug) {
-        <app-shiny-card [card]="p" [fav]="isFav(p.slug)" (toggle)="toggleFav(p.slug)" />
+  @if (favsOnly()) {
+    <!-- Favourites: custom, drag-to-reorder list (saved in localStorage) -->
+    @if (favVisible().length === 0) {
+      <p class="rounded-xl border border-line bg-surface px-4 py-8 text-center text-sm text-ink-dim">{{ i18n.t("shiny.noFavs") }}</p>
+    } @else {
+      @if (!dragDisabled()) {
+        <div class="flex justify-center">
+          <span
+            class="inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-accent-soft"
+          >
+            <svg lucideGripVertical class="h-3.5 w-3.5" aria-hidden="true"></svg>
+            {{ i18n.t("shiny.reorderHint") }}
+          </span>
+        </div>
       }
-    </div>
+      <div
+        cdkDropList
+        cdkDropListOrientation="mixed"
+        [cdkDropListDisabled]="dragDisabled()"
+        (cdkDropListDropped)="drop($event)"
+        class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+      >
+        @for (p of favVisible(); track p.slug) {
+          <!-- Whole card is draggable. Touch gets a short hold delay so a quick swipe still scrolls. -->
+          <app-shiny-card
+            cdkDrag
+            [cdkDragDisabled]="dragDisabled()"
+            [cdkDragStartDelay]="{ touch: 160, mouse: 0 }"
+            class="block cursor-grab active:cursor-grabbing"
+            [card]="p"
+            [fav]="true"
+            [reorderable]="true"
+            (toggle)="toggleFav(p.slug)"
+          />
+        }
+      </div>
+    }
+  } @else {
+    <!-- Browse: all shinies, dex order, paginated -->
+    @if (filtered().length === 0) {
+      <p class="rounded-xl border border-line bg-surface px-4 py-8 text-center text-sm text-ink-dim">{{ i18n.t("pokedex.noResults") }}</p>
+    } @else {
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        @for (p of visible(); track p.slug) {
+          <app-shiny-card [card]="p" [fav]="isFav(p.slug)" (toggle)="toggleFav(p.slug)" />
+        }
+      </div>
 
-    <app-pager [current]="current()" [pageCount]="pageCount()" (pageChange)="goTo($event)" />
+      <app-pager [current]="current()" [pageCount]="pageCount()" (pageChange)="goTo($event)" />
+    }
   }
 </div>

@@ -15,6 +15,7 @@ export const en = {
   "shiny.favsOnly": "Favourites",
   "shiny.favourite": "Favourite",
   "shiny.saved": "Saved",
+  "shiny.reorderHint": "Drag the handle to reorder your favourites",
   "shiny.unfavourite": "Remove favourite",
   "shiny.noFavs": "No favourites yet — tap the heart on a shiny to save it.",
   "nav.search": "Search",
