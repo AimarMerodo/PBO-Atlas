@@ -15,6 +15,7 @@ export const es: Record<DictKey, string> = {
   "shiny.favsOnly": "Favoritos",
   "shiny.favourite": "Favorito",
   "shiny.saved": "Guardado",
+  "shiny.reorderHint": "Arrastra el asa para reordenar tus favoritos",
   "shiny.unfavourite": "Quitar favorito",
   "shiny.noFavs": "Aún no tienes favoritos — toca el corazón de un shiny para guardarlo.",
   "nav.search": "Buscar",
