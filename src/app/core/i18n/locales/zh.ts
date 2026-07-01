@@ -5,6 +5,8 @@ export const zh: Record<DictKey, string> = {
   "site.tagline": "Pokemon Blaze Online 地图、出现地点与图鉴",
   "nav.home": "首页",
   "common.scrollTop": "回到顶部",
+  "update.available": "有新版本可用",
+  "update.reload": "重新加载",
   "common.clear": "清除",
   "nav.regions": "地区",
   "nav.pokedex": "图鉴",

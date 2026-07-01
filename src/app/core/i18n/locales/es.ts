@@ -5,6 +5,8 @@ export const es: Record<DictKey, string> = {
   "site.tagline": "Mapas, spawns y pokedex de Pokemon Blaze Online",
   "nav.home": "Inicio",
   "common.scrollTop": "Volver arriba",
+  "update.available": "Hay una versión nueva disponible",
+  "update.reload": "Recargar",
   "common.clear": "Quitar",
   "nav.regions": "Regiones",
   "nav.pokedex": "Pokédex",

@@ -3,6 +3,8 @@ export const en = {
   "site.tagline": "Pokemon Blaze Online maps, spawns and pokedex",
   "nav.home": "Home",
   "common.scrollTop": "Scroll to top",
+  "update.available": "A new version is available",
+  "update.reload": "Reload",
   "common.clear": "Clear",
   "nav.regions": "Regions",
   "nav.pokedex": "Pokédex",
