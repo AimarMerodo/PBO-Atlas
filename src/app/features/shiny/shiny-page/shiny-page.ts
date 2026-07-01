@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource, signal } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
+import { ActivatedRoute, Router } from "@angular/router";
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from "@angular/cdk/drag-drop";
 import { LucideGripVertical, LucideHeart, LucideSearch } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
@@ -23,12 +24,15 @@ const PAGE_SIZE = 48;
 export class ShinyPageComponent {
   private readonly data = inject(DataService);
   protected readonly i18n = inject(LanguageService);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
 
   protected readonly list = resource({ loader: () => this.data.pokedexList() });
   private readonly bySlug = computed(() => new Map((this.list.value() ?? []).map((c) => [c.slug, c])));
 
   protected readonly query = signal("");
-  protected readonly favsOnly = signal(false);
+  // Driven by the route (/shiny vs /shiny/favorites) so a refresh keeps the view.
+  protected readonly favsOnly = signal(this.route.snapshot.data["favs"] === true);
   /** Favourites as an ordered list (the user's custom order); Set derived for lookups. */
   protected readonly favSlugs = signal<string[]>(this.load());
   protected readonly favSet = computed(() => new Set(this.favSlugs()));
@@ -85,8 +89,7 @@ export class ShinyPageComponent {
     this.page.set(1);
   }
   protected toggleFavsOnly(): void {
-    this.favsOnly.update((v) => !v);
-    this.page.set(1);
+    void this.router.navigate([this.favsOnly() ? "/shiny" : "/shiny/favorites"]);
   }
   protected goTo(p: number): void {
     this.page.set(p);

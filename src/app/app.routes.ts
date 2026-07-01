@@ -31,6 +31,11 @@ export const routes: Routes = [
     loadComponent: () => import("@features/shiny/shiny-page/shiny-page").then((m) => m.ShinyPageComponent),
   },
   {
+    path: "shiny/favorites",
+    loadComponent: () => import("@features/shiny/shiny-page/shiny-page").then((m) => m.ShinyPageComponent),
+    data: { favs: true },
+  },
+  {
     path: "items",
     loadComponent: () => import("@features/game/items-page/items-page").then((m) => m.ItemsPageComponent),
   },
