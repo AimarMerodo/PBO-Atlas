@@ -268,6 +268,7 @@ await write(
       types: p.types,
       artwork: p.artwork,
       sprite: p.spritePbo ?? p.sprite,
+      ...(p.spritePboShiny && { spriteShiny: p.spritePboShiny }),
       generation: p.generation,
       bst: Object.values(p.stats).reduce((x, y) => x + y, 0),
       regions: [...new Set((encounters.get(p.slug) ?? []).map((e) => e.region))],

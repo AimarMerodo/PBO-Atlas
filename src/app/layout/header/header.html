@@ -7,15 +7,42 @@
 
     <!-- Desktop nav -->
     <nav class="hidden items-center gap-1 text-sm text-ink-dim md:flex">
-      @for (link of links; track link.route) {
-        <a
-          [routerLink]="link.route"
-          routerLinkActive="text-ink after:scale-x-100"
-          [routerLinkActiveOptions]="{ exact: link.exact === true }"
-          class="relative rounded-lg px-3 py-1.5 transition-colors hover:text-ink after:pointer-events-none after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-accent after:transition-transform after:duration-200"
-        >
-          {{ i18n.t(link.label) }}
-        </a>
+      @for (item of nav; track $index) {
+        @if (isGroup(item)) {
+          <div class="group relative">
+            <button
+              type="button"
+              aria-haspopup="true"
+              class="relative flex items-center gap-1 rounded-lg px-3 py-1.5 transition-colors hover:text-ink group-focus-within:text-ink"
+            >
+              {{ i18n.t(item.label) }}
+              <svg lucideChevronDown class="h-3.5 w-3.5 transition-transform group-hover:rotate-180" aria-hidden="true"></svg>
+            </button>
+            <!-- Opens on hover (desktop) or keyboard focus; no JS state needed -->
+            <div
+              class="invisible absolute left-0 top-full min-w-40 rounded-xl border border-line bg-surface p-1 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+            >
+              @for (child of item.children; track child.route) {
+                <a
+                  [routerLink]="child.route"
+                  routerLinkActive="text-ink bg-surface-2"
+                  class="block rounded-lg px-3 py-2 transition-colors hover:bg-surface-2 hover:text-ink"
+                >
+                  {{ i18n.t(child.label) }}
+                </a>
+              }
+            </div>
+          </div>
+        } @else {
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="text-ink after:scale-x-100"
+            [routerLinkActiveOptions]="{ exact: item.exact === true }"
+            class="relative rounded-lg px-3 py-1.5 transition-colors hover:text-ink after:pointer-events-none after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-accent after:transition-transform after:duration-200"
+          >
+            {{ i18n.t(item.label) }}
+          </a>
+        }
       }
     </nav>
 
@@ -43,16 +70,30 @@
   <!-- Mobile drawer -->
   @if (open()) {
     <nav id="mobile-nav" class="border-t border-line bg-bg px-2 py-2 md:hidden">
-      @for (link of links; track link.route) {
-        <a
-          [routerLink]="link.route"
-          routerLinkActive="text-ink before:scale-y-100"
-          [routerLinkActiveOptions]="{ exact: link.exact === true }"
-          (click)="close()"
-          class="relative block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink before:absolute before:left-0 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:origin-center before:scale-y-0 before:rounded-full before:bg-accent before:transition-transform before:duration-200"
-        >
-          {{ i18n.t(link.label) }}
-        </a>
+      @for (item of nav; track $index) {
+        @if (isGroup(item)) {
+          <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-ink-dim/70">{{ i18n.t(item.label) }}</p>
+          @for (child of item.children; track child.route) {
+            <a
+              [routerLink]="child.route"
+              routerLinkActive="text-ink before:scale-y-100"
+              (click)="close()"
+              class="relative block rounded-lg px-3 py-2.5 pl-5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink before:absolute before:left-0 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:origin-center before:scale-y-0 before:rounded-full before:bg-accent before:transition-transform before:duration-200"
+            >
+              {{ i18n.t(child.label) }}
+            </a>
+          }
+        } @else {
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="text-ink before:scale-y-100"
+            [routerLinkActiveOptions]="{ exact: item.exact === true }"
+            (click)="close()"
+            class="relative block rounded-lg px-3 py-2.5 text-sm font-medium text-ink-dim transition-colors hover:bg-surface hover:text-ink before:absolute before:left-0 before:top-1/2 before:h-5 before:w-0.5 before:-translate-y-1/2 before:origin-center before:scale-y-0 before:rounded-full before:bg-accent before:transition-transform before:duration-200"
+          >
+            {{ i18n.t(item.label) }}
+          </a>
+        }
       }
     </nav>
   }

@@ -1,0 +1,46 @@
+<div class="min-h-screen space-y-6">
+  <div class="text-center">
+    <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{{ i18n.t("shiny.title") }}</h1>
+    <p class="mt-2 text-sm text-ink-dim">{{ i18n.t("shiny.subtitle") }}</p>
+  </div>
+
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    <div class="relative w-full max-w-md">
+      <svg lucideSearch class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-dim" aria-hidden="true"></svg>
+      <input
+        [value]="query()"
+        (input)="setQuery($any($event.target).value)"
+        [placeholder]="i18n.t('shiny.searchPlaceholder')"
+        class="w-full rounded-2xl border border-line bg-surface py-3 pl-12 pr-4 text-lg shadow-lg outline-none transition-colors placeholder:text-ink-dim focus:border-accent/70 focus:ring-2 focus:ring-accent/20"
+      />
+    </div>
+    <button
+      (click)="toggleFavsOnly()"
+      [attr.aria-pressed]="favsOnly()"
+      [class]="
+        'inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-semibold transition-colors ' +
+        (favsOnly() ? 'border-red-400/60 bg-red-500/15 text-red-300' : 'border-line bg-surface text-ink-dim hover:text-ink')
+      "
+    >
+      <svg lucideHeart class="h-4 w-4" [attr.fill]="favsOnly() ? 'currentColor' : 'none'" aria-hidden="true"></svg>
+      {{ i18n.t("shiny.favsOnly") }} ({{ favCount() }})
+    </button>
+    <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+      {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+    </span>
+  </div>
+
+  @if (filtered().length === 0) {
+    <p class="rounded-xl border border-line bg-surface px-4 py-8 text-center text-sm text-ink-dim">
+      {{ favsOnly() ? i18n.t("shiny.noFavs") : i18n.t("pokedex.noResults") }}
+    </p>
+  } @else {
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      @for (p of visible(); track p.slug) {
+        <app-shiny-card [card]="p" [fav]="isFav(p.slug)" (toggle)="toggleFav(p.slug)" />
+      }
+    </div>
+
+    <app-pager [current]="current()" [pageCount]="pageCount()" (pageChange)="goTo($event)" />
+  }
+</div>
