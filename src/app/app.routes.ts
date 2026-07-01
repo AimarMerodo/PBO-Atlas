@@ -27,6 +27,10 @@ export const routes: Routes = [
     loadComponent: () => import("@features/pokedex/pokemon-page/pokemon-page").then((m) => m.PokemonPageComponent),
   },
   {
+    path: "shiny",
+    loadComponent: () => import("@features/shiny/shiny-page/shiny-page").then((m) => m.ShinyPageComponent),
+  },
+  {
     path: "items",
     loadComponent: () => import("@features/game/items-page/items-page").then((m) => m.ItemsPageComponent),
   },

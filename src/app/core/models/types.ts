@@ -234,6 +234,8 @@ export interface PokedexCard {
   types: string[];
   artwork: string | null;
   sprite: string | null;
+  /** In-game shiny sprite (absent for event forms / mons without one). */
+  spriteShiny?: string | null;
   generation: number | null;
   bst: number;
   regions: string[];
