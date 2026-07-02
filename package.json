@@ -12,10 +12,11 @@
     "extras": "node scripts/build-game-extras.mjs",
     "maps": "node scripts/build-maps.mjs",
     "custom-forms": "node scripts/build-custom-forms.mjs",
+    "smogon": "node scripts/build-smogon-natures.mjs",
     "search-index": "node scripts/build-search-index.mjs",
     "page-data": "node scripts/build-page-data.mjs",
     "artwork": "node scripts/build-artwork.mjs",
-    "data": "npm run scrape && npm run pokedex && npm run moves && npm run extras && npm run maps && npm run custom-forms && npm run search-index && npm run page-data && npm run artwork"
+    "data": "npm run scrape && npm run pokedex && npm run moves && npm run extras && npm run maps && npm run custom-forms && npm run smogon && npm run search-index && npm run page-data && npm run artwork"
   },
   "private": true,
   "packageManager": "npm@10.9.3",

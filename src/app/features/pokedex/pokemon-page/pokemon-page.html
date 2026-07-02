@@ -75,6 +75,53 @@
       </section>
     }
 
+    @if (p.recommendedNatures?.natures?.length) {
+      <section>
+        <h2 class="mb-2 flex items-center gap-2 text-lg font-bold">
+          {{ i18n.t("pokemon.recommendedNatures") }}
+          <span class="rounded-full border border-line px-2 py-0.5 text-xs font-semibold text-ink-dim">
+            Smogon Gen {{ p.recommendedNatures!.gen }}
+          </span>
+        </h2>
+        <div class="mb-3 flex items-start gap-2.5 rounded-xl border border-amber-500/40 bg-amber-500/10 px-3.5 py-2.5 text-sm text-amber-100/90">
+          <svg lucideInfo class="mt-0.5 h-4.5 w-4.5 shrink-0 text-amber-400" aria-hidden="true"></svg>
+          <span>{{ i18n.t("pokemon.recommendedNaturesHint") }}</span>
+        </div>
+        <div class="grid gap-2 sm:grid-cols-2">
+          @for (n of p.recommendedNatures!.natures; track n.nature; let i = $index) {
+            <a
+              [href]="n.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              [title]="i18n.t('pokemon.viewOnSmogon')"
+              class="group flex items-start gap-3 rounded-xl border border-line bg-surface p-3 transition-colors hover:border-accent/60"
+            >
+              <span
+                class="grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-bold tabular-nums"
+                [class]="i === 0 ? 'bg-accent text-white' : 'border border-line text-ink-dim'"
+              >
+                {{ i + 1 }}
+              </span>
+              <div class="min-w-0 flex-1">
+                <p class="flex flex-wrap items-baseline gap-x-2 font-semibold">
+                  {{ i18n.pick({ en: n.nature, es: n.es, zh: n.zh, pt: n.pt }) }}
+                  @if (n.up && n.down) {
+                    <span class="text-xs font-medium">
+                      <span class="text-emerald-400">+{{ i18n.t($any("stat." + n.up)) }}</span>
+                      <span class="text-red-400">&nbsp;−{{ i18n.t($any("stat." + n.down)) }}</span>
+                    </span>
+                  }
+                </p>
+                <p class="mt-0.5 text-sm text-ink-dim">{{ n.sets.join(", ") }}</p>
+              </div>
+              <span class="shrink-0 text-ink-dim transition-colors group-hover:text-accent-soft">↗</span>
+            </a>
+          }
+        </div>
+        <p class="mt-2 text-xs text-ink-dim/80">{{ i18n.t("pokemon.viewOnSmogon") }}</p>
+      </section>
+    }
+
     <section>
       <h2 class="mb-3 text-lg font-bold">{{ i18n.t("pokemon.defenses") }}</h2>
       <app-type-effectiveness [types]="p.entry.types" />
