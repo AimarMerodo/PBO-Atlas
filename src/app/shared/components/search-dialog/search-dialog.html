@@ -22,7 +22,7 @@
             {{ index() ? i18n.t("search.noResults") : "..." }}
           </p>
         }
-        <app-search-results [results]="results()" (go)="go($event)" />
+        <app-search-results [results]="results()" [activeHref]="activeHref()" (go)="go($event)" />
       </div>
     </div>
   </div>

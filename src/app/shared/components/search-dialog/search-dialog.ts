@@ -6,6 +6,7 @@ import {
   computed,
   effect,
   inject,
+  linkedSignal,
   signal,
   viewChild,
 } from "@angular/core";
@@ -14,7 +15,7 @@ import { LanguageService } from "@core/i18n/language.service";
 import { DataService } from "@core/data/data.service";
 import type { SearchIndex } from "@core/models/types";
 import { DismissOutside } from "@shared/directives/dismiss-outside";
-import { searchAll } from "./search";
+import { flatHrefs, searchAll } from "./search";
 import { SearchResults } from "./search-results";
 
 /**
@@ -53,6 +54,11 @@ export class SearchDialog {
   }
 
   protected readonly results = computed(() => searchAll(this.index(), this.query(), 8));
+  /** Flat list of result hrefs (render order) for arrow-key navigation. */
+  private readonly flat = computed(() => flatHrefs(this.results()));
+  /** Highlighted result; resets to the top whenever the query (→ result list) changes. */
+  protected readonly selected = linkedSignal({ source: this.flat, computation: () => 0 });
+  protected readonly activeHref = computed(() => this.flat()[this.selected()] ?? null);
 
   @HostListener("window:keydown", ["$event"])
   onKeydown(event: KeyboardEvent): void {
@@ -60,7 +66,22 @@ export class SearchDialog {
       event.preventDefault();
       searchOpen.set(true);
     }
+    if (!searchOpen()) return;
     if (event.key === "Escape") searchOpen.set(false);
+    const last = this.flat().length - 1;
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      this.selected.update((i) => Math.min(last, i + 1));
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      this.selected.update((i) => Math.max(0, i - 1));
+    } else if (event.key === "Enter") {
+      const href = this.activeHref();
+      if (href) {
+        event.preventDefault();
+        this.go(href);
+      }
+    }
   }
 
   protected go(href: string): void {

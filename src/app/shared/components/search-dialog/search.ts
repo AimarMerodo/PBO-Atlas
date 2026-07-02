@@ -39,13 +39,19 @@ export const hrefFor = {
   region: (id: string) => `/region/${id}`,
 };
 
-/** First result's href across all groups, for the hero "press Enter" shortcut. */
+/** All result hrefs in render order — drives arrow-key navigation and the Enter shortcut. */
+export function flatHrefs(g: SearchGroups): string[] {
+  return [
+    ...g.pokemon.map((p) => hrefFor.pokemon(p.slug)),
+    ...g.items.map((i) => hrefFor.item(i.slug)),
+    ...g.mounts.map((m) => hrefFor.mount(m.name)),
+    ...g.cosmetics.map((c) => hrefFor.cosmetic(c.slug)),
+    ...g.locations.map((l) => hrefFor.location(l.region, l.id)),
+    ...g.regions.map((r) => hrefFor.region(r.id)),
+  ];
+}
+
+/** First result's href across all groups, for the "press Enter" shortcut. */
 export function firstHref(g: SearchGroups): string | null {
-  if (g.pokemon[0]) return hrefFor.pokemon(g.pokemon[0].slug);
-  if (g.items[0]) return hrefFor.item(g.items[0].slug);
-  if (g.mounts[0]) return hrefFor.mount(g.mounts[0].name);
-  if (g.cosmetics[0]) return hrefFor.cosmetic(g.cosmetics[0].slug);
-  if (g.locations[0]) return hrefFor.location(g.locations[0].region, g.locations[0].id);
-  if (g.regions[0]) return hrefFor.region(g.regions[0].id);
-  return null;
+  return flatHrefs(g)[0] ?? null;
 }
