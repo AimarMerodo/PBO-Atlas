@@ -36,12 +36,12 @@ import { LanguageService } from "@core/i18n/language.service";
 })
 export class UpdateToast {
   protected readonly i18n = inject(LanguageService);
+  private readonly sw = inject(SwUpdate);
   protected readonly ready = signal(false);
 
   constructor() {
-    const sw = inject(SwUpdate);
-    if (!sw.isEnabled) return;
-    sw.versionUpdates
+    if (!this.sw.isEnabled) return;
+    this.sw.versionUpdates
       .pipe(
         filter((e): e is VersionReadyEvent => e.type === "VERSION_READY"),
         takeUntilDestroyed(),
@@ -49,7 +49,9 @@ export class UpdateToast {
       .subscribe(() => this.ready.set(true));
   }
 
+  /** Activate the already-downloaded version FIRST, then reload — otherwise the
+   *  reload serves the old cached build again and the update lands one visit late. */
   protected reload(): void {
-    document.location.reload();
+    void this.sw.activateUpdate().finally(() => document.location.reload());
   }
 }
