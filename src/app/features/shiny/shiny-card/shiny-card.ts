@@ -1,4 +1,15 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, output, signal } from "@angular/core";
+import {
+  afterNextRender,
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  DestroyRef,
+  ElementRef,
+  inject,
+  input,
+  output,
+  signal,
+} from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { LucideGripVertical, LucideHeart } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
@@ -70,10 +81,40 @@ export class ShinyCard {
   protected readonly i18n = inject(LanguageService);
   protected readonly pad = pad;
   protected readonly failed = signal(false);
+  /** Static sprite until the card scrolls into view, then upgrade to the animated GIF
+   *  — keeps the gallery light (only on-screen cards fetch a GIF). */
+  private readonly visible = signal(false);
 
   /** Showdown animated-shiny GIF derived from the dashless in-game sprite filename. */
   private readonly stem = computed(() => this.card().sprite?.match(/\/([a-z0-9]+)\.png$/)?.[1] ?? null);
   protected readonly aniUrl = computed(() =>
-    this.stem() ? `https://play.pokemonshowdown.com/sprites/ani-shiny/${this.stem()}.gif` : null,
+    this.visible() && this.stem() ? `https://play.pokemonshowdown.com/sprites/ani-shiny/${this.stem()}.gif` : null,
   );
+
+  constructor() {
+    const el = inject(ElementRef).nativeElement as HTMLElement;
+    const destroyRef = inject(DestroyRef);
+    afterNextRender(() => {
+      // Swap to the GIF when in view, but only once the browser is idle — so the fast
+      // static sprite is the first paint (LCP) and GIFs stream in without blocking it.
+      const show = () => this.visible.set(true);
+      const idle = (fn: () => void) =>
+        "requestIdleCallback" in window
+          ? (window as unknown as { requestIdleCallback: (cb: () => void, o?: object) => void }).requestIdleCallback(fn, {
+              timeout: 1500,
+            })
+          : setTimeout(fn, 300);
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            io.disconnect(); // once shown, keep it animated
+            idle(show);
+          }
+        },
+        { rootMargin: "250px" },
+      );
+      io.observe(el);
+      destroyRef.onDestroy(() => io.disconnect());
+    });
+  }
 }

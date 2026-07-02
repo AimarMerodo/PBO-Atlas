@@ -50,7 +50,7 @@
         }
       </div>
 
-      @if (selected(); as sel) {
+      @if (selectedItem(); as sel) {
         <app-item-modal [item]="sel" (closed)="select(null)" />
       }
 

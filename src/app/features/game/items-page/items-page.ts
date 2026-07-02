@@ -24,6 +24,11 @@ export class ItemsPageComponent {
   private readonly data = inject(DataService);
 
   private readonly itemsRes = resource({ loader: () => this.data.items() });
+  // Heavy descriptions/sources: fetched only once a modal is first opened.
+  private readonly detailsRes = resource({
+    params: () => (this.selected() ? true : undefined),
+    loader: () => this.data.itemDetails(),
+  });
 
   protected readonly category = signal<string | null>(null);
 
@@ -51,6 +56,14 @@ export class ItemsPageComponent {
   protected readonly visible = this.gallery.visible;
   protected readonly onQuery = this.gallery.onQuery;
   protected readonly select = this.gallery.select;
+
+  /** Selected item merged with its lazily-loaded description/sources for the modal. */
+  protected readonly selectedItem = computed(() => {
+    const sel = this.selected();
+    if (!sel) return null;
+    const detail = this.detailsRes.value()?.[sel.slug];
+    return detail ? { ...sel, ...detail } : sel;
+  });
 
   protected readonly categories = computed(() => {
     const items = this.items();

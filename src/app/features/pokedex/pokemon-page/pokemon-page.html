@@ -209,6 +209,17 @@
         <h2 class="mb-3 text-lg font-bold">{{ i18n.t("pokemon.moves") }}</h2>
         <app-moves-section [learnset]="p.learnset" [moves]="p.moves" />
       </section>
+    } @else if (p.entry.event && p.entry.customBase) {
+      <section>
+        <h2 class="mb-2 text-lg font-bold">{{ i18n.t("pokemon.moves") }}</h2>
+        <a
+          [routerLink]="['/pokedex', p.entry.customBase]"
+          class="inline-flex items-center gap-1.5 rounded-xl border border-line bg-surface px-4 py-3 text-sm transition-colors hover:border-accent/60"
+        >
+          <span class="capitalize">{{ i18n.t("pokemon.sameMovesAs") }} {{ p.entry.customBase }}</span>
+          <span class="text-accent-soft">→</span>
+        </a>
+      </section>
     }
 
     <p class="text-xs text-ink-dim">

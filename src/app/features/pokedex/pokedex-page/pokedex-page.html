@@ -106,11 +106,15 @@
       </div>
     </div>
 
-    @if (filtered().length === 0) {
-      <p class="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">{{ i18n.t("pokedex.noResults") }}</p>
-    } @else {
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        @for (p of visible(); track p.slug) {
+    <!-- min-h reserves the results area so the load→grid swap on hydration doesn't shift the pager (CLS) -->
+    <div class="min-h-[70vh]">
+      @if (list.isLoading()) {
+        <!-- reserved space while loading; no flash of the "no results" message -->
+      } @else if (filtered().length === 0) {
+        <p class="rounded-lg border border-line bg-surface px-4 py-6 text-sm text-ink-dim">{{ i18n.t("pokedex.noResults") }}</p>
+      } @else {
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          @for (p of visible(); track p.slug) {
           <a
             [routerLink]="['/pokedex', p.slug]"
             (mouseenter)="preload(p.slug)"
@@ -143,8 +147,9 @@
             </span>
           </a>
         }
-      </div>
-    }
+        </div>
+      }
+    </div>
 
     <app-pager [current]="current()" [pageCount]="pageCount()" (pageChange)="goTo($event)" />
   </div>

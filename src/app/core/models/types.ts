@@ -317,10 +317,12 @@ export interface GameItem {
   pt: string | null;
   zh: string | null;
   category: string;
-  description: string;
-  descEs: string | null;
-  descPt: string | null;
-  descZh: string | null;
+  // Descriptions + sources live in a lazy lists/item-details.json (loaded only when a
+  // modal opens), so they're absent on the plain grid list.
+  description?: string;
+  descEs?: string | null;
+  descPt?: string | null;
+  descZh?: string | null;
   icon: AtlasIcon | null;
   teaches?: { name: string; es: string | null; zh: string | null; pt: string | null; type: string | null } | null;
   evolves?: { slug: string; name: string }[] | null;
