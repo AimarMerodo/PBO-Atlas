@@ -221,6 +221,20 @@ export interface PokemonPage {
   forms: PokemonForm[];
   /** Custom event-sprite variants of this mon (same stats, different sprite). */
   eventForms?: { slug: string; name: string; sprite: string | null; event: string }[];
+  /** Recommended competitive natures from Smogon (null if the mon has no analysis). */
+  recommendedNatures?: {
+    gen: number;
+    natures: {
+      nature: string;
+      es?: string;
+      pt?: string;
+      zh?: string;
+      up?: string;
+      down?: string;
+      sets: string[];
+      url: string;
+    }[];
+  } | null;
   learnset: Learnset | null;
   moves: Record<string, MoveInfo> | null;
   /** Confirmed absent from PBO (forms/variants not implemented). */

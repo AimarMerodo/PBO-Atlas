@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, inject, input, resource, signal } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { RouterLink } from "@angular/router";
-import { LucideArrowLeft } from "@lucide/angular";
+import { LucideArrowLeft, LucideInfo } from "@lucide/angular";
 import { DataService } from "@core/data/data.service";
 import { LanguageService } from "@core/i18n/language.service";
 import { keepPrevious } from "@core/utils/keep-previous";
@@ -25,6 +25,7 @@ import { TypeEffectiveness } from "@features/pokedex/components/type-effectivene
   imports: [
     RouterLink,
     LucideArrowLeft,
+    LucideInfo,
     TypeBadge,
     AbilityList,
     CatchLocations,

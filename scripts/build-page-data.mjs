@@ -30,6 +30,12 @@ const acquisitions = (await readJson("acquisitions.json")).acquisitions ?? {};
 const itemSources = (await readJson("item-sources.json")).sources ?? {};
 const itemsData = await readJson("items.json");
 const notInPbo = new Set((await readJson("not-in-pbo.json")).slugs ?? []);
+let smogonNatures = {};
+try {
+  smogonNatures = JSON.parse(await readFile(path.join(ROOT, "data", "smogon-natures.json"), "utf8"));
+} catch {
+  console.warn("  ⚠ smogon-natures.json not found — run `npm run smogon` (recommended natures skipped)");
+}
 
 // --- Mega/Primal/Gigantamax forms, grouped by species (from the dex itself) ---
 // Mega & gmax forms are real dex entries sharing the base species id; surface
@@ -44,6 +50,50 @@ for (const [slug, e] of Object.entries(pokedex)) {
   const list = formsBySpecies.get(e.speciesId) ?? [];
   list.push({ kind, slug, name: e.name, types: e.types, artwork: e.artwork });
   formsBySpecies.set(e.speciesId, list);
+}
+
+// Smogon dex link + species-level nature aggregation (base + its mega/primal forms,
+// so e.g. Charizard's page shows its Mega X/Y natures). Newest-gen wins for the link.
+const GEN_CODE = { 9: "sv", 8: "ss", 7: "sm", 6: "xy", 5: "bw", 4: "dp", 3: "rs" };
+// @pkmn format key -> Smogon dex URL slug (verified). Unlisted formats (vgc, AG, BH…)
+// have no clean dex page, so those natures link to the mon's default page instead.
+const FORMAT_URL = {
+  ou: "ou", uu: "uu", ru: "ru", nu: "nu", pu: "pu", zu: "zu", lc: "lc", nfe: "nfe", ubers: "uber",
+  nationaldex: "national-dex", nationaldexuu: "national-dex-uu", nationaldexru: "national-dex-ru",
+  nationaldexubers: "national-dex-ubers", nationaldexmonotype: "national-dex-monotype", nationaldexdoubles: "national-dex-doubles",
+  monotype: "monotype", doublesou: "doubles", "1v1": "1v1", battlestadiumsingles: "battle-stadium-singles",
+  almostanyability: "almost-any-ability", mixandmega: "mix-and-mega", stabmons: "stabmons",
+  godlygift: "godly-gift", partnersincrime: "partners-in-crime", cap: "cap",
+};
+const baseSlugBySpecies = new Map(
+  Object.values(pokedex).filter((e) => e.id === e.speciesId).map((e) => [e.speciesId, e.slug]),
+);
+function recommendedNaturesFor(entry) {
+  const selfSlug = entry.event ? entry.customBase : entry.slug;
+  const speciesId = entry.event ? pokedex[entry.customBase]?.speciesId : entry.speciesId;
+  const own = smogonNatures[selfSlug];
+  const forms = (formsBySpecies.get(speciesId) ?? []).filter((f) => f.slug !== selfSlug);
+  const formEntries = forms.map((f) => smogonNatures[f.slug]).filter(Boolean);
+  if (!own && !formEntries.length) return null;
+  const merged = [...(own?.natures ?? [])];
+  const seen = new Set(merged.map((n) => n.nature));
+  for (const fe of formEntries)
+    for (const n of fe.natures)
+      if (!seen.has(n.nature)) {
+        seen.add(n.nature);
+        merged.push(n);
+      }
+  const gen = own?.gen ?? formEntries[0]?.gen ?? 9;
+  const base = baseSlugBySpecies.get(speciesId) ?? selfSlug;
+  const dex = `https://www.smogon.com/dex/${GEN_CODE[gen] ?? "sv"}/pokemon/${base}`;
+  return {
+    gen,
+    // Each nature deep-links to the format tab where its set lives.
+    natures: merged.slice(0, 8).map(({ format, ...n }) => ({
+      ...n,
+      url: FORMAT_URL[format] ? `${dex}/${FORMAT_URL[format]}/` : `${dex}/`,
+    })),
+  };
 }
 
 // --- Showdown animated-sprite id ---
@@ -180,6 +230,8 @@ for (const [slug, entry] of Object.entries(pokedex)) {
     eventForms: (eventFormsBySpecies.get(entry.event ? pokedex[entry.customBase]?.speciesId : entry.speciesId) ?? []).filter(
       (f) => f.slug !== slug,
     ),
+    // Recommended competitive natures (Smogon). Event forms inherit their base's.
+    recommendedNatures: recommendedNaturesFor(entry),
     // This species' Mega/Primal/Gigantamax forms (excluding self), each a link
     // to its own full ficha; sorted mega → primal → gmax.
     forms: (formsBySpecies.get(entry.speciesId) ?? [])
