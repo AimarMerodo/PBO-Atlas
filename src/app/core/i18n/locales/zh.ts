@@ -172,6 +172,7 @@ export const zh: Record<DictKey, string> = {
   "eff.quarter": "抗性 ×¼",
   "eff.immune": "免疫",
   "pokemon.moves": "招式",
+  "pokemon.sameMovesAs": "招式同",
   "moves.level": "升级习得",
   "moves.machine": "招式学习器(TM/HM)",
   "moves.egg": "蛋招式",

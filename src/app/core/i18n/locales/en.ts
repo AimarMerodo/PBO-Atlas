@@ -172,6 +172,7 @@ export const en = {
   "eff.quarter": "Resists ×¼",
   "eff.immune": "Immune",
   "pokemon.moves": "Moves",
+  "pokemon.sameMovesAs": "Same moves as",
   "moves.level": "By level",
   "moves.machine": "TM/HM",
   "moves.egg": "Egg moves",

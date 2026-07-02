@@ -174,6 +174,7 @@ export const es: Record<DictKey, string> = {
   "eff.quarter": "Resiste ×¼",
   "eff.immune": "Inmune",
   "pokemon.moves": "Movimientos",
+  "pokemon.sameMovesAs": "Mismos movimientos que",
   "moves.level": "Por nivel",
   "moves.machine": "MT/MO",
   "moves.egg": "Crianza",

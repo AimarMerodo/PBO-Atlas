@@ -196,7 +196,9 @@ for (const arr of eventFormsBySpecies.values())
 
 // --- pokemon/<slug>.json ---
 for (const [slug, entry] of Object.entries(pokedex)) {
-  const learnset = movesData.learnsets[slug] ?? movesData.learnsets[entry.customBase] ?? null;
+  // Event forms are just a custom sprite of their base, so they don't carry (and
+  // duplicate) the base's whole moveset — the page links to the base for moves.
+  const learnset = entry.event ? null : movesData.learnsets[slug] ?? null;
   let moves = null;
   if (learnset) {
     moves = {};
@@ -358,14 +360,25 @@ await write("lists/natures.json", natures);
 
 // Items: merge in "where to get" sources for the notable ones.
 let itemsWithSources = 0;
+// Split items: a light list for the grid/search, and a lazy details file (the heavy
+// descriptions ×4 langs + where-to-get sources) loaded only when an item modal opens.
+const itemDetails = {};
 await write("lists/items.json", {
   items: itemsData.items.map((it) => {
+    const { description, descEs, descPt, descZh, ...light } = it;
     const src = itemSources[it.slug];
-    if (!src) return it;
-    itemsWithSources++;
-    return { ...it, sources: src };
+    if (src) itemsWithSources++;
+    const detail = {};
+    if (description) detail.description = description;
+    if (descEs) detail.descEs = descEs;
+    if (descPt) detail.descPt = descPt;
+    if (descZh) detail.descZh = descZh;
+    if (src) detail.sources = src;
+    if (Object.keys(detail).length) itemDetails[it.slug] = detail;
+    return light;
   }),
 });
+await write("lists/item-details.json", itemDetails);
 
 // Lazy datasets reused as-is
 for (const f of ["mounts.json", "cosmetics.json"]) {

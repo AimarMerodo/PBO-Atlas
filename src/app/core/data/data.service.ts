@@ -32,6 +32,8 @@ export class DataService {
   pokedexList = () => this.getJson<PokedexCard[]>("lists/pokedex.json");
   searchIndex = () => this.getJson<SearchIndex>("lists/search.json");
   items = () => this.getJson<{ items: GameItem[] }>("lists/items.json");
+  /** Descriptions + sources per item slug; loaded only when an item modal opens. */
+  itemDetails = () => this.getJson<Record<string, Partial<GameItem>>>("lists/item-details.json");
   mounts = () => this.getJson<Mount[]>("lists/mounts.json");
   cosmetics = () => this.getJson<CosmeticBundle[]>("lists/cosmetics.json");
   dressup = () => this.getJson<DressupData>("dressup.json");
