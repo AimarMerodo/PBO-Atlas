@@ -21,6 +21,10 @@ npm-debug.log*
 /.mcp.json
 /CONTEXT.md
 
+# agent skills (local tooling, not part of the project)
+/.agents/
+/skills-lock.json
+
 # local env
 .env*
 
