@@ -71,8 +71,12 @@ const baseSlugBySpecies = new Map(
 function recommendedNaturesFor(entry) {
   const selfSlug = entry.event ? entry.customBase : entry.slug;
   const speciesId = entry.event ? pokedex[entry.customBase]?.speciesId : entry.speciesId;
-  const own = smogonNatures[selfSlug];
-  const forms = (formsBySpecies.get(speciesId) ?? []).filter((f) => f.slug !== selfSlug);
+  const base = baseSlugBySpecies.get(speciesId) ?? selfSlug;
+  // Smogon lists Mega/Primal/Gmax sets under the BASE (with the mega stone), not under
+  // "X-Mega" (which only appears in gimmick metagames), so those pages source from the base.
+  const primarySlug = formKind(entry.slug) ? base : selfSlug;
+  const own = smogonNatures[primarySlug];
+  const forms = (formsBySpecies.get(speciesId) ?? []).filter((f) => f.slug !== primarySlug);
   const formEntries = forms.map((f) => smogonNatures[f.slug]).filter(Boolean);
   if (!own && !formEntries.length) return null;
   const merged = [...(own?.natures ?? [])];
@@ -84,7 +88,6 @@ function recommendedNaturesFor(entry) {
         merged.push(n);
       }
   const gen = own?.gen ?? formEntries[0]?.gen ?? 9;
-  const base = baseSlugBySpecies.get(speciesId) ?? selfSlug;
   const dex = `https://www.smogon.com/dex/${GEN_CODE[gen] ?? "sv"}/pokemon/${base}`;
   return {
     gen,
