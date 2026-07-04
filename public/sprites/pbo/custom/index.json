@@ -3382,5 +3382,284 @@
     "pokedexNumber": 1837,
     "nationalDex": 468,
     "sprite": "/sprites/pbo/custom/valentine/togekissv.png"
+  },
+  {
+    "event": "summer",
+    "name": "Barbaracle-S3",
+    "base": "barbaracle",
+    "showdownId": "barbaracles3",
+    "pokedexNumber": 689,
+    "nationalDex": 689,
+    "sprite": "/sprites/pbo/custom/summer/barbaracles3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Blastoise-S3",
+    "base": "blastoise",
+    "showdownId": "blastoises3",
+    "pokedexNumber": 9,
+    "nationalDex": 9,
+    "sprite": "/sprites/pbo/custom/summer/blastoises3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Blaziken-S3",
+    "base": "blaziken",
+    "showdownId": "blazikens3",
+    "pokedexNumber": 257,
+    "nationalDex": 257,
+    "sprite": "/sprites/pbo/custom/summer/blazikens3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Crawdaunt-S3",
+    "base": "crawdaunt",
+    "showdownId": "crawdaunts3",
+    "pokedexNumber": 342,
+    "nationalDex": 342,
+    "sprite": "/sprites/pbo/custom/summer/crawdaunts3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Flareon-S3",
+    "base": "flareon",
+    "showdownId": "flareons3",
+    "pokedexNumber": 136,
+    "nationalDex": 136,
+    "sprite": "/sprites/pbo/custom/summer/flareons3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Froakie-S3",
+    "base": "froakie",
+    "showdownId": "froakies3",
+    "pokedexNumber": 656,
+    "nationalDex": 656,
+    "sprite": "/sprites/pbo/custom/summer/froakies3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Frogadier-S3",
+    "base": "frogadier",
+    "showdownId": "frogadiers3",
+    "pokedexNumber": 657,
+    "nationalDex": 657,
+    "sprite": "/sprites/pbo/custom/summer/frogadiers3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Glaceon-S3",
+    "base": "glaceon",
+    "showdownId": "glaceons3",
+    "pokedexNumber": 471,
+    "nationalDex": 471,
+    "sprite": "/sprites/pbo/custom/summer/glaceons3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Gliscor-S3",
+    "base": "gliscor",
+    "showdownId": "gliscors3",
+    "pokedexNumber": 472,
+    "nationalDex": 472,
+    "sprite": "/sprites/pbo/custom/summer/gliscors3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Greninja-S3",
+    "base": "greninja",
+    "showdownId": "greninjas3",
+    "pokedexNumber": 658,
+    "nationalDex": 658,
+    "sprite": "/sprites/pbo/custom/summer/greninjas3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Grimmsnarl-S3",
+    "base": "grimmsnarl",
+    "showdownId": "grimmsnarls3",
+    "pokedexNumber": 861,
+    "nationalDex": 861,
+    "sprite": "/sprites/pbo/custom/summer/grimmsnarls3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Gyarados-Mega-S3",
+    "base": "gyarados-mega",
+    "showdownId": "gyaradosmegas3",
+    "pokedexNumber": 130,
+    "nationalDex": 130,
+    "sprite": "/sprites/pbo/custom/summer/gyaradosmegas3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Gyarados-S3",
+    "base": "gyarados",
+    "showdownId": "gyaradoss3",
+    "pokedexNumber": 130,
+    "nationalDex": 130,
+    "sprite": "/sprites/pbo/custom/summer/gyaradoss3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Infernape-S3",
+    "base": "infernape",
+    "showdownId": "infernapes3",
+    "pokedexNumber": 392,
+    "nationalDex": 392,
+    "sprite": "/sprites/pbo/custom/summer/infernapes3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Jolteon-S3",
+    "base": "jolteon",
+    "showdownId": "jolteons3",
+    "pokedexNumber": 135,
+    "nationalDex": 135,
+    "sprite": "/sprites/pbo/custom/summer/jolteons3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latias-S3",
+    "base": "latias",
+    "showdownId": "latiass3",
+    "pokedexNumber": 380,
+    "nationalDex": 380,
+    "sprite": "/sprites/pbo/custom/summer/latiass3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Latios-S3",
+    "base": "latios",
+    "showdownId": "latioss3",
+    "pokedexNumber": 381,
+    "nationalDex": 381,
+    "sprite": "/sprites/pbo/custom/summer/latioss3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Pecharunt-S3",
+    "base": "pecharunt",
+    "showdownId": "pecharunts3",
+    "pokedexNumber": 1025,
+    "nationalDex": 1025,
+    "sprite": "/sprites/pbo/custom/summer/pecharunts3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Salamence-Mega-S3",
+    "base": "salamence-mega",
+    "showdownId": "salamencemegas3",
+    "pokedexNumber": 373,
+    "nationalDex": 373,
+    "sprite": "/sprites/pbo/custom/summer/salamencemegas3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Salamence-S3",
+    "base": "salamence",
+    "showdownId": "salamences3",
+    "pokedexNumber": 373,
+    "nationalDex": 373,
+    "sprite": "/sprites/pbo/custom/summer/salamences3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Samurott-Hisui-S3",
+    "base": "samurott-hisui",
+    "showdownId": "samurotthisuis3",
+    "pokedexNumber": 503,
+    "nationalDex": 503,
+    "sprite": "/sprites/pbo/custom/summer/samurotthisuis3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Sceptile-Mega-S3",
+    "base": "sceptile-mega",
+    "showdownId": "sceptilemegas3",
+    "pokedexNumber": 254,
+    "nationalDex": 254,
+    "sprite": "/sprites/pbo/custom/summer/sceptilemegas3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Sceptile-S3",
+    "base": "sceptile",
+    "showdownId": "sceptiles3",
+    "pokedexNumber": 254,
+    "nationalDex": 254,
+    "sprite": "/sprites/pbo/custom/summer/sceptiles3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Scyther-S3",
+    "base": "scyther",
+    "showdownId": "scythers3",
+    "pokedexNumber": 123,
+    "nationalDex": 123,
+    "sprite": "/sprites/pbo/custom/summer/scythers3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Terrakion-S3",
+    "base": "terrakion",
+    "showdownId": "terrakions3",
+    "pokedexNumber": 639,
+    "nationalDex": 639,
+    "sprite": "/sprites/pbo/custom/summer/terrakions3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Vaporeon-S3",
+    "base": "vaporeon",
+    "showdownId": "vaporeons3",
+    "pokedexNumber": 134,
+    "nationalDex": 134,
+    "sprite": "/sprites/pbo/custom/summer/vaporeons3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Venusaur-Mega-S3",
+    "base": "venusaur-mega",
+    "showdownId": "venusaurmegas3",
+    "pokedexNumber": 3,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/summer/venusaurmegas3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Venusaur-S3",
+    "base": "venusaur",
+    "showdownId": "venusaurs3",
+    "pokedexNumber": 3,
+    "nationalDex": 3,
+    "sprite": "/sprites/pbo/custom/summer/venusaurs3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Volcanion-S3",
+    "base": "volcanion",
+    "showdownId": "volcanions3",
+    "pokedexNumber": 721,
+    "nationalDex": 721,
+    "sprite": "/sprites/pbo/custom/summer/volcanions3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Whimsicott-S3",
+    "base": "whimsicott",
+    "showdownId": "whimsicotts3",
+    "pokedexNumber": 547,
+    "nationalDex": 547,
+    "sprite": "/sprites/pbo/custom/summer/whimsicotts3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Zangoose-S3",
+    "base": "zangoose",
+    "showdownId": "zangooses3",
+    "pokedexNumber": 335,
+    "nationalDex": 335,
+    "sprite": "/sprites/pbo/custom/summer/zangooses3.png"
   }
 ]
