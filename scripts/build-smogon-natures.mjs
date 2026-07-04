@@ -27,6 +27,18 @@ const prio = (f) => {
   return i === -1 ? FORMAT_PRIORITY.length : i;
 };
 
+// "Other Metagames" — non-standard natures (built around unusual abilities/items).
+const EXCLUDE_FORMATS = new Set([
+  "balancedhackmons",
+  "almostanyability",
+  "mixandmega",
+  "stabmons",
+  "godlygift",
+  "inheritance",
+  "partnersincrime",
+  "cap",
+]);
+
 const slugify = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const pokedex = JSON.parse(await readFile(path.join(ROOT, "data/pokedex.json"), "utf8"));
@@ -73,10 +85,17 @@ for (const gen of GENS) {
       unmatched.add(name);
       continue;
     }
+    // Only standard tiers give sensible natures. "Other Metagames" (Balanced Hackmons,
+    // AAA, Mix and Mega, STABmons, etc.) run weird ability/item natures — and they're the
+    // only place mega forms appear as "X-Mega", so dropping them also stops those fringe
+    // natures from polluting a mon's page. A mon with ONLY OM data this gen is skipped so
+    // an older gen with real data can win instead.
+    const usable = Object.keys(formats).filter((f) => !EXCLUDE_FORMATS.has(f));
+    if (!usable.length) continue;
     if (out[slug] && out[slug].gen !== gen) continue; // older gen: a newer one already won
     const entry = (out[slug] ??= { gen, natures: new Map() });
     // Walk formats in tier order, sets in their given order → first-seen order = Smogon order.
-    for (const fmt of Object.keys(formats).sort((a, b) => prio(a) - prio(b))) {
+    for (const fmt of usable.sort((a, b) => prio(a) - prio(b))) {
       for (const [setName, set] of Object.entries(formats[fmt])) {
         const nats = Array.isArray(set.nature) ? set.nature : set.nature ? [set.nature] : [];
         for (const nat of nats) {
