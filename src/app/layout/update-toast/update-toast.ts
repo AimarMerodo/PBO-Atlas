@@ -5,6 +5,16 @@ import { filter } from "rxjs";
 import { LucideRefreshCw } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 
+/** True only when running as an installed PWA (standalone), not a browser tab. */
+function isInstalledApp(): boolean {
+  if (typeof window === "undefined") return false;
+  const standalone = ["standalone", "minimal-ui", "fullscreen", "window-controls-overlay"].some(
+    (mode) => window.matchMedia?.(`(display-mode: ${mode})`).matches,
+  );
+  // navigator.standalone is the iOS Safari equivalent of display-mode: standalone.
+  return standalone || (navigator as unknown as { standalone?: boolean }).standalone === true;
+}
+
 /**
  * "A new version is available — Reload" toast. The Angular service worker
  * downloads a new build in the background after each deploy; this surfaces it so
@@ -40,7 +50,7 @@ export class UpdateToast {
   protected readonly ready = signal(false);
 
   constructor() {
-    if (!this.sw.isEnabled) return;
+    if (!this.sw.isEnabled || !isInstalledApp()) return;
     this.sw.versionUpdates
       .pipe(
         filter((e): e is VersionReadyEvent => e.type === "VERSION_READY"),
