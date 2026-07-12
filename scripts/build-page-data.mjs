@@ -374,11 +374,17 @@ await write("lists/natures.json", natures);
 // mon already represents them, and including 376 clones would just add noise.
 {
   const abilityUsed = new Set();
+  const abilityPokemon = {}; // ability -> pokemon that can have it
+  const abilityHiddenPokemon = {}; // ability -> pokemon where it's the hidden ability
   const movePokemon = {};
   const moveTmPokemon = {}; // move -> pokemon that learn it via TM/HM (machine)
   for (const [slug, e] of Object.entries(pokedex)) {
     if (e.event) continue;
-    for (const a of e.abilities ?? []) abilityUsed.add(a.slug);
+    for (const a of e.abilities ?? []) {
+      abilityUsed.add(a.slug);
+      (abilityPokemon[a.slug] ??= []).push(slug);
+      if (a.hidden) (abilityHiddenPokemon[a.slug] ??= []).push(slug);
+    }
     const ls = movesData.learnsets[slug];
     if (!ls) continue;
     const moves = new Set([...ls.level.map(([m]) => m), ...ls.machine, ...ls.egg, ...ls.tutor]);
@@ -393,12 +399,26 @@ await write("lists/natures.json", natures);
 
   // Full move dex (grid + modal): every learnable move with its stats and how many
   // pokemon learn it. move-index.json (above) carries the per-move pokemon lists.
+  // count = PBO-only learners (not-in-PBO mons are hidden in the dex, like the pokedex).
+  const pboCount = (list) => (list ?? []).filter((x) => !notInPbo.has(x)).length;
   const movesDex = Object.keys(movePokemon)
-    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: movePokemon[s].length }] : []))
+    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: pboCount(movePokemon[s]) }] : []))
     .sort((a, b) => a.en.localeCompare(b.en));
   await write("lists/moves.json", movesDex);
   await write("lists/move-tm-index.json", moveTmPokemon);
-  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves; moves dex: ${movesDex.length}`);
+
+  // Ability dex (grid + modal): every used ability with its description and how many
+  // pokemon can have it. ability-index / ability-hidden-index carry the pokemon lists.
+  const abilitiesDex = [...abilityUsed]
+    .map((s) => {
+      const a = abilities[s];
+      return { slug: s, en: a?.en ?? s, es: a?.es, zh: a?.zh, textEn: a?.textEn, textEs: a?.textEs, count: pboCount(abilityPokemon[s]) };
+    })
+    .sort((a, b) => a.en.localeCompare(b.en));
+  await write("lists/abilities.json", abilitiesDex);
+  await write("lists/ability-index.json", abilityPokemon);
+  await write("lists/ability-hidden-index.json", abilityHiddenPokemon);
+  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves; dex moves ${movesDex.length}, abilities ${abilitiesDex.length}`);
 }
 
 // Items: merge in "where to get" sources for the notable ones.

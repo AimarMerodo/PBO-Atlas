@@ -1,6 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { DATA_LOADER } from "./data-loader";
 import type {
+  AbilityDexEntry,
   CosmeticBundle,
   DressupData,
   FilterOptions,
@@ -45,4 +46,9 @@ export class DataService {
   moveIndex = () => this.getJson<Record<string, string[]>>("lists/move-index.json");
   /** move slug -> pokemon slugs that learn it via TM/HM. Loaded with the move modal. */
   moveTmIndex = () => this.getJson<Record<string, string[]>>("lists/move-tm-index.json");
+  /** Full ability dex: every used ability with description + owner count. */
+  abilitiesList = () => this.getJson<AbilityDexEntry[]>("lists/abilities.json");
+  /** ability slug -> pokemon slugs that can have it (and the hidden-only subset). */
+  abilityIndex = () => this.getJson<Record<string, string[]>>("lists/ability-index.json");
+  abilityHiddenIndex = () => this.getJson<Record<string, string[]>>("lists/ability-hidden-index.json");
 }
