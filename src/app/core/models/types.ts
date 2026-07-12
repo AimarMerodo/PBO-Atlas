@@ -141,6 +141,12 @@ export interface EvoStage {
   id: number | null;
   artwork: string | null;
   types: string[];
+  /** Parent slug in the evolution tree (null for the base); enables branch layout. */
+  from?: string | null;
+  /** Distance from the base (0 = base). */
+  depth?: number;
+  /** Items referenced by the trigger (evolution stones, held items, Link Stone) — clickable to /items. */
+  triggerItems?: { slug: string; name: string; icon: AtlasIcon | null }[];
 }
 
 export interface Encounter {

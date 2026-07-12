@@ -1,50 +1,101 @@
-<div class="flex flex-wrap items-center justify-center gap-3 sm:justify-start">
-  @for (stage of stages(); track stage.slug; let i = $index) {
-    <div class="flex flex-wrap items-center justify-center gap-3">
-      @if (i > 0) {
-        <div class="flex flex-col items-center gap-1.5 px-1">
-          <svg lucideArrowRight class="h-6 w-6 text-ink-dim" aria-hidden="true"></svg>
-          @if (stage.trigger) {
-            <span
-              class="max-w-36 rounded-full border border-accent/50 bg-accent/10 px-3 py-1 text-center text-xs font-semibold leading-tight text-accent-soft"
-            >
-              {{ triggerLabel(stage.trigger) }}
-            </span>
+<div class="overflow-x-auto pb-1">
+  <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+    @for (root of roots(); track root.slug) {
+      <ng-container [ngTemplateOutlet]="node" [ngTemplateOutletContext]="{ $implicit: root }" />
+    }
+  </div>
+</div>
+
+<!-- A node: its card, then its children — a compact grid when they're all final
+     evolutions (Eevee), or a stacked recursion for nested branches (Wurmple). -->
+<ng-template #node let-stage>
+  <div class="flex items-center gap-3">
+    <ng-container [ngTemplateOutlet]="card" [ngTemplateOutletContext]="{ $implicit: stage }" />
+
+    @if (childrenOf(stage.slug); as kids) {
+      @if (isLeafFan(stage.slug)) {
+        <svg lucideArrowRight class="h-6 w-6 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+        <div class="grid grid-cols-2 gap-x-4 gap-y-5 lg:grid-cols-4">
+          @for (kid of kids; track kid.slug) {
+            <div class="flex flex-col items-center gap-1.5">
+              <ng-container [ngTemplateOutlet]="trigger" [ngTemplateOutletContext]="{ $implicit: kid, uniform: true }" />
+              <ng-container [ngTemplateOutlet]="card" [ngTemplateOutletContext]="{ $implicit: kid }" />
+            </div>
+          }
+        </div>
+      } @else if (kids.length) {
+        <div class="flex flex-col justify-center gap-4">
+          @for (kid of kids; track kid.slug) {
+            <div class="flex items-center gap-3">
+              <div class="flex w-36 shrink-0 flex-col items-center gap-1.5 px-1">
+                <svg lucideArrowRight class="h-6 w-6 text-ink-dim" aria-hidden="true"></svg>
+                <ng-container [ngTemplateOutlet]="trigger" [ngTemplateOutletContext]="{ $implicit: kid }" />
+              </div>
+              <ng-container [ngTemplateOutlet]="node" [ngTemplateOutletContext]="{ $implicit: kid }" />
+            </div>
           }
         </div>
       }
-      <a
-        [routerLink]="['/pokedex', stage.slug]"
-        (mouseenter)="preload(stage.slug)"
-        (focus)="preload(stage.slug)"
-        [class]="
-          'group flex w-40 flex-col items-center rounded-2xl border p-4 transition-all hover:-translate-y-0.5 ' +
-          (stage.slug === current() ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-accent/60')
-        "
-      >
-        @if (stage.id !== null) {
-          <span class="self-end font-mono text-[10px] text-ink-dim">#{{ pad(stage.id, 3) }}</span>
+    }
+  </div>
+</ng-template>
+
+<ng-template #card let-stage>
+  <a
+    [routerLink]="['/pokedex', stage.slug]"
+    (mouseenter)="preload(stage.slug)"
+    (focus)="preload(stage.slug)"
+    [class]="
+      'group flex w-40 shrink-0 flex-col items-center rounded-2xl border p-4 transition-all hover:-translate-y-0.5 ' +
+      (stage.slug === current() ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-accent/60')
+    "
+  >
+    @if (stage.id !== null) {
+      <span class="self-end font-mono text-[10px] text-ink-dim">#{{ pad(stage.id, 3) }}</span>
+    }
+    @if (stage.artwork) {
+      <img
+        [src]="stage.artwork"
+        [alt]="stage.name"
+        width="110"
+        height="110"
+        class="drop-shadow-md transition-transform duration-200 group-hover:scale-110"
+      />
+    } @else {
+      <div class="h-[110px] w-[110px]"></div>
+    }
+    <span class="mt-2 text-center text-sm font-semibold leading-tight">{{ stage.name }}</span>
+    @if (stage.types.length > 0) {
+      <span class="mt-1.5 flex gap-1">
+        @for (tp of stage.types; track tp) {
+          <app-type-badge [type]="tp" />
         }
-        @if (stage.artwork) {
-          <img
-            [src]="stage.artwork"
-            [alt]="stage.name"
-            width="110"
-            height="110"
-            class="drop-shadow-md transition-transform duration-200 group-hover:scale-110"
-          />
-        } @else {
-          <div class="h-[110px] w-[110px]"></div>
+      </span>
+    }
+  </a>
+</ng-template>
+
+<ng-template #trigger let-stage let-uniform="uniform">
+  @if (stage.trigger) {
+    <span
+      [class]="
+        'flex w-32 flex-col items-center justify-center gap-1.5 rounded-2xl border border-accent/50 bg-accent/10 px-2 py-1.5 text-center text-xs font-semibold leading-tight text-accent-soft ' +
+        (uniform ? 'h-[4.5rem]' : '')
+      "
+    >
+      <span>{{ triggerLabel(stage) }}</span>
+      @if (stage.triggerItems) {
+        @for (it of stage.triggerItems; track it.slug) {
+          <a
+            [routerLink]="['/items']"
+            [queryParams]="{ item: it.slug }"
+            class="flex items-center gap-1.5 rounded-full border border-line bg-surface px-2 py-0.5 text-[11px] font-medium text-ink transition-colors hover:border-accent/60 hover:text-accent-soft"
+          >
+            <app-item-icon [icon]="it.icon" [size]="22" />
+            {{ it.name }}
+          </a>
         }
-        <span class="mt-2 text-center text-sm font-semibold leading-tight">{{ stage.name }}</span>
-        @if (stage.types.length > 0) {
-          <span class="mt-1.5 flex gap-1">
-            @for (tp of stage.types; track tp) {
-              <app-type-badge [type]="tp" />
-            }
-          </span>
-        }
-      </a>
-    </div>
+      }
+    </span>
   }
-</div>
+</ng-template>

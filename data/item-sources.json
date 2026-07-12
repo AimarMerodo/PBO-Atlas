@@ -3082,6 +3082,13 @@
         "detail": "500 Heat Shard"
       }
     ],
+    "link-stone": [
+      {
+        "method": "shop",
+        "source": "Poké Mart",
+        "detail": "Evolves trade Pokémon without trading"
+      }
+    ],
     "lollipop-mount-chest-halloween-2025": [
       {
         "method": "shop",

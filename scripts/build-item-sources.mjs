@@ -111,6 +111,8 @@ const DROPS = [
 const fmt = (n) => n.toLocaleString("en-US");
 const shop = (source, unit, rows) => rows.map(([item, price]) => ({ item, source, detail: `${fmt(price)} ${unit}` }));
 const SHOPS = [
+  // Poké Mart — used to evolve trade Pokémon solo (no trading partner needed).
+  { item: "link-stone", source: "Poké Mart", detail: "Evolves trade Pokémon without trading" },
   // Dynite Ore Store — Global Terminal, Jubilife City (from Dynamax Invasion).
   ...shop("Dynite Ore Store", "Ores", [
     ["permanent-air-balloon", 300], ["metronome", 400], ["macho-brace", 500], ["exp-share", 400],

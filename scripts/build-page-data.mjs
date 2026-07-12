@@ -124,6 +124,23 @@ const aniId = (e) => {
 
 // --- Pokemon item-drop reverse index (inverse of item-sources "drop" rows) ---
 const itemBySlug = new Map(itemsData.items.map((i) => [i.slug, i]));
+
+// Resolve items referenced by an evolution trigger ("use Thunder Stone", "hold Metal
+// Coat, trade") to clickable {slug,name,icon}, plus the Link Stone for trade evos.
+const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
+const itemByName = new Map();
+for (const i of itemsData.items) if (!itemByName.has(norm(i.name))) itemByName.set(norm(i.name), i);
+function triggerItems(trigger) {
+  if (!trigger) return undefined;
+  const out = [];
+  const push = (it) => it && !out.some((o) => o.slug === it.slug) && out.push({ slug: it.slug, name: it.name, icon: it.icon ?? null });
+  for (const part of trigger.split(", ")) {
+    const m = part.match(/^(?:use|hold) (.+)$/i);
+    if (m) push(itemByName.get(norm(m[1])));
+  }
+  if (/(^|[,\s])trade$/i.test(trigger)) push(itemBySlug.get("link-stone"));
+  return out.length ? out : undefined;
+}
 const pokemonDrops = new Map();
 for (const [itemSlug, srcs] of Object.entries(itemSources)) {
   const item = itemBySlug.get(itemSlug);
@@ -213,7 +230,20 @@ for (const [slug, entry] of Object.entries(pokedex)) {
   }
   const evoStages = (entry.evolutionLine ?? []).map((m) => {
     const e = pokedex[m.slug];
-    return { slug: m.slug, name: m.name, trigger: m.trigger, id: e?.id ?? null, artwork: e?.artwork ?? e?.spritePbo ?? null, types: e?.types ?? [] };
+    const items = triggerItems(m.trigger);
+    return {
+      slug: m.slug,
+      name: m.name,
+      trigger: m.trigger,
+      from: m.from ?? null,
+      depth: m.depth ?? 0,
+      id: e?.id ?? null,
+      artwork: e?.artwork ?? e?.spritePbo ?? null,
+      types: e?.types ?? [],
+      // Clickable items referenced by the trigger (evolution stones, held items) +
+      // the Link Stone for trade evos (PBO's solo-trade item).
+      ...(items && { triggerItems: items }),
+    };
   });
   const catchableAncestors =
     (encounters.get(slug)?.length ?? 0) === 0
