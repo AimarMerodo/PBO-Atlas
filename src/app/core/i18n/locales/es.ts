@@ -187,7 +187,7 @@ export const es: Record<DictKey, string> = {
   "moves.accuracy": "Prec.",
   "moves.pp": "PP",
   "moves.dexTitle": "Movimientos",
-  "moves.searchPlaceholder": "Buscar movimientos…",
+  "moves.searchPlaceholder": "Buscar por nombre o TM…",
   "moves.allTypes": "Todos los tipos",
   "moves.allClasses": "Todas las clases",
   "moves.learners": "Pokémon",

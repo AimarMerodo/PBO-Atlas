@@ -185,7 +185,7 @@ export const zh: Record<DictKey, string> = {
   "moves.accuracy": "命中",
   "moves.pp": "PP",
   "moves.dexTitle": "招式图鉴",
-  "moves.searchPlaceholder": "搜索招式……",
+  "moves.searchPlaceholder": "按名称或 TM 搜索……",
   "moves.allTypes": "所有属性",
   "moves.allClasses": "所有分类",
   "moves.learners": "宝可梦",

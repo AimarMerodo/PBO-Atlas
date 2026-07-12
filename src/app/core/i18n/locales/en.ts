@@ -185,7 +185,7 @@ export const en = {
   "moves.accuracy": "Acc.",
   "moves.pp": "PP",
   "moves.dexTitle": "Moves",
-  "moves.searchPlaceholder": "Search moves…",
+  "moves.searchPlaceholder": "Search by name or TM…",
   "moves.allTypes": "All types",
   "moves.allClasses": "All classes",
   "moves.learners": "Pokémon",

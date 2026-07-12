@@ -37,7 +37,11 @@ export class MovesPageComponent {
     key: "move",
     slugOf: (m) => m.slug,
     filter: (m, q) => {
-      if (q && !this.moveName(m).toLowerCase().includes(q) && !m.en.toLowerCase().includes(q)) return false;
+      if (q) {
+        const tm = m.tm?.toLowerCase() ?? "";
+        const matches = this.moveName(m).toLowerCase().includes(q) || m.en.toLowerCase().includes(q) || tm.includes(q);
+        if (!matches) return false;
+      }
       if (this.type() && m.type !== this.type()) return false;
       if (this.klass() && m.class !== this.klass()) return false;
       return true;
