@@ -182,6 +182,17 @@ export interface MoveDexEntry extends MoveInfo {
   count: number;
 }
 
+/** An ability as shown in the ability dex: name, short description + owner count. */
+export interface AbilityDexEntry {
+  slug: string;
+  en: string;
+  es?: string;
+  zh?: string;
+  textEn?: string;
+  textEs?: string;
+  count: number;
+}
+
 export interface Learnset {
   vg: string;
   level: [string, number][];

@@ -1,0 +1,61 @@
+<!-- min-h-screen: reserve height so the table swap on data-load doesn't shift the footer (CLS) -->
+<div class="min-h-screen space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("abilities.dexTitle") }}</h1>
+
+  @if (abilities()) {
+    <div class="space-y-5">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <div class="relative w-full max-w-md">
+          <svg
+            lucideSearch
+            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+            aria-hidden="true"
+          ></svg>
+          <input
+            [value]="query()"
+            (input)="onQuery($any($event.target).value)"
+            [placeholder]="i18n.t('abilities.searchPlaceholder')"
+            class="w-full rounded-xl border border-line bg-surface py-2 pl-10 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+          />
+        </div>
+        <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+          {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+        </span>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-line">
+        <table class="w-full text-sm">
+          <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
+            <tr>
+              <th class="px-4 py-2.5">{{ i18n.t("abilities.name") }}</th>
+              <th class="px-4 py-2.5">{{ i18n.t("abilities.description") }}</th>
+              <th class="px-4 py-2.5 text-right">{{ i18n.t("abilities.owners") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (a of visible(); track a.slug) {
+              <tr
+                (click)="select(a)"
+                class="cursor-pointer border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2"
+              >
+                <td class="whitespace-nowrap px-4 py-2 font-medium">{{ abilityName(a) }}</td>
+                <td class="px-4 py-2 text-ink-dim">
+                  <span class="line-clamp-2 leading-snug">{{ abilityText(a) }}</span>
+                </td>
+                <td class="px-4 py-2 text-right font-mono text-accent-soft">{{ a.count }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      @if (selected(); as sel) {
+        <app-ability-modal [ability]="sel" (closed)="select(null)" />
+      }
+
+      <app-pager [current]="current()" [pageCount]="pageCount()" [numbered]="false" (pageChange)="page.set($event)" />
+    </div>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">…</p>
+  }
+</div>

@@ -43,6 +43,7 @@ export class Header {
       children: [
         { route: "/pokedex", label: "nav.pokedex" },
         { route: "/moves", label: "nav.moves" },
+        { route: "/abilities", label: "nav.abilities" },
         { route: "/shiny", label: "nav.shiny" },
       ],
     },
