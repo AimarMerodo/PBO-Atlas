@@ -43,4 +43,6 @@ export class DataService {
   movesList = () => this.getJson<MoveDexEntry[]>("lists/moves.json");
   /** move slug -> pokemon slugs that learn it. Big; loaded only when the move filter/modal is used. */
   moveIndex = () => this.getJson<Record<string, string[]>>("lists/move-index.json");
+  /** move slug -> pokemon slugs that learn it via TM/HM. Loaded with the move modal. */
+  moveTmIndex = () => this.getJson<Record<string, string[]>>("lists/move-tm-index.json");
 }

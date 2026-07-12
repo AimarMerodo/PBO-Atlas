@@ -190,6 +190,8 @@ export const en = {
   "moves.allClasses": "All classes",
   "moves.learners": "Pokémon",
   "moves.learnedBy": "Learned by",
+  "moves.searchLearners": "Search Pokémon…",
+  "moves.noLearners": "No Pokémon",
   "moves.none": "No move data for this pokemon.",
   "moves.disclaimer":
     "Reference list based on the official generation 9 games. Pokemon Blaze Online may differ: some moves could be missing or unavailable. When in doubt, check the in-game pokedex.",

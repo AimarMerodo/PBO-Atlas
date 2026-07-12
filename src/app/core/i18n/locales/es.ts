@@ -192,6 +192,8 @@ export const es: Record<DictKey, string> = {
   "moves.allClasses": "Todas las clases",
   "moves.learners": "Pokémon",
   "moves.learnedBy": "Lo aprenden",
+  "moves.searchLearners": "Buscar Pokémon…",
+  "moves.noLearners": "Ningún Pokémon",
   "moves.none": "Sin datos de movimientos para este pokemon.",
   "moves.disclaimer":
     "Lista orientativa basada en los juegos oficiales de la 9ª generación. En Pokemon Blaze Online puede haber diferencias: es posible que falten movimientos o que alguno no esté disponible. Ante la duda, verifica en la pokedex dentro del juego.",

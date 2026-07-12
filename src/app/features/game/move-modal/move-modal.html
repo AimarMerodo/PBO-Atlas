@@ -18,7 +18,7 @@
             {{ classLabel(move().class) }}
           </span>
           @if (move().tm) {
-            <span class="rounded-full border border-line bg-surface-2 px-2 py-0.5 font-mono text-[10px] text-ink-dim">
+            <span class="rounded-full border border-accent/50 bg-accent/10 px-2 py-0.5 font-mono text-[10px] font-bold text-accent-soft">
               {{ move().tm }}
             </span>
           }
@@ -53,27 +53,62 @@
     }
 
     <div class="mt-4 border-t border-line pt-3">
-      <p class="mb-2 text-xs font-bold uppercase tracking-wide text-ink-dim">
-        {{ i18n.t("moves.learnedBy") }} · {{ move().count }}
-      </p>
-      @if (learners(); as list) {
-        <div class="grid grid-cols-4 gap-2 sm:grid-cols-6">
-          @for (p of list; track p.slug) {
-            <a
-              [routerLink]="['/pokedex', p.slug]"
-              (click)="closed.emit()"
-              [title]="p.name"
-              class="flex flex-col items-center rounded-lg border border-line bg-surface-2 p-1.5 transition-colors hover:border-accent/60"
-            >
-              @if (p.sprite) {
-                <img [src]="p.sprite" [alt]="p.name" width="40" height="40" class="[image-rendering:pixelated]" loading="lazy" />
-              } @else {
-                <div class="h-10 w-10"></div>
-              }
-              <span class="mt-0.5 line-clamp-1 w-full text-center text-[9px] text-ink-dim">{{ p.name }}</span>
-            </a>
-          }
-        </div>
+      <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <p class="text-xs font-bold uppercase tracking-wide text-ink-dim">
+          {{ i18n.t("moves.learnedBy") }} · {{ move().count }}
+        </p>
+        @if (move().tm && tmCount()) {
+          <button
+            (click)="onlyTm.set(!onlyTm())"
+            [class]="
+              'flex items-center gap-1 rounded-full border px-2.5 py-0.5 font-mono text-[11px] font-bold transition-colors ' +
+              (onlyTm() ? 'border-accent bg-accent/20 text-accent-soft' : 'border-line bg-surface-2 text-ink-dim hover:text-ink')
+            "
+          >
+            {{ move().tm }} · {{ tmCount() }}
+          </button>
+        }
+      </div>
+
+      <div class="relative mb-3">
+        <svg
+          lucideSearch
+          class="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-dim"
+          aria-hidden="true"
+        ></svg>
+        <input
+          [value]="query()"
+          (input)="query.set($any($event.target).value)"
+          [placeholder]="i18n.t('moves.searchLearners')"
+          class="w-full rounded-lg border border-line bg-surface-2 py-1.5 pl-8 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+        />
+      </div>
+
+      @if (shownLearners(); as list) {
+        @if (list.length) {
+          <div class="grid grid-cols-4 gap-2 sm:grid-cols-6">
+            @for (p of list; track p.slug) {
+              <a
+                [routerLink]="['/pokedex', p.slug]"
+                (click)="closed.emit()"
+                [title]="p.name"
+                class="relative flex flex-col items-center rounded-lg border border-line bg-surface-2 p-1.5 transition-colors hover:border-accent/60"
+              >
+                @if (p.byTm) {
+                  <span class="absolute right-1 top-1 rounded bg-accent/20 px-1 text-[8px] font-bold leading-tight text-accent-soft">TM</span>
+                }
+                @if (p.sprite) {
+                  <img [src]="p.sprite" [alt]="p.name" width="40" height="40" class="[image-rendering:pixelated]" loading="lazy" />
+                } @else {
+                  <div class="h-10 w-10"></div>
+                }
+                <span class="mt-0.5 line-clamp-1 w-full text-center text-[9px] text-ink-dim">{{ p.name }}</span>
+              </a>
+            }
+          </div>
+        } @else {
+          <p class="py-4 text-center text-sm text-ink-dim">{{ i18n.t("moves.noLearners") }}</p>
+        }
       } @else {
         <p class="text-sm text-ink-dim">…</p>
       }
