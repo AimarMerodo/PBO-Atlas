@@ -399,8 +399,10 @@ await write("lists/natures.json", natures);
 
   // Full move dex (grid + modal): every learnable move with its stats and how many
   // pokemon learn it. move-index.json (above) carries the per-move pokemon lists.
+  // count = PBO-only learners (not-in-PBO mons are hidden in the dex, like the pokedex).
+  const pboCount = (list) => (list ?? []).filter((x) => !notInPbo.has(x)).length;
   const movesDex = Object.keys(movePokemon)
-    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: movePokemon[s].length }] : []))
+    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: pboCount(movePokemon[s]) }] : []))
     .sort((a, b) => a.en.localeCompare(b.en));
   await write("lists/moves.json", movesDex);
   await write("lists/move-tm-index.json", moveTmPokemon);
@@ -410,7 +412,7 @@ await write("lists/natures.json", natures);
   const abilitiesDex = [...abilityUsed]
     .map((s) => {
       const a = abilities[s];
-      return { slug: s, en: a?.en ?? s, es: a?.es, zh: a?.zh, textEn: a?.textEn, textEs: a?.textEs, count: abilityPokemon[s]?.length ?? 0 };
+      return { slug: s, en: a?.en ?? s, es: a?.es, zh: a?.zh, textEn: a?.textEn, textEs: a?.textEs, count: pboCount(abilityPokemon[s]) };
     })
     .sort((a, b) => a.en.localeCompare(b.en));
   await write("lists/abilities.json", abilitiesDex);

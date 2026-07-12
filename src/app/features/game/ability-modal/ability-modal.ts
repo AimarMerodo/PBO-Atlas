@@ -39,7 +39,7 @@ export class AbilityModal {
     const slugs = new Set(idx[this.ability().slug] ?? []);
     const hiddenSlugs = new Set(hidden[this.ability().slug] ?? []);
     return dex
-      .filter((p) => slugs.has(p.slug))
+      .filter((p) => slugs.has(p.slug) && !p.notInPbo)
       .sort((a, b) => a.id - b.id)
       .map((p) => ({ ...p, hidden: hiddenSlugs.has(p.slug) }));
   });

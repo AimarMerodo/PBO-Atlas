@@ -44,7 +44,7 @@ export class MoveModal {
     const slugs = new Set(idx[this.move().slug] ?? []);
     const tmSlugs = new Set(tm[this.move().slug] ?? []);
     return dex
-      .filter((p) => slugs.has(p.slug))
+      .filter((p) => slugs.has(p.slug) && !p.notInPbo)
       .sort((a, b) => a.id - b.id)
       .map((p) => ({ ...p, byTm: tmSlugs.has(p.slug) }));
   });
