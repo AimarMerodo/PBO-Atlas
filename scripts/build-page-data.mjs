@@ -375,6 +375,7 @@ await write("lists/natures.json", natures);
 {
   const abilityUsed = new Set();
   const movePokemon = {};
+  const moveTmPokemon = {}; // move -> pokemon that learn it via TM/HM (machine)
   for (const [slug, e] of Object.entries(pokedex)) {
     if (e.event) continue;
     for (const a of e.abilities ?? []) abilityUsed.add(a.slug);
@@ -382,13 +383,22 @@ await write("lists/natures.json", natures);
     if (!ls) continue;
     const moves = new Set([...ls.level.map(([m]) => m), ...ls.machine, ...ls.egg, ...ls.tutor]);
     for (const m of moves) (movePokemon[m] ??= []).push(slug);
+    for (const m of new Set(ls.machine)) (moveTmPokemon[m] ??= []).push(slug);
   }
   const opt = (slug, rec) => ({ slug, en: rec?.en ?? slug, ...(rec?.es && { es: rec.es }), ...(rec?.zh && { zh: rec.zh }), ...(rec?.pt && { pt: rec.pt }) });
   const abilities_ = [...abilityUsed].map((s) => opt(s, abilities[s])).sort((a, b) => a.en.localeCompare(b.en));
   const moves_ = Object.keys(movePokemon).map((s) => opt(s, movesData.moves[s])).sort((a, b) => a.en.localeCompare(b.en));
   await write("lists/filters.json", { abilities: abilities_, moves: moves_ });
   await write("lists/move-index.json", movePokemon);
-  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves`);
+
+  // Full move dex (grid + modal): every learnable move with its stats and how many
+  // pokemon learn it. move-index.json (above) carries the per-move pokemon lists.
+  const movesDex = Object.keys(movePokemon)
+    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: movePokemon[s].length }] : []))
+    .sort((a, b) => a.en.localeCompare(b.en));
+  await write("lists/moves.json", movesDex);
+  await write("lists/move-tm-index.json", moveTmPokemon);
+  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves; moves dex: ${movesDex.length}`);
 }
 
 // Items: merge in "where to get" sources for the notable ones.

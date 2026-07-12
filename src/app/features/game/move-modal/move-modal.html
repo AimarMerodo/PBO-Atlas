@@ -1,0 +1,117 @@
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+  (dismissOutside)="closed.emit()"
+>
+  <div
+    data-modal-content
+    class="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-line bg-surface p-6 shadow-2xl"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="moveName()"
+  >
+    <div class="flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold leading-tight">{{ moveName() }}</h2>
+        <div class="mt-1.5 flex flex-wrap items-center gap-2">
+          <app-type-badge [type]="move().type" />
+          <span class="text-xs font-semibold" [style.color]="classColor(move().class)">
+            {{ classLabel(move().class) }}
+          </span>
+          @if (move().tm) {
+            <span class="rounded-full border border-accent/50 bg-accent/10 px-2 py-0.5 font-mono text-[10px] font-bold text-accent-soft">
+              {{ move().tm }}
+            </span>
+          }
+        </div>
+      </div>
+      <button
+        (click)="closed.emit()"
+        aria-label="Close"
+        class="rounded-lg border border-line bg-surface-2 p-1.5 text-ink-dim transition-colors hover:text-ink"
+      >
+        <svg lucideX class="h-4 w-4"></svg>
+      </button>
+    </div>
+
+    <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+      <div class="rounded-xl border border-line bg-surface-2 py-2">
+        <p class="text-[10px] uppercase tracking-wide text-ink-dim">{{ i18n.t("moves.power") }}</p>
+        <p class="font-mono text-lg font-bold">{{ move().power ?? "—" }}</p>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-2 py-2">
+        <p class="text-[10px] uppercase tracking-wide text-ink-dim">{{ i18n.t("moves.accuracy") }}</p>
+        <p class="font-mono text-lg font-bold">{{ move().accuracy ?? "—" }}</p>
+      </div>
+      <div class="rounded-xl border border-line bg-surface-2 py-2">
+        <p class="text-[10px] uppercase tracking-wide text-ink-dim">{{ i18n.t("moves.pp") }}</p>
+        <p class="font-mono text-lg font-bold">{{ move().pp ?? "—" }}</p>
+      </div>
+    </div>
+
+    @if (moveDesc()) {
+      <p class="mt-4 text-sm leading-relaxed text-ink-dim">{{ moveDesc() }}</p>
+    }
+
+    <div class="mt-4 border-t border-line pt-3">
+      <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <p class="text-xs font-bold uppercase tracking-wide text-ink-dim">
+          {{ i18n.t("moves.learnedBy") }} · {{ move().count }}
+        </p>
+        @if (move().tm && tmCount()) {
+          <button
+            (click)="onlyTm.set(!onlyTm())"
+            [class]="
+              'flex items-center gap-1 rounded-full border px-2.5 py-0.5 font-mono text-[11px] font-bold transition-colors ' +
+              (onlyTm() ? 'border-accent bg-accent/20 text-accent-soft' : 'border-line bg-surface-2 text-ink-dim hover:text-ink')
+            "
+          >
+            {{ move().tm }} · {{ tmCount() }}
+          </button>
+        }
+      </div>
+
+      <div class="relative mb-3">
+        <svg
+          lucideSearch
+          class="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-ink-dim"
+          aria-hidden="true"
+        ></svg>
+        <input
+          [value]="query()"
+          (input)="query.set($any($event.target).value)"
+          [placeholder]="i18n.t('moves.searchLearners')"
+          class="w-full rounded-lg border border-line bg-surface-2 py-1.5 pl-8 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+        />
+      </div>
+
+      @if (shownLearners(); as list) {
+        @if (list.length) {
+          <div class="grid grid-cols-4 gap-2 sm:grid-cols-6">
+            @for (p of list; track p.slug) {
+              <a
+                [routerLink]="['/pokedex', p.slug]"
+                (click)="closed.emit()"
+                [title]="p.name"
+                class="relative flex flex-col items-center rounded-lg border border-line bg-surface-2 p-1.5 transition-colors hover:border-accent/60"
+              >
+                @if (p.byTm) {
+                  <span class="absolute right-1 top-1 rounded bg-accent/20 px-1 text-[8px] font-bold leading-tight text-accent-soft">TM</span>
+                }
+                @if (p.sprite) {
+                  <img [src]="p.sprite" [alt]="p.name" width="40" height="40" class="[image-rendering:pixelated]" loading="lazy" />
+                } @else {
+                  <div class="h-10 w-10"></div>
+                }
+                <span class="mt-0.5 line-clamp-1 w-full text-center text-[9px] text-ink-dim">{{ p.name }}</span>
+              </a>
+            }
+          </div>
+        } @else {
+          <p class="py-4 text-center text-sm text-ink-dim">{{ i18n.t("moves.noLearners") }}</p>
+        }
+      } @else {
+        <p class="text-sm text-ink-dim">…</p>
+      }
+    </div>
+  </div>
+</div>

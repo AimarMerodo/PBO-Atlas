@@ -8,6 +8,7 @@ import type {
   HomePayload,
   LocationPage,
   Mount,
+  MoveDexEntry,
   PokedexCard,
   PokemonPage,
   RegionPage,
@@ -38,6 +39,10 @@ export class DataService {
   cosmetics = () => this.getJson<CosmeticBundle[]>("lists/cosmetics.json");
   dressup = () => this.getJson<DressupData>("dressup.json");
   filters = () => this.getJson<FilterOptions>("lists/filters.json");
-  /** move slug -> pokemon slugs that learn it. Big; loaded only when the move filter is used. */
+  /** Full move dex: every learnable move with stats + learn count. */
+  movesList = () => this.getJson<MoveDexEntry[]>("lists/moves.json");
+  /** move slug -> pokemon slugs that learn it. Big; loaded only when the move filter/modal is used. */
   moveIndex = () => this.getJson<Record<string, string[]>>("lists/move-index.json");
+  /** move slug -> pokemon slugs that learn it via TM/HM. Loaded with the move modal. */
+  moveTmIndex = () => this.getJson<Record<string, string[]>>("lists/move-tm-index.json");
 }

@@ -31,14 +31,21 @@ type NavItem = NavLink | NavGroup;
 export class Header {
   protected readonly i18n = inject(LanguageService);
 
-  /** Primary nav, shared by the desktop bar and the mobile drawer. Item/Mounts/
-   *  Cosmetics live under an "Items" dropdown to keep the top bar short.
+  /** Primary nav, shared by the desktop bar and the mobile drawer. Pokémon-data
+   *  views (Pokédex/Moves/Shiny) and game catalog (Items/Mounts/Cosmetics) each
+   *  live under a dropdown to keep the top bar short.
    *  `exact` on Home so its underline only lights up on "/" (not every route). */
   protected readonly nav: NavItem[] = [
     { route: "/", label: "nav.home", exact: true },
     { route: "/regions", label: "nav.regions" },
-    { route: "/pokedex", label: "nav.pokedex" },
-    { route: "/shiny", label: "nav.shiny" },
+    {
+      label: "nav.pokedex",
+      children: [
+        { route: "/pokedex", label: "nav.pokedex" },
+        { route: "/moves", label: "nav.moves" },
+        { route: "/shiny", label: "nav.shiny" },
+      ],
+    },
     {
       label: "nav.catalog",
       children: [

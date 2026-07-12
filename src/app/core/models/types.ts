@@ -176,6 +176,12 @@ export interface MoveInfo {
   tm?: string | null;
 }
 
+/** A move as shown in the move dex grid: full info + slug + how many mons learn it. */
+export interface MoveDexEntry extends MoveInfo {
+  slug: string;
+  count: number;
+}
+
 export interface Learnset {
   vg: string;
   level: [string, number][];
