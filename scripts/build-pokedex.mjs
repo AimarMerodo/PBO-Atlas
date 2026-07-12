@@ -69,13 +69,15 @@ function titleCase(slug) {
 /** Flatten an evolution chain into ordered stages with trigger summaries. */
 function flattenChain(chain) {
   const line = [];
-  const walk = (node, trigger) => {
-    line.push({ slug: node.species.name, trigger });
+  // `from`/`depth` preserve the branch structure (Eevee, Wurmple, Slowpoke…) that
+  // a flat list otherwise loses, so the ficha can render a real evolution tree.
+  const walk = (node, trigger, from, depth) => {
+    line.push({ slug: node.species.name, trigger, from, depth });
     for (const next of node.evolves_to) {
-      walk(next, describeEvolution(next.evolution_details[0]));
+      walk(next, describeEvolution(next.evolution_details[0]), node.species.name, depth + 1);
     }
   };
-  walk(chain, undefined);
+  walk(chain, undefined, null, 0);
   return line;
 }
 
