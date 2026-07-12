@@ -1,0 +1,96 @@
+<!-- min-h-screen: reserve height so the table swap on data-load doesn't shift the footer (CLS) -->
+<div class="min-h-screen space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("moves.dexTitle") }}</h1>
+
+  @if (moves()) {
+    <div class="space-y-5">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <div class="relative w-full max-w-md">
+          <svg
+            lucideSearch
+            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-dim"
+            aria-hidden="true"
+          ></svg>
+          <input
+            [value]="query()"
+            (input)="onQuery($any($event.target).value)"
+            [placeholder]="i18n.t('moves.searchPlaceholder')"
+            class="w-full rounded-xl border border-line bg-surface py-2 pl-10 pr-3 text-sm outline-none placeholder:text-ink-dim focus:border-accent/60"
+          />
+        </div>
+        <select
+          [value]="type() ?? ''"
+          (change)="onType($any($event.target).value)"
+          class="rounded-lg border border-line bg-surface pl-2.5 pr-8 py-2 text-sm text-ink outline-none"
+        >
+          <option value="">{{ i18n.t("moves.allTypes") }}</option>
+          @for (t of types(); track t) {
+            <option [value]="t">{{ typeLabel(t) }}</option>
+          }
+        </select>
+        <select
+          [value]="klass() ?? ''"
+          (change)="onClass($any($event.target).value)"
+          class="rounded-lg border border-line bg-surface pl-2.5 pr-8 py-2 text-sm text-ink outline-none"
+        >
+          <option value="">{{ i18n.t("moves.allClasses") }}</option>
+          @for (c of classes; track c) {
+            <option [value]="c">{{ classLabel(c) }}</option>
+          }
+        </select>
+        <span class="rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-ink-dim tabular-nums">
+          {{ filtered().length }} {{ i18n.t("pokedex.results") }}
+        </span>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-line">
+        <table class="w-full text-sm">
+          <thead class="bg-surface-2 text-left text-xs uppercase text-ink-dim">
+            <tr>
+              <th class="px-4 py-2.5">{{ i18n.t("moves.name") }}</th>
+              <th class="px-4 py-2.5">{{ i18n.t("moves.type") }}</th>
+              <th class="px-4 py-2.5">{{ i18n.t("moves.class") }}</th>
+              <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.power") }}</th>
+              <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.accuracy") }}</th>
+              <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.pp") }}</th>
+              <th class="hidden px-4 py-2.5 text-right sm:table-cell">TM</th>
+              <th class="px-4 py-2.5 text-right">{{ i18n.t("moves.learners") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (m of visible(); track m.slug) {
+              <tr
+                (click)="select(m)"
+                class="cursor-pointer border-t border-line odd:bg-surface even:bg-surface-2/50 hover:bg-surface-2"
+              >
+                <td class="max-w-72 px-4 py-2">
+                  <span class="font-medium">{{ moveName(m) }}</span>
+                  @if (moveDesc(m)) {
+                    <span class="line-clamp-1 block text-xs leading-snug text-ink-dim">{{ moveDesc(m) }}</span>
+                  }
+                </td>
+                <td class="px-4 py-2"><app-type-badge [type]="m.type" /></td>
+                <td class="px-4 py-2">
+                  <span class="text-xs font-semibold" [style.color]="classColor(m.class)">{{ classLabel(m.class) }}</span>
+                </td>
+                <td class="px-4 py-2 text-right font-mono text-ink-dim">{{ m.power ?? "—" }}</td>
+                <td class="px-4 py-2 text-right font-mono text-ink-dim">{{ m.accuracy ?? "—" }}</td>
+                <td class="px-4 py-2 text-right font-mono text-ink-dim">{{ m.pp ?? "—" }}</td>
+                <td class="hidden px-4 py-2 text-right font-mono text-xs text-ink-dim sm:table-cell">{{ m.tm ?? "—" }}</td>
+                <td class="px-4 py-2 text-right font-mono text-accent-soft">{{ m.count }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      @if (selected(); as sel) {
+        <app-move-modal [move]="sel" (closed)="select(null)" />
+      }
+
+      <app-pager [current]="current()" [pageCount]="pageCount()" [numbered]="false" (pageChange)="page.set($event)" />
+    </div>
+  } @else {
+    <p class="py-10 text-center text-sm text-ink-dim">…</p>
+  }
+</div>

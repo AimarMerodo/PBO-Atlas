@@ -388,7 +388,14 @@ await write("lists/natures.json", natures);
   const moves_ = Object.keys(movePokemon).map((s) => opt(s, movesData.moves[s])).sort((a, b) => a.en.localeCompare(b.en));
   await write("lists/filters.json", { abilities: abilities_, moves: moves_ });
   await write("lists/move-index.json", movePokemon);
-  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves`);
+
+  // Full move dex (grid + modal): every learnable move with its stats and how many
+  // pokemon learn it. move-index.json (above) carries the per-move pokemon lists.
+  const movesDex = Object.keys(movePokemon)
+    .flatMap((s) => (movesData.moves[s] ? [{ slug: s, ...movesData.moves[s], count: movePokemon[s].length }] : []))
+    .sort((a, b) => a.en.localeCompare(b.en));
+  await write("lists/moves.json", movesDex);
+  console.log(`filters: ${abilities_.length} abilities, ${moves_.length} moves; moves dex: ${movesDex.length}`);
 }
 
 // Items: merge in "where to get" sources for the notable ones.

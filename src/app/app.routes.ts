@@ -40,6 +40,10 @@ export const routes: Routes = [
     loadComponent: () => import("@features/game/items-page/items-page").then((m) => m.ItemsPageComponent),
   },
   {
+    path: "moves",
+    loadComponent: () => import("@features/game/moves-page/moves-page").then((m) => m.MovesPageComponent),
+  },
+  {
     path: "mounts",
     loadComponent: () => import("@features/game/mounts-page/mounts-page").then((m) => m.MountsPageComponent),
   },

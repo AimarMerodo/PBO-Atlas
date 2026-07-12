@@ -43,6 +43,7 @@ export class Header {
       label: "nav.catalog",
       children: [
         { route: "/items", label: "nav.items" },
+        { route: "/moves", label: "nav.moves" },
         { route: "/mounts", label: "nav.mounts" },
         { route: "/cosmetics", label: "nav.cosmetics" },
       ],
