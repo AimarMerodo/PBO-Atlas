@@ -50,8 +50,32 @@ const items = asArray(await readData("items.json"), "items")
   .map((i) => ({ slug: i.slug, name: i.name, icon: i.icon ?? null }));
 const regions = asArray(await readData("regions.json"), "regions").map((r) => ({ id: r.id, name: r.name }));
 
-await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions }), "utf8");
+// Moves (learnable by any mon) + abilities (used by any non-event mon), matching
+// the /moves and /abilities dexes so search results land on a real entry.
+const movesData = await readData("moves.json");
+const learnable = new Set();
+for (const ls of Object.values(movesData.learnsets ?? {})) {
+  for (const m of [...ls.level.map(([mv]) => mv), ...ls.machine, ...ls.egg, ...ls.tutor]) learnable.add(m);
+}
+const moves = [...learnable]
+  .filter((s) => movesData.moves[s])
+  .map((s) => ({ slug: s, name: movesData.moves[s].en, type: movesData.moves[s].type }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const abilitiesData = await readData("abilities.json");
+const usedAbilities = new Set();
+for (const p of Object.values(pokedex)) {
+  if (p.event) continue;
+  for (const a of p.abilities ?? []) usedAbilities.add(a.slug);
+}
+const abilities = [...usedAbilities]
+  .filter((s) => abilitiesData[s])
+  .map((s) => ({ slug: s, name: abilitiesData[s].en }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions, moves, abilities }), "utf8");
 console.log(
   `Wrote ${pokemon.length} pokemon, ${locations.length} locations, ${items.length} items, ` +
-    `${mounts.length} mounts, ${cosmetics.length} cosmetics, ${regions.length} regions -> ${path.relative(ROOT, OUT_FILE)}`,
+    `${mounts.length} mounts, ${cosmetics.length} cosmetics, ${regions.length} regions, ` +
+    `${moves.length} moves, ${abilities.length} abilities -> ${path.relative(ROOT, OUT_FILE)}`,
 );
