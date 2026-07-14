@@ -28,8 +28,8 @@
       <button
         (click)="toggle(t)"
         [class]="
-          'rounded-md transition-all ' +
-          (isSelected(t) ? 'scale-110 ring-2 ring-white' : 'opacity-55 hover:opacity-100')
+          'inline-flex rounded-md p-0 leading-none transition-all ' +
+          (isSelected(t) ? 'scale-110 ring-2 ring-white ring-offset-0' : 'opacity-55 hover:opacity-100')
         "
       >
         <app-type-badge [type]="t" />
