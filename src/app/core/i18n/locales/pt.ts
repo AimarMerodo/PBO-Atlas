@@ -264,6 +264,8 @@ export const pt: Record<DictKey, string> = {
   "stat.speed": "Velocidade",
   "search.placeholder": "Buscar qualquer coisa…",
   "search.pokemon": "Pokémon",
+  "search.moves": "Movimentos",
+  "search.abilities": "Habilidades",
   "search.locations": "Locais",
   "search.items": "Itens",
   "search.mounts": "Montarias",

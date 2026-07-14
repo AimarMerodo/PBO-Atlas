@@ -265,6 +265,8 @@ export const en = {
   "stat.speed": "Speed",
   "search.placeholder": "Search anything…",
   "search.pokemon": "Pokemon",
+  "search.moves": "Moves",
+  "search.abilities": "Abilities",
   "search.locations": "Locations",
   "search.items": "Items",
   "search.mounts": "Mounts",

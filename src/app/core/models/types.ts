@@ -306,6 +306,8 @@ export interface SearchIndex {
   mounts: { name: string; icon: AtlasIcon | null }[];
   cosmetics: { slug: string; name: string; icon: AtlasIcon | null }[];
   regions: { id: string; name: string }[];
+  moves: { slug: string; name: string; type: string }[];
+  abilities: { slug: string; name: string }[];
 }
 
 export interface AtlasIcon {

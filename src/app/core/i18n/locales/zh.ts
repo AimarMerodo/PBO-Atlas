@@ -264,6 +264,8 @@ export const zh: Record<DictKey, string> = {
   "stat.speed": "速度",
   "search.placeholder": "搜索任何内容…",
   "search.pokemon": "宝可梦",
+  "search.moves": "招式",
+  "search.abilities": "特性",
   "search.locations": "地点",
   "search.items": "道具",
   "search.mounts": "坐骑",

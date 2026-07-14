@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, ElementRef, effect, inject, input, output } from "@angular/core";
-import { LucideMapPin } from "@lucide/angular";
+import { LucideMapPin, LucideSparkles } from "@lucide/angular";
 import { LanguageService } from "@core/i18n/language.service";
 import { ItemIcon } from "@shared/components/item-icon/item-icon";
+import { TypeBadge } from "@shared/components/type-badge/type-badge";
 import { hrefFor, type SearchGroups } from "./search";
 
 const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
@@ -14,7 +15,7 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
 @Component({
   selector: "app-search-results",
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LucideMapPin, ItemIcon],
+  imports: [LucideMapPin, LucideSparkles, ItemIcon, TypeBadge],
   template: `
     @if (results().pokemon.length) {
       <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.pokemon") }}</p>
@@ -31,6 +32,32 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
           }
           <span class="text-sm">{{ p.name }}</span>
           <span class="ml-auto text-xs text-ink-dim">#{{ p.id }}</span>
+        </button>
+      }
+    }
+    @if (results().moves.length) {
+      <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.moves") }}</p>
+      @for (m of results().moves; track m.slug) {
+        <button
+          (click)="go.emit(href.move(m.slug))"
+          [attr.data-active]="isActive(href.move(m.slug)) || null"
+          [class]="rowClass + (isActive(href.move(m.slug)) ? ' ' + ACTIVE : '')"
+        >
+          <app-type-badge [type]="m.type" />
+          <span class="text-sm">{{ m.name }}</span>
+        </button>
+      }
+    }
+    @if (results().abilities.length) {
+      <p class="px-3 pb-1 pt-2 text-xs font-semibold uppercase text-ink-dim">{{ i18n.t("search.abilities") }}</p>
+      @for (a of results().abilities; track a.slug) {
+        <button
+          (click)="go.emit(href.ability(a.slug))"
+          [attr.data-active]="isActive(href.ability(a.slug)) || null"
+          [class]="rowClass + (isActive(href.ability(a.slug)) ? ' ' + ACTIVE : '')"
+        >
+          <svg lucideSparkles class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
+          <span class="text-sm">{{ a.name }}</span>
         </button>
       }
     }
