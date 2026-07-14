@@ -22,7 +22,7 @@ const CHART: Record<string, Record<string, number>> = {
   fairy: { fire: 0.5, fighting: 2, poison: 0.5, dragon: 2, dark: 2, steel: 0.5 },
 };
 
-const ALL_TYPES = Object.keys(CHART);
+export const ALL_TYPES = Object.keys(CHART);
 
 export interface DefenseProfile {
   x4: string[];
@@ -30,6 +30,24 @@ export interface DefenseProfile {
   half: string[];
   quarter: string[];
   immune: string[];
+}
+
+export interface AttackProfile {
+  x2: string[];
+  half: string[];
+  immune: string[];
+}
+
+/** Offensive multipliers for an attacking type against every single defender type. */
+export function attackProfile(attacker: string): AttackProfile {
+  const profile: AttackProfile = { x2: [], half: [], immune: [] };
+  for (const def of ALL_TYPES) {
+    const mult = CHART[attacker]?.[def] ?? 1;
+    if (mult === 0) profile.immune.push(def);
+    else if (mult >= 2) profile.x2.push(def);
+    else if (mult <= 0.5) profile.half.push(def);
+  }
+  return profile;
 }
 
 /** Defensive multipliers for a pokemon with the given type(s). */

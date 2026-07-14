@@ -1,0 +1,71 @@
+<div class="min-h-screen space-y-6">
+  <h1 class="text-center text-3xl font-extrabold tracking-tight">{{ i18n.t("typeCalc.title") }}</h1>
+
+  <!-- Defense / Attack mode toggle -->
+  <div class="flex justify-center">
+    <div class="inline-flex rounded-xl border border-line bg-surface p-1">
+      @for (m of ["defense", "attack"]; track m) {
+        <button
+          (click)="setMode($any(m))"
+          [class]="
+            'rounded-lg px-4 py-1.5 text-sm font-semibold transition-colors ' +
+            (mode() === m ? 'bg-accent text-white' : 'text-ink-dim hover:text-ink')
+          "
+        >
+          {{ i18n.t($any("typeCalc." + m)) }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <p class="text-center text-sm text-ink-dim">
+    {{ mode() === "defense" ? i18n.t("typeCalc.pickDefense") : i18n.t("typeCalc.pickAttack") }}
+  </p>
+
+  <!-- Type picker -->
+  <div class="mx-auto flex max-w-2xl flex-wrap justify-center gap-2">
+    @for (t of allTypes; track t) {
+      <button
+        (click)="toggle(t)"
+        [class]="
+          'inline-flex rounded-md p-0 leading-none transition-all ' +
+          (isSelected(t) ? 'scale-110 ring-2 ring-white ring-offset-0' : 'opacity-55 hover:opacity-100')
+        "
+      >
+        <app-type-badge [type]="t" />
+      </button>
+    }
+  </div>
+
+  @if (selected().length) {
+    <div class="text-center">
+      <button (click)="clear()" class="text-xs text-ink-dim underline underline-offset-2 hover:text-ink">
+        {{ i18n.t("typeCalc.clear") }}
+      </button>
+    </div>
+  }
+
+  <!-- Results -->
+  @if (rows().length) {
+    <div class="mx-auto max-w-2xl overflow-hidden rounded-xl border border-line">
+      @for (row of rows(); track row.key; let i = $index) {
+        <div
+          [class]="
+            'flex flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center ' + (i % 2 ? 'bg-surface-2/50' : 'bg-surface')
+          "
+        >
+          <span class="w-44 shrink-0 text-sm font-semibold" [style.color]="row.accent">{{ i18n.t(row.label) }}</span>
+          <span class="flex flex-wrap gap-1.5">
+            @for (type of row.types; track type) {
+              <app-type-badge [type]="type" />
+            }
+          </span>
+        </div>
+      }
+    </div>
+  } @else if (selected().length) {
+    <p class="text-center text-sm text-ink-dim">{{ i18n.t("typeCalc.allNeutral") }}</p>
+  } @else {
+    <p class="py-6 text-center text-sm text-ink-dim">{{ i18n.t("typeCalc.empty") }}</p>
+  }
+</div>
