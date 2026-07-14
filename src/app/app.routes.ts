@@ -48,6 +48,10 @@ export const routes: Routes = [
     loadComponent: () => import("@features/game/abilities-page/abilities-page").then((m) => m.AbilitiesPageComponent),
   },
   {
+    path: "type-calculator",
+    loadComponent: () => import("@features/tools/type-calculator/type-calculator").then((m) => m.TypeCalculatorComponent),
+  },
+  {
     path: "mounts",
     loadComponent: () => import("@features/game/mounts-page/mounts-page").then((m) => m.MountsPageComponent),
   },

@@ -44,6 +44,7 @@ export class Header {
         { route: "/pokedex", label: "nav.pokedex" },
         { route: "/moves", label: "nav.moves" },
         { route: "/abilities", label: "nav.abilities" },
+        { route: "/type-calculator", label: "nav.typeCalc" },
         { route: "/shiny", label: "nav.shiny" },
       ],
     },
