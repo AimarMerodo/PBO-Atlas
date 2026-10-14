@@ -3661,5 +3661,14 @@
     "pokedexNumber": 335,
     "nationalDex": 335,
     "sprite": "/sprites/pbo/custom/summer/zangooses3.png"
+  },
+  {
+    "event": "summer",
+    "name": "Lucario-S3",
+    "base": "lucario",
+    "showdownId": "lucarios3",
+    "pokedexNumber": 448,
+    "nationalDex": 448,
+    "sprite": "/sprites/pbo/custom/summer/lucarios3.png"
   }
 ]
