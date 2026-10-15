@@ -7,7 +7,7 @@ import type { AtlasIcon } from "@core/models/types";
  * stale page under the new coordinates → wrong icons. BUMP this whenever the atlas pages
  * are re-extracted so browsers fetch the fresh pages.
  */
-const ATLAS_VERSION = "2026-07";
+const ATLAS_VERSION = "2026-10";
 
 /** Renders a game item icon by cropping its atlas page with CSS. */
 @Component({
