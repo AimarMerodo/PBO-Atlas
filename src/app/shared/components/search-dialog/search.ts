@@ -20,12 +20,15 @@ const EMPTY: SearchGroups = { pokemon: [], moves: [], abilities: [], items: [], 
 export function searchAll(index: SearchIndex | null, query: string, limit = 8): SearchGroups {
   const q = query.trim().toLowerCase();
   if (!q || !index) return EMPTY;
-  const hit = (s: string) => s.toLowerCase().includes(q);
+  const hit = (s?: string) => !!s && s.toLowerCase().includes(q);
+  // Match a term in any language, not just English (e.g. "a bocajarro" → Close Combat).
+  const nameHit = (e: { name: string; es?: string; pt?: string; zh?: string }) =>
+    hit(e.name) || hit(e.es) || hit(e.pt) || hit(e.zh);
   const pokemon = index.pokemon.filter((p) => hit(p.name) || String(p.id) === q).slice(0, limit);
-  const moves = index.moves.filter((m) => hit(m.name)).slice(0, limit);
-  const abilities = index.abilities.filter((a) => hit(a.name)).slice(0, limit);
-  const items = index.items.filter((i) => hit(i.name)).slice(0, limit);
-  const mounts = index.mounts.filter((m) => hit(m.name)).slice(0, limit);
+  const moves = index.moves.filter(nameHit).slice(0, limit);
+  const abilities = index.abilities.filter(nameHit).slice(0, limit);
+  const items = index.items.filter(nameHit).slice(0, limit);
+  const mounts = index.mounts.filter(nameHit).slice(0, limit);
   const cosmetics = index.cosmetics.filter((c) => hit(c.name)).slice(0, limit);
   const locations = index.locations.filter((l) => hit(l.name)).slice(0, limit);
   const regions = index.regions.filter((r) => hit(r.name)).slice(0, limit);

@@ -302,12 +302,12 @@ export interface FilterOptions {
 export interface SearchIndex {
   pokemon: { slug: string; name: string; id: number; types: string[]; sprite: string | null; caught: boolean }[];
   locations: { id: string; name: string; region: string }[];
-  items: { slug: string; name: string; icon: AtlasIcon | null }[];
-  mounts: { name: string; icon: AtlasIcon | null }[];
+  items: { slug: string; name: string; es?: string; pt?: string; zh?: string; icon: AtlasIcon | null }[];
+  mounts: { name: string; es?: string; pt?: string; zh?: string; icon: AtlasIcon | null }[];
   cosmetics: { slug: string; name: string; icon: AtlasIcon | null }[];
   regions: { id: string; name: string }[];
-  moves: { slug: string; name: string; type: string }[];
-  abilities: { slug: string; name: string }[];
+  moves: { slug: string; name: string; es?: string; pt?: string; zh?: string; type: string }[];
+  abilities: { slug: string; name: string; es?: string; pt?: string; zh?: string }[];
 }
 
 export interface AtlasIcon {
