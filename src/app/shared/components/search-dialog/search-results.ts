@@ -44,7 +44,7 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
           [class]="rowClass + (isActive(href.move(m.slug)) ? ' ' + ACTIVE : '')"
         >
           <app-type-badge [type]="m.type" />
-          <span class="text-sm">{{ m.name }}</span>
+          <span class="text-sm">{{ i18n.localName(m) }}</span>
         </button>
       }
     }
@@ -57,7 +57,7 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
           [class]="rowClass + (isActive(href.ability(a.slug)) ? ' ' + ACTIVE : '')"
         >
           <svg lucideSparkles class="h-4 w-4 shrink-0 text-ink-dim" aria-hidden="true"></svg>
-          <span class="text-sm">{{ a.name }}</span>
+          <span class="text-sm">{{ i18n.localName(a) }}</span>
         </button>
       }
     }
@@ -70,7 +70,7 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
           [class]="rowClass + (isActive(href.item(i.slug)) ? ' ' + ACTIVE : '')"
         >
           <app-item-icon [icon]="i.icon" [size]="28" />
-          <span class="text-sm">{{ i.name }}</span>
+          <span class="text-sm">{{ i18n.localName(i) }}</span>
         </button>
       }
     }
@@ -83,7 +83,7 @@ const ACTIVE = "bg-surface-2 ring-1 ring-inset ring-accent";
           [class]="rowClass + (isActive(href.mount(m.name)) ? ' ' + ACTIVE : '')"
         >
           <app-item-icon [icon]="m.icon" [size]="28" />
-          <span class="text-sm">{{ m.name }}</span>
+          <span class="text-sm">{{ i18n.localName(m) }}</span>
         </button>
       }
     }

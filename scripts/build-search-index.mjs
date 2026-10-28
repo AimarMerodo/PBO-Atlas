@@ -36,9 +36,12 @@ const pokemon = Object.values(pokedex)
     caught: caughtSlugs.has(p.slug),
   }));
 
+// Localized names (es/pt/zh) so search matches a term in any language, not just EN.
+const loc = (o) => ({ ...(o.es && { es: o.es }), ...(o.pt && { pt: o.pt }), ...(o.zh && { zh: o.zh }) });
+
 const mountsArr = asArray(await readData("mounts.json"), "mounts");
 const cosmeticsArr = asArray(await readData("cosmetics.json"), "cosmetics");
-const mounts = mountsArr.map((m) => ({ name: m.name, icon: m.icon ?? null }));
+const mounts = mountsArr.map((m) => ({ name: m.name, ...loc(m), icon: m.icon ?? null }));
 const cosmetics = cosmeticsArr.map((c) => ({ slug: c.slug, name: c.name, icon: c.icon ?? null }));
 
 // Mounts and cosmetic bundles are ALSO present in items.json; drop those exact
@@ -47,7 +50,7 @@ const cosmetics = cosmeticsArr.map((c) => ({ slug: c.slug, name: c.name, icon: c
 const ownSection = new Set([...mountsArr, ...cosmeticsArr].map((e) => (e.name ?? "").trim().toLowerCase()));
 const items = asArray(await readData("items.json"), "items")
   .filter((i) => !ownSection.has((i.name ?? "").trim().toLowerCase()))
-  .map((i) => ({ slug: i.slug, name: i.name, icon: i.icon ?? null }));
+  .map((i) => ({ slug: i.slug, name: i.name, ...loc(i), icon: i.icon ?? null }));
 const regions = asArray(await readData("regions.json"), "regions").map((r) => ({ id: r.id, name: r.name }));
 
 // Moves (learnable by any mon) + abilities (used by any non-event mon), matching
@@ -59,7 +62,7 @@ for (const ls of Object.values(movesData.learnsets ?? {})) {
 }
 const moves = [...learnable]
   .filter((s) => movesData.moves[s])
-  .map((s) => ({ slug: s, name: movesData.moves[s].en, type: movesData.moves[s].type }))
+  .map((s) => ({ slug: s, name: movesData.moves[s].en, ...loc(movesData.moves[s]), type: movesData.moves[s].type }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const abilitiesData = await readData("abilities.json");
@@ -70,7 +73,7 @@ for (const p of Object.values(pokedex)) {
 }
 const abilities = [...usedAbilities]
   .filter((s) => abilitiesData[s])
-  .map((s) => ({ slug: s, name: abilitiesData[s].en }))
+  .map((s) => ({ slug: s, name: abilitiesData[s].en, ...loc(abilitiesData[s]) }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
 await writeFile(OUT_FILE, JSON.stringify({ pokemon, locations, items, mounts, cosmetics, regions, moves, abilities }), "utf8");
